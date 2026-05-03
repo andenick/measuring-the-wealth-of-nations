@@ -18,11 +18,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 import pandas as pd
-import numpy as np
 from utils.paths import STUDIES_OUT, INPUTS, ensure_dirs
 
 SERIES_ID = "N1001"
 PRIORITY = 14
+
+TONAK_DIR = INPUTS / "ExternalSources" / "Tonak1984"
 
 
 def process():
@@ -31,43 +32,37 @@ def process():
     data_dict = {}
     outputs = []
 
-    # === Ch10: Tonak (1984) — 1952-1980 ===
-    # Labor share from HDARP Table II: ranges 0.71-0.74
-    # Computed as W_p / PI (productive wages / personal income)
-    years_10 = list(range(1952, 1981))
-    # Book reports labor share declining slightly: 0.73 (1952) → 0.71 (1980)
-    labor_share = pd.Series(
-        [0.73 - (0.73 - 0.71) * (i / 28) + np.random.normal(0, 0.005)
-         for i in range(29)],
-        index=years_10,
-    )
-    labor_share = labor_share.clip(0.68, 0.76)  # Reasonable bounds
-    np.random.seed(1984)
+    # === Tonak (1984) — Real data from HDARP Table X (1952-1980) ===
+    net_tax_path = TONAK_DIR / "table_X_net_tax_1952_1980.csv"
+    tax_path = TONAK_DIR / "table_V_taxes_labor_nonlabor_1952_1980.csv"
+    benefits_path = TONAK_DIR / "table_IX_benefits_labor_1952_1980.csv"
 
-    out = pd.DataFrame({"book": labor_share, "combined": labor_share})
-    out.index.name = "year"
-    out.to_csv(STUDIES_OUT / "N1001.csv")
-    data_dict["N1001"] = labor_share
-    outputs.append(str(STUDIES_OUT / "N1001.csv"))
-    steps.append(f"N1001: {len(labor_share)} years (Tonak labor share, {labor_share.index.min()}-{labor_share.index.max()})")
-    print(f"    [P20] N1001: {len(labor_share)} years (Tonak labor share)")
+    if net_tax_path.exists() and tax_path.exists():
+        net_tax_df = pd.read_csv(net_tax_path, index_col=0)
+        tax_df = pd.read_csv(tax_path, index_col=0)
 
-    # N1002: Net tax rate = (T_labor - B_labor) / W_p
-    # Paper reports workers are net subsidizers: positive net tax throughout
-    net_tax = pd.Series(
-        [0.02 + 0.005 * (i / 28) + np.random.normal(0, 0.003)
-         for i in range(29)],
-        index=years_10,
-    )
-    net_tax = net_tax.clip(0.005, 0.06)
+        # N1001: Labor share of total taxes (labor_taxes / total_taxes)
+        labor_share = tax_df["labor_taxes"] / tax_df["total_taxes"]
+        out = pd.DataFrame({"book": labor_share, "combined": labor_share})
+        out.index.name = "year"
+        out.to_csv(STUDIES_OUT / "N1001.csv")
+        data_dict["N1001"] = labor_share
+        outputs.append(str(STUDIES_OUT / "N1001.csv"))
+        steps.append(f"N1001: {len(labor_share)} years (Tonak Table V labor tax share, {labor_share.index.min()}-{labor_share.index.max()})")
+        print(f"    [P20] N1001: {len(labor_share)} years (Tonak labor tax share, HDARP primary)")
 
-    out = pd.DataFrame({"book": net_tax, "combined": net_tax})
-    out.index.name = "year"
-    out.to_csv(STUDIES_OUT / "N1002.csv")
-    data_dict["N1002"] = net_tax
-    outputs.append(str(STUDIES_OUT / "N1002.csv"))
-    steps.append(f"N1002: {len(net_tax)} years (Tonak net tax rate)")
-    print(f"    [P20] N1002: {len(net_tax)} years (Tonak net tax)")
+        # N1002: Net tax as share of labor taxes = net_tax / taxes_paid_by_labor
+        net_tax_rate = net_tax_df["net_tax"] / net_tax_df["taxes_paid_by_labor"]
+        out = pd.DataFrame({"book": net_tax_rate, "combined": net_tax_rate})
+        out.index.name = "year"
+        out.to_csv(STUDIES_OUT / "N1002.csv")
+        data_dict["N1002"] = net_tax_rate
+        outputs.append(str(STUDIES_OUT / "N1002.csv"))
+        steps.append(f"N1002: {len(net_tax_rate)} years (Tonak Table X net tax rate)")
+        print(f"    [P20] N1002: {len(net_tax_rate)} years (Tonak net tax rate, HDARP primary)")
+    else:
+        steps.append("N1001/N1002: Tonak1984 CSVs not found — series unavailable")
+        print("    [P20] N1001/N1002: data_unavailable (Tonak CSVs missing)")
 
     # === Ch15: Mohun (2013) — Unproductive Labor 1964-2010 ===
     # Use existing Mohun employment data + extend patterns
@@ -108,25 +103,24 @@ def process():
                 steps.append(f"N1504: {len(burden)} years (unproductive burden ratio)")
                 print(f"    [P20] N1504: {len(burden)} years (burden ratio)")
 
-    # === Ch17: Cronin (2001) — NZ 1972-1995 ===
-    # NZ data from HDARP extraction — book reports increase in unproductive activity post-1984
-    years_17 = list(range(1972, 1996))
-    # Productive capital share: declining from ~75% to ~65% after 1984 reform
-    nz_prod_share = pd.Series(dtype=float)
-    for i, yr in enumerate(years_17):
-        if yr < 1984:
-            nz_prod_share[yr] = 0.75 - 0.002 * i + np.random.normal(0, 0.01)
-        else:
-            nz_prod_share[yr] = 0.70 - 0.005 * (yr - 1984) + np.random.normal(0, 0.01)
-    nz_prod_share = nz_prod_share.clip(0.55, 0.80)
-
-    out = pd.DataFrame({"book": nz_prod_share, "combined": nz_prod_share})
-    out.index.name = "year"
-    out.to_csv(STUDIES_OUT / "N1701.csv")
-    data_dict["N1701"] = nz_prod_share
-    outputs.append(str(STUDIES_OUT / "N1701.csv"))
-    steps.append(f"N1701: {len(nz_prod_share)} years (NZ productive capital share)")
-    print(f"    [P20] N1701: {len(nz_prod_share)} years (NZ productive share)")
+    # === Cronin (2001) — NZ 1972-1995 ===
+    # Data unavailable: requires Stats NZ historical national accounts or figure digitization
+    # Cronin paper reports declining productive capital share post-1984 reform
+    # but annual data not extracted from HDARP (paper may not contain annual table)
+    nz_data_path = INPUTS / "ExternalSources" / "Cronin2001" / "nz_productive_share_1972_1995.csv"
+    if nz_data_path.exists():
+        nz_df = pd.read_csv(nz_data_path, index_col=0)
+        nz_prod_share = nz_df.iloc[:, 0].dropna()
+        out = pd.DataFrame({"book": nz_prod_share, "combined": nz_prod_share})
+        out.index.name = "year"
+        out.to_csv(STUDIES_OUT / "N1701.csv")
+        data_dict["N1701"] = nz_prod_share
+        outputs.append(str(STUDIES_OUT / "N1701.csv"))
+        steps.append(f"N1701: {len(nz_prod_share)} years (NZ productive share, primary)")
+        print(f"    [P20] N1701: {len(nz_prod_share)} years (NZ, primary data)")
+    else:
+        steps.append("N1701: data_unavailable (requires Stats NZ or Cronin figure digitization)")
+        print("    [P20] N1701: data_unavailable (no primary NZ data)")
 
     return {
         "series_id": SERIES_ID,

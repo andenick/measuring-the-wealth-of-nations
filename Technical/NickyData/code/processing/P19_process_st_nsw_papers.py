@@ -98,25 +98,36 @@ def process():
     if t607 is not None and comp is not None:
         years = [y for y in range(1952, 1998)]
 
-        # N1201: NSW/GDP — use total gross output as GDP proxy
-        gdp_path = API_DATA / "BEA" / "gdp_by_industry_gross_output.csv"
-        if gdp_path.exists():
-            gdp_df = pd.read_csv(gdp_path)
-            gdp_rows = gdp_df[gdp_df["Industry"] == "II"]
-            if not gdp_rows.empty:
-                gdp = gdp_rows.set_index("Year")["DataValue"].astype(float)
-                common = t607.index.intersection(gdp.index)
-                common = [y for y in common if y in years]
-                if common:
-                    nsw_gdp = t607[common] / gdp[common]
-                    out = pd.DataFrame({"book": nsw_gdp, "combined": nsw_gdp})
-                    out.index.name = "year"
-                    out.to_csv(STUDIES_OUT / "N1201.csv")
-                    data_dict["N1201"] = nsw_gdp
-                    outputs.append(str(STUDIES_OUT / "N1201.csv"))
-                    avg = float(nsw_gdp.mean())
-                    steps.append(f"N1201: {len(nsw_gdp)} years (NSW/GDP, avg={avg:.4f})")
-                    print(f"    [P19] N1201: {len(nsw_gdp)} years (NSW/GDP avg={avg:.4f})")
+        # N1201: NSW/GDP — use T201 orthodox GDP (available 1929-2025 from L14)
+        t201_path = SERIES_OUT / "T201.csv"
+        gdp = None
+        if t201_path.exists():
+            t201_df = pd.read_csv(t201_path, index_col=0)
+            if "GDP" in t201_df.columns:
+                gdp = t201_df["GDP"].dropna()
+                gdp = gdp / 1e9 if gdp.max() > 1e6 else gdp
+
+        if gdp is None:
+            gdp_path = API_DATA / "BEA" / "gdp_by_industry_gross_output.csv"
+            if gdp_path.exists():
+                gdp_df = pd.read_csv(gdp_path)
+                gdp_rows = gdp_df[gdp_df["Industry"] == "II"]
+                if not gdp_rows.empty:
+                    gdp = gdp_rows.set_index("Year")["DataValue"].astype(float)
+
+        if gdp is not None:
+            common = t607.index.intersection(gdp.index)
+            common = [y for y in common if y in years]
+            if common:
+                nsw_gdp = t607[common] / gdp[common]
+                out = pd.DataFrame({"book": nsw_gdp, "combined": nsw_gdp})
+                out.index.name = "year"
+                out.to_csv(STUDIES_OUT / "N1201.csv")
+                data_dict["N1201"] = nsw_gdp
+                outputs.append(str(STUDIES_OUT / "N1201.csv"))
+                avg = float(nsw_gdp.mean())
+                steps.append(f"N1201: {len(nsw_gdp)} years (NSW/GDP, avg={avg:.4f})")
+                print(f"    [P19] N1201: {len(nsw_gdp)} years (NSW/GDP avg={avg:.4f})")
 
         # N1202: NSW/EC
         common = t607.index.intersection(comp.index)
