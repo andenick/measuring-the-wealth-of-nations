@@ -1,0 +1,22 @@
+ISIC3_Code,ISIC3_Name,ISIC3_Description,NAICS_Code,NAICS_Name,NAICS_Description,Mapping_Quality,Coverage_Percentage,Mapping_Type,Comments
+atb,"Agriculture, Hunting, Forestry and Fishing",Primary sector activities,11,"Agriculture, Forestry, Fishing and Hunting",Agricultural sector,0.44500000000000006,0.4,One-to-Many,WIOD 56-sector classification; Maps to 3 NAICS categories
+atb,"Agriculture, Hunting, Forestry and Fishing",Primary sector activities,21,"Mining, Quarrying, and Oil and Gas Extraction",Mining sector,0.44500000000000006,0.4,One-to-Many,WIOD 56-sector classification; Maps to 3 NAICS categories
+atb,"Agriculture, Hunting, Forestry and Fishing",Primary sector activities,113,"Agriculture, Forestry, Fishing and Hunting",Agricultural sector,0.44500000000000006,0.4,One-to-Many,WIOD 56-sector classification; Maps to 3 NAICS categories
+c,Mining and Quarrying,Mining and extraction,21,"Mining, Quarrying, and Oil and Gas Extraction",Mining sector,0.6050000000000001,0.8,One-to-One,WIOD 56-sector classification
+e,"Electricity, Gas and Water Supply",Utilities,22,Utilities,Utilities sector,0.68,0.8,One-to-One,WIOD 56-sector classification
+f,Construction,Construction,23,Construction,Construction sector,0.68,0.8,One-to-One,WIOD 56-sector classification
+51,"Wholesale Trade and Commission Trade, Except of Motor Vehicles and Motorcycles",Wholesale trade,42,Wholesale Trade,Wholesale trade,0.8300000000000001,0.8,One-to-One,WIOD 56-sector classification
+h,Hotels and Restaurants,Accommodation and food services,72,Accommodation and Food Services,Accommodation and food,0.755,0.8,One-to-One,WIOD 56-sector classification
+64,Post and Telecommunications,Communications,51,Information,Information sector,0.37,0.4,One-to-Many,WIOD 56-sector classification; Maps to 3 NAICS categories
+64,Post and Telecommunications,Communications,517,Information,Information sector,0.37,0.4,One-to-Many,WIOD 56-sector classification; Maps to 3 NAICS categories
+64,Post and Telecommunications,Communications,518,Information,Information sector,0.37,0.4,One-to-Many,WIOD 56-sector classification; Maps to 3 NAICS categories
+j,Financial Intermediation,Finance and insurance,52,Finance and Insurance,Finance and insurance,0.8300000000000001,0.8,One-to-One,WIOD 56-sector classification
+70,Real Estate Activities,Real estate,53,Real Estate and Rental and Leasing,Real estate,0.8300000000000001,0.8,One-to-One,WIOD 56-sector classification
+71t74,Renting of M&Eq and Other Business Activities,Professional and business services,54,"Professional, Scientific, and Technical Services",Professional services,0.52,0.4,One-to-Many,WIOD 56-sector classification; Maps to 3 NAICS categories
+71t74,Renting of M&Eq and Other Business Activities,Professional and business services,55,Management of Companies and Enterprises,Management,0.37,0.4,One-to-Many,WIOD 56-sector classification; Maps to 3 NAICS categories
+71t74,Renting of M&Eq and Other Business Activities,Professional and business services,56,Administrative and Support and Waste Management and Remediation Services,Administrative services,0.43000000000000005,0.4,One-to-Many,WIOD 56-sector classification; Maps to 3 NAICS categories
+l,Public Admin and Defence; Compulsory Social Security,Public administration,92,Public Administration,Government,0.53,0.8,One-to-One,WIOD 56-sector classification
+m,Education,Education,61,Educational Services,Education,0.8300000000000001,0.8,One-to-One,WIOD 56-sector classification
+n,Health and Social Work,Health care and social assistance,62,Health Care and Social Assistance,Health care,0.65,0.8,One-to-One,WIOD 56-sector classification
+o,"Other Community, Social and Personal Services",Other services,81,Other Services (except Public Administration),Other services,0.8300000000000001,0.8,One-to-One,WIOD 56-sector classification
+p,Private Households with Employed Persons,Private households,814,Other Services (except Public Administration),Other services,0.53,0.8,One-to-One,WIOD 56-sector classification

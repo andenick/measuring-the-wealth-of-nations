@@ -1,0 +1,27 @@
+Industry,SIC_Code,NAICS_Code,ST94_Classification,M05_Classification,TP19_Classification,Employment_Share_1989,Employment_Share_2024,Notes
+Agriculture,01-09,111-115,Productive,Productive,Productive,2.8,1.4,Primary commodity production
+Mining,10-14,21,Productive,Productive,Productive,0.7,0.5,Extraction of raw materials
+Construction,15-17,23,Productive,Productive,Productive,5.1,5.2,Physical production of structures
+Manufacturing - Durable,20-29,31-32,Productive,Productive,Productive,11.2,5.8,Physical commodity production
+Manufacturing - Nondurable,30-39,33,Productive,Productive,Productive,7.4,3.4,Physical commodity production
+Transportation,40-47,48-49,Productive,Productive,Productive,3.8,3.6,Movement of commodities
+Communications,48,517,Productive,Productive,Productive,1.4,0.8,Information transmission infrastructure
+Utilities,49,22,Productive,Productive,Productive,0.8,0.5,Essential infrastructure
+Wholesale Trade,50-51,42,Unproductive,Unproductive,Unproductive,5.7,4.1,Circulation of commodities
+Retail Trade,52-59,44-45,Unproductive,Unproductive,Unproductive,11.8,10.2,Circulation of commodities
+Eating and Drinking Places,58,722,Unproductive,Productive,Productive,4.8,8.4,KEY RECLASSIFICATION: Transforms food into prepared meals
+Finance,60-62,52,Unproductive,Unproductive,Unproductive,3.1,3.8,Financial intermediation
+Insurance,63-64,524,Unproductive,Unproductive,Unproductive,1.8,1.9,Risk management services
+Real Estate,65-66,53,Unproductive,Unproductive,Unproductive,1.4,1.6,Property circulation
+Hotels and Lodging,70,721,Productive,Productive,Productive,1.3,1.5,Hospitality services
+Personal Services,72,812,Productive,Productive,Productive,1.1,1.2,Direct personal services
+Business Services,73,561,Unproductive,Mixed,Mixed,5.2,7.8,Administrative support
+Information Sector,-,51,Mixed,Productive,Productive,0.0,2.1,KEY RECLASSIFICATION: New NAICS sector - produces information commodities
+Computer Systems Design,7370,5415,Mixed,Productive,Productive,0.8,2.4,KEY RECLASSIFICATION: Software production
+Health Services,80,62,Productive,Productive,Productive,7.1,12.8,Medical care production
+Educational Services,82,61,Productive,Productive,Productive,1.8,2.4,Human capital development
+Legal Services,81,5411,Unproductive,Unproductive,Unproductive,0.9,0.8,Legal intermediation
+Social Services,83,624,Productive,Productive,Productive,1.2,2.1,Social care services
+Other Professional Services,89,54,Mixed,Mixed,Mixed,2.8,5.4,Varies by specific service
+Government - Federal,91-93,9211-9261,Excluded,Excluded,Unproductive,2.8,1.8,Includes military
+Government - State/Local,94-97,92,Excluded,Excluded,Unproductive,11.2,13.4,Education largest component

@@ -1,0 +1,9 @@
+chapter,chapter_title,empirical_type,series_ids,series_count,table_count,figure_count,time_period,primary_sources,extension_feasibility,wave_assignment,readiness_status,notes
+2,Concepts: Marxian and SNA,Theoretical + minimal empirical,T201,1,0,1,1948-1989,Book text,Minimal empirical content,Wave 3,Ready,"One GFP comparison series; mostly conceptual"
+3,Classification of Activities,Conceptual figures only,FPRs only,0,0,3,N/A,Book text,N/A (conceptual),Parallel,Ready,"Productive/unproductive classification diagrams; FPRs only"
+4,Input-Output Framework,IO methodology,T401;T402,2,2,2,1947-1977,BEA IO Benchmark tables,Needs SIC-NAICS concordance for post-1997,Wave 2,Needs concordance,"A-matrix and B-matrix calculations; existing IO matrices cover 1947-1977"
+5,Accounting Framework for Empirical Estimates,Core exploitation/labor/surplus,T501;T502;T503;T504;T505;T506;T507;T508;T509;T510;T511;T512;T513;T514;T515;T516,16,10,8,1948-1989,NIPA; BLS; BEA IO,Yes - Phase 2+3 done,Wave 1,Ready,"Tables 5.5-5.14; authoritative exploitation rate available; Phase 3 achieved 93.8% match"
+6,Net Social Wage,NSW analysis,T601;T602;T603;T604;T605;T606;T607;T608;T609,9,6,4,1952-1989,NIPA; BLS; Treasury,Yes - Phase 1 done,Wave 1,Ready,"NSW complete 1952-2025; 17 LaTeX PDFs delivered"
+7,Input-Output Applications,IO labor value calculations,T701;T702;T703,3,3,2,1947-1977,BEA IO tables; A/L/Z matrices,Partial - modern IO tables needed,Wave 2,Partial,"Labor value calculations; needs modern BEA Make/Use tables for extension"
+8,Comparison with Other Estimates,Historical comparison,T801,1,2,2,1948-1989,Wolff; Mage; Mohun,Historical only - no extension,Wave 3,Ready,"Comparison tables; Mohun data already migrated"
+9,Summary of Results,Derived summary,T901,1,1,1,1948-1989,Ch5 results,Yes - derived from Ch5,Wave 1,Ready,"Summary table derived from Chapter 5 calculations"

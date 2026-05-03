@@ -1,0 +1,210 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{float}
+
+\title{AS2: Replication and Extension of Shaikh \& Tonak (1994)\\
+\large Measuring the Wealth of Nations --- A NickyData Pipeline}
+\author{Arcanum Research\\
+\texttt{NickyData v6.0 $\cdot$ 67 scripts $\cdot$ 55 series}}
+\date{May 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We replicate and extend every empirical claim in Shaikh and Tonak's \textit{Measuring the Wealth of Nations} (1994) using a fully automated 8-phase pipeline (NickyData v6.0). The replication covers 33 book series across Chapters 2, 4--9, extended from 1948--1989 to 1948--2024 using BEA, BLS, and FRED data. We additionally replicate 8 external studies (22 N-series) spanning the US, Turkey, and New Zealand. Key findings: the rate of exploitation rises from 1.70 (1948) to 2.44 (1989) to approximately 3.59 (2024), a 111\% increase. The net social wage is negative for 92\% of years. Labor values and prices of production are highly correlated ($R^2 = 0.98$ at the 1958 benchmark). All 55 series pass 15 automated validators with 0 failures.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+Shaikh and Tonak (1994) reconstruct US national accounts from a Marxian perspective, distinguishing productive from unproductive labor, computing the rate of exploitation, and deriving labor values from input-output tables. Their framework yields measures---such as the Marxian profit rate, surplus value, and net social wage---that differ substantially from orthodox national accounting.
+
+This project (AS2) replicates every table and figure from the book and extends all extendable series through 2024. The replication is implemented as a self-contained NickyData pipeline: 67 Python scripts across 8 phases that reproduce all 55 series from source inputs without manual intervention.
+
+\section{Data Sources}
+
+\begin{table}[H]
+\centering
+\caption{Primary data sources}
+\begin{tabular}{llll}
+\toprule
+Source & Tables & Coverage & Pull Date \\
+\midrule
+BEA NIPA & 1.7.5, 2.1, 3.1--3.3, 6.2D & 1929--2025 & 2025-12 / 2026-04 \\
+BLS CES & Production workers by industry & 1948--2024 & 2025-12 \\
+FRED & Capacity utilization (TCU) & 1948--2024 & 2025-12 \\
+BEA Fixed Assets & Table 4.1 (net stock) & 1925--2024 & 2025-12 \\
+BEA IO Tables & 85-sector (SIC) + 71-sector (NAICS) & 1947--2017 & Migrated \\
+Book Tables & E.2, 5.7, 5.11, 6.1--6.3, 9.1 & 1948--1989 & Chopped CSV \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Marxian Categories}
+
+The book's reconstruction maps orthodox national accounts into Marxian categories:
+\begin{align}
+TP^* &= \text{GO}_{\text{productive}} + \text{GO}_{\text{trading}} \\
+C^*_m &= \text{Intermediate inputs of productive sectors} \\
+GFP^* &= TP^* - C^*_m \\
+V^* &= \text{Compensation of productive workers} \\
+S^* &= GFP^* - V^* \\
+e &= S^*/V^* \quad \text{(rate of exploitation)} \\
+r^* &= S^*/(C^*_m + K^*) \quad \text{(Marxian profit rate)}
+\end{align}
+
+Sector classification follows Appendix B: 75 productive, 7 unproductive (SIC); 48 productive, 12 unproductive (NAICS).
+
+\section{Extension Methodology}
+
+All series are extended using growth-rate splicing at 1989:
+\[
+T_{\text{ext}}(t) = T_{\text{book}}(1989) \times \frac{\text{Source}_{\text{ext}}(t)}{\text{Source}_{\text{ext}}(1989)}
+\]
+This preserves the book's level while applying the dynamics of modern API data. Extension faithfulness scores range from 60\% (T509, productive investment) to 94\% (T601--T606, tax/benefit components).
+
+The SIC--NAICS transition (1990--1997) is bridged via log-linear interpolation for industry-level data and continuous BLS CES coverage for employment ratios.
+
+\section{Results}
+
+\subsection{Rate of Exploitation}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{../Figures/Fig_5_5_exploitation_rate.png}
+\caption{Rate of exploitation $e = S^*/V^*$, 1948--2024. Book period (blue), extension (orange).}
+\end{figure}
+
+The exploitation rate rises from 1.70 (1948) to 2.44 (1989, book endpoint) to approximately 3.59 (2024). The 111\% increase is driven almost entirely by the declining productive labor share ($L_p/L$: 0.57 to 0.25), not by wage differentials ($ec_u/ec_p \approx 1.0$ throughout).
+
+\subsection{Productive Labor and Wage Shares}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{../Figures/Fig_5_6_labor_wage_shares.png}
+\caption{Productive labor share and wage share, 1948--2024.}
+\end{figure}
+
+\subsection{Net Social Wage}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{../Figures/Fig_6_1_net_social_wage.png}
+\caption{Net Social Wage $NSW = B_w + G_w - T_w$, 1952--2025.}
+\end{figure}
+
+The NSW is negative for 92\% of years---workers pay more in taxes than they receive in benefits. A structural break occurs after the 1996 welfare reform (PRWORA).
+
+\subsection{Profit Rates}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{../Figures/Fig_5_7_profit_rates.png}
+\caption{Marxian profit rates $r^*$ and capacity-adjusted $r^*_{\text{adj}}$, 1948--2024.}
+\end{figure}
+
+\subsection{Labor Values and Prices of Production}
+
+The cross-sectional regression of total prices of production on total labor values yields $R^2 = 0.98$ at the 1958 benchmark (slope = 0.999), confirming Shaikh's empirical claim that labor values predict market prices with high accuracy. Across all 6 SIC benchmark years (1947--1977), $R^2$ ranges from 0.70 to 0.98.
+
+\section{External Studies}
+
+Eight external papers are replicated as N-series, producing 22 additional series:
+
+\begin{table}[H]
+\centering
+\caption{Cross-study replication results}
+\begin{tabular}{lllll}
+\toprule
+Study & Period & Country & Key Finding & Series \\
+\midrule
+Tonak (1984) & 1952--1980 & US & Workers are net subsidizers & N1001--N1002 \\
+ST (1987) & 1952--1985 & US & ``Social wage'' is myth & N1101--N1103 \\
+ST (2002) & 1952--1997 & US & NSW/GDP $\approx$ 0.6\% & N1201--N1202 \\
+Moos (2017) & 1959--2012 & US & Post-2000 shift +3.0pp & N1301--N1305 \\
+Mohun (2005) & 1964--2001 & US & ST/Mohun ratio = 1.61 & N1401--N1404 \\
+Mohun (2013) & 1964--2010 & US & 81.3/18.7 class split & N1501--N1504 \\
+Turkey (2022) & 1980--2019 & Turkey & NSW negative ALL 40 yr & N1601--N1602 \\
+Cronin (2001) & 1972--1995 & NZ & Post-reform shift & N1701 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{../Figures/Fig_st_vs_mohun.png}
+\caption{Exploitation rate: Shaikh-Tonak vs Mohun classification, 1948--2024.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{../Figures/Fig_moos_structural_shift.png}
+\caption{Moos (2017) structural shift in NSW/GDP after 2000.}
+\end{figure}
+
+\section{Validation}
+
+The pipeline includes 15 automated validators with 300+ checks:
+
+\begin{table}[H]
+\centering
+\caption{Validation summary (0 failures)}
+\begin{tabular}{lrl}
+\toprule
+Validator & Checks & Result \\
+\midrule
+V01 Reference values & 26 & PASS \\
+V02 Range checks & 88 & PASS \\
+V03 Continuity & 33 & 29 PASS, 4 WARN \\
+V04 Completeness & 26 & PASS \\
+V05 Cross-series & 3 & 2 PASS, 1 SKIP \\
+V06 Splice quality & 18 & 7 PASS, 7 WARN, 4 SKIP \\
+V07 Extension overlap & 18 & 11 PASS, 7 SKIP \\
+V08 Hash integrity & 76 & 75 PASS, 1 WARN \\
+V09 Mohun cross-validation & 6 & 6 WARN (expected) \\
+V10 IO consistency & 29 & 21 PASS, 8 WARN \\
+V11--V15 & 25 & 22 PASS, 6 WARN \\
+\midrule
+\textbf{Total} & \textbf{348} & \textbf{0 FAIL} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Reproducibility}
+
+The entire dataset is reproducible from source inputs via:
+\begin{verbatim}
+cd Technical/NickyData
+pip install -r requirements.txt
+python run.py --test-all
+\end{verbatim}
+
+The pipeline runs in approximately 100 seconds and produces 55 series, 49 chopped CSVs, 50 extenbook workbooks, and 11 publication figures.
+
+\section*{References}
+
+\begin{itemize}
+\item Shaikh, A. \& Tonak, E.A. (1994). \textit{Measuring the Wealth of Nations}. Cambridge University Press.
+\item Mohun, S. (2005). On measuring the wealth of nations. \textit{CJE}, 29(5), 799--815.
+\item Mohun, S. (2013). Unproductive labor in the US economy. \textit{RRPE}, 46(3), 355--379.
+\item Moos, K.A. (2017). Neoliberal redistributive policy. Working Paper 2017-18, UMass Amherst.
+\item Karabacak, Z. \& Tonak, E.A. (2022). Net social wage in Turkey. \textit{RRPE}, 54(4), 577--605.
+\item Cronin, B. (2001). Productive and unproductive capital: NZ. \textit{RPE}, 13(3), 309--327.
+\item Tonak, E.A. (1984). State revenues and expenditures. PhD Dissertation, New School.
+\item Shaikh, A. \& Tonak, E.A. (1987). The welfare state and the myth of the social wage.
+\item Shaikh, A. \& Tonak, E.A. (2002). The rise and fall of the US welfare state.
+\end{itemize}
+
+\end{document}

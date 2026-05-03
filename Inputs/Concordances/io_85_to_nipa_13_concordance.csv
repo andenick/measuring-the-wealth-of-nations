@@ -1,0 +1,86 @@
+io_sector,io_sector_name,nipa_industry,nipa_industry_name,sic_range,classification
+1,Dairy farm products,1,"Agriculture, forestry, fishing",01,productive
+2,Poultry & eggs,1,"Agriculture, forestry, fishing",01,productive
+3,Meat animals & misc livestock,1,"Agriculture, forestry, fishing",01,productive
+4,"Cotton, food grains, tobacco, fruits, vegetables",1,"Agriculture, forestry, fishing",01-02,productive
+5,Coal mining,2,Mining,11-12,productive
+6,Crude petroleum & natural gas,2,Mining,13,productive
+7,Stone & clay mining,2,Mining,14,productive
+8,Chemical & fertilizer mineral mining,2,Mining,14,productive
+9,New construction,3,Construction,15-17,productive
+10,Maintenance & repair construction,3,Construction,15-17,productive
+11,Ordnance & accessories,4,Manufacturing (durable goods),19,productive
+12,Meat products,4,Manufacturing (durable goods),20,productive
+13,Dairy products,4,Manufacturing (durable goods),20,productive
+14,Canned & frozen foods,4,Manufacturing (durable goods),20,productive
+15,Grain mill products,4,Manufacturing (durable goods),20,productive
+16,Bakery products,4,Manufacturing (durable goods),20,productive
+17,Sugar,4,Manufacturing (durable goods),20,productive
+18,Confectionery products,4,Manufacturing (durable goods),20,productive
+19,Alcoholic beverages,4,Manufacturing (durable goods),20,productive
+20,Soft drinks & flavorings,4,Manufacturing (durable goods),20,productive
+21,Tobacco manufactures,4,Manufacturing (durable goods),21,productive
+22,Fabrics & yarn,4,Manufacturing (durable goods),22-23,productive
+23,"Floor covering, misc textiles",4,Manufacturing (durable goods),22-23,productive
+24,Lumber & wood products,4,Manufacturing (durable goods),24,productive
+25,Wooden containers,4,Manufacturing (durable goods),24,productive
+26,Household furniture,4,Manufacturing (durable goods),25,productive
+27,Other furniture & fixtures,4,Manufacturing (durable goods),25,productive
+28,Paper & paperboard,4,Manufacturing (durable goods),26,productive
+29,Paper containers & products,4,Manufacturing (durable goods),26,productive
+30,Printing & publishing,4,Manufacturing (durable goods),27,productive
+31,Basic chemicals,4,Manufacturing (durable goods),28,productive
+32,Synthetic materials,4,Manufacturing (durable goods),28,productive
+33,"Drugs, cleaning & toilet items",4,Manufacturing (durable goods),28,productive
+34,Paints & allied products,4,Manufacturing (durable goods),28,productive
+35,Petroleum refining,4,Manufacturing (durable goods),29,productive
+36,Rubber & plastic products,4,Manufacturing (durable goods),30,productive
+37,Leather tanning & finishing,4,Manufacturing (durable goods),31,productive
+38,Footwear & leather products,4,Manufacturing (durable goods),31,productive
+39,Glass & glass products,5,Manufacturing (nondurable goods),32,productive
+40,Stone & clay products,5,Manufacturing (nondurable goods),32,productive
+41,Primary iron & steel,5,Manufacturing (nondurable goods),33,productive
+42,Primary nonferrous metals,5,Manufacturing (nondurable goods),33,productive
+43,Metal containers,5,Manufacturing (nondurable goods),34,productive
+44,"Heating, plumbing, structural metal",5,Manufacturing (nondurable goods),34,productive
+45,Screw machine products,5,Manufacturing (nondurable goods),34,productive
+46,Other fabricated metal products,5,Manufacturing (nondurable goods),34,productive
+47,Engines & turbines,5,Manufacturing (nondurable goods),35,productive
+48,Farm machinery,5,Manufacturing (nondurable goods),35,productive
+49,Construction & mining machinery,5,Manufacturing (nondurable goods),35,productive
+50,Materials handling equipment,5,Manufacturing (nondurable goods),35,productive
+51,Metalworking machinery,5,Manufacturing (nondurable goods),35,productive
+52,Special industry machinery,5,Manufacturing (nondurable goods),35,productive
+53,General industrial machinery,5,Manufacturing (nondurable goods),35,productive
+54,Machine shop products,5,Manufacturing (nondurable goods),35,productive
+55,Office & computing machines,5,Manufacturing (nondurable goods),35-36,productive
+56,Service industry machines,5,Manufacturing (nondurable goods),35-36,productive
+57,Electric industrial equipment,5,Manufacturing (nondurable goods),36,productive
+58,Household appliances,5,Manufacturing (nondurable goods),36,productive
+59,Electric lighting & wiring,5,Manufacturing (nondurable goods),36,productive
+60,"Radio, TV, communication equipment",5,Manufacturing (nondurable goods),36,productive
+61,Electronic components,5,Manufacturing (nondurable goods),36,productive
+62,Misc electrical machinery,5,Manufacturing (nondurable goods),36,productive
+63,Motor vehicles & equipment,5,Manufacturing (nondurable goods),37,productive
+64,Aircraft & parts,5,Manufacturing (nondurable goods),37,productive
+65,Transportation & warehousing,6,Transportation,40-47,productive
+66,Communications except radio & TV,7,Communications,48,productive
+67,Radio & TV broadcasting,7,Communications,48,productive
+68,"Electric, gas, water & sanitary services",8,"Electric, gas utilities",49,productive
+69,Wholesale trade,9,Wholesale trade,50-51,unproductive
+70,Retail trade,10,Retail trade,52-59,unproductive
+71,Finance & insurance,11,"Finance, insurance, real estate",60-67,unproductive
+72,Real estate & rental,11,"Finance, insurance, real estate",65,unproductive
+73,Hotels & personal services,12,Services,70,productive
+74,Business services,12,Services,73,unproductive
+75,Eating & drinking places,12,Services,58,productive
+76,Automobile repair & services,12,Services,75,productive
+77,Amusements,12,Services,79,productive
+78,"Medical, educational services & nonprofit orgs",12,Services,80,productive
+79,Federal government enterprises,12,Services,gov,productive
+80,State & local government enterprises,13,Government,gov,productive
+81,Gross imports of goods & services,13,Government,import,n/a
+82,"Business travel, entertainment, gifts",13,Government,special,unproductive
+83,Office supplies,13,Government,special,unproductive
+84,"Scrap, used & secondhand goods",13,Government,special,n/a
+85,Government industry,13,Government,gov,mixed
