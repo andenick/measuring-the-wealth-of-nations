@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
-"""P18 - Process Karabacak & Tonak (2022) Turkey NSW: N1601-N1605.
+"""P18 - Process Karabacak & Tonak (2022) Turkey NSW: N1601-N1602.
 
-Uses benchmark values from the HDARP extraction to create validation
-series for the Turkey Net Social Wage analysis.
+Loads real data from Inputs/ExternalSources/Turkey2022/ if available.
+If data unavailable, marks series as data_unavailable (NO synthetic generation).
 
 Key finding: NSW negative for ALL 40 years (1980-2019), average -1.13% GDP.
 
-Inputs:  HDARP extraction benchmark values (hardcoded from paper)
-         final-data/series/T607.csv (US NSW for comparison)
-Outputs: final-data/series/N1601-N1605.csv
-Dependencies: P11 (for T607 US comparison)
+Inputs:  Inputs/ExternalSources/Turkey2022/*.csv (if available)
+Outputs: final-data/studies/series/N1601-N1602.csv
 """
 
 import sys
@@ -18,27 +16,13 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 import pandas as pd
-import numpy as np
-from utils.paths import STUDIES_OUT, ensure_dirs
+from utils.paths import STUDIES_OUT, INPUTS, ensure_dirs
 
 SERIES_ID = "N1601"
 SERIES_IDS = ["N1601", "N1602"]
 PRIORITY = 14
 
-# Benchmark values from HDARP extraction of Karabacak & Tonak (2022)
-# These are the KEY STATISTICS reported in the paper
-TURKEY_BENCHMARKS = {
-    "labor_share_mean": 0.397,
-    "labor_share_std": 0.032,
-    "tax_ratio_mean": 0.0863,  # as fraction of GDP
-    "benefit_ratio_mean": 0.0750,
-    "nsw_ratio_mean": -0.0113,
-    "unemployment_mean": 0.0984,
-    "gdp_growth_mean": 0.0451,
-    "n_years": 40,
-    "n_negative": 40,  # ALL years negative
-    "period": (1980, 2019),
-}
+TURKEY_DIR = INPUTS / "ExternalSources" / "Turkey2022"
 
 
 def process():
@@ -47,52 +31,42 @@ def process():
     data_dict = {}
     outputs = []
 
-    # N1601: Turkey Labor Share (synthetic from reported statistics)
-    # Since we don't have year-by-year Turkey data (would need TURKSTAT),
-    # create a summary series with the reported mean and trend
-    years = list(range(1980, 2020))
-    # Labor share declined from ~45% to ~35% over 40 years
-    labor_share = pd.Series(
-        [0.45 - (0.45 - 0.35) * (i / 39) for i in range(40)],
-        index=years,
-    )
+    labor_share_path = TURKEY_DIR / "turkey_labor_share_1980_2019.csv"
+    nsw_path = TURKEY_DIR / "turkey_nsw_gdp_1980_2019.csv"
 
-    out = pd.DataFrame({"book": labor_share, "combined": labor_share})
-    out.index.name = "year"
-    out_path = STUDIES_OUT / "N1601.csv"
-    out.to_csv(out_path)
-    outputs.append(str(out_path))
-    data_dict["N1601"] = labor_share
-    steps.append(f"N1601: {len(labor_share)} years (Turkey labor share, linear trend 45%→35%)")
-    print(f"    [P18] N1601: {len(labor_share)} years (Turkey labor share)")
+    if labor_share_path.exists():
+        df = pd.read_csv(labor_share_path, index_col=0)
+        col = df.columns[0]
+        labor_share = df[col].dropna()
+        out = pd.DataFrame({"book": labor_share, "combined": labor_share})
+        out.index.name = "year"
+        out.to_csv(STUDIES_OUT / "N1601.csv")
+        data_dict["N1601"] = labor_share
+        outputs.append(str(STUDIES_OUT / "N1601.csv"))
+        steps.append(f"N1601: {len(labor_share)} years (Turkey labor share, primary)")
+        print(f"    [P18] N1601: {len(labor_share)} years (primary)")
+    else:
+        steps.append("N1601: data_unavailable (requires TURKSTAT or figure digitization)")
+        print("    [P18] N1601: data_unavailable")
 
-    # N1602: Turkey NSW/GDP (synthetic from reported mean)
-    # Paper reports all 40 years negative, mean -1.13%
-    # Create synthetic series oscillating around mean
-    np.random.seed(2022)  # Reproducible
-    nsw_turkey = pd.Series(
-        TURKEY_BENCHMARKS["nsw_ratio_mean"] + np.random.normal(0, 0.005, 40),
-        index=years,
-    )
-    # Ensure all negative (paper finding)
-    nsw_turkey = nsw_turkey.clip(upper=-0.001)
-
-    out = pd.DataFrame({"book": nsw_turkey, "combined": nsw_turkey})
-    out.index.name = "year"
-    out_path = STUDIES_OUT / "N1602.csv"
-    out.to_csv(out_path)
-    outputs.append(str(out_path))
-    data_dict["N1602"] = nsw_turkey
-    steps.append(f"N1602: {len(nsw_turkey)} years (Turkey NSW/GDP, all negative, mean={float(nsw_turkey.mean()):.4f})")
-    print(f"    [P18] N1602: {len(nsw_turkey)} years (Turkey NSW, mean={float(nsw_turkey.mean()):.4f})")
-
-    # Note: N1603-N1605 would require actual Turkey data from TURKSTAT
-    # For now, document the benchmark values
-    steps.append("N1603-N1605: deferred (requires TURKSTAT data)")
+    if nsw_path.exists():
+        df = pd.read_csv(nsw_path, index_col=0)
+        col = df.columns[0]
+        nsw = df[col].dropna()
+        out = pd.DataFrame({"book": nsw, "combined": nsw})
+        out.index.name = "year"
+        out.to_csv(STUDIES_OUT / "N1602.csv")
+        data_dict["N1602"] = nsw
+        outputs.append(str(STUDIES_OUT / "N1602.csv"))
+        steps.append(f"N1602: {len(nsw)} years (Turkey NSW/GDP, primary)")
+        print(f"    [P18] N1602: {len(nsw)} years (primary)")
+    else:
+        steps.append("N1602: data_unavailable (requires TURKSTAT or figure digitization)")
+        print("    [P18] N1602: data_unavailable")
 
     return {
         "series_id": SERIES_ID,
-        "status": "ok" if data_dict else "fail",
+        "status": "ok" if data_dict else "data_unavailable",
         "steps": steps,
         "data_dict": data_dict,
         "outputs": outputs,

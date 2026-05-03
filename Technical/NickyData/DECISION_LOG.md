@@ -156,4 +156,19 @@ Structured record of all non-trivial design decisions. Each entry documents what
 
 ---
 
-*Last updated: 2026-04-09 (refinement cycle)*
+## DEC-012: No Synthetic Data Policy (2026-05-03)
+
+**Decision**: Retroactively apply a strict no-synthetic-data rule. All series with `"status": "synthetic"` or `"data_quality": "estimated_from_benchmarks"` must be replaced with real data extracted from HDARP, APIs, or digitized figures. If real data cannot be obtained, the series is marked `data_unavailable` with an empty CSV — never filled with fabricated values.
+
+**Rationale**: The Anu Extension Standard Principle 10 ("FAIL ON UNCERTAINTY") logically extends to data itself. Synthetic placeholders that use `np.random` to generate fake annual data from summary statistics violate the Anu Suite's core commitment to provenance and reproducibility. Five N-series (N1001, N1002, N1601, N1602, N1701) were identified as using synthetic data.
+
+**Remediation plan**:
+- N1001/N1002 (Tonak 1984): Extract real annual data from HDARP Table V.B (28 years available)
+- N1601/N1602 (Turkey 2022): Digitize from paper figures or obtain TURKSTAT data
+- N1701 (Cronin NZ 2001): Digitize from paper figures or obtain Stats NZ data
+
+**Impact**: All 13 Anu Suite skill files updated with explicit no-synthetic-data rules. Series registry, processing scripts, DPRs, and EPRs to be updated as data is obtained.
+
+---
+
+*Last updated: 2026-05-03 (no-synthetic-data policy)*

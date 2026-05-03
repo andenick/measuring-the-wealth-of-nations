@@ -1370,8 +1370,7 @@
       },
       "processor": "P20",
       "wave": 1,
-      "status": "synthetic",
-      "data_quality": "estimated_from_benchmarks"
+      "status": "calculated"
     },
     "N1002": {
       "name": "Net Tax Rate on Workers (Tonak 1984)",
@@ -1406,8 +1405,7 @@
       },
       "processor": "P20",
       "wave": 1,
-      "status": "synthetic",
-      "data_quality": "estimated_from_benchmarks"
+      "status": "calculated"
     },
     "N1101": {
       "name": "Net Transfer Rate (ST 1987)",
@@ -2040,8 +2038,8 @@
       },
       "processor": "P18",
       "wave": 1,
-      "status": "synthetic",
-      "data_quality": "estimated_from_benchmarks"
+      "status": "data_pending",
+      "data_note": "Requires TURKSTAT data or figure digitization from Karabacak & Tonak (2022)"
     },
     "N1602": {
       "name": "Turkey NSW/GDP (Karabacak & Tonak 2022)",
@@ -2076,8 +2074,8 @@
       },
       "processor": "P18",
       "wave": 1,
-      "status": "synthetic",
-      "data_quality": "estimated_from_benchmarks"
+      "status": "data_pending",
+      "data_note": "Requires TURKSTAT data or figure digitization from Karabacak & Tonak (2022)"
     },
     "N1701": {
       "name": "NZ Productive Capital Share (Cronin 2001)",
@@ -2112,8 +2110,8 @@
       },
       "processor": "P20",
       "wave": 1,
-      "status": "synthetic",
-      "data_quality": "estimated_from_benchmarks"
+      "status": "data_pending",
+      "data_note": "Requires Stats NZ historical national accounts or figure digitization from Cronin (2001)"
     }
   },
   "figures": {
