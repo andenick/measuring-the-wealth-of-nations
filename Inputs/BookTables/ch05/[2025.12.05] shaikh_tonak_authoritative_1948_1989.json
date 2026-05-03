@@ -1,0 +1,35 @@
+{
+  "description": "Authoritative Shaikh-Tonak exploitation rate series",
+  "methodology": "Exact book procedures from Chapters 5-6",
+  "source": "Shaikh & Tonak (1994) Measuring the Wealth of Nations",
+  "no_adjustment_factors": true,
+  "book_benchmarks": {
+    "1948": {
+      "e": 1.7,
+      "V_W_ratio": 0.54,
+      "source": "Table 5.7"
+    },
+    "1958": {
+      "e": 1.83,
+      "V_W_ratio": 0.52,
+      "source": "Table 5.6 (interpolated)"
+    },
+    "1967": {
+      "e": 2.1,
+      "V_W_ratio": 0.47,
+      "source": "Table 5.7"
+    },
+    "1977": {
+      "e": 2.1,
+      "V_W_ratio": 0.42,
+      "source": "Table 5.7"
+    },
+    "1989": {
+      "e": 2.44,
+      "V_W_ratio": 0.36,
+      "source": "Table 5.7"
+    }
+  },
+  "created": "2025-12-05T23:08:56.921327",
+  "years": "1948-1989"
+}

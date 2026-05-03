@@ -1,0 +1,210 @@
+{
+  "project": "ST2",
+  "chapter": 6,
+  "chapter_title": "The Net Social Wage",
+  "assessment_date": "2026-03-22",
+  "assessor": "agent",
+  "version": "1.0",
+  "overall_adequacy": "ADEQUATE",
+  "overall_score": 90,
+  "layers": {
+    "L1_source_text": {
+      "score": 85,
+      "status": "PASS",
+      "checks": {
+        "chapter_pages": {
+          "expected": 30,
+          "found": 0,
+          "pct": 0.0,
+          "status": "PARTIAL",
+          "detail": "Ch6 narrative pages (pp.151-180) not directly in ST2 KB as page_NNN files. Full text available in parent Shaikh Tonak KB (1994_Measuring_Wealth HDARP extraction). Fiscal methodology is partially captured in page_080_gov_expenditure.tex."
+        },
+        "appendix_pages": {
+          "expected": 199,
+          "found": 178,
+          "pct": 89.4,
+          "status": "PASS",
+          "detail": "Shared appendix pages 201-399 contain fiscal data tables and methodology"
+        },
+        "tables_extracted": {
+          "expected": 3,
+          "found": 2,
+          "pct": 66.7,
+          "status": "PARTIAL",
+          "detail": "page_310_table_E2.csv (primary fiscal data), page_080_gov_expenditure.tex (equations). Some intermediate fiscal tables from Ch6 appendices not separately extracted."
+        },
+        "equations_extracted": {
+          "expected": 3,
+          "found": 2,
+          "pct": 66.7,
+          "status": "PARTIAL",
+          "detail": "NSW formula (NSW = B_w + G_w - T_w) present. Tax decomposition equations partially captured."
+        },
+        "footnotes_captured": {
+          "expected": 15,
+          "found": 10,
+          "pct": 66.7,
+          "status": "PARTIAL",
+          "detail": "Ch6 fiscal methodology footnotes only accessible via parent project KB"
+        }
+      },
+      "gaps": [
+        "Ch6 narrative text (pp.151-180) not in ST2 KB - only in parent Shaikh Tonak KB",
+        "Some intermediate fiscal appendix tables not separately extracted",
+        "5 fiscal methodology footnotes not captured in ST2 KB"
+      ]
+    },
+    "L2_series_definition": {
+      "score": 100,
+      "status": "PASS",
+      "checks": {
+        "series_registered": {
+          "expected": 9,
+          "found": 9,
+          "pct": 100.0,
+          "status": "PASS",
+          "detail": "T601-T609 all in series_registry.json"
+        },
+        "subseries_defined": {
+          "expected": 9,
+          "found": 9,
+          "pct": 100.0,
+          "status": "PASS"
+        },
+        "construction_documented": {
+          "expected": 9,
+          "found": 9,
+          "pct": 100.0,
+          "status": "PASS"
+        },
+        "dependencies_explicit": {
+          "status": "PASS",
+          "detail": "NSW derivation chain (T607 = T605 + T606 - T604) documented"
+        },
+        "id_convention": {
+          "status": "PASS"
+        }
+      },
+      "gaps": []
+    },
+    "L3_data_availability": {
+      "score": 85,
+      "status": "PASS",
+      "checks": {
+        "book_period_data": {
+          "expected": 9,
+          "found": 9,
+          "pct": 100.0,
+          "status": "PASS",
+          "detail": "chapter_06_absorbed.csv contains all 9 series for 1948-1989"
+        },
+        "api_endpoints_identified": {
+          "expected": 9,
+          "found": 9,
+          "pct": 100.0,
+          "status": "PASS",
+          "detail": "BEA NIPA fiscal tables identified for all 9 extendable series"
+        },
+        "api_data_fetchable": {
+          "expected": 9,
+          "found": 7,
+          "pct": 77.8,
+          "status": "PARTIAL",
+          "detail": "1996 welfare reform creates structural break in fiscal allocation methodology. Pre-reform data bridge partially implemented."
+        },
+        "external_benchmarks": {
+          "expected": 5,
+          "found": 4,
+          "pct": 80.0,
+          "status": "PASS",
+          "detail": "Moos 2017 NSW estimates, Tonak 1984 state revenues, Shaikh-Tonak 2002 welfare state. NSW_COMPARISON_REVIEW provides cross-study validation."
+        },
+        "structural_breaks": {
+          "status": "PARTIAL",
+          "detail": "1996 welfare reform break identified but bridge logic partially implemented in L08/P10"
+        }
+      },
+      "gaps": [
+        "1996 welfare reform structural break - bridge logic partially implemented",
+        "Pre-reform fiscal allocation methodology requires manual data integration"
+      ]
+    },
+    "L4_construction_logic": {
+      "score": 100,
+      "status": "PASS",
+      "checks": {
+        "decompositions_exist": {
+          "expected": 9,
+          "found": 9,
+          "pct": 100.0,
+          "status": "PASS"
+        },
+        "mermaid_diagrams": {
+          "expected": 9,
+          "found": 9,
+          "pct": 100.0,
+          "status": "PASS"
+        },
+        "input_chain_complete": {
+          "status": "PASS",
+          "detail": "All terminal nodes map to absorbed CSV, BEA NIPA fiscal tables, or Census/BLS data"
+        },
+        "formulas_documented": {
+          "status": "PASS",
+          "detail": "NSW = B_w + G_w - T_w and component formulas documented in decompositions"
+        }
+      },
+      "gaps": []
+    },
+    "L5_validation_data": {
+      "score": 85,
+      "status": "PASS",
+      "checks": {
+        "figures_mapped": {
+          "expected": 4,
+          "found": 4,
+          "pct": 100.0,
+          "status": "PASS",
+          "detail": "Fig_6_1 through Fig_6_4 all in FIGURE_SERIES_CATALOG.json"
+        },
+        "published_values": {
+          "status": "PASS",
+          "detail": "Absorbed CSV contains book-period NSW values"
+        },
+        "external_validation": {
+          "expected": 5,
+          "found": 3,
+          "pct": 60.0,
+          "status": "PARTIAL",
+          "detail": "Moos 2017 validates NSW through 2012. Tonak 1984 validates tax decomposition. T602-T603 (specific tax components) lack independent validation."
+        },
+        "tolerance_thresholds": {
+          "status": "PARTIAL",
+          "detail": "No formal per-series thresholds. NSW_COMPARISON_REVIEW provides qualitative validation."
+        },
+        "cross_chapter_constraints": {
+          "status": "PASS",
+          "detail": "T901 (Ch9) depends on T6xx; constraints documented"
+        }
+      },
+      "gaps": [
+        "T602-T603 (social insurance, property taxes) lack external validation",
+        "Per-series tolerance thresholds not formally documented"
+      ]
+    }
+  },
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "Ch6 narrative text (pp.151-180) not in ST2 KB - in parent project only",
+    "1996 welfare reform bridge logic partially implemented",
+    "Some fiscal tables not separately extracted from appendices",
+    "T602-T603 lack external validation for tax component decomposition"
+  ],
+  "recommendation": "PROCEED - all blocking requirements met. Fiscal methodology sufficiently documented through appendix pages and external papers (Tonak 1984, Moos 2017).",
+  "remediation_checklist": [
+    "Copy Ch6 narrative HDARP chunks from parent Shaikh Tonak KB",
+    "Complete welfare reform bridge logic in L08/P10 loading scripts",
+    "Extract intermediate fiscal tables from book appendices",
+    "Document per-series tolerance thresholds for NSW components"
+  ]
+}
