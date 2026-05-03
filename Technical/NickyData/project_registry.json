@@ -140,7 +140,7 @@
       "source": "Review of Political Economy 13(3): 309-327",
       "period": [1972, 1995],
       "country": "New Zealand",
-      "series": ["N1701"],
+      "series": ["N1701", "N1702", "N1703", "N1704"],
       "processing_scripts": ["P20"],
       "relationship": "International application to NZ",
       "key_finding": "Post-1984 reform increased unproductive activity share"

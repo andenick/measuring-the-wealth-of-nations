@@ -103,24 +103,61 @@ def process():
                 steps.append(f"N1504: {len(burden)} years (unproductive burden ratio)")
                 print(f"    [P20] N1504: {len(burden)} years (burden ratio)")
 
-    # === Cronin (2001) — NZ 1972-1995 ===
-    # Data unavailable: requires Stats NZ historical national accounts or figure digitization
-    # Cronin paper reports declining productive capital share post-1984 reform
-    # but annual data not extracted from HDARP (paper may not contain annual table)
-    nz_data_path = INPUTS / "ExternalSources" / "Cronin2001" / "nz_productive_share_1972_1995.csv"
-    if nz_data_path.exists():
-        nz_df = pd.read_csv(nz_data_path, index_col=0)
-        nz_prod_share = nz_df.iloc[:, 0].dropna()
-        out = pd.DataFrame({"book": nz_prod_share, "combined": nz_prod_share})
+    # === Cronin (2001) — NZ 1972-1995 — Real data from paper Tables 1 & 2 ===
+    cronin_dir = INPUTS / "ExternalSources" / "Cronin2001"
+    t2_path = cronin_dir / "cronin_table2_ratios_1972_1995.csv"
+    t1_path = cronin_dir / "cronin_table1_nzsna_classical_1972_1995.csv"
+
+    if t2_path.exists():
+        t2 = pd.read_csv(t2_path, index_col=0)
+
+        # N1701: Surplus share of total value (s/TV %)
+        s_tv = t2["surplus_share_of_total_value_pct"] / 100.0
+        out = pd.DataFrame({"book": s_tv, "combined": s_tv})
         out.index.name = "year"
         out.to_csv(STUDIES_OUT / "N1701.csv")
-        data_dict["N1701"] = nz_prod_share
+        data_dict["N1701"] = s_tv
         outputs.append(str(STUDIES_OUT / "N1701.csv"))
-        steps.append(f"N1701: {len(nz_prod_share)} years (NZ productive share, primary)")
-        print(f"    [P20] N1701: {len(nz_prod_share)} years (NZ, primary data)")
-    else:
-        steps.append("N1701: data_unavailable (requires Stats NZ or Cronin figure digitization)")
-        print("    [P20] N1701: data_unavailable (no primary NZ data)")
+        steps.append(f"N1701: {len(s_tv)} years (Cronin Table 2 s/TV, primary)")
+        print(f"    [P20] N1701: {len(s_tv)} years (Cronin s/TV, paper Table 2)")
+
+    if t1_path.exists() and t2_path.exists():
+        t1 = pd.read_csv(t1_path, index_col=0)
+        t2 = pd.read_csv(t2_path, index_col=0)
+
+        # N1702: Rate of surplus value (s/v %)
+        s_v = t2["rate_of_surplus_value_pct"] / 100.0
+        out = pd.DataFrame({"book": s_v, "combined": s_v})
+        out.index.name = "year"
+        out.to_csv(STUDIES_OUT / "N1702.csv")
+        data_dict["N1702"] = s_v
+        outputs.append(str(STUDIES_OUT / "N1702.csv"))
+        steps.append(f"N1702: {len(s_v)} years (Cronin Table 2 s/v)")
+        print(f"    [P20] N1702: {len(s_v)} years (Cronin s/v)")
+
+        # N1703: Value composition of capital (c/v %)
+        c_v = t2["value_composition_of_capital_pct"] / 100.0
+        out = pd.DataFrame({"book": c_v, "combined": c_v})
+        out.index.name = "year"
+        out.to_csv(STUDIES_OUT / "N1703.csv")
+        data_dict["N1703"] = c_v
+        outputs.append(str(STUDIES_OUT / "N1703.csv"))
+        steps.append(f"N1703: {len(c_v)} years (Cronin Table 2 c/v)")
+        print(f"    [P20] N1703: {len(c_v)} years (Cronin c/v)")
+
+        # N1704: Total value (NZ$m) from Table 1 — for cross-validation
+        tv = t1["total_value_mNZD"]
+        out = pd.DataFrame({"book": tv, "combined": tv})
+        out.index.name = "year"
+        out.to_csv(STUDIES_OUT / "N1704.csv")
+        data_dict["N1704"] = tv
+        outputs.append(str(STUDIES_OUT / "N1704.csv"))
+        steps.append(f"N1704: {len(tv)} years (Cronin Table 1 total value NZ$m)")
+        print(f"    [P20] N1704: {len(tv)} years (Cronin total value)")
+
+    if not t2_path.exists():
+        steps.append("N1701-N1704: Cronin CSVs not found")
+        print("    [P20] N1701-N1704: data_unavailable")
 
     return {
         "series_id": SERIES_ID,

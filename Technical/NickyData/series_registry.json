@@ -2038,8 +2038,7 @@
       },
       "processor": "P18",
       "wave": 1,
-      "status": "data_pending",
-      "data_note": "Requires TURKSTAT data or figure digitization from Karabacak & Tonak (2022)"
+      "status": "calculated"
     },
     "N1602": {
       "name": "Turkey NSW/GDP (Karabacak & Tonak 2022)",
@@ -2074,20 +2073,19 @@
       },
       "processor": "P18",
       "wave": 1,
-      "status": "data_pending",
-      "data_note": "Requires TURKSTAT data or figure digitization from Karabacak & Tonak (2022)"
+      "status": "calculated"
     },
     "N1701": {
-      "name": "NZ Productive Capital Share (Cronin 2001)",
+      "name": "NZ Surplus Share of Total Value (Cronin 2001)",
       "study": "study_08_cronin_nz_2001",
       "chapter": null,
-      "paper_table": "Table 1",
-      "source_file": null,
+      "paper_table": "Table 2",
+      "source_file": "Inputs/ExternalSources/Cronin2001/cronin_table2_ratios_1972_1995.csv",
       "year_range": [1972, 1995],
       "subseries": {
         "N1701-A": {
-          "name": "Synthetic from HDARP benchmarks",
-          "source": "Cronin 2001 RPE",
+          "name": "Cronin (2001) Table 2 s/TV",
+          "source": "Cronin 2001 RPE Table 2",
           "period": [1972, 1995],
           "units": "share",
           "color": "#98df8a"
@@ -2100,18 +2098,122 @@
         }
       },
       "construction": [
-        {"step": 1, "op": "load", "subseries": ["N1701-A"], "desc": "Synthetic declining share, break at 1984 reform"}
+        {"step": 1, "op": "load", "subseries": ["N1701-A"], "desc": "Direct from Cronin Table 2 s/TV column"}
       ],
       "extension": null,
       "validation": {
-        "reference_values": {},
-        "expected_range": [0.50, 0.85],
+        "reference_values": {"1972": 0.34, "1989": 0.38, "1995": 0.38},
+        "expected_range": [0.25, 0.45],
         "tolerance": "share_series"
       },
       "processor": "P20",
       "wave": 1,
-      "status": "data_pending",
-      "data_note": "Requires Stats NZ historical national accounts or figure digitization from Cronin (2001)"
+      "status": "calculated"
+    },
+    "N1702": {
+      "name": "NZ Rate of Surplus Value (Cronin 2001)",
+      "study": "study_08_cronin_nz_2001",
+      "chapter": null,
+      "paper_table": "Table 2",
+      "source_file": "Inputs/ExternalSources/Cronin2001/cronin_table2_ratios_1972_1995.csv",
+      "year_range": [1972, 1995],
+      "subseries": {
+        "N1702-A": {
+          "name": "Cronin (2001) Table 2 s/v",
+          "source": "Cronin 2001 RPE Table 2",
+          "period": [1972, 1995],
+          "units": "ratio",
+          "color": "#98df8a"
+        },
+        "N1702-COMBINED": {
+          "name": "Full series",
+          "period": [1972, 1995],
+          "units": "ratio",
+          "color": "#98df8a"
+        }
+      },
+      "construction": [
+        {"step": 1, "op": "load", "subseries": ["N1702-A"], "desc": "Direct from Cronin Table 2 s/v column"}
+      ],
+      "extension": null,
+      "validation": {
+        "reference_values": {"1972": 2.06, "1984": 2.28, "1995": 3.07},
+        "expected_range": [1.5, 4.5],
+        "tolerance": "rate_series"
+      },
+      "processor": "P20",
+      "wave": 1,
+      "status": "calculated"
+    },
+    "N1703": {
+      "name": "NZ Value Composition of Capital (Cronin 2001)",
+      "study": "study_08_cronin_nz_2001",
+      "chapter": null,
+      "paper_table": "Table 2",
+      "source_file": "Inputs/ExternalSources/Cronin2001/cronin_table2_ratios_1972_1995.csv",
+      "year_range": [1972, 1995],
+      "subseries": {
+        "N1703-A": {
+          "name": "Cronin (2001) Table 2 c/v",
+          "source": "Cronin 2001 RPE Table 2",
+          "period": [1972, 1995],
+          "units": "ratio",
+          "color": "#98df8a"
+        },
+        "N1703-COMBINED": {
+          "name": "Full series",
+          "period": [1972, 1995],
+          "units": "ratio",
+          "color": "#98df8a"
+        }
+      },
+      "construction": [
+        {"step": 1, "op": "load", "subseries": ["N1703-A"], "desc": "Direct from Cronin Table 2 c/v column"}
+      ],
+      "extension": null,
+      "validation": {
+        "reference_values": {"1972": 2.93, "1984": 3.85, "1995": 3.97},
+        "expected_range": [2.5, 4.5],
+        "tolerance": "rate_series"
+      },
+      "processor": "P20",
+      "wave": 1,
+      "status": "calculated"
+    },
+    "N1704": {
+      "name": "NZ Total Value (Cronin 2001)",
+      "study": "study_08_cronin_nz_2001",
+      "chapter": null,
+      "paper_table": "Table 1",
+      "source_file": "Inputs/ExternalSources/Cronin2001/cronin_table1_nzsna_classical_1972_1995.csv",
+      "year_range": [1972, 1995],
+      "subseries": {
+        "N1704-A": {
+          "name": "Cronin (2001) Table 1 Total Value",
+          "source": "Cronin 2001 RPE Table 1",
+          "period": [1972, 1995],
+          "units": "millions_nzd",
+          "color": "#98df8a"
+        },
+        "N1704-COMBINED": {
+          "name": "Full series",
+          "period": [1972, 1995],
+          "units": "millions_nzd",
+          "color": "#98df8a"
+        }
+      },
+      "construction": [
+        {"step": 1, "op": "load", "subseries": ["N1704-A"], "desc": "Direct from Cronin Table 1 total_value column"}
+      ],
+      "extension": null,
+      "validation": {
+        "reference_values": {"1972": 10423, "1995": 123284},
+        "expected_range": [5000, 200000],
+        "tolerance": "dollar_series"
+      },
+      "processor": "P20",
+      "wave": 1,
+      "status": "calculated"
     }
   },
   "figures": {
