@@ -8,8 +8,8 @@
 ## Setup
 
 ```bash
-git clone https://github.com/andenick/AS2-ShaikhTonak.git
-cd AS2-ShaikhTonak/Technical/NickyData
+git clone https://github.com/andenick/measuring-the-wealth-of-nations-replication.git
+cd measuring-the-wealth-of-nations-replication/Technical/NickyData
 pip install -r requirements.txt
 ```
 
