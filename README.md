@@ -1,4 +1,4 @@
-# AS2 - Shaikh & Tonak (1994) Replication and Extension Package
+# Measuring the Wealth of Nations Replication
 
 **Complete replication and extension of every empirical claim in Shaikh & Tonak's *Measuring the Wealth of Nations* (1994)**
 
