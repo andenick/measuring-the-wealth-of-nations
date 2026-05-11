@@ -140,9 +140,9 @@
     "T504": {
       "name": "Variable Capital (V*)",
       "chapter": 5,
-      "book_table": "5.5",
+      "book_table": "H.1",
       "figures": ["Fig_5_4", "Fig_6_1", "Fig_6_2", "Fig_6_3", "Fig_9_1"],
-      "source_file": "ch05/ExploitationComposition_1948_1989.csv",
+      "source_file": "book_tableH1_1948_1989.csv",
       "year_range": [1948, 2024],
       "subseries": {
         "T504-A": {
@@ -192,11 +192,11 @@
       "status": "validated"
     },
     "T505": {
-      "name": "Surplus Value (S* = GFP - V*)",
+      "name": "Surplus Value (S* = VA* - V*)",
       "chapter": 5,
-      "book_table": "5.5",
+      "book_table": "H.1",
       "figures": ["Fig_5_4", "Fig_9_1"],
-      "source_file": null,
+      "source_file": "book_tableH1_1948_1989.csv",
       "year_range": [1948, 2024],
       "subseries": {
         "T505-A": {
@@ -248,9 +248,9 @@
     "T506": {
       "name": "Rate of Exploitation (e = S*/V*)",
       "chapter": 5,
-      "book_table": "5.7",
+      "book_table": "H.1",
       "figures": ["Fig_5_3", "Fig_9_3", "Fig_9_5"],
-      "source_file": "ch05/Table5_7_KeyRatios.csv",
+      "source_file": "book_tableH1_1948_1989.csv",
       "year_range": [1948, 2024],
       "subseries": {
         "T506-A": {
@@ -289,7 +289,7 @@
         "depends_on": ["T512"]
       },
       "validation": {
-        "reference_values": {"1948": 1.70, "1958": 1.83, "1967": 2.10, "1977": 2.10, "1989": 2.44},
+        "reference_values": {"1948": 1.70, "1958": 2.01, "1967": 2.10, "1972": 1.99, "1977": 2.10, "1989": 2.44},
         "expected_range": [1.0, 5.0],
         "tolerance": "rate_series"
       },
@@ -396,7 +396,7 @@
       "status": "data_available"
     },
     "T510": {
-      "name": "Value Composition (C*/V*)",
+      "name": "Value Composition of Capital (K/V*)",
       "chapter": 5,
       "book_table": "5.7",
       "figures": [],
@@ -1301,8 +1301,8 @@
       "loader": "L14",
       "processor": "P15",
       "wave": 3,
-      "status": "wave3_planned",
-      "deferred_reason": "Wave 3 series — requires Ch2 theoretical framework implementation"
+      "status": "calculated",
+      "content_type": "cross_sectional"
     },
     "T801": {
       "name": "Cross-Study Comparison",
@@ -1334,19 +1334,19 @@
       "loader": "L13",
       "processor": "P15",
       "wave": 3,
-      "status": "wave3_planned",
-      "deferred_reason": "Wave 3 series — requires Ch8 cross-study comparison framework"
+      "status": "calculated",
+      "content_type": "cross_sectional"
     },
     "N1001": {
       "name": "Labor Share of National Income (Tonak 1984)",
       "study": "study_01_tonak_1984",
       "chapter": null,
-      "paper_table": "Table II",
+      "paper_table": "Table V",
       "source_file": null,
       "year_range": [1952, 1980],
       "subseries": {
         "N1001-A": {
-          "name": "Tonak (1984) Table II",
+          "name": "Tonak (1984) Table V",
           "source": "Tonak 1984 PhD Dissertation",
           "period": [1952, 1980],
           "units": "share",
@@ -1360,7 +1360,7 @@
         }
       },
       "construction": [
-        {"step": 1, "op": "load", "subseries": ["N1001-A"], "desc": "Synthetic from HDARP benchmarks"}
+        {"step": 1, "op": "load", "subseries": ["N1001-A"], "desc": "HDARP extraction from Table V"}
       ],
       "extension": null,
       "validation": {
@@ -1376,12 +1376,12 @@
       "name": "Net Tax Rate on Workers (Tonak 1984)",
       "study": "study_01_tonak_1984",
       "chapter": null,
-      "paper_table": "Table III",
+      "paper_table": "Table X",
       "source_file": null,
       "year_range": [1952, 1980],
       "subseries": {
         "N1002-A": {
-          "name": "Tonak (1984) Table III",
+          "name": "Tonak (1984) Table X",
           "source": "Tonak 1984 PhD Dissertation",
           "period": [1952, 1980],
           "units": "rate",
@@ -1395,7 +1395,7 @@
         }
       },
       "construction": [
-        {"step": 1, "op": "load", "subseries": ["N1002-A"], "desc": "Synthetic from HDARP benchmarks"}
+        {"step": 1, "op": "load", "subseries": ["N1002-A"], "desc": "HDARP extraction from Table X"}
       ],
       "extension": null,
       "validation": {
@@ -2014,7 +2014,7 @@
       "year_range": [1980, 2019],
       "subseries": {
         "N1601-A": {
-          "name": "Synthetic from HDARP benchmarks",
+          "name": "TurkStat Table 20.37 (DEC-014)",
           "source": "Karabacak & Tonak 2022 RRPE",
           "period": [1980, 2019],
           "units": "share",
@@ -2028,7 +2028,7 @@
         }
       },
       "construction": [
-        {"step": 1, "op": "load", "subseries": ["N1601-A"], "desc": "Synthetic linear trend from HDARP benchmarks"}
+        {"step": 1, "op": "load", "subseries": ["N1601-A"], "desc": "TurkStat HDARP extraction (DEC-014)"}
       ],
       "extension": null,
       "validation": {
@@ -2049,7 +2049,7 @@
       "year_range": [1980, 2019],
       "subseries": {
         "N1602-A": {
-          "name": "Synthetic from HDARP benchmarks — all negative",
+          "name": "SBB/MoF fiscal data (DEC-014)",
           "source": "Karabacak & Tonak 2022 RRPE",
           "period": [1980, 2019],
           "units": "ratio",
@@ -2063,7 +2063,7 @@
         }
       },
       "construction": [
-        {"step": 1, "op": "load", "subseries": ["N1602-A"], "desc": "Synthetic from HDARP mean -1.13% GDP, all years negative"}
+        {"step": 1, "op": "load", "subseries": ["N1602-A"], "desc": "SBB/MoF fiscal data + World Bank (DEC-014)"}
       ],
       "extension": null,
       "validation": {

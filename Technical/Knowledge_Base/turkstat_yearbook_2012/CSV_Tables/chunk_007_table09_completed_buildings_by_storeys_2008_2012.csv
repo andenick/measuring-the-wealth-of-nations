@@ -1,0 +1,13 @@
+table_number,table_title,source_page
+13.16,Completed or partially completed new buildings and additions by use and number of storeys 2008-2012 (according to occupancy permits),245
+
+building_use,storeys,2008,2009,2010,2011,2012
+Total,-2,26837,29000,31016,35768,34089
+Total,3-5,32004,32660,36157,43580,42683
+Total,6+,17228,17917,14958,19086,17864
+Residential,-2,20301,21618,23685,27589,26451
+Residential,3-5,28488,29502,33003,40159,39357
+Residential,6+,15305,16371,13805,17811,16390
+Non-residential,-2,6536,7382,7331,8179,7638
+Non-residential,3-5,3516,3158,3154,3421,3326
+Non-residential,6+,1923,1546,1153,1275,1474

@@ -49,6 +49,13 @@
       "rationale": "The Chopped CSV format (Row 1 metadata, Row 2 IDs, Row 3+ annual data) does not apply to matrix-valued benchmark data",
       "impact": "T401 and T402 have CSV output but no chopped or extenbook artifacts",
       "status": "accepted"
+    },
+    "VAR-007": {
+      "variant_id": "VAR-007",
+      "title": "N-Series Decompositions Consolidated",
+      "description": "All 26 N-series share a single consolidated STUDY_DECOMPOSITIONS.md file instead of individual N####_DECOMPOSITION.md files. This is because N-series are organized by study (8 studies, each with 2-5 series sharing the same processing batch in P19/P20), making individual decomposition files largely redundant.",
+      "status": "accepted",
+      "date_accepted": "2026-05-06"
     }
   }
 }

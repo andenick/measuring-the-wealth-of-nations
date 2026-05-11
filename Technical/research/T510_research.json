@@ -1,0 +1,64 @@
+{
+  "series_id": "T510",
+  "series_name": "Value Composition of Capital (C*/V*)",
+  "chapter": 5,
+  "figures": [],
+  "research_date": "2026-03-21",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Knowledge_Base/chunks/chunk_25.md",
+    "Knowledge_Base/chunks/chunk_26.md",
+    "Knowledge_Base/tables/page_310_table_E2.csv",
+    "Knowledge_Base/equations/page_310_equations.txt",
+    "CHAPTER_5_INVESTIGATION.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "C*/V* = T502/T504. The value composition of capital measures the ratio of constant capital (materials) to variable capital. In Marxian theory, the tendency for this ratio to rise is central to the falling rate of profit thesis.",
+      "source_ref": "ST_1994, Ch5 Table 5.7; Knowledge_Base/equations/page_310_equations.txt"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Ratio of T502 (C*_m) to T504 (V*). Presented in Table 5.7. Book period only (1948-1989) since T502 has no extension.",
+      "source_ref": "ST_1994, Table 5.7"
+    },
+    {
+      "entry_type": "theoretical_note",
+      "content": "This is the materials-flow value composition, not the stock value composition (which would use the capital stock K* in the numerator). The materials-flow version captures the ratio of current intermediate input costs to current wage costs in production. The stock version is used in T513 for the profit rate.",
+      "source_ref": "ST_1994, Ch5 chunk_25-chunk_26"
+    },
+    {
+      "entry_type": "external_comparison",
+      "content": "Mohun's employment and industry classification data (mohun_employment*.csv, mohun_industry_classification.csv) imply different sectoral boundaries for both C* and V*, yielding alternative value composition estimates.",
+      "source_ref": "Mohun_2013; Inputs/ExternalSources/Mohun/"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "No extension beyond 1989 due to T502 constraint. The materials-flow composition is distinct from the capital-stock composition used in profit rate calculations. Table 5.7 only; no dedicated figure.",
+      "source_ref": "DPR T510_DPR.md"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "Mohun_2013",
+      "full": "Mohun, Simon. 2013. 'Unproductive Labor in the U.S. Economy 1964-2010.' Review of Radical Political Economics 46(3): 355-379."
+    }
+  ],
+  "methodology_summary": "Value composition C*/V* = T502/T504, measuring the ratio of constant to variable capital (materials-flow). Book period only. No extension due to T502 constraint.",
+  "known_issues": [
+    "No extension beyond 1989",
+    "Materials-flow measure only — distinct from capital-stock composition",
+    "No dedicated figure"
+  ],
+  "cross_references": ["T502", "T504", "T513"],
+  "adequacy_refs": {
+    "L1_kb_pages": ["Knowledge_Base/chunks/chunk_25.md", "Knowledge_Base/chunks/chunk_26.md", "Knowledge_Base/tables/page_310_table_E2.csv", "Knowledge_Base/equations/page_310_equations.txt", "CHAPTER_5_INVESTIGATION.md"],
+    "L3_data_sources": ["Book Table E.2 (page_310_table_E2.csv)"],
+    "L5_validation": []
+  }
+}

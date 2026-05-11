@@ -1,0 +1,19 @@
+table_ref,sex_group,managerial_responsibility,year,distribution_pct,monthly_paid_hours,hourly_avg_gross_wage_TL,monthly_avg_gross_wage_TL,annual_avg_gross_earnings_TL
+25.4,Total,Total,2006,100.0,199.7,5.5,1103,14252
+25.4,Total,Total,2010,100.0,200.1,7.6,1512,19694
+25.4,Total,With managerial responsibility,2006,14.2,197.2,9.9,1955,25363
+25.4,Total,With managerial responsibility,2010,12.3,196.7,14.3,2818,37148
+25.4,Total,Without managerial responsibility,2006,85.8,200.1,4.8,962,12408
+25.4,Total,Without managerial responsibility,2010,87.7,200.5,6.6,1328,17236
+25.4,Males,Total,2006,100.0,200.3,5.5,1107,14316
+25.4,Males,Total,2010,100.0,201.1,7.5,1510,19683
+25.4,Males,With managerial responsibility,2006,14.5,197.8,9.8,1946,25206
+25.4,Males,With managerial responsibility,2010,12.6,197.7,14.1,2783,36566
+25.4,Males,Without managerial responsibility,2006,85.5,200.7,4.8,965,12471
+25.4,Males,Without managerial responsibility,2010,87.4,201.6,6.6,1327,17251
+25.4,Females,Total,2006,100.0,197.5,5.5,1091,14036
+25.4,Females,Total,2010,100.0,196.9,7.7,1519,19728
+25.4,Females,With managerial responsibility,2006,13.4,194.8,10.2,1989,25933
+25.4,Females,With managerial responsibility,2010,11.6,193.2,15.2,2936,39095
+25.4,Females,Without managerial responsibility,2006,86.6,197.9,4.8,953,12201
+25.4,Females,Without managerial responsibility,2010,88.4,197.4,6.8,1333,17191

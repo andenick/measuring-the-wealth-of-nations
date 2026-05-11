@@ -1,0 +1,30 @@
+{
+  "exploitation_rate": {
+    "book_period_1948_1989": {
+      "start": 1.6956226671191046,
+      "end": 2.4414041777188324,
+      "direction": "RISING",
+      "interpretation": "Declining productive worker share of value added"
+    },
+    "extension_1997_2024": {
+      "start": 2.221447486338725,
+      "end": 1.2614781887118445,
+      "direction": "DECLINING",
+      "interpretation": "Shrinking productive sector reduces measurable surplus extraction"
+    }
+  },
+  "structural_shift": {
+    "tp_gdp_1948": 1.6237627365356622,
+    "tp_gdp_2024": 0.993450494774294,
+    "productive_go_share_1997": 0.537785122211825,
+    "productive_go_share_2024": 0.45557891458382,
+    "finding": "TP*/GDP crossed below 1.0 \u2014 unproductive sector now generates more measured output than productive sector"
+  },
+  "profit_rate": {
+    "r_1948": 0.9317154063943396,
+    "r_1989": 0.796604446257051,
+    "r_2024": 0.388256477105584,
+    "direction": "DECLINING (secular)",
+    "interpretation": "Falling rate of profit consistent with Marxian prediction"
+  }
+}

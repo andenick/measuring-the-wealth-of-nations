@@ -1,0 +1,22 @@
+Table,11.42 - Employment and basic indicators in financial intermediary institutions by economic activity
+Indicator,Contributions to Social Security (Sosyal guvenlik masraflari) - Turkish Lira
+Source,TurkStat Financial Intermediary Institution Statistics
+NACE_Code,Description_EN,2002,2003,2004,2005,2006,2007,2008,2009,2010
+K,Financial and insurance activities,428908962,695936139,803117456,922314036,1063112940,1320700140,1538078722,1633049454,1838163084
+64,Financial service activities (except insurance and pension funding),372480586,585421985,656781105,767163829,890192376,1114795743,1309126478,1364488616,1534072975
+64.11+64.19,"Monetary intermediation (central bank, commercial banks, special finance houses)",290595776,527389877,593316574,694442443,815177975,1022844680,1206801363,1250667313,1405845594
+64.91,Financial leasing companies,2438956,3959407,5602293,6541369,8117497,10882486,12083243,11064115,10471260
+64.92,Other Credit Granting (Consumer Financing Companies / Lenders and Agricultural Credit Cooperatives),,,,,,,,46478124,47391083
+64.99,"Other Financial Service Activities n.e.c. (Banks of Development and Investment, Factoring, Asset Management etc.)",,,,,,,,56279064,70365038
+64.92+64.99 (2002-2008),"Other credit granting and other financial service activities n.e.c. (agricultural credit cooperatives, banks of development and investment, factoring)",79445854,54072701,57862238,66180017,66896904,81068577,90241872,,
+65,Insurance reinsurance and pension funding (except compulsory social security),26043790,37853355,56525253,64057246,72118103,93679201,104503011,103031920,115611089
+65.11,Life insurance,9423041,15262271,25278338,25567277,29786187,37191524,40625622,38239465,40638260
+65.12+65.20,Non-life insurance and reinsurance,16620749,22591084,31246915,38489969,42331916,56487677,63877389,64792455,74972829
+66,Activities auxiliary to financial services and insurance activities,30384586,72660799,89811098,91092961,100802461,112225196,124449233,165528918,188479020
+66.11,Administration of Financial Markets (Stock Markets),,,,,,,,6094948,6946645
+66.12,"Security and commodity contracts brokerage (mutual funds companies and foreign exchange offices)",20713326,30656227,30140411,33687299,38561026,42470784,45074429,35730507,42501715
+66.19,"Other activities auxiliary to financial services (except insurance and pension funding) (credit surety cooperatives)",,22463777,28691736,21293500,10519983,11227989,11258644,10603118,14220320
+66.21,Risk and Damage Evaluation (Insurance Experts),,,,,,,,5503521,7447192
+66.22,Activities of insurance agents and brokers (insurance agents - legal entity),9671260,19540795,30978951,36112162,51721452,58526423,68116160,103915033,113175941
+66.30,Fund management activities (portfolio management companies),,,,,,,,3681791,4187207
+Notes,Social security contributions = total personnel cost minus wages and salaries.,,,,,,,,,,

@@ -1,0 +1,27 @@
+table_ref,measure,sector,occupation,2007,2008,2009,2010,2011
+26.2,Headcount,Total,Total,119738,125142,135043,147417,164287
+26.2,Headcount,Business enterprises,Total,28820,33066,38657,45922,55023
+26.2,Headcount,Business enterprises,Researchers,17055,20548,24523,29800,35191
+26.2,Headcount,Business enterprises,Technicians,8153,8465,9949,11589,14531
+26.2,Headcount,Business enterprises,Other supporting staff,3612,4053,4185,4533,5301
+26.2,Headcount,Government,Total,11798,11893,13105,13598,14076
+26.2,Headcount,Government,Researchers,5786,5692,6632,7099,7073
+26.2,Headcount,Government,Technicians,1463,1478,1567,1733,1862
+26.2,Headcount,Government,Other supporting staff,4549,4723,4906,4766,5141
+26.2,Headcount,Higher education,Total,79120,80183,83281,87897,95188
+26.2,Headcount,Higher education,Researchers,79120,80183,83281,87897,95188
+26.2,Headcount,Higher education,Technicians,-,-,-,-,-
+26.2,Headcount,Higher education,Other supporting staff,-,-,-,-,-
+26.2,FTE,Total,Total,63377,67244,73521,81792,92801
+26.2,FTE,Business enterprises,Total,24261,27462,31476,37522,45408
+26.2,FTE,Business enterprises,Researchers,15293,18025,21019,25342,30404
+26.2,FTE,Business enterprises,Technicians,6374,6550,7597,9035,11259
+26.2,FTE,Business enterprises,Other supporting staff,2594,2886,2860,3145,3745
+26.2,FTE,Government,Total,9572,9871,11007,11357,11749
+26.2,FTE,Government,Researchers,4832,4874,5703,6087,6060
+26.2,FTE,Government,Technicians,1045,1061,1176,1317,1391
+26.2,FTE,Government,Other supporting staff,3695,3936,4129,3954,4297
+26.2,FTE,Higher education,Total,29543,29912,31037,32913,35644
+26.2,FTE,Higher education,Researchers,29543,29912,31037,32913,35644
+26.2,FTE,Higher education,Technicians,-,-,-,-,-
+26.2,FTE,Higher education,Other supporting staff,-,-,-,-,-

@@ -1,0 +1,67 @@
+{
+  "series_id": "T401",
+  "series_name": "A-Matrix (Direct Requirements)",
+  "chapter": 4,
+  "book_table": "4.1",
+  "figures": [],
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_10/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_27/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "The A-matrix (direct requirements matrix) is constructed from BEA benchmark IO tables. For each sector j, the technical coefficient a_ij = z_ij / x_j, where z_ij is the monetary flow from industry i to industry j as an intermediate input, and x_j is the total gross output of industry j. The resulting matrix gives the direct input requirements per unit of output for each sector pair. Juillard's unpublished tables start at 105x116 (1963-1977) or 90x99 (1947/1958), which are aggregated through a multi-stage procedure (105x116 -> 87x98 -> 87x94 -> 82x88) before the final 82x88 transaction matrix Z and output vector x are used to compute A. Force account construction is reversed, fictitious real estate imputed flows are removed, and eating and drinking places are separately estimated for the 1947-1967 tables to ensure cross-year comparability. The six benchmark years are: 1947, 1958, 1963, 1967, 1972, 1977.",
+      "source_ref": "ST_1994, Ch4 (chunk_10); Appendix A (chunk_27)"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Six BEA benchmark IO tables for years 1947, 1958, 1963, 1967, 1972, and 1977, standardized to an 85x85 SIC-based sector classification following the aggregation procedure in Appendix A of Shaikh & Tonak (1994). Source file: ch04/Table4_1_AMatrix.csv (digitized from book Table 4.1). These are cross-sectional benchmark snapshots, NOT annual time series. Year range: 1947-1977 only.",
+      "source_ref": "ST_1994, Appendix A (chunk_27); series_registry.json T401"
+    },
+    {
+      "entry_type": "sector_classification",
+      "content": "The IO tables use SIC (Standard Industrial Classification) sector definitions throughout. The multi-stage aggregation procedure in Appendix A reduces the original BEA tables to a common 82x88 structure, then further to the 6x9 Marxian aggregation (production, total trade, royalties, household, value-added rows). The A-matrix used for T401 operates at the 85x85 intermediate sector level before Marxian aggregation. Key treatment decisions embedded in the tables: (1) ground rent proportion g=0.25 for IO benchmarks, (2) eating and drinking places separately estimated 1947-1967 using iterative method, (3) force account construction reversed using FAC72 scaling formula for earlier years.",
+      "source_ref": "ST_1994, Appendix A sections A.3.1-A.3.5 (chunk_27)"
+    },
+    {
+      "entry_type": "io_framework",
+      "content": "The A-matrix fits within the broader IO framework described in Chapter 4 of ST 1994. In the labor value calculation, the unit labor value lambda_j satisfies: lambda_j = hp_j + sum_i lambda_i * a_ij, where hp_j is direct productive labor hours per unit output and a_ij are the technical coefficients from the A-matrix. The IO tables are constructed in producer prices; labor value calculations require multiplying each commodity flow by its labor-value/producer-price ratio lambda*_j. The A-matrix supplies the app_ij (quantity of ith production input per unit output) needed for this simultaneous equation system.",
+      "source_ref": "ST_1994, Ch4 Section 4.1, pages 78-80 (chunk_10)"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "VAR-006: Matrix series (T401, T402) skip the chopped CSV pipeline and the extenbook extension step. These are benchmark cross-sectional matrices, not time series, so the standard annual loader/chopper/combiner pipeline does not apply. No NAICS extension is planned: the series is SIC-only, covering 1947-1977 benchmarks. The 82x88 -> 85x85 final dimension reflects standard ST 1994 sector aggregation; minor discrepancies in reported dimensions across sources are due to dummy-sector column handling.",
+      "source_ref": "series_registry.json T401; ST_1994 Appendix A (chunk_27)"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "BEA_IO_Benchmarks",
+      "full": "Bureau of Economic Analysis. Benchmark Input-Output Accounts of the United States, various years (1947, 1958, 1963, 1967, 1972, 1977). U.S. Department of Commerce."
+    }
+  ],
+  "methodology_summary": "The A-matrix (direct requirements) is computed as a_ij = z_ij / x_j from BEA benchmark IO tables for six SIC-era benchmark years (1947-1977). Multi-stage aggregation standardizes all tables to an 85x85 sector structure following the Appendix A procedure in ST 1994. This is a benchmark cross-sectional series with no annual extension and no NAICS mapping.",
+  "known_issues": [
+    "Eating and drinking places estimation for 1947-1967 introduces approximation error (oil input distortion acknowledged by authors)",
+    "Force account construction scaling for non-1972 years uses FAC72 ratio formula rather than actual BEA imputations (not obtainable)",
+    "Ground rent proportion g=0.25 is a constant approximation for IO benchmark tables; annual data uses more detailed derivation",
+    "No NAICS extension: series terminates at 1977 benchmark"
+  ],
+  "cross_references": ["T402"],
+  "status": "benchmark_only",
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_10/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_27/full_transcription.md"
+    ],
+    "L3_data_sources": ["BEA Benchmark IO Tables (1947, 1958, 1963, 1967, 1972, 1977)", "Book Table 4.1 (ch04/Table4_1_AMatrix.csv)"],
+    "L5_validation": []
+  }
+}

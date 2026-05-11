@@ -1,0 +1,53 @@
+LaTeX Equations from Page 320:
+
+Labor Productivity Equations:
+
+1. $(L_p/L)_{\text{min}}$ - Minimum ratio of productive labor to total labor
+
+2. $(L_p)_{\text{agr}} = (L_p/L)_{\text{min}} \times L_{\text{agr}}$ - Productive agricultural labor
+
+3. $(L_u)_{\text{agr}} = L_{\text{agr}} - (L_p)_{\text{agr}}$ - Unproductive agricultural labor
+
+4. $(L_p/L)_{\text{nongovtot}}$ - Ratio of productive labor to total labor in non-government sector
+
+5. $(L_p)_{\text{gefed}} = (L_p/L)_{\text{nongovtot}} \times L_{\text{gefed}}$ - Productive labor in federal government enterprises
+
+6. $(L_p)_{\text{gest}} = (L_p/L)_{\text{nongovtot}} \times L_{\text{gest}}$ - Productive labor in state/local government enterprises
+
+7. $(L_p)_{\text{getotal}} = (L_p)_{\text{gefed}} + (L_p)_{\text{gest}}$ - Total productive labor in government enterprises
+
+8. $L_{\text{getotal}} = L_{\text{gefed}} + L_{\text{gest}}$ - Total labor in government enterprises
+
+9. $(L_u)_{\text{getotal}} = L_{\text{getotal}} - (L_p)_{\text{getotal}}$ - Unproductive labor in government enterprises
+
+10. $TOTAL\ TRADE\ L_t = L_{\text{whtr}} + L_{\text{retrr}}$ - Total trade labor
+
+11. $Wholesale\ trade\ L_{\text{whtr}} = (L_u)_{\text{whtr}}$ - Wholesale trade labor equals unproductive wholesale trade labor
+
+12. $Retail\ trade\ L_{\text{retrr}} = (L_u)_{\text{retrr}}$ - Retail trade labor equals unproductive retail trade labor
+
+13. $Building\ rent\ L_{\text{br}} = L_{\text{re}} - L_{\text{gr}}$ - Building rent labor equals real estate labor minus ground rent labor
+
+14. $ROYALTIES\ L_r = L_{\text{fr}} + L_{\text{gr}}$ - Royalties labor equals finance/insurance labor plus ground rent labor
+
+15. $L_{\text{fr}} = L_{\text{fire}} - L_{\text{re}}$ - Finance/insurance labor equals finance/insurance/real estate labor minus real estate labor
+
+16. $L_{\text{fire}} = (L_u)_{\text{fire}}$ - Finance/insurance/real estate labor equals unproductive finance/insurance/real estate labor
+
+17. $L_{\text{re}} = \text{total real estate}$ - Total real estate labor
+
+18. $Ground\ rent\ L_{\text{gr}} = L_{\text{re}} \times g$ - Ground rent labor equals real estate labor times ground rent proportion
+
+19. $DUMMY\ L_d = L_{\text{govntfed}} + L_{\text{govntsl}}$ - Dummy variable equals federal non-government labor plus state/local non-government labor
+
+20. $L_u = L - L_p$ - Unproductive labor equals total labor minus productive labor
+
+21. $L_p/L$ - Ratio of productive labor to total labor
+
+22. $L_p/L_u$ - Ratio of productive labor to unproductive labor
+
+Where:
+- L = Total labor
+- Lp = Productive labor
+- Lu = Unproductive labor
+- g = Proportion of ground rent in real estate

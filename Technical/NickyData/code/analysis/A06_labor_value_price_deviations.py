@@ -106,7 +106,50 @@ def generate():
             if go_labor[code] > 0:
                 pp_star[code] = (c_labor[code] + v_labor[code]) * (1 + r_bar) / go_labor[code]
 
-        # Step 7: Regression ln(lambda*) vs ln(pp*)
+        # Step 7a: Ochoa-style regression: log(market_value) vs log(labor_value)
+        # Market value = GO_j (dollars), Labor value = lambda*_j * GO_j (hours)
+        # This is the CORRECT spec per Section 5.10 (Ochoa 1984): R² ≈ 0.98 for SIC era
+        ochoa_go = pd.Series(0.0, index=common_sectors)
+        for ind_name in go_yr.index:
+            code = io_desc_to_code.get(ind_name)
+            if code and code in common_sectors:
+                ochoa_go[code] = go_yr.get(ind_name, 0)
+
+        valid_ochoa = (lv > 0) & (ochoa_go > 0)
+        lv_o = lv[valid_ochoa]
+        go_o = ochoa_go[valid_ochoa]
+
+        if len(lv_o) > 5:
+            labor_val = lv_o * go_o  # hours embodied in sector output
+            market_val = go_o       # dollars of sector output
+
+            log_lv_o = np.log(labor_val.values)
+            log_mv_o = np.log(market_val.values)
+            slope_o, intercept_o = np.polyfit(log_lv_o, log_mv_o, 1)
+            corr_o = np.corrcoef(log_lv_o, log_mv_o)[0, 1]
+            r_sq_o = corr_o ** 2
+
+            # Average absolute deviation of normalized prices from labor values
+            # d_j = direct price (price proportional to labor value)
+            # d_j = lambda*_j * (sum_GO / sum_labor_val)
+            price_ratio = go_o / labor_val  # p_j/lambda_j = money value of labor
+            mean_ratio = market_val.sum() / labor_val.sum()
+            direct_price = labor_val * mean_ratio  # what GO_j would be if prices = values
+            dev_ochoa = ((market_val - direct_price).abs() / direct_price)
+            mad_ochoa = float(dev_ochoa.mean())
+
+            results[year] = {
+                'ochoa_slope': round(float(slope_o), 4),
+                'ochoa_r_squared': round(float(r_sq_o), 4),
+                'ochoa_mad': round(mad_ochoa, 4),
+                'r_bar': round(float(r_bar), 4),
+                'lambda_m': round(float(lambda_m), 8),
+                'n_sectors': len(lv_o),
+                'method': 'Ochoa: log(market_value) ~ log(labor_value)',
+            }
+            print(f"    [A06] {year}: Ochoa R2={r_sq_o:.3f}, slope={slope_o:.3f}, MAD={mad_ochoa:.1%}, n={len(lv_o)}")
+
+        # Step 7b: Original pp* regression (for comparison)
         valid = (lv > 0) & (pp_star > 0)
         lv_v = lv[valid]
         pp_v = pp_star[valid]
@@ -117,19 +160,11 @@ def generate():
             slope, intercept = np.polyfit(log_pp, log_lv, 1)
             corr = np.corrcoef(log_pp, log_lv)[0, 1]
             r_sq = corr ** 2
-            dev = ((lv_v - pp_v).abs() / lv_v)
-            mad = float(dev.mean())
 
-            results[year] = {
-                'slope': round(float(slope), 4),
-                'r_squared': round(float(r_sq), 4),
-                'mad': round(mad, 4),
-                'r_bar': round(float(r_bar), 4),
-                'lambda_m': round(float(lambda_m), 8),
-                'n_sectors': len(lv_v),
-                'method': 'IO-based c_j = lambda* @ A',
-            }
-            print(f"    [A06] {year}: slope={slope:.3f}, R2={r_sq:.3f}, MAD={mad:.1%}, r_bar={r_bar:.3f}, n={len(lv_v)}")
+            if year in results:
+                results[year]['pp_slope'] = round(float(slope), 4)
+                results[year]['pp_r_squared'] = round(float(r_sq), 4)
+            print(f"    [A06] {year}: pp* R2={r_sq:.3f}, slope={slope:.3f} (comparison)")
 
     with open(ANALYSIS_OUT / "labor_value_price_deviations.json", "w") as f:
         json.dump(results, f, indent=2)

@@ -1,0 +1,10 @@
+table_number,table_title,source_page
+13.17,Completed or partially completed new residential buildings and additions by number of rooms 2008-2012 (according to occupancy permits),245
+
+room_category,2008,2009,2010,2011,2012
+Total (number of dwelling units),324830,402591,429755,557009,546082
+With 1 room,25839,30819,25962,44133,47350
+With 2 rooms,19383,22861,23861,38750,42286
+With 3 rooms,83717,110392,115038,163780,150558
+With 4 rooms,160957,196097,220184,258937,253900
+With 5 rooms and over,34934,42422,44710,51409,51988

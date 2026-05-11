@@ -1,0 +1,8 @@
+table_id,table_number,source,title_tr,title_en
+chunk_002_table02,6.19,TurkStat Yearbook 2012,Opera ve bale salonu oynanan eser gösterim ve seyirci sayısı 2006/07-2010/11,Operas and ballets halls shows performances and attendances 2006/07-2010/11
+
+indicator_tr,indicator_en,2006_07,2007_08,2008_09,2009_10,2010_11
+Opera ve bale salonu sayısı,Number of operas and ballets halls,7,10,7,12,9
+Oynanan eser sayısı,Number of shows,84,203,143,251,208
+Gösterim sayısı,Number of performances,289,650,441,757,749
+Seyirci sayısı,Number of attendances,451271,325364,181605,324007,310623

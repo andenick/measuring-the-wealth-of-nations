@@ -1,0 +1,1896 @@
+{
+  "version": "1.0",
+  "generated_by": "S04_generate_provenance_index.py",
+  "by_series": {
+    "N1001": {
+      "name": "Labor Share of National Income (Tonak 1984)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1001-A",
+          "source": "Tonak 1984 PhD Dissertation",
+          "period": [
+            1952,
+            1980
+          ],
+          "units": "share"
+        },
+        {
+          "subseries": "N1001-COMBINED",
+          "source": "unknown",
+          "period": [
+            1952,
+            1980
+          ],
+          "units": "share"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P20"
+    },
+    "N1002": {
+      "name": "Net Tax Rate on Workers (Tonak 1984)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1002-A",
+          "source": "Tonak 1984 PhD Dissertation",
+          "period": [
+            1952,
+            1980
+          ],
+          "units": "rate"
+        },
+        {
+          "subseries": "N1002-COMBINED",
+          "source": "unknown",
+          "period": [
+            1952,
+            1980
+          ],
+          "units": "rate"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P20"
+    },
+    "N1101": {
+      "name": "Net Transfer Rate (ST 1987)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1101-A",
+          "source": "Shaikh & Tonak 1987",
+          "period": [
+            1952,
+            1985
+          ],
+          "units": "rate"
+        },
+        {
+          "subseries": "N1101-COMBINED",
+          "source": "unknown",
+          "period": [
+            1952,
+            1985
+          ],
+          "units": "rate"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P19"
+    },
+    "N1102": {
+      "name": "Social Benefit Rate (ST 1987)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1102-A",
+          "source": "Shaikh & Tonak 1987",
+          "period": [
+            1952,
+            1985
+          ],
+          "units": "rate"
+        },
+        {
+          "subseries": "N1102-COMBINED",
+          "source": "unknown",
+          "period": [
+            1952,
+            1985
+          ],
+          "units": "rate"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P19"
+    },
+    "N1103": {
+      "name": "Social Tax Rate (ST 1987)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1103-A",
+          "source": "Shaikh & Tonak 1987",
+          "period": [
+            1952,
+            1985
+          ],
+          "units": "rate"
+        },
+        {
+          "subseries": "N1103-COMBINED",
+          "source": "unknown",
+          "period": [
+            1952,
+            1985
+          ],
+          "units": "rate"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P19"
+    },
+    "N1201": {
+      "name": "NSW/GDP (ST 2002)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1201-A",
+          "source": "Shaikh & Tonak 2002",
+          "period": [
+            1952,
+            1997
+          ],
+          "units": "ratio"
+        },
+        {
+          "subseries": "N1201-COMBINED",
+          "source": "unknown",
+          "period": [
+            1952,
+            1997
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P19"
+    },
+    "N1202": {
+      "name": "NSW/EC (ST 2002)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1202-A",
+          "source": "Shaikh & Tonak 2002",
+          "period": [
+            1952,
+            1997
+          ],
+          "units": "ratio"
+        },
+        {
+          "subseries": "N1202-COMBINED",
+          "source": "unknown",
+          "period": [
+            1952,
+            1997
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P19"
+    },
+    "N1301": {
+      "name": "NSW/GDP Extended (Moos 2017)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1301-A",
+          "source": "Moos 2017",
+          "period": [
+            1959,
+            2012
+          ],
+          "units": "ratio"
+        },
+        {
+          "subseries": "N1301-COMBINED",
+          "source": "unknown",
+          "period": [
+            1959,
+            2012
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P17"
+    },
+    "N1302": {
+      "name": "NSW/EC Extended (Moos 2017)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1302-A",
+          "source": "Moos 2017",
+          "period": [
+            1959,
+            2012
+          ],
+          "units": "ratio"
+        },
+        {
+          "subseries": "N1302-COMBINED",
+          "source": "unknown",
+          "period": [
+            1959,
+            2012
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P17"
+    },
+    "N1304": {
+      "name": "Moos vs ST Comparison 1959-1997 (Moos 2017)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1304-A",
+          "source": "Moos 2017 vs AS2",
+          "period": [
+            1959,
+            1997
+          ],
+          "units": "ratio"
+        },
+        {
+          "subseries": "N1304-COMBINED",
+          "source": "unknown",
+          "period": [
+            1959,
+            1997
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P17"
+    },
+    "N1305": {
+      "name": "Post-2000 Structural Shift Indicator (Moos 2017)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1305-A",
+          "source": "Moos 2017",
+          "period": [
+            1959,
+            2012
+          ],
+          "units": "ratio"
+        },
+        {
+          "subseries": "N1305-COMBINED",
+          "source": "unknown",
+          "period": [
+            1959,
+            2012
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P17"
+    },
+    "N1401": {
+      "name": "Exploitation Rate \u2014 Mohun Classification (Mohun 2005)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1401-A",
+          "source": "Mohun 2005 CJE",
+          "period": [
+            1964,
+            2001
+          ],
+          "units": "ratio"
+        },
+        {
+          "subseries": "N1401-COMBINED",
+          "source": "unknown",
+          "period": [
+            1964,
+            2001
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L15",
+      "processor": "P16"
+    },
+    "N1402": {
+      "name": "Productive Labor Share \u2014 Mohun Classification (Mohun 2005)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1402-A",
+          "source": "Mohun 2005 CJE",
+          "period": [
+            1964,
+            2001
+          ],
+          "units": "share"
+        },
+        {
+          "subseries": "N1402-COMBINED",
+          "source": "unknown",
+          "period": [
+            1964,
+            2001
+          ],
+          "units": "share"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L15",
+      "processor": "P16"
+    },
+    "N1403": {
+      "name": "Variable Capital \u2014 Mohun Classification (Mohun 2005)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1403-A",
+          "source": "Mohun 2005 CJE",
+          "period": [
+            1964,
+            2001
+          ],
+          "units": "billions_dollars"
+        },
+        {
+          "subseries": "N1403-COMBINED",
+          "source": "unknown",
+          "period": [
+            1964,
+            2001
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L15",
+      "processor": "P16"
+    },
+    "N1404": {
+      "name": "ST/Mohun Exploitation Rate Ratio (Mohun 2005)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1404-A",
+          "source": "AS2 cross-validation",
+          "period": [
+            1964,
+            2001
+          ],
+          "units": "ratio"
+        },
+        {
+          "subseries": "N1404-COMBINED",
+          "source": "unknown",
+          "period": [
+            1964,
+            2001
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P16"
+    },
+    "N1501": {
+      "name": "Working Class Unproductive Labor (Mohun 2013)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1501-A",
+          "source": "Mohun 2013 RRPE",
+          "period": [
+            1964,
+            2010
+          ],
+          "units": "thousands"
+        },
+        {
+          "subseries": "N1501-COMBINED",
+          "source": "unknown",
+          "period": [
+            1964,
+            2010
+          ],
+          "units": "thousands"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P20"
+    },
+    "N1502": {
+      "name": "Managerial Unproductive Labor (Mohun 2013)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1502-A",
+          "source": "Mohun 2013 RRPE",
+          "period": [
+            1964,
+            2010
+          ],
+          "units": "thousands"
+        },
+        {
+          "subseries": "N1502-COMBINED",
+          "source": "unknown",
+          "period": [
+            1964,
+            2010
+          ],
+          "units": "thousands"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P20"
+    },
+    "N1503": {
+      "name": "Total Unproductive Labor \u2014 Mohun (Mohun 2013)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1503-A",
+          "source": "Mohun 2013 RRPE",
+          "period": [
+            1964,
+            2010
+          ],
+          "units": "thousands"
+        },
+        {
+          "subseries": "N1503-COMBINED",
+          "source": "unknown",
+          "period": [
+            1964,
+            2010
+          ],
+          "units": "thousands"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P20"
+    },
+    "N1504": {
+      "name": "Unproductive Burden Ratio Lu/Lp (Mohun 2013)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1504-A",
+          "source": "Mohun 2013 RRPE",
+          "period": [
+            1964,
+            2010
+          ],
+          "units": "ratio"
+        },
+        {
+          "subseries": "N1504-COMBINED",
+          "source": "unknown",
+          "period": [
+            1964,
+            2010
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P20"
+    },
+    "N1601": {
+      "name": "Turkey Labor Share (Karabacak & Tonak 2022)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1601-A",
+          "source": "Karabacak & Tonak 2022 RRPE",
+          "period": [
+            1980,
+            2019
+          ],
+          "units": "share"
+        },
+        {
+          "subseries": "N1601-COMBINED",
+          "source": "unknown",
+          "period": [
+            1980,
+            2019
+          ],
+          "units": "share"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P18"
+    },
+    "N1602": {
+      "name": "Turkey NSW/GDP (Karabacak & Tonak 2022)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1602-A",
+          "source": "Karabacak & Tonak 2022 RRPE",
+          "period": [
+            1980,
+            2019
+          ],
+          "units": "ratio"
+        },
+        {
+          "subseries": "N1602-COMBINED",
+          "source": "unknown",
+          "period": [
+            1980,
+            2019
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P18"
+    },
+    "N1701": {
+      "name": "NZ Surplus Share of Total Value (Cronin 2001)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1701-A",
+          "source": "Cronin 2001 RPE Table 2",
+          "period": [
+            1972,
+            1995
+          ],
+          "units": "share"
+        },
+        {
+          "subseries": "N1701-COMBINED",
+          "source": "unknown",
+          "period": [
+            1972,
+            1995
+          ],
+          "units": "share"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P20"
+    },
+    "N1702": {
+      "name": "NZ Rate of Surplus Value (Cronin 2001)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1702-A",
+          "source": "Cronin 2001 RPE Table 2",
+          "period": [
+            1972,
+            1995
+          ],
+          "units": "ratio"
+        },
+        {
+          "subseries": "N1702-COMBINED",
+          "source": "unknown",
+          "period": [
+            1972,
+            1995
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P20"
+    },
+    "N1703": {
+      "name": "NZ Value Composition of Capital (Cronin 2001)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1703-A",
+          "source": "Cronin 2001 RPE Table 2",
+          "period": [
+            1972,
+            1995
+          ],
+          "units": "ratio"
+        },
+        {
+          "subseries": "N1703-COMBINED",
+          "source": "unknown",
+          "period": [
+            1972,
+            1995
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P20"
+    },
+    "N1704": {
+      "name": "NZ Total Value (Cronin 2001)",
+      "chapter": null,
+      "sources": [
+        {
+          "subseries": "N1704-A",
+          "source": "Cronin 2001 RPE Table 1",
+          "period": [
+            1972,
+            1995
+          ],
+          "units": "millions_nzd"
+        },
+        {
+          "subseries": "N1704-COMBINED",
+          "source": "unknown",
+          "period": [
+            1972,
+            1995
+          ],
+          "units": "millions_nzd"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "",
+      "processor": "P20"
+    },
+    "T201": {
+      "name": "Alternative GFP Measures",
+      "chapter": 2,
+      "sources": [
+        {
+          "subseries": "T201-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L14",
+      "processor": "P15"
+    },
+    "T401": {
+      "name": "A-Matrix",
+      "chapter": 4,
+      "sources": [
+        {
+          "subseries": "T401-A",
+          "source": "S&T 1994",
+          "period": [
+            1947,
+            1977
+          ],
+          "units": "matrix"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L11",
+      "processor": "P13"
+    },
+    "T402": {
+      "name": "B-Matrix (Leontief Inverse)",
+      "chapter": 4,
+      "sources": [
+        {
+          "subseries": "T402-A",
+          "source": "derived from T401",
+          "period": [
+            1947,
+            1977
+          ],
+          "units": "matrix"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 2,
+      "loader": "L11",
+      "processor": "P13"
+    },
+    "T501": {
+      "name": "Total Product (TP*)",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T501-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "billions_dollars"
+        },
+        {
+          "subseries": "T501-B",
+          "source": "BEA GDPbyIndustry",
+          "period": [
+            1997,
+            2024
+          ],
+          "units": "billions_dollars"
+        },
+        {
+          "subseries": "T501-COMBINED",
+          "source": "unknown",
+          "period": [
+            1948,
+            2024
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [
+        "BEA GDPbyIndustry"
+      ],
+      "extension": {
+        "method": "growth_rate",
+        "splice_year": 1997,
+        "depends_on": []
+      },
+      "construction_steps": 3,
+      "loader": "L01",
+      "processor": "P01"
+    },
+    "T502": {
+      "name": "Constant Capital (C*_m)",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T502-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "billions_dollars"
+        },
+        {
+          "subseries": "T502-COMBINED",
+          "source": "unknown",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L01",
+      "processor": "P01"
+    },
+    "T503": {
+      "name": "Gross Final Product (GFP = TP* - C*_m)",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T503-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "billions_dollars"
+        },
+        {
+          "subseries": "T503-COMBINED",
+          "source": "unknown",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 2,
+      "loader": "L01",
+      "processor": "P01"
+    },
+    "T504": {
+      "name": "Variable Capital (V*)",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T504-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "billions_dollars"
+        },
+        {
+          "subseries": "T504-EXT",
+          "source": "BEA NIPA + BLS CES",
+          "period": [
+            1990,
+            2024
+          ],
+          "units": "billions_dollars"
+        },
+        {
+          "subseries": "T504-COMBINED",
+          "source": "unknown",
+          "period": [
+            1948,
+            2024
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [
+        "BEA NIPA + BLS CES"
+      ],
+      "extension": {
+        "method": "derive",
+        "splice_year": 1989,
+        "depends_on": [
+          "T512"
+        ]
+      },
+      "construction_steps": 3,
+      "loader": "L02",
+      "processor": "P02"
+    },
+    "T505": {
+      "name": "Surplus Value (S* = VA* - V*)",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T505-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "billions_dollars"
+        },
+        {
+          "subseries": "T505-EXT",
+          "source": "derived",
+          "period": [
+            1990,
+            2024
+          ],
+          "units": "billions_dollars"
+        },
+        {
+          "subseries": "T505-COMBINED",
+          "source": "unknown",
+          "period": [
+            1948,
+            2024
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [],
+      "extension": {
+        "method": "derive",
+        "splice_year": 1989,
+        "depends_on": [
+          "T503",
+          "T504"
+        ]
+      },
+      "construction_steps": 3,
+      "loader": "L02",
+      "processor": "P03"
+    },
+    "T506": {
+      "name": "Rate of Exploitation (e = S*/V*)",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T506-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "ratio"
+        },
+        {
+          "subseries": "T506-EXT",
+          "source": "BLS CES + BEA NIPA",
+          "period": [
+            1990,
+            2024
+          ],
+          "units": "ratio"
+        },
+        {
+          "subseries": "T506-COMBINED",
+          "source": "unknown",
+          "period": [
+            1948,
+            2024
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [
+        "BLS CES + BEA NIPA"
+      ],
+      "extension": {
+        "method": "derive",
+        "splice_year": 1989,
+        "depends_on": [
+          "T512"
+        ]
+      },
+      "construction_steps": 3,
+      "loader": "L03",
+      "processor": "P04"
+    },
+    "T507": {
+      "name": "Surplus Ratio (S*/Y = S*/(S*+V*))",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T507-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L05",
+      "processor": "P07"
+    },
+    "T508": {
+      "name": "Productive Consumption (CON*)",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T508-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L01",
+      "processor": "P01"
+    },
+    "T509": {
+      "name": "Productive Investment (IG*)",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T509-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L01",
+      "processor": "P01"
+    },
+    "T510": {
+      "name": "Value Composition of Capital (K/V*)",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T510-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L05",
+      "processor": "P07"
+    },
+    "T511": {
+      "name": "Productive Labor Share (Lp/L)",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T511-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "share"
+        },
+        {
+          "subseries": "T511-EXT",
+          "source": "BLS CES",
+          "period": [
+            1990,
+            2024
+          ],
+          "units": "share"
+        },
+        {
+          "subseries": "T511-COMBINED",
+          "source": "unknown",
+          "period": [
+            1948,
+            2024
+          ],
+          "units": "share"
+        }
+      ],
+      "apis": [
+        "BLS CES"
+      ],
+      "extension": {
+        "method": "level",
+        "splice_year": 1989,
+        "depends_on": []
+      },
+      "construction_steps": 3,
+      "loader": "L03",
+      "processor": "P05"
+    },
+    "T512": {
+      "name": "Productive Wage Share (V*/W)",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T512-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "share"
+        },
+        {
+          "subseries": "T512-EXT",
+          "source": "BLS CES",
+          "period": [
+            1990,
+            2024
+          ],
+          "units": "share"
+        },
+        {
+          "subseries": "T512-COMBINED",
+          "source": "unknown",
+          "period": [
+            1948,
+            2024
+          ],
+          "units": "share"
+        }
+      ],
+      "apis": [
+        "BLS CES"
+      ],
+      "extension": {
+        "method": "level",
+        "splice_year": 1989,
+        "depends_on": []
+      },
+      "construction_steps": 3,
+      "loader": "L03",
+      "processor": "P05"
+    },
+    "T513": {
+      "name": "Marxian Profit Rate (r* = S*/(C*+V*))",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T513-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "rate"
+        },
+        {
+          "subseries": "T513-EXT",
+          "source": "BEA FixedAssets",
+          "period": [
+            1990,
+            2024
+          ],
+          "units": "rate"
+        },
+        {
+          "subseries": "T513-COMBINED",
+          "source": "unknown",
+          "period": [
+            1948,
+            2024
+          ],
+          "units": "rate"
+        }
+      ],
+      "apis": [
+        "BEA FixedAssets"
+      ],
+      "extension": {
+        "method": "derive",
+        "splice_year": 1989,
+        "depends_on": [
+          "T502",
+          "T504",
+          "T505"
+        ]
+      },
+      "construction_steps": 3,
+      "loader": "L06",
+      "processor": "P08"
+    },
+    "T514": {
+      "name": "Capacity-Adjusted Profit Rate (r*_adj = r*\u00d7(1/TCU))",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T514-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "rate"
+        },
+        {
+          "subseries": "T514-EXT",
+          "source": "FRED TCU",
+          "period": [
+            1990,
+            2024
+          ],
+          "units": "rate"
+        },
+        {
+          "subseries": "T514-COMBINED",
+          "source": "unknown",
+          "period": [
+            1948,
+            2024
+          ],
+          "units": "rate"
+        }
+      ],
+      "apis": [
+        "FRED TCU"
+      ],
+      "extension": {
+        "method": "derive",
+        "splice_year": 1989,
+        "depends_on": [
+          "T513"
+        ]
+      },
+      "construction_steps": 3,
+      "loader": "L06",
+      "processor": "P08"
+    },
+    "T515": {
+      "name": "Productive Employment (Lp)",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T515-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "thousands"
+        },
+        {
+          "subseries": "T515-EXT",
+          "source": "BLS CES",
+          "period": [
+            1990,
+            2024
+          ],
+          "units": "thousands"
+        },
+        {
+          "subseries": "T515-COMBINED",
+          "source": "unknown",
+          "period": [
+            1948,
+            2024
+          ],
+          "units": "thousands"
+        }
+      ],
+      "apis": [
+        "BLS CES"
+      ],
+      "extension": {
+        "method": "level",
+        "splice_year": 1989,
+        "depends_on": []
+      },
+      "construction_steps": 3,
+      "loader": "L04",
+      "processor": "P06"
+    },
+    "T516": {
+      "name": "Unproductive Employment (Lu = L - Lp)",
+      "chapter": 5,
+      "sources": [
+        {
+          "subseries": "T516-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "thousands"
+        },
+        {
+          "subseries": "T516-EXT",
+          "source": "derived",
+          "period": [
+            1990,
+            2024
+          ],
+          "units": "thousands"
+        },
+        {
+          "subseries": "T516-COMBINED",
+          "source": "unknown",
+          "period": [
+            1948,
+            2024
+          ],
+          "units": "thousands"
+        }
+      ],
+      "apis": [],
+      "extension": {
+        "method": "derive",
+        "splice_year": 1989,
+        "depends_on": [
+          "T515"
+        ]
+      },
+      "construction_steps": 3,
+      "loader": "L04",
+      "processor": "P06"
+    },
+    "T601": {
+      "name": "Personal Tax Workers",
+      "chapter": 6,
+      "sources": [
+        {
+          "subseries": "T601-A",
+          "source": "S&T 1994",
+          "period": [
+            1952,
+            1989
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L07",
+      "processor": "P09"
+    },
+    "T602": {
+      "name": "Social Insurance Tax Workers",
+      "chapter": 6,
+      "sources": [
+        {
+          "subseries": "T602-A",
+          "source": "S&T 1994",
+          "period": [
+            1952,
+            1989
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L07",
+      "processor": "P09"
+    },
+    "T603": {
+      "name": "Property Tax Workers",
+      "chapter": 6,
+      "sources": [
+        {
+          "subseries": "T603-A",
+          "source": "S&T 1994",
+          "period": [
+            1952,
+            1989
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L07",
+      "processor": "P09"
+    },
+    "T604": {
+      "name": "Total Tax Workers (T_w = sum)",
+      "chapter": 6,
+      "sources": [
+        {
+          "subseries": "T604-A",
+          "source": "S&T 1994",
+          "period": [
+            1952,
+            1989
+          ],
+          "units": "billions_dollars"
+        },
+        {
+          "subseries": "T604-COMBINED",
+          "source": "unknown",
+          "period": [
+            1952,
+            1989
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 2,
+      "loader": "L07",
+      "processor": "P09"
+    },
+    "T605": {
+      "name": "Government Benefits to Workers (B_w)",
+      "chapter": 6,
+      "sources": [
+        {
+          "subseries": "T605-A",
+          "source": "S&T 1994",
+          "period": [
+            1952,
+            1989
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L08",
+      "processor": "P10"
+    },
+    "T606": {
+      "name": "Government Services Workers (G_w)",
+      "chapter": 6,
+      "sources": [
+        {
+          "subseries": "T606-A",
+          "source": "S&T 1994",
+          "period": [
+            1952,
+            1989
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L08",
+      "processor": "P10"
+    },
+    "T607": {
+      "name": "Net Social Wage (NSW = B_w + G_w - T_w)",
+      "chapter": 6,
+      "sources": [
+        {
+          "subseries": "T607-A",
+          "source": "S&T 1994",
+          "period": [
+            1952,
+            1989
+          ],
+          "units": "billions_dollars"
+        },
+        {
+          "subseries": "T607-EXT",
+          "source": "BEA NIPA",
+          "period": [
+            1990,
+            2025
+          ],
+          "units": "billions_dollars"
+        },
+        {
+          "subseries": "T607-COMBINED",
+          "source": "unknown",
+          "period": [
+            1952,
+            2025
+          ],
+          "units": "billions_dollars"
+        }
+      ],
+      "apis": [
+        "BEA NIPA"
+      ],
+      "extension": {
+        "method": "derive",
+        "splice_year": 1989,
+        "depends_on": [
+          "T604",
+          "T605",
+          "T606"
+        ]
+      },
+      "construction_steps": 3,
+      "loader": "L09",
+      "processor": "P11"
+    },
+    "T608": {
+      "name": "NSW/V* Ratio",
+      "chapter": 6,
+      "sources": [
+        {
+          "subseries": "T608-A",
+          "source": "S&T 1994",
+          "period": [
+            1952,
+            1989
+          ],
+          "units": "ratio"
+        },
+        {
+          "subseries": "T608-COMBINED",
+          "source": "unknown",
+          "period": [
+            1952,
+            1989
+          ],
+          "units": "ratio"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L09",
+      "processor": "P11"
+    },
+    "T609": {
+      "name": "NSW/NI Share",
+      "chapter": 6,
+      "sources": [
+        {
+          "subseries": "T609-A",
+          "source": "S&T 1994",
+          "period": [
+            1952,
+            1989
+          ],
+          "units": "share"
+        },
+        {
+          "subseries": "T609-COMBINED",
+          "source": "unknown",
+          "period": [
+            1952,
+            1989
+          ],
+          "units": "share"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L09",
+      "processor": "P11"
+    },
+    "T701": {
+      "name": "Labor Values",
+      "chapter": 7,
+      "sources": [
+        {
+          "subseries": "T701-A",
+          "source": "S&T 1994",
+          "period": [
+            1947,
+            1977
+          ],
+          "units": "labor_hours_per_dollar"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L12",
+      "processor": "P14"
+    },
+    "T702": {
+      "name": "Prices of Production",
+      "chapter": 7,
+      "sources": [
+        {
+          "subseries": "T702-A",
+          "source": "S&T 1994",
+          "period": [
+            1947,
+            1977
+          ],
+          "units": "index"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L12",
+      "processor": "P14"
+    },
+    "T703": {
+      "name": "Value-Price Deviations",
+      "chapter": 7,
+      "sources": [
+        {
+          "subseries": "T703-A",
+          "source": "S&T 1994",
+          "period": [
+            1947,
+            1977
+          ],
+          "units": "percent"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L12",
+      "processor": "P14"
+    },
+    "T801": {
+      "name": "Cross-Study Comparison",
+      "chapter": 8,
+      "sources": [
+        {
+          "subseries": "T801-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "mixed"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L13",
+      "processor": "P15"
+    },
+    "T901": {
+      "name": "Summary Table",
+      "chapter": 9,
+      "sources": [
+        {
+          "subseries": "T901-A",
+          "source": "S&T 1994",
+          "period": [
+            1948,
+            1989
+          ],
+          "units": "mixed"
+        }
+      ],
+      "apis": [],
+      "extension": null,
+      "construction_steps": 1,
+      "loader": "L10",
+      "processor": "P12"
+    }
+  },
+  "by_source": {
+    "Tonak 1984 PhD Dissertation": [
+      "N1001",
+      "N1002"
+    ],
+    "unknown": [
+      "N1001",
+      "N1002",
+      "N1101",
+      "N1102",
+      "N1103",
+      "N1201",
+      "N1202",
+      "N1301",
+      "N1302",
+      "N1304",
+      "N1305",
+      "N1401",
+      "N1402",
+      "N1403",
+      "N1404",
+      "N1501",
+      "N1502",
+      "N1503",
+      "N1504",
+      "N1601",
+      "N1602",
+      "N1701",
+      "N1702",
+      "N1703",
+      "N1704",
+      "T501",
+      "T502",
+      "T503",
+      "T504",
+      "T505",
+      "T506",
+      "T511",
+      "T512",
+      "T513",
+      "T514",
+      "T515",
+      "T516",
+      "T604",
+      "T607",
+      "T608",
+      "T609"
+    ],
+    "Shaikh & Tonak 1987": [
+      "N1101",
+      "N1102",
+      "N1103"
+    ],
+    "Shaikh & Tonak 2002": [
+      "N1201",
+      "N1202"
+    ],
+    "Moos 2017": [
+      "N1301",
+      "N1302",
+      "N1305"
+    ],
+    "Moos 2017 vs AS2": [
+      "N1304"
+    ],
+    "Mohun 2005 CJE": [
+      "N1401",
+      "N1402",
+      "N1403"
+    ],
+    "AS2 cross-validation": [
+      "N1404"
+    ],
+    "Mohun 2013 RRPE": [
+      "N1501",
+      "N1502",
+      "N1503",
+      "N1504"
+    ],
+    "Karabacak & Tonak 2022 RRPE": [
+      "N1601",
+      "N1602"
+    ],
+    "Cronin 2001 RPE Table 2": [
+      "N1701",
+      "N1702",
+      "N1703"
+    ],
+    "Cronin 2001 RPE Table 1": [
+      "N1704"
+    ],
+    "S&T 1994": [
+      "T201",
+      "T401",
+      "T501",
+      "T502",
+      "T503",
+      "T504",
+      "T505",
+      "T506",
+      "T507",
+      "T508",
+      "T509",
+      "T510",
+      "T511",
+      "T512",
+      "T513",
+      "T514",
+      "T515",
+      "T516",
+      "T601",
+      "T602",
+      "T603",
+      "T604",
+      "T605",
+      "T606",
+      "T607",
+      "T608",
+      "T609",
+      "T701",
+      "T702",
+      "T703",
+      "T801",
+      "T901"
+    ],
+    "derived from T401": [
+      "T402"
+    ],
+    "BEA GDPbyIndustry": [
+      "T501"
+    ],
+    "BEA NIPA + BLS CES": [
+      "T504"
+    ],
+    "derived": [
+      "T505",
+      "T516"
+    ],
+    "BLS CES + BEA NIPA": [
+      "T506"
+    ],
+    "BLS CES": [
+      "T511",
+      "T512",
+      "T515"
+    ],
+    "BEA FixedAssets": [
+      "T513"
+    ],
+    "FRED TCU": [
+      "T514"
+    ],
+    "BEA NIPA": [
+      "T607"
+    ]
+  },
+  "by_api": {
+    "BEA GDPbyIndustry": [
+      "T501"
+    ],
+    "BEA NIPA + BLS CES": [
+      "T504"
+    ],
+    "BLS CES + BEA NIPA": [
+      "T506"
+    ],
+    "BLS CES": [
+      "T511",
+      "T512",
+      "T515"
+    ],
+    "BEA FixedAssets": [
+      "T513"
+    ],
+    "FRED TCU": [
+      "T514"
+    ],
+    "BEA NIPA": [
+      "T607"
+    ]
+  }
+}

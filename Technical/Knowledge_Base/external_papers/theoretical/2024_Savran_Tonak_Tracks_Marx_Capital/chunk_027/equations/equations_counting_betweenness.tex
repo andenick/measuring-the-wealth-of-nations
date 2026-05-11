@@ -1,0 +1,34 @@
+% Equations from Chapter 11: Recasting Input-Output Networks in a Marxist Framework
+% Pages 241-242: Counting Betweenness Centrality Measure
+
+% Equation 1: Out-strength of each sector
+\begin{equation}
+k_i = \sum_{j=1} a_{ij}
+\end{equation}
+
+% Equation 2: Transition matrix
+\begin{equation}
+M = K^{-1}A
+\end{equation}
+% where A denotes the adjacency matrix and K is the diagonal of the out-strength matrix
+
+% Equation 3: Probability of completion of random walk in r steps
+% For a random walk between source vertex s and target vertex t, t ≠ s
+\begin{equation}
+((M_{-t})^r)_{si}
+\end{equation}
+
+% Equation 4: Probability of path from i to j being completed
+\begin{equation}
+N_{ij}^{st} = \sum_r ((M_{-t})^r)_{si} m_{ij} = m_{ij}((I^{-1} - M_{-t})^{-1})_{si}
+\end{equation}
+
+% Equation 5: Vertex i visited twice (source and target interchangeable)
+\begin{equation}
+N_i^{st} = \sum_{j \neq t} \frac{(N_{ij}^{st} + N_{ji}^{st})}{2}
+\end{equation}
+
+% Equation 6: Counting Betweenness Centrality
+\begin{equation}
+CB_i = \frac{\sum_{s \in V} \sum_{t \in V-(s)} N^{st}(i)}{n(n-1)}
+\end{equation}

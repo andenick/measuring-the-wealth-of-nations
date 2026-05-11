@@ -31,6 +31,11 @@ BENCHMARKS = {
         "check": "Moos NSW/GDP post-2000",
         "post_2000_positive": True,  # Moos found NSW positive after 2000
     },
+    # Moos (2017): 1959-1997 overlap validation (N1304 = overlap-only series)
+    "N1304": {
+        "check": "Moos 1959-1997 overlap mean",
+        "mean_range": [0.008, 0.018],  # Moos published mean=0.011; NIPA vintage allows ±0.007
+    },
     # Turkey (2022): All-negative NSW
     "N1602": {
         "check": "Turkey NSW all negative",

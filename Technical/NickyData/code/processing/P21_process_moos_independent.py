@@ -67,7 +67,10 @@ def process():
     # E1: Direct social benefits to persons (NIPA T3.12 line 1)
     e1 = benefits["total_social_benefits"].reindex(ls.index)
 
-    # E2: Mixed public goods — education + health + transportation from T3.16
+    # E2: Government consumption by function (T3.16) — loaded but NOT included
+    # in the standard Moos/Shaikh-Tonak NSW formula. Moos (2017) defines NSW as
+    # direct transfers minus taxes, without government consumption expenditure.
+    # Kept for potential sensitivity analysis (alpha parameter in A03).
     if not govt_con.empty:
         e2_cols = ["education", "health", "transportation"]
         available = [c for c in e2_cols if c in govt_con.columns]
@@ -94,7 +97,9 @@ def process():
     common = ls.dropna().index.intersection(gdp.dropna().index)
     common = common.intersection(e1.dropna().index)
 
-    total_benefits = e1[common] + e2.reindex(common).fillna(0) * ls[common]
+    # Standard Moos/ST formula: benefits = E1 only (direct transfers to persons)
+    # E2 (govt consumption) excluded per Moos (2017) methodology
+    total_benefits = e1[common]
     total_taxes = t1.reindex(common).fillna(0) + t2.reindex(common).fillna(0) * ls[common]
     nsw = total_benefits - total_taxes
     nsw_gdp = nsw / gdp[common]

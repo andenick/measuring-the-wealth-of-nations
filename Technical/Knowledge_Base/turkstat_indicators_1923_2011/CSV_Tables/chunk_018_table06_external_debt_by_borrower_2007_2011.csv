@@ -1,0 +1,23 @@
+Table,19.13 Türkiye brüt dış borç stoku - Borçlu dağılımı (2007-2011) / Gross External Debt - By Borrower (2007-2011)
+Source,Hazine Müsteşarlığı / Undersecretariat of Treasury
+Unit,Million USD
+,,,,,
+Borrower_Category,2007,2008,2009,2010,2011
+Gross_External_Debt_Total,250412,281382,269548,292222,306704
+PublicSector_Total,73525,78288,83464,89076,94281
+GeneralGovernment,68813,72362,77139,81721,83000
+CentralGovernment,67121,69757,74054,78085,79185
+LocalAdministrations,1505,2466,2993,3589,3794
+Funds,187,138,91,47,21
+PublicFinancialInstitutions,2783,3740,4716,6035,10005
+PublicBanks,2783,3740,4716,6035,10005
+NonFinancialPublic,1929,2186,1609,1320,1276
+SOEs,1812,1992,1437,1183,1155
+CBRT,15801,14066,13305,11827,9699
+PrivateSector_Total,161086,189029,172779,191319,202724
+PrivateFinancial,68087,74863,66147,87970,94922
+Banks,47108,53702,49524,75115,80095
+NonBankFinancial,20980,21161,16623,12855,14827
+PrivateNonFinancial,92999,114166,106632,103348,107802
+ShortTerm_Total,43152,52527,49045,77469,83847
+LongTerm_Total,207260,228855,220503,214753,222857

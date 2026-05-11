@@ -1,0 +1,92 @@
+{
+  "series_id": "N1002",
+  "series_name": "Net Tax Rate on Workers (Tonak 1984)",
+  "study": "study_01_tonak_1984",
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/Knowledge_Base/external_papers/state_welfare/1984_Tonak_State_Revenues/chunk_001/full_transcription.md",
+    "Technical/Knowledge_Base/external_papers/state_welfare/1984_Tonak_State_Revenues/chunk_002/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "Net tax paid by labor = taxes paid by workers to the state minus benefits and income received from the state. Expressed as a rate (net tax / some denominator, likely employee compensation or national income). Tonak develops this as the central operational concept of the dissertation: 'net tax, which is taxes paid to the state minus benefits and income received from it' (Abstract). The empirical series appears in Chapter IV, Table X ('Net Tax Paid by Labor', p.113) and Table XI ('Transfer Ratio and Welfare-Adjusted Transfer Ratio', p.114). The construction draws on Table V ('Labor and Non-Labor Portions of Total Taxes', p.98) for the tax side and Table IX ('Total and the Portion of Benefits and Income Received by Labor', p.112) for the benefits side.",
+      "source_ref": "1984_Tonak_State_Revenues/chunk_001/full_transcription.md (Abstract); chunk_002/full_transcription.md (List of Tables pp.v-vi, Chapter IV Tables V, IX, X, XI)"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Primary source: Tonak (1984) PhD Dissertation, Chapter IV, covering 1952-1980 (28 annual observations). Key tables: Table V ('Labor and Non-Labor Portions of Total Taxes', p.98), Table IX ('Total and the Portion of Benefits and Income Received by Labor', p.112), Table X ('Net Tax Paid by Labor', p.113), Table XI ('Transfer Ratio and Welfare-Adjusted Transfer Ratio', p.114). Raw inputs from U.S. NIPA. Appendix I details taxation methodology (pp.162-167); Appendix II covers expenditures (pp.169-173). Per DEC-012, values must be extracted from these HDARP tables, not synthetically generated.",
+      "source_ref": "1984_Tonak_State_Revenues/chunk_002/full_transcription.md (List of Tables pp.v-vi)"
+    },
+    {
+      "entry_type": "construction_logic",
+      "content": "Tax side construction: Government tax burden on labor is allocated using the 'labor share' method. Group I taxes (social security contributions from employee compensation) are assigned 100% to labor. Group II taxes (personal income taxes, motor vehicle licenses, property taxes on owner-occupied homes, other taxes) are allocated by multiplying by (labor income / personal income). Corporate profit taxes, indirect business taxes, and estate/gift taxes are excluded as not levied on workers. Benefits side construction: Group I expenditures (income support, social security and welfare, housing and community services, labor training) are assigned 100% to labor. Group II expenditures (education, health and hospitals, recreational and cultural activities, energy, natural resources, transportation, postal services) are allocated by labor share, with transportation further adjusted by 'Gas Share of Passenger Cars'. Group III expenditures (national defense, general government, interest) are excluded. Net tax = taxes from workers - benefits to workers.",
+      "source_ref": "1984_Tonak_State_Revenues/chunk_001/full_transcription.md (Abstract); chunk_002/full_transcription.md (Chapter IV section headings pp.87-113)"
+    },
+    {
+      "entry_type": "figure_context",
+      "content": "Chapter IV Figure II ('Unadjusted and Welfare-Adjusted Transfer Ratios, 1952-80', p.115) plots the net tax rate graphically. The 'transfer ratio' is the inverse of net tax rate: benefits/taxes or (benefits-taxes)/wages. Chapter IV Table XII extends the analysis to productive workers specifically ('Total Net Tax and Net Tax Paid by Productive Workers', p.119), which is the input to the adjusted rate of surplus value.",
+      "source_ref": "1984_Tonak_State_Revenues/chunk_002/full_transcription.md (List of Figures p.vii; List of Tables p.vi)"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "Per DEC-012 (No Synthetic Data Policy, 2026-05-03): N1002 was explicitly identified as using prohibited synthetic data. The annual series must be extracted from HDARP chunks covering Chapter IV pp.95-113 (Tables V, IX, X). Until that extraction is complete, the series is data_unavailable. No synthetic fill is permitted under any circumstances.",
+      "source_ref": "DECISION_LOG.md#DEC-012"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "The net tax concept in Tonak (1984) covers the working class as a whole (employed and unemployed). A narrower variant — net tax paid exclusively by productive workers — appears in Table XII and feeds into the adjusted rate of surplus value (Table XIII). N1002 as registered corresponds to the broader 'all workers' net tax rate. The productive-workers variant is a distinct series. Researchers must confirm which definition is intended before using either series in surplus value calculations.",
+      "source_ref": "1984_Tonak_State_Revenues/chunk_001/full_transcription.md (Abstract); chunk_002/full_transcription.md (List of Tables p.vi, Chapter IV Tables XII-XIII)"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "The series registry records N1002 as derived from 'Table III' but the List of Tables in chunk_002 shows no 'Table III' that matches net tax. The net tax series proper is Table X; Table III is 'Comparison of Labor Shares.' This discrepancy requires verification when Chapter IV is extracted. Researchers should treat the registry table reference as provisional.",
+      "source_ref": "1984_Tonak_State_Revenues/chunk_002/full_transcription.md (List of Tables p.v)"
+    },
+    {
+      "entry_type": "comparative_context",
+      "content": "The 1987 Shaikh-Tonak paper extends the same net tax methodology to 1985 using the label 'net transfer' (NT = B - T_w), which is sign-reversed from net tax (net tax = T_w - B). The S&T 1987 Table 2 provides 34 annual values (1952-1985) in billions of current dollars, directly comparable to Tonak (1984) Table X for the overlapping 1952-1980 period. This overlap enables cross-validation of N1002 against N1101.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Table 2, pp.192; Empirical Methodology pp.186-187)"
+    },
+    {
+      "entry_type": "decision_reference",
+      "content": "DEC-012 (No Synthetic Data Policy, 2026-05-03): N1002 named as one of five series requiring remediation. Remediation plan: 'Extract real annual data from HDARP Table V.B (28 years available).' Note: 'Table V.B' likely refers to an Appendix III table on surplus value data; the correct source for the net tax rate series is Chapter IV Table X (p.113). This should be clarified when the HDARP extraction of the relevant chunks is undertaken.",
+      "source_ref": "DECISION_LOG.md#DEC-012"
+    }
+  ],
+  "citations": [
+    {
+      "id": "Tonak_1984",
+      "full": "Tonak, Ertugrul Ahmet. 1984. 'A Conceptualization of State Revenues and Expenditures U.S.: 1952-1980.' PhD Dissertation, New School for Social Research. UMI Order Number 9414212."
+    },
+    {
+      "id": "ST_1987",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' In Robert Cherry et al. (eds.), The Imperiled Economy, Book I. New York: Union for Radical Political Economics, pp. 184-194."
+    }
+  ],
+  "methodology_summary": "Net tax rate on workers from Tonak (1984), 1952-1980 (28 years). Defined as taxes paid by workers minus benefits received, expressed as a proportion of employee compensation. Central empirical finding: workers are net taxpayers to the state throughout most of the period.",
+  "known_issues": [
+    "Annual data not yet extracted — HDARP chunks covering Chapter IV pp.95-113 required",
+    "DEC-012 prohibits synthetic fill; series is data_unavailable until HDARP extraction completes",
+    "Registry cites 'Table III' but the correct source is Chapter IV Table X (p.113); requires verification",
+    "Sign convention: Tonak uses 'net tax' (T_w - B); S&T 1987 uses 'net transfer' (B - T_w) — opposite signs"
+  ],
+  "cross_references": ["N1001", "N1101", "N1102", "N1103", "T604", "T605"],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/Knowledge_Base/external_papers/state_welfare/1984_Tonak_State_Revenues/chunk_001/full_transcription.md",
+      "Technical/Knowledge_Base/external_papers/state_welfare/1984_Tonak_State_Revenues/chunk_002/full_transcription.md"
+    ],
+    "L3_data_sources": [
+      "Tonak 1984 Chapter IV Table X (p.113)",
+      "Tonak 1984 Chapter IV Table V (p.98)",
+      "Tonak 1984 Chapter IV Table IX (p.112)",
+      "NIPA (underlying source)"
+    ],
+    "L5_validation": [
+      "Chapter IV Figure II (unadjusted and welfare-adjusted transfer ratios)",
+      "S&T 1987 Table 2 overlap check (1952-1980)"
+    ]
+  }
+}

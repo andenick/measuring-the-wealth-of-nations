@@ -1,0 +1,10 @@
+table_id,table_number,source,title_tr,title_en
+chunk_002_table01,6.18,TurkStat Yearbook 2012,Tiyatro salonu oynanan eser gösterim ve seyirci sayısı 2006/07-2010/11,Theaters shows performances and attendances 2006/07-2010/11
+
+indicator_tr,indicator_en,2006_07,2007_08,2008_09,2009_10,2010_11
+Tiyatro salonu sayısı,Number of theater halls,130,204,201,430,511
+Oynanan eser sayısı,Number of shows,848,2122,2217,3694,4252
+Telif,Original,607,1818,1703,2918,3470
+Çeviri,Translated,241,304,514,776,782
+Gösterim sayısı,Number of performances,10289,17410,18803,25378,23361
+Seyirci sayısı,Number of attendances,2419262,3380214,4320729,5248226,5385588

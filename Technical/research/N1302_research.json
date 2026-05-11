@@ -1,0 +1,76 @@
+{
+  "series_id": "N1302",
+  "series_name": "NSW/EC Extended (Moos 2017)",
+  "study": "study_04_moos_2017",
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/Knowledge_Base/external_papers/state_welfare/2017_Moos_NSW_21st_Century/full_transcription.md",
+    "Technical/NickyData/DECISION_LOG.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "N1302 expresses Moos (2017)'s extended NSW series as a ratio to total employee compensation (EC), rather than GDP (N1301). This matches Shaikh & Tonak (2002)'s primary normalization (N1202). Moos primarily reports NSW/GDP (her Figure 1-2) but also presents NSW/EC in Figure 2 (1959-2012). The switch from GDP to EC as denominator amplifies the ratio since EC < GDP; the post-2001 peak is 16.1% of EC in 2010 vs 8.6% of GDP (from Table 2 summary statistics).",
+      "source_ref": "Moos_2017, Section 3 pp.4-5, Table 2; full_transcription.md Section 3 and Figure 2 reference; DECISION_LOG.md DEC-013"
+    },
+    {
+      "entry_type": "decision_reference",
+      "content": "DEC-013 (2026-05-06): Standard Shaikh-Tonak/Moos formula is NSW = E1 - T1 - T2*LS (E2 excluded). With this formula, ST2 P21 achieves 1959-1997 overlap mean NSW/GDP = 0.013 vs Moos published 0.011. The same E2 exclusion applies to N1302 (NSW/EC). Mean NSW/EC for overlap period from ST2 is correspondingly higher than NSW/GDP due to EC < GDP. V11 benchmark range [0.008, 0.018] applies to the NSW/GDP ratio (N1301); N1302 NSW/EC expected to be roughly 1.5-2x higher given EC/GDP ratio historically ~0.55-0.65.",
+      "source_ref": "DECISION_LOG.md DEC-013"
+    },
+    {
+      "entry_type": "key_finding",
+      "content": "Moos Table 2 summary statistics for full 1959-2012 dataset: NSW/EC ranges from -2.2% (minimum) to 16.1% (maximum, at 2010 peak). The post-2001 structural break is equally pronounced in NSW/EC as in NSW/GDP. Figure 2 in Moos shows that after 1970, NSW/EC was positive, and after 2002 it reached historically unprecedented positive levels. The pattern is qualitatively identical to NSW/GDP but with amplified magnitudes.",
+      "source_ref": "Moos_2017, Section 3 Table 2; Section 4 p.6 Figure 2 reference; full_transcription.md Section 3 Extended Net Social Wage Data Series"
+    },
+    {
+      "entry_type": "overlap_comparison",
+      "content": "For the 1959-1997 overlap period, Shaikh & Tonak (2002) show NSW/EC averaging 0.6% of EC (effectively zero, Figure 29.3 in ST_2002). Moos's replicated series shows NSW/EC is positive for more years in the overlap, consistent with her finding of ~1.1 pp higher NSW/GDP mean. The slight upward shift is attributed to post-1999 NIPA revisions, not methodological differences. The qualitative phase pattern (negative in boom, positive in crisis, near-zero in Clinton era) is preserved.",
+      "source_ref": "Moos_2017, Section 3 p.4; full_transcription.md Section 3; ST_2002 p.253"
+    },
+    {
+      "entry_type": "formula",
+      "content": "N1302 = NSW / EC, where NSW = E1 - T1 - T2*LS (per DEC-013 E2 excluded). EC = total employee compensation from BEA NIPA Table 2.1 (wages + salaries + employer social insurance contributions + other labor income). Labor share LS = wages and salaries / total personal income (secularly declining from ~0.73 in 1960s to ~0.62 by 2010s). Robustness check with Mohun (2016) income share (declining from 0.70 to ~0.45) produces nearly identical NSW/EC path.",
+      "source_ref": "Moos_2017, Section 2 pp.3-4, Section 4.3 pp.20-23; full_transcription.md Sections 2 and 4.3"
+    },
+    {
+      "entry_type": "cyclical_driver",
+      "content": "Moos confirms Shaikh & Tonak's finding that unemployment drives NSW variations but extends the analysis: in 1983 and 2010, official unemployment was identical at 9.6%, yet NSW/GDP was 2.1% in 1983 and 8.6% in 2010 (Table 3). The difference is unemployment intensity — product of unemployment rate and duration index. 1983 intensity=18.95%; 2010 intensity=31.46% (66% higher). Long-term unemployment means extended benefit collection. This explains the unprecedented post-2007 NSW/EC without requiring a structural change in benefit generosity.",
+      "source_ref": "Moos_2017, Section 4.2.1 pp.17-19; full_transcription.md Table 3 and Section 4.2.1"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "EC from BEA NIPA. Period 1959-2012. Moos uses post-1999 comprehensive NIPA revision. Labor share secular decline documented: high of 0.73 to low of 0.62 over period. EC/GDP ratio declines correspondingly in neoliberal era. Nominal NSW ranges from -$13.18bn to $1,288bn (2010). In real 2010 dollars, ranges -$76.48bn to $1,288bn.",
+      "source_ref": "Moos_2017, Section 3 Table 2; Section 4.3 p.21; full_transcription.md Sections 3 and 4.3"
+    }
+  ],
+  "citations": [
+    {
+      "id": "Moos_2017",
+      "full": "Moos, Katherine A. 2017. 'Neoliberal Redistributive Policy: The U.S. Net Social Wage in the 21st Century.' Working Paper No. 2017-18, Department of Economics, University of Massachusetts Amherst. September 18, 2017."
+    },
+    {
+      "id": "ST_2002",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 2002. 'The Rise and Fall of the U.S. Welfare State.' In Political Economy and Contemporary Capitalism. M.E. Sharpe, Armonk. pp. 247-265."
+    },
+    {
+      "id": "BEA_NIPA",
+      "full": "Bureau of Economic Analysis. National Income and Product Accounts. Survey of Current Business, various years."
+    }
+  ],
+  "methodology_summary": "NSW/EC extended to 2012 by Moos (2017), using same formula as N1301 but normalized by employee compensation rather than GDP. Period 1959-2012. EC < GDP so NSW/EC magnitudes are larger; post-2001 peak is 16.1% of EC vs 8.6% of GDP. E2 excluded per DEC-013. Direct comparator to N1202 (ST 2002 NSW/EC).",
+  "known_issues": [
+    "NIPA vintage difference between Moos (~2015 pull) and ST2 (2026 pull) affects historical EC values",
+    "EC/GDP ratio declining in neoliberal era means normalization choice matters more for post-2001 period",
+    "E2 excluded from NSW per DEC-013; E2 data available for sensitivity analysis"
+  ],
+  "cross_references": ["N1301", "N1304", "N1305", "N1202", "T607"],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/Knowledge_Base/external_papers/state_welfare/2017_Moos_NSW_21st_Century/full_transcription.md"
+    ],
+    "L3_data_sources": ["BEA NIPA (post-1999 revision)", "Moos_2017 Table 2"],
+    "L5_validation": []
+  }
+}

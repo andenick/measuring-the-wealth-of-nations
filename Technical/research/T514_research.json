@@ -1,0 +1,81 @@
+{
+  "series_id": "T514",
+  "series_name": "Capacity-Adjusted Profit Rate (r*_adj)",
+  "chapter": 5,
+  "figures": ["Fig_5_5", "Fig_9_4"],
+  "research_date": "2026-03-21",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_31/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_33/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "r*_adj = r* × (1/TCU), where TCU is total capacity utilization from the Federal Reserve G.17 release. The adjustment accounts for the fact that the capital stock is not fully utilized, so the effective capital in use is K × TCU. Since r* = S*/K (approximately), r*_adj = S*/(K × TCU) = r*/TCU.",
+      "source_ref": "ST_1994, Ch5 Table 5.11; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/full_transcription.md"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Combines T513 (r*) with Federal Reserve G.17 Total Capacity Utilization index. G.17 data available from 1967 (manufacturing) and 1972 (total industry). Extension straightforward since both Fed and BEA data are continuously published.",
+      "source_ref": "ST_1994, Table 5.11; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_31/full_transcription.md; Fed G.17"
+    },
+    {
+      "entry_type": "figure_context",
+      "content": "Fig 5.5 overlays r* and r*_adj, showing that capacity utilization fluctuations add cyclical variation around the secular trend. Fig 9.4 uses r*_adj for long-run profit rate analysis, arguing the adjusted rate better captures actual profitability conditions.",
+      "source_ref": "ST_1994, Figs 5.5, 9.4; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_13/full_transcription.md"
+    },
+    {
+      "entry_type": "theoretical_note",
+      "content": "The capacity adjustment is important because Marx's profit rate refers to capital actually employed in production, not idle capacity. During recessions, TCU falls, and r*_adj rises relative to r* (the denominator shrinks). This reveals the distinction between potential and actual profitability.",
+      "source_ref": "ST_1994, Ch5 pp.265-270; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "Fed G.17 TCU covers manufacturing and select industries, not the full economy. Using total industry TCU as a proxy for productive-sector capacity utilization introduces measurement error, particularly as the economy shifts toward services.",
+      "source_ref": "DPR T514_DPR.md; EPR T514_EPR.md"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "The formula r*_adj = r* × (1/TCU) inherits all known issues from T513, including the K vs K* problem per DEC-002. Additionally, TCU is reported as a percentage (typically 70-85%), so the scaling must be handled consistently.",
+      "source_ref": "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md"
+    },
+    {
+      "entry_type": "decision_reference",
+      "content": "DEC-002: T514 inherits the total K (not K*) capital denominator from T513. The profit rate levels are understated relative to the book's intended productive-sector-only denominator, but trend dynamics are preserved. Resolution requires Wave 2 IO-based sector classification (ADJ-001).",
+      "source_ref": "DECISION_LOG.md#DEC-002"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "FRB_G17",
+      "full": "Board of Governors of the Federal Reserve System. G.17 Industrial Production and Capacity Utilization. https://www.federalreserve.gov/releases/g17/"
+    }
+  ],
+  "methodology_summary": "Capacity-adjusted profit rate r*_adj = r*/TCU, using Fed G.17 capacity utilization. Adds cyclical variation to the secular profit rate trend. Extension straightforward from continuously published sources. Inherits DEC-002 K vs K* constraint from T513.",
+  "known_issues": [
+    "Inherits T513 K vs K* problem (DEC-002)",
+    "G.17 TCU covers manufacturing/industry, not full productive sector",
+    "TCU percentage scaling must be handled consistently",
+    "Pre-1967 TCU data limited"
+  ],
+  "cross_references": ["T513"],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_31/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_33/full_transcription.md"
+    ],
+    "L3_data_sources": ["Federal Reserve G.17 Total Capacity Utilization", "Book Table E.2 (chunk_31)", "Book Table G.1/G.2 (chunk_33)"],
+    "L5_validation": []
+  }
+}

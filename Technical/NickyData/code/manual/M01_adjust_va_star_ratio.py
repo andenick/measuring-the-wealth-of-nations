@@ -145,13 +145,35 @@ def adjust(series_filter=None):
     ADJUSTED.mkdir(parents=True, exist_ok=True)
     steps = []
 
-    # Load current series
-    t511 = pd.read_csv(SERIES_OUT / "T511.csv", index_col=0)["combined"]
-    t512 = pd.read_csv(SERIES_OUT / "T512.csv", index_col=0)
-    t512_book = t512["book"] if "book" in t512.columns else t512.iloc[:, 0]
-    t512_combined = t512["combined"]
+    # Load P-script output (NOT M99-promoted to avoid feedback loop)
+    # Use "book" column as the stable base, then recompute extension from BEA data
+    t511_df = pd.read_csv(SERIES_OUT / "T511.csv", index_col=0)
+    t512_df = pd.read_csv(SERIES_OUT / "T512.csv", index_col=0)
 
-    steps.append(f"Loaded T511 ({len(t511)} rows), T512 ({len(t512_combined)} rows)")
+    # For book period: use book column (stable, from L03/H.1)
+    t512_book = t512_df["book"] if "book" in t512_df.columns else t512_df.iloc[:, 0]
+
+    # For extension: use "ext" column if available, else derive from book endpoint
+    if "ext" in t512_df.columns:
+        t512_ext = t512_df["ext"].dropna()
+    else:
+        t512_ext = t512_df["combined"].dropna()
+        t512_ext = t512_ext[t512_ext.index > 1989]
+
+    # Build clean combined (NOT from M99-promoted)
+    t512_combined = pd.concat([t512_book.dropna(), t512_ext])
+    t512_combined = t512_combined[~t512_combined.index.duplicated(keep="first")].sort_index()
+
+    t511 = t511_df["book"].dropna() if "book" in t511_df.columns else t511_df.iloc[:, 0]
+    if "ext" in t511_df.columns:
+        t511_ext = t511_df["ext"].dropna() if t511_df["ext"].notna().any() else pd.Series(dtype=float)
+    else:
+        t511_ext = t511_df["combined"].dropna()
+        t511_ext = t511_ext[t511_ext.index > 1989]
+    t511 = pd.concat([t511, t511_ext])
+    t511 = t511[~t511.index.duplicated(keep="first")].sort_index()
+
+    steps.append(f"Loaded T511 ({len(t511)} rows), T512 ({len(t512_combined)} rows) [pre-M01 base]")
 
     # Load BEA compensation data
     comp_df = _load_bea_compensation()

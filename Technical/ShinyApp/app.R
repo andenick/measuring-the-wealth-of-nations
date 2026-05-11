@@ -258,6 +258,35 @@ questions_for_tonak <- tryCatch(
   }
 )
 
+# Load Mohun comparison data
+mohun_comparison <- tryCatch(
+  read_csv(file.path(data_dir, "mohun_comparison.csv"), show_col_types = FALSE),
+  error = function(e) tibble(year = integer())
+)
+
+# Load Moos NSW comparison data
+moos_nsw_comparison <- tryCatch(
+  read_csv(file.path(data_dir, "moos_nsw_comparison.csv"), show_col_types = FALSE),
+  error = function(e) tibble(year = integer())
+)
+
+# Load international NSW data
+international_nsw <- tryCatch(
+  read_csv(file.path(data_dir, "international_nsw.csv"), show_col_types = FALSE),
+  error = function(e) tibble(year = integer())
+)
+
+# Load NSW extended data
+nsw_extended <- tryCatch(
+  {
+    ext_file <- file.path(data_dir, "nsw_1952_2025.csv")
+    orig_file <- file.path(data_dir, "nsw_1952_1989.csv")
+    if (file.exists(ext_file)) read_csv(ext_file, show_col_types = FALSE)
+    else read_csv(orig_file, show_col_types = FALSE)
+  },
+  error = function(e) tibble(year = integer())
+)
+
 # ============================================
 # FIGURE & SERIES CATALOG DATA
 # ============================================

@@ -1,0 +1,94 @@
+{
+  "input_output_params": [
+    {
+      "ParameterName": "TableID",
+      "ParameterDataType": "integer",
+      "ParameterDescription": "The unique Input-Output table identifier",
+      "ParameterIsRequiredFlag": "1",
+      "ParameterDefaultValue": " ",
+      "MultipleAcceptedFlag": "1",
+      "AllValue": ""
+    },
+    {
+      "ParameterName": "Year",
+      "ParameterDataType": "integer",
+      "ParameterDescription": "List of year(s) of data to retrieve (ALL for All)",
+      "ParameterIsRequiredFlag": "1",
+      "ParameterDefaultValue": "",
+      "MultipleAcceptedFlag": "1",
+      "AllValue": "ALL"
+    }
+  ],
+  "input_output_table_ids": [
+    {
+      "Key": "59",
+      "Desc": "Total Requirements, Commodity-by-Commodity - Summary"
+    },
+    {
+      "Key": "58",
+      "Desc": "Total Requirements, Commodity-by-Commodity - Sector"
+    },
+    {
+      "Key": "57",
+      "Desc": "Total Requirements, Industry-by-Commodity - Summary"
+    },
+    {
+      "Key": "56",
+      "Desc": "Total Requirements, Industry-by-Commodity - Sector"
+    },
+    {
+      "Key": "61",
+      "Desc": "Total Requirements, Industry-by-Industry - Summary"
+    },
+    {
+      "Key": "60",
+      "Desc": "Total Requirements, Industry-by-Industry - Sector"
+    },
+    {
+      "Key": "262",
+      "Desc": "The Domestic Supply of Commodities by Industries - Summary"
+    },
+    {
+      "Key": "261",
+      "Desc": "The Domestic Supply of Commodities by Industries - Sector"
+    },
+    {
+      "Key": "259",
+      "Desc": "The Use of Commodities by Industries - Summary"
+    },
+    {
+      "Key": "258",
+      "Desc": "The Use of Commodities by Industries - Sector"
+    }
+  ],
+  "input_output_years": [
+    "1997",
+    "1998",
+    "1999",
+    "2000",
+    "2001",
+    "2002",
+    "2003",
+    "2004",
+    "2005",
+    "2006",
+    "2007",
+    "2008",
+    "2009",
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024"
+  ]
+}

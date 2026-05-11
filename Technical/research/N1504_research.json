@@ -1,0 +1,71 @@
+{
+  "series_id": "N1504",
+  "series_name": "Unproductive Burden Ratio Lu/Lp (Mohun 2013)",
+  "study": "study_06_mohun_2013",
+  "figures": [],
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "Burden ratio = Lu / Lp, the ratio of total unproductive full-time equivalent employment to productive full-time equivalent employment. This is the classic 'unproductive burden' measure: for each productive worker, how many unproductive workers must be supported out of surplus value? A rising ratio represents an increasing drain on surplus value available for accumulation. Mohun (2013) subjects this measure to critical scrutiny by decomposing Lu into working class unproductive (Lu_wc) and supervisory (Lu_sup) components.",
+      "source_ref": "Mohun_2013, Sections 3-5; full_transcription.md"
+    },
+    {
+      "entry_type": "burden_decomposition",
+      "content": "The standard burden narrative (Gillman 1957, Moseley 1991, Paitaridis and Tsoulfidis 2012) holds that rising Lu/Lp reduces surplus value available for investment. Mohun's empirical finding undermines this: only the supervisory component (Lu_sup) has increased its absorption of money value added. Working class unproductive labor (Lu_wc) absorbed a constant 12.8% of value added 1964-2010. Simple correlation between productive labor VA share and working class VA share = 0.99; between rate of surplus value and (supervisory wages + profits) / working class wages = 0.99. These correlations show that for empirical purposes, the productive/unproductive distinction can be replaced by the class distinction.",
+      "source_ref": "Mohun_2013, Section 6; full_transcription.md"
+    },
+    {
+      "entry_type": "profit_rate_equation",
+      "content": "Mohun presents the profit rate (eq. 7-8): r = (MSV - Wu) / K = [e - (Wu/Wp)] / VCC, where e = rate of surplus value, Wu/Wp = unproductive wages relative to productive wages, VCC = value composition of capital. The burden ratio Lu/Lp is closely related to Wu/Wp (if wages per worker were equal, they would be identical). The formal condition for unproductive labor to NOT harm the profit rate: the rate of surplus value e must rise faster than Wu/Wp. Mohun shows this condition was met after 1979 because the neoliberal assault on labor produced a large enough rise in e.",
+      "source_ref": "Mohun_2013, Sections 3.1 and 5, Equations 7-8; full_transcription.md"
+    },
+    {
+      "entry_type": "class_based_reinterpretation",
+      "content": "Mohun proposes a class-based profit rate (eq. 18): r_class = (Π + Wu_sup) / K. This reframes supervisory wages as part of the capitalist class's income rather than as a burden on accumulation. From 1979 to 2007, the fall in the value of labor-power (rise in exploitation rate) financed a large rise in supervisory income and only a meager rise in the profit share. In class terms, the distinction between supervisory wages and profits is irrelevant — both are appropriations of working class surplus. The burden ratio Lu/Lp, when disaggregated, reveals that only the supervisory subcomponent changes behavior consistent with a burden claim.",
+      "source_ref": "Mohun_2013, Section 5; full_transcription.md"
+    },
+    {
+      "entry_type": "construction_note",
+      "content": "Series registry construction: step 1 op=derive, formula='Lu / Lp', inputs=['Mohun Lu', 'Mohun Lp'], output='N1504-COMBINED'. Expected range [0.5, 3.0]. Units: ratio (dimensionless). Period 1964-2010. The Lu used in this ratio is N1503 (total Mohun unproductive); Lp is Mohun's productive employment series from the same dataset.",
+      "source_ref": "Series registry N1504; Mohun_2013"
+    },
+    {
+      "entry_type": "trend_implication",
+      "content": "The Lu/Lp ratio rises over 1964-2010, consistent with the documented rise in the unproductive employment share (from ~42% to ~49%). However, because value added absorbed by unproductive working class labor is flat at 12.8%, the rising quantity ratio for Lu_wc/Lp is accompanied by declining wages per unproductive working class worker relative to total. The supervisory Lu_sup/Lp component, though employment-stable, drives rising wage burden. Net: the conventional Lu/Lp ratio is a misleading indicator of the actual burden on accumulation without decomposing by class.",
+      "source_ref": "Mohun_2013, Sections 4-6; full_transcription.md"
+    }
+  ],
+  "citations": [
+    {
+      "id": "Mohun_2013",
+      "full": "Mohun, Simon. 2013 [pub. 2014]. 'Unproductive Labor in the U.S. Economy 1964-2010.' Review of Radical Political Economics 46(3): 355-379. DOI: 10.1177/0486613413506080."
+    },
+    {
+      "id": "Mohun_2005",
+      "full": "Mohun, Simon. 2005. 'On measuring the wealth of nations: the US economy, 1964-2001.' Cambridge Journal of Economics 29(5): 799-815. DOI: 10.1093/cje/bei043."
+    },
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    }
+  ],
+  "methodology_summary": "Unproductive burden ratio Lu/Lp, 1964-2010. Derived from Mohun total employment data. Rising trend as unproductive share grows from ~42% to ~49%. However, Mohun's class decomposition shows the rising ratio is misleading: only the supervisory sub-component drives increasing value-added absorption. The conventional burden narrative (Moseley, Paitaridis-Tsoulfidis) is empirically undermined by the flat 12.8% value-added absorption of working class unproductive labor.",
+  "known_issues": [
+    "Simple Lu/Lp ratio conflates working class unproductive and supervisory labor — uninformative as a burden measure without decomposition (per Mohun's central argument)",
+    "Openness of the U.S. economy (exports + imports / VA = 12.9% in 1964, 42.5% in 2010) means conservation of aggregate value added in circulation is an approximation; magnitude of error unknown",
+    "General government excluded from analysis; post-tax analysis would alter the picture"
+  ],
+  "cross_references": ["N1501", "N1502", "N1503"],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md"
+    ],
+    "L3_data_sources": ["Inputs/ExternalSources/Mohun/"],
+    "L5_validation": []
+  }
+}

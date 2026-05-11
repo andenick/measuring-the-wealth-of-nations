@@ -141,11 +141,9 @@ def validate(series_filter=None, chapter_filter=None):
     })
 
     # Identity 2: T506 = T505 / T504 (e = S* / V*)
-    # NOTE: T506 is independently sourced from Table 5.7 (pre-computed ratios),
-    # while T505 and T504 come from Table E.2/NIPA aggregates with different
-    # unit bases. The identity e = S*/V* is theoretically correct but the series
-    # are constructed from different source tables, so exact equality is not expected.
-    # Use a wider tolerance (50%) to flag only gross discrepancies.
+    # NOTE: At V-phase time, T504/T505 are in different units than T506 (Table 5.7 vs Table E.2).
+    # M01/M99 resolves this by recomputing in consistent units, but validators run before M-phase.
+    # Use wide tolerance for the pre-adjustment check; the identity holds exactly post-M99.
     def compute_exploitation(data):
         t504 = data["T504"]
         t505 = data["T505"]
@@ -158,11 +156,42 @@ def validate(series_filter=None, chapter_filter=None):
         "T506 = T505 / T504",
         ["T504", "T505", "T506"],
         compute_exploitation,
-        tolerance=0.50,  # Wide tolerance — series from different source tables
+        tolerance=0.50,
         max_year=1989,
     ))
 
-    # Identity 3: T515 + T516 should approximate total employment
+    # Identity 3: T501 = T502 + T503 (TP* = C*_m + GFP)
+    def compute_gfp_identity(data):
+        t501 = data["T501"]
+        t502 = data["T502"]
+        t503 = data["T503"]
+        return (t503, t501 - t502)
+
+    checks.append(_check_identity(
+        "GFP = TP* - C*_m",
+        "T503 = T501 - T502",
+        ["T501", "T502", "T503"],
+        compute_gfp_identity,
+        tolerance=0.01,
+    ))
+
+    # Identity 4: T604 = T601 + T602 + T603 (total taxes = components)
+    def compute_tax_identity(data):
+        t601 = data["T601"]
+        t602 = data["T602"]
+        t603 = data["T603"]
+        t604 = data["T604"]
+        return (t604, t601 + t602 + t603)
+
+    checks.append(_check_identity(
+        "T_w = PIT + SI + indirect",
+        "T604 = T601 + T602 + T603",
+        ["T601", "T602", "T603", "T604"],
+        compute_tax_identity,
+        tolerance=0.01,
+    ))
+
+    # Identity 5: T515 + T516 should approximate total employment
     def compute_total_employment(data):
         t515 = data["T515"]
         t516 = data["T516"]

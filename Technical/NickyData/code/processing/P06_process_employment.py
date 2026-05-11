@@ -2,11 +2,14 @@
 """P06 - Process employment: T515 (Lp), T516 (Lu).
 
 Book data 1948-1989. Extension via BLS CES production workers.
+Total employment from FRED PAYEMS (total nonfarm, includes govt) preferred
+over CES0500000001 (total private) per KB Appendix F finding (DEC-019).
 
 Inputs:  parsed-raw/T515_parsed.csv, T516_parsed.csv (from L04)
+         parsed-raw/total_nonfarm_employment.csv (from L04b, FRED PAYEMS)
          api-data/BLS/bls_ces_production_workers.csv
 Outputs: final-data/series/T515.csv, T516.csv
-Dependencies: L04. No upstream P## dependencies.
+Dependencies: L04, L04b. No upstream P## dependencies.
 """
 
 import sys
@@ -15,7 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 import pandas as pd
-from utils.paths import SERIES_OUT, API_DATA, ensure_dirs
+from utils.paths import SERIES_OUT, API_DATA, PARSED_RAW, ensure_dirs
 from utils.data_io import load_parsed
 from utils.api_data_io import load_bls_csv
 
@@ -47,25 +50,54 @@ def process():
     lp_ext = pd.Series(dtype=float)
     lu_ext = pd.Series(dtype=float)
 
+    # Load FRED employment data
+    payems_path = PARSED_RAW / "total_nonfarm_employment.csv"
+    sector_path = PARSED_RAW / "sector_employment.csv"
+    total_nonfarm = None
+    sector_emp = None
+
+    if payems_path.exists():
+        tnf = pd.read_csv(payems_path, index_col="year")
+        total_nonfarm = tnf["value"].dropna()
+        steps.append(f"FRED PAYEMS: {len(total_nonfarm)} years")
+
+    if sector_path.exists():
+        sector_emp = pd.read_csv(sector_path, index_col="year")
+        steps.append(f"Sector employment: {len(sector_emp)} years, cols={list(sector_emp.columns)}")
+
     if bls_path.exists():
         bls = load_bls_csv(bls_path)
-        # CES0500000006 = total private production workers
-        # CES0500000001 = total private all employees
-        if "CES0500000006" in bls.columns and "CES0500000001" in bls.columns:
+        if "CES0500000006" in bls.columns:
             prod = bls["CES0500000006"].dropna()
-            total = bls["CES0500000001"].dropna()
 
-            # Scale to match book levels at 1989
-            ext_years = prod.index[prod.index > 1989]
-            if 1989 in lp_book.index and 1989 in prod.index:
-                scale = lp_book[1989] / prod[1989]
-                lp_ext = prod[ext_years] * scale
+            # Total employment: use PAYEMS (includes govt, matches book's L)
+            if total_nonfarm is not None:
+                total = total_nonfarm
+                total_source = "PAYEMS (total nonfarm)"
+            elif "CES0500000001" in bls.columns:
+                total = bls["CES0500000001"].dropna()
+                total_source = "CES0500000001 (total private)"
+            else:
+                total = None
+                total_source = "none"
 
-                # Lu = total - Lp (scaled similarly)
-                total_scale = (lp_book[1989] + lu_book[1989]) / total[1989]
-                total_scaled = total[ext_years] * total_scale
-                lu_ext = total_scaled - lp_ext
-                steps.append(f"BLS extension: {len(ext_years)} years")
+            if total is not None:
+                ext_years = prod.index[prod.index > 1989]
+                if 1989 in lp_book.index and 1989 in prod.index:
+                    scale = lp_book[1989] / prod[1989]
+                    lp_ext = prod[ext_years] * scale
+
+                    book_total_1989 = lp_book[1989] + lu_book[1989]
+                    total_1989 = total.get(1989, None)
+                    if total_1989 is None and len(total[total.index >= 1989]) > 0:
+                        total_1989 = total[total.index >= 1989].iloc[0]
+                    if total_1989 is not None and total_1989 > 0:
+                        total_scale = book_total_1989 / total_1989
+                        common_ext = ext_years.intersection(total.index)
+                        total_scaled = total[common_ext] * total_scale
+                        lu_ext = total_scaled - lp_ext.reindex(common_ext).fillna(0)
+                        steps.append(f"Extension via {total_source}: {len(common_ext)} years, total_scale={total_scale:.3f}")
+                        print(f"    [P06] total_scale={total_scale:.3f} ({total_source})")
 
     # Write T515 (Lp)
     lp_combined = pd.concat([lp_book, lp_ext])

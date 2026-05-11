@@ -1,0 +1,78 @@
+{
+  "version": "1.0",
+  "generated_by": "S03_generate_validation_report.py",
+  "generated_at": "2026-05-11T18:05:32.226474+00:00",
+  "validators": {
+    "V00_validate_all": {
+      "status": "skip",
+      "summary": "No entry point"
+    },
+    "V01_reference_values": {
+      "status": "pass",
+      "summary": "31 PASS, 0 FAIL out of 31 checks"
+    },
+    "V02_range_checks": {
+      "status": "pass",
+      "summary": "86 PASS, 0 FAIL out of 86 checks"
+    },
+    "V03_continuity": {
+      "status": "warn",
+      "summary": "29 PASS, 4 WARN out of 33 checks"
+    },
+    "V04_completeness": {
+      "status": "pass",
+      "summary": "26 PASS, 0 FAIL, 0 WARN out of 26 checks"
+    },
+    "V05_cross_series": {
+      "status": "pass",
+      "summary": "4 PASS, 0 FAIL, 1 SKIP out of 5 checks"
+    },
+    "V06_splice_quality": {
+      "status": "warn",
+      "summary": "5 PASS, 13 WARN, 0 SKIP out of 18 checks"
+    },
+    "V07_extension_overlap": {
+      "status": "pass",
+      "summary": "15 PASS, 0 WARN, 3 SKIP out of 18 checks"
+    },
+    "V08_hash_integrity": {
+      "status": "pass",
+      "summary": "76 PASS, 0 WARN out of 76 files (verification run)"
+    },
+    "V09_mohun_crossvalidation": {
+      "status": "warn",
+      "summary": "0 PASS, 6 WARN out of 6 checks"
+    },
+    "V10_io_consistency": {
+      "status": "pass",
+      "summary": "21 PASS, 0 FAIL, 8 WARN out of 29 checks"
+    },
+    "V11_external_benchmarks": {
+      "status": "warn",
+      "summary": "4 PASS, 3 WARN, 0 SKIP out of 7 checks"
+    },
+    "V12_nsw_cross_study": {
+      "status": "pass",
+      "summary": "2 PASS, 0 WARN out of 2 checks"
+    },
+    "V13_robin_crossvalidation": {
+      "status": "warn",
+      "summary": "0 PASS, 1 WARN out of 1 checks"
+    },
+    "V14_unit_consistency": {
+      "status": "pass",
+      "summary": "4 PASS, 1 WARN, 0 FAIL out of 5 checks"
+    },
+    "V15_data_freshness": {
+      "status": "pass",
+      "summary": "11 PASS, 0 WARN out of 11 checks"
+    }
+  },
+  "summary": {
+    "total": 16,
+    "pass": 10,
+    "fail": 0,
+    "warn": 5,
+    "skip": 1
+  }
+}

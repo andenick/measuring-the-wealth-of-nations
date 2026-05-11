@@ -4,6 +4,96 @@ Cumulative record of all sessions working on the AS2 project.
 
 ---
 
+## Session 26 — May 11, 2026
+
+**Phase**: Pipeline consolidation — Phases 1-8 of remaining work plan
+**Agent**: Claude Opus 4.6 (1M context)
+
+**Work Completed**:
+- Phase 1: Deleted 5 orphaned diagnose_*.py, removed dead bea_gdpbi fetch, fixed methodology.json S* formula, extracted 4 hardcoded constants to config, fixed --compute-only flag
+- Phase 2: Confirmed all V01-V05 validator fixes already in place from prior sessions
+- Phase 3: Created L19 (412-industry detail IO), A11 (period analysis), updated P03 (depreciation), copied configs, archived nickydata/ to _archive/nickydata_v7.2_2026-05-11/
+- Phase 4: Created nipa_65_to_io_classification.json, P22 (sector V*), L20 (Fixed Assets K*), updated P07 (T510 K*/V*), confirmed T512 V*/W already in P05
+- Phase 5: Extended P14 for NAICS labor values (1997-2017, 5 benchmarks, Ochoa R²=0.85-0.99)
+- Phase 6: Confirmed all Wave 3 items already complete (25 N-series, T201, T801)
+- Phase 7: Updated CHECKLIST.md, VERSION_LOG.md (v7.0.0), PIPELINE_STATE.json, DECISION_LOG.md (DEC-012 to DEC-015), added benchmark values
+- Phase 8: Updated LaTeX report, recompiled PDF, full test-all run (76 scripts, 10.2s), handoff doc
+
+**Decisions**:
+- DEC-012: Archive nickydata/, single canonical pipeline in code/
+- DEC-013: K* from industry-level Fixed Assets (resolves DIV-001)
+- DEC-014: NAICS labor values via approximate hp* from NIPA 6.5D
+- DEC-015: T510 extension via K*/V* components (replaces linear trend)
+
+**Files Created**: L19, L20, P22, A11, nipa_65_to_io_classification.json, HANDOFF_20260511_120000.md
+**Files Modified**: P01, P02, P03, P07, P14, run.py, methodology.json, validation_config.json, CHECKLIST.md, VERSION_LOG.md, PIPELINE_STATE.json, DECISION_LOG.md, AS2_Methodology_Report.tex
+**Files Deleted**: 5 diagnose_*.py, nickydata/ (archived)
+
+**Pipeline**: v7.0.0 — 76 scripts, 0 FAIL (validate-only), 10.2s full run
+**Druck Completion**: 93% → 96%
+
+**Next Steps**: Shiny app Wave 2 integration, Zenodo replication package, fresh clean-venv test
+
+---
+
+## Session 25 — May 10, 2026
+
+**Phase**: Detail-level IO matrices (412 industries), V* trajectory fix, comprehensive Anu Framework review
+**Agent**: Claude Opus 4.6 (1M context)
+
+**Work Completed**:
+- API discovery: found `UnderlyingGDPbyIndustry` with 604 industries, annual 1997-2024 (TableID=237 GO detail, TableID=210 VA underlying)
+- 412-industry NAICS classification built (340 productive, 23 trading, 39 unproductive, 10 government)
+- Detail-level TP*/GFP*/C*m computed for all 28 years 1997-2024 using VA-based method (avoids II double-counting)
+- Integrated series: book H.1 (1948-89) + detail data (1997-2024) + log-linear interpolation (1990-96)
+- **V* trajectory fixed**: book V* for 1948-89, sector method 1998-2024. e now RISING 1.70->2.44 (exact match at all benchmarks)
+- **Depreciation fixed**: book Dp for 1948-89. S*(1948)=149.9 exact match
+- Profit rate r* computed: 0.93 (1948) -> 0.39 (2024) secular decline
+- IO Leontief inverse computed for benchmark years (avg multiplier=1.97)
+- Period analysis with structural findings (e peak=2.44 in 1989, TP*/GDP first <1.0 in 2009)
+- Comprehensive review against AnuData 8-phase architecture standard
+
+**Key Results**:
+- e(1948)=1.70, e(1989)=2.44 — exact match to book at ALL 7 benchmark years
+- TP*/GDP fell from 1.62 (1948) to 0.99 (2024) — productive sector now < GDP
+- Post-book: e peaked 1989, declined 48% to 1.26 (2024) as FIRE sector expanded
+- Productive GO share: 54% (1997) -> 46% (2024)
+
+**Decisions**:
+- DEC: Use VA (not II) for GFP* to avoid parent-child double-counting in BEA underlying data
+- DEC: Use book V*/Dp directly for 1948-1989 (NIPA T60200A/B not available via API)
+- DEC: Classify telecom/broadcasting/publishing as productive (per book's SIC 48 treatment)
+
+**Files Created/Modified**: 14 files in nickydata/ (see HANDOFF for full list)
+
+**Architecture Finding**: Two parallel implementations exist (code/ v6.0 AnuData 95.5% Druck vs nickydata/ v7.2 package). New detail IO work landed in nickydata/ — needs migration to code/ proper phase scripts.
+
+**Next Steps**: (1) Migrate nickydata/ work to code/ L##/P## scripts, (2) AnuData structural docs, (3) Code cleanup, (4) Validation V## phase, (5) LaTeX methodology report
+
+---
+
+## Session 20 — May 7, 2026
+
+**Phase**: Comprehensive methodology review + fix implementation + NAICS IO framework
+**Agent**: Claude Opus 4.6 (1M context)
+
+**Work Completed**:
+- 25-agent methodology review (5 rounds × 5 Opus agents) auditing all 59 series
+- 14 code fixes: T603 column, T510 decode, T504 growth-rate splice, T506 Principle 3, T606 NIPA 3.2+3.3, T502 IO overlay, T503 identity, M99 promotion, T601-T604 tax extension, registry metadata, N1402 share, N1602 0.35 removal, DEC-015/016
+- NAICS IO framework: parsed 5 benchmark years (1997-2017) from BEA JSON, productive sector classification for 67 industries, annual interpolated ratios
+- 6 investigations resolving ambiguous findings (N1201, T609, T702/T703, T516, Table5_7, Moos shift)
+- V05 identity checks: GFP, tax, exploitation, employment (4 PASS)
+
+**Scorecard**: 28 MATCH | 25 JUSTIFIED | 4 UNJUSTIFIED | 2 UNKNOWN (was 22/14/20/3)
+
+**Decisions**: DEC-015 (T502 GDP proxy accepted Wave 1), DEC-016 (T511/T512 Principle 3 accepted Wave 1)
+
+**Files**: 7 new files, 15 modified files (see HANDOFF_20260507_SESSION20.md for full list)
+
+**Pipeline**: PASS, 13.1s, 59 series, 15 validators, 0 failures
+
+---
+
 ## Sessions 17-18 — May 3, 2026
 
 **Phase**: Comprehensive Anu Suite review, NickyData conformance, research gap closure

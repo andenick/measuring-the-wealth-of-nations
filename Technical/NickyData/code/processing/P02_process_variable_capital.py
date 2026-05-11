@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """P02 - Process variable capital: T504 (V*).
 
-V*_ext = W x (V*/W) using T512-COMBINED from P05.
-Spliced at 1989 using level method.
+V*_ext via growth-rate splice: V*[yr] = V*[1989] × (W[yr]/W[1989]) × (T512[yr]/T512[1989])
+Growth rates are dimensionless, avoiding the book/BEA unit mismatch.
 
 Inputs:  parsed-raw/T504_parsed.csv (from L02)
          final-data/series/T512.csv (from P05 — must run first)
@@ -56,14 +56,13 @@ def process():
 
     t512 = pd.read_csv(t512_path, index_col=0)["combined"]
 
-    # Load BEA total compensation W (for extension period 1998+)
+    # Load BEA total compensation W (for growth-rate splice)
     bea_path = API_DATA / "BEA" / "nipa_6_2D_compensation_by_industry.csv"
     if bea_path.exists():
         w_df = load_bea_nipa(bea_path, line_filter="Compensation of employees")
-        w = w_df.iloc[:, 0] / 1e9  # scaled_value is already in dollars, convert to billions
+        w = w_df.iloc[:, 0]  # raw scaled values (units don't matter for growth rates)
         steps.append(f"BEA compensation: {len(w)} rows")
     else:
-        # No BEA data — use book only
         out = pd.DataFrame({"book": book, "combined": book})
         out.index.name = "year"
         out_path = SERIES_OUT / "T504.csv"
@@ -74,43 +73,52 @@ def process():
                 "steps": steps, "data_dict": {"T504": book},
                 "outputs": [str(out_path)]}
 
-    # Compute V*_ext = W × (V*/W) for extension period
-    ext_years = t512.index[t512.index > 1989]
-    v_star_ext = pd.Series(dtype=float)
-    for yr in ext_years:
-        if yr in w.index and yr in t512.index:
-            v_star_ext[yr] = w[yr] * t512[yr]
+    # Two-phase growth-rate splice (avoids unit mismatch):
+    # Phase 1 (1990-1997): V*[yr] = V*[1989] × T512[yr]/T512[1989] (no W data)
+    # Phase 2 (1998+): V*[yr] = V*[1998] × (W[yr]/W[1998]) × (T512[yr]/T512[1998])
+    anchor = 1989
+    if anchor in book.index and anchor in t512.index:
+        val_89 = book[anchor]
+        t512_89 = t512[anchor]
+        v_star_ext = pd.Series(dtype=float)
 
-    # Splice: level method at 1989
-    if len(v_star_ext) > 0 and 1989 in book.index:
-        combined = pd.concat([book, v_star_ext])
-        combined = combined[~combined.index.duplicated(keep="first")]
-        combined = combined.sort_index()
+        # Phase 1: 1990-1997 (T512 growth only — BEA W starts at 1998)
+        for yr in range(1990, 1998):
+            if yr in t512.index:
+                v_star_ext[yr] = val_89 * (t512[yr] / t512_89)
 
-        # Interpolate 1990-1997 gap using log-linear growth between 1989 and 1998
-        if 1989 in combined.index and 1998 in combined.index:
-            val_89 = combined[1989]
-            val_98 = combined[1998]
-            if val_89 > 0 and val_98 > 0:
-                for yr in range(1990, 1998):
-                    if yr not in combined.index or pd.isna(combined.get(yr)):
-                        frac = (yr - 1989) / (1998 - 1989)
-                        combined[yr] = val_89 * (val_98 / val_89) ** frac
-                combined = combined.sort_index()
-                n_interp = sum(1 for yr in range(1990, 1998) if yr in combined.index)
-                steps.append(f"Interpolated {n_interp} gap years (1990-1997) via log-linear growth")
-                print(f"    [P02] T504: interpolated {n_interp} gap years (1990-1997)")
+        # Phase 2: 1998+ (W growth + T512 growth)
+        w_1998 = w.get(1998)
+        t512_1998 = t512.get(1998)
+        if w_1998 is not None and t512_1998 is not None and w_1998 > 0:
+            val_98 = val_89 * (t512_1998 / t512_89)
+            v_star_ext[1998] = val_98
+            for yr in w.index[w.index > 1998]:
+                if yr in t512.index:
+                    v_star_ext[yr] = val_98 * (w[yr] / w_1998) * (t512[yr] / t512_1998)
+
+        if len(v_star_ext) > 0:
+            combined = pd.concat([book, v_star_ext])
+            combined = combined[~combined.index.duplicated(keep="first")]
+            combined = combined.sort_index()
+            steps.append(f"Growth-rate splice: {len(v_star_ext)} ext years")
+            print(f"    [P02] T504: {len(v_star_ext)} ext years (1990-97 T512, 1998+ W+T512)")
+        else:
+            combined = book
     else:
         combined = book
+        steps.append("Cannot splice — anchor year missing from book/T512")
 
     out = pd.DataFrame({"book": book, "combined": combined})
     out.index.name = "year"
     out_path = SERIES_OUT / "T504.csv"
     out.to_csv(out_path)
 
-    n_ext = len(v_star_ext)
-    steps.append(f"Extension: {n_ext} years via W×(V*/W)")
+    n_ext = len(combined) - len(book)
+    steps.append(f"Extension: {n_ext} years via growth-rate splice")
     print(f"    [P02] T504: {len(book)} book + {n_ext} ext rows")
+
+    # Sector-level V* computation for comparison (P02b runs independently via discovery)
 
     return {
         "series_id": SERIES_ID,

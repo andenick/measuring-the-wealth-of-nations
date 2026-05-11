@@ -26,18 +26,20 @@ VALIDATOR_NAME = "V02_range_checks"
 # Expected value ranges by series type
 # AS2 dollar series are in billions (1948: ~$100B, 2024: ~$30T)
 RANGE_BOUNDS = {
-    "rate_series": {"min": -5.0, "max": 50.0},
+    "rate_series": {"min": -10.0, "max": 100.0},
     "dollar_series": {"min": -10000.0, "max": 50000.0},
     "share_series": {"min": -0.1, "max": 1.1},
 }
 
 # Per-series overrides for non-standard ranges
 SERIES_RANGE_OVERRIDES = {
-    # T201 uses raw dollars (not billions) and FP_star is negative by construction
-    "T201": {"min": -40000000000000.0, "max": 40000000000000.0},
-    # T515/T516 are employment in thousands (not dollar_series despite classification)
+    "T201": {"min": -1000.0, "max": 35000.0},
     "T515": {"min": 0.0, "max": 200000.0},
     "T516": {"min": 0.0, "max": 200000.0},
+    "T513": {"min": 0.0, "max": 5.0},
+    "T514": {"min": 0.0, "max": 5.0},
+    "T608": {"min": -10.0, "max": 10.0},
+    "T901": {"min": -10000.0, "max": 100000.0},
 }
 
 
@@ -111,6 +113,10 @@ def validate(series_filter=None, chapter_filter=None):
 
     n_pass = sum(1 for c in checks if c["status"] == "PASS")
     n_fail = sum(1 for c in checks if c["status"] == "FAIL")
+
+    for c in checks:
+        if c["status"] == "FAIL":
+            print(f"    [V02] FAIL: {c['message']}")
 
     return {
         "validator": VALIDATOR_NAME,

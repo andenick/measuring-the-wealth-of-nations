@@ -1,0 +1,21 @@
+Table,11.42 - Employment and basic indicators in financial intermediary institutions by economic activity
+Indicator,Number of male employees (Ucretle calisan erkek sayisi)
+Source,TurkStat Financial Intermediary Institution Statistics
+NACE_Code,Description_EN,2002,2003,2004,2005,2006,2007,2008,2009,2010
+K,Financial and insurance activities,105640,111238,110639,112811,114733,123887,132597,142468,147422
+64,Financial service activities (except insurance and pension funding),88032,81760,80496,83999,88337,95429,101266,105470,109185
+64.11+64.19,"Monetary intermediation (central bank, commercial banks, special finance houses)",76206,70472,70151,73640,78050,84888,90813,94343,97685
+64.91,Financial leasing companies,467,499,499,576,621,660,742,651,655
+64.92,Other Credit Granting (Consumer Financing Companies / Lenders and Agricultural Credit Cooperatives),,,,,,,,4938,4950
+64.99,"Other Financial Service Activities n.e.c. (Banks of Development and Investment, Factoring, Asset Management etc.)",,,,,,,,5538,5895
+64.92+64.99 (2002-2008),"Other credit granting and other financial service activities n.e.c. (agricultural credit cooperatives, banks of development and investment, factoring)",11359,10789,9846,9783,9666,9881,9711,,
+65,Insurance reinsurance and pension funding (except compulsory social security),4732,5087,5781,5922,6211,6705,7112,7071,7153
+65.11,Life insurance,1903,2072,2618,2611,2774,3006,2980,2815,2693
+65.12+65.20,Non-life insurance and reinsurance,2829,3015,3163,3311,3437,3699,4132,4256,4460
+66,Activities auxiliary to financial services and insurance activities,12876,24391,24362,22890,20185,21753,24219,29927,31084
+66.11,Administration of Financial Markets (Stock Markets),,,,,,,,387,401
+66.12,"Security and commodity contracts brokerage (mutual funds companies and foreign exchange offices)",7370,8323,6082,5962,5568,5559,5509,5000,5044
+66.19,"Other activities auxiliary to financial services (except insurance and pension funding) (credit surety cooperatives)",,9358,9834,7040,3056,3220,2764,1713,1915
+66.21,Risk and Damage Evaluation (Insurance Experts),,,,,,,,1546,1839
+66.22,Activities of insurance agents and brokers (insurance agents - legal entity),5506,6710,8446,9888,11561,12974,15946,21023,21607
+66.30,Fund management activities (portfolio management companies),,,,,,,,258,278

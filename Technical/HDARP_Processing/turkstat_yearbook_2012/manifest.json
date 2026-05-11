@@ -1,0 +1,271 @@
+{
+  "hdarp_version": "6.0",
+  "document_name": "turkstat_yearbook_2012",
+  "source_pdf": "D:\\Arcanum\\Projects\\ST2\\Inputs\\ExternalSources\\Turkey2022\\turkstat_yearbook_2012.pdf",
+  "source_size_mb": 10.37,
+  "total_pages": 443,
+  "relevant_pages_extracted": 133,
+  "preparation_date": "2026-05-06",
+  "chunks_created": 14,
+  "max_chunk_pages": 10,
+  "chunk_numbering": "3-digit",
+  "processing_status": "READY",
+  "ready_for_processing": true,
+  "content_filter_checked": true,
+  "cf_risk_level": "LOW",
+  "preparation_agent": "preparehdarp_v6.0_targeted",
+  "catalog_entry_created": true,
+  "batch_state_updated": true,
+  "density_category": "MEDIUM",
+  "strategy_used": "TARGETED_EXTRACTION",
+  "extraction_focus": "national_accounts_compensation_gdp_labor",
+  "chunks": [
+    {
+      "chunk_name": "chunk_001.pdf",
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        38,
+        39,
+        40,
+        112,
+        113,
+        114
+      ],
+      "page_range": "4-115",
+      "page_count": 10,
+      "size_kb": 1575.4
+    },
+    {
+      "chunk_name": "chunk_002.pdf",
+      "pages": [
+        140,
+        141,
+        142,
+        168,
+        169,
+        170,
+        175,
+        176,
+        177,
+        178
+      ],
+      "page_range": "141-179",
+      "page_count": 10,
+      "size_kb": 1493.6
+    },
+    {
+      "chunk_name": "chunk_003.pdf",
+      "pages": [
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188
+      ],
+      "page_range": "180-189",
+      "page_count": 10,
+      "size_kb": 1559.1
+    },
+    {
+      "chunk_name": "chunk_004.pdf",
+      "pages": [
+        189,
+        190,
+        191,
+        192,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200
+      ],
+      "page_range": "190-201",
+      "page_count": 10,
+      "size_kb": 1213.6
+    },
+    {
+      "chunk_name": "chunk_005.pdf",
+      "pages": [
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222
+      ],
+      "page_range": "214-223",
+      "page_count": 10,
+      "size_kb": 1655.2
+    },
+    {
+      "chunk_name": "chunk_006.pdf",
+      "pages": [
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232
+      ],
+      "page_range": "224-233",
+      "page_count": 10,
+      "size_kb": 1350.3
+    },
+    {
+      "chunk_name": "chunk_007.pdf",
+      "pages": [
+        240,
+        241,
+        242,
+        244,
+        245,
+        246,
+        247,
+        248,
+        250,
+        251
+      ],
+      "page_range": "241-252",
+      "page_count": 10,
+      "size_kb": 1251.2
+    },
+    {
+      "chunk_name": "chunk_008.pdf",
+      "pages": [
+        252,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        306,
+        307
+      ],
+      "page_range": "253-308",
+      "page_count": 10,
+      "size_kb": 1468.5
+    },
+    {
+      "chunk_name": "chunk_009.pdf",
+      "pages": [
+        308,
+        337,
+        338,
+        339,
+        340,
+        342,
+        343,
+        344,
+        346,
+        347
+      ],
+      "page_range": "309-348",
+      "page_count": 10,
+      "size_kb": 1318.0
+    },
+    {
+      "chunk_name": "chunk_010.pdf",
+      "pages": [
+        348,
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357
+      ],
+      "page_range": "349-358",
+      "page_count": 10,
+      "size_kb": 1233.6
+    },
+    {
+      "chunk_name": "chunk_011.pdf",
+      "pages": [
+        358,
+        359,
+        360,
+        361,
+        362,
+        363,
+        370,
+        371,
+        372,
+        376
+      ],
+      "page_range": "359-377",
+      "page_count": 10,
+      "size_kb": 1561.5
+    },
+    {
+      "chunk_name": "chunk_012.pdf",
+      "pages": [
+        377,
+        378,
+        396,
+        397,
+        398,
+        399,
+        400,
+        401,
+        402,
+        403
+      ],
+      "page_range": "378-404",
+      "page_count": 10,
+      "size_kb": 1595.4
+    },
+    {
+      "chunk_name": "chunk_013.pdf",
+      "pages": [
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413
+      ],
+      "page_range": "405-414",
+      "page_count": 10,
+      "size_kb": 1550.5
+    },
+    {
+      "chunk_name": "chunk_014.pdf",
+      "pages": [
+        425,
+        426,
+        427
+      ],
+      "page_range": "426-428",
+      "page_count": 3,
+      "size_kb": 384.6
+    }
+  ],
+  "warnings": [],
+  "bisection_history": []
+}

@@ -1,0 +1,39 @@
+document_id,year,source_type,temporal_period,topic,country
+"[1984] Semmler - Competition, Monopoly, and Differential Profit Rates",1984,Theoretical_Foundation,1975_2000,Profit_Rate,US
+[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980,1984,Core_Methodology,1975_2000,Input_Output,US
+[2001] Cronin - Productive and Unproductive Capital A mapping of the New Zealand system of national accounts to classical economic categories 1972-95,2001,Extension_Study,Post_2000,Productive_Labor,US
+[2002] Matthews - An Econometric Model of the Circuit of Capital,2002,Extension_Study,Post_2000,Capital_Theory,US
+"[2005] Mohun - On measuring the wealth of nations the US economy, 1964-2001",2005,Extension_Study,Post_2000,Input_Output,US
+"[2011] Paitardis & Tsoulfidis - the Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the U.S. Economy",2011,Extension_Study,Post_2000,Productive_Labor,US
+[2013] Mohun - Unproductive Labor in the US Economy 1964-2010,2013,Extension_Study,Post_2000,Productive_Labor,US
+"[2019] Tsoulfidis & Paitaridis - Capital intensity, unproductive activities and the Great Recession in the US economy",2019,Extension_Study,Post_2000,Productive_Labor,US
+1984_Semmler_Competition_Monopoly,1984,Theoretical_Foundation,1975_2000,Profit_Rate,US
+1984_Tonak_State_Revenues,1984,Core_Methodology,1975_2000,General,US
+1985_Semmler_Nonlinear_Cycles,1985,Theoretical_Foundation,1975_2000,General,US
+1987_Shaikh_Tonak_Social_Wage_Myth,1987,Core_Methodology,1975_2000,NSW_Analysis,US
+1994_Measuring_Wealth,1994,Core_Methodology,1975_2000,General,US
+2001_Cronin_New_Zealand,2001,Extension_Study,Post_2000,General,New_Zealand
+2002_Matthews,2002,Extension_Study,Post_2000,General,US
+2002_Matthews_Econometric_Model,2002,Extension_Study,Post_2000,General,US
+2002_Shaikh_Tonak_Welfare_State,2002,Core_Methodology,Post_2000,NSW_Analysis,US
+2005_Mohun_US_1964_2001,2005,Extension_Study,Post_2000,General,US
+2011_Paitaridis_Tsoulfidis,2011,Extension_Study,Post_2000,General,US
+2013_Mohun_Unproductive_1964_2010,2013,Extension_Study,Post_2000,Productive_Labor,US
+2017_Moos_NSW_21st_Century,2017,Extension_Study,Post_2000,NSW_Analysis,US
+2019_Tsoulfidis_Paitaridis_Great_Recession,2019,Extension_Study,Post_2000,Input_Output,US
+2022_Karabacak_Tonak_NSW_Turkey,2022,Core_Methodology,Post_2000,NSW_Analysis,Turkey
+2024_Savran_Tonak_Marx_Capital,2024,Core_Methodology,Post_2000,Capital_Theory,US
+2024_Savran_Tonak_Tracks_Marx_Capital,2024,Core_Methodology,Post_2000,Capital_Theory,US
+BEA_1996_NIPA_Revision,1996,Government_Data,1975_2000,Input_Output,US
+BEA_1997_IO_Concepts_Methods,1997,Government_Data,1975_2000,Input_Output,US
+TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980,1984,Core_Methodology,1975_2000,Input_Output,US
+TM_[2017] Moos - Neoliberal Distributive Policy US Net Social Wage in the 21st Century,2017,Extension_Study,Post_2000,General,US
+TM_[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019,2022,Core_Methodology,Post_2000,General,Turkey
+"[2012] Paitaridis & Tsoulfidis - The Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the US Economy",2012,Extension_Study,Post_2000,Productive_Labor,US
+[2017] Moos - Essays on the Theory and Political Economy of Economic Policy,2017,Extension_Study,Post_2000,General,US
+[2017] Moos - Neoliberal Distributive Policy US Net Social Wage in the 21st Century,2017,Extension_Study,Post_2000,General,US
+[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019,2022,Core_Methodology,Post_2000,General,Turkey
+[2024] Savran & Tonak - In the Tracks of Marx’s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism,2024,Core_Methodology,Post_2000,Capital_Theory,US
+"[2025.10.02] [1984] Semmler - Competition, Monopoly, and Differential Profit Rates",2025,Theoretical_Foundation,Post_2000,Profit_Rate,US
+[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980,2025,Core_Methodology,Post_2000,Input_Output,US
+"[2025.10.02] [1985] Semmler - Competition, Instability, and Nonlinear Cycles - Conference Proceedings",2025,Theoretical_Foundation,Post_2000,Profit_Rate,US

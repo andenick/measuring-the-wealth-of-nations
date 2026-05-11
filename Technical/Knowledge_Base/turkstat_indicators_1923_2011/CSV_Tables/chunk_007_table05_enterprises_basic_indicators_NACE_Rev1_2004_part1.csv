@@ -1,0 +1,17 @@
+Table 11.14 - Basic Indicators on Enterprises by Economic Activity (NACE Rev.1.1) 2004 - Part 1 (Employment & Personnel Costs)
+Source: TurkStat Statistical Indicators 1923-2011 chunk_007 page 278
+Unit: Enterprises=count; Persons_Employed=count; Employees=count; Personnel_Costs=Million_TL
+Year: 2004
+NACE_Code,Activity_TR,Activity_EN,Number_of_Enterprises,Number_of_Persons_Employed,Number_of_Employees,Personnel_Costs_Million_TL
+Total,Genel toplam,General total,2002834,7541452,5251561,62449089229
+C,Madencilik ve taşocakçılığı,Mining and quarrying,1909,80057,77770,1507484113
+D,İmalat,Manufacturing,281029,2404342,2084944,25840480328
+E,Elektrik gaz buhar ve sıcak su üretimi ve dağıtımı,Electricity gas and water supply,3134,99225,99197,2514638198
+F,İnşaat,Construction,43855,336479,291875,2376361506
+G,Toptan ve perakende ticaret motorlu taşıt onarımı,Wholesale and retail trade repair of motor vehicles,967960,2466659,1332887,12775541300
+H,Oteller ve lokantalar,Hotels and restaurants,187017,481688,278802,2317253011
+I,Ulaştırma depolama ve haberleşme,Transport storage and communications,274061,767904,434030,8015040169
+K,Gayrimenkul kiralama ve iş faaliyetleri,Real estate renting and business activities,109967,507354,400608,4244681510
+M,Eğitim,Education,7307,116329,105737,1311296990
+N,Sağlık işleri ve sosyal hizmetler,Health and social work,37027,120992,82125,891673936
+O,Diğer sosyal toplumsal ve kişisel hizmet faaliyetleri,Other community social and personal service activities,89568,160423,63586,654638168

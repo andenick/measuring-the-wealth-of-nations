@@ -1,0 +1,135 @@
+{
+  "series_id": "T607",
+  "series_name": "Net Social Wage",
+  "chapter": 6,
+  "tables": ["Table_6_3"],
+  "figures": ["Fig_6_1", "Fig_6_3", "Fig_6_4"],
+  "research_date": "2026-03-21",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/docs/chapters/CHAPTER_6_INVESTIGATION.md",
+    "Technical/docs/reviews/NSW_COMPARISON_REVIEW.md",
+    "Inputs/ExternalSources/Tonak_Benchmarks/nsw_comparison_benchmarks.csv",
+    "Inputs/ExternalSources/Tonak_Benchmarks/nsw_phase1_validated.csv",
+    "Inputs/ExternalSources/Moos/moos_nsw_reconciled.csv",
+    "Knowledge_Base/external_papers/state_welfare/2017_Moos_NSW_21st_Century/",
+    "Knowledge_Base/external_papers/state_welfare/1984_Tonak_State_Revenues/",
+    "Knowledge_Base/text/narrative_chunk_18_ch6.md",
+    "Knowledge_Base/text/narrative_chunk_19_ch6.md"
+  ],
+  "decision_log_refs": [
+    {
+      "dec_id": "DEC-006",
+      "summary": "1996 welfare reform bridge: NIPA Tables 2.1 and 3.1 used for continuous coverage across the 1996 PRWORA transition. Policy discontinuity documented but not adjusted. T607 shows structural break in underlying components (T605, T606) around 1996-1997, flagged in V03 continuity checks.",
+      "source": "NickyData/DECISION_LOG.md"
+    },
+    {
+      "dec_id": "DEC-013",
+      "summary": "Moos NSW formula uses NSW = E1 - (T1 + T2*LS): direct benefits minus taxes. E2 (government consumption: education, health, transportation from NIPA T3.16) is excluded from the P21 Moos replication. With E2 excluded, 1959-1997 overlap mean = 0.013 vs Moos published 0.011. This is the central NSW formula for the independent Moos replication benchmark.",
+      "source": "NickyData/DECISION_LOG.md"
+    }
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "NSW = B_w + G_w - T_w, where B_w is government benefits to workers (T605), G_w is government services to workers (T606), and T_w is total taxes paid by workers (T604). A negative NSW means workers pay more in taxes than they receive in benefits and services — the state extracts net revenue from the working class.",
+      "source_ref": "ST_1994, Ch6; CHAPTER_6_INVESTIGATION.md"
+    },
+    {
+      "entry_type": "central_finding",
+      "content": "NSW is predominantly NEGATIVE for 1952-1989: 35 of 38 years show workers paying more in taxes than receiving in benefits and services. Only 3 years show positive NSW: 1975, 1976, and 1983 — all deep recessions with countercyclical benefit spikes and falling tax receipts. This contradicts the 'welfare state' narrative that government fiscal activity redistributes income toward workers.",
+      "source_ref": "ST_1994, Ch6 Table 6.3; CHAPTER_6_INVESTIGATION.md"
+    },
+    {
+      "entry_type": "three_way_comparison",
+      "content": "Cross-study correlations: AS2 vs Moos r=0.697; AS2 vs Tonak r=0.611; Moos vs Tonak r=0.876. The AS2-Tonak gap is driven primarily by sales/excise tax inclusion in AS2 (absent in Tonak). When using Moos's exact component values, formula reconstruction achieves 99.996% accuracy, confirming methodological consistency. All three studies agree on the qualitative finding of predominantly negative NSW through the 1980s.",
+      "source_ref": "NSW_COMPARISON_REVIEW.md"
+    },
+    {
+      "entry_type": "post_1989_extension",
+      "content": "Extension 1990-2025 via BEA NIPA shows structural shift: NSW turns persistently positive after 2001, driven by Medicare Part D (2006), ACA Medicaid expansion (2014), and accelerating transfer growth outpacing tax growth. COVID peak in 2020: +$1.8T (9.23% of NI). Both AS2 and Moos agree on the post-2001 positive-NSW finding.",
+      "source_ref": "NSW_COMPARISON_REVIEW.md; moos_nsw_reconciled.csv"
+    },
+    {
+      "entry_type": "theoretical_significance",
+      "content": "The negative NSW implies a modified exploitation rate e' = (S + |NSW|) / (V - |NSW|) > e = S/V, where e is the standard exploitation rate. When NSW < 0, the state amplifies exploitation by extracting net revenue from workers. The modified rate shows that the 'welfare state' increases rather than decreases the effective rate of surplus extraction.",
+      "source_ref": "ST_1994, Ch6; Shaikh_Tonak_1987"
+    },
+    {
+      "entry_type": "benchmark_validation",
+      "content": "Tonak benchmark data (nsw_comparison_benchmarks.csv) provides year-by-year NSW values for 1952-1985. AS2 replication tracks within 5% for most years when indirect taxes are excluded. Moos reconciled data (moos_nsw_reconciled.csv, 54 years 1952-2012) provides the most comprehensive benchmark for the full historical period.",
+      "source_ref": "nsw_comparison_benchmarks.csv; nsw_phase1_validated.csv; moos_nsw_reconciled.csv"
+    },
+    {
+      "entry_type": "countercyclical_dynamics",
+      "content": "NSW is strongly countercyclical: recessions increase benefits (especially UI) while reducing tax receipts, pushing NSW toward positive. The 3 positive years (1975, 1976, 1983) all follow severe recessions. Post-2001, the structural benefit expansion makes positive NSW persistent even in non-recession years, a qualitative shift from the 1952-1989 pattern.",
+      "source_ref": "CHAPTER_6_INVESTIGATION.md; NSW_COMPARISON_REVIEW.md"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Historical book data from ST Table 6.3 (1952-1989). Extension uses BEA NIPA tables: 2.1 (personal income, transfers), 3.1 (government receipts/expenditures), 3.2 (federal receipts), 3.3 (state/local receipts), 6.2-6.5 (compensation by industry for worker share). Moos data provides validation for 1990-2012 overlap period.",
+      "source_ref": "BEA NIPA; moos_nsw_reconciled.csv"
+    },
+    {
+      "entry_type": "decision_log_note",
+      "content": "DEC-006 (2026-03-30): 1996 welfare reform (PRWORA) creates a structural break in T607's underlying components. NIPA Tables 2.1 and 3.1 bridge this transition with continuous coverage. The break is documented but not adjusted; flagged in V03 continuity checks. DEC-013 (2026-05-06): The independent Moos replication formula is NSW = E1 - (T1 + T2*LS). E2 government consumption is excluded — with E2 excluded, 1959-1997 mean = 0.013 vs Moos published 0.011 (residual gap from NIPA vintage). V11 benchmark range [0.008, 0.018].",
+      "source_ref": "NickyData/DECISION_LOG.md, DEC-006; DEC-013"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "Shaikh_Tonak_1987",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' New School for Social Research working paper."
+    },
+    {
+      "id": "Shaikh_Tonak_2002",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 2002. 'The Rise and Fall of the U.S. Welfare State.' In Political Economy and Contemporary Capitalism, ed. R. Baiman et al."
+    },
+    {
+      "id": "Moos_2017",
+      "full": "Moos, Julie. 2017. The Net Social Wage in the United States, 1952-2012. PhD dissertation."
+    },
+    {
+      "id": "BEA_NIPA",
+      "full": "Bureau of Economic Analysis. National Income and Product Accounts. https://apps.bea.gov/iTable/"
+    }
+  ],
+  "methodology_summary": "Net Social Wage = (Benefits + Services) - Taxes for workers. Predominantly negative 1952-1989 (35/38 years), meaning the state extracts net revenue from workers. Three positive years (1975, 1976, 1983) during deep recessions. Post-2001 structural shift to persistently positive NSW. DEC-006: 1996 welfare reform structural break documented. DEC-013: Central Moos NSW formula confirmed as NSW = E1 - (T1 + T2*LS) with E2 excluded; 1959-1997 mean 0.013 vs published 0.011.",
+  "known_issues": [
+    "Sales/excise tax inclusion (AS2) vs exclusion (Tonak) is the primary methodological divergence",
+    "Post-2001 positive NSW reflects structural policy changes (Medicare Part D, ACA) not present in original framework",
+    "COVID-era transfers (2020-2021) are extreme outliers requiring careful treatment",
+    "Modified exploitation rate formula assumes NSW directly adjusts V and S",
+    "Government services allocation is the most assumption-sensitive component",
+    "1996 welfare reform structural break in T605/T606 propagates into T607 (DEC-006, V03)"
+  ],
+  "cross_references": ["T601", "T602", "T603", "T604", "T605", "T606", "T608", "T609", "T504"],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/docs/chapters/CHAPTER_6_INVESTIGATION.md",
+      "Technical/docs/reviews/NSW_COMPARISON_REVIEW.md",
+      "Inputs/ExternalSources/Tonak_Benchmarks/nsw_comparison_benchmarks.csv",
+      "Inputs/ExternalSources/Tonak_Benchmarks/nsw_phase1_validated.csv",
+      "Inputs/ExternalSources/Moos/moos_nsw_reconciled.csv",
+      "Knowledge_Base/external_papers/state_welfare/2017_Moos_NSW_21st_Century/",
+      "Knowledge_Base/external_papers/state_welfare/1984_Tonak_State_Revenues/",
+      "Knowledge_Base/text/narrative_chunk_18_ch6.md",
+      "Knowledge_Base/text/narrative_chunk_19_ch6.md"
+    ],
+    "L3_data_sources": [
+      "BEA NIPA Table 2.1",
+      "BEA NIPA Table 3.1",
+      "BEA NIPA Table 3.2",
+      "BEA NIPA Table 3.3",
+      "BEA NIPA Tables 6.2-6.5"
+    ],
+    "L5_validation": [
+      "Moos 2017",
+      "Tonak 1984"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "_doc": "API endpoints and series definitions for all external data fetches.",
+
+  "fred": {
+    "base_url": "https://api.stlouisfed.org/fred/series/observations",
+    "series": {
+      "PAYEMS": {"name": "Total nonfarm employment", "frequency": "a", "start": "1948-01-01", "units": "thousands", "output": "total_nonfarm_employment.csv"},
+      "GDPDEF": {"name": "GDP implicit price deflator", "frequency": "a", "start": "1929-01-01", "units": "index_2017=100", "output": "gdp_deflator.csv", "rebase_year": 1982},
+      "USTRADE": {"name": "Trade employment", "frequency": "a", "start": "1948-01-01", "units": "thousands", "output_group": "sector_employment"},
+      "CEU5500000001": {"name": "FIRE employment", "frequency": "a", "start": "1948-01-01", "units": "thousands", "output_group": "sector_employment"},
+      "CEU9000000001": {"name": "Government employment", "frequency": "a", "start": "1948-01-01", "units": "thousands", "output_group": "sector_employment"},
+      "TCU": {"name": "Capacity utilization", "frequency": "a", "start": "1967-01-01", "units": "percent", "output": "capacity_utilization.csv"}
+    }
+  },
+
+  "bea": {
+    "base_url": "https://apps.bea.gov/api/data",
+    "datasets": {
+      "fixed_assets_4_1": {
+        "DataSetName": "FixedAssets",
+        "TableName": "FAAt403",
+        "Year": "ALL",
+        "description": "Current-cost net stock of private fixed assets by type",
+        "output": "fixed_assets_by_industry.csv"
+      }
+    }
+  },
+
+  "nipa_local_files": {
+    "_doc": "Pre-fetched NIPA CSVs in Inputs/API_Data/BEA/",
+    "nipa_2_1": {"file": "nipa_2_1_personal_income.csv", "used_by": ["T605 extension", "labor_share for NSW"]},
+    "nipa_3_1": {"file": "nipa_3_1_govt_receipts_expenditures.csv", "used_by": ["T601-T604 extension"]},
+    "nipa_3_2": {"file": "nipa_3_2_federal_govt.csv", "used_by": ["T606 extension"]},
+    "nipa_3_3": {"file": "nipa_3_3_state_local_govt.csv", "used_by": ["T606 extension"]},
+    "nipa_6_2D": {"file": "nipa_6_2D_compensation_by_industry.csv", "used_by": ["M01 ec_u/ec_p", "sector V*"]},
+    "nipa_6_5D": {"file": "nipa_6_5D_fte_by_industry.csv", "used_by": ["IO employment ratio"]},
+    "nipa_T20100": {"file": "nipa_T20100_compensation_1929_2025.csv", "used_by": ["T504 extension", "T512 V*/W"]},
+    "nipa_1_7_5": {"file": "nipa_1_7_5_gross_output_by_industry.csv", "used_by": ["T501 extension"]}
+  }
+}

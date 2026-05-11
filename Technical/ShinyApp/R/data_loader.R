@@ -273,7 +273,7 @@ get_chapter_series <- function(chapter) {
   }
   # For future chapters, search all mappings by prefix
   prefix <- paste0("^T", chapter)
-  all_mappings <- c(CH5_SERIES_MAPPING, CH6_SERIES_MAPPING, CH9_SERIES_MAPPING)
+  all_mappings <- c(CH5_SERIES_MAPPING, CH6_SERIES_MAPPING, CH9_SERIES_MAPPING, STUDIES_SERIES_MAPPING)
   matches <- grep(prefix, names(all_mappings))
   all_mappings[matches]
 }
@@ -290,6 +290,9 @@ get_series_metadata <- function(series_id) {
   }
   if (series_id %in% names(CH9_SERIES_MAPPING)) {
     return(CH9_SERIES_MAPPING[[series_id]])
+  }
+  if (series_id %in% names(STUDIES_SERIES_MAPPING)) {
+    return(STUDIES_SERIES_MAPPING[[series_id]])
   }
   NULL
 }
@@ -526,7 +529,54 @@ CH9_SERIES_MAPPING <- list(
 )
 
 # ============================================
-# UNIFIED HELPERS — Support Ch5, Ch6, and Ch9
+# STUDIES_SERIES_MAPPING — External study N-series
+# ============================================
+
+.study_entry <- function(name, study, formula, period, country, source_paper, is_extended = FALSE) {
+  list(
+    name = name,
+    description = paste0(study, " (", country, ")"),
+    formula = formula,
+    data_patterns = c(paste0("data/", tolower(gsub(" ", "_", study)), ".csv")),
+    subsources = c(source_paper),
+    shaikh_finding = "",
+    book_table = NA,
+    is_extended = is_extended,
+    is_conceptual = FALSE,
+    is_key_series = FALSE
+  )
+}
+
+STUDIES_SERIES_MAPPING <- list(
+  N1001 = .study_entry("Labor Share of NI", "Tonak 1984", "Lp_share = V*/NI", "1952-1980", "US", "Tonak (1984) PhD Dissertation"),
+  N1002 = .study_entry("Net Tax Rate", "Tonak 1984", "net_tax = (T-B)/V*", "1952-1980", "US", "Tonak (1984) PhD Dissertation"),
+  N1101 = .study_entry("Net Transfer Rate", "ST 1987", "NT = (B-T)/EC", "1952-1985", "US", "Shaikh & Tonak (1987)"),
+  N1102 = .study_entry("Benefit Rate", "ST 1987", "BR = B/EC", "1952-1985", "US", "Shaikh & Tonak (1987)"),
+  N1103 = .study_entry("Tax Rate", "ST 1987", "TR = T/EC", "1952-1985", "US", "Shaikh & Tonak (1987)"),
+  N1201 = .study_entry("NSW/GDP", "ST 2002", "NSW/GDP", "1952-1997", "US", "Shaikh & Tonak (2002)"),
+  N1202 = .study_entry("NSW/EC", "ST 2002", "NSW/EC", "1952-1997", "US", "Shaikh & Tonak (2002)"),
+  N1301 = .study_entry("NSW/NI (Moos)", "Moos 2017", "NSW/NI", "1952-2015", "US", "Moos (2017)"),
+  N1302 = .study_entry("NSW/EC (Moos)", "Moos 2017", "NSW/EC", "1952-2015", "US", "Moos (2017)"),
+  N1304 = .study_entry("NSW/NI shift", "Moos 2017", "structural shift +3.0pp", "1952-2015", "US", "Moos (2017)"),
+  N1305 = .study_entry("NSW/EC shift", "Moos 2017", "structural shift", "1952-2015", "US", "Moos (2017)"),
+  N1401 = .study_entry("Mohun Exploitation Rate", "Mohun 2005", "e_mohun", "1948-2001", "US", "Mohun (2005)"),
+  N1402 = .study_entry("Mohun Productive Share", "Mohun 2005", "Lp/L_mohun", "1948-2001", "US", "Mohun (2005)"),
+  N1403 = .study_entry("Mohun Surplus Value", "Mohun 2005", "S*_mohun", "1948-2001", "US", "Mohun (2005)"),
+  N1404 = .study_entry("Mohun Profit Rate", "Mohun 2005", "r*_mohun", "1948-2001", "US", "Mohun (2005)"),
+  N1501 = .study_entry("Working Class Share", "Mohun 2013", "WC/L", "1948-2009", "US", "Mohun (2013)"),
+  N1502 = .study_entry("New Middle Class Share", "Mohun 2013", "NMC/L", "1948-2009", "US", "Mohun (2013)"),
+  N1503 = .study_entry("Capitalist Class Share", "Mohun 2013", "CC/L", "1948-2009", "US", "Mohun (2013)"),
+  N1504 = .study_entry("Class Exploitation Rate", "Mohun 2013", "e_class", "1948-2009", "US", "Mohun (2013)"),
+  N1601 = .study_entry("Turkey NSW/NI", "Karabacak Tonak 2022", "NSW/NI", "1980-2019", "Turkey", "Karabacak & Tonak (2022)"),
+  N1602 = .study_entry("Turkey NSW/EC", "Karabacak Tonak 2022", "NSW/EC", "1980-2019", "Turkey", "Karabacak & Tonak (2022)"),
+  N1701 = .study_entry("NZ Productive Capital Share", "Cronin 2001", "K*/K", "1980-1995", "New Zealand", "Cronin (2001)"),
+  N1702 = .study_entry("NZ Exploitation Rate", "Cronin 2001", "e_nz", "1980-1995", "New Zealand", "Cronin (2001)"),
+  N1703 = .study_entry("NZ Productive Labor Share", "Cronin 2001", "Lp/L_nz", "1980-1995", "New Zealand", "Cronin (2001)"),
+  N1704 = .study_entry("NZ Surplus Rate", "Cronin 2001", "S*/V*_nz", "1980-1995", "New Zealand", "Cronin (2001)")
+)
+
+# ============================================
+# UNIFIED HELPERS — Support Ch5, Ch6, Ch9, and Studies
 # ============================================
 
 #' Check if a series ID belongs to Chapter 6

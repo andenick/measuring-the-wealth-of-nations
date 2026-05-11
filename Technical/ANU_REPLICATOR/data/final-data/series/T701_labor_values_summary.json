@@ -1,0 +1,32 @@
+{
+  "1997": {
+    "mean_lambda": 0.0015821804711578357,
+    "max_lambda": 0.008052530223783326,
+    "all_positive": true,
+    "n_sectors": 71
+  },
+  "2002": {
+    "mean_lambda": 0.0012538000421846959,
+    "max_lambda": 0.006944295094625227,
+    "all_positive": true,
+    "n_sectors": 71
+  },
+  "2007": {
+    "mean_lambda": 0.0009812694704383548,
+    "max_lambda": 0.007764172852918638,
+    "all_positive": true,
+    "n_sectors": 71
+  },
+  "2012": {
+    "mean_lambda": 0.0008606641354087761,
+    "max_lambda": 0.00783747976099426,
+    "all_positive": true,
+    "n_sectors": 71
+  },
+  "2017": {
+    "mean_lambda": 0.0007946665660498722,
+    "max_lambda": 0.007118995259191359,
+    "all_positive": true,
+    "n_sectors": 71
+  }
+}

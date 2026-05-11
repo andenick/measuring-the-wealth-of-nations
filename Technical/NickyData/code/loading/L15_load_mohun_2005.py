@@ -51,18 +51,18 @@ def load():
             steps.append(f"N1401: {len(out)} rows (Mohun e, {out.index.min()}-{out.index.max()})")
             print(f"    [L15] N1401: {len(out)} rows (Mohun exploitation rate)")
 
-    # N1402: Mohun productive labor (Lp_mohun)
+    # N1402: Mohun productive labor share (Lp/L)
     emp_path = MOHUN_DIR / "mohun_employment_annual_1948_1989.csv"
     if emp_path.exists():
         df = pd.read_csv(emp_path)
-        if "year" in df.columns and "Lp_mohun" in df.columns:
-            out = df[["year", "Lp_mohun"]].rename(columns={"Lp_mohun": "value"})
+        if "year" in df.columns and "Lp_mohun_L_ratio" in df.columns:
+            out = df[["year", "Lp_mohun_L_ratio"]].rename(columns={"Lp_mohun_L_ratio": "value"})
             out = out.set_index("year")
             out_path = parsed_dir / "N1402_parsed.csv"
             out.to_csv(out_path)
             outputs.append(str(out_path))
-            steps.append(f"N1402: {len(out)} rows (Mohun Lp)")
-            print(f"    [L15] N1402: {len(out)} rows (Mohun productive labor)")
+            steps.append(f"N1402: {len(out)} rows (Mohun Lp/L share)")
+            print(f"    [L15] N1402: {len(out)} rows (Mohun productive labor share)")
 
     # N1403: Mohun variable capital
     vc_path = MOHUN_DIR / "mohun_variable_capital_1948_1989.csv"

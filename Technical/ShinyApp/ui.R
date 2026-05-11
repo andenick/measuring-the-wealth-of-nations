@@ -170,6 +170,10 @@ ui <- dashboardPage(
       ui_tab_exploitation(),
       ui_tab_employment(),
       ui_tab_government(),
+      ui_tab_io_analysis(),
+      ui_tab_labor_values(),
+      ui_tab_cross_study(),
+      ui_tab_international(),
       ui_tab_validation(),
       ui_tab_literature(),
       ui_tab_downloads()

@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "standard": "Anu Chopped v1.0",
+  "project": "PROJECT_NAME",
+  "generated": "YYYY-MM-DD",
+  "source_location": "Inputs/ShaikhChopped/",
+  "total_files": 0,
+  "total_columns": 0,
+  "files": {
+    "ch##/Appendix#_Example.csv": {
+      "source_excel": "Appendix#_Example.xlsx",
+      "chapter": 0,
+      "format": "time_series",
+      "year_range": [1860, 2010],
+      "row_count": 0,
+      "columns": {
+        "S###A": {
+          "name": "VariableName",
+          "description": "Source description with citation",
+          "source_type": "bea_nipa",
+          "type": "raw",
+          "coverage": [1860, 1918],
+          "base_year": null,
+          "base_value": null
+        },
+        "S###": {
+          "name": "FinalVariable",
+          "description": "Spliced/derived final series",
+          "source_type": "calculated",
+          "type": "final",
+          "coverage": [1860, 2010],
+          "base_year": 1958,
+          "base_value": 100
+        }
+      },
+      "linked_figures": [],
+      "linked_series": []
+    }
+  }
+}

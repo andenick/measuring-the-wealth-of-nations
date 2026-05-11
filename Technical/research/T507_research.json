@@ -1,0 +1,69 @@
+{
+  "series_id": "T507",
+  "series_name": "Surplus Ratio (S*/Y)",
+  "chapter": 5,
+  "figures": [],
+  "research_date": "2026-03-21",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Knowledge_Base/chunks/chunk_24.md",
+    "Knowledge_Base/chunks/chunk_25.md",
+    "Knowledge_Base/tables/page_310_table_E2.csv",
+    "Knowledge_Base/equations/page_310_equations.txt",
+    "CHAPTER_5_INVESTIGATION.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "S*/Y = S*/(S* + V*), where Y = S* + V* = GFP. The surplus ratio expresses surplus value as a share of the net product (value-added of productive sectors). It is a monotonic transform of the exploitation rate: S*/Y = e/(1+e).",
+      "source_ref": "ST_1994, Ch5 Table 5.7; Knowledge_Base/equations/page_310_equations.txt"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Derived from T505 and T504: S*/Y = T505/(T505 + T504). Presented in Table 5.7 alongside the exploitation rate. No independent extension — follows from T505 and T504 availability.",
+      "source_ref": "ST_1994, Table 5.7"
+    },
+    {
+      "entry_type": "theoretical_note",
+      "content": "The surplus ratio is the Marxian analog to the profit share in orthodox economics, but measured only over the productive sector. It rises secularly as the exploitation rate rises, reflecting the increasing proportion of new value captured as surplus rather than wages.",
+      "source_ref": "ST_1994, Ch5 chunk_24-chunk_25"
+    },
+    {
+      "entry_type": "external_comparison",
+      "content": "Mohun's employment decomposition and industry classification data (mohun_employment*.csv, mohun_industry_classification.csv) provide alternative frameworks for computing the surplus ratio with different sector boundaries.",
+      "source_ref": "Mohun_2013; Inputs/ExternalSources/Mohun/"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "No independent extension. The surplus ratio is fully determined by the exploitation rate, so all caveats applying to T506 apply here. Table 5.7 only; no dedicated figure in the book.",
+      "source_ref": "DPR T507_DPR.md"
+    },
+    {
+      "entry_type": "decision_reference",
+      "content": "DEC-003: The VA*/W constant assumption (ec_u/ec_p ≈ 1.238) propagates directly into T507 because T507 is a monotonic transform of the exploitation rate (T506). The partial resolution in Session 14 (year-varying ec_u/ec_p) reduces but does not eliminate the systematic error. The SIC-era gap (1990-1997) is handled by log-linear interpolation (DEC-007). T507 extension values carry the same systematic error as T506.",
+      "source_ref": "DECISION_LOG.md DEC-003 (2025-12-05, partially resolved 2026-03-30)"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "Mohun_2013",
+      "full": "Mohun, Simon. 2013. 'Unproductive Labor in the U.S. Economy 1964-2010.' Review of Radical Political Economics 46(3): 355-379."
+    }
+  ],
+  "methodology_summary": "Surplus ratio S*/Y = S*/(S*+V*) = e/(1+e). A monotonic transform of the exploitation rate. Book period only (Table 5.7), no extension. DEC-003: inherits VA*/W constant assumption error from T506.",
+  "known_issues": [
+    "No independent extension — inherits all T506 issues",
+    "No dedicated figure in the book",
+    "DEC-003: VA*/W constant carries small systematic error for extension period (1990-1997 interpolated per DEC-007)"
+  ],
+  "cross_references": ["T504", "T505", "T506"],
+  "adequacy_refs": {
+    "L1_kb_pages": ["Knowledge_Base/chunks/chunk_24.md", "Knowledge_Base/chunks/chunk_25.md", "Knowledge_Base/tables/page_310_table_E2.csv", "Knowledge_Base/equations/page_310_equations.txt", "CHAPTER_5_INVESTIGATION.md"],
+    "L3_data_sources": ["Book Table E.2 (page_310_table_E2.csv)"],
+    "L5_validation": []
+  }
+}

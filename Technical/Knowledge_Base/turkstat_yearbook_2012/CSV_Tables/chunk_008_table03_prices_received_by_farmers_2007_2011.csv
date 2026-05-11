@@ -1,0 +1,49 @@
+table_number,table_title,source_page
+17.10,Prices received by farmers 2007-2011 (continued),295
+notes,"Weighted average prices unless otherwise noted. (1) Simple average prices. (2) Price per item. Unit: TL/kg unless specified."
+
+product_category,product_TR,product_EN,unit,2007,2008,2009,2010,2011
+Vegetables,Bakla (taze),Greenbroad beans,TL/kg,1.15,1.31,1.32,1.69,1.21
+Vegetables,Balkabağı,Pumpkins,TL/kg,0.75,0.81,0.86,0.92,0.96
+Vegetables,Bamya,Okra,TL/kg,2.71,2.77,2.79,3.15,4.12
+Vegetables,Biber (dolmalık),Peppers (stuffing),TL/kg,0.90,0.91,0.93,1.12,1.21
+Vegetables,Biber (sivri),Peppers (green),TL/kg,0.95,1.00,0.99,1.16,1.39
+Vegetables,Domates,Tomatoes,TL/kg,0.58,0.56,0.63,1.00,0.77
+Vegetables,Fasulye (taze),Green beans,TL/kg,1.48,1.61,1.47,1.83,2.13
+Vegetables,Havuç,Carrots,TL/kg,0.57,0.62,0.52,0.55,0.63
+Vegetables,Ispanak,Spinach,TL/kg,0.91,1.05,1.05,1.28,1.22
+Vegetables,Karpuz,Watermelons,TL/kg,0.44,0.34,0.43,0.63,0.45
+Vegetables,Kavun,Melons,TL/kg,0.58,0.60,0.61,0.72,0.70
+Vegetables,Lahana,Cabbages,TL/kg,0.60,0.63,0.54,0.65,0.73
+Vegetables,Patlıcan,Eggplant,TL/kg,0.74,0.75,0.84,0.87,1.05
+Vegetables,Pırasa,Leeks,TL/kg,0.82,0.86,0.78,1.04,1.01
+Vegetables,Sakız kabağı,Squash,TL/kg,0.64,0.75,0.78,0.97,0.98
+Vegetables,Salatalık,Cucumbers,TL/kg,0.80,0.83,0.93,1.05,1.09
+Vegetables,Turp,Horseradish,TL/kg,0.65,0.78,0.80,0.88,0.74
+Livestock products,Bal,Honey,TL/kg,12.89,15.17,16.86,17.60,17.77
+Livestock products,Balmumu,Wax,TL/kg,9.12,9.55,10.73,11.86,12.94
+Livestock products,İpek kozası,Silk cocoon,TL/kg,7.09,9.97,15.57,17.74,22.02
+Livestock products,Kıl,Hair,TL/kg,1.60,1.65,1.66,1.87,1.99
+Livestock products,Süt (inek),Cow's milk,TL/kg,0.72,0.80,0.79,0.91,0.80
+Livestock products,Süt (koyun),Sheep's milk,TL/kg,0.94,1.06,1.17,1.29,1.40
+Livestock products,Tereyağı,Butter (simple avg),TL/kg,7.57,8.71,10.03,11.35,12.29
+Livestock products,Tiftik,Mohair,TL/kg,3.87,7.00,6.17,6.29,7.39
+Livestock products,Yapağı,Wool,TL/kg,2.88,2.60,2.65,2.44,2.55
+Livestock products,Yumurta,Eggs,TL/item,0.18,0.19,0.21,0.20,0.27
+Livestock (per head),Hindi,Turkeys,TL/head,25.02,29.27,39.07,44.97,50.39
+Livestock (per head),Koyun (Yerli),Sheep (domestic),TL/head,219.62,223.39,278.24,457.77,554.60
+Livestock (per head),Kuzu (Yerli),Lambs (domestic),TL/head,115.88,115.30,151.93,251.61,309.17
+Livestock (per head),Kıl keçisi - Dişi keçi,Ordinary goats female,TL/head,176.09,184.57,237.42,395.36,480.54
+Livestock (per head),Kıl keçisi oğlağı,Kid of ordinary goats,TL/head,85.70,88.93,115.28,191.91,244.68
+Livestock (per head),Manda ineği,Water buffalo cows,TL/head,1431.67,1526.09,1854.83,2661.01,3163.37
+Livestock (per head),Dişi malak,Water buffaloes female,TL/head,679.13,749.49,867.96,1200.38,1485.71
+Livestock (per head),Erkek malak,Water buffaloes male,TL/head,713.56,749.49,867.96,1200.38,1485.71
+Livestock (per head),Sığır (yerli) İnek,Cattle domestic - Cows,TL/head,1198.97,1242.85,1444.15,2397.03,2714.29
+Livestock (per head),Sığır (yerli) Dana,Cattle domestic - Calves,TL/head,588.93,628.43,725.20,1145.99,1679.56
+Livestock (per head),Sığır (kültür) İnek,Cattle culture - Cows,TL/head,2435.16,2601.60,2739.05,4212.59,5008.31
+Livestock (per head),Sığır (kültür) Dana,Cattle culture - Calves,TL/head,1059.47,1164.98,1279.73,1937.44,2259.86
+Livestock (per head),Sığır (melez) İnek,Cattle crossbreed - Cows,TL/head,1869.52,1967.79,2161.77,3289.81,3895.61
+Livestock (per head),Sığır (melez) Dana,Cattle crossbreed - Calves,TL/head,865.18,908.18,1045.33,1600.89,1855.92
+Livestock (per head),Tavuk,Hens,TL/head,6.50,6.72,8.13,11.02,12.86
+Livestock (per head),Tiftik keçisi - Dişi keçi,Angora goats female,TL/head,171.08,185.01,222.39,310.48,411.43
+Livestock (per head),Tiftik keçisi oğlağı,Kid of angora goats,TL/head,91.53,91.18,110.11,155.12,224.50

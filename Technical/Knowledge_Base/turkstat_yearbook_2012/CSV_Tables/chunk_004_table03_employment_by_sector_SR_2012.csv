@@ -1,0 +1,33 @@
+Table_11.9,Distribution of employment by sectors by Statistical Region (IBBS Level 2),2012 (NACE Rev.2)
+Unit: Thousand persons absolute; percent shares horizontal
+Note: Industry includes construction
+Source: TurkStat Statistical Yearbook 2012 p.186
+
+IBBS_Code,Region,Total_Employed,Agriculture_000,Industry_000,Services_000,Agriculture_pct,Industry_pct,Services_pct
+TOTAL,Turkey Total,24821,6097,6460,12264,24.6,26.0,49.4
+TR10,Istanbul,4493,26,1649,2818,0.6,36.7,62.7
+TR21,Tekirdag Edirne Kirklareli,660,105,249,306,15.9,37.7,46.4
+TR22,Balikesir Canakkale,587,214,107,266,36.5,18.2,45.3
+TR31,Izmir,1424,144,450,831,10.1,31.6,58.4
+TR32,Aydin Denizli Mugla,1187,479,205,503,40.4,17.3,42.4
+TR33,Manisa Afyonkarahisar Kutahya Usak,1119,515,248,356,46.0,22.2,31.8
+TR41,Bursa Eskisehir Bilecik,1301,159,553,589,12.2,42.5,45.3
+TR42,Kocaeli Sakarya Duzce Bolu Yalova,1253,277,418,558,22.1,33.4,44.5
+TR51,Ankara,1602,80,363,1160,5.0,22.7,72.4
+TR52,Konya Karaman,741,234,184,323,31.6,24.8,43.6
+TR61,Antalya Isparta Burdur,1074,339,145,590,31.6,13.5,54.9
+TR62,Adana Mersin,1208,318,255,635,26.3,21.1,52.6
+TR63,Hatay Kahramanmaras Osmaniye,922,295,221,406,32.0,24.0,44.0
+TR71,Kirikkale Aksaray Nigde Nevsehir Kirsehir,480,171,79,230,35.6,16.5,47.9
+TR72,Kayseri Sivas Yozgat,782,326,190,266,41.7,24.3,34.0
+TR81,Zonguldak Karabuk Bartin,436,179,99,158,41.1,22.7,36.2
+TR82,Kastamonu Cankiri Sinop,306,146,48,112,47.7,15.7,36.6
+TR83,Samsun Tokat Corum Amasya,925,392,152,381,42.4,16.4,41.2
+TR90,Trabzon Ordu Giresun Rize Artvin Gumushane,1031,569,138,324,55.2,13.4,31.4
+TRA1,Erzurum Erzincan Bayburt,306,128,37,141,41.8,12.1,46.1
+TRA2,Agri Kars Igdir Ardahan,364,192,48,124,52.7,13.2,34.1
+TRB1,Malatya Elazig Bingol Tunceli,558,219,101,238,39.2,18.1,42.7
+TRB2,Van Mus Bitlis Hakkari,521,231,89,201,44.3,17.1,38.6
+TRC1,Gaziantep Adiyaman Kilis,631,147,219,265,23.3,34.7,42.0
+TRC2,Sanliurfa Diyarbakir,569,171,135,263,30.1,23.7,46.2
+TRC3,Mardin Batman Sirnak Siirt,340,42,78,220,12.4,22.9,64.7

@@ -67,19 +67,32 @@ def process():
                         ext[yr] = s / (s + v)
 
             elif sid == "T510":
-                # T510 = C*/V* is a ratio — extend via log-linear trend from book period
-                # The unit mismatch (C* billions, V* millions) doesn't matter for the ratio
-                # because we're extending the ratio itself, not recomputing from components
+                # T510 = C*/V* = K*/V* (value composition of capital)
+                # Prefer K*/V* from industry-level Fixed Assets if available
                 import numpy as np
                 ext = pd.Series(dtype=float)
-                book_years = book.index.values.astype(float)
-                book_vals = book.values.astype(float)
-                valid = ~np.isnan(book_vals)
-                if valid.sum() >= 5:
-                    coeffs = np.polyfit(book_years[valid], book_vals[valid], 1)
-                    for yr in ext_years:
-                        ext[yr] = coeffs[0] * float(yr) + coeffs[1]
-                    steps.append(f"T510: extended via linear trend (slope={coeffs[0]:.6f}/yr)")
+                k_path = SERIES_OUT / "K_star_by_industry.csv"
+                if k_path.exists():
+                    k_df = pd.read_csv(k_path, index_col="year")
+                    if "K_star_bn" in k_df.columns:
+                        k_star = k_df["K_star_bn"].dropna()
+                        for yr in ext_years:
+                            k = k_star.get(yr)
+                            v = t504.get(yr)
+                            if k is not None and v is not None and v > 0:
+                                ext[yr] = k / v
+                        if len(ext) > 0:
+                            steps.append(f"T510: K*/V* from Fixed Assets ({len(ext)} years)")
+                # Fallback to linear trend
+                if len(ext) == 0:
+                    book_years = book.index.values.astype(float)
+                    book_vals = book.values.astype(float)
+                    valid = ~np.isnan(book_vals)
+                    if valid.sum() >= 5:
+                        coeffs = np.polyfit(book_years[valid], book_vals[valid], 1)
+                        for yr in ext_years:
+                            ext[yr] = coeffs[0] * float(yr) + coeffs[1]
+                        steps.append(f"T510: linear trend fallback (slope={coeffs[0]:.6f}/yr)")
             else:
                 ext = pd.Series(dtype=float)
 

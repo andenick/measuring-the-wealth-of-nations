@@ -1,0 +1,25 @@
+Table,13.2 Mali sektörlerde istihdam ve temel göstergeler / Employment and basic indicators in financial sectors
+Source,TurkStat Turkey Statistical Yearbook 2012
+Unit,Count (persons) and TL (Turkish Lira) for monetary values
+Note,Annual average figures. Personnel cost (Personel maliyeti) = gross payments + social security costs. 2011 data preliminary (*). Scope changes noted in footnotes.
+NACE_Rev2_Category,Year,Number_of_Enterprises,Annual_Avg_Persons_Engaged,Annual_Avg_Employees,Personnel_Cost_TL,Purchase_Goods_Services_TL,Production_Value_TL,Value_Added_Factor_Cost_TL
+Financial and insurance activities (Finans ve sigorta faaliyetleri),2007,7243,232700,226936,9771497668,15521930019,44859336303,29337406284
+  Financial service activities excl insurance pension (Finansal hizmet faaliyetleri sigorta ve emeklilik hariç),2007,192,175012,174952,8210655566,12490879658,37279800277,24788920619
+  Insurance reinsurance pension excl compulsory social security,2007,51,14387,14387,695862008,2086739496,4917988700,2831249204
+  Activities auxiliary to financial services and insurance,2007,7000,43301,37597,864980094,944310865,2661547326,1717236461
+Financial and insurance activities (Finans ve sigorta faaliyetleri),2008,8234,258282,251491,12120315902,18874940952,51137841573,32262900621
+  Financial service activities excl insurance pension,2008,169,192473,192407,10269296528,14824013177,43478839408,28654826231
+  Insurance reinsurance pension excl compulsory social security,2008,54,15520,15520,841462663,2904879104,5098099705,2193220601
+  Activities auxiliary to financial services and insurance (incl Insurance Brokers),2008,8011,50289,43564,1009556711,1146048671,2560902460,1414853789
+Financial and insurance activities (Finans ve sigorta faaliyetleri),2009,17666,285806,270636,13530527611,17020745872,76897541033,59876795161
+  Financial service activities excl insurance pension (incl Consumer Finance Cos etc),2009,269,198529,198469,11249313373,12635961856,68178697301,55542735445
+  Insurance reinsurance pension excl compulsory social security,2009,57,15815,15815,913900414,2622079854,4890702651,2268622797
+  Activities auxiliary to financial services and insurance (incl Insurance Agents etc),2009,17340,71462,56352,1367313824,1762704162,3828141081,2065436919
+Financial and insurance activities (Finans ve sigorta faaliyetleri),2010,17945,294603,279897,14749749261,21063264700,74900763691,53837498991
+  Financial service activities excl insurance pension,2010,274,205440,205371,12136711881,14103833324,63010513003,48906679679
+  Insurance reinsurance pension excl compulsory social security,2010,58,15875,15875,1013079519,4342340933,6775881657,2433540724
+  Activities auxiliary to financial services and insurance (incl Interbank Card Center etc),2010,17613,73288,58651,1599957861,2617090443,5114369031,2497278588
+Financial and insurance activities (Finans ve sigorta faaliyetleri),2011,17755,298834,282975,17206192162,25200024580,87918020733,62717996153
+  Financial service activities excl insurance pension,2011,269,212016,211945,14318196819,16968177178,74950515018,57982337840
+  Insurance reinsurance pension excl compulsory social security,2011,60,16611,16611,1121567654,5945468608,8011185283,2065716675
+  Activities auxiliary to financial services and insurance,2011,17426,70207,54419,1766427689,2286378794,4956320432,2669941638

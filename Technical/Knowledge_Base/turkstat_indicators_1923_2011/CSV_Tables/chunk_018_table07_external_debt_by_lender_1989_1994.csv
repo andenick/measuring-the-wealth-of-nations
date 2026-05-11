@@ -1,0 +1,26 @@
+Table,19.14 Türkiye brüt dış borç stoku - Alacaklı dağılımı (1989-1994) / Gross External Debt - By Lender (1989-1994)
+Source,Hazine Müsteşarlığı / Undersecretariat of Treasury
+Unit,Million USD
+,,,,,,,
+Lender_Category,1989,1990,1991,1992,1993,1994
+Total,43911,52381,53623,58595,70512,68705
+ShortTerm_Total,5745,9500,9117,12660,18473,11187
+ShortTerm_PrivateCreditors,5745,9500,9117,12660,18473,11187
+LongTerm_Total,38166,42881,44506,45935,41021,45571
+LongTerm_PrivateCreditors,17780,19807,19708,19251,22019,25341
+LongTerm_Private_MonetaryInst,10831,12154,12453,11983,14072,15309
+LongTerm_Private_NonBank,2639,2823,2699,2506,2973,2883
+LongTerm_Private_ForeignCommBanks,8158,9282,9691,9106,9862,10843
+LongTerm_Private_DomBanksAbroad,6,27,47,358,1219,1565
+LongTerm_Private_NonMonetary,6950,7653,7254,7268,7947,10032
+LongTerm_OfficialCreditors,17825,19758,20608,19542,19002,20230
+LongTerm_Official_GovtOrgs,9046,9810,10280,9781,9523,10329
+LongTerm_Official_PublicFinance,1137,903,980,899,874,972
+LongTerm_Official_CentralBanks,18,15,23,78,103,83
+LongTerm_Official_CentralGovts,5926,6007,5674,5198,4723,4808
+LongTerm_Official_DevBanks,1964,2885,3603,3607,3824,4466
+LongTerm_Multilateral,8779,9948,10328,9760,9478,9901
+LongTerm_IMF,48,0,0,0,0,344
+LongTerm_IBRD,5691,6110,5989,5359,5072,4987
+LongTerm_OtherMultilateral,3040,3838,4339,4402,4406,4570
+Bonds,2560,3315,4190,7143,11018,11946

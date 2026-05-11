@@ -1,0 +1,101 @@
+table_id,table_ref,description,unit,year,geo,occupation_isco88,total_TL,males_TL,females_TL
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Turkey,Total,12558,13202,10034
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural,Total,9894,,,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural,Total_males,,6022,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban,Total_males,,14624,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban,Total_females,,,11097
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Turkey,Legislators senior officials managers,22922,23390,19165
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (males),Legislators senior officials managers,,13994,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (males),Legislators senior officials managers,,25683,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (females),Legislators senior officials managers,,,14679
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (females),Legislators senior officials managers,,,20013
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Turkey,Professionals,22386,24495,19194
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (males),Professionals,,19016,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (males),Professionals,,25045,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (females),Professionals,,,20979
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (females),Professionals,,,19213
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Turkey,Technicians and associate professionals,15888,16848,13083
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (males),Technicians and associate professionals,,15379,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (males),Technicians and associate professionals,,17301,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (females),Technicians and associate professionals,,,13905
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (females),Technicians and associate professionals,,,12951
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Turkey,Clerks,12599,13695,11082
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (males),Clerks,,7658,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (males),Clerks,,13648,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (females),Clerks,,,14118
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (females),Clerks,,,11364
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Turkey,Service workers shop and market sales workers,10431,11356,6904
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (males),Service workers shop and market sales workers,,7030,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (males),Service workers shop and market sales workers,,11825,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (females),Service workers shop and market sales workers,,,9284
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (females),Service workers shop and market sales workers,,,6881
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Turkey,Skilled agricultural and fishery workers,8604,9416,3571
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (males),Skilled agricultural and fishery workers,,3620,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (males),Skilled agricultural and fishery workers,,10580,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (females),Skilled agricultural and fishery workers,,,9260
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (females),Skilled agricultural and fishery workers,,,3215
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Turkey,Craft and related trade workers,9360,10064,3389
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (males),Craft and related trade workers,,3275,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (males),Craft and related trade workers,,10425,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (females),Craft and related trade workers,,,8375
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (females),Craft and related trade workers,,,3418
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Turkey,Plant and machine operators and assemblers,10883,11131,8003
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (males),Plant and machine operators and assemblers,,7709,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (males),Plant and machine operators and assemblers,,11475,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (females),Plant and machine operators and assemblers,,,9924
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (females),Plant and machine operators and assemblers,,,8051
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Turkey,Elementary occupations,6709,7458,4912
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (males),Elementary occupations,,2834,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (males),Elementary occupations,,8102,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Rural (females),Elementary occupations,,,5921
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2010,Urban (females),Elementary occupations,,,5493
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Turkey,Total,14159,14899,11355
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (males),Total,,7087,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (males),Total,,16344,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (females),Total,,,11429
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (females),Total,,,12467
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Turkey,Legislators senior officials managers,26406,27064,21132
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (males),Legislators senior officials managers,,17412,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (males),Legislators senior officials managers,,29897,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (females),Legislators senior officials managers,,,15940
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (females),Legislators senior officials managers,,,21848
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Turkey,Professionals,24427,26875,20876
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (males),Professionals,,19788,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (males),Professionals,,28056,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (females),Professionals,,,20294
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (females),Professionals,,,20975
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Turkey,Technicians and associate professionals,17868,19297,14571
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (males),Technicians and associate professionals,,13924,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (males),Technicians and associate professionals,,19856,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (females),Technicians and associate professionals,,,15306
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (females),Technicians and associate professionals,,,14615
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Turkey,Clerks,14316,15260,12922
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (males),Clerks,,11769,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (males),Clerks,,15595,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (females),Clerks,,,13119
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (females),Clerks,,,12993
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Turkey,Service workers shop and market sales workers,11604,12797,7746
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (males),Service workers shop and market sales workers,,6445,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (males),Service workers shop and market sales workers,,13123,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (females),Service workers shop and market sales workers,,,11197
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (females),Service workers shop and market sales workers,,,8028
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Turkey,Skilled agricultural and fishery workers,10417,11225,5450
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (males),Skilled agricultural and fishery workers,,5365,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (males),Skilled agricultural and fishery workers,,10220,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (females),Skilled agricultural and fishery workers,,,11359
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (females),Skilled agricultural and fishery workers,,,5853
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Turkey,Craft and related trade workers,10516,11231,3867
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (males),Craft and related trade workers,,3695,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (males),Craft and related trade workers,,11576,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (females),Craft and related trade workers,,,9658
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (females),Craft and related trade workers,,,3914
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Turkey,Plant and machine operators and assemblers,12030,12368,8284
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (males),Plant and machine operators and assemblers,,6582,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (males),Plant and machine operators and assemblers,,12667,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (females),Plant and machine operators and assemblers,,,11158
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (females),Plant and machine operators and assemblers,,,8488
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Turkey,Elementary occupations,7460,8307,5341
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (males),Elementary occupations,,3546,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (males),Elementary occupations,,9016,
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Rural (females),Elementary occupations,,,6600
+chunk_011_table03,22.4,Average annual main job incomes of individuals by occupation group,TL,2011,Urban (females),Elementary occupations,,,5974

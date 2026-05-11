@@ -1,0 +1,113 @@
+table_ref,year,measure,sector,education_level,value
+26.4,2010,Headcount,Total,Total,147417
+26.4,2010,Headcount,Total,PhD and above,49625
+26.4,2010,Headcount,Total,Post-graduate,25176
+26.4,2010,Headcount,Total,Graduate,53294
+26.4,2010,Headcount,Total,Post-secondary,6188
+26.4,2010,Headcount,Total,Secondary,9222
+26.4,2010,Headcount,Total,Other,3912
+26.4,2010,Headcount,Business enterprises,Total,45922
+26.4,2010,Headcount,Business enterprises,PhD and above,1271
+26.4,2010,Headcount,Business enterprises,Post-graduate,7430
+26.4,2010,Headcount,Business enterprises,Graduate,23560
+26.4,2010,Headcount,Business enterprises,Post-secondary,5028
+26.4,2010,Headcount,Business enterprises,Secondary,7020
+26.4,2010,Headcount,Business enterprises,Other,1613
+26.4,2010,Headcount,Government,Total,13598
+26.4,2010,Headcount,Government,PhD and above,1382
+26.4,2010,Headcount,Government,Post-graduate,2805
+26.4,2010,Headcount,Government,Graduate,3750
+26.4,2010,Headcount,Government,Post-secondary,1160
+26.4,2010,Headcount,Government,Secondary,2202
+26.4,2010,Headcount,Government,Other,2299
+26.4,2010,Headcount,Higher education,Total,87897
+26.4,2010,Headcount,Higher education,PhD and above,46972
+26.4,2010,Headcount,Higher education,Post-graduate,14941
+26.4,2010,Headcount,Higher education,Graduate,25984
+26.4,2010,Headcount,Higher education,Post-secondary,-
+26.4,2010,Headcount,Higher education,Secondary,-
+26.4,2010,Headcount,Higher education,Other,-
+26.4,2010,FTE,Total,Total,81792
+26.4,2010,FTE,Total,PhD and above,18868
+26.4,2010,FTE,Total,Post-graduate,14761
+26.4,2010,FTE,Total,Graduate,33437
+26.4,2010,FTE,Total,Post-secondary,4975
+26.4,2010,FTE,Total,Secondary,7011
+26.4,2010,FTE,Total,Other,2739
+26.4,2010,FTE,Business enterprises,Total,37522
+26.4,2010,FTE,Business enterprises,PhD and above,1087
+26.4,2010,FTE,Business enterprises,Post-graduate,6542
+26.4,2010,FTE,Business enterprises,Graduate,19665
+26.4,2010,FTE,Business enterprises,Post-secondary,4004
+26.4,2010,FTE,Business enterprises,Secondary,5147
+26.4,2010,FTE,Business enterprises,Other,1077
+26.4,2010,FTE,Government,Total,11357
+26.4,2010,FTE,Government,PhD and above,1132
+26.4,2010,FTE,Government,Post-graduate,2481
+26.4,2010,FTE,Government,Graduate,3247
+26.4,2010,FTE,Government,Post-secondary,971
+26.4,2010,FTE,Government,Secondary,1864
+26.4,2010,FTE,Government,Other,1662
+26.4,2010,FTE,Higher education,Total,32913
+26.4,2010,FTE,Higher education,PhD and above,16649
+26.4,2010,FTE,Higher education,Post-graduate,5738
+26.4,2010,FTE,Higher education,Graduate,10525
+26.4,2010,FTE,Higher education,Post-secondary,-
+26.4,2010,FTE,Higher education,Secondary,-
+26.4,2010,FTE,Higher education,Other,-
+26.4,2011,Headcount,Total,Total,164287
+26.4,2011,Headcount,Total,PhD and above,58276
+26.4,2011,Headcount,Total,Post-graduate,23399
+26.4,2011,Headcount,Total,Graduate,60734
+26.4,2011,Headcount,Total,Post-secondary,7403
+26.4,2011,Headcount,Total,Secondary,10270
+26.4,2011,Headcount,Total,Other,4205
+26.4,2011,Headcount,Business enterprises,Total,55023
+26.4,2011,Headcount,Business enterprises,PhD and above,1688
+26.4,2011,Headcount,Business enterprises,Post-graduate,9137
+26.4,2011,Headcount,Business enterprises,Graduate,28241
+26.4,2011,Headcount,Business enterprises,Post-secondary,6217
+26.4,2011,Headcount,Business enterprises,Secondary,8055
+26.4,2011,Headcount,Business enterprises,Other,1685
+26.4,2011,Headcount,Government,Total,14076
+26.4,2011,Headcount,Government,PhD and above,1468
+26.4,2011,Headcount,Government,Post-graduate,2946
+26.4,2011,Headcount,Government,Graduate,3741
+26.4,2011,Headcount,Government,Post-secondary,1186
+26.4,2011,Headcount,Government,Secondary,2215
+26.4,2011,Headcount,Government,Other,2520
+26.4,2011,Headcount,Higher education,Total,95188
+26.4,2011,Headcount,Higher education,PhD and above,55120
+26.4,2011,Headcount,Higher education,Post-graduate,11316
+26.4,2011,Headcount,Higher education,Graduate,28752
+26.4,2011,Headcount,Higher education,Post-secondary,-
+26.4,2011,Headcount,Higher education,Secondary,-
+26.4,2011,Headcount,Higher education,Other,-
+26.4,2011,FTE,Total,Total,92801
+26.4,2011,FTE,Total,PhD and above,22193
+26.4,2011,FTE,Total,Post-graduate,15197
+26.4,2011,FTE,Total,Graduate,38562
+26.4,2011,FTE,Total,Post-secondary,5997
+26.4,2011,FTE,Total,Secondary,7833
+26.4,2011,FTE,Total,Other,3019
+26.4,2011,FTE,Business enterprises,Total,45408
+26.4,2011,FTE,Business enterprises,PhD and above,1465
+26.4,2011,FTE,Business enterprises,Post-graduate,8139
+26.4,2011,FTE,Business enterprises,Graduate,23692
+26.4,2011,FTE,Business enterprises,Post-secondary,5024
+26.4,2011,FTE,Business enterprises,Secondary,5982
+26.4,2011,FTE,Business enterprises,Other,1106
+26.4,2011,FTE,Government,Total,11749
+26.4,2011,FTE,Government,PhD and above,1207
+26.4,2011,FTE,Government,Post-graduate,2625
+26.4,2011,FTE,Government,Graduate,3179
+26.4,2011,FTE,Government,Post-secondary,973
+26.4,2011,FTE,Government,Secondary,1852
+26.4,2011,FTE,Government,Other,1913
+26.4,2011,FTE,Higher education,Total,35644
+26.4,2011,FTE,Higher education,PhD and above,19520
+26.4,2011,FTE,Higher education,Post-graduate,4433
+26.4,2011,FTE,Higher education,Graduate,11692
+26.4,2011,FTE,Higher education,Post-secondary,-
+26.4,2011,FTE,Higher education,Secondary,-
+26.4,2011,FTE,Higher education,Other,-

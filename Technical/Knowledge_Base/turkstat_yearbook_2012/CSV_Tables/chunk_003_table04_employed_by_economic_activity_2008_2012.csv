@@ -1,0 +1,44 @@
+Table_11.4,Employed persons by branch of economic activities (15+) NACE Rev.2,2008-2012
+Unit: Thousand (Bin)
+Note: 2008 figures use NACE Rev.2 externally assigned codes - some cross-group shifts possible
+Source: TurkStat Statistical Yearbook 2012 p.181
+
+Sex,Economic_Activity,2008,2009,2010,2011,2012
+Males,TOTAL,15598,15406,16170,17137,17512
+Males,Agriculture forestry and fishing,2663,2795,2959,3199,3225
+Males,Mining and quarrying,109,95,110,123,111
+Males,Manufacturing,3392,3024,3265,3380,3408
+Males,Electricity gas steam water supply sewerage,105,103,153,198,200
+Males,Construction,1200,1266,1376,1622,1652
+Males,Wholesale and retail trade,2857,2779,2697,2787,2751
+Males,Transportation and storage,931,924,949,978,1030
+Males,Accommodation and food service activities,850,889,917,936,965
+Males,Information and communication,125,114,153,159,176
+Males,Financial and insurance activities,154,156,158,158,143
+Males,Real estate activities,46,53,47,126,151
+Males,Professional scientific and technical activities,251,273,292,283,329
+Males,Administrative and support service activities,366,470,591,587,629
+Males,Public administration and defence,1089,1031,1100,1135,1237
+Males,Education,503,516,541,593,632
+Males,Human health and social work activities,250,263,259,280,299
+Males,Arts entertainment and recreation,115,110,84,84,83
+Males,Other social community and personal service activities,592,545,518,509,491
+Females,TOTAL,5595,5871,6426,6973,7309
+Females,Agriculture forestry and fishing,2354,2445,2724,2944,2872
+Females,Mining and quarrying,3,2,4,2,2
+Females,Manufacturing,822,846,950,987,1012
+Females,Electricity gas steam water supply sewerage,9,9,12,14,17
+Females,Construction,42,40,56,54,57
+Females,Wholesale and retail trade,592,602,629,689,751
+Females,Transportation and storage,60,62,59,66,65
+Females,Accommodation and food service activities,148,161,167,204,241
+Females,Information and communication,45,42,51,52,61
+Females,Financial and insurance activities,107,118,116,123,121
+Females,Real estate activities,7,10,14,28,33
+Females,Professional scientific and technical activities,110,126,136,144,178
+Females,Administrative and support service activities,99,130,175,191,295
+Females,Public administration and defence,176,176,192,202,221
+Females,Education,418,451,478,513,592
+Females,Human health and social work activities,337,328,331,413,509
+Females,Arts entertainment and recreation,19,20,18,16,25
+Females,Other social community and personal service activities,247,304,314,331,257

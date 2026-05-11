@@ -1,0 +1,72 @@
+{
+  "series_id": "N1305",
+  "series_name": "Post-2000 Structural Shift Indicator (Moos 2017)",
+  "study": "study_04_moos_2017",
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/Knowledge_Base/external_papers/state_welfare/2017_Moos_NSW_21st_Century/full_transcription.md",
+    "Technical/NickyData/DECISION_LOG.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "N1305 is N1301 (NSW/GDP, 1959-2012) augmented with a post-2000 regime dummy or structural shift indicator. The purpose is to quantify and test the statistical significance of the break in the NSW/GDP series that appears after 2001. Moos identifies this as a major deviation from the Shaikh-Tonak pattern: the mean NSW/GDP for 2001-2012 is approximately 5% of GDP versus approximately 0% for 1959-2000.",
+      "source_ref": "Moos_2017, Section 4 pp.6-7; full_transcription.md Section 4 The Net Social Wage in the 21st Century"
+    },
+    {
+      "entry_type": "decision_reference",
+      "content": "DEC-013 (2026-05-06): With E2 excluded from NSW computation (standard Shaikh-Tonak/Moos formula), ST2 P21 produces a structural shift of +0.054 across the 2000-2001 boundary (mean post-2000 minus mean pre-2000 for NSW/EC), compared to a structural shift of +0.030 in NSW/EC implied by Moos's published data. For NSW/GDP the analogous comparison: ST2 mean 1959-1997 = 0.013 vs Moos published 0.011. The structural shift is larger in ST2 than in Moos — attributable to NIPA vintage differences (2026 pull vs ~2015 pull).",
+      "source_ref": "DECISION_LOG.md DEC-013"
+    },
+    {
+      "entry_type": "structural_break_evidence",
+      "content": "Moos documents the post-2001 deviation as unprecedented in the history of the NSW series. Key evidence: (1) NSW/GDP was approximately 0.0065 in 2000, then rose to 8.6% in 2010. (2) The 1975 previous peak was much smaller (~2.9% of GDP in Moos series vs 8.6% in 2010). (3) The 1983 recession had the same official unemployment rate (9.6%) as 2010 but produced only 2.1% NSW/GDP vs 8.6% in 2010. (4) Previous recessions did not produce such prolonged deviation between benefits and taxes.",
+      "source_ref": "Moos_2017, Section 4 pp.6-7, Section 4.2.1 pp.17-19; full_transcription.md Sections 4 and 4.2.1"
+    },
+    {
+      "entry_type": "validation_target",
+      "content": "series_registry.json N1305 validation reference_values: structural_shift = 0.030. This is the Moos-published magnitude of the post-2000 mean shift in NSW/EC. ST2 achieves structural_shift = 0.054 (DEC-013), which is larger due to NIPA vintage. Expected range for N1305 is [-0.05, 0.10] for NSW/GDP values. The V11 validator should confirm: (1) pre-2000 mean approximately zero; (2) post-2000 mean substantially positive; (3) shift magnitude in plausible range.",
+      "source_ref": "DECISION_LOG.md DEC-013; series_registry.json N1305 validation"
+    },
+    {
+      "entry_type": "causal_decomposition",
+      "content": "Moos Section 4 decomposes the post-2001 structural shift into four contributing factors: (1) Income support growth (dominant factor): E1 rising as share of GDP driven by Social Security expansion, Medicare/Medicaid growth (healthcare inflation 6.6%/yr 2000-2010), and refundable tax credits (EITC $1.3bn→$96.5bn from 1980-2010). (2) Tax cuts: Bush EGTRRA (2001) + JGTRRA (2003) reduced federal income tax revenue; extended under Obama through 2012. Tax revenue dropped sharply after dot-com bust (2001) and again after financial crisis (2008). (3) Unemployment intensity: 2010 intensity 31.46% vs 1983 18.95% at same 9.6% unemployment rate. (4) Demographic: Baby Boomer cohort aging, but peak eligibility (age 65+) not reached until 2011, so demographic shift explains gradual long-run trend but not sharp 2001 break.",
+      "source_ref": "Moos_2017, Section 4.1-4.2 pp.6-20; full_transcription.md Sections 4.1-4.2"
+    },
+    {
+      "entry_type": "robustness_check",
+      "content": "Moos Section 4.3 confirms the structural shift is not an artifact of labor share measurement. Using Mohun (2016) alternative income share (declining from ~0.70 to ~0.45, much steeper than traditional LS 0.73→0.62) produces nearly identical NSW/GDP path. Maximum difference between traditional LS series and Mohun series is <1 percentage point throughout 1959-2012. The post-2001 shift appears in both. This is because the shift is primarily driven by E1 (direct benefits, not multiplied by LS) and T2 cuts, not by changes in LS-weighted components.",
+      "source_ref": "Moos_2017, Section 4.3 pp.20-23; full_transcription.md Section 4.3"
+    },
+    {
+      "entry_type": "theoretical_interpretation",
+      "content": "Moos's conclusion on the structural shift: a larger positive NSW does not indicate a more generous welfare state. Rather, it reflects (per de Brunhoff 1978 and Kotz 2015): state managing labor under neoliberal SSA by supplementing inadequate wages; state bearing costs of dysfunctional healthcare system it helped create; and automatic stabilizers responding to unprecedented long-term unemployment. A zero or modest NSW may indicate better worker conditions than a high positive NSW. The structural shift reveals the 'hidden cost' of neoliberalism to the fiscal state.",
+      "source_ref": "Moos_2017, Section 5 pp.23-28, Section 6 pp.28-29; full_transcription.md Sections 5-6"
+    }
+  ],
+  "citations": [
+    {
+      "id": "Moos_2017",
+      "full": "Moos, Katherine A. 2017. 'Neoliberal Redistributive Policy: The U.S. Net Social Wage in the 21st Century.' Working Paper No. 2017-18, Department of Economics, University of Massachusetts Amherst. September 18, 2017."
+    },
+    {
+      "id": "ST_2002",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 2002. 'The Rise and Fall of the U.S. Welfare State.' In Political Economy and Contemporary Capitalism. M.E. Sharpe, Armonk. pp. 247-265."
+    }
+  ],
+  "methodology_summary": "N1305 is N1301 with post-2000 regime indicator added. Quantifies the structural break in NSW/GDP identified by Moos (2017) as the main contribution of her paper. Published structural shift = 0.030 (NSW/EC); ST2 achieves 0.054 (larger, NIPA vintage effect). Pre-2000 mean ~0%; post-2000 mean ~5% GDP. Caused by combination of income support growth, healthcare inflation, neoliberal tax cuts, and unprecedented unemployment intensity during Great Recession.",
+  "known_issues": [
+    "ST2 structural shift of +0.054 exceeds Moos published +0.030; difference attributable to NIPA vintage (2026 vs ~2015 pull)",
+    "N1305 construction (add post-2000 regime dummy to N1301) does not alter underlying NSW values; regime indicator is an analytical augmentation",
+    "ACA (March 2010) falls within the study period; its effects on Medicare/Medicaid are partially captured but most enrollment expansions post-date 2012 endpoint"
+  ],
+  "cross_references": ["N1301", "N1302", "N1304"],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/Knowledge_Base/external_papers/state_welfare/2017_Moos_NSW_21st_Century/full_transcription.md"
+    ],
+    "L3_data_sources": ["Moos_2017 Figures 1, 10-11, Tables 2-3", "N1301 (source series)"],
+    "L5_validation": ["V11: structural_shift reference_value = 0.030; ST2 achieves 0.054; expected_range [-0.05, 0.10]"]
+  }
+}

@@ -1,0 +1,25 @@
+Table_Reference,Turkish_Title,English_Title
+1.21,"Cinsiyete göre nüfusun okuryazarlık oranı [6 ve daha yukarı yaştaki nüfus]","Literacy rate of population by sex [Population 6 years of age and over]"
+Units: Percent (%)
+
+Census_Year,Total_Literate_Rate,Total_Illiterate_Rate,Male_Literate_Rate,Male_Illiterate_Rate,Female_Literate_Rate,Female_Illiterate_Rate
+1935,19.25,80.75,29.35,70.65,9.81,90.19
+1940,24.55,75.45,36.20,63.80,12.92,87.08
+1945,30.22,69.78,43.67,56.33,16.84,83.16
+1950,32.51,67.49,45.52,54.48,19.45,80.55
+1955,40.99,59.01,55.94,44.06,25.61,74.39
+1960,39.51,60.49,53.63,46.37,24.84,75.16
+1965,48.76,51.24,64.10,35.90,32.84,67.16
+1970,56.21,43.79,70.31,29.69,41.80,58.20
+1975,63.72,36.28,76.21,23.79,50.51,49.49
+1980,67.48,32.52,79.98,20.02,54.67,45.33
+1985,77.45,22.55,86.52,13.48,68.16,31.84
+1990,80.49,19.51,88.81,11.19,71.98,28.02
+2000,87.32,12.68,93.86,6.14,80.64,19.36
+
+Notes:
+- 1940 data estimated from 1935 and 1945.
+- 1945: population 7 years and over.
+- 1950: population 5 years and over.
+- Proportions exclude unknown.
+Source: Table 1.19

@@ -1,0 +1,32 @@
+Table_11.8,Labour force status by Statistical Region (IBBS Level 2),2012
+Unit: Thousand persons (Bin kisi) and percent (%)
+Source: TurkStat Statistical Yearbook 2012 p.185
+
+IBBS_Code,Region,Pop_15plus,Labour_Force,Employed,Unemployed,Not_in_LF,LFPR_pct,Employment_Rate_pct,Unemployment_Rate_pct
+TOTAL,Turkey Total,54724,27339,24821,2518,27385,50.0,45.4,9.2
+TR10,Istanbul,9914,5063,4493,570,4851,51.1,45.3,11.3
+TR21,Tekirdag Edirne Kirklareli,1300,713,660,53,587,54.8,50.8,7.4
+TR22,Balikesir Canakkale,1312,620,587,33,692,47.3,44.7,5.4
+TR31,Izmir,3142,1671,1424,247,1471,53.2,45.3,14.8
+TR32,Aydin Denizli Mugla,2276,1286,1187,99,990,56.5,52.2,7.7
+TR33,Manisa Afyonkarahisar Kutahya Usak,2136,1170,1119,51,966,54.8,52.4,4.4
+TR41,Bursa Eskisehir Bilecik,2866,1404,1301,103,1462,49.0,45.4,7.4
+TR42,Kocaeli Sakarya Duzce Bolu Yalova,2607,1399,1253,146,1208,53.7,48.1,10.5
+TR51,Ankara,3646,1770,1602,168,1876,48.6,43.9,9.5
+TR52,Konya Karaman,1613,789,741,48,824,48.9,45.9,6.1
+TR61,Antalya Isparta Burdur,2059,1171,1074,96,888,56.9,52.2,8.2
+TR62,Adana Mersin,2700,1350,1208,143,1349,50.0,44.7,10.6
+TR63,Hatay Kahramanmaras Osmaniye,2130,1030,922,107,1101,48.3,43.3,10.4
+TR71,Kirikkale Aksaray Nigde Nevsehir Kirsehir,1111,515,480,35,596,46.4,43.2,6.8
+TR72,Kayseri Sivas Yozgat,1657,852,782,69,805,51.4,47.2,8.2
+TR81,Zonguldak Karabuk Bartin,808,470,435,34,339,58.1,53.9,7.3
+TR82,Kastamonu Cankiri Sinop,594,324,306,18,270,54.5,51.5,5.6
+TR83,Samsun Tokat Corum Amasya,2014,982,925,56,1032,48.7,45.9,5.7
+TR90,Trabzon Ordu Giresun Rize Artvin Gumushane,1982,1100,1031,69,883,55.5,52.0,6.3
+TRA1,Erzurum Erzincan Bayburt,675,327,306,21,348,48.4,45.4,6.3
+TRA2,Agri Kars Igdir Ardahan,716,393,364,29,322,55.0,50.9,7.4
+TRB1,Malatya Elazig Bingol Tunceli,1221,610,558,52,611,50.0,45.7,8.5
+TRB2,Van Mus Bitlis Hakkari,1248,572,521,51,676,45.8,41.8,8.9
+TRC1,Gaziantep Adiyaman Kilis,1638,715,631,84,923,43.6,38.5,11.8
+TRC2,Sanliurfa Diyarbakir,2121,610,569,42,1511,28.8,26.8,6.9
+TRC3,Mardin Batman Sirnak Siirt,1235,432,340,92,803,35.0,27.5,21.3

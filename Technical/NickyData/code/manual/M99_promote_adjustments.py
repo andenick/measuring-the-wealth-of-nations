@@ -29,8 +29,22 @@ ADJUSTMENT_MAP = {
         "source_col": "k_star_adjusted",
         "description": "K→K* capacity-adjusted profit rate (DIV-001)",
     },
-    # M01 (DIV-002): year-varying ec_u/ec_p — these have small changes
-    # Only promote if the adjustment is meaningful (max change > 0.01)
+    # M01 (DIV-002): year-varying ec_u/ec_p adjustment
+    "T504_adjusted.csv": {
+        "target": "T504.csv",
+        "source_col": "combined",
+        "description": "V* with ec_u/ec_p adjustment (DIV-002)",
+    },
+    "T505_adjusted.csv": {
+        "target": "T505.csv",
+        "source_col": "combined",
+        "description": "S* = e × V* recomputed (DIV-002)",
+    },
+    "T506_adjusted.csv": {
+        "target": "T506.csv",
+        "source_col": "combined",
+        "description": "e with ec_u/ec_p adjustment (DIV-002)",
+    },
 }
 
 
@@ -73,10 +87,13 @@ def adjust(series_filter=None):
         max_delta = float(delta.max())
         mean_delta = float(delta.mean())
 
-        # Promote: overwrite combined column with adjusted values
+        # Promote: overwrite combined column with adjusted values (including new years)
         for yr in adj_values.index:
             if yr in target_df.index:
                 target_df.loc[yr, "combined"] = adj_values[yr]
+            else:
+                target_df.loc[yr, "combined"] = adj_values[yr]
+        target_df = target_df.sort_index()
 
         target_df.to_csv(target_path)
         outputs.append(str(target_path))

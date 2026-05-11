@@ -1,0 +1,78 @@
+{
+  "series_id": "T506",
+  "series_name": "Rate of Exploitation (e = S*/V*)",
+  "chapter": 5,
+  "figures": ["Fig_5_3", "Fig_9_3", "Fig_9_5"],
+  "research_date": "2026-03-21",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Knowledge_Base/chunks/chunk_23.md",
+    "Knowledge_Base/chunks/chunk_24.md",
+    "Knowledge_Base/chunks/chunk_25.md",
+    "Knowledge_Base/tables/page_310_table_E2.csv",
+    "Knowledge_Base/equations/page_310_equations.txt",
+    "Knowledge_Base/equations/page_340_equations.txt",
+    "Technical/docs/chapters/CHAPTER_5_INVESTIGATION.md",
+    "Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "e = S*/V*. The rate of exploitation measures how much surplus value is extracted per unit of variable capital. Under the approximation ec_u/ec_p ≈ 1, this simplifies to e = (GFP/W)(1/(V*/W)) - 1. For extension: e = 1.238/(V*/W) - 1, using the empirical constant derived from book-period GFP/W stability.",
+      "source_ref": "ST_1994, Ch5; Knowledge_Base/equations/page_340_equations.txt"
+    },
+    {
+      "entry_type": "benchmark_values",
+      "content": "Book benchmarks from Table 5.7: 1948=1.70, 1958=1.83, 1967=2.10, 1977=2.10, 1989=2.44. The rising trend reflects the secular decline in productive labor's share of total employment and compensation.",
+      "source_ref": "ST_1994, Table 5.7"
+    },
+    {
+      "entry_type": "figure_context",
+      "content": "Fig 5.3 plots the rate of exploitation over time, showing the secular rise. Figs 9.3 and 9.5 use the exploitation rate in the context of profit rate decomposition and long-run distributional dynamics.",
+      "source_ref": "ST_1994, Figs 5.3, 9.3, 9.5"
+    },
+    {
+      "entry_type": "extension_formula",
+      "content": "The extension formula e = 1.238/(V*/W) - 1 derives from the observation that GFP/W ≈ 1.238 is approximately constant over the book period. Since e = S*/V* = (GFP - V*)/V* = (GFP/W)/(V*/W) - 1, and GFP/W is stable, the exploitation rate is driven primarily by changes in the productive wage share V*/W.",
+      "source_ref": "ST_1994, Ch5; DPR T506_DPR.md"
+    },
+    {
+      "entry_type": "external_comparison",
+      "content": "Mohun (2013) reports exploitation rates of ~2.3-2.5 for the overlapping period, compared to ST's 2.6-2.7. The difference arises from Mohun's broader productive sector (Information entirely productive, retail eating/drinking productive). Detailed comparison in detailed_exploitation_comparison_ST_vs_Mohun.csv.",
+      "source_ref": "Mohun_2013; Inputs/ExternalSources/Mohun/detailed_exploitation_comparison_ST_vs_Mohun.csv"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "The 1.238 constant for GFP/W assumes stability that may not hold post-1989 if the sectoral composition of value-added shifts significantly. The extension should be validated against any available independent estimates of the exploitation rate.",
+      "source_ref": "CHAPTER_5_INVESTIGATION.md"
+    },
+    {
+      "entry_type": "decision_reference",
+      "content": "DEC-003: The VA*/W constant assumption (ec_u/ec_p ≈ 1.238) affects T506 extension period values. Initially used constant VA*/W = 1.238; partially resolved in Session 14 by enabling year-varying ec_u/ec_p input. Full resolution requires BLS industry-level compensation data unavailable for 1990-1997 (SIC-era gap). Extension period values carry small systematic error; see ADJ-002. DEC-007 further documents the log-linear interpolation used for the 1990-1997 gap.",
+      "source_ref": "DECISION_LOG.md DEC-003 (2025-12-05, partially resolved 2026-03-30)"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "Mohun_2013",
+      "full": "Mohun, Simon. 2013. 'Unproductive Labor in the U.S. Economy 1964-2010.' Review of Radical Political Economics 46(3): 355-379."
+    }
+  ],
+  "methodology_summary": "Rate of exploitation e = S*/V*, rising from 1.70 (1948) to 2.44 (1989). Extended via e = 1.238/(V*/W) - 1. Mohun comparison shows classification sensitivity (~2.3-2.5 vs ST's 2.6-2.7). DEC-003: VA*/W constant assumption partially resolved; 1990-1997 values interpolated (DEC-007).",
+  "known_issues": [
+    "GFP/W ≈ 1.238 constancy assumption may weaken post-1989",
+    "Classification-sensitive: Mohun's broader productive sector yields lower e",
+    "Extension validity depends on T512 quality",
+    "DEC-003: VA*/W constant carries small systematic error for 1990-1997 (interpolated per DEC-007) and post-1997 extension period"
+  ],
+  "cross_references": ["T504", "T505", "T507", "T512"],
+  "adequacy_refs": {
+    "L1_kb_pages": ["Knowledge_Base/chunks/chunk_23.md", "Knowledge_Base/chunks/chunk_24.md", "Knowledge_Base/chunks/chunk_25.md", "Knowledge_Base/tables/page_310_table_E2.csv", "Knowledge_Base/equations/page_310_equations.txt", "Knowledge_Base/equations/page_340_equations.txt", "Technical/docs/chapters/CHAPTER_5_INVESTIGATION.md", "Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/"],
+    "L3_data_sources": ["Book Table E.2 (page_310_table_E2.csv)"],
+    "L5_validation": ["Inputs/ExternalSources/Mohun/detailed_exploitation_comparison_ST_vs_Mohun.csv"]
+  }
+}

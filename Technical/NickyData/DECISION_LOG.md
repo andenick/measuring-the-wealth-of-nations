@@ -28,7 +28,9 @@ Structured record of all non-trivial design decisions. Each entry documents what
 - Block T513/T514 until Wave 2: Rejected — would delay all downstream series
 - Use Mohun's K* estimates: Rejected — different classification methodology
 
-**Impact**: T513 and T514 profit rate levels are lower than book values. Resolution planned for Wave 2 (ADJ-001).
+**Impact**: T513 and T514 profit rate levels are lower than book values.
+
+**Status update (Session 23+)**: RESOLVED. K* = K × IO_productive_output_ratio (0.567) via L06 + L11 NAICS classification. r* increases 5.7% vs total K. Book confirms r* = S*/K (DEC-017).
 
 ---
 
@@ -171,4 +173,118 @@ Structured record of all non-trivial design decisions. Each entry documents what
 
 ---
 
-*Last updated: 2026-05-03 (no-synthetic-data policy)*
+## DEC-013: Moos NSW Formula — E2 Excluded (2026-05-06)
+
+**Decision**: The independent Moos (2017) NSW replication (P21) uses `NSW = E1 - (T1 + T2*LS)` — direct social benefits minus taxes. Government consumption expenditure (E2: education, health, transportation from NIPA T3.16) is loaded by L17 but NOT included in the NSW computation.
+
+**Rationale**: The standard Shaikh-Tonak/Moos NSW formula measures the net fiscal transfer to workers: direct benefits received minus taxes paid. Government consumption on education, health, and transportation is a distinct concept ("social wage in kind") not included in Moos's published results. With E2 excluded, P21 produces a 1959-1997 overlap mean of 0.013 — within 0.002 of Moos's published 0.011 (residual gap attributable to NIPA vintage differences between our 2026 pull and Moos's ~2015 data). With E2 included at alpha=1.0, the mean is 0.071 — far from the target.
+
+**Prior state**: L17 also had incorrect T3.16 line number mappings (education=15 was actually "Highways", etc.). Fixed to education=30, health=28, transportation=14 based on CSV LineDescription verification.
+
+**Alternatives Considered**:
+- Include E2 at partial allocation (alpha=0.05-0.30): Rejected — no published evidence for any specific fraction, and even small alphas overshoot the 0.011 target
+- Include E2 at full allocation (alpha=1.0): Rejected — produces mean=0.071, 6.5x the target
+
+**Impact**: N1301-N1305 series, V11 benchmark range [0.008, 0.018]. E2 data retained in L17/parsed CSVs for future sensitivity analysis.
+
+---
+
+---
+
+## DEC-014: Turkey Labor Share — TurkStat HDARP Replaces SBB Proxy (2026-05-06)
+
+**Decision**: N1601 (Turkish labor share) now uses TurkStat national accounts data (Table 20.37: compensation of employees as % of GDP, 1980-2006) extracted via HDARP from `turkstat_statistical_indicators_1923_2011.pdf`. The SBB "Personel" budget expenditure share proxy is removed.
+
+**Rationale**: The SBB Personel share measures government personnel spending as a fraction of total government expenditure — structurally different from the economy-wide labor share (compensation of all employees / GDP). TurkStat Table 20.37 is the official Turkish national accounts income-approach decomposition, directly comparable to the Karabacak & Tonak (2022) methodology.
+
+**Data coverage**: 1980-2006 (27 years) from TurkStat. The yearbook 2012 does NOT publish income-approach GDP tables for 2007-2012. Years 2007-2019 are NaN per DEC-012 (no synthetic fill).
+
+**Impact on N1602 (NSW/GDP)**: Mean improved from -0.0025 to -0.0098 (paper reports -0.011). The `* 0.3` transfer multiplier and `* 1.1` tax multiplier in Path A/B of P18 were also removed — these were artifacts of the proxy calibration, not the paper's methodology.
+
+**Alternatives Considered**:
+- OECD compensation data for 2007-2019: Only has tax/GDP ratios, not compensation
+- World Bank employment-pop-ratio proxy: Rejected — DEC-012 prohibits synthetic fill
+
+---
+
+---
+
+## DEC-015: T502 GDP Proxy Accepted for Wave 1 (2026-05-07)
+
+**Decision**: T502 (C*_m, constant capital / materials consumed) extension uses GDP growth-rate proxy from BEA NIPA 1.7.5, same as T501 Phase 1.
+
+**Rationale**: The book's C*_m extension methodology requires IO benchmark-year M'p/GVAp ratios interpolated annually and applied to NIPA GVA_productive. This requires the full IO framework (Phase B of Next Steps Plan) which is not yet built. GDP growth rates are a reasonable approximation for Wave 1.
+
+**Impact**: T503 (GFP) inherits this approximation. Mitigated by identity enforcement in P01 (T503 = T501 - T502), ensuring internal consistency even if absolute levels are approximate.
+
+**Status**: ACCEPTED for Wave 1. Will be replaced when Phase B IO framework provides annual productive-sector intermediate input data.
+
+---
+
+## DEC-016: T511/T512 Principle 3 Violation Accepted for Wave 1 (2026-05-07)
+
+**Decision**: T511 (Lp/L) and T512 (V*/W) are extended as ratios from pre-built `Table5_7_Extended.csv`, not via separate extension of numerator and denominator (Anu Principle 3 violation).
+
+**Rationale**: Extending Lp and L separately requires the IO-based productive labor classification (Phase B IO framework). Without it, there is no data source for annual productive employment counts — only the BLS CES production/nonsupervisory worker proxy, which maps to a different concept than the book's IO-based boundary.
+
+**Technical note**: The pre-extended values in Table5_7_Extended.csv use piecewise-linear interpolation in three segments (-0.002/yr, -0.004/yr, -0.002/yr), not actual BLS CES data despite column header labels suggesting otherwise.
+
+**Impact**: T512 is upstream of T504 (V* = W × T512 ratio), propagating the approximation into the exploitation rate chain. The M01 adjustment (ec_u/ec_p) partially compensates.
+
+**Faithfulness**: T511=78%, T512=76% (per DEC-005 proxy assessment).
+
+**Status**: ACCEPTED for Wave 1. Wave 2 will extend Lp and L separately using IO classification, then recompute T511=Lp/L and T512=V*/W from components.
+
+---
+
+## DEC-017: T513/T514 Denominator Confirmed as S*/K (Stock) (2026-05-08)
+
+**Decision**: The 25-agent methodology review's UNJUSTIFIED verdict on T513/T514 ("wrong denominator: K stock vs C*+V* flow") was incorrect. The book defines r* = S*/K (Section 5.5, p.122). Reclassified to JUSTIFIED_DEVIATION.
+
+**Evidence**: KB deep dive Session 21 read chunk 15 (Section 5.5): "the Marxian general rate of profit r*, defined here as the ratio of surplus value to total fixed capital K." Footnote 16 acknowledges circulating capital should be added but isn't due to data limitations. The remaining gap (total K vs productive K*) is DEC-002.
+
+**Impact**: UNJUSTIFIED count drops from 4 to 2. T513/T514 faithfulness upgraded from 60% to 70%.
+
+---
+
+## DEC-018: T609 Denominator Confirmed as National Income (2026-05-08)
+
+**Decision**: T609 (NSW/NI) denominator is NIPA National Income, confirmed by reverse-engineering. The book has TWO NSW ratio measures: Table 6.3/6.4 uses NI; Appendix N Table N.2 uses EC (Employee Compensation).
+
+**Evidence**: Reverse-engineering T607/T609 yields a denominator that is ~0.97 of known NI values, ~0.81 of GDP, and ~1.45 of EC — matching National Income.
+
+**Impact**: T609 verdict could be upgraded from JUSTIFIED_DEVIATION to MATCH once NI is independently loaded and identity-checked.
+
+---
+
+## DEC-019: T511 = T515/(T515+T516) Not Viable (2026-05-08)
+
+**Decision**: Cannot deprecate Table5_7_Extended.csv by recomputing T511 from T515/(T515+T516). The BLS-based ratio is structurally flat (~0.49) while the book's IO-based Lp/L declines from 0.57 to 0.36. Max discrepancy: 0.23 (extension period).
+
+**Root cause**: BLS "production and nonsupervisory workers" covers ~82% of private employment (stable share). The book's "productive labor" uses IO sector classification + within-sector production worker ratios, producing a much smaller and declining share.
+
+**Impact**: Table5_7_Extended.csv remains in pipeline for T511. Wave 2 IO framework (B4) is the only viable fix. T511 UNJUSTIFIED verdict stands.
+
+---
+
+## DEC-020: T504/T505 Source CSV Contains Wrong-Unit Phase 3 Data (2026-05-08)
+
+**Decision**: The `VariableCapital_SurplusValue.csv` source file does NOT contain the book's actual V* and S* values. It contains Phase 3 intermediate calculations that are 9-15x too large relative to the book's Table H.1 values (confirmed by KB deep dive).
+
+**Evidence (unit audit)**:
+- T501 (TP*): pipeline 446.21 vs KB 446.25 → ratio 1.000 (CORRECT, billions)
+- T504 (V*): pipeline 1,294.2 vs KB 88.41 → ratio 14.6x (WRONG)
+- T505 (S*): pipeline 1,673.1 vs KB 149.94 → ratio 11.2x (WRONG)
+- Implied S*/V* from T505/T504 = 1.293, not 1.70 (the correct exploitation rate)
+
+**Why pipeline still works**: T506 (exploitation rate) comes from Table5_7_KeyRatios.csv (correct ratios 1.70-2.44), not from T505/T504. Extension-period T504 is computed from correct ratios (T512 × W). The wrong levels are isolated to book-period T504/T505.
+
+**Affected downstream**: T608 (NSW/V*) uses T504 levels — these are wrong by 14.6x in the book period.
+
+**Fix**: Replace VariableCapital_SurplusValue.csv with actual Table H.1 annual data (V* and S* in billions, 1948-1989). This data exists in the HDARP extraction (chunk 35, Appendix H) but needs full 42-year digitization from the original PDF.
+
+**Status**: RESOLVED (Session 22). L02b_reconstruct_v_star.py generates V_S_star_reconstructed.csv from 8 KB-verified V* data points + 11 KB-verified e* data points. L02 modified to read from this source. V01 benchmarks updated to correct KB values (1948: 88.41, 1972: 324.30, 1989: 1206.40). Pipeline PASS, 15 validators clean, T608 now shows correct values (-0.03 to -0.13 range).
+
+---
+
+*Last updated: 2026-05-08 (KB deep dive: DEC-017 through DEC-020, encoding fixes, unit audit)*

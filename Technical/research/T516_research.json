@@ -1,0 +1,80 @@
+{
+  "series_id": "T516",
+  "series_name": "Unproductive Employment (Lu)",
+  "chapter": 5,
+  "figures": ["Fig_5_2", "Fig_5_7"],
+  "research_date": "2026-03-21",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_13/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_27/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "Lu = L - Lp. Unproductive employment is the residual of total employment minus productive employment. Unproductive sectors include trade (all), FIRE (mostly), services, and government. Lu has grown secularly both in absolute terms and as a share of total employment.",
+      "source_ref": "ST_1994, Ch5; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Derived from total employment (L, from BLS) minus T515 (Lp). Book period from Table E.3 (chunk_30). Extension follows directly from T515 extension: Lu = L_total - Lp_extended.",
+      "source_ref": "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_13/full_transcription.md; BLS"
+    },
+    {
+      "entry_type": "figure_context",
+      "content": "Fig 5.2 shows Lu rising over time as the economy shifts toward services and finance. Fig 5.7 shows the employment composition with Lu's growing dominance, illustrating the structural transformation of US employment.",
+      "source_ref": "ST_1994, Figs 5.2, 5.7; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/full_transcription.md"
+    },
+    {
+      "entry_type": "theoretical_note",
+      "content": "Unproductive labor does not create new value but performs necessary functions for value realization, distribution, and social reproduction. The growth of Lu is theoretically significant because these workers are paid out of surplus value, increasing the burden on productive workers.",
+      "source_ref": "ST_1994, Ch5 pp.230-235; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md"
+    },
+    {
+      "entry_type": "external_comparison",
+      "content": "Mohun (2013) further decomposes unproductive labor into Luw (unproductive wage workers) and Lum (unproductive management/supervisory). This decomposition reveals that within Lu, managerial employment has grown disproportionately. See mohun_employment*.csv and mohun_unproductive_decomposition*.csv.",
+      "source_ref": "Mohun_2013; Inputs/ExternalSources/Mohun/"
+    },
+    {
+      "entry_type": "sector_classification",
+      "content": "Industry productive/unproductive assignments per Appendix B (chunk_27): Trade fully unproductive; FIRE decomposed with real estate entirely unproductive; government wages classified as unproductive unless in government enterprises. The 64-industry SIC classification in Appendix B is the definitive reference.",
+      "source_ref": "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_27/full_transcription.md"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "As a residual series, Lu inherits all measurement issues from T515. Any overcount in Lp leads to undercount in Lu and vice versa. The classification of entire sectors as unproductive (especially all of trade) is the most debated aspect of ST's methodology.",
+      "source_ref": "DPR T516_DPR.md; EPR T516_EPR.md"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "Mohun_2013",
+      "full": "Mohun, Simon. 2013. 'Unproductive Labor in the U.S. Economy 1964-2010.' Review of Radical Political Economics 46(3): 355-379."
+    }
+  ],
+  "methodology_summary": "Unproductive employment Lu = L - Lp. Residual series derived from T515. Shows secular growth reflecting shift to services, FIRE, and government. Mohun provides Luw/Lum decomposition. Industry classifications per Appendix B (chunk_27).",
+  "known_issues": [
+    "Residual series — inherits all T515 measurement issues",
+    "Trade classified entirely as unproductive — debatable",
+    "Mohun's Luw/Lum decomposition reveals heterogeneity within Lu"
+  ],
+  "cross_references": ["T511", "T515"],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_13/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_27/full_transcription.md"
+    ],
+    "L3_data_sources": ["BLS total employment", "Book Table E.3 (chunk_30)"],
+    "L5_validation": ["Inputs/ExternalSources/Mohun/mohun_employment*.csv", "Inputs/ExternalSources/Mohun/mohun_unproductive_decomposition*.csv"]
+  }
+}

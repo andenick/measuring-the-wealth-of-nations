@@ -1,0 +1,37 @@
+table_number,table_title,source_page
+13.13,Trade and Services gross wages and salaries index 2008-2012 (2010=100),242
+notes,"CRITICAL TABLE: Brut ucret-maas endeksi = Gross wages and salaries index. Direct wage indicator for trade and services sector."
+
+NACE_code,NACE_description_EN,2008,2009,2010,2011,2012
+TOTAL,Trade and Services,84.0,88.3,100.0,117.5,135.0
+G,Wholesale and retail trade; repair of motor vehicles and motorcycles,81.6,86.8,100.0,117.4,135.5
+45,Wholesale and retail trade and repair of motor vehicles and motorcycles,86.3,88.6,100.0,117.5,139.4
+46,Wholesale trade except of motor vehicles and motorcycles,80.5,85.8,100.0,114.3,126.4
+47,Retail trade except of motor vehicles and motorcycles,81.8,87.6,100.0,120.8,145.0
+H,Transportation and storage,83.8,89.9,100.0,118.6,134.4
+49,Land transport and transport via pipelines,84.0,89.5,100.0,119.5,132.7
+50,Water transport,87.6,100.3,100.0,105.2,120.1
+51,Air transport,63.7,78.9,100.0,121.5,138.9
+52,Warehousing and support activities for transportation,83.6,85.8,100.0,119.3,141.7
+53,Postal and courier activities,100.3,100.1,100.0,116.5,127.8
+I,Accommodation and food service activities,89.3,88.9,100.0,120.2,145.0
+55,Accommodation,83.7,85.4,100.0,118.8,146.5
+56,Food and beverage service activities,93.1,91.3,100.0,121.3,143.8
+J,Information and communication,92.4,92.5,100.0,108.3,120.4
+58,Publishing activities,90.5,90.5,100.0,125.4,145.2
+59,Motion picture video and television programme production sound recording and music publishing,82.3,90.3,100.0,127.0,145.2
+60,Programming and broadcasting activities,100.1,90.5,100.0,114.6,124.3
+61,Telecommunications,93.9,95.6,100.0,101.4,112.5
+62,Computer programming consultancy and related activities,87.0,88.9,100.0,111.6,123.4
+63,Information service activities,84.3,85.4,100.0,108.1,121.9
+M,Professional scientific and technical activities,89.8,90.5,100.0,121.1,137.7
+69+702,Legal accounting and management consultancy activities,79.5,87.0,100.0,130.5,142.0
+71,Architectural and engineering activities; technical testing and analysis,92.0,97.5,100.0,124.2,151.0
+73,Advertising and market research,112.5,91.0,100.0,102.3,115.0
+74,Other professional scientific and technical activities,91.0,97.8,100.0,117.0,132.2
+N,Administrative and support service activities,81.2,85.9,100.0,119.3,136.3
+78,Employment activities,104.7,92.7,100.0,118.6,119.8
+79,Travel agency tour operator reservation service and related activities,96.9,88.9,100.0,115.7,152.3
+80,Security and investigation activities,83.8,90.7,100.0,111.3,126.0
+812,Cleaning activities,69.6,80.4,100.0,124.7,142.1
+82,Office administrative office support and other business support activities,111.5,114.3,100.0,112.1,131.2

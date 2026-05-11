@@ -7,7 +7,7 @@
       "chopped": true,
       "extenbook": true,
       "dpr": true,
-      "epr": true,
+      "epr": "n/a",
       "decomposition": true,
       "figure_fprs": "n/a"
     },
@@ -16,7 +16,7 @@
       "chopped": true,
       "extenbook": true,
       "dpr": true,
-      "epr": true,
+      "epr": "n/a",
       "decomposition": true,
       "figure_fprs": "n/a"
     },
@@ -178,7 +178,7 @@
       "chopped": true,
       "extenbook": true,
       "dpr": true,
-      "epr": true,
+      "epr": "n/a",
       "decomposition": true,
       "figure_fprs": "n/a"
     },
@@ -187,7 +187,7 @@
       "chopped": true,
       "extenbook": true,
       "dpr": true,
-      "epr": true,
+      "epr": "n/a",
       "decomposition": true,
       "figure_fprs": "n/a"
     },
@@ -196,7 +196,34 @@
       "chopped": true,
       "extenbook": true,
       "dpr": true,
-      "epr": true,
+      "epr": "n/a",
+      "decomposition": true,
+      "figure_fprs": "n/a"
+    },
+    "N1702": {
+      "csv": true,
+      "chopped": true,
+      "extenbook": true,
+      "dpr": true,
+      "epr": "n/a",
+      "decomposition": true,
+      "figure_fprs": "n/a"
+    },
+    "N1703": {
+      "csv": true,
+      "chopped": true,
+      "extenbook": true,
+      "dpr": true,
+      "epr": "n/a",
+      "decomposition": true,
+      "figure_fprs": "n/a"
+    },
+    "N1704": {
+      "csv": true,
+      "chopped": true,
+      "extenbook": true,
+      "dpr": true,
+      "epr": "n/a",
       "decomposition": true,
       "figure_fprs": "n/a"
     },

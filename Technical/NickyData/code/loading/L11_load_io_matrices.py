@@ -62,9 +62,22 @@ def load():
 
         print(f"    [L11] {year}: A-matrix + Leontief inverse loaded (85×85)")
 
+    # NAICS IO parser (productive ratios for 1997-2024)
+    try:
+        import importlib
+        spec = importlib.util.spec_from_file_location(
+            "_naics_io_parser", Path(__file__).parent / "_naics_io_parser.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        naics_result = mod.load()
+        if naics_result["status"] == "ok":
+            outputs.extend(naics_result.get("outputs", []))
+    except Exception as e:
+        print(f"    [L11] NAICS IO parser skipped: {e}")
+
     return {
         "series_id": SERIES_IDS[0],
         "status": "ok" if outputs else "fail",
-        "message": f"IO matrices | {len(BENCHMARK_YEARS)} years, {len(outputs)} files",
+        "message": f"IO matrices | SIC + NAICS, {len(outputs)} files",
         "outputs": outputs,
     }

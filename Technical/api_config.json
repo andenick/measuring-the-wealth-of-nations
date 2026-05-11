@@ -1,0 +1,508 @@
+{
+  "version": "1.0",
+  "project": "AS2",
+  "description": "Centralized registry of all API endpoints, table IDs, authentication methods, rate limits, and version info for BEA, BLS, and FRED APIs used in the AS2 project (Shaikh & Tonak replication and extension).",
+  "last_updated": "2026-02-25",
+  "apis": [
+    {
+      "api_name": "BEA NIPA",
+      "api_id": "bea_nipa",
+      "base_url": "https://apps.bea.gov/api/data",
+      "dataset_name": "NIPA",
+      "auth_method": "query_parameter",
+      "auth_param_name": "UserID",
+      "auth_env_var": "BEA_API_KEY",
+      "registration_url": "https://apps.bea.gov/API/signup/",
+      "rate_limit": {
+        "requests_per_minute": 100,
+        "max_data_points_per_request": 500,
+        "notes": "BEA enforces per-key rate limiting; 100 requests/minute with max 500 data points per single request."
+      },
+      "documentation_url": "https://apps.bea.gov/api/_pdf/bea_web_service_api_user_guide.pdf",
+      "api_version": "current (unversioned; method=GetData)",
+      "request_params": {
+        "method": "GetData",
+        "DataSetName": "NIPA",
+        "Frequency": "A",
+        "Year": "ALL",
+        "ResultFormat": "JSON"
+      },
+      "ingest_script": "Technical/scripts/ingest/pull_bea_nipa_ch05.py",
+      "provenance_files": [
+        "Inputs/API_Data/BEA/provenance.json",
+        "Inputs/API_Data/BEA/provenance_ch06.json"
+      ],
+      "tables": [
+        {
+          "table_id": "T10705",
+          "nipa_ref": "1.7.5",
+          "description": "Gross Output by Industry",
+          "chapter": 5,
+          "as2_series": ["T501", "T502", "T503"],
+          "purpose": "TP* = productive sector gross output; intermediate inputs for C*_m",
+          "output_file": "Inputs/API_Data/BEA/nipa_1_7_5_gross_output_by_industry.csv",
+          "frequency": "annual",
+          "year_range": "1998-2024",
+          "row_count_last_pull": 3254
+        },
+        {
+          "table_id": "T60200D",
+          "nipa_ref": "6.2D",
+          "description": "Compensation of Employees by Industry (detailed)",
+          "chapter": 5,
+          "as2_series": ["T504", "T505"],
+          "purpose": "V* = variable capital (productive worker compensation)",
+          "output_file": "Inputs/API_Data/BEA/nipa_6_2D_compensation_by_industry.csv",
+          "frequency": "annual",
+          "year_range": "1998-2024",
+          "row_count_last_pull": 2673
+        },
+        {
+          "table_id": "T60400D",
+          "nipa_ref": "6.4D",
+          "description": "Full-Time and Part-Time Employees by Industry (detailed)",
+          "chapter": 5,
+          "as2_series": ["T511", "T515", "T516"],
+          "purpose": "Employment counts for Lp/L decomposition (FTPT basis)",
+          "output_file": "Inputs/API_Data/BEA/nipa_6_4D_ftpt_by_industry.csv",
+          "frequency": "annual",
+          "year_range": "1998-2024",
+          "row_count_last_pull": 2619
+        },
+        {
+          "table_id": "T60500D",
+          "nipa_ref": "6.5D",
+          "description": "Full-Time Equivalent Employees by Industry (detailed)",
+          "chapter": 5,
+          "as2_series": ["T511", "T515", "T516"],
+          "purpose": "Alternative employment measure for cross-validation (FTE basis)",
+          "output_file": "Inputs/API_Data/BEA/nipa_6_5D_fte_by_industry.csv",
+          "frequency": "annual",
+          "year_range": "1998-2024",
+          "row_count_last_pull": 2619
+        },
+        {
+          "table_id": "T61000D",
+          "nipa_ref": "6.10D",
+          "description": "Employer Contributions for Government Social Insurance by Industry",
+          "chapter": 5,
+          "as2_series": ["T504", "T512"],
+          "purpose": "Employee compensation detail for ec_p/ec_u ratio",
+          "output_file": "Inputs/API_Data/BEA/nipa_6_10D_employer_contributions.csv",
+          "frequency": "annual",
+          "year_range": "1998-2024",
+          "row_count_last_pull": 540
+        },
+        {
+          "table_id": "T61000B",
+          "nipa_ref": "6.10B",
+          "description": "Employment by Industry (Full-Time Equivalent, summary)",
+          "chapter": 5,
+          "as2_series": ["T515", "T516"],
+          "purpose": "FTE employment counts by industry for Lp/Lu decomposition cross-validation",
+          "output_file": "Inputs/API_Data/BEA/nipa_6_10B_employment_by_industry.csv",
+          "frequency": "annual",
+          "year_range": "1998-2024",
+          "row_count_last_pull": null
+        },
+        {
+          "table_id": "T20100",
+          "nipa_ref": "2.1",
+          "description": "Personal Income and Its Disposition",
+          "chapter": 6,
+          "as2_series": ["T605", "T606", "T607"],
+          "purpose": "Transfer payments, social insurance contributions for NSW calculation",
+          "output_file": "Inputs/API_Data/BEA/nipa_2_1_personal_income.csv",
+          "frequency": "annual",
+          "year_range": "1929-2025",
+          "row_count_last_pull": 4074
+        },
+        {
+          "table_id": "T30100",
+          "nipa_ref": "3.1",
+          "description": "Government Current Receipts and Expenditures",
+          "chapter": 6,
+          "as2_series": ["T601", "T602", "T603", "T604", "T607"],
+          "purpose": "Total government taxes and expenditures for NSW",
+          "output_file": "Inputs/API_Data/BEA/nipa_3_1_govt_receipts_expenditures.csv",
+          "frequency": "annual",
+          "year_range": "1929-2025",
+          "row_count_last_pull": 3815
+        },
+        {
+          "table_id": "T30200",
+          "nipa_ref": "3.2",
+          "description": "Federal Government Current Receipts and Expenditures",
+          "chapter": 6,
+          "as2_series": ["T601", "T602"],
+          "purpose": "Federal tax decomposition (personal, corporate, social insurance)",
+          "output_file": "Inputs/API_Data/BEA/nipa_3_2_federal_govt.csv",
+          "frequency": "annual",
+          "year_range": "1929-2025",
+          "row_count_last_pull": 4235
+        },
+        {
+          "table_id": "T30300",
+          "nipa_ref": "3.3",
+          "description": "State and Local Government Current Receipts and Expenditures",
+          "chapter": 6,
+          "as2_series": ["T603", "T604"],
+          "purpose": "State/local tax decomposition (property, sales, income taxes)",
+          "output_file": "Inputs/API_Data/BEA/nipa_3_3_state_local_govt.csv",
+          "frequency": "annual",
+          "year_range": "1929-2025",
+          "row_count_last_pull": 3886
+        }
+      ]
+    },
+    {
+      "api_name": "BEA Fixed Assets",
+      "api_id": "bea_fixed_assets",
+      "base_url": "https://apps.bea.gov/api/data",
+      "dataset_name": "FixedAssets",
+      "auth_method": "query_parameter",
+      "auth_param_name": "UserID",
+      "auth_env_var": "BEA_API_KEY",
+      "registration_url": "https://apps.bea.gov/API/signup/",
+      "rate_limit": {
+        "requests_per_minute": 100,
+        "max_data_points_per_request": 500,
+        "notes": "Same BEA key and rate limits as NIPA; shares the per-key quota."
+      },
+      "documentation_url": "https://apps.bea.gov/api/_pdf/bea_web_service_api_user_guide.pdf",
+      "api_version": "current (unversioned; method=GetData)",
+      "request_params": {
+        "method": "GetData",
+        "DataSetName": "FixedAssets",
+        "Year": "ALL",
+        "ResultFormat": "JSON"
+      },
+      "ingest_script": "Technical/scripts/ingest/pull_bea_fixed_assets.py",
+      "provenance_files": [
+        "Inputs/API_Data/BEA/provenance_fixed_assets.json"
+      ],
+      "tables": [
+        {
+          "table_id": "FAAt401",
+          "nipa_ref": "Fixed Assets 4.1",
+          "description": "Current-Cost Net Stock of Private Fixed Assets by Industry",
+          "chapter": 5,
+          "as2_series": ["T513", "T514"],
+          "purpose": "Capital stock K for Marxian profit rate r* = S*/(C*+V*) and capacity-adjusted r*_adj",
+          "output_file": "Inputs/API_Data/BEA/fixed_assets_4_1_net_stock.csv",
+          "frequency": "annual",
+          "year_range": "1925-2024",
+          "row_count_last_pull": 7600
+        }
+      ]
+    },
+    {
+      "api_name": "BEA GDPbyIndustry",
+      "api_id": "bea_gdp_by_industry",
+      "base_url": "https://apps.bea.gov/api/data",
+      "dataset_name": "GDPbyIndustry",
+      "auth_method": "query_parameter",
+      "auth_param_name": "UserID",
+      "auth_env_var": "BEA_API_KEY",
+      "registration_url": "https://apps.bea.gov/API/signup/",
+      "rate_limit": {
+        "requests_per_minute": 100,
+        "max_data_points_per_request": 500,
+        "notes": "Same BEA key and rate limits as NIPA; shares the per-key quota."
+      },
+      "documentation_url": "https://apps.bea.gov/api/_pdf/bea_web_service_api_user_guide.pdf",
+      "api_version": "current (unversioned; method=GetData)",
+      "request_params": {
+        "method": "GetData",
+        "DataSetName": "GDPbyIndustry",
+        "Year": "ALL",
+        "Industry": "ALL",
+        "ResultFormat": "JSON"
+      },
+      "ingest_script": "Technical/scripts/ingest/pull_bea_nipa_ch05.py",
+      "provenance_files": [
+        "Inputs/API_Data/BEA/provenance.json"
+      ],
+      "tables": [
+        {
+          "table_id": "GDPbyInd_GO",
+          "nipa_ref": "GDPbyIndustry (Gross Output)",
+          "description": "Gross Output by Industry (NAICS-era, supplementary to NIPA 1.7.5)",
+          "chapter": 5,
+          "as2_series": ["T501"],
+          "purpose": "NAICS-era gross output for TP* computation; supplements NIPA 1.7.5 for 1997-2024",
+          "output_file": "Inputs/API_Data/BEA/gdp_by_industry_gross_output.csv",
+          "frequency": "annual",
+          "year_range": "1997-2024",
+          "row_count_last_pull": 2800
+        },
+        {
+          "table_id": "GDPbyInd_VA",
+          "nipa_ref": "GDPbyIndustry (Value Added)",
+          "description": "Value Added by Industry",
+          "chapter": 5,
+          "as2_series": ["T501", "T503"],
+          "purpose": "Value added = GO - intermediate inputs; cross-check for GFP derivation",
+          "output_file": "Inputs/API_Data/BEA/gdp_by_industry_value_added.csv",
+          "frequency": "annual",
+          "year_range": "1997-2024",
+          "row_count_last_pull": 2800
+        },
+        {
+          "table_id": "GDPbyInd_VA_Components",
+          "nipa_ref": "GDPbyIndustry (VA Components)",
+          "description": "Value Added Components by Industry (compensation, GOS, taxes, subsidies)",
+          "chapter": 5,
+          "as2_series": ["T504", "T505"],
+          "purpose": "Decomposition of value added into compensation, gross operating surplus, taxes on production; supports V* and S* derivation",
+          "output_file": "Inputs/API_Data/BEA/gdp_by_industry_va_components.csv",
+          "frequency": "annual",
+          "year_range": "1997-2024",
+          "row_count_last_pull": 11088
+        }
+      ]
+    },
+    {
+      "api_name": "BLS CES",
+      "api_id": "bls_ces",
+      "base_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/",
+      "dataset_name": "CES (Current Employment Statistics)",
+      "auth_method": "header_or_body_parameter",
+      "auth_param_name": "registrationkey",
+      "auth_env_var": "BLS_API_KEY",
+      "registration_url": "https://www.bls.gov/developers/home.htm",
+      "rate_limit": {
+        "registered": {
+          "requests_per_10_seconds": 50,
+          "daily_query_limit": 500,
+          "years_per_query": 20,
+          "series_per_query": 50
+        },
+        "unregistered": {
+          "requests_per_10_seconds": 25,
+          "daily_query_limit": 25,
+          "years_per_query": 10,
+          "series_per_query": 25
+        },
+        "notes": "v2 API requires registration key for higher limits. v1 (no key) has lower limits. POST requests with JSON body."
+      },
+      "documentation_url": "https://www.bls.gov/developers/api_signature_v2.htm",
+      "api_version": "v2",
+      "request_params": {
+        "method": "POST",
+        "content_type": "application/json",
+        "body_fields": ["seriesid", "startyear", "endyear", "registrationkey"]
+      },
+      "ingest_script": "Technical/scripts/ingest/pull_bls_ces.py",
+      "provenance_files": [
+        "Inputs/API_Data/BLS/provenance.json"
+      ],
+      "tables": [
+        {
+          "table_id": "CES0500000006",
+          "nipa_ref": null,
+          "description": "Production and nonsupervisory employees, total private",
+          "chapter": 5,
+          "as2_series": ["T511", "T515", "T516", "T504"],
+          "purpose": "Numerator for economy-wide production worker ratio (Lp proxy)",
+          "output_file": "Inputs/API_Data/BLS/bls_ces_production_workers.csv",
+          "frequency": "annual",
+          "year_range": "1948-2024"
+        },
+        {
+          "table_id": "CES0500000001",
+          "nipa_ref": null,
+          "description": "All employees, total private",
+          "chapter": 5,
+          "as2_series": ["T511", "T515", "T516"],
+          "purpose": "Denominator for economy-wide production worker ratio (L total)",
+          "output_file": "Inputs/API_Data/BLS/bls_ces_production_workers.csv",
+          "frequency": "annual",
+          "year_range": "1948-2024"
+        },
+        {
+          "table_id": "CES0600000006",
+          "nipa_ref": null,
+          "description": "Production workers, goods-producing",
+          "chapter": 5,
+          "as2_series": ["T511", "T515"],
+          "purpose": "Goods-producing sector production worker count",
+          "output_file": "Inputs/API_Data/BLS/bls_ces_production_workers.csv",
+          "frequency": "annual",
+          "year_range": "1948-2024"
+        },
+        {
+          "table_id": "CES0600000001",
+          "nipa_ref": null,
+          "description": "All employees, goods-producing",
+          "chapter": 5,
+          "as2_series": ["T511"],
+          "purpose": "Goods-producing sector total employment for ratio",
+          "output_file": "Inputs/API_Data/BLS/bls_ces_production_workers.csv",
+          "frequency": "annual",
+          "year_range": "1948-2024"
+        },
+        {
+          "table_id": "CES1000000006",
+          "nipa_ref": null,
+          "description": "Production workers, mining and logging",
+          "chapter": 5,
+          "as2_series": ["T511", "T515"],
+          "purpose": "Mining/logging sector production worker count",
+          "output_file": "Inputs/API_Data/BLS/bls_ces_production_workers.csv",
+          "frequency": "annual",
+          "year_range": "1948-2024"
+        },
+        {
+          "table_id": "CES1000000001",
+          "nipa_ref": null,
+          "description": "All employees, mining and logging",
+          "chapter": 5,
+          "as2_series": ["T511"],
+          "purpose": "Mining/logging sector total employment for ratio",
+          "output_file": "Inputs/API_Data/BLS/bls_ces_production_workers.csv",
+          "frequency": "annual",
+          "year_range": "1948-2024"
+        },
+        {
+          "table_id": "CES2000000006",
+          "nipa_ref": null,
+          "description": "Production workers, construction",
+          "chapter": 5,
+          "as2_series": ["T511", "T515"],
+          "purpose": "Construction sector production worker count",
+          "output_file": "Inputs/API_Data/BLS/bls_ces_production_workers.csv",
+          "frequency": "annual",
+          "year_range": "1948-2024"
+        },
+        {
+          "table_id": "CES2000000001",
+          "nipa_ref": null,
+          "description": "All employees, construction",
+          "chapter": 5,
+          "as2_series": ["T511"],
+          "purpose": "Construction sector total employment for ratio",
+          "output_file": "Inputs/API_Data/BLS/bls_ces_production_workers.csv",
+          "frequency": "annual",
+          "year_range": "1948-2024"
+        },
+        {
+          "table_id": "CES3000000006",
+          "nipa_ref": null,
+          "description": "Production workers, manufacturing",
+          "chapter": 5,
+          "as2_series": ["T511", "T515"],
+          "purpose": "Manufacturing sector production worker count",
+          "output_file": "Inputs/API_Data/BLS/bls_ces_production_workers.csv",
+          "frequency": "annual",
+          "year_range": "1948-2024"
+        },
+        {
+          "table_id": "CES3000000001",
+          "nipa_ref": null,
+          "description": "All employees, manufacturing",
+          "chapter": 5,
+          "as2_series": ["T511"],
+          "purpose": "Manufacturing sector total employment for ratio",
+          "output_file": "Inputs/API_Data/BLS/bls_ces_production_workers.csv",
+          "frequency": "annual",
+          "year_range": "1948-2024"
+        }
+      ]
+    },
+    {
+      "api_name": "FRED",
+      "api_id": "fred",
+      "base_url": "https://api.stlouisfed.org/fred/series/observations",
+      "dataset_name": "FRED (Federal Reserve Economic Data)",
+      "auth_method": "query_parameter",
+      "auth_param_name": "api_key",
+      "auth_env_var": "FRED_API_KEY",
+      "registration_url": "https://fred.stlouisfed.org/docs/api/api_key.html",
+      "rate_limit": {
+        "requests_per_minute": 120,
+        "notes": "120 requests per minute per API key. No hard per-request row limit."
+      },
+      "documentation_url": "https://fred.stlouisfed.org/docs/api/fred/",
+      "api_version": "current (unversioned)",
+      "request_params": {
+        "method": "GET",
+        "file_type": "json",
+        "observation_start": "1948-01-01",
+        "observation_end": "2025-12-31",
+        "frequency": "a"
+      },
+      "ingest_script": "Technical/scripts/ingest/pull_fred_ch05.py",
+      "provenance_files": [
+        "Inputs/API_Data/FRED/provenance.json"
+      ],
+      "tables": [
+        {
+          "table_id": "TCU",
+          "nipa_ref": null,
+          "description": "Capacity Utilization: Total Industry (CAPUTLB50001SQ)",
+          "chapter": 5,
+          "as2_series": ["T514"],
+          "purpose": "Capacity-adjusted Marxian profit rate: r*_adj = r* x (1/TCU)",
+          "output_file": "Inputs/API_Data/FRED/fred_tcu_capacity_utilization.csv",
+          "frequency": "annual (averaged from quarterly)",
+          "year_range": "1967-2025",
+          "units": "Percent of Capacity",
+          "row_count_last_pull": 59
+        }
+      ]
+    }
+  ],
+  "cross_references": {
+    "chapter_5_revenue_accounts": {
+      "description": "Chapter 5 Marxian revenue-side accounting framework (TP*, C*_m, GFP, V*, S*)",
+      "primary_bea_tables": ["T10705", "T60200D", "T60400D", "T60500D", "T61000D", "T61000B"],
+      "supplementary_bea_tables": ["GDPbyInd_GO", "GDPbyInd_VA", "GDPbyInd_VA_Components"],
+      "bls_series": ["CES0500000006", "CES0500000001", "CES0600000006", "CES0600000001", "CES1000000006", "CES1000000001", "CES2000000006", "CES2000000001", "CES3000000006", "CES3000000001"],
+      "fred_series": [],
+      "as2_series": ["T501", "T502", "T503", "T504", "T505", "T506", "T507", "T508", "T509", "T510", "T511", "T512", "T515", "T516"]
+    },
+    "chapter_5_profit_rate": {
+      "description": "Chapter 5 Marxian and conventional profit rate comparison",
+      "primary_bea_tables": ["FAAt401"],
+      "supplementary_bea_tables": [],
+      "bls_series": [],
+      "fred_series": ["TCU"],
+      "as2_series": ["T513", "T514"]
+    },
+    "chapter_6_net_social_wage": {
+      "description": "Chapter 6 Net Social Wage (taxes, benefits, government expenditure)",
+      "primary_bea_tables": ["T20100", "T30100", "T30200", "T30300"],
+      "supplementary_bea_tables": [],
+      "bls_series": [],
+      "fred_series": [],
+      "as2_series": ["T601", "T602", "T603", "T604", "T605", "T606", "T607", "T608", "T609"]
+    }
+  },
+  "environment_variables": {
+    "BEA_API_KEY": {
+      "description": "BEA API registration key (UserID parameter)",
+      "registration": "https://apps.bea.gov/API/signup/",
+      "used_by": ["bea_nipa", "bea_fixed_assets", "bea_gdp_by_industry"]
+    },
+    "BLS_API_KEY": {
+      "description": "BLS API v2 registration key",
+      "registration": "https://www.bls.gov/developers/home.htm",
+      "used_by": ["bls_ces"]
+    },
+    "FRED_API_KEY": {
+      "description": "FRED API key",
+      "registration": "https://fred.stlouisfed.org/docs/api/api_key.html",
+      "used_by": ["fred"]
+    }
+  },
+  "notes": [
+    "All BEA datasets (NIPA, FixedAssets, GDPbyIndustry) share the same base URL and API key but use different DataSetName values.",
+    "BEA NIPA Chapter 5 tables cover 1998-2024 (detailed D-suffix tables); Chapter 6 tables cover 1929-2025 (summary tables).",
+    "GDPbyIndustry dataset provides NAICS-era data (1997-2024 only); pre-1997 SIC-era gross output is NOT available via API.",
+    "BLS CES series IDs follow the pattern CESssssssssNNN where s=supersector/industry and NNN=data type (001=all employees, 006=production workers).",
+    "FRED TCU series begins 1967; for pre-1967 capacity utilization, alternative sources (Federal Reserve historical) are needed.",
+    "All output files are stored under Inputs/API_Data/{BEA,BLS,FRED}/ with provenance JSON files tracking each pull.",
+    "Rate limits are per API key; BEA NIPA, Fixed Assets, and GDPbyIndustry share the same 100 req/min quota."
+  ]
+}

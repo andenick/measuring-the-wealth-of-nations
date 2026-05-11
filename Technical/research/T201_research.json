@@ -1,0 +1,103 @@
+{
+  "series_id": "T201",
+  "series_name": "Alternative GFP Measures",
+  "chapter": 2,
+  "figures": ["Fig_1.1"],
+  "research_date": "2026-05-06",
+  "researcher": "opus_agent",
+  "kb_sources_searched": [
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_03/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_04/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_05/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_26/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "GFP (Gross Final Product) as used by Shaikh and Tonak (ST) is an alternative to orthodox GDP/GNP that rests on a classical production/nonproduction distinction. Under the ST framework, activities in trading, military, police, and administration are classified as nonproduction (social consumption) and are therefore excluded from the measure of net product. This contrasts with orthodox GDP/GNP, where all potentially marketable activities — including wholesale/retail, financial services, legal services, advertising, and government administration — count as final output. Figure 1.1 (book page 16) presents seven comparative GFP estimates for the mid-1960s: NT (Nordhaus-Tobin), Z (Zolotas), JF (Jorgenson-Fraumeni), K (Kendrick), R (Ruggles-Ruggles), E (Eisner), and ST (Shaikh-Tonak), all expressed relative to the official BEA measure of GNP. All seven estimates exceed official GNP: they range from 112% (Ruggles-Ruggles) to 468% (Jorgenson-Fraumeni). The ST estimate is approximately 121% of GNP on a pure market-production basis, rising to roughly 180% of GNP when Eisner's imputation for housework is added to make coverage more comparable with other extended accounts. The large spread across estimates reflects fundamentally different definitions of what counts as production: the JF result is inflated primarily by leisure-time valuation and human-capital investment imputations.",
+      "source_ref": "ST_1994, Ch1 pp.15-16 (Fig 1.1); chunk_04 full_transcription.md, pages 35-36"
+    },
+    {
+      "entry_type": "methodology_description",
+      "content": "The ST production boundary distinguishes outcomes from outputs. Production activity uses up wealth to create new wealth (a production outcome). Nonproduction activities — including distribution (trading, wholesale/retail, advertising), social maintenance (military, police, administration), and personal consumption — use up wealth in pursuit of nonproduction outcomes. The distinction is not between goods and services: most service activities (transportation, lodging, entertainment, repairs) are classified as production; many services (wholesale/retail, financial services, legal services, advertising, civil service) are nonproduction. Under capitalism, 'productive labor' has a second condition: it must be capitalistically employed (wage labor exchanged against capital). Both conditions are required — capitalistically employed distribution or maintenance labor remains unproductive of capital.",
+      "source_ref": "ST_1994, Ch1 pp.2-5; Ch2 pp.21-30; chunk_03 pp.22-25, chunk_05 pp.21-30"
+    },
+    {
+      "entry_type": "methodology_description",
+      "content": "Alternative GFP measures from the six orthodox extended accounts all share certain critical characteristics: (1) they are extensions, not alternatives, to conventional accounts; (2) their theoretical foundation is neoclassical economics; (3) they expand production by adding imputed 'services' of consumer and government durable goods; (4) most add value-of-leisure estimates (ranging from 48.7% to 115.5% of official GNP); and (5) several shift police, fire, defense, and guard activities from final product to intermediate input (NT, Z, E), rather than excluding them from production entirely as ST does. The ST approach differs: it excludes nonproduction activities from both total and net product, not just from net product.",
+      "source_ref": "ST_1994, Ch1 pp.11-16; chunk_04 pp.31-36"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Figure 1.1 comparative data: Eisner (1988, p. 1673, table S.5) provides the summary comparison of all six orthodox extended-account estimates for the mid-1960s benchmark years. The ST estimate in Figure 1.1 derives from Table 5.4 of Shaikh & Tonak (1994) for 1966, supplemented by Eisner's (1985, p. 36) estimate of the value of housework ($267.9 billion in 1966).",
+      "source_ref": "ST_1994, Fig 1.1 caption, book page 16; Eisner (1988); chunk_04 full_transcription.md page 36"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "The underlying empirical estimates for the ST measure of market production use BEA benchmark input-output tables for the postwar period. Per Appendix A, the primary IO database draws on BEA benchmark tables for six benchmark years (1947, 1958, 1963, 1967, 1972, 1977) at the 85-industry level, with Juillard (1988) modifications applied to achieve methodological consistency across years. These IO tables supply the industry-level data needed to separate production from nonproduction activities in constructing the ST net product. Final tables are structured as 82 rows × 88 columns in millions of 1972 dollars.",
+      "source_ref": "ST_1994, Appendix A pp.232-241; chunk_26 full_transcription.md"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Series registry indicates T201 maps to book Table 2.1 (Alternative GFP Measures), source file ch02/Table2_1_AlternativeGFP.csv, annual data 1948-1989, units in billions of dollars. The series is wave3_planned with deferred reason: 'Wave 3 series — requires Ch2 theoretical framework implementation'. Subseries T201-A represents the digitized book table values.",
+      "source_ref": "NickyData/series_registry.json, T201 entry"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "The T201 series is wave3_planned and has not yet been implemented. Construction requires Step 1: load subseries T201-A (book Table 2.1 digitized values). No extension beyond 1989 is currently specified. The series requires the Ch2 theoretical framework to be operational, meaning the productive/unproductive labor classification applied to national accounts data in Chapter 3 must be implemented first.",
+      "source_ref": "NickyData/series_registry.json, T201 entry; ST_1994, Ch2"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "The ST GFP estimate in Figure 1.1 is presented at ~121% of official GNP on a pure market-production basis and ~180% when housework is added. However, ST explicitly state they argue against adding imputed 'services' of durables or the value of leisure time (unlike most other extended accounts). The housework supplement is included in Figure 1.1 only for comparability purposes, not as a recommended component of ST's preferred measure.",
+      "source_ref": "ST_1994, Ch1 pp.15-16, footnote 24; chunk_04 page 35"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "The comparison of GFP measures across the seven accounts in Figure 1.1 uses different benchmark years for different authors (all mid-1960s but not identical: NT and Z for 1965; JF, K, E, and ST for 1966; R for 1969). This limits strict comparability. The extreme upper bound (JF at 468%) is almost entirely driven by leisure-time valuation and human-capital investment, which ST explicitly reject as production activities.",
+      "source_ref": "ST_1994, Fig 1.1 caption, book page 16; chunk_04 page 36"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations. Cambridge University Press."
+    },
+    {
+      "id": "Eisner_1988",
+      "full": "Eisner, Robert. 1988. 'Extended Accounts for National Income and Product.' Journal of Economic Literature 26(4): 1611-1684."
+    },
+    {
+      "id": "Juillard_1988",
+      "full": "Juillard, Michel. 1988. Un modèle macro-économique pour l'économie américaine. PhD dissertation. (Input-output database adjustments documented in ST 1994 Appendix A.)"
+    }
+  ],
+  "methodology_summary": "T201 (Alternative GFP Measures) reproduces Shaikh and Tonak's Figure 1.1 comparison of seven gross final product estimates relative to official BEA GNP for the mid-1960s benchmark. The ST measure applies a classical production/nonproduction distinction: trading, military, police, and administrative activities are excluded as social consumption rather than counted as output, in contrast to orthodox GDP/GNP. The series maps to book Table 2.1 (annual data, 1948-1989, billions of dollars) and is currently wave3_planned, requiring digitization of the book table and implementation of the Chapter 2 theoretical framework — specifically the productive/unproductive labor classification — before construction can proceed. The planned construction consists of a single load step (subseries T201-A from ch02/Table2_1_AlternativeGFP.csv) with no current extension beyond 1989.",
+  "known_issues": [
+    "Series is wave3_planned; no source CSV yet exists at ch02/Table2_1_AlternativeGFP.csv",
+    "Loader L14 and Processor P15 are specified in registry but not yet implemented",
+    "Figure 1.1 comparison uses different benchmark years across authors (1965-1969), limiting strict comparability",
+    "ST preferred pure-market estimate (~121% of GNP) differs from the housework-supplemented estimate (~180%) shown in Figure 1.1 for comparability purposes",
+    "No extension methodology specified for post-1989 period",
+    "Reference values and expected range not yet populated in series registry validation block",
+    "Chapter 2 theoretical framework implementation is a prerequisite for wave 3 work"
+  ],
+  "cross_references": ["T501", "T502", "T503", "T504"],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_03/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_04/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_05/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_26/full_transcription.md"
+    ],
+    "L3_data_sources": [
+      "BEA benchmark input-output tables (1947, 1958, 1963, 1967, 1972, 1977)",
+      "ST 1994 Table 2.1 (to be digitized as ch02/Table2_1_AlternativeGFP.csv)",
+      "Eisner (1988, table S.5) — comparative GFP estimates for Figure 1.1"
+    ],
+    "L5_validation": [
+      "Eisner (1988) — provides benchmark comparison values for Figure 1.1",
+      "ST 1994 Table 5.4 — underlying ST market-production estimate used in Figure 1.1"
+    ]
+  }
+}

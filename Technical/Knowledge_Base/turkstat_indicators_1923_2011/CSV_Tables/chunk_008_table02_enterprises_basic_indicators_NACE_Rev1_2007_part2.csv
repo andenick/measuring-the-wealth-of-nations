@@ -1,0 +1,17 @@
+Table 11.14 - Basic Indicators on Enterprises by Economic Activity (NACE Rev.1.1) 2007 - Part 2 (Turnover Production Value-Added)
+Source: TurkStat Statistical Indicators 1923-2011 chunk_008 page 285
+Unit: Million_TL
+Year: 2007
+NACE_Code,Activity_TR,Activity_EN,Turnover_Ciro_Million_TL,Production_Value_Uretim_Degeri_Million_TL,Value_Added_at_Factor_Cost_Million_TL
+Total,Genel toplam,General total,1558920172502,882089413338,231880826661
+C,Madencilik ve taşocakçılığı,Mining and quarrying,11120606954,11609065928,4550758134
+D,İmalat,Manufacturing,435892945051,414732875431,79000058982
+E,Elektrik gaz buhar ve sıcak su üretimi ve dağıtımı,Electricity gas and water supply,55690006760,55683635494,8511592765
+F,İnşaat,Construction,78675182689,86540194503,14854975768
+G,Toptan ve perakende ticaret motorlu taşıt onarımı,Wholesale and retail trade repair of motor vehicles,773399821155,122540574986,63092786793
+H,Oteller ve lokantalar,Hotels and restaurants,20117889966,20076478727,5566518369
+I,Ulaştırma depolama ve haberleşme,Transport storage and communications,121056637812,107558668158,29387218720
+K,Gayrimenkul kiralama ve iş faaliyetleri,Real estate renting and business activities,42287840657,42740163959,17381087286
+M,Eğitim,Education,4840589090,4838384098,2739080543
+N,Sağlık işleri ve sosyal hizmetler,Health and social work,7918057670,7903278908,3918238314
+O,Diğer sosyal toplumsal ve kişisel hizmet faaliyetleri,Other community social and personal service activities,7920594698,7866093146,2878510987

@@ -91,12 +91,12 @@ def load():
     # T31600 (Table 3.16): Govt Consumption Expenditures by Function
     t316 = _load_nipa_table("bea_nipa_T31600_govt_consumption_by_function.csv", {
         "total_govt_consumption": 1,
-        "national_defense": 2,
-        "education": 15,
-        "health": 21,
-        "income_security": 25,
-        "transportation": 29,
-        "public_order_safety": 33,
+        "national_defense": 7,
+        "education": 30,
+        "health": 28,
+        "income_security": 36,
+        "transportation": 14,
+        "public_order_safety": 8,
     })
     if not t316.empty:
         t316.index.name = "year"

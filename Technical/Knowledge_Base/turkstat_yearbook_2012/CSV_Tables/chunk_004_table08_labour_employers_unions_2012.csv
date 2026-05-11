@@ -1,0 +1,36 @@
+Table_11.15,Labour and employers unions by economic activity,2012
+Unit: Number of unions
+Source: Ministry of Labour and Social Security; TurkStat Statistical Yearbook 2012 p.195
+
+Economic_Activity,Labour_Unions,Employers_Unions
+TOTAL,103,47
+Agriculture forestry hunting and fishing,5,0
+Mining,4,0
+Manufacturing industry TOTAL,64,34
+  Petroleum chemical and rubber,4,4
+  Food,3,8
+  Sugar,1,1
+  Textile,10,3
+  Leather,1,1
+  Wood,3,1
+  Paper,3,1
+  Printing and publishing,2,0
+  Cement non-metallic and glass,4,4
+  Metalic,8,3
+  Journalism,3,1
+  Shipping union,2,0
+Banking and insurance,5,0
+Construction,3,5
+Energy,4,0
+Commerce office education and fine arts,8,2
+Transportation communication and storage TOTAL,10,3
+  Highway transportation,4,2
+  Railway transportation,1,0
+  Shipping,1,1
+  Air transportation,1,0
+  Storage and warehouses,1,0
+  Communication,2,0
+Health,3,2
+Lodging and recreational places,7,2
+National defense,1,0
+General issues,9,4

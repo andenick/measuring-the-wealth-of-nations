@@ -1,0 +1,595 @@
+{
+  "version": "1.0.0",
+  "generated": "2026-03-21",
+  "series_count": 26,
+  "column_count": 58,
+  "columns": {
+    "T501-A": {
+      "series_id": "T501",
+      "name": "Book Table E.2",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1961
+      ],
+      "units": "billions_dollars"
+    },
+    "T501-COMBINED": {
+      "series_id": "T501",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1929,
+        2025
+      ],
+      "units": "billions_dollars"
+    },
+    "T502-A": {
+      "series_id": "T502",
+      "name": "Book Table E.2",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1961
+      ],
+      "units": "billions_dollars"
+    },
+    "T502-COMBINED": {
+      "series_id": "T502",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1929,
+        2025
+      ],
+      "units": "billions_dollars"
+    },
+    "T503-A": {
+      "series_id": "T503",
+      "name": "Book Table E.2",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1961
+      ],
+      "units": "billions_dollars"
+    },
+    "T503-COMBINED": {
+      "series_id": "T503",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1929,
+        2025
+      ],
+      "units": "billions_dollars"
+    },
+    "T504-A": {
+      "series_id": "T504",
+      "name": "Book Table 5.5",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "billions_dollars"
+    },
+    "T504-COMBINED": {
+      "series_id": "T504",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "billions_dollars"
+    },
+    "T505-A": {
+      "series_id": "T505",
+      "name": "Book Table 5.5",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "billions_dollars"
+    },
+    "T505-COMBINED": {
+      "series_id": "T505",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "billions_dollars"
+    },
+    "T506-A": {
+      "series_id": "T506",
+      "name": "Book Table 5.7",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "ratio"
+    },
+    "T506-COMBINED": {
+      "series_id": "T506",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "ratio"
+    },
+    "T507-A": {
+      "series_id": "T507",
+      "name": "Book Table 5.7",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "ratio"
+    },
+    "T507-COMBINED": {
+      "series_id": "T507",
+      "name": "T507-COMBINED",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "see_registry"
+    },
+    "T508-A": {
+      "series_id": "T508",
+      "name": "Book Table E.2",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1961
+      ],
+      "units": "billions_dollars"
+    },
+    "T508-COMBINED": {
+      "series_id": "T508",
+      "name": "T508-COMBINED",
+      "source": "S&T 1994",
+      "period": [
+        1929,
+        2025
+      ],
+      "units": "see_registry"
+    },
+    "T509-A": {
+      "series_id": "T509",
+      "name": "Book Table E.2",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1961
+      ],
+      "units": "billions_dollars"
+    },
+    "T509-COMBINED": {
+      "series_id": "T509",
+      "name": "T509-COMBINED",
+      "source": "S&T 1994",
+      "period": [
+        1929,
+        2025
+      ],
+      "units": "see_registry"
+    },
+    "T510-A": {
+      "series_id": "T510",
+      "name": "Book Table 5.7",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "ratio"
+    },
+    "T510-COMBINED": {
+      "series_id": "T510",
+      "name": "T510-COMBINED",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "see_registry"
+    },
+    "T511-A": {
+      "series_id": "T511",
+      "name": "Book Table 5.7",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "share"
+    },
+    "T511-EXT": {
+      "series_id": "T511",
+      "name": "Extended via BLS CES",
+      "source": "BLS CES",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "share"
+    },
+    "T511-COMBINED": {
+      "series_id": "T511",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "share"
+    },
+    "T512-A": {
+      "series_id": "T512",
+      "name": "Book Table 5.7",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "share"
+    },
+    "T512-EXT": {
+      "series_id": "T512",
+      "name": "Extended via BLS CES",
+      "source": "BLS CES",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "share"
+    },
+    "T512-COMBINED": {
+      "series_id": "T512",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "share"
+    },
+    "T513-A": {
+      "series_id": "T513",
+      "name": "Book Table 5.11",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "rate"
+    },
+    "T513-COMBINED": {
+      "series_id": "T513",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "rate"
+    },
+    "T514-A": {
+      "series_id": "T514",
+      "name": "Book Table 5.11",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "rate"
+    },
+    "T514-COMBINED": {
+      "series_id": "T514",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "rate"
+    },
+    "T515-A": {
+      "series_id": "T515",
+      "name": "Book Table E.3",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "thousands"
+    },
+    "T515-COMBINED": {
+      "series_id": "T515",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "thousands"
+    },
+    "T516-A": {
+      "series_id": "T516",
+      "name": "Book Table E.3",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "thousands"
+    },
+    "T516-COMBINED": {
+      "series_id": "T516",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "thousands"
+    },
+    "T601-A": {
+      "series_id": "T601",
+      "name": "Book Table 6.1",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "billions_dollars"
+    },
+    "T601-COMBINED": {
+      "series_id": "T601",
+      "name": "T601-COMBINED",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "see_registry"
+    },
+    "T602-A": {
+      "series_id": "T602",
+      "name": "Book Table 6.1",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "billions_dollars"
+    },
+    "T602-COMBINED": {
+      "series_id": "T602",
+      "name": "T602-COMBINED",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "see_registry"
+    },
+    "T603-A": {
+      "series_id": "T603",
+      "name": "Book Table 6.1",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "billions_dollars"
+    },
+    "T603-COMBINED": {
+      "series_id": "T603",
+      "name": "T603-COMBINED",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "see_registry"
+    },
+    "T604-A": {
+      "series_id": "T604",
+      "name": "Book Table 6.1",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "billions_dollars"
+    },
+    "T604-COMBINED": {
+      "series_id": "T604",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "billions_dollars"
+    },
+    "T605-A": {
+      "series_id": "T605",
+      "name": "Book Table 6.2",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "billions_dollars"
+    },
+    "T605-COMBINED": {
+      "series_id": "T605",
+      "name": "T605-COMBINED",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "see_registry"
+    },
+    "T606-A": {
+      "series_id": "T606",
+      "name": "Book Table 6.2",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "billions_dollars"
+    },
+    "T606-COMBINED": {
+      "series_id": "T606",
+      "name": "T606-COMBINED",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "see_registry"
+    },
+    "T607-A": {
+      "series_id": "T607",
+      "name": "Book Table 6.3",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        2025
+      ],
+      "units": "billions_dollars"
+    },
+    "T607-COMBINED": {
+      "series_id": "T607",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        2025
+      ],
+      "units": "billions_dollars"
+    },
+    "T608-A": {
+      "series_id": "T608",
+      "name": "Book Table 6.4",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        2024
+      ],
+      "units": "ratio"
+    },
+    "T608-COMBINED": {
+      "series_id": "T608",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        2024
+      ],
+      "units": "ratio"
+    },
+    "T609-A": {
+      "series_id": "T609",
+      "name": "Book Table 6.4",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        2025
+      ],
+      "units": "share"
+    },
+    "T609-COMBINED": {
+      "series_id": "T609",
+      "name": "Full series",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        2025
+      ],
+      "units": "share"
+    },
+    "T901-T506_EXPLOITATION_RATE": {
+      "series_id": "T901",
+      "name": "T901-T506_EXPLOITATION_RATE",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "see_registry"
+    },
+    "T901-T511_PRODUCTIVE_LABOR_SHARE": {
+      "series_id": "T901",
+      "name": "T901-T511_PRODUCTIVE_LABOR_SHARE",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "see_registry"
+    },
+    "T901-T512_PRODUCTIVE_WAGE_SHARE": {
+      "series_id": "T901",
+      "name": "T901-T512_PRODUCTIVE_WAGE_SHARE",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "see_registry"
+    },
+    "T901-T513_MARXIAN_PROFIT_RATE": {
+      "series_id": "T901",
+      "name": "T901-T513_MARXIAN_PROFIT_RATE",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "see_registry"
+    },
+    "T901-T514_CAPACITY_ADJ_PROFIT_RATE": {
+      "series_id": "T901",
+      "name": "T901-T514_CAPACITY_ADJ_PROFIT_RATE",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "see_registry"
+    },
+    "T901-T608_NSW_V_STAR": {
+      "series_id": "T901",
+      "name": "T901-T608_NSW_V_STAR",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        2024
+      ],
+      "units": "see_registry"
+    },
+    "T504-EXT": {
+      "series_id": "T504",
+      "subseries_id": "T504-EXT",
+      "name": "V* Extension (BEA NIPA)",
+      "source": "BEA NIPA 6.2D",
+      "period": "1990-2024"
+    }
+  }
+}

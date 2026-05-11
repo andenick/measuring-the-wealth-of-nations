@@ -193,6 +193,8 @@ def fetch_bea_gdp_by_industry(
 
     data = resp.json()
     results = data.get("BEAAPI", {}).get("Results", {})
+    if isinstance(results, list):
+        results = results[0] if results else {}
     observations = results.get("Data", [])
 
     date_str = date.today().isoformat()

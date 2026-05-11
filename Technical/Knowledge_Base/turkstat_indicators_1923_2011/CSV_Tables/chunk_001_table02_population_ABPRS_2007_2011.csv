@@ -1,0 +1,12 @@
+Table_Reference,Turkish_Title,English_Title
+1.2,"Nüfus, yıllık nüfus artış hızı, il, ilçe, belde belediyesi, köy sayısı ve nüfus yoğunluğu (ADNKS)","Population, annual growth rate of population, number of provinces, districts, towns, villages and population density (ABPRS)"
+
+Year,Population,Annual_Growth_Rate_permille,Num_Provinces,Num_Districts,Num_Towns_Submunicipalities,Num_Villages,Population_Density_per_km2
+2007,70586256,,81,850,2294,34438,92
+2008,71517100,13.10,81,892,1981,34349,93
+2009,72561312,14.50,81,892,1978,34367,94
+2010,73722988,15.90,81,892,1977,34402,96
+2011,74724269,13.49,81,892,1977,34425,97
+
+Source: Address Based Population Registration System (ABPRS)
+Note: Districts count excludes province centers.

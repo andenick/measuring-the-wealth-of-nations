@@ -1,0 +1,75 @@
+{
+  "series_id": "N1702",
+  "series_name": "NZ Rate of Surplus Value (Cronin 2001)",
+  "study": "study_08_cronin_nz_2001",
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/Knowledge_Base/external_papers/international/2001_Cronin_New_Zealand/SUMMARY.md",
+    "Technical/Knowledge_Base/external_papers/international/2001_Cronin_New_Zealand/body_text.md",
+    "Technical/Knowledge_Base/external_papers/international/2001_Cronin_New_Zealand/tables.csv"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "s/v is the rate of surplus-value (rate of exploitation) — the ratio of surplus-value to variable capital. Variable capital (v) is the wage payments to productive workers only, excluding unproductive workers within productive-sector firms. Surplus-value (s) is the remainder of total value after subtracting constant capital and variable capital. The ratio is expressed as a percentage (e.g., 206% means surplus-value is 2.06 times variable capital). Derived via the Shaikh-Tonak methodology applied to NZSNA data for 25 NZ production groups.",
+      "source_ref": "Cronin_2001, body_text.md Section 3 (Variable Capital, Surplus-Value); SUMMARY.md"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Series N1702-A: Digitized from Cronin (2001) Table 2, column s/v, 1972-1995 (24 observations). Original table title: 'Rate of surplus-value and value composition of capital', Review of Political Economy 13(3), p. 15 (Table 2). Source CSV: Technical/Knowledge_Base/external_papers/international/2001_Cronin_New_Zealand/tables.csv. Values are stored as decimals (e.g., 206% = 2.06).",
+      "source_ref": "Cronin_2001, Table 2; tables.csv rows 27-52"
+    },
+    {
+      "entry_type": "empirical_values",
+      "content": "Annual s/v values (decimal): 1972=2.06, 1973=2.26, 1974=2.16, 1975=1.69, 1976=1.85, 1977=2.23, 1978=2.04, 1979=2.08, 1980=2.09, 1981=2.05, 1982=1.99, 1983=2.03, 1984=2.28, 1985=2.43, 1986=2.53, 1987=2.78, 1988=2.72, 1989=2.80, 1990=2.77, 1991=2.78, 1992=2.80, 1993=2.86, 1994=3.09, 1995=3.07.",
+      "source_ref": "Cronin_2001, Table 2; tables.csv"
+    },
+    {
+      "entry_type": "key_finding",
+      "content": "s/v rose from 206% in 1972 to 307% in 1995, a 49% increase over the period. The sharpest rise occurred 1984-1989: a 37% jump from 228% to 280%, directly associated with Rogernomics deregulation and increased labor exploitation. A further rise post-1991 (to 309% in 1994) is linked by Cronin to the Employment Contracts Act of 1991 which further deregulated labor markets. Despite this rising exploitation, productive accumulation stalled after 1989 because rising value composition of capital offset the gains.",
+      "source_ref": "Cronin_2001, body_text.md Section 5; SUMMARY.md"
+    },
+    {
+      "entry_type": "periodization",
+      "content": "Three phases: (1) 1972-1983 — s/v relatively stable around 200%, ranging 169%-223%; exploitation not the source of the profitability crisis of this period, which was driven instead by rising value composition. (2) 1984-1989 — s/v jumped 37% from 228% to 280%; this is the Rogernomics structural break; rising exploitation the engine of recovery. (3) 1990-1995 — s/v continued rising to 307%; however the productive accumulation rate plateaued as rising c/v counteracted the exploitation gains.",
+      "source_ref": "Cronin_2001, body_text.md Section 5; SUMMARY.md"
+    },
+    {
+      "entry_type": "comparison",
+      "content": "Cronin notes that the conventional proxy for s/v — the ratio of operating surplus to employee compensation — understates the rate of surplus-value by a factor of roughly 3-4 for NZ (as also found by Shaikh-Tonak for the USA). The conventional ratio shows little variation 1972-1995, while the classical s/v rises by a third from the mid-1980s (Fig 9 in Cronin). NZ s/v is broadly similar in magnitude to USA estimates from Shaikh-Tonak (1994) but more volatile.",
+      "source_ref": "Cronin_2001, body_text.md Section 4 (Conventional Proxy Measures); SUMMARY.md"
+    },
+    {
+      "entry_type": "comparison",
+      "content": "Pearce (1986), the only prior systematic NZ classical estimate, underestimated s/v by approximately 66% (one-third the size of Cronin's estimates) because Pearce included unproductive sales and monetary transaction workers in variable capital — overstating v and understating s.",
+      "source_ref": "Cronin_2001, body_text.md Section 4 (Comparison with Earlier Studies)"
+    }
+  ],
+  "citations": [
+    {
+      "id": "Cronin_2001",
+      "full": "Cronin, Bruce. 2001. 'Productive and Unproductive Capital: A mapping of the New Zealand system of national accounts to classical economic categories, 1972-95.' Review of Political Economy 13(3): 309-327. https://doi.org/10.1080/09538250120055168"
+    },
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    }
+  ],
+  "methodology_summary": "Rate of surplus-value (s/v) directly digitized from Cronin (2001) Table 2. Derived from NZSNA mapped to classical categories for 25 NZ production groups, 1972-1995. Variable capital restricted to productive workers only; surplus-value is the classical residual. No extension beyond 1995.",
+  "known_issues": [
+    "No post-1995 extension available from this source",
+    "Variable capital requires disaggregation of employee compensation to remove unproductive workers within productive industries — Cronin follows Shaikh-Tonak procedure but NZ-specific adjustments introduce some uncertainty",
+    "Some inter-industry years interpolated using annual NZSNA data"
+  ],
+  "cross_references": ["N1701", "N1703", "N1704"],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/Knowledge_Base/external_papers/international/2001_Cronin_New_Zealand/SUMMARY.md",
+      "Technical/Knowledge_Base/external_papers/international/2001_Cronin_New_Zealand/body_text.md",
+      "Technical/Knowledge_Base/external_papers/international/2001_Cronin_New_Zealand/tables.csv"
+    ],
+    "L3_data_sources": ["Cronin 2001 Table 2 (tables.csv)"],
+    "L5_validation": ["reference_values: 1972=2.06, 1984=2.28, 1995=3.07"]
+  }
+}

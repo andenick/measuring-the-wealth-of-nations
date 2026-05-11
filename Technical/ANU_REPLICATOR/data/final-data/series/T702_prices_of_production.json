@@ -1,0 +1,42 @@
+{
+  "1997": {
+    "slope": 0.0526,
+    "r_squared": 0.003,
+    "mean_abs_deviation": 0.8676,
+    "lambda_m": 0.00159614,
+    "r_bar_labor": 4.1231,
+    "n_sectors": 58
+  },
+  "2002": {
+    "slope": 0.0929,
+    "r_squared": 0.0096,
+    "mean_abs_deviation": 0.7889,
+    "lambda_m": 0.00115414,
+    "r_bar_labor": 4.2862,
+    "n_sectors": 58
+  },
+  "2007": {
+    "slope": 0.1331,
+    "r_squared": 0.0295,
+    "mean_abs_deviation": 0.7809,
+    "lambda_m": 0.00083395,
+    "r_bar_labor": 5.0772,
+    "n_sectors": 58
+  },
+  "2012": {
+    "slope": 0.1395,
+    "r_squared": 0.0352,
+    "mean_abs_deviation": 0.7927,
+    "lambda_m": 0.00071521,
+    "r_bar_labor": 5.8549,
+    "n_sectors": 58
+  },
+  "2017": {
+    "slope": 0.1537,
+    "r_squared": 0.0331,
+    "mean_abs_deviation": 0.72,
+    "lambda_m": 0.00061645,
+    "r_bar_labor": 5.7979,
+    "n_sectors": 58
+  }
+}

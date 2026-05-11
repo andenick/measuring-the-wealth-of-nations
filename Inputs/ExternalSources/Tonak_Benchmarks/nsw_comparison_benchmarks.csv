@@ -1,0 +1,25 @@
+year,nsw_sign,source,notes
+1952,negative,Shaikh & Tonak 1987 paper,NSW < 0; workers net payers to state
+1960,negative,Shaikh & Tonak 1987 paper,NSW < 0
+1970,negative,Shaikh & Tonak 1987 paper,NSW < 0
+1975,positive,AS2 calculation (DIV-003),NSW > 0 (+$19653M) — deep recession; countercyclical benefits exceeded tax burden
+1976,positive,AS2 calculation (DIV-003),NSW > 0 (+$4929M) — recession aftermath
+1980,negative,Shaikh & Tonak 1994 book,NSW < 0
+1983,positive,AS2 calculation (DIV-003),NSW > 0 (+$8992M) — deep recession; countercyclical benefits exceeded tax burden
+1985,negative,Shaikh & Tonak 1987 paper,End of 1987 paper coverage
+1989,negative,Shaikh & Tonak 1994 book,End of book period; NSW < 0
+1997,negative,Shaikh & Tonak 2002 paper,Extended coverage; NSW < 0
+,,,
+,,,METHODOLOGY NOTES:
+,,,Tax allocation: income-proportional method (book default)
+,,,Tax rate T/EC: 0.18 (1952) -> 0.32 (1988) per p.160
+,,,Benefit rate B/EC: 0.11 (1952) -> 0.28 (1988) per p.160
+,,,Worker share proxy: compensation/personal income
+,,,Property tax allocation: 50% to workers (standard assumption)
+,,,Defense exclusion: ~40% of federal consumption
+,,,
+,,,SOURCE FILES (manual extraction required):
+,,,NSWComparisons-EAT_NA.docx — DOCX binary; could not be parsed automatically
+,,,Appendix N_Sources.docx — DOCX binary; could not be parsed automatically
+,,,[2025.10.02] [1987] Shaikh & Tonak - The Welfare State and the Myth of the Social Wage.pdf — PDF
+,,,[2002] Shaikh & Tonak - The Rise and Fall of the U.S. Welfare State.pdf — PDF

@@ -129,6 +129,11 @@ def _process_t201():
     cfc = orthodox["CFC"] if "CFC" in orthodox.columns else pd.Series(dtype=float)
     ndp = orthodox["NDP"] if "NDP" in orthodox.columns else pd.Series(dtype=float)
 
+    # Convert to billions if values are in raw dollars (> 1e6 indicates raw NIPA)
+    for s in [gdp, cfc, ndp]:
+        if len(s) > 0 and s.dropna().median() > 1e6:
+            s[:] = s / 1e9
+
     common_years = sorted(set(gfp.dropna().index) & set(gdp.dropna().index))
     if not common_years:
         steps.append("T201: no overlapping years between GFP and GDP")

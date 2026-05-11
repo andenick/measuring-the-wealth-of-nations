@@ -32,6 +32,15 @@ Inputs/API_Data/
 Inputs/NIPA/
 Inputs/BLS/
 Inputs/ExternalSources/Mohun/
+Inputs/ExternalSources/Turkey2022/*.pdf
+Inputs/ExternalSources/Turkey2022/muhasebat/*.pdf
+Inputs/ExternalSources/Cronin2001/*.pdf
+
+# API cache (regenerable)
+Technical/NickyData/data/cache/
+
+# Replication package ZIP (regenerable)
+Outputs/*.zip
 
 # Keep these input directories:
 # Inputs/BookTables/ (book chopped CSVs, small)

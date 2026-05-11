@@ -1,0 +1,1025 @@
+{
+  "project": "Shaikh_Tonak",
+  "generated": "2026-03-19T20:53:41.801021",
+  "total_relationships": 169,
+  "relationship_types": {
+    "same_author": 115,
+    "same_topic": 54
+  },
+  "relationships": [
+    {
+      "type": "same_author",
+      "source": "[1984] Semmler - Competition, Monopoly, and Differential Profit Rates",
+      "target": "1984_Semmler_Competition_Monopoly",
+      "detail": "Author: Semmler"
+    },
+    {
+      "type": "same_author",
+      "source": "[1984] Semmler - Competition, Monopoly, and Differential Profit Rates",
+      "target": "1985_Semmler_Nonlinear_Cycles",
+      "detail": "Author: Semmler"
+    },
+    {
+      "type": "same_author",
+      "source": "[1984] Semmler - Competition, Monopoly, and Differential Profit Rates",
+      "target": "[2025.10.02] [1984] Semmler - Competition, Monopoly, and Differential Profit Rates",
+      "detail": "Author: Semmler"
+    },
+    {
+      "type": "same_author",
+      "source": "[1984] Semmler - Competition, Monopoly, and Differential Profit Rates",
+      "target": "[2025.10.02] [1985] Semmler - Competition, Instability, and Nonlinear Cycles - Conference Proceedings",
+      "detail": "Author: Semmler"
+    },
+    {
+      "type": "same_author",
+      "source": "1984_Semmler_Competition_Monopoly",
+      "target": "1985_Semmler_Nonlinear_Cycles",
+      "detail": "Author: Semmler"
+    },
+    {
+      "type": "same_author",
+      "source": "1984_Semmler_Competition_Monopoly",
+      "target": "[2025.10.02] [1984] Semmler - Competition, Monopoly, and Differential Profit Rates",
+      "detail": "Author: Semmler"
+    },
+    {
+      "type": "same_author",
+      "source": "1984_Semmler_Competition_Monopoly",
+      "target": "[2025.10.02] [1985] Semmler - Competition, Instability, and Nonlinear Cycles - Conference Proceedings",
+      "detail": "Author: Semmler"
+    },
+    {
+      "type": "same_author",
+      "source": "1985_Semmler_Nonlinear_Cycles",
+      "target": "[2025.10.02] [1984] Semmler - Competition, Monopoly, and Differential Profit Rates",
+      "detail": "Author: Semmler"
+    },
+    {
+      "type": "same_author",
+      "source": "1985_Semmler_Nonlinear_Cycles",
+      "target": "[2025.10.02] [1985] Semmler - Competition, Instability, and Nonlinear Cycles - Conference Proceedings",
+      "detail": "Author: Semmler"
+    },
+    {
+      "type": "same_author",
+      "source": "[2025.10.02] [1984] Semmler - Competition, Monopoly, and Differential Profit Rates",
+      "target": "[2025.10.02] [1985] Semmler - Competition, Instability, and Nonlinear Cycles - Conference Proceedings",
+      "detail": "Author: Semmler"
+    },
+    {
+      "type": "same_author",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "1984_Tonak_State_Revenues",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "1987_Shaikh_Tonak_Social_Wage_Myth",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "2002_Shaikh_Tonak_Welfare_State",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "2022_Karabacak_Tonak_NSW_Turkey",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "2024_Savran_Tonak_Marx_Capital",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "TM_[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1984_Tonak_State_Revenues",
+      "target": "1987_Shaikh_Tonak_Social_Wage_Myth",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1984_Tonak_State_Revenues",
+      "target": "2002_Shaikh_Tonak_Welfare_State",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1984_Tonak_State_Revenues",
+      "target": "2022_Karabacak_Tonak_NSW_Turkey",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1984_Tonak_State_Revenues",
+      "target": "2024_Savran_Tonak_Marx_Capital",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1984_Tonak_State_Revenues",
+      "target": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1984_Tonak_State_Revenues",
+      "target": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1984_Tonak_State_Revenues",
+      "target": "TM_[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1984_Tonak_State_Revenues",
+      "target": "[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1984_Tonak_State_Revenues",
+      "target": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1984_Tonak_State_Revenues",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1987_Shaikh_Tonak_Social_Wage_Myth",
+      "target": "2002_Shaikh_Tonak_Welfare_State",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1987_Shaikh_Tonak_Social_Wage_Myth",
+      "target": "2022_Karabacak_Tonak_NSW_Turkey",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1987_Shaikh_Tonak_Social_Wage_Myth",
+      "target": "2024_Savran_Tonak_Marx_Capital",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1987_Shaikh_Tonak_Social_Wage_Myth",
+      "target": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1987_Shaikh_Tonak_Social_Wage_Myth",
+      "target": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1987_Shaikh_Tonak_Social_Wage_Myth",
+      "target": "TM_[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1987_Shaikh_Tonak_Social_Wage_Myth",
+      "target": "[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1987_Shaikh_Tonak_Social_Wage_Myth",
+      "target": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "1987_Shaikh_Tonak_Social_Wage_Myth",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2002_Shaikh_Tonak_Welfare_State",
+      "target": "2022_Karabacak_Tonak_NSW_Turkey",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2002_Shaikh_Tonak_Welfare_State",
+      "target": "2024_Savran_Tonak_Marx_Capital",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2002_Shaikh_Tonak_Welfare_State",
+      "target": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2002_Shaikh_Tonak_Welfare_State",
+      "target": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2002_Shaikh_Tonak_Welfare_State",
+      "target": "TM_[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2002_Shaikh_Tonak_Welfare_State",
+      "target": "[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2002_Shaikh_Tonak_Welfare_State",
+      "target": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2002_Shaikh_Tonak_Welfare_State",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2022_Karabacak_Tonak_NSW_Turkey",
+      "target": "2024_Savran_Tonak_Marx_Capital",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2022_Karabacak_Tonak_NSW_Turkey",
+      "target": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2022_Karabacak_Tonak_NSW_Turkey",
+      "target": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2022_Karabacak_Tonak_NSW_Turkey",
+      "target": "TM_[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2022_Karabacak_Tonak_NSW_Turkey",
+      "target": "[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2022_Karabacak_Tonak_NSW_Turkey",
+      "target": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2022_Karabacak_Tonak_NSW_Turkey",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2024_Savran_Tonak_Marx_Capital",
+      "target": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2024_Savran_Tonak_Marx_Capital",
+      "target": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2024_Savran_Tonak_Marx_Capital",
+      "target": "TM_[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2024_Savran_Tonak_Marx_Capital",
+      "target": "[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2024_Savran_Tonak_Marx_Capital",
+      "target": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2024_Savran_Tonak_Marx_Capital",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "target": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "target": "TM_[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "target": "[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "target": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "TM_[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "TM_[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "target": "[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "TM_[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "target": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "TM_[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "target": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Author: Tonak"
+    },
+    {
+      "type": "same_author",
+      "source": "[2001] Cronin - Productive and Unproductive Capital A mapping of the New Zealand system of national accounts to classical economic categories 1972-95",
+      "target": "2001_Cronin_New_Zealand",
+      "detail": "Author: Cronin"
+    },
+    {
+      "type": "same_author",
+      "source": "[2002] Matthews - An Econometric Model of the Circuit of Capital",
+      "target": "2002_Matthews",
+      "detail": "Author: Matthews"
+    },
+    {
+      "type": "same_author",
+      "source": "[2002] Matthews - An Econometric Model of the Circuit of Capital",
+      "target": "2002_Matthews_Econometric_Model",
+      "detail": "Author: Matthews"
+    },
+    {
+      "type": "same_author",
+      "source": "2002_Matthews",
+      "target": "2002_Matthews_Econometric_Model",
+      "detail": "Author: Matthews"
+    },
+    {
+      "type": "same_author",
+      "source": "[2005] Mohun - On measuring the wealth of nations the US economy, 1964-2001",
+      "target": "[2013] Mohun - Unproductive Labor in the US Economy 1964-2010",
+      "detail": "Author: Mohun"
+    },
+    {
+      "type": "same_author",
+      "source": "[2005] Mohun - On measuring the wealth of nations the US economy, 1964-2001",
+      "target": "2005_Mohun_US_1964_2001",
+      "detail": "Author: Mohun"
+    },
+    {
+      "type": "same_author",
+      "source": "[2005] Mohun - On measuring the wealth of nations the US economy, 1964-2001",
+      "target": "2013_Mohun_Unproductive_1964_2010",
+      "detail": "Author: Mohun"
+    },
+    {
+      "type": "same_author",
+      "source": "[2013] Mohun - Unproductive Labor in the US Economy 1964-2010",
+      "target": "2005_Mohun_US_1964_2001",
+      "detail": "Author: Mohun"
+    },
+    {
+      "type": "same_author",
+      "source": "[2013] Mohun - Unproductive Labor in the US Economy 1964-2010",
+      "target": "2013_Mohun_Unproductive_1964_2010",
+      "detail": "Author: Mohun"
+    },
+    {
+      "type": "same_author",
+      "source": "2005_Mohun_US_1964_2001",
+      "target": "2013_Mohun_Unproductive_1964_2010",
+      "detail": "Author: Mohun"
+    },
+    {
+      "type": "same_author",
+      "source": "[2011] Paitardis & Tsoulfidis - the Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the U.S. Economy",
+      "target": "[2019] Tsoulfidis & Paitaridis - Capital intensity, unproductive activities and the Great Recession in the US economy",
+      "detail": "Author: Tsoulfidis"
+    },
+    {
+      "type": "same_author",
+      "source": "[2011] Paitardis & Tsoulfidis - the Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the U.S. Economy",
+      "target": "2011_Paitaridis_Tsoulfidis",
+      "detail": "Author: Tsoulfidis"
+    },
+    {
+      "type": "same_author",
+      "source": "[2011] Paitardis & Tsoulfidis - the Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the U.S. Economy",
+      "target": "2019_Tsoulfidis_Paitaridis_Great_Recession",
+      "detail": "Author: Tsoulfidis"
+    },
+    {
+      "type": "same_author",
+      "source": "[2011] Paitardis & Tsoulfidis - the Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the U.S. Economy",
+      "target": "[2012] Paitaridis & Tsoulfidis - The Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the US Economy",
+      "detail": "Author: Tsoulfidis"
+    },
+    {
+      "type": "same_author",
+      "source": "[2019] Tsoulfidis & Paitaridis - Capital intensity, unproductive activities and the Great Recession in the US economy",
+      "target": "2011_Paitaridis_Tsoulfidis",
+      "detail": "Author: Tsoulfidis"
+    },
+    {
+      "type": "same_author",
+      "source": "[2019] Tsoulfidis & Paitaridis - Capital intensity, unproductive activities and the Great Recession in the US economy",
+      "target": "2019_Tsoulfidis_Paitaridis_Great_Recession",
+      "detail": "Author: Tsoulfidis"
+    },
+    {
+      "type": "same_author",
+      "source": "[2019] Tsoulfidis & Paitaridis - Capital intensity, unproductive activities and the Great Recession in the US economy",
+      "target": "[2012] Paitaridis & Tsoulfidis - The Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the US Economy",
+      "detail": "Author: Tsoulfidis"
+    },
+    {
+      "type": "same_author",
+      "source": "2011_Paitaridis_Tsoulfidis",
+      "target": "2019_Tsoulfidis_Paitaridis_Great_Recession",
+      "detail": "Author: Tsoulfidis"
+    },
+    {
+      "type": "same_author",
+      "source": "2011_Paitaridis_Tsoulfidis",
+      "target": "[2012] Paitaridis & Tsoulfidis - The Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the US Economy",
+      "detail": "Author: Tsoulfidis"
+    },
+    {
+      "type": "same_author",
+      "source": "2019_Tsoulfidis_Paitaridis_Great_Recession",
+      "target": "[2012] Paitaridis & Tsoulfidis - The Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the US Economy",
+      "detail": "Author: Tsoulfidis"
+    },
+    {
+      "type": "same_author",
+      "source": "[2019] Tsoulfidis & Paitaridis - Capital intensity, unproductive activities and the Great Recession in the US economy",
+      "target": "2011_Paitaridis_Tsoulfidis",
+      "detail": "Author: Paitaridis"
+    },
+    {
+      "type": "same_author",
+      "source": "[2019] Tsoulfidis & Paitaridis - Capital intensity, unproductive activities and the Great Recession in the US economy",
+      "target": "2019_Tsoulfidis_Paitaridis_Great_Recession",
+      "detail": "Author: Paitaridis"
+    },
+    {
+      "type": "same_author",
+      "source": "[2019] Tsoulfidis & Paitaridis - Capital intensity, unproductive activities and the Great Recession in the US economy",
+      "target": "[2012] Paitaridis & Tsoulfidis - The Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the US Economy",
+      "detail": "Author: Paitaridis"
+    },
+    {
+      "type": "same_author",
+      "source": "2011_Paitaridis_Tsoulfidis",
+      "target": "2019_Tsoulfidis_Paitaridis_Great_Recession",
+      "detail": "Author: Paitaridis"
+    },
+    {
+      "type": "same_author",
+      "source": "2011_Paitaridis_Tsoulfidis",
+      "target": "[2012] Paitaridis & Tsoulfidis - The Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the US Economy",
+      "detail": "Author: Paitaridis"
+    },
+    {
+      "type": "same_author",
+      "source": "2019_Tsoulfidis_Paitaridis_Great_Recession",
+      "target": "[2012] Paitaridis & Tsoulfidis - The Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the US Economy",
+      "detail": "Author: Paitaridis"
+    },
+    {
+      "type": "same_author",
+      "source": "1987_Shaikh_Tonak_Social_Wage_Myth",
+      "target": "2002_Shaikh_Tonak_Welfare_State",
+      "detail": "Author: Shaikh"
+    },
+    {
+      "type": "same_author",
+      "source": "2017_Moos_NSW_21st_Century",
+      "target": "TM_[2017] Moos - Neoliberal Distributive Policy US Net Social Wage in the 21st Century",
+      "detail": "Author: Moos"
+    },
+    {
+      "type": "same_author",
+      "source": "2017_Moos_NSW_21st_Century",
+      "target": "[2017] Moos - Essays on the Theory and Political Economy of Economic Policy",
+      "detail": "Author: Moos"
+    },
+    {
+      "type": "same_author",
+      "source": "2017_Moos_NSW_21st_Century",
+      "target": "[2017] Moos - Neoliberal Distributive Policy US Net Social Wage in the 21st Century",
+      "detail": "Author: Moos"
+    },
+    {
+      "type": "same_author",
+      "source": "TM_[2017] Moos - Neoliberal Distributive Policy US Net Social Wage in the 21st Century",
+      "target": "[2017] Moos - Essays on the Theory and Political Economy of Economic Policy",
+      "detail": "Author: Moos"
+    },
+    {
+      "type": "same_author",
+      "source": "TM_[2017] Moos - Neoliberal Distributive Policy US Net Social Wage in the 21st Century",
+      "target": "[2017] Moos - Neoliberal Distributive Policy US Net Social Wage in the 21st Century",
+      "detail": "Author: Moos"
+    },
+    {
+      "type": "same_author",
+      "source": "[2017] Moos - Essays on the Theory and Political Economy of Economic Policy",
+      "target": "[2017] Moos - Neoliberal Distributive Policy US Net Social Wage in the 21st Century",
+      "detail": "Author: Moos"
+    },
+    {
+      "type": "same_author",
+      "source": "2022_Karabacak_Tonak_NSW_Turkey",
+      "target": "TM_[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Karabacak"
+    },
+    {
+      "type": "same_author",
+      "source": "2022_Karabacak_Tonak_NSW_Turkey",
+      "target": "[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Karabacak"
+    },
+    {
+      "type": "same_author",
+      "source": "TM_[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "target": "[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019",
+      "detail": "Author: Karabacak"
+    },
+    {
+      "type": "same_author",
+      "source": "2024_Savran_Tonak_Marx_Capital",
+      "target": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "detail": "Author: Savran"
+    },
+    {
+      "type": "same_author",
+      "source": "2024_Savran_Tonak_Marx_Capital",
+      "target": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "detail": "Author: Savran"
+    },
+    {
+      "type": "same_author",
+      "source": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "target": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "detail": "Author: Savran"
+    },
+    {
+      "type": "same_topic",
+      "source": "[1984] Semmler - Competition, Monopoly, and Differential Profit Rates",
+      "target": "1984_Semmler_Competition_Monopoly",
+      "detail": "Topic: Profit_Rate"
+    },
+    {
+      "type": "same_topic",
+      "source": "[1984] Semmler - Competition, Monopoly, and Differential Profit Rates",
+      "target": "[2025.10.02] [1984] Semmler - Competition, Monopoly, and Differential Profit Rates",
+      "detail": "Topic: Profit_Rate"
+    },
+    {
+      "type": "same_topic",
+      "source": "[1984] Semmler - Competition, Monopoly, and Differential Profit Rates",
+      "target": "[2025.10.02] [1985] Semmler - Competition, Instability, and Nonlinear Cycles - Conference Proceedings",
+      "detail": "Topic: Profit_Rate"
+    },
+    {
+      "type": "same_topic",
+      "source": "1984_Semmler_Competition_Monopoly",
+      "target": "[2025.10.02] [1984] Semmler - Competition, Monopoly, and Differential Profit Rates",
+      "detail": "Topic: Profit_Rate"
+    },
+    {
+      "type": "same_topic",
+      "source": "1984_Semmler_Competition_Monopoly",
+      "target": "[2025.10.02] [1985] Semmler - Competition, Instability, and Nonlinear Cycles - Conference Proceedings",
+      "detail": "Topic: Profit_Rate"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2025.10.02] [1984] Semmler - Competition, Monopoly, and Differential Profit Rates",
+      "target": "[2025.10.02] [1985] Semmler - Competition, Instability, and Nonlinear Cycles - Conference Proceedings",
+      "detail": "Topic: Profit_Rate"
+    },
+    {
+      "type": "same_topic",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "[2005] Mohun - On measuring the wealth of nations the US economy, 1964-2001",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "2019_Tsoulfidis_Paitaridis_Great_Recession",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "BEA_1996_NIPA_Revision",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "BEA_1997_IO_Concepts_Methods",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2005] Mohun - On measuring the wealth of nations the US economy, 1964-2001",
+      "target": "2019_Tsoulfidis_Paitaridis_Great_Recession",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2005] Mohun - On measuring the wealth of nations the US economy, 1964-2001",
+      "target": "BEA_1996_NIPA_Revision",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2005] Mohun - On measuring the wealth of nations the US economy, 1964-2001",
+      "target": "BEA_1997_IO_Concepts_Methods",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2005] Mohun - On measuring the wealth of nations the US economy, 1964-2001",
+      "target": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2005] Mohun - On measuring the wealth of nations the US economy, 1964-2001",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "2019_Tsoulfidis_Paitaridis_Great_Recession",
+      "target": "BEA_1996_NIPA_Revision",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "2019_Tsoulfidis_Paitaridis_Great_Recession",
+      "target": "BEA_1997_IO_Concepts_Methods",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "2019_Tsoulfidis_Paitaridis_Great_Recession",
+      "target": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "2019_Tsoulfidis_Paitaridis_Great_Recession",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "BEA_1996_NIPA_Revision",
+      "target": "BEA_1997_IO_Concepts_Methods",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "BEA_1996_NIPA_Revision",
+      "target": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "BEA_1996_NIPA_Revision",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "BEA_1997_IO_Concepts_Methods",
+      "target": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "BEA_1997_IO_Concepts_Methods",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "target": "[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980",
+      "detail": "Topic: Input_Output"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2001] Cronin - Productive and Unproductive Capital A mapping of the New Zealand system of national accounts to classical economic categories 1972-95",
+      "target": "[2011] Paitardis & Tsoulfidis - the Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the U.S. Economy",
+      "detail": "Topic: Productive_Labor"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2001] Cronin - Productive and Unproductive Capital A mapping of the New Zealand system of national accounts to classical economic categories 1972-95",
+      "target": "[2013] Mohun - Unproductive Labor in the US Economy 1964-2010",
+      "detail": "Topic: Productive_Labor"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2001] Cronin - Productive and Unproductive Capital A mapping of the New Zealand system of national accounts to classical economic categories 1972-95",
+      "target": "[2019] Tsoulfidis & Paitaridis - Capital intensity, unproductive activities and the Great Recession in the US economy",
+      "detail": "Topic: Productive_Labor"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2001] Cronin - Productive and Unproductive Capital A mapping of the New Zealand system of national accounts to classical economic categories 1972-95",
+      "target": "2013_Mohun_Unproductive_1964_2010",
+      "detail": "Topic: Productive_Labor"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2001] Cronin - Productive and Unproductive Capital A mapping of the New Zealand system of national accounts to classical economic categories 1972-95",
+      "target": "[2012] Paitaridis & Tsoulfidis - The Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the US Economy",
+      "detail": "Topic: Productive_Labor"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2011] Paitardis & Tsoulfidis - the Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the U.S. Economy",
+      "target": "[2013] Mohun - Unproductive Labor in the US Economy 1964-2010",
+      "detail": "Topic: Productive_Labor"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2011] Paitardis & Tsoulfidis - the Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the U.S. Economy",
+      "target": "[2019] Tsoulfidis & Paitaridis - Capital intensity, unproductive activities and the Great Recession in the US economy",
+      "detail": "Topic: Productive_Labor"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2011] Paitardis & Tsoulfidis - the Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the U.S. Economy",
+      "target": "2013_Mohun_Unproductive_1964_2010",
+      "detail": "Topic: Productive_Labor"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2011] Paitardis & Tsoulfidis - the Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the U.S. Economy",
+      "target": "[2012] Paitaridis & Tsoulfidis - The Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the US Economy",
+      "detail": "Topic: Productive_Labor"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2013] Mohun - Unproductive Labor in the US Economy 1964-2010",
+      "target": "[2019] Tsoulfidis & Paitaridis - Capital intensity, unproductive activities and the Great Recession in the US economy",
+      "detail": "Topic: Productive_Labor"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2013] Mohun - Unproductive Labor in the US Economy 1964-2010",
+      "target": "2013_Mohun_Unproductive_1964_2010",
+      "detail": "Topic: Productive_Labor"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2013] Mohun - Unproductive Labor in the US Economy 1964-2010",
+      "target": "[2012] Paitaridis & Tsoulfidis - The Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the US Economy",
+      "detail": "Topic: Productive_Labor"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2019] Tsoulfidis & Paitaridis - Capital intensity, unproductive activities and the Great Recession in the US economy",
+      "target": "2013_Mohun_Unproductive_1964_2010",
+      "detail": "Topic: Productive_Labor"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2019] Tsoulfidis & Paitaridis - Capital intensity, unproductive activities and the Great Recession in the US economy",
+      "target": "[2012] Paitaridis & Tsoulfidis - The Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the US Economy",
+      "detail": "Topic: Productive_Labor"
+    },
+    {
+      "type": "same_topic",
+      "source": "2013_Mohun_Unproductive_1964_2010",
+      "target": "[2012] Paitaridis & Tsoulfidis - The Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the US Economy",
+      "detail": "Topic: Productive_Labor"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2002] Matthews - An Econometric Model of the Circuit of Capital",
+      "target": "2024_Savran_Tonak_Marx_Capital",
+      "detail": "Topic: Capital_Theory"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2002] Matthews - An Econometric Model of the Circuit of Capital",
+      "target": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "detail": "Topic: Capital_Theory"
+    },
+    {
+      "type": "same_topic",
+      "source": "[2002] Matthews - An Econometric Model of the Circuit of Capital",
+      "target": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "detail": "Topic: Capital_Theory"
+    },
+    {
+      "type": "same_topic",
+      "source": "2024_Savran_Tonak_Marx_Capital",
+      "target": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "detail": "Topic: Capital_Theory"
+    },
+    {
+      "type": "same_topic",
+      "source": "2024_Savran_Tonak_Marx_Capital",
+      "target": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "detail": "Topic: Capital_Theory"
+    },
+    {
+      "type": "same_topic",
+      "source": "2024_Savran_Tonak_Tracks_Marx_Capital",
+      "target": "[2024] Savran & Tonak - In the Tracks of Marx\u2019s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism",
+      "detail": "Topic: Capital_Theory"
+    },
+    {
+      "type": "same_topic",
+      "source": "1987_Shaikh_Tonak_Social_Wage_Myth",
+      "target": "2002_Shaikh_Tonak_Welfare_State",
+      "detail": "Topic: NSW_Analysis"
+    },
+    {
+      "type": "same_topic",
+      "source": "1987_Shaikh_Tonak_Social_Wage_Myth",
+      "target": "2017_Moos_NSW_21st_Century",
+      "detail": "Topic: NSW_Analysis"
+    },
+    {
+      "type": "same_topic",
+      "source": "1987_Shaikh_Tonak_Social_Wage_Myth",
+      "target": "2022_Karabacak_Tonak_NSW_Turkey",
+      "detail": "Topic: NSW_Analysis"
+    },
+    {
+      "type": "same_topic",
+      "source": "2002_Shaikh_Tonak_Welfare_State",
+      "target": "2017_Moos_NSW_21st_Century",
+      "detail": "Topic: NSW_Analysis"
+    },
+    {
+      "type": "same_topic",
+      "source": "2002_Shaikh_Tonak_Welfare_State",
+      "target": "2022_Karabacak_Tonak_NSW_Turkey",
+      "detail": "Topic: NSW_Analysis"
+    },
+    {
+      "type": "same_topic",
+      "source": "2017_Moos_NSW_21st_Century",
+      "target": "2022_Karabacak_Tonak_NSW_Turkey",
+      "detail": "Topic: NSW_Analysis"
+    }
+  ]
+}

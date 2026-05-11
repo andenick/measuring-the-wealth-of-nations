@@ -1,0 +1,39 @@
+table_number,table_title,source_page
+18.2,Comparative price level indices in OECD countries on the basis of Gross Domestic Product 2008-2012,301
+notes,"OECD Total=100. Source: OECD Statistics Database 2013. Turkey's price level relative to OECD average. Turkey consistently below OECD average (58-64 range), suggesting real wages measured in PPP terms higher than nominal exchange-rate comparisons imply."
+
+country_TR,country_EN,2008,2009,2010,2011,2012
+Türkiye,Turkey,64,58,62,58,59
+ABD,USA,94,98,97,94,98
+Almanya,Germany,112,111,105,105,100
+Avustralya,Australia,117,110,134,145,148
+Avusturya,Austria,118,116,109,111,107
+Belçika,Belgium,121,118,112,114,109
+Çek Cumhuriyeti,Czech Republic,79,72,73,74,69
+Danimarka,Denmark,148,144,136,138,133
+Estonya,Estonia,76,72,69,71,69
+Finlandiya,Finland,127,124,119,123,118
+Fransa,France,122,118,112,114,108
+Hollanda,Netherlands,116,116,110,111,105
+İngiltere,United Kingdom,113,101,100,103,105
+İrlanda,Ireland,131,122,110,110,105
+İspanya,Spain,99,97,93,94,89
+İsrail,Israel,102,99,103,103,99
+İsveç,Sweden,126,115,123,130,128
+İsviçre,Switzerland,135,138,141,154,149
+İtalya,Italy,109,107,103,105,99
+İzlanda,Iceland,126,100,108,114,111
+Japonya,Japan,107,122,125,129,130
+Kanada,Canada,109,103,115,118,120
+Kore,Korea,67,62,70,71,72
+Lüksemburg,Luxembourg,125,125,120,122,119
+Macaristan,Hungary,71,61,60,61,57
+Meksika,Mexico,63,54,59,57,57
+Norveç,Norway,146,141,146,153,155
+Polonya,Poland,73,59,60,60,57
+Portekiz,Portugal,90,87,82,83,78
+Slovak Cumhuriyeti,Slovak Republic,71,70,68,70,67
+Slovenya,Slovenia,88,88,84,85,81
+Şili,Chile,66,61,66,65,66
+Yeni Zelanda,New Zealand,99,89,105,110,117
+Yunanistan,Greece,97,96,92,94,88

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""L18 - Load Turkish fiscal data from SBB and Ministry of Finance Excel files.
+"""L18 - Load Turkish fiscal data from SBB, MoF, World Bank, and TurkStat HDARP.
 
 Parses:
   1. SBB consolidated budget (1975-2007) — % share breakdown
   2. MoF General Budget Balance (2006-2025) — annual TL values
   3. World Bank structural data (1980-2019) — GDP, growth, structure
+  4. TurkStat HDARP extraction — compensation of employees & labor share (1980-2006)
 
 Outputs: data/raw-data/parsed/turkey_*.csv
 """
@@ -180,6 +181,41 @@ def load():
         outputs.append(str(out))
         steps.append(f"World Bank fiscal: {len(wbf)} years")
         print(f"    [L18] World Bank fiscal: {len(wbf)} years")
+
+    # TurkStat HDARP: compensation of employees & labor share (Table 20.35/20.37)
+    ts_path = PARSED_RAW / "turkstat_compensation_labor_share_1980_2006.csv"
+    if ts_path.exists():
+        ts_df = pd.read_csv(ts_path, skiprows=2, index_col=0)
+        steps.append(f"TurkStat HDARP compensation: {len(ts_df)} years ({ts_df.index.min()}-{ts_df.index.max()})")
+        print(f"    [L18] TurkStat HDARP: {len(ts_df)} years (compensation + labor share)")
+
+    # FRED: Turkey labor share (Penn World Table via FRED, 1950-2019)
+    try:
+        from dotenv import load_dotenv
+        env_path = Path(__file__).resolve().parent.parent.parent / "data" / "user-inputs" / "api_keys.env"
+        if env_path.exists():
+            load_dotenv(env_path)
+        from utils.fetchers.fred_fetcher import fetch_fred
+        fred_data = fetch_fred("LABSHPTRA156NRUG", start_date="1980-01-01", end_date="2019-12-31")
+        obs = fred_data.get("observations", [])
+        if obs:
+            fred_rows = []
+            for o in obs:
+                try:
+                    yr = int(o["date"][:4])
+                    val = float(o["value"]) / 100.0  # convert from percent to ratio
+                    fred_rows.append({"year": yr, "labor_share_fred": val})
+                except (ValueError, KeyError):
+                    continue
+            if fred_rows:
+                fred_df = pd.DataFrame(fred_rows).set_index("year")
+                fred_out = PARSED_RAW / "turkey_fred_labor_share_1980_2019.csv"
+                fred_df.to_csv(fred_out)
+                outputs.append(str(fred_out))
+                steps.append(f"FRED Turkey labor share: {len(fred_df)} years ({fred_df.index.min()}-{fred_df.index.max()})")
+                print(f"    [L18] FRED Turkey: {len(fred_df)} years (LABSHPTRA156NRUG)")
+    except Exception as e:
+        steps.append(f"FRED Turkey: failed ({e})")
 
     return {
         "series_id": "L18",

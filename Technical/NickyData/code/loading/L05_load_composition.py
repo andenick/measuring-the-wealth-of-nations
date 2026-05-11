@@ -40,6 +40,9 @@ def load():
             print(f"    [L05] {sid}: column {col} not found")
             continue
         out = df[[col]].rename(columns={col: "value"}).dropna()
+        if sid == "T510":
+            import numpy as np
+            out["value"] = np.exp(-out["value"])  # stored as ln(V*/C*), convert to C*/V*
         out_path = PARSED_RAW / f"{sid}_parsed.csv"
         out.to_csv(out_path)
         outputs.append(str(out_path))

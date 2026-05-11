@@ -1,0 +1,8 @@
+ZHDARP v3.3 Processing Summary
+==================================================
+Date: 2025-12-11 18:34:22
+Pages processed: 89
+Pages with text: 89
+Tables extracted: 1
+Equations extracted: 1
+Figures extracted: 0

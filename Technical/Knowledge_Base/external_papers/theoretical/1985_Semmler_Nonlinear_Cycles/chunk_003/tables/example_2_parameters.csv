@@ -1,0 +1,11 @@
+Parameter,Symbol,Value,Description,Change_from_Example_1
+Maximum output-capital ratio,σ,0.4,Determines potential output given capital stock,No change
+Minimum wage parameter,w₀,0.05,Base wage level (wage floor),No change
+Wage sensitivity,w₁,0.15,Linear coefficient in wage function,No change
+Wage nonlinearity,γ,3,Exponent in power wage function,Increased from 2
+Minimum accumulation rate,g_min,-0.1,Lower bound on accumulation (-10%),No change
+Maximum accumulation rate,g_max,0.3,Upper bound on accumulation (30%),No change
+Reference profit rate,r₀,0.2,Midpoint of logistic accumulation function (20%),No change
+Smoothness parameter,δ,0.03,Steepness of accumulation function response,Decreased from 0.05
+Labor supply growth rate,n,0.02,Exogenous growth rate of labor (2%),No change
+Number of limit cycles,N_cycles,2,Two coexisting stable limit cycles,New feature

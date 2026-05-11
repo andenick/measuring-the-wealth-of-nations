@@ -15,20 +15,20 @@ Categorized register of assumptions underlying the AS2 data construction. Each a
 - **Cross-ref**: DEC-003, DIV-002, ADJ-002
 
 ### ASM-D-002: Total K as Proxy for Productive K* (DIV-001)
-- **Assumption**: Total private fixed assets K approximates productive sector capital K*
+- **Assumption**: K* = K_total × IO_productive_output_ratio (~0.567)
 - **Used in**: T513, T514 (profit rate denominators)
-- **Basis**: IO-based sector classification (Chapter 4) required for true K*; not yet available
-- **Severity**: Medium — understates profit rate level, preserves trend
-- **Status**: Open — resolution requires Wave 2 IO framework
-- **Cross-ref**: DEC-002, DIV-001, ADJ-001
+- **Basis**: L06b fetches BEA Fixed Assets, L11b provides IO productive ratio
+- **Severity**: Low — K*/K ≈ 0.567, r* increases 5.7% vs total K
+- **Status**: Resolved (Session 23: L06b + IO ratio approach)
+- **Cross-ref**: DEC-002, DEC-017
 
-### ASM-D-003: BLS CES as Productive Labor Proxy
-- **Assumption**: BLS CES production/nonsupervisory workers approximate IO-classified productive labor
+### ASM-D-003: IO Productive Ratio for Employment Extension
+- **Assumption**: T511 extended via IO productive employment ratio from L11b NAICS benchmarks; T512 from V*/W components
 - **Used in**: T511, T512 (extension period, 1990-2024)
-- **Basis**: Cross-validated against Mohun (2005); correlation > 0.95 in overlap period
-- **Severity**: Low-Medium — 78% faithfulness score
-- **Status**: Accepted with documentation
-- **Cross-ref**: DEC-005
+- **Basis**: IO productive employment ratio from NIPA 6.5 FTE by industry; V*/W from T504/NIPA compensation
+- **Severity**: Low — Principle 3 compliant, IO-classified
+- **Status**: Resolved (Session 23: P05 IO-extension + V*/W components)
+- **Cross-ref**: DEC-019, Step 10
 
 ### ASM-D-004: NIPA Continuity Across 1996 Welfare Reform
 - **Assumption**: NIPA Tables 2.1/3.1 provide continuous benefits coverage despite 1996 PRWORA
@@ -77,4 +77,14 @@ Categorized register of assumptions underlying the AS2 data construction. Each a
 
 ---
 
-*Last updated: 2026-04-08 (v3.0 infrastructure upgrade)*
+### ASM-D-005: Table H.1 Digitization Quality
+- **Assumption**: Hand-digitized Table H.1 values from PDF (chunk_35) are accurate
+- **Used in**: T504, T505, T506 (book period annual data)
+- **Basis**: Cross-checked against HDARP transcription selected years and internal identities (S*=VA*-V*)
+- **Severity**: Low — 1965-1969 values partially interpolated from Table I.1 where H.1 OCR was garbled
+- **Status**: Accepted
+- **Cross-ref**: DEC-020, Step 1
+
+---
+
+*Last updated: 2026-05-09 (Sessions 21-23: KB deep dive, unit fix, IO framework, analytical series)*

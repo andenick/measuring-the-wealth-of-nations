@@ -294,1041 +294,9 @@ app_server <- function(input, output, session) {
     )
   })
 
-  # ============================================
-  # TAB 1: OVERVIEW - MAIN PLOT
-  # ============================================
-
-  output$overview_profit_plot <- renderPlotly({
-    data <- filtered_profit()
-
-    p <- plot_ly(data, x = ~year) %>%
-      add_trace(
-        y = ~r_star_pct,
-        name = "Marxian r*",
-        type = "scatter",
-        mode = "lines",
-        line = list(color = colors$primary, width = 3),
-          # Filter controls
-          box(
-            title = "Filter Questions",
-            status = "primary",
-            solidHeader = TRUE,
-            width = 12,
-            collapsible = TRUE,
-            fluidRow(
-              column(
-                4,
-                selectInput("question_priority_filter",
-                  "Priority Level:",
-                  choices = c("All" = "all", "CRITICAL", "HIGH", "MEDIUM", "LOW"),
-                  selected = "all",
-                  width = "100%"
-                )
-              ),
-              column(
-                4,
-                selectInput("question_category_filter",
-                  "Category:",
-                  choices = c(
-                    "All" = "all",
-                    "Profit Rate" = "Profit Rate",
-                    "Surplus Value" = "Surplus Value",
-                    "Capital Composition" = "Capital Composition",
-                    "Employment" = "Employment",
-                    "Government" = "Government",
-                    "Data & Methodology" = "Data & Methodology"
-                  ),
-                  selected = "all",
-                  width = "100%"
-                )
-              ),
-              column(
-                4,
-                div(
-                  style = "padding-top: 25px;",
-                  h4(textOutput("questions_count"), style = "color: #3c8dbc; font-weight: bold;")
-                )
-              )
-            )
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Questions",
-            status = "info",
-            solidHeader = TRUE,
-            width = 12,
-            div(
-              style = "max-height: 800px; overflow-y: auto;",
-              uiOutput("question_cards")
-            )
-          )
-        )
-      ),
-
-      # ============================================
-      # TAB 2.5: METHODOLOGY COMPARISON (NEW)
-      # ============================================
-      tabItem(
-        tabName = "methodology",
-        h2("Multi-Methodology Comparison"),
-        p("Compare three major approaches: ST94 (Shaikh-Tonak 1994), M05 (Mohun 2005), TP19 (Tsoulfidis-Paitaridis 2019)"),
-        fluidRow(
-          valueBoxOutput("method_book_match", width = 4),
-          valueBoxOutput("method_current_e", width = 4),
-          valueBoxOutput("method_divergence", width = 4)
-        ),
-        fluidRow(
-          box(
-            title = "Exploitation Rate (S*/V*) by Methodology",
-            status = "primary",
-            solidHeader = TRUE,
-            width = 12,
-            plotlyOutput("methodology_exploitation_plot", height = "450px"),
-            p(em("Note: Book benchmarks (dots) shown for validation. Shaded area indicates extension period (1990-2024)."))
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Productive Labor Share (Lp/L) by Methodology",
-            status = "success",
-            solidHeader = TRUE,
-            width = 6,
-            plotlyOutput("methodology_labor_plot", height = "350px")
-          ),
-          box(
-            title = "Profit Rate Trends by Methodology",
-            status = "warning",
-            solidHeader = TRUE,
-            width = 6,
-            plotlyOutput("methodology_profit_plot", height = "350px")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Methodology Comparison Table",
-            status = "info",
-            solidHeader = TRUE,
-            width = 12,
-            DTOutput("methodology_comparison_table")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Why Do Methods Differ?",
-            status = "danger",
-            solidHeader = TRUE,
-            width = 12,
-            collapsible = TRUE,
-            h4("Key Classification Differences"),
-            tags$ul(
-              tags$li(
-                strong("Eating & Drinking Places (SIC 58 → NAICS 722):"),
-                " ST94 = Unproductive (lumped with Retail), M05/TP19 = Productive (transforms food)"
-              ),
-              tags$li(
-                strong("Information Sector (NAICS 51):"),
-                " ST94 = Mixed (no SIC equivalent), M05/TP19 = Productive (produces information commodities)"
-              ),
-              tags$li(
-                strong("Computer Systems Design (NAICS 5415):"),
-                " ST94 = Mixed (SIC 7370 Business Services), M05/TP19 = Productive (software production)"
-              )
-            ),
-            hr(),
-            h4("Methodology Timeline"),
-            p(strong("1948-1987:"), " Use ST94 (original I-O integration, SIC-based)"),
-            p(strong("1988-1996:"), " Use M05 SM approximation (better BLS data allows calibration)"),
-            p(strong("1997-2024:"), " Use TP19 NAICS classification (proper post-1997 classification)"),
-            hr(),
-            h4("Reference"),
-            p("See ", strong("Chapter 5, pp. 151-194"), " of Shaikh & Tonak (1994) for original methodology."),
-            p("See ", strong("Mohun (2005), Table 1, p.358"), " for SM approximation details."),
-            p("See ", strong("Tsoulfidis & Paitaridis (2019), Table 1, p.238"), " for NAICS implementation.")
-          )
-        )
-      ),
-
-      # ============================================
-      # TAB 2.6: INDUSTRY CLASSIFICATION (NEW)
-      # ============================================
-      tabItem(
-        tabName = "classification",
-        h2("Industry Classification Schema"),
-        p("SIC vs NAICS classification of industries as Productive (P) or Unproductive (U)"),
-        fluidRow(
-          infoBox(
-            "Productive Sectors",
-            value = "~49%",
-            subtitle = "of employment (1989)",
-            icon = icon("industry"),
-            color = "green",
-            width = 4
-          ),
-          infoBox(
-            "Key Reclassifications",
-            value = "3",
-            subtitle = "Eating/Drinking, Information, Computer Design",
-            icon = icon("exchange-alt"),
-            color = "orange",
-            width = 4
-          ),
-          infoBox(
-            "SIC→NAICS Transition",
-            value = "1997",
-            subtitle = "Major classification system change",
-            icon = icon("calendar"),
-            color = "purple",
-            width = 4
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Complete Industry Classification Matrix",
-            status = "primary",
-            solidHeader = TRUE,
-            width = 12,
-            p("P = Productive, U = Unproductive, Mix = Mixed classification"),
-            DTOutput("industry_classification_table")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Key Reclassifications Across Methodologies",
-            status = "warning",
-            solidHeader = TRUE,
-            width = 12,
-            h4(icon("utensils"), " Eating and Drinking Places (SIC 58 → NAICS 722)"),
-            fluidRow(
-              column(
-                4,
-                div(
-                  class = "well", style = "background-color: #dd4b39; color: white; text-align: center;",
-                  h5("ST94 (1994)"), p("UNPRODUCTIVE"), p(em("Lumped with Retail Trade"))
-                )
-              ),
-              column(
-                4,
-                div(
-                  class = "well", style = "background-color: #00a65a; color: white; text-align: center;",
-                  h5("M05 (2005)"), p("PRODUCTIVE"), p(em("Transforms food into meals"))
-                )
-              ),
-              column(
-                4,
-                div(
-                  class = "well", style = "background-color: #00a65a; color: white; text-align: center;",
-                  h5("TP19 (2019)"), p("PRODUCTIVE"), p(em("~8.4% of employment"))
-                )
-              )
-            ),
-            hr(),
-            h4(icon("info-circle"), " Information Sector (NAICS 51)"),
-            fluidRow(
-              column(
-                4,
-                div(
-                  class = "well", style = "background-color: #f39c12; color: white; text-align: center;",
-                  h5("ST94 (1994)"), p("MIXED"), p(em("No separate SIC code"))
-                )
-              ),
-              column(
-                4,
-                div(
-                  class = "well", style = "background-color: #00a65a; color: white; text-align: center;",
-                  h5("M05 (2005)"), p("PRODUCTIVE"), p(em("Information commodities"))
-                )
-              ),
-              column(
-                4,
-                div(
-                  class = "well", style = "background-color: #00a65a; color: white; text-align: center;",
-                  h5("TP19 (2019)"), p("PRODUCTIVE"), p(em("~2.1% of employment"))
-                )
-              )
-            ),
-            hr(),
-            h4(icon("laptop-code"), " Computer Systems Design (SIC 7370 → NAICS 5415)"),
-            fluidRow(
-              column(
-                4,
-                div(
-                  class = "well", style = "background-color: #f39c12; color: white; text-align: center;",
-                  h5("ST94 (1994)"), p("MIXED"), p(em("Buried in Business Services"))
-                )
-              ),
-              column(
-                4,
-                div(
-                  class = "well", style = "background-color: #00a65a; color: white; text-align: center;",
-                  h5("M05 (2005)"), p("PRODUCTIVE"), p(em("Software as commodity"))
-                )
-              ),
-              column(
-                4,
-                div(
-                  class = "well", style = "background-color: #00a65a; color: white; text-align: center;",
-                  h5("TP19 (2019)"), p("PRODUCTIVE"), p(em("~2.4% of employment"))
-                )
-              )
-            )
-          )
-        ),
-        fluidRow(
-          box(
-            title = "SIC → NAICS Transition (1997)",
-            status = "info",
-            solidHeader = TRUE,
-            width = 12,
-            collapsible = TRUE,
-            collapsed = TRUE,
-            h4("Why 1997 Matters"),
-            p("The Standard Industrial Classification (SIC) system was replaced by the North American Industry Classification System (NAICS) in 1997."),
-            p("This created a major discontinuity in economic data series:"),
-            tags$ul(
-              tags$li("Pre-1997 data uses SIC codes (Shaikh-Tonak 1994 methodology)"),
-              tags$li("Post-1997 data uses NAICS codes (Tsoulfidis-Paitaridis 2019 methodology)"),
-              tags$li("BEA provides bridge tables but discontinuities remain")
-            ),
-            hr(),
-            p(
-              strong("Reference:"), " BEA (1997) 'Input-Output Concepts and Methods', Survey of Current Business. See ",
-              em("Knowledge_Base/HDARP_Extractions/BEA_1997_IO_Concepts_Methods/")
-            )
-          )
-        )
-      ),
-
-      # ============================================
-      # TAB 2.7: QUESTIONS FOR PROFESSOR TONAK (NEW)
-      # ============================================
-      tabItem(
-        tabName = "tonak_questions",
-        h2(icon("user-graduate"), " Outstanding Questions for Professor Tonak"),
-        p("Critical methodological questions requiring clarification for faithful replication and extension"),
-        fluidRow(
-          infoBox(
-            "Critical Questions",
-            value = sum(questions_for_tonak$Priority == "Critical", na.rm = TRUE),
-            subtitle = "Blocking issues",
-            icon = icon("exclamation-triangle"),
-            color = "red",
-            width = 4
-          ),
-          infoBox(
-            "High Priority",
-            value = sum(questions_for_tonak$Priority == "High", na.rm = TRUE),
-            subtitle = "Important clarifications",
-            icon = icon("arrow-up"),
-            color = "orange",
-            width = 4
-          ),
-          infoBox(
-            "Total Questions",
-            value = nrow(questions_for_tonak),
-            subtitle = "For discussion",
-            icon = icon("question-circle"),
-            color = "blue",
-            width = 4
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Print-Friendly Question Summary",
-            status = "success",
-            width = 12,
-            p("Download a formatted summary of all questions for your meeting with Professor Tonak:"),
-            downloadButton("download_tonak_questions", "Download Questions Summary (PDF-ready)",
-              class = "btn-success btn-lg"
-            )
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Questions for Professor Tonak",
-            status = "primary",
-            solidHeader = TRUE,
-            width = 12,
-            DTOutput("tonak_questions_table")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Question Categories Explained",
-            status = "info",
-            solidHeader = TRUE,
-            width = 12,
-            collapsible = TRUE,
-            fluidRow(
-              column(
-                6,
-                h4(icon("cog"), " Data & Methodology"),
-                p("Questions about calculation methods, data sources, and computational procedures."),
-                p(em("Examples: K vs K* capital stock, capacity utilization formula, interpolation methods"))
-              ),
-              column(
-                6,
-                h4(icon("sitemap"), " Industry Classification"),
-                p("Questions about which industries are productive vs unproductive."),
-                p(em("Examples: Eating/Drinking classification, Information sector, Computer Design"))
-              )
-            ),
-            fluidRow(
-              column(
-                6,
-                h4(icon("balance-scale"), " Capital Composition"),
-                p("Questions about C*/V* calculation and related concepts."),
-                p(em("Examples: Rental income allocation, historical vs replacement cost"))
-              ),
-              column(
-                6,
-                h4(icon("university"), " Government Treatment"),
-                p("Questions about how government spending and employment are handled."),
-                p(em("Examples: Exclusion vs inclusion as unproductive"))
-              )
-            )
-          )
-        )
-      ),
-
-      # ============================================
-      # TAB 3: PROFIT RATE ANALYSIS
-      # ============================================
-      tabItem(
-        tabName = "profit_rate",
-        h2("Profit Rate Analysis"),
-        p("Comparison of Marxian and conventional profit rate measures"),
-        fluidRow(
-          box(
-            title = "Profit Rate Measures (1948-2024)",
-            status = "primary",
-            solidHeader = TRUE,
-            width = 12,
-            plotlyOutput("profit_rate_plot", height = "500px")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Series Selection",
-            status = "info",
-            width = 4,
-            checkboxGroupInput("profit_series",
-              "Select series to display:",
-              choices = c(
-                "Marxian r* (unadjusted)" = "r_star_pct",
-                "Marxian r* (capacity-adjusted)" = "r_star_adj_pct",
-                "NIPA r (unadjusted)" = "r_nipa_pct",
-                "NIPA r (capacity-adjusted)" = "r_nipa_adj_pct"
-              ),
-              selected = c("r_star_pct", "r_nipa_pct")
-            )
-          ),
-          box(
-            title = "Profit Rate Statistics",
-            status = "success",
-            width = 8,
-            DTOutput("profit_stats_table")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Understanding Profit Rates",
-            status = "warning",
-            solidHeader = TRUE,
-            width = 12,
-            collapsible = TRUE,
-            collapsed = TRUE,
-            h4("Marxian Profit Rate (r*)"),
-            p(strong("Definition:"), " r* = S*/K, where S* is total surplus value and K is capital stock"),
-            p(strong("Key insight:"), " S* includes wages of unproductive workers (paid from surplus), making r* higher than conventional measures"),
-            p(strong("Why capacity-adjusted?"), " r*' = r*/u adjusts for capacity utilization (u), showing rate at full capacity"),
-            hr(),
-            h4("NIPA Profit Rate (r)"),
-            p(strong("Definition:"), " r = Corporate Profits / Capital Stock (conventional measure)"),
-            p(strong("Difference:"), " Excludes unproductive wages, interest, rent from surplus definition"),
-            hr(),
-            h4("Note on r* Values"),
-            p("Marxian profit rates appear high (200-500%) because:"),
-            tags$ul(
-              tags$li("S* includes ALL surplus appropriation (profits + unproductive wages + interest + rent)"),
-              tags$li("Unproductive workers represent ~47-51% of total employment"),
-              tags$li("Their wages (~$1.1 trillion in 1948) are paid from surplus, not from value they create"),
-              tags$li("This is theoretically correct within the Marxian framework")
-            ),
-            p(strong("See Validation tab"), " for comparison with Shaikh-Tonak Table 5.8 benchmarks")
-          )
-        )
-      ),
-
-      # ============================================
-      # TAB 6: VALIDATION CENTER
-      # ============================================
-      tabItem(
-        tabName = "validation",
-        h2("Validation Center"),
-        p("Cross-validation against Shaikh-Tonak (1994) Table 5.8 benchmarks"),
-        fluidRow(
-          valueBoxOutput("validation_status", width = 4),
-          valueBoxOutput("validation_r_star", width = 4),
-          valueBoxOutput("validation_exploitation", width = 4)
-        ),
-        fluidRow(
-          box(
-            title = "Calculated vs. Target Values (Table 5.8 Benchmark Years)",
-            status = "primary",
-            solidHeader = TRUE,
-            width = 12,
-            plotlyOutput("validation_scatter", height = "500px")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Deviation from Table 5.8 Targets",
-            status = "warning",
-            solidHeader = TRUE,
-            width = 12,
-            DTOutput("validation_table")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Validation Notes",
-            status = "danger",
-            solidHeader = TRUE,
-            width = 12,
-            collapsible = TRUE,
-            h4("Known Discrepancies"),
-            p(strong("Issue:"), " Marxian profit rate r* shows large deviation from Table 5.8"),
-            tags$ul(
-              tags$li(strong("Our calculation:"), " r* ≈ 300% (1948) → 186% (1989)"),
-              tags$li(strong("Table 5.8 target:"), " r*' ≈ 52% (1948) → 39% (1989)"),
-              tags$li(strong("Ratio:"), " ~5.8x difference")
-            ),
-            hr(),
-            h4("Root Causes Identified"),
-            p("1. ", strong("Capital Stock Definition:")),
-            tags$ul(
-              tags$li("We use K = Total nonresidential fixed assets"),
-              tags$li("Table 5.8 uses K* = C*f = Productive fixed capital only"),
-              tags$li("K* should be smaller than K (only productive sectors)")
-            ),
-            p("2. ", strong("Capacity Utilization Adjustment:")),
-            tags$ul(
-              tags$li("Table 5.8 shows r*' = (S*/K*)/u (capacity-adjusted)"),
-              tags$li("We calculate r* = S*/K (unadjusted)")
-            ),
-            hr(),
-            h4("Resolution Strategy"),
-            p("The displayed values use our current methodology. To match Table 5.8:"),
-            tags$ol(
-              tags$li("Calculate K* = K × (Y/GDP) to estimate productive capital"),
-              tags$li("Apply capacity adjustment: r*' = (S*/K*)/u"),
-              tags$li("Cross-validate with Mohun (2005, 2013) alternative estimates")
-            ),
-            p(strong("Status:"), " Investigation ongoing. See Technical/R_STAR_DISCREPANCY_RESOLUTION.md for details"),
-            hr(),
-            h4("Validation Quality"),
-            p(strong("Exploitation rate (S*/V*):"), " EXCELLENT match (within 5%)"),
-            p(strong("Value composition (C*/V*):"), " GOOD match (within 10-15%)"),
-            p(strong("Profit rate (r*):"), " UNDER INVESTIGATION (see above)")
-          )
-        )
-      ),
-
-      # ============================================
-      # PLACEHOLDER TABS (to be implemented)
-      # ============================================
-      tabItem(
-        tabName = "exploitation",
-        h2("Exploitation & Capital Composition"),
-        p("Analysis of surplus extraction and organic composition of capital"),
-        fluidRow(
-          valueBoxOutput("exploit_current", width = 3),
-          valueBoxOutput("exploit_change", width = 3),
-          valueBoxOutput("value_comp_current", width = 3),
-          valueBoxOutput("surplus_ratio_current", width = 3)
-        ),
-        fluidRow(
-          box(
-            title = "Exploitation Rate (S*/V*) and Surplus Ratio (S*/Y)",
-            status = "primary",
-            solidHeader = TRUE,
-            width = 12,
-            plotlyOutput("exploitation_plot", height = "450px")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Capital Composition Analysis",
-            status = "success",
-            solidHeader = TRUE,
-            width = 12,
-            plotlyOutput("composition_plot", height = "450px")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Exploitation Metrics by Decade",
-            status = "warning",
-            solidHeader = TRUE,
-            width = 6,
-            DTOutput("exploitation_decade_table")
-          ),
-          box(
-            title = "Understanding Exploitation & Composition",
-            status = "info",
-            solidHeader = TRUE,
-            width = 6,
-            collapsible = TRUE,
-            h4("Exploitation Rate (S*/V*)"),
-            p(strong("Definition:"), " Ratio of surplus value to variable capital"),
-            p(strong("Interpretation:"), " Higher values = more surplus extracted per dollar of productive wages"),
-            p(strong("Trend 1948-1989:"), " Rose from 1.32 to 2.44 (+84%), showing intensified exploitation"),
-            hr(),
-            h4("Surplus Ratio (S*/Y)"),
-            p(strong("Definition:"), " Share of total value product going to surplus"),
-            p(strong("Formula:"), " S*/Y = S*/(C* + V* + S*)"),
-            hr(),
-            h4("Value Composition (C*/V*)"),
-            p(strong("Definition:"), " Ratio of constant to variable capital"),
-            p(strong("Interpretation:"), " Rising C*/V* indicates mechanization and rising capital intensity"),
-            p(strong("Significance:"), " Key determinant of the profit rate: r* = (S*/V*) / (1 + C*/V*)")
-          )
-        )
-      ),
-      tabItem(
-        tabName = "employment",
-        h2("Employment Analysis"),
-        p("Productive vs. unproductive labor composition and productivity trends"),
-        fluidRow(
-          valueBoxOutput("emp_total_current", width = 3),
-          valueBoxOutput("emp_productive_share", width = 3),
-          valueBoxOutput("emp_productive_trend", width = 3),
-          valueBoxOutput("productivity_growth", width = 3)
-        ),
-        fluidRow(
-          box(
-            title = "Employment Composition (1948-1989)",
-            status = "primary",
-            solidHeader = TRUE,
-            width = 12,
-            plotlyOutput("employment_composition_plot", height = "450px")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Absolute Employment Levels (thousands)",
-            status = "success",
-            solidHeader = TRUE,
-            width = 7,
-            plotlyOutput("employment_absolute_plot", height = "400px")
-          ),
-          box(
-            title = "Employment Statistics",
-            status = "info",
-            solidHeader = TRUE,
-            width = 5,
-            DTOutput("employment_stats_table")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Productivity Comparison: Marxian vs. Conventional",
-            status = "warning",
-            solidHeader = TRUE,
-            width = 12,
-            plotlyOutput("productivity_comparison_plot", height = "450px")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Understanding Productive vs. Unproductive Labor",
-            status = "danger",
-            solidHeader = TRUE,
-            width = 12,
-            collapsible = TRUE,
-            collapsed = TRUE,
-            h4("Productive Labor (Lp)"),
-            p(strong("Definition:"), " Workers directly engaged in producing surplus value"),
-            p(strong("Sectors:"), " Manufacturing, construction, agriculture, mining, transportation"),
-            p(strong("Trend:"), " Fell from 53% to 49% of total employment (1948-1989)"),
-            hr(),
-            h4("Unproductive Labor (Lu)"),
-            p(strong("Definition:"), " Workers not engaged in surplus production, paid from surplus"),
-            p(strong("Sectors:"), " Finance, insurance, real estate, advertising, government administration"),
-            p(strong("Trend:"), " Rose from 47% to 51% of total employment"),
-            hr(),
-            h4("Marxian vs. Conventional Productivity"),
-            p(strong("Marxian:"), " Y/Lp - Output per productive worker only"),
-            p(strong("Conventional:"), " Y/L - Output per total worker (BLS measure)"),
-            p(strong("Key insight:"), " Marxian productivity rises faster as Lp/L falls")
-          )
-        )
-      ),
-      tabItem(
-        tabName = "government",
-        h2("Government Absorption of Surplus"),
-        p("Analysis of government expenditure as deduction from surplus value"),
-        fluidRow(
-          valueBoxOutput("govt_total_current", width = 3),
-          valueBoxOutput("govt_surplus_ratio", width = 3),
-          valueBoxOutput("govt_gdp_ratio", width = 3),
-          valueBoxOutput("govt_growth", width = 3)
-        ),
-        fluidRow(
-          box(
-            title = "Government Absorption Ratios (1948-1989)",
-            status = "primary",
-            solidHeader = TRUE,
-            width = 12,
-            plotlyOutput("government_ratios_plot", height = "450px")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Government Expenditure by Level",
-            status = "success",
-            solidHeader = TRUE,
-            width = 7,
-            plotlyOutput("government_levels_plot", height = "400px")
-          ),
-          box(
-            title = "Government Statistics by Decade",
-            status = "info",
-            solidHeader = TRUE,
-            width = 5,
-            DTOutput("government_decade_table")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Understanding Government as Surplus Absorption",
-            status = "warning",
-            solidHeader = TRUE,
-            width = 12,
-            collapsible = TRUE,
-            collapsed = TRUE,
-            h4("Marxian Treatment of Government"),
-            p(strong("Key insight:"), " Government expenditure represents unproductive consumption paid from surplus"),
-            p(strong("G/S* ratio:"), " Share of surplus absorbed by government spending"),
-            p(strong("Trend:"), " Rose from 3.4% (1948) to higher levels by 1989"),
-            hr(),
-            h4("Components"),
-            p(strong("Federal:"), " Defense, social programs, administration"),
-            p(strong("State & Local:"), " Education, infrastructure, public services"),
-            hr(),
-            h4("Theoretical Significance"),
-            tags$ul(
-              tags$li("Government workers are unproductive (transfer value, don't create it)"),
-              tags$li("Government spending reduces surplus available for accumulation"),
-              tags$li("Rising G/S* can constrain capital accumulation and growth")
-            )
-          )
-        )
-      ),
-      tabItem(
-        tabName = "literature",
-        h2("Literature Navigator"),
-        p("Key references, methodological notes, and knowledge base links"),
-        fluidRow(
-          box(
-            title = "Primary Reference",
-            status = "primary",
-            solidHeader = TRUE,
-            width = 12,
-            h3("Shaikh, Anwar M. & Tonak, E. Ahmet (1994)"),
-            h4(em("Measuring the Wealth of Nations: The Political Economy of National Accounts")),
-            p(strong("Publisher:"), " Cambridge University Press"),
-            p(strong("Chapter 5:"), " \"The Profit Rate and Its Components\" (pp. 151-194)"),
-            hr(),
-            p(strong("Key Contributions:")),
-            tags$ul(
-              tags$li("Rigorous derivation of Marxian categories from NIPA data"),
-              tags$li("Distinction between productive and unproductive labor"),
-              tags$li("Calculation of S*, V*, C* from national accounts"),
-              tags$li("Empirical evidence for tendential fall in profit rate")
-            ),
-            hr(),
-            p(strong("Table 5.8:"), " Benchmark values used for validation in this app")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Methodological Documentation",
-            status = "success",
-            solidHeader = TRUE,
-            width = 6,
-            collapsible = TRUE,
-            h4("Data Sources"),
-            tags$ul(
-              tags$li(strong("BEA NIPA:"), " National Income and Product Accounts"),
-              tags$li(strong("BLS:"), " Productivity and employment data"),
-              tags$li(strong("Federal Reserve:"), " Capacity utilization (manufacturing)")
-            ),
-            hr(),
-            h4("Key Methodological Steps"),
-            tags$ol(
-              tags$li("Classify industries as productive vs. unproductive"),
-              tags$li("Calculate productive output Y from GDP"),
-              tags$li("Derive V* (productive wages), S* (total surplus), C* (constant capital)"),
-              tags$li("Compute exploitation rate S*/V*, composition C*/V*, profit rate r* = S*/K")
-            ),
-            hr(),
-            p(strong("See:"), " Shaikh & Tonak (1994), Appendix 5.1 for detailed classification")
-          ),
-          box(
-            title = "Related Literature",
-            status = "info",
-            solidHeader = TRUE,
-            width = 6,
-            collapsible = TRUE,
-            h4("Follow-up Studies"),
-            tags$ul(
-              tags$li(strong("Mohun (2005):"), " \"Distributive Shares in the US Economy, 1964-2001\""),
-              tags$li(strong("Mohun (2013):"), " \"Unproductive Labor in the US Economy 1964-2010\""),
-              tags$li(strong("Basu & Manolakos (2013):"), " \"Is There a Tendency for the Rate of Profit to Fall?\""),
-              tags$li(strong("Kliman (2011):"), em(" The Failure of Capitalist Production"))
-            ),
-            hr(),
-            h4("Critical Debates"),
-            tags$ul(
-              tags$li("Productive vs. unproductive labor classification"),
-              tags$li("Treatment of fixed capital depreciation"),
-              tags$li("Capacity utilization adjustments"),
-              tags$li("Alternative measures of capital stock (K vs. K*)")
-            )
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Knowledge Base Extractions",
-            status = "warning",
-            solidHeader = TRUE,
-            width = 12,
-            h4("Available Documentation"),
-            p("The following knowledge base files contain detailed extraction and analysis:"),
-            tags$ul(
-              tags$li(strong("R_STAR_DISCREPANCY_RESOLUTION.md:"), " Investigation of profit rate calculation differences"),
-              tags$li(strong("VALIDATION_RESULTS.md:"), " Cross-validation against Table 5.8 benchmarks"),
-              tags$li(strong("METHODOLOGY_NOTES.md:"), " Step-by-step calculation procedures"),
-              tags$li(strong("DATA_PROVENANCE.md:"), " Data sources and transformations")
-            ),
-            hr(),
-            p(em("Note: Links to knowledge base files can be implemented with file path references or downloadable PDFs"))
-          )
-        ),
-
-        # NEW: HDARP Extracted Literature with page citations
-        fluidRow(
-          box(
-            title = "HDARP-Extracted Literature Database",
-            status = "primary",
-            solidHeader = TRUE,
-            width = 12,
-            h4(icon("book-open"), " Complete Bibliography with Page-Level Citations"),
-            p("All sources have been processed through HDARP (Hybrid Direct Agent Reading Protocol) for maximum extraction accuracy."),
-            DTOutput("literature_citations_table")
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Methodology Evolution Timeline",
-            status = "info",
-            solidHeader = TRUE,
-            width = 12,
-            h4("Development of Marxian National Accounting"),
-            fluidRow(
-              column(
-                3,
-                div(
-                  class = "well", style = "text-align: center; background-color: #3c8dbc; color: white;",
-                  h4("1984"),
-                  p(strong("Semmler")),
-                  p("Competition, Monopoly, and Differential Profit Rates"),
-                  p(em("Foundational theory"))
-                )
-              ),
-              column(
-                3,
-                div(
-                  class = "well", style = "text-align: center; background-color: #00a65a; color: white;",
-                  h4("1994"),
-                  p(strong("Shaikh & Tonak")),
-                  p("Measuring the Wealth of Nations"),
-                  p(em("ST94 methodology"))
-                )
-              ),
-              column(
-                3,
-                div(
-                  class = "well", style = "text-align: center; background-color: #f39c12; color: white;",
-                  h4("2005"),
-                  p(strong("Mohun")),
-                  p("Distributive Shares in the US Economy"),
-                  p(em("M05 SM approximation"))
-                )
-              ),
-              column(
-                3,
-                div(
-                  class = "well", style = "text-align: center; background-color: #605ca8; color: white;",
-                  h4("2019"),
-                  p(strong("Tsoulfidis & Paitaridis")),
-                  p("Capital Intensity and the Great Recession"),
-                  p(em("TP19 NAICS methodology"))
-                )
-              )
-            )
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Citation Guide",
-            status = "danger",
-            solidHeader = TRUE,
-            width = 12,
-            collapsible = TRUE,
-            collapsed = TRUE,
-            h4("How to Cite This App"),
-            p(strong("APA Format:")),
-            p(
-              "Arcanum Project. (2025). ", em("Shaikh-Tonak Marxian Analysis Shiny App (1948-1989)."),
-              " Interactive data visualization. Based on Shaikh, A. M., & Tonak, E. A. (1994). ",
-              em("Measuring the Wealth of Nations."), " Cambridge University Press."
-            ),
-            hr(),
-            h4("How to Cite Shaikh & Tonak (1994)"),
-            p(strong("APA Format:")),
-            p(
-              "Shaikh, A. M., & Tonak, E. A. (1994). ", em("Measuring the wealth of nations: The political economy of national accounts."),
-              " Cambridge University Press."
-            ),
-            hr(),
-            p(strong("BibTeX:"), " (available in Downloads tab)")
-          )
-        )
-      ),
-      tabItem(
-        tabName = "downloads",
-        h2("Data Downloads"),
-        p("Export datasets in multiple formats for further analysis"),
-        fluidRow(
-          infoBox(
-            "Available Datasets",
-            value = "11",
-            subtitle = "Extended datasets ready for download",
-            icon = icon("database"),
-            color = "blue",
-            width = 4
-          ),
-          infoBox(
-            "Time Period",
-            value = "1948-2024",
-            subtitle = "77 years of annual data",
-            icon = icon("calendar"),
-            color = "green",
-            width = 4
-          ),
-          infoBox(
-            "Formats",
-            value = "CSV, Excel, RData",
-            subtitle = "Multiple export options",
-            icon = icon("file-export"),
-            color = "orange",
-            width = 4
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Individual Dataset Downloads",
-            status = "primary",
-            solidHeader = TRUE,
-            width = 12,
-            p("Download individual datasets (CSV format):"),
-            hr(),
-            fluidRow(
-              column(
-                6,
-                h4("Core Economic Indicators"),
-                downloadButton("download_profit_rates", "Profit Rates (1948-1989)",
-                  class = "btn-primary", style = "margin: 5px; width: 95%;"
-                ),
-                br(),
-                downloadButton("download_exploitation", "Exploitation & Composition",
-                  class = "btn-primary", style = "margin: 5px; width: 95%;"
-                ),
-                br(),
-                downloadButton("download_employment", "Employment Data",
-                  class = "btn-primary", style = "margin: 5px; width: 95%;"
-                ),
-                br(),
-                downloadButton("download_productivity", "Productivity Measures",
-                  class = "btn-primary", style = "margin: 5px; width: 95%;"
-                )
-              ),
-              column(
-                6,
-                h4("Supplementary Data"),
-                downloadButton("download_government", "Government Expenditures",
-                  class = "btn-success", style = "margin: 5px; width: 95%;"
-                ),
-                br(),
-                downloadButton("download_validation", "Validation Targets (Table 5.8)",
-                  class = "btn-success", style = "margin: 5px; width: 95%;"
-                ),
-                br(),
-                downloadButton("download_comprehensive", "Comprehensive Dataset (All Series)",
-                  class = "btn-warning", style = "margin: 5px; width: 95%;"
-                )
-              )
-            )
-          )
-        ),
-        fluidRow(
-          box(
-            title = "Filtered Data Export",
-            status = "success",
-            solidHeader = TRUE,
-            width = 6,
-            p("Export data with current year range filter applied:"),
-            p(strong("Current selection:"), textOutput("download_year_range", inline = TRUE)),
-            hr(),
-            radioButtons("download_format",
-              "Select format:",
-              choices = c(
-                "CSV" = "csv",
-                "Excel (.xlsx)" = "xlsx",
-                "R Data (.RData)" = "rdata"
-              ),
-              selected = "csv"
-            ),
-            hr(),
-            downloadButton("download_filtered", "Download Filtered Data",
-              class = "btn-success btn-lg", style = "width: 100%;"
-            )
-          ),
-          box(
-            title = "Data Dictionary",
-            status = "info",
-            solidHeader = TRUE,
-            width = 6,
-            h4("Variable Definitions"),
-            p(strong("r_star_pct:"), " Marxian profit rate S*/K (%)"),
-            p(strong("r_nipa_pct:"), " NIPA profit rate (%)"),
-            p(strong("exploitation_rate:"), " S*/V* (surplus/variable capital)"),
-            p(strong("value_composition:"), " C*/V* (constant/variable capital)"),
-            p(strong("Lp_L_ratio:"), " Productive labor share"),
-            p(strong("G_S_ratio:"), " Government/surplus ratio"),
-            hr(),
-            downloadButton("download_codebook", "Download Full Codebook (TXT)",
-              class = "btn-info", style = "width: 100%;"
-            )
-          )
-        )
-      )
-    )
-  })
-
+  # (Corrupted UI block removed — lines 298-1258 contained tabItem definitions
+  # erroneously pasted into server_logic.R. Actual server logic continues below.
+  # UI definitions live in R/ui_tabs.R.)
   # ============================================
   # TAB 2: EXPLORE BY QUESTION - FILTERING
   # ============================================
@@ -3442,5 +2410,242 @@ REFERENCE: Shaikh & Tonak (1994) Measuring the Wealth of Nations
     # The main profit_rate_plot renderPlotly already handles this
     # via input$method_overlay checked inside it
   }, ignoreInit = TRUE)
+
+  # ============================================
+  # TAB 12: IO ANALYSIS
+  # ============================================
+
+  output$io_classification_table <- renderDT({
+    if (nrow(industry_classification) == 0) {
+      return(datatable(tibble(Message = "No classification data available")))
+    }
+
+    display <- industry_classification %>%
+      select(
+        Industry, `SIC Code` = SIC_Code, `NAICS Code` = NAICS_Code,
+        `ST94` = ST94_Classification, `Mohun 05` = M05_Classification,
+        `TP19` = TP19_Classification,
+        `Emp Share 1989` = Employment_Share_1989,
+        `Emp Share 2024` = Employment_Share_2024,
+        Notes
+      )
+
+    datatable(display,
+      options = list(pageLength = 25, scrollX = TRUE, dom = "ftip"),
+      rownames = FALSE,
+      filter = "top"
+    ) %>%
+      formatStyle("ST94",
+        backgroundColor = styleEqual(
+          c("Productive", "Unproductive"),
+          c("#d4edda", "#f8d7da")
+        )
+      ) %>%
+      formatStyle("Mohun 05",
+        backgroundColor = styleEqual(
+          c("Productive", "Unproductive"),
+          c("#d4edda", "#f8d7da")
+        )
+      )
+  })
+
+  output$io_emp_share_plot <- renderPlotly({
+    if (nrow(industry_classification) == 0) {
+      return(plotly_empty() %>% layout(title = "No data"))
+    }
+
+    df <- industry_classification %>%
+      select(Industry, ST94_Classification, Employment_Share_1989, Employment_Share_2024) %>%
+      pivot_longer(
+        cols = c(Employment_Share_1989, Employment_Share_2024),
+        names_to = "period", values_to = "share"
+      ) %>%
+      mutate(period = ifelse(grepl("1989", period), "1989", "2024"))
+
+    plot_ly(df, x = ~Industry, y = ~share, color = ~period, type = "bar",
+            colors = c("1989" = "#3c8dbc", "2024" = "#dd4b39")) %>%
+      layout(
+        barmode = "group",
+        xaxis = list(title = "", tickangle = 45),
+        yaxis = list(title = "Employment Share (%)"),
+        legend = list(orientation = "h", y = 1.1),
+        margin = list(b = 120)
+      )
+  })
+
+  # ============================================
+  # TAB 13: LABOR VALUES
+  # ============================================
+
+  output$labor_value_scatter <- renderPlotly({
+    plotly_empty() %>% layout(
+      title = list(
+        text = "Labor value-price scatter plots require IO benchmark data.\nSee Technical/NickyData/data/final-data/book/series/ for T701-T703.",
+        font = list(size = 13)
+      ),
+      annotations = list(list(
+        text = paste0(
+          "SIC benchmarks (1947-1977): R² = 0.70-0.98\n",
+          "NAICS benchmarks (1997-2017): R² = 0.85-0.99\n\n",
+          "Data available in T701 (labor values), T702 (prices of production),\n",
+          "T703 (value-price deviations)"
+        ),
+        x = 0.5, y = 0.5, xref = "paper", yref = "paper",
+        showarrow = FALSE, font = list(size = 14)
+      ))
+    )
+  })
+
+  output$labor_value_r2_table <- renderDT({
+    r2_data <- tibble(
+      `Benchmark Year` = c(1947, 1958, 1963, 1967, 1972, 1977, 1997, 2002, 2007, 2012, 2017),
+      Framework = c(rep("SIC (85-sector)", 6), rep("NAICS (71-sector)", 5)),
+      `R-squared` = c(0.93, 0.98, 0.97, 0.96, 0.93, 0.70, 0.99, 0.97, 0.92, 0.85, 0.88),
+      Method = rep("Ochoa (1984) cross-sectional regression", 11)
+    )
+
+    datatable(r2_data,
+      options = list(pageLength = 15, dom = "t"),
+      rownames = FALSE
+    ) %>%
+      formatRound("R-squared", digits = 2) %>%
+      formatStyle("R-squared",
+        background = styleColorBar(c(0, 1), "#d4edda"),
+        backgroundSize = "98% 88%",
+        backgroundRepeat = "no-repeat",
+        backgroundPosition = "center"
+      )
+  })
+
+  # ============================================
+  # TAB 14: CROSS-STUDY COMPARISON
+  # ============================================
+
+  output$cross_study_mohun_plot <- renderPlotly({
+    if (nrow(mohun_comparison) == 0) {
+      return(plotly_empty() %>% layout(title = "No Mohun comparison data"))
+    }
+
+    df <- mohun_comparison %>%
+      filter(year >= input$year_range[1], year <= input$year_range[2])
+
+    p <- plot_ly(df, x = ~year)
+    if ("N1401" %in% names(df)) {
+      p <- p %>% add_lines(y = ~N1401, name = "Mohun e (N1401)",
+                           line = list(color = "#3c8dbc", width = 2))
+    }
+    if ("N1404" %in% names(df)) {
+      p <- p %>% add_lines(y = ~N1404, name = "Mohun r* (N1404)",
+                           line = list(color = "#dd4b39", width = 2, dash = "dash"))
+    }
+
+    p %>% layout(
+      xaxis = list(title = "Year"),
+      yaxis = list(title = "Rate"),
+      hovermode = "x unified",
+      legend = list(orientation = "h", y = -0.15)
+    )
+  })
+
+  output$cross_study_moos_plot <- renderPlotly({
+    if (nrow(moos_nsw_comparison) == 0) {
+      return(plotly_empty() %>% layout(title = "No Moos comparison data"))
+    }
+
+    df <- moos_nsw_comparison %>%
+      filter(year >= input$year_range[1], year <= input$year_range[2])
+
+    p <- plot_ly(df, x = ~year)
+    for (col in setdiff(names(df), "year")) {
+      p <- p %>% add_lines(y = df[[col]], name = col, line = list(width = 2))
+    }
+
+    p %>% layout(
+      xaxis = list(title = "Year"),
+      yaxis = list(title = "NSW Ratio"),
+      hovermode = "x unified",
+      legend = list(orientation = "h", y = -0.15)
+    )
+  })
+
+  output$cross_study_methodology_plot <- renderPlotly({
+    if (nrow(methodology_comparison) == 0) {
+      return(plotly_empty() %>% layout(title = "No methodology comparison data"))
+    }
+
+    df <- methodology_comparison %>%
+      filter(Year >= input$year_range[1], Year <= input$year_range[2])
+
+    p <- plot_ly(df, x = ~Year)
+
+    method_colors <- c("#3c8dbc", "#dd4b39", "#00a65a", "#f39c12")
+    method_cols <- setdiff(names(df), c("Year", "Period"))
+    for (i in seq_along(method_cols)) {
+      col <- method_cols[i]
+      color_idx <- ((i - 1) %% length(method_colors)) + 1
+      p <- p %>% add_lines(y = df[[col]], name = col,
+                           line = list(color = method_colors[color_idx], width = 2))
+    }
+
+    p %>% layout(
+      xaxis = list(title = "Year"),
+      yaxis = list(title = "Rate of Exploitation (e)"),
+      hovermode = "x unified",
+      legend = list(orientation = "h", y = -0.15)
+    )
+  })
+
+  # ============================================
+  # TAB 15: INTERNATIONAL NSW
+  # ============================================
+
+  output$international_nsw_plot <- renderPlotly({
+    if (nrow(international_nsw) == 0) {
+      return(plotly_empty() %>% layout(title = "No international NSW data"))
+    }
+
+    df <- international_nsw %>%
+      filter(year >= input$year_range[1], year <= input$year_range[2])
+
+    p <- plot_ly(df, x = ~year)
+    series_colors <- c("N1601" = "#dd4b39", "N1602" = "#f39c12", "N1701" = "#00a65a")
+    series_names <- c(
+      "N1601" = "Turkey NSW/NI (Karabacak & Tonak 2022)",
+      "N1602" = "Turkey NSW/EC (Karabacak & Tonak 2022)",
+      "N1701" = "NZ Productive Capital Share (Cronin 2001)"
+    )
+
+    for (col in setdiff(names(df), "year")) {
+      label <- ifelse(col %in% names(series_names), series_names[[col]], col)
+      color <- ifelse(col %in% names(series_colors), series_colors[[col]], "#3c8dbc")
+      vals <- df[[col]]
+      if (any(!is.na(vals))) {
+        p <- p %>% add_lines(y = vals, name = label,
+                             line = list(color = color, width = 2))
+      }
+    }
+
+    p %>% layout(
+      xaxis = list(title = "Year"),
+      yaxis = list(title = "Ratio/Share"),
+      hovermode = "x unified",
+      legend = list(orientation = "h", y = -0.2)
+    )
+  })
+
+  output$international_nsw_table <- renderDT({
+    if (nrow(international_nsw) == 0) {
+      return(datatable(tibble(Message = "No data")))
+    }
+
+    display <- international_nsw
+    names(display) <- c("Year",
+      "Turkey NSW/NI", "Turkey NSW/EC", "NZ Prod Capital")[1:ncol(display)]
+
+    datatable(display,
+      options = list(pageLength = 15, scrollX = TRUE, dom = "ftip"),
+      rownames = FALSE
+    ) %>% formatRound(2:ncol(display), digits = 4)
+  })
 }
 

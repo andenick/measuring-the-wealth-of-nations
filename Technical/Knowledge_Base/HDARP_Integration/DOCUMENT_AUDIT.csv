@@ -1,0 +1,39 @@
+document_id,source_type,total_files,text_files,text_total_chars,tables_real,equations_real,figures_real,has_processing_log,classification,status
+"[1984] Semmler - Competition, Monopoly, and Differential Profit Rates",processed_dir,114,0,0,0,0,0,False,MINIMAL,audited
+[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980,processed_dir,27,24,10280795,0,0,0,False,BODY_ONLY,audited
+[2001] Cronin - Productive and Unproductive Capital A mapping of the New Zealand system of national accounts to classical economic categories 1972-95,processed_dir,203,3,85191,51,0,0,False,PARTIAL,audited
+[2002] Matthews - An Econometric Model of the Circuit of Capital,processed_dir,180,3,145181,158,0,0,False,PARTIAL,audited
+"[2005] Mohun - On measuring the wealth of nations the US economy, 1964-2001",processed_dir,65,3,61970,56,0,0,False,PARTIAL,audited
+"[2011] Paitardis & Tsoulfidis - the Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the U.S. Economy",processed_dir,77,3,88997,70,0,0,False,PARTIAL,audited
+[2013] Mohun - Unproductive Labor in the US Economy 1964-2010,processed_dir,94,3,102406,81,0,0,False,PARTIAL,audited
+"[2019] Tsoulfidis & Paitaridis - Capital intensity, unproductive activities and the Great Recession in the US economy",processed_dir,108,3,119178,99,0,0,False,PARTIAL,audited
+1984_Semmler_Competition_Monopoly,hdarp_extraction,0,0,0,0,0,0,False,HOLLOW,audited
+1984_Tonak_State_Revenues,hdarp_extraction,51,23,351775,11,11,10,False,FULL_HDARP,audited
+1985_Semmler_Nonlinear_Cycles,hdarp_extraction,21,15,266341,5,2,2,False,FULL_HDARP,audited
+1987_Shaikh_Tonak_Social_Wage_Myth,hdarp_extraction,1,1,60696,0,0,0,False,BODY_ONLY,audited
+1994_Measuring_Wealth,hdarp_extraction,112,50,841374,36,7,24,False,FULL_HDARP,audited
+2001_Cronin_New_Zealand,hdarp_extraction,6,3,48473,1,1,1,False,FULL_HDARP,audited
+2002_Matthews,hdarp_extraction,1,1,55446,0,0,0,False,BODY_ONLY,audited
+2002_Matthews_Econometric_Model,hdarp_extraction,2,2,17987,0,0,0,False,BODY_ONLY,audited
+2002_Shaikh_Tonak_Welfare_State,hdarp_extraction,1,1,71469,0,0,0,False,BODY_ONLY,audited
+2005_Mohun_US_1964_2001,hdarp_extraction,1,1,37579,0,0,0,False,BODY_ONLY,audited
+2011_Paitaridis_Tsoulfidis,hdarp_extraction,4,2,74412,1,1,1,False,FULL_HDARP,audited
+2013_Mohun_Unproductive_1964_2010,hdarp_extraction,1,1,73119,0,0,0,False,BODY_ONLY,audited
+2017_Moos_NSW_21st_Century,hdarp_extraction,4,1,82366,1,1,1,False,FULL_HDARP,audited
+2019_Tsoulfidis_Paitaridis_Great_Recession,hdarp_extraction,1,1,81954,0,0,0,False,BODY_ONLY,audited
+2022_Karabacak_Tonak_NSW_Turkey,hdarp_extraction,4,1,51285,1,1,1,False,FULL_HDARP,audited
+2024_Savran_Tonak_Marx_Capital,hdarp_extraction,0,0,0,0,0,0,False,HOLLOW,audited
+2024_Savran_Tonak_Tracks_Marx_Capital,hdarp_extraction,262,190,2193658,27,16,23,False,FULL_HDARP,audited
+BEA_1996_NIPA_Revision,hdarp_extraction,0,0,0,0,0,0,False,HOLLOW,audited
+BEA_1997_IO_Concepts_Methods,hdarp_extraction,0,0,0,0,0,0,False,HOLLOW,audited
+TM_[1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980,tonak_moos,86,0,0,0,0,0,False,MINIMAL,audited
+TM_[2017] Moos - Neoliberal Distributive Policy US Net Social Wage in the 21st Century,tonak_moos,101,3,100355,81,0,0,False,PARTIAL,audited
+TM_[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019,tonak_moos,84,3,98263,74,0,0,False,PARTIAL,audited
+"[2012] Paitaridis & Tsoulfidis - The Growth of Unproductive Activities, the Rate of Profit, and the Phase-Change of the US Economy",standalone_pdf,1,0,0,0,0,0,False,PDF_ONLY,audited
+[2017] Moos - Essays on the Theory and Political Economy of Economic Policy,standalone_pdf,1,0,0,0,0,0,False,PDF_ONLY,audited
+[2017] Moos - Neoliberal Distributive Policy US Net Social Wage in the 21st Century,standalone_pdf,1,0,0,0,0,0,False,PDF_ONLY,audited
+[2022] Karabacak & Tonak - The Net Social Wage in Turkey 1980-2019,standalone_pdf,1,0,0,0,0,0,False,PDF_ONLY,audited
+[2024] Savran & Tonak - In the Tracks of Marx’s Capital_ Debates in Marxian Political Economy and Lessons for 21st Century Capitalism,standalone_pdf,1,0,0,0,0,0,False,PDF_ONLY,audited
+"[2025.10.02] [1984] Semmler - Competition, Monopoly, and Differential Profit Rates",standalone_pdf,1,0,0,0,0,0,False,PDF_ONLY,audited
+[2025.10.02] [1984] Tonak -A Conceptualization of State Revenues and Expenditures USA 1952-1980,standalone_pdf,1,0,0,0,0,0,False,PDF_ONLY,audited
+"[2025.10.02] [1985] Semmler - Competition, Instability, and Nonlinear Cycles - Conference Proceedings",standalone_pdf,1,0,0,0,0,0,False,PDF_ONLY,audited

@@ -1,0 +1,31 @@
+LaTeX Mathematical Expressions from Table E.2 (Page 310):
+
+Key Variables and Equations:
+
+1. $M'_p = C*_m$
+2. $GFP = TP^* - C*_m$
+3. $(X-IM)^*$ (Net exports)
+4. $FP^* = GFP^* - C*_d$
+
+Variables:
+- $TP^*$: Total Production (likely)
+- $M'_p$: Productive material costs
+- $M'_u$: Unproductive material costs
+- $M'_y$: Material costs related to royalties
+- $GFP$: Gross Final Product
+- $CON^*$: Final consumption
+- $GVA_{ir}$: Gross value added of interest and rent
+- $RY_{con}$: Royalties from consumption
+- $HH_{con}$: Household consumption
+- $ROW_{con}$: Rest of world consumption
+- $IG^*$: Investment goods
+- $RY_i$: Royalties from investment
+- $ABR$: Adjusted business reserves
+- $RY_{x-im}$: Royalties from net exports
+- $ROW_{x-im}$: Rest of world net exports
+- $G^*$: Government spending
+- $RY_G$: Royalties from government
+- $W_G$: Government wages
+- $ROW_s$: Rest of world subsidies
+- $C^*_d$: Defense consumption
+- $FP^*$: Final Product

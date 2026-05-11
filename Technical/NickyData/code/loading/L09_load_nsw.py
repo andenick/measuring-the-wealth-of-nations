@@ -22,7 +22,7 @@ SERIES_IDS = ["T607", "T608", "T609"]
 
 
 def load():
-    """Load NSW data, converting millions→billions for T607."""
+    """Load NSW data, converting millions->billions for T607."""
     ensure_dirs()
     outputs = []
 
@@ -40,11 +40,11 @@ def load():
     # T607: NSW in billions
     if "nsw" in df.columns:
         out = df[["nsw"]].rename(columns={"nsw": "value"}).dropna()
-        out["value"] = out["value"] / 1000.0  # millions → billions
+        out["value"] = out["value"] / 1000.0  # millions -> billions
         out_path = PARSED_RAW / "T607_parsed.csv"
         out.to_csv(out_path)
         outputs.append(str(out_path))
-        print(f"    [L09] T607: {len(out)} rows (NSW ÷1000 → billions)")
+        print(f"    [L09] T607: {len(out)} rows (NSW ÷1000 -> billions)")
 
     # T609: NSW/NI share (already a ratio)
     if "nsw_ni_share" in df.columns:

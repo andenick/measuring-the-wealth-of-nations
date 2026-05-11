@@ -1,0 +1,97 @@
+{
+  "version": "5.1",
+  "project": "ST2",
+  "last_updated": "2026-05-06",
+  "current_batch": "BATCH_005",
+  "next_to_process": null,
+  "validation_queue": ["BATCH_001", "BATCH_002", "BATCH_003", "BATCH_004"],
+  "batches": {
+    "BATCH_001": {
+      "status": "COMPLETE",
+      "doc_id": "turkstat_indicators_1923_2011",
+      "total_chunks": 10,
+      "chunks_processed": 10,
+      "chunks": [
+        "chunk_001.pdf",
+        "chunk_002.pdf",
+        "chunk_003.pdf",
+        "chunk_004.pdf",
+        "chunk_005.pdf",
+        "chunk_006.pdf",
+        "chunk_007.pdf",
+        "chunk_008.pdf",
+        "chunk_009.pdf",
+        "chunk_010.pdf"
+      ],
+      "wave": "Wave_01",
+      "processing_notes": "Sector-level employment/wage data. National accounts (GDP/CoE) not yet reached — in chunks 19+."
+    },
+    "BATCH_002": {
+      "status": "COMPLETE",
+      "doc_id": "turkstat_indicators_1923_2011",
+      "total_chunks": 10,
+      "chunks_processed": 10,
+      "chunks": [
+        "chunk_011.pdf",
+        "chunk_012.pdf",
+        "chunk_013.pdf",
+        "chunk_014.pdf",
+        "chunk_015.pdf",
+        "chunk_016.pdf",
+        "chunk_017.pdf",
+        "chunk_018.pdf",
+        "chunk_019.pdf",
+        "chunk_020.pdf"
+      ],
+      "wave": "Wave_01"
+    },
+    "BATCH_003": {
+      "status": "COMPLETE",
+      "doc_id": "turkstat_indicators_1923_2011",
+      "total_chunks": 7,
+      "chunks_processed": 7,
+      "chunks": [
+        "chunk_021.pdf",
+        "chunk_022.pdf",
+        "chunk_023.pdf",
+        "chunk_024.pdf",
+        "chunk_025.pdf",
+        "chunk_026.pdf",
+        "chunk_027.pdf"
+      ],
+      "wave": "Wave_01"
+    },
+    "BATCH_004": {
+      "status": "COMPLETE",
+      "doc_id": "turkstat_yearbook_2012",
+      "total_chunks": 10,
+      "chunks_processed": 10,
+      "chunks": [
+        "chunk_001.pdf",
+        "chunk_002.pdf",
+        "chunk_003.pdf",
+        "chunk_004.pdf",
+        "chunk_005.pdf",
+        "chunk_006.pdf",
+        "chunk_007.pdf",
+        "chunk_008.pdf",
+        "chunk_009.pdf",
+        "chunk_010.pdf"
+      ],
+      "wave": "Wave_01"
+    },
+    "BATCH_005": {
+      "status": "COMPLETE",
+      "doc_id": "turkstat_yearbook_2012",
+      "total_chunks": 4,
+      "chunks_processed": 4,
+      "chunks": [
+        "chunk_011.pdf",
+        "chunk_012.pdf",
+        "chunk_013.pdf",
+        "chunk_014.pdf"
+      ],
+      "wave": "Wave_01"
+    }
+  }
+}

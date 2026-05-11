@@ -1,0 +1,39 @@
+table_number,table_title,source_page
+18.1,Purchasing power parity values in OECD countries 2008-2012,300
+notes,"National currency per USA Dollar. USA=1. Source: OECD Statistics Database 2013."
+
+country_TR,country_EN,2008,2009,2010,2011,2012
+Türkiye,Turkey,0.89,0.92,0.95,1.03,1.08
+ABD,USA,1.00,1.00,1.00,1.00,1.00
+Almanya,Germany,0.81,0.81,0.81,0.80,0.80
+Avustralya,Australia,1.48,1.44,1.50,1.49,1.46
+Avusturya,Austria,0.85,0.85,0.84,0.85,0.85
+Belçika,Belgium,0.87,0.86,0.86,0.87,0.87
+Çek Cumhuriyeti,Czech Republic,14.26,13.98,14.24,13.90,13.79
+Danimarka,Denmark,8.01,7.88,7.82,7.86,7.87
+Estonya,Estonia,0.55,0.53,0.53,0.54,0.55
+Finlandiya,Finland,0.92,0.91,0.93,0.94,0.94
+Fransa,France,0.88,0.87,0.87,0.87,0.86
+Hollanda,Netherlands,0.84,0.85,0.85,0.84,0.83
+İngiltere,United Kingdom,0.65,0.66,0.67,0.68,0.68
+İrlanda,Ireland,0.95,0.90,0.85,0.84,0.84
+İspanya,Spain,0.72,0.71,0.72,0.72,0.71
+İsrail,Israel,3.87,3.95,3.94,3.89,3.92
+İsveç,Sweden,8.77,8.96,9.07,8.94,8.87
+İsviçre,Switzerland,1.55,1.53,1.51,1.45,1.42
+İtalya,Italy,0.79,0.78,0.80,0.80,0.79
+İzlanda,Iceland,117.42,125.69,136.07,139.74,142.16
+Japonya,Japan,116.85,116.35,112.42,108.81,105.89
+Kanada,Canada,1.23,1.20,1.22,1.23,1.22
+Kore,Korea,785.72,811.66,829.90,833.03,828.31
+Lüksemburg,Luxembourg,0.91,0.91,0.93,0.93,0.95
+Macaristan,Hungary,129.43,126.26,129.00,130.35,131.72
+Meksika,Mexico,7.47,7.41,7.60,7.53,7.69
+Norveç,Norway,8.75,9.01,9.06,9.09,9.23
+Polonya,Poland,1.86,1.87,1.85,1.88,1.89
+Portekiz,Portugal,0.65,0.64,0.64,0.63,0.62
+Slovak Cumhuriyeti,Slovak Republic,0.53,0.51,0.52,0.53,0.53
+Slovenya,Slovenia,0.63,0.65,0.65,0.64,0.64
+Şili,Chile,339.27,350.59,347.85,334.24,329.89
+Yeni Zelanda,New Zealand,1.49,1.45,1.49,1.48,1.48
+Yunanistan,Greece,0.70,0.70,0.71,0.71,0.70

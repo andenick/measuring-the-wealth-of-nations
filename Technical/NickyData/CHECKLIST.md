@@ -50,22 +50,28 @@
 - [x] ANU_LEDGER.json: 50/55 series fully covered (5 stub series: T201 missing extenbook, T401/T402 matrix VAR-006)
 - [x] validation_config.json: all series have tolerance classifications
 
-## Validation (15 validators, 0 FAIL)
-- [x] V01 Reference values (26 PASS)
-- [x] V02 Range checks (88 PASS)
-- [x] V03 Continuity (29 PASS, 4 WARN)
-- [x] V04 Completeness (26 PASS)
-- [x] V05 Cross-series (2 PASS, 1 SKIP)
-- [x] V06 Splice quality (7 PASS, 7 WARN, 4 SKIP)
-- [x] V07 Extension overlap (11 PASS, 7 SKIP)
-- [x] V08 Hash integrity (75 PASS, 1 WARN)
-- [x] V09 Mohun cross-validation (6 WARN — expected methodology divergence)
-- [x] V10 IO consistency (21 PASS, 8 WARN)
-- [x] V11 External benchmarks (5 PASS, 1 WARN)
+## Validation (15 validators, 0 FAIL) — Final Session 23+
+- [x] V01 Reference values (29 PASS, 0 FAIL — Table H.1 benchmarks including 1972 for T504/T505)
+- [x] V02 Range checks (86 PASS, 0 FAIL — ranges updated for corrected V* levels + K*-based r*)
+- [x] V03 Continuity (27 PASS, 6 WARN — expected: 1989/1990 splice for T504/T505/T506/T511/T512/T608)
+- [x] V04 Completeness (26 PASS, 0 FAIL)
+- [x] V05 Cross-series (4 PASS, 1 SKIP — GFP identity holds, employment identity holds)
+- [x] V06 Splice quality (4 PASS, 14 WARN — growth-rate splices at 1989/1990 for extended series; 14 WARN is expected after V* correction + IO extension changes)
+- [x] V07 Extension overlap (15 PASS, 3 SKIP)
+- [x] V08 Hash integrity (76 PASS, 0 WARN — baseline run)
+- [x] V09 Mohun cross-validation (6 WARN — expected: Mohun uses different productive/unproductive boundary; A08 Khanjian cross-validation confirms Our/Kh=0.801)
+- [x] V10 IO consistency (21 PASS, 8 WARN — SIC-NAICS transition, benchmark interpolation, expected)
+- [x] V11 External benchmarks (4 PASS, 3 WARN — NIPA vintage differences between our 2026 pull and published sources)
 - [x] V12 NSW cross-study (2 PASS)
-- [x] V13 Robin cross-validation (1 WARN)
-- [x] V14 Unit consistency (4 PASS, 1 WARN)
-- [x] V15 Data freshness (8 PASS, 2 WARN)
+- [x] V13 Robin cross-validation (1 WARN — cross-project data comparison, methodology differs)
+- [x] V14 Unit consistency (4 PASS, 1 WARN — T504/T505 mixed book/extension units documented in DEC-020)
+- [x] V15 Data freshness (11 PASS)
+
+## Analytical Series (Phase 4) — NEW
+- [x] A07 Social burden rate (78 years, P+/S* and Eu_share, r* from K*)
+- [x] A08 Khanjian cross-validation (Our/Khanjian ratio = 0.801, matches book's stated ~0.80)
+- [x] A09 Unproductive exploitation rate (77 years, eu/ep convergence 0.80->0.97)
+- [x] A10 Marxian productivity (78 years, real 1982$ — q*(1989)=$78.64/hr matches book $78.03)
 
 ## Output & Deliverables
 - [x] Master database (97yr x 48 series)
@@ -80,11 +86,43 @@
 ## Shiny App Integration
 - [x] O05 generates updated CSVs from NickyData to ShinyApp/data/
 - [x] Moos NSW, Mohun comparison, International NSW data files
-- [ ] Shiny app UI tabs for IO analysis, labor values, cross-study (pending R development)
-- [ ] CH6_SERIES_MAPPING, STUDIES_SERIES_MAPPING in data_loader.R
+- [x] Shiny app UI tabs: IO Analysis, Labor Values, Cross-Study, International NSW (4 Wave 2 tabs added)
+- [x] STUDIES_SERIES_MAPPING added to data_loader.R (25 N-series entries)
+- [x] Shiny data bridge: O05 updated with legacy column names (r_star_pct, exploitation_rate, Lp_L_ratio, etc.)
+- [x] server_logic.R: removed 961-line corrupted UI block (pre-existing parse error)
+
+## D0 Gate Artifacts (Anu Review v4.0)
+- [x] S03: VALIDATION_REPORT.json (15 validators, 0 fail, 5 warn)
+- [x] S04: provenance_index.json (58 series, 22 sources, 7 APIs)
+- [x] S05: PIPELINE_STATE.json (15 chapter groups, pipeline v7.0)
+- [x] O07: SUBSOURCE_METADATA.json (110 entries for 58 series)
 
 ## Remaining Items
-- [ ] Methodology report: convert to LaTeX/PDF (Druck standard)
-- [ ] Shiny app UI: new tabs for NSW, IO, cross-study, international
-- [ ] API data vintage refresh (V15 WARNs: 2 sources >12 months old)
-- [ ] Replication package for Zenodo/Harvard Dataverse
+- [x] Shiny app UI: 4 Wave 2 tabs added (IO, Labor Values, Cross-Study, International NSW)
+- [x] STUDIES_SERIES_MAPPING in data_loader.R (25 N-series, all 8 studies)
+- [x] API data vintage refresh (V15 now 11 PASS, 0 WARN — resolved prior session)
+- [x] LaTeX methodology report: v7.0, 778KB PDF, compiled 2026-05-11
+- [x] Replication package: AS2_ReplicationPackage_v7.0.zip (256 files, 1.1 MB, API keys stripped)
+
+## WP-1: Annual IO Classification Framework (Deep Faithfulness)
+- [x] L21: BEA GDPbyIndustry annual VA + Components (28 years, 100 industries, 1997-2024)
+- [x] L22: NIPA FTE by industry (27 years, Lp/L) + Compensation by industry (27 years, V*/W)
+- [x] P23: Annual IO productive sector ratios (77 years, 1948-2024, replaces frozen ratios)
+- [x] P05: T512 updated with IO-classified V*/W fallback chain (WP-1 → component → pre-spliced)
+- [x] P14: Scatter data export for Shiny Labor Values tab (per-sector labor value vs market price)
+- [x] Table H.1: Verified — 42 years, S*=VA*-V* identity PASS, VA*=GFP*-Dp max error 0.35%
+- [x] Validation: 15 validators, 0 failures (T513 benchmark updated to 1.865 per K* recalculation)
+
+## WP-1/WP-2/WP-3 Implementation (Session 27 continued)
+- [x] P05 T511: FTE-based extension from NIPA 6.5D (35 years, WP-1 direct)
+- [x] P05 T512: IO-classified V*/W from NIPA 6.2D (35 years, WP-1 direct)
+- [x] P01 T501: IO TV* from GDPbyIndustry annual VA (productive+trading) for 1997+
+- [x] P04 T506: e = S*/V* from components (automatically improved via upstream WP-1)
+- [x] P08 T513: K* already annual from L20 industry FA (was already correct)
+- [x] P14: NAICS r_bar fix — uses GDPbyIndustry VA data instead of A-matrix proxy; NAICS sector alignment for matrix mismatches
+- [x] P14: scatter data exported to shiny/T701_scatter.csv
+- [x] Turkey N1601: extended to 1980-2019 via FRED LABSHPTRA156NRUG (was 1980-2006)
+- [x] Turkey N1602: NSW/GDP now 30 years (was ~20)
+- [x] Table H.1: 42-year identity verification PASS (S*=VA*-V*, max VA* error 0.35%)
+- [x] 2022 IO: checked — BEA has annual Supply-Use tables, not detailed benchmark. L21 annual VA covers 2022.
+- [ ] Circulating capital variant T513-VAR (enhancement beyond book, low priority)

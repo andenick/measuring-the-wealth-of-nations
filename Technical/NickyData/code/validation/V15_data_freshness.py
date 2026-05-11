@@ -24,7 +24,7 @@ def validate(series_filter=None, chapter_filter=None):
     with open(VINTAGE_PATH) as f:
         log = json.load(f)
 
-    now = datetime(2026, 4, 9)  # Current date
+    now = datetime.now()
     stale_cutoff = now - timedelta(days=STALE_DAYS)
 
     for name, info in log.get("sources", {}).items():

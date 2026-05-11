@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "project": "AS2",
+  "description": "Registry of intentional methodology variants and documented divergences",
+  "last_updated": "2026-04-08",
+  "variants": [
+    {
+      "id": "VAR-001",
+      "title": "T### Series ID Convention",
+      "category": "convention",
+      "description": "AS2 uses T### IDs (e.g., T501, T601) instead of the Anu Suite standard S### pattern. The T prefix encodes chapter-table structure: first digit = chapter number, following digits = table sequence within chapter.",
+      "rationale": "Self-documenting IDs for anyone familiar with Shaikh & Tonak (1994) table numbering",
+      "impact": "All scripts, catalogs, DPRs, registry entries use T### throughout",
+      "decision_ref": "DEC-001",
+      "status": "accepted",
+      "date_established": "2026-02-23"
+    },
+    {
+      "id": "VAR-002",
+      "title": "Total K Instead of Productive K*",
+      "category": "data_methodology",
+      "description": "Marxian profit rate r* = S*/(C*+V*) uses total private fixed assets K from BEA Fixed Assets Table 4.1, instead of productive sector capital K* restricted via IO classification.",
+      "rationale": "IO-based sector classification (Chapter 4) required for K* restriction; not yet available (Wave 2)",
+      "impact": "T513, T514 profit rate levels are lower than book values; trend direction preserved",
+      "divergence_ref": "DIV-001",
+      "decision_ref": "DEC-002",
+      "adjustment_ref": "ADJ-001",
+      "status": "open",
+      "resolution": "Wave 2 IO framework will enable K* restriction",
+      "date_established": "2026-02-23"
+    },
+    {
+      "id": "VAR-003",
+      "title": "Constant VA*/W = 1.238",
+      "category": "data_methodology",
+      "description": "Extension period uses approximately constant VA*/W ratio (1.238) instead of year-varying ec_u/ec_p ratio from BLS CES data. Partially resolved: code now supports year-varying input.",
+      "rationale": "Full resolution requires BLS industry-level compensation data unavailable for 1990-1997 (SIC-era gap)",
+      "impact": "T504, T505, T506, T512 extension values carry small systematic error at inter-benchmark years",
+      "divergence_ref": "DIV-002",
+      "decision_ref": "DEC-003",
+      "adjustment_ref": "ADJ-002",
+      "status": "partially_resolved",
+      "date_established": "2025-12-05",
+      "date_partially_resolved": "2026-03-30"
+    }
+  ]
+}

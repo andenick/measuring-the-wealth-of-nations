@@ -1,0 +1,85 @@
+{
+  "series_id": "N1101",
+  "series_name": "Net Transfer Rate (ST 1987)",
+  "study": "study_02_st_1987",
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/Knowledge_Base/external_papers/productive_labor/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "Net transfer rate = (Benefits received by workers from the state minus taxes paid by workers to the state) / Apparent wage (employee compensation). Formula: NT/AW = (B - T_w) / EC. When negative, this represents a net tax on workers (workers subsidizing the state); when positive, a net transfer to workers. The series covers 1952-1985 and is Shaikh and Tonak's central measure in the 1987 paper. The rate adjusts for inflation, changes in employment, and other cyclical factors. Benefits include Group I (direct: income support, social security, housing, labor training) and the labor share of Group II (education, health, recreation, energy, natural resources, transportation, postal services). Taxes include Group I (social security contributions from employee compensation) and the labor share of Group II (personal income taxes, motor vehicle licenses, property taxes, other taxes). Group III expenditures (defense, general government) and corporate/indirect taxes are excluded.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Empirical Methodology pp.186-187; Key Formulas section; Abstract)"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Primary source: Shaikh and Tonak (1987), Table 2 ('Expenditures Received and Taxes Paid by Labor — Net Transfer, 1952-85', p.192). The table contains 34 annual observations in billions of current dollars: benefits received (column 1), taxes paid (column 2), and net transfer (column 3). The net transfer rate is derived by dividing the net transfer by total employee compensation (apparent wage). Methodology for a single year (1964) is illustrated in Appendix Table 1 (p.191). Underlying data from BEA Survey of Current Business (1981 edition, tables at pp.121, 123, 129, 134, 151, 159, 170) and BLS employment/wage series.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Table 2 p.192; Appendix Table 1 p.191; Data Sources section)"
+    },
+    {
+      "entry_type": "empirical_values",
+      "content": "Key benchmarks from Table 2 and Figure 3: 1952 net transfer = -13.57 billion (rate approx -6%); 1966 net transfer = -11.37 billion (benchmark reference year); 1971 net transfer = +9.15 billion (first positive year); 1975 net transfer = +47.42 billion (peak, rate = +5.4%); 1980 net transfer = +11.74 billion; 1985 net transfer = -237.44 billion (rate = -11.0%, all-time low). Phase structure: Phase 1 (1952-1969) range -2% to -7%, stabilizes around -3%; Phase 2 (1969-1975) rises sharply to +5.4%; Phase 3 (1975-1985) falls to -11.0% driven by Reagan-era benefit cuts and rising taxes. Note: 1979 entry in Table 2 printed as '2979' — appears to be a transcription error for 1979.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Table 2 p.192; Figure 3 description pp.188-189; Three Historical Phases pp.189-190)"
+    },
+    {
+      "entry_type": "construction_note",
+      "content": "Registry construction formula: (B_w - T_w) / EC, inputs T605, T604, BEA_NIPA. This matches S&T (1987) formula NT/AW = (B - T_w)/EC exactly. T605 carries benefits received by workers; T604 carries taxes paid by workers; BEA_NIPA provides employee compensation (EC/AW) denominator. The 1987 paper is the direct methodological source for the T605/T604 series construction in the ST2 project.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Empirical Methodology, Net Transfer Rate formula); series_registry.json#N1101"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "The 1985 raw net transfer value in Table 2 (-237.44 billion) is anomalously large relative to surrounding years and may reflect a data revision, definitional change, or transcription issue in the source document. The authors' own analysis focuses on the rate (expressed as -11.0% of employee compensation in 1985), which is more robust to level issues. Researchers computing N1101 should use the rate figures from Figure 3 or the rate formula rather than relying solely on the raw dollar values in Table 2 for the final year.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Table 2 p.192; Figure 3 description)"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "The net transfer rate (N1101) measures the overall impact of state fiscal policy on the standard of living of all workers, including unemployed. It does not represent the impact on the rate of exploitation of productive labor — that requires the narrower Tonak (1984) framework excluding public assistance from benefits (see N1002). Using N1101 as a proxy for the exploitation rate adjustment overstates the benefit side because public assistance is included.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Note 12, p.193-194; Note 14)"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "The study covers the United States only, using BEA NIPA data. The labor share allocation method (Group II items allocated proportionally by total labor income / personal income) is an approximation: it assumes workers' share in mixed-income categories scales with their share of personal income. This was critiqued by Miller (1986), who used a tax-shifting approach. S&T (1987) explicitly reject the tax-shifting framework in favor of tracing taxes that flow directly out of employee compensation.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Note 8, pp.193-194; Empirical Methodology)"
+    },
+    {
+      "entry_type": "decision_reference",
+      "content": "DEC-012 (No Synthetic Data Policy, 2026-05-03): The N1101-N1103 series are not listed among the five synthetic-data series requiring remediation, suggesting they were computed from real NIPA inputs via T604/T605. However, if T604 or T605 themselves contain synthetic data, N1101 inherits that problem. The raw 34-year series is directly available in S&T (1987) Table 2 (p.192) and should be used as the benchmark validation for P19 output.",
+      "source_ref": "DECISION_LOG.md#DEC-012; 1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Table 2 p.192)"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1987",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' In Robert Cherry et al. (eds.), The Imperiled Economy, Book I. New York: Union for Radical Political Economics, pp. 184-194."
+    },
+    {
+      "id": "BEA_1981",
+      "full": "Bureau of Economic Analysis. 1981. Survey of Current Business. Tables at pp. 121, 123, 129, 134, 151, 159, 170."
+    }
+  ],
+  "methodology_summary": "Net transfer rate = (B_w - T_w) / EC, 1952-1985 (34 years). Benefits include direct worker benefits (Group I) plus labor share of social consumption (Group II). Taxes include social security contributions plus labor share of personal taxes. Key finding: negative for 32 of 34 years, meaning workers are net taxpayers; peak +5.4% in 1975 (crisis-induced); all-time low -11.0% in 1985.",
+  "known_issues": [
+    "1985 raw dollar value (-237.44B) appears anomalous; use rate figures from Figure 3 for validation",
+    "Table 2 contains a likely typo: year listed as '2979' is 1979",
+    "Labor share allocation is an approximation; see Miller (1986) critique",
+    "N1101 includes public assistance in benefits — not appropriate for exploitation rate adjustment (use N1002 instead)"
+  ],
+  "cross_references": ["N1001", "N1002", "N1102", "N1103", "T604", "T605"],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/Knowledge_Base/external_papers/productive_labor/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md"
+    ],
+    "L3_data_sources": [
+      "S&T 1987 Table 2 (p.192) — 34 annual values in current dollars",
+      "BEA Survey of Current Business 1981",
+      "T604 (taxes paid by workers)",
+      "T605 (benefits received by workers)",
+      "BEA NIPA employee compensation (denominator)"
+    ],
+    "L5_validation": [
+      "S&T 1987 Figure 3 benchmark values: -3% (1952-1969 average), +5.4% (1975), -11.0% (1985)"
+    ]
+  }
+}

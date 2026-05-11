@@ -1,0 +1,27 @@
+table_ref,year,NACE_Rev2,economic_activity,measure,total,researchers,technicians,other
+26.8,2011,65-66,Insurance reinsurance pension funding and auxiliary financial services (Headcount),A,48,31,17,0
+26.8,2011,65-66,Insurance reinsurance pension funding and auxiliary financial services (FTE),B,43,26,17,0
+26.8,2011,69-75,Professional scientific and technical activities (Headcount),A,5983,4504,1022,457
+26.8,2011,69-75,Professional scientific and technical activities (FTE),B,5441,4186,928,327
+26.8,2011,69,Legal and accounting activities (Headcount),A,45,33,5,7
+26.8,2011,69,Legal and accounting activities (FTE),B,33,29,3,2
+26.8,2011,70,Head offices and management consultancy (Headcount),A,175,144,22,9
+26.8,2011,70,Head offices and management consultancy (FTE),B,158,134,20,5
+26.8,2011,71-72,Architectural engineering technical testing scientific R&D (Headcount),A,5271,3926,950,395
+26.8,2011,71-72,Architectural engineering technical testing scientific R&D (FTE),B,4795,3643,862,290
+26.8,2011,73,Advertising and market research (Headcount),A,413,348,27,38
+26.8,2011,73,Advertising and market research (FTE),B,390,339,27,24
+26.8,2011,74,Other professional scientific and technical activities (Headcount),A,75,49,18,8
+26.8,2011,74,Other professional scientific and technical activities (FTE),B,62,40,17,6
+26.8,2011,75,Veterinary activities (Headcount),A,4,4,0,0
+26.8,2011,75,Veterinary activities (FTE),B,2,2,0,0
+26.8,2011,77-82,Administrative and support services (Headcount),A,64,32,28,4
+26.8,2011,77-82,Administrative and support services (FTE),B,43,21,21,1
+26.8,2011,84,Public administration and defence compulsory social security (Headcount),A,88,67,4,17
+26.8,2011,84,Public administration and defence compulsory social security (FTE),B,66,49,1,16
+26.8,2011,85,Education (Headcount),A,61,51,9,1
+26.8,2011,85,Education (FTE),B,52,43,9,1
+26.8,2011,86-93,Human health social work culture arts entertainment recreation sport (Headcount),A,69,47,10,12
+26.8,2011,86-93,Human health social work culture arts entertainment recreation sport (FTE),B,49,38,5,6
+26.8,2011,94-96,Other services activities (Headcount),A,68,35,13,20
+26.8,2011,94-96,Other services activities (FTE),B,53,32,11,10

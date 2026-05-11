@@ -1,0 +1,71 @@
+{
+  "series_id": "N1501",
+  "series_name": "Working Class Unproductive Labor (Mohun 2013)",
+  "study": "study_06_mohun_2013",
+  "figures": [],
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "Working class unproductive labor = unproductive workers who are members of the working class (i.e., whose work is controlled by others, who have no supervisory responsibilities above shop-floor level). Defined by location in the circuit of capital: these workers are involved in M→C or C'→M' transformations (purchasing inputs, selling outputs, financial, commercial, legal, business service activities) but are NOT supervisors. Identified via the BLS CES production worker / nonsupervisory worker criterion: the CES ratio of production workers to all workers is applied to NIPA full-time equivalents by sector, yielding working class employment. Unproductive working class = working class total minus productive working class.",
+      "source_ref": "Mohun_2013, Section 3 and Appendix; full_transcription.md"
+    },
+    {
+      "entry_type": "empirical_values",
+      "content": "Unproductive working class employment share of total employment: 1964 = 25.1%; peak 2007 = 30.0%; 2010 = ~29%. Trend: increased by about a fifth over 47 years. Unproductive working class wage share of total wages: 1964 = 18.6%; fell to 16.7% by 1992; rose back to 18.1% by 2010. Key finding: unlike total unproductive employment (which rose), the unproductive working class WAGE share is approximately flat and considerably lower than the employment share — a completely different pattern from supervisory wages.",
+      "source_ref": "Mohun_2013, Section 4.1, Fig 2; full_transcription.md"
+    },
+    {
+      "entry_type": "burden_finding",
+      "content": "Critical empirical finding: the unproductive working class absorbed 12.9% of money value added in 1964 and still 12.9% in 2010. Mean = 12.8%, standard deviation = 0.34 percentage points. Mohun concludes: 'Hence the burden to accumulation posed by the unproductive working class did not change over the whole period of 46 years.' This directly contradicts the received view (Moseley 1991, Paitaridis and Tsoulfidis 2012) that rising unproductive labor constitutes a growing burden on accumulation.",
+      "source_ref": "Mohun_2013, Section 5, Fig 4; full_transcription.md"
+    },
+    {
+      "entry_type": "class_composition",
+      "content": "Working class = ~81.3% of employed population (average 1964-2010, standard deviation 0.88). Supervisors (managers-plus-capitalists) = ~18.7% of employed population. Class proportions remained remarkably stable over the 47-year period. The working class is divided into productive and unproductive components by location in the circuit of capital. Unproductive working class employment = ~25.1-30% of total employment; productive working class = ~52-58% of total employment.",
+      "source_ref": "Mohun_2013, Section 3; full_transcription.md"
+    },
+    {
+      "entry_type": "construction_note",
+      "content": "Series registry construction: step 1 op=derive, formula='Lu × 0.813', inputs=['Mohun Lu'], output='N1501-COMBINED'. This reflects the stable 81.3% working class share of total unproductive employment. Units: thousands of full-time equivalent employees. Period 1964-2010.",
+      "source_ref": "Series registry N1501; Mohun_2013, Section 3"
+    },
+    {
+      "entry_type": "data_sources",
+      "content": "Primary data: BLS CES (Current Employment Statistics, both NAICS-based 1998-2010 and discontinued SIC-based 1964-1997); NIPA (BEA). Construction follows Shaikh and Tonak (1994) as revised by Mohun (2005). Working class employment: CES production worker ratio applied to NIPA ftes. Supervisory employment and wages: computed by subtraction (NIPA totals minus working class totals), which allocates all wages missing from CES — including stock options, bonuses, retroactive pay — to supervisory workers.",
+      "source_ref": "Mohun_2013, Appendix; full_transcription.md"
+    }
+  ],
+  "citations": [
+    {
+      "id": "Mohun_2013",
+      "full": "Mohun, Simon. 2013 [pub. 2014]. 'Unproductive Labor in the U.S. Economy 1964-2010.' Review of Radical Political Economics 46(3): 355-379. DOI: 10.1177/0486613413506080."
+    },
+    {
+      "id": "Mohun_2005",
+      "full": "Mohun, Simon. 2005. 'On measuring the wealth of nations: the US economy, 1964-2001.' Cambridge Journal of Economics 29(5): 799-815. DOI: 10.1093/cje/bei043."
+    },
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    }
+  ],
+  "methodology_summary": "Unproductive working-class employment (Lu_wc), 1964-2010. Derived as Mohun total unproductive Lu × 0.813 (stable working class share). Employment share rises from 25.1% (1964) to 30.0% (2007). Value-added absorption share flat at 12.8% throughout — no burden increase. Units: thousands of FTEs.",
+  "known_issues": [
+    "CES production worker criterion has coverage issues in Mining, Manufacturing, and Construction — 'supervisory workers' in these sectors include some non-supervisors, understating working class totals",
+    "BLS proposed discontinuing production/non-supervisory series in 2004 (Federal Register 2005), citing classification difficulties; series was retained, but respondent difficulty may affect trend reliability",
+    "SIC-to-NAICS transition at 1998 handled by separate tables (Table 2 for SIC, Table 3 for NAICS)"
+  ],
+  "cross_references": ["N1502", "N1503", "N1504"],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md"
+    ],
+    "L3_data_sources": ["Inputs/ExternalSources/Mohun/"],
+    "L5_validation": []
+  }
+}

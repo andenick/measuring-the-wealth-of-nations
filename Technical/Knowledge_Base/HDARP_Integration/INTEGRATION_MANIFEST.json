@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "project": "Shaikh_Tonak",
+  "pipeline_version": "HDARP Integration v4.5",
+  "created": "2026-03-19T20:53:41.801021",
+  "source_path": "D:/Arcanum/Projects/Shaikh Tonak",
+  "kb_path": "D:/Arcanum/Projects/Shaikh Tonak\\Knowledge_Base",
+  "integration_path": "D:/Arcanum/Projects/Shaikh Tonak\\Technical\\HDARP_Integration",
+  "statistics": {
+    "documents_total": 38,
+    "tables_cataloged": 753,
+    "equations_cataloged": 40,
+    "figures_cataloged": 62,
+    "entities_extracted": 25,
+    "relationships_mapped": 169,
+    "documents_by_quality": {
+      "MINIMAL": 2,
+      "BODY_ONLY": 8,
+      "PARTIAL": 8,
+      "HOLLOW": 4,
+      "FULL_HDARP": 8,
+      "PDF_ONLY": 8
+    }
+  },
+  "catalogs": [
+    "DOCUMENT_AUDIT.csv",
+    "TABLE_CATALOG.csv",
+    "EQUATION_CATALOG.csv",
+    "FIGURE_CATALOG.csv",
+    "ENTITY_CATALOG.csv",
+    "CLASSIFICATION_MASTER.csv",
+    "CROSS_REFERENCE_INDEX.json",
+    "BACKUP_MANIFEST.json"
+  ],
+  "status": "COMPLETE"
+}

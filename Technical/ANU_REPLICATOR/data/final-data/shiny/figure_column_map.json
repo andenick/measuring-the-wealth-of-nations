@@ -1,0 +1,91 @@
+{
+  "generated_by": "anu_replicator_shiny_export_as2",
+  "figure_column_map": {
+    "Fig_4_1": [
+      "a_matrix",
+      "b_matrix"
+    ],
+    "Fig_5_1": [],
+    "Fig_5_2": [
+      "productive_labor_share_lpl",
+      "productive_employment_lp",
+      "unproductive_employment_lu"
+    ],
+    "Fig_5_3": "exploitation_rate_e",
+    "Fig_5_4": [
+      "total_product_tp",
+      "constant_capital_cm",
+      "gross_final_product_gfp",
+      "variable_capital_v",
+      "surplus_value_s"
+    ],
+    "Fig_5_5": [
+      "marxian_profit_rate_r",
+      "adjusted_profit_rate_radj"
+    ],
+    "Fig_5_6": [
+      "total_product_tp",
+      "productive_employment_lp"
+    ],
+    "Fig_5_7": [
+      "productive_labor_share_lpl",
+      "productive_employment_lp",
+      "unproductive_employment_lu"
+    ],
+    "Fig_5_8": [
+      "total_product_tp",
+      "constant_capital_cm",
+      "gross_final_product_gfp",
+      "variable_capital_v",
+      "surplus_value_s",
+      "exploitation_rate_e",
+      "surplus_ratio_sy",
+      "productive_consumption_con",
+      "productive_investment_ig",
+      "value_composition_cv",
+      "productive_labor_share_lpl",
+      "productive_wage_share_vw",
+      "marxian_profit_rate_r",
+      "adjusted_profit_rate_radj",
+      "productive_employment_lp",
+      "unproductive_employment_lu"
+    ],
+    "Fig_6_1": [
+      "variable_capital_v",
+      "net_social_wage_nsw"
+    ],
+    "Fig_6_2": "variable_capital_v",
+    "Fig_6_3": [
+      "variable_capital_v",
+      "net_social_wage_nsw"
+    ],
+    "Fig_6_4": [
+      "personal_tax_workers",
+      "govt_benefits_workers_bw",
+      "net_social_wage_nsw"
+    ],
+    "Fig_7_1": [
+      "labor_values",
+      "prices_production",
+      "value_price_deviations"
+    ],
+    "Fig_9_1": [
+      "total_product_tp",
+      "variable_capital_v",
+      "surplus_value_s"
+    ],
+    "Fig_9_2": [
+      "total_product_tp",
+      "marxian_profit_rate_r"
+    ],
+    "Fig_9_3": [
+      "exploitation_rate_e",
+      "productive_wage_share_vw"
+    ],
+    "Fig_9_4": [
+      "marxian_profit_rate_r",
+      "adjusted_profit_rate_radj"
+    ],
+    "Fig_9_5": "exploitation_rate_e"
+  }
+}

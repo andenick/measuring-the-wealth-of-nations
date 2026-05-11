@@ -1,0 +1,28 @@
+Category,Subcategory,Item,Labour_Share,Tax_Category,Tax_Item,Tax_Labour_Share
+B1,Public_Expenditure,General public services,0,T1,Social security premia,100
+B1,Public_Expenditure,Defence,0,T1,Unemployment insurance fund deductions,100
+B1,Public_Expenditure,Public order and security,0,T2,Personal income tax,Ls
+B1,Public_Expenditure,Economic affairs,0,T2,Motor vehicle tax,Ls
+B2,Public_Expenditure,Fuel and energy,Ls,T2,Value-added tax,Ls
+B2,Public_Expenditure,Transports,Ls,T2,Special consumption tax,Ls
+B2,Public_Expenditure,Environmental protection,Ls,T2,Banking and insurance transaction tax,Ls
+B2,Public_Expenditure,Housing and community amenity,Ls,T2,Tax on games of chance,Ls
+B2,Public_Expenditure,Health,Ls,T2,Special communications tax,Ls
+B2,Public_Expenditure,"Recreation, culture and religious services",Ls,T2,Stamp duties,Ls
+B2,Public_Expenditure,Education,Ls,T2,Customs duties,Ls
+B3,Public_Expenditure,Social security and social assistance,100,T2,Other taxes on international trade,Ls
+B3,Public_Expenditure,General labour affairs,100,T2,Building tax,Ls
+B3,Public_Expenditure,Unemployment benefits from the unemployment insurance fund,100,T2,Environmental cleaning tax,Ls
+,,,T2,Entertainment tax,Ls
+,,,T2,Fire insurance tax,Ls
+,,,T2,Other taxes not elsewhere classified,Ls
+,,,T2,Fees,Ls
+,,,T2,Fines,Ls
+,,,T2,Property and enterprise revenues,Ls
+,,,T3,Corporate income tax,0
+,,,T3,Motor vehicle tax,0
+,,,T3,Inheritance and gift taxes,0
+,,,T3,Real estate tax,0
+,,,T3,Land tax,0
+,,,T3,Publication and advertising tax,0
+,,,T3,Self-employed pension fund premia,0

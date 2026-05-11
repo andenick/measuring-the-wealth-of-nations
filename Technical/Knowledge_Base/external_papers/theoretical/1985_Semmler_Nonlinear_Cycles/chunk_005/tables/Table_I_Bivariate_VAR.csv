@@ -1,0 +1,17 @@
+Independent Variable,Dependent: Downturns Coefficient,Dependent: Downturns Significance,Dependent: Upturns Coefficient 1,Dependent: Upturns Significance 1,Dependent: Upturns Coefficient 2,Dependent: Upturns Significance 2
+constant,20.87,0.00,25.7,0.001,20.67,0.18
+τ^h_i(0),-,-,-,-,-0.03,0.92
+τ^h_i(-1),-,-,-0.13,0.59,0.13,0.70
+τ^p_i(0),-0.15,0.028,-0.16,0.04,-,-
+τ^p_i(-1),-,-,-0.05,0.55,0.08,0.71
+τ^p_i(-2),-,-,-,-,0.28,0.20
+R²,0.21,-,0.26,-,0.08,-
+D.W.,2.11,-,2.06,-,2.03,-
+S.S.R.,1022,-,922,-,10472,-
+s.e.,6.97,-,7.59,-,21.8,-
+
+Note: Number of observations = 23
+Note: τ^h_i represents lengths of downturns (in months)
+Note: τ^p_i represents lengths of upturns (in months)
+Note: Table shows results from bivariate VAR estimation of business cycle recurrence times
+Note: (-) indicates variable not included in that specification

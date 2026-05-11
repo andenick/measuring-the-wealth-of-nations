@@ -1,0 +1,75 @@
+{
+  "series_id": "N1701",
+  "series_name": "NZ Surplus Share of Total Value (Cronin 2001)",
+  "study": "study_08_cronin_nz_2001",
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/Knowledge_Base/external_papers/international/2001_Cronin_New_Zealand/SUMMARY.md",
+    "Technical/Knowledge_Base/external_papers/international/2001_Cronin_New_Zealand/body_text.md",
+    "Technical/Knowledge_Base/external_papers/international/2001_Cronin_New_Zealand/tables.csv"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "s/TV is the accumulation rate — surplus-value as a share of total value (TV = c + v + s). Total value is the classical concept of value produced by productive and trading sectors, derived by mapping NZSNA data to classical economic categories following Shaikh & Tonak (1994). Surplus-value is total value minus constant capital (c) minus variable capital (v). The ratio measures the productive economy's capacity to generate surplus relative to total productive activity.",
+      "source_ref": "Cronin_2001, body_text.md Section 3 (Deriving Classical Economic Categories); SUMMARY.md"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Series N1701-A: Digitized from Cronin (2001) Table 2, column S/TV, 1972-1995 (24 observations). Original table title: 'Rate of surplus-value and value composition of capital', Review of Political Economy 13(3), p. 15 (Table 2). Source CSV: Technical/Knowledge_Base/external_papers/international/2001_Cronin_New_Zealand/tables.csv. Values are decimal fractions (e.g., 34% = 0.34).",
+      "source_ref": "Cronin_2001, Table 2; tables.csv rows 27-52"
+    },
+    {
+      "entry_type": "empirical_values",
+      "content": "Annual s/TV values (decimal): 1972=0.34, 1973=0.36, 1974=0.34, 1975=0.29, 1976=0.30, 1977=0.33, 1978=0.31, 1979=0.32, 1980=0.32, 1981=0.32, 1982=0.31, 1983=0.31, 1984=0.32, 1985=0.32, 1986=0.34, 1987=0.37, 1988=0.37, 1989=0.38, 1990=0.38, 1991=0.38, 1992=0.38, 1993=0.37, 1994=0.38, 1995=0.38.",
+      "source_ref": "Cronin_2001, Table 2; tables.csv"
+    },
+    {
+      "entry_type": "periodization",
+      "content": "Three distinct periods: (1) 1972-1983 profitability crisis — s/TV fell from 34% to 31%, reflecting a rising value composition of capital with stable exploitation rate; classic falling rate of profit conditions. (2) 1984-1989 neo-liberal recovery — s/TV rose from 32% to 38%, driven by a 37% jump in the rate of surplus-value as Rogernomics reforms intensified labor exploitation. (3) 1990-1995 stagnation — s/TV plateaued at 38% despite continued rise in s/v, because renewed rise in value composition of capital offset gains in exploitation.",
+      "source_ref": "Cronin_2001, body_text.md Section 5; SUMMARY.md"
+    },
+    {
+      "entry_type": "structural_break",
+      "content": "The 1984 Rogernomics reforms (Roger Douglas, Labour government) are the key structural break. Post-1984, the expansion of unproductive activity (financial sector, trade, administration) increased the unproductive share of gross output relative to total value — visible in gross output growing faster than total value from the late 1980s onward. The s/TV ratio improvement 1984-1989 masks the underlying dynamic: gains were exploitation-driven, not productivity-driven, and the unproductive sector drained surplus from productive investment.",
+      "source_ref": "Cronin_2001, body_text.md Section 5 (Growth of Unproductive Activity); SUMMARY.md"
+    },
+    {
+      "entry_type": "figure_context",
+      "content": "Cronin Fig 10: plots s/TV for 1972-1995, showing the three-period structure. Fig 12: compares accumulation rate (s/TV) with rate of surplus-value (s/v), showing close tracking until the 1984-87 divergence when unproductive activity growth decoupled the two ratios.",
+      "source_ref": "Cronin_2001, body_text.md Section 5"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "s/TV is described by Cronin as the 'accumulation rate' — the share of total productive value available for accumulation. It differs from the conventional profit share because total value excludes unproductive activity. The conventional proxy (operating surplus / employee compensation) understates s/v by a factor of roughly 3-4 and shows little variation, while classical s/TV rises meaningfully from 1984.",
+      "source_ref": "Cronin_2001, body_text.md Section 4 (Conventional Proxy Measures); SUMMARY.md"
+    }
+  ],
+  "citations": [
+    {
+      "id": "Cronin_2001",
+      "full": "Cronin, Bruce. 2001. 'Productive and Unproductive Capital: A mapping of the New Zealand system of national accounts to classical economic categories, 1972-95.' Review of Political Economy 13(3): 309-327. https://doi.org/10.1080/09538250120055168"
+    },
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    }
+  ],
+  "methodology_summary": "s/TV (productive capital share / accumulation rate) is directly digitized from Cronin (2001) Table 2. Derived from NZSNA mapped to classical categories via Shaikh-Tonak methodology applied to 25 NZ production groups, 1972-1995. No extension beyond 1995.",
+  "known_issues": [
+    "No post-1995 extension available from this source",
+    "Non-capitalist production (small self-employed and non-profit sector) assumed negligible and included as capitalist — Cronin notes data insufficient to isolate",
+    "Some inter-industry years interpolated using annual NZSNA data rather than full IO tables"
+  ],
+  "cross_references": ["N1702", "N1703", "N1704"],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/Knowledge_Base/external_papers/international/2001_Cronin_New_Zealand/SUMMARY.md",
+      "Technical/Knowledge_Base/external_papers/international/2001_Cronin_New_Zealand/body_text.md",
+      "Technical/Knowledge_Base/external_papers/international/2001_Cronin_New_Zealand/tables.csv"
+    ],
+    "L3_data_sources": ["Cronin 2001 Table 2 (tables.csv)"],
+    "L5_validation": ["reference_values: 1972=0.34, 1989=0.38, 1995=0.38"]
+  }
+}

@@ -17,15 +17,18 @@ python run.py --test-all    # Full pipeline + verification (~100s)
 
 | Measure | 1948 | 1989 (book) | 2024 (extended) | Change |
 |---------|------|-------------|-----------------|--------|
-| Rate of exploitation (e = S*/V*) | 1.70 | 2.44 | ~3.59 | +111% |
-| Productive labor share (Lp/L) | 0.57 | 0.36 | ~0.25 | -56% |
-| Productive wage share (V*/W) | 0.54 | 0.36 | ~0.24 | -56% |
+| Rate of exploitation (e = S*/V*) | 1.70 | 2.44 | ~2.10 | +24% (peak 2.44 at 1989) |
+| Productive labor share (Lp/L) | 0.57 | 0.36 | ~0.33 | -42% |
+| Productive wage share (V*/W) | 0.54 | 0.36 | ~0.27 | -50% |
 | Net social wage | Negative | Negative | Negative | 92% of years |
-| Labor value / price R^2 | 0.98 (1958) | — | — | Shaikh claim confirmed |
+| Marxian profit rate (r* = S*/K*) | 0.51 | 0.44 | ~0.39 | Falling rate confirmed |
+| Labor value / price R² | 0.93 (1958) | — | 0.44-0.60 (NAICS) | Structural decline |
+| Marxian productivity q* (1982$/hr) | 33.04 | 78.64 | — | Book: $78.03 (within 1%) |
+| Khanjian cross-validation | — | — | Our/Kh = 0.801 | Book states ~0.80 |
 
 ## What This Is
 
-AS2 (Anu Shaikh-Tonak 2) is a fully automated NickyData pipeline that reproduces 55 data series from Shaikh & Tonak (1994), extends them through 2024, and replicates 8 related academic studies. Everything runs from a single command with zero manual intervention.
+AS2 (Anu Shaikh-Tonak 2) is a fully automated NickyData pipeline that reproduces 59 data series from Shaikh & Tonak (1994), extends them through 2024, replicates 8 related academic studies, and computes 4 analytical series (social burden rate, unproductive exploitation, Marxian productivity, Khanjian cross-validation). Book-period data digitized directly from Table H.1 (42 years). Everything runs from a single command with zero manual intervention.
 
 ### Pipeline Architecture (NickyData v6.0)
 

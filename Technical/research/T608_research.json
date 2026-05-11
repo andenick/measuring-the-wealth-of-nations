@@ -1,0 +1,69 @@
+{
+  "series_id": "T608",
+  "series_name": "NSW/V* Ratio",
+  "chapter": 6,
+  "tables": ["Table_6_4"],
+  "figures": [],
+  "research_date": "2026-03-21",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/docs/chapters/CHAPTER_6_INVESTIGATION.md",
+    "Technical/docs/reviews/NSW_COMPARISON_REVIEW.md",
+    "Knowledge_Base/text/narrative_chunk_16_ch5.md",
+    "Knowledge_Base/text/narrative_chunk_20_ch6.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "T608 = T607 / T504, where T607 is the Net Social Wage and T504 is variable capital (V*). This ratio expresses the net fiscal transfer to/from workers as a fraction of their value product. A negative ratio means the state extracts a fraction of workers' value equivalent; a positive ratio means the state supplements it.",
+      "source_ref": "ST_1994, Ch6; CHAPTER_6_INVESTIGATION.md"
+    },
+    {
+      "entry_type": "derived_series",
+      "content": "Purely derived from T607 (NSW) and T504 (V*). No independent data sources. Both numerator and denominator are in current dollars, so the ratio is dimensionless and comparable across time without deflation.",
+      "source_ref": "ST_1994, Ch6 Table 6.4"
+    },
+    {
+      "entry_type": "theoretical_significance",
+      "content": "NSW/V* directly modifies the exploitation rate. When NSW < 0, the effective variable capital is V* + NSW (= V* - |NSW|), meaning workers receive less than V* after fiscal transfers. The modified exploitation rate e' = S* / (V* + NSW) > S*/V* = e. This ratio quantifies the state's contribution to exploitation.",
+      "source_ref": "ST_1994, Ch6; Shaikh_Tonak_1987"
+    },
+    {
+      "entry_type": "empirical_finding",
+      "content": "NSW/V* is typically in the range of -0.05 to -0.15 during 1952-1989, meaning the state extracts 5-15% of workers' value equivalent. The ratio is most negative during expansion years (high tax receipts, stable benefits) and least negative or positive during recessions (countercyclical benefits, falling taxes).",
+      "source_ref": "CHAPTER_6_INVESTIGATION.md"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "Shaikh_Tonak_1987",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' New School for Social Research working paper."
+    }
+  ],
+  "methodology_summary": "Ratio of Net Social Wage to variable capital (T607/T504). Dimensionless measure of state fiscal extraction from workers as a share of their value product. Typically -5% to -15% during 1952-1989.",
+  "decision_log_refs": [
+    "DEC-008: Ch6 tax allocation methodology verified — income-proportional T_w = taxes×W_p/PI aligns with book framework (chunk_09, pp.63-65; Section 5.9 and Appendix N)"
+  ],
+  "known_issues": [
+    "Inherits all known issues from T607 (NSW) and T504 (V*)",
+    "Ratio can be volatile in years where V* is small or NSW crosses zero",
+    "Post-2001 positive values reflect structural shift in NSW, not V* changes"
+  ],
+  "cross_references": ["T607", "T504"],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/docs/chapters/CHAPTER_6_INVESTIGATION.md",
+      "Technical/docs/reviews/NSW_COMPARISON_REVIEW.md",
+      "Knowledge_Base/text/narrative_chunk_16_ch5.md",
+      "Knowledge_Base/text/narrative_chunk_20_ch6.md"
+    ],
+    "L3_data_sources": [],
+    "L5_validation": [
+      "Moos 2017"
+    ]
+  }
+}

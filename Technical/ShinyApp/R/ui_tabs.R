@@ -949,6 +949,168 @@ ui_tab_downloads <- function() {
   )
 }
 
+# TAB 12: IO ANALYSIS
+# =============================================================================
+ui_tab_io_analysis <- function() {
+  tabItem(
+    tabName = "io_analysis",
+    h2("Input-Output Analysis (Chapter 4)"),
+    p("Productive/unproductive industry classification across methodologies"),
+    fluidRow(
+      box(
+        title = "Industry Classification Matrix",
+        status = "primary",
+        solidHeader = TRUE,
+        width = 12,
+        p("Comparison of productive/unproductive classifications: Shaikh & Tonak (1994), Mohun (2005), Tonak & Projector (2019)"),
+        DTOutput("io_classification_table")
+      )
+    ),
+    fluidRow(
+      box(
+        title = "Employment Share by Classification",
+        status = "info",
+        solidHeader = TRUE,
+        width = 6,
+        plotlyOutput("io_emp_share_plot", height = "400px")
+      ),
+      box(
+        title = "Classification Methodology",
+        status = "success",
+        solidHeader = TRUE,
+        width = 6,
+        p(strong("Productive labor"), " creates surplus value through the production or transformation of material use values."),
+        p(strong("Unproductive labor"), " is necessary for social reproduction but does not directly produce surplus value."),
+        hr(),
+        p("The IO A-matrix (T401) provides technical coefficients for 11 SIC benchmark years (1947-1977) and 5 NAICS years (1997-2017)."),
+        p("The Leontief inverse B = (I-A)", tags$sup("-1"), " gives total (direct + indirect) requirements per unit of final output."),
+        hr(),
+        p(strong("Key finding:"), " Productive employment fell from 57% (1948) to 33% (2024) of total employment.")
+      )
+    )
+  )
+}
+
+# TAB 13: LABOR VALUES
+# =============================================================================
+ui_tab_labor_values <- function() {
+  tabItem(
+    tabName = "labor_values",
+    h2("Labor Values & Prices of Production (Chapter 7)"),
+    p("Ochoa method: labor values computed from IO technical coefficients and direct labor inputs"),
+    fluidRow(
+      box(
+        title = "Labor Value vs Market Price Correlation",
+        status = "primary",
+        solidHeader = TRUE,
+        width = 12,
+        p("Each point is a sector. Strong correlation supports the labor theory of value."),
+        plotlyOutput("labor_value_scatter", height = "450px")
+      )
+    ),
+    fluidRow(
+      box(
+        title = "R-squared by Benchmark Year",
+        status = "info",
+        solidHeader = TRUE,
+        width = 6,
+        DTOutput("labor_value_r2_table")
+      ),
+      box(
+        title = "Methodology",
+        status = "success",
+        solidHeader = TRUE,
+        width = 6,
+        p("Labor values (", tags$em("λ"), ") are computed via the Ochoa (1984) method:"),
+        p(tags$code("λ = l(I - A)^{-1}")),
+        p("where ", tags$em("l"), " is the vector of direct labor coefficients and ", tags$em("A"), " is the IO technical coefficients matrix."),
+        hr(),
+        p(strong("SIC era (1947-1977):"), " 6 benchmark years, 85-sector detail. R² = 0.70-0.98"),
+        p(strong("NAICS era (1997-2017):"), " 5 benchmark years, 71-sector detail. R² = 0.85-0.99"),
+        p(strong("Structural decline:"), " Transition from manufacturing-heavy to services-heavy economy reduces labor value-price correlation in aggregate.")
+      )
+    )
+  )
+}
+
+# TAB 14: CROSS-STUDY COMPARISON
+# =============================================================================
+ui_tab_cross_study <- function() {
+  tabItem(
+    tabName = "cross_study",
+    h2("Cross-Study Comparison"),
+    p("Comparing exploitation rates and wage shares across methodologies"),
+    fluidRow(
+      box(
+        title = "Shaikh-Tonak vs Mohun: Exploitation Rate",
+        status = "primary",
+        solidHeader = TRUE,
+        width = 6,
+        plotlyOutput("cross_study_mohun_plot", height = "400px"),
+        p(em("ST/Mohun ratio = 1.61 (systematic divergence due to productive/unproductive boundary)"),
+          style = "text-align: center; color: #666; margin-top: 10px;")
+      ),
+      box(
+        title = "Moos (2017): NSW Structural Shift",
+        status = "warning",
+        solidHeader = TRUE,
+        width = 6,
+        plotlyOutput("cross_study_moos_plot", height = "400px"),
+        p(em("Post-2000 structural shift: +3.0 percentage points in NSW/EC ratio"),
+          style = "text-align: center; color: #666; margin-top: 10px;")
+      )
+    ),
+    fluidRow(
+      box(
+        title = "Methodology Comparison: Exploitation Rate (1948-2024)",
+        status = "info",
+        solidHeader = TRUE,
+        width = 12,
+        plotlyOutput("cross_study_methodology_plot", height = "400px")
+      )
+    )
+  )
+}
+
+# TAB 15: INTERNATIONAL NSW
+# =============================================================================
+ui_tab_international <- function() {
+  tabItem(
+    tabName = "international",
+    h2("International Net Social Wage"),
+    p("Cross-country comparison of the net social wage (NSW)"),
+    fluidRow(
+      box(
+        title = "International NSW Comparison",
+        status = "primary",
+        solidHeader = TRUE,
+        width = 12,
+        plotlyOutput("international_nsw_plot", height = "450px")
+      )
+    ),
+    fluidRow(
+      box(
+        title = "Country Details",
+        status = "info",
+        solidHeader = TRUE,
+        width = 6,
+        DTOutput("international_nsw_table")
+      ),
+      box(
+        title = "Key Findings",
+        status = "success",
+        solidHeader = TRUE,
+        width = 6,
+        p(strong("United States (Shaikh & Tonak 1994):"), " NSW negative for 92% of years (1952-2025). Workers are net subsidizers of the state."),
+        p(strong("Turkey (Karabacak & Tonak 2022):"), " NSW negative for ALL 40 years (1980-2019). N1601 (NSW/NI share) ranges 0.19-0.27."),
+        p(strong("New Zealand (Cronin 2001):"), " Productive capital share (N1701) ranges 0.31-0.37. Post-reform period shows shift."),
+        hr(),
+        p("The universality of negative NSW across capitalist economies supports Shaikh & Tonak's theoretical prediction that the state systematically redistributes value from workers to capital.")
+      )
+    )
+  )
+}
+
 # SIDEBAR FUNCTION
 # =============================================================================
 ui_sidebar <- function() {
@@ -969,6 +1131,18 @@ ui_sidebar <- function() {
       menuItem("Exploitation & Composition", tabName = "exploitation", icon = icon("balance-scale")),
       menuItem("Employment Analysis", tabName = "employment", icon = icon("users")),
       menuItem("Government Absorption", tabName = "government", icon = icon("university")),
+      menuItem("IO Analysis", tabName = "io_analysis", icon = icon("table"),
+        badgeLabel = "W2", badgeColor = "blue"
+      ),
+      menuItem("Labor Values", tabName = "labor_values", icon = icon("calculator"),
+        badgeLabel = "W2", badgeColor = "blue"
+      ),
+      menuItem("Cross-Study", tabName = "cross_study", icon = icon("exchange-alt"),
+        badgeLabel = "W2", badgeColor = "blue"
+      ),
+      menuItem("International NSW", tabName = "international", icon = icon("globe"),
+        badgeLabel = "W2", badgeColor = "blue"
+      ),
       menuItem("Validation Center", tabName = "validation", icon = icon("check-circle")),
       menuItem("Literature Navigator", tabName = "literature", icon = icon("book")),
       menuItem("Data Downloads", tabName = "downloads", icon = icon("download"))

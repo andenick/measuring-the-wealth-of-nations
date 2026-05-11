@@ -1,0 +1,38 @@
+{
+  "_doc": "NIPA Table 6.5D FTE by Industry — Marxian sector classification per Shaikh & Tonak (1994) Appendix F",
+  "_note": "Use top-level industry lines (not sub-industries) to avoid double-counting. Lines 4,7,11-13,43,52(partial),73-74,79,82,85 = productive. Lines 35,38 = trading. Lines 57,62,65,69,70(partial) = unproductive. Lines 86+ = government.",
+  "classification": {
+    "4": {"sector": "productive", "description": "Agriculture, forestry, fishing, and hunting"},
+    "7": {"sector": "productive", "description": "Mining"},
+    "11": {"sector": "productive", "description": "Utilities"},
+    "12": {"sector": "productive", "description": "Construction"},
+    "13": {"sector": "productive", "description": "Manufacturing"},
+    "35": {"sector": "trading", "description": "Wholesale trade"},
+    "38": {"sector": "trading", "description": "Retail trade"},
+    "43": {"sector": "productive", "description": "Transportation and warehousing"},
+    "54": {"sector": "productive", "description": "Motion picture and sound recording industries"},
+    "55": {"sector": "productive", "description": "Broadcasting and telecommunications"},
+    "57": {"sector": "unproductive", "description": "Finance and insurance"},
+    "62": {"sector": "unproductive", "description": "Real estate and rental and leasing"},
+    "65": {"sector": "unproductive", "description": "Professional, scientific, and technical services"},
+    "69": {"sector": "unproductive", "description": "Management of companies and enterprises"},
+    "71": {"sector": "unproductive", "description": "Administrative and support services"},
+    "72": {"sector": "productive", "description": "Waste management and remediation services"},
+    "73": {"sector": "productive", "description": "Educational services"},
+    "74": {"sector": "productive", "description": "Health care and social assistance"},
+    "79": {"sector": "productive", "description": "Arts, entertainment, and recreation"},
+    "82": {"sector": "productive", "description": "Accommodation and food services"},
+    "85": {"sector": "productive", "description": "Other services, except government"},
+    "91": {"sector": "productive", "description": "Federal government enterprises"},
+    "96": {"sector": "productive", "description": "State and local government enterprises"}
+  },
+  "productive_lines": [4, 7, 11, 12, 13, 43, 54, 55, 72, 73, 74, 79, 82, 85, 91, 96],
+  "trading_lines": [35, 38],
+  "unproductive_lines": [57, 62, 65, 69, 71],
+  "government_lines": [86],
+  "notes": {
+    "information_sector": "Line 52 (Information) is split: 54 (motion pictures) and 55 (broadcasting/telecom) are productive per SIC 48; 53 (publishing/software) and 56 (data processing) are treated separately. Use sub-lines 54+55 for productive, not the aggregate line 52.",
+    "admin_waste": "Line 70 (Admin + Waste) is split: 71 (admin/support) is unproductive, 72 (waste management) is productive. Use sub-lines, not aggregate.",
+    "government": "Lines 87-96 are government sub-lines. Only govt enterprises (91, 96) are classified as productive."
+  }
+}
