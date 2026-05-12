@@ -133,6 +133,10 @@ The pipeline has 8 phases, each containing numbered scripts that run in order:
 
 ---
 
+## Series Documentation
+
+Every series has a detailed write-up in [`docs/series/`](docs/series/) explaining what it measures, what Shaikh & Tonak wrote about it, the mathematical formulas, and how we replicate it. See the [full series index](docs/README.md).
+
 ## Series Coverage
 
 | Chapter | Series | Content | Period |
