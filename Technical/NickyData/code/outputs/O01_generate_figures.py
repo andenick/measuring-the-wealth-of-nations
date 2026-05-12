@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-"""O01 - Generate Publication Figures: standalone SVG/PNG for key book figures.
+"""O01 - Generate Publication Figures.
 
-Produces publication-quality figures using matplotlib for the main empirical
-findings from Shaikh & Tonak (1994), extended through 2024.
-
-Output: Outputs/Figures/Fig_X_Y.png (+ .svg if available)
+Same-color book/extension (solid vs dotted). No figure numbers in titles
+(LaTeX captions handle numbering).
 """
 
 import sys
@@ -17,7 +15,7 @@ import numpy as np
 
 try:
     import matplotlib
-    matplotlib.use("Agg")  # Non-interactive backend
+    matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     HAS_MPL = True
 except ImportError:
@@ -27,14 +25,12 @@ from utils.paths import SERIES_OUT, STUDIES_OUT
 
 OUTPUT_DIR = Path("D:/Arcanum/Projects/ST2/Outputs/Figures")
 
-BOOK_COLOR = "#3c8dbc"      # Blue for book period
-EXT_COLOR = "#f39c12"       # Orange for extension
-SPLICE_COLOR = "#605ca8"    # Purple for splice year
-GRID_COLOR = "#e0e0e0"
+COLORS = ["#3c8dbc", "#e74c3c", "#2ecc71", "#f39c12", "#9b59b6", "#1abc9c"]
+SPLICE_COLOR = "#a0a0a0"
+GRID_COLOR = "#e8e8e8"
 
 
 def _load_series(sid):
-    """Load a series and return book + combined as separate Series."""
     path = SERIES_OUT / f"{sid}.csv"
     if not path.exists():
         return None, None
@@ -45,32 +41,32 @@ def _load_series(sid):
 
 
 def _make_figure(title, ylabel, series_list, output_name, splice_year=1989):
-    """Create a standard figure with book period + extension."""
     fig, ax = plt.subplots(figsize=(10, 6))
 
-    for label, sid, style in series_list:
+    for i, (label, sid, _) in enumerate(series_list):
         book, combined = _load_series(sid)
         if combined is None:
             continue
 
-        # Book period
+        color = COLORS[i % len(COLORS)]
         book_data = combined[combined.index <= splice_year]
         ext_data = combined[combined.index >= splice_year]
 
         ax.plot(book_data.index, book_data.values,
-                color=BOOK_COLOR, linewidth=2, label=f"{label} (book)")
+                color=color, linewidth=2.5, solid_capstyle="round",
+                label=f"{label}")
         if len(ext_data) > 1:
             ax.plot(ext_data.index, ext_data.values,
-                    color=EXT_COLOR, linewidth=2, linestyle=style,
-                    label=f"{label} (extended)")
+                    color=color, linewidth=2, linestyle=":",
+                    label=f"{label} (1990–2024)")
 
     ax.axvline(x=splice_year, color=SPLICE_COLOR, linestyle="--",
-               alpha=0.5, label=f"Splice year ({splice_year})")
+               alpha=0.4, linewidth=1)
 
-    ax.set_title(title, fontsize=14, fontweight="bold")
-    ax.set_xlabel("Year", fontsize=12)
-    ax.set_ylabel(ylabel, fontsize=12)
-    ax.legend(loc="best", fontsize=9)
+    ax.set_title(title, fontsize=13, fontweight="bold", pad=12)
+    ax.set_xlabel("Year", fontsize=11)
+    ax.set_ylabel(ylabel, fontsize=11)
+    ax.legend(loc="best", fontsize=9, framealpha=0.9)
     ax.grid(True, color=GRID_COLOR, alpha=0.7)
     ax.set_xlim(1948, 2025)
 
@@ -86,95 +82,93 @@ def _make_figure(title, ylabel, series_list, output_name, splice_year=1989):
 
 def generate():
     if not HAS_MPL:
-        print("  matplotlib not available — skipping figure generation")
         return {"status": "skip", "reason": "matplotlib not installed"}
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     count = 0
 
-    # Fig 5.5: Rate of Exploitation (e = S*/V*)
+    # Exploitation rate
     _make_figure(
-        "Figure 5.5: Rate of Exploitation (e = S*/V*), 1948-2024",
+        "Rate of Exploitation (e = S*/V*), 1948–2024",
         "Rate of Surplus Value",
         [("e = S*/V*", "T506", "-")],
         "Fig_5_5_exploitation_rate",
     )
     count += 1
 
-    # Fig 5.6: Productive Labor Share (Lp/L) and Wage Share (V*/W)
+    # Labor and wage shares
     _make_figure(
-        "Figure 5.6: Productive Labor and Wage Shares, 1948-2024",
-        "Share (0-1)",
+        "Productive Labor and Wage Shares, 1948–2024",
+        "Share (0–1)",
         [("Lp/L", "T511", "-"), ("V*/W", "T512", "--")],
         "Fig_5_6_labor_wage_shares",
     )
     count += 1
 
-    # Fig 5.7: Profit Rates
+    # Profit rates
     _make_figure(
-        "Figure 5.7: Marxian Profit Rates, 1948-2024",
+        "Marxian Profit Rates, 1948–2024",
         "Rate of Profit",
-        [("r*", "T513", "-"), ("r* (adj)", "T514", "--")],
+        [("r*", "T513", "-"), ("r* (capacity-adj)", "T514", "--")],
         "Fig_5_7_profit_rates",
     )
     count += 1
 
-    # Fig 5.8: Employment
+    # Employment
     _make_figure(
-        "Figure 5.8: Productive and Unproductive Employment, 1948-2024",
+        "Productive and Unproductive Employment, 1948–2024",
         "Employment (thousands)",
         [("Productive (Lp)", "T515", "-"), ("Unproductive (Lu)", "T516", "--")],
         "Fig_5_8_employment",
     )
     count += 1
 
-    # Fig 5.4: Surplus Ratio
+    # Surplus ratio
     _make_figure(
-        "Figure 5.4: Surplus Ratio S*/(S*+V*), 1948-2024",
+        "Surplus Ratio S*/(S*+V*), 1948–2024",
         "Surplus Ratio",
         [("S*/(S*+V*)", "T507", "-")],
         "Fig_5_4_surplus_ratio",
     )
     count += 1
 
-    # Fig 9.1: Summary — exploitation + labor share
+    # Summary (2-panel)
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
-
     _, e = _load_series("T506")
     _, lpl = _load_series("T511")
 
     if e is not None:
         book_e = e[e.index <= 1989]
         ext_e = e[e.index >= 1989]
-        ax1.plot(book_e.index, book_e, color=BOOK_COLOR, lw=2, label="Book")
-        ax1.plot(ext_e.index, ext_e, color=EXT_COLOR, lw=2, label="Extended")
-        ax1.axvline(1989, color=SPLICE_COLOR, ls="--", alpha=0.5)
+        ax1.plot(book_e.index, book_e, color=COLORS[0], lw=2.5, label="1948–1989")
+        ax1.plot(ext_e.index, ext_e, color=COLORS[0], lw=2, ls=":", label="1990–2024")
+        ax1.axvline(1989, color=SPLICE_COLOR, ls="--", alpha=0.4)
         ax1.set_title("Rate of Exploitation (e)", fontweight="bold")
         ax1.set_ylabel("e = S*/V*")
-        ax1.legend()
+        ax1.legend(fontsize=9)
         ax1.grid(True, color=GRID_COLOR, alpha=0.7)
 
     if lpl is not None:
         book_l = lpl[lpl.index <= 1989]
         ext_l = lpl[lpl.index >= 1989]
-        ax2.plot(book_l.index, book_l, color=BOOK_COLOR, lw=2, label="Book")
-        ax2.plot(ext_l.index, ext_l, color=EXT_COLOR, lw=2, label="Extended")
-        ax2.axvline(1989, color=SPLICE_COLOR, ls="--", alpha=0.5)
+        ax2.plot(book_l.index, book_l, color=COLORS[0], lw=2.5, label="1948–1989")
+        ax2.plot(ext_l.index, ext_l, color=COLORS[0], lw=2, ls=":", label="1990–2024")
+        ax2.axvline(1989, color=SPLICE_COLOR, ls="--", alpha=0.4)
         ax2.set_title("Productive Labor Share (Lp/L)", fontweight="bold")
         ax2.set_ylabel("Lp/L")
-        ax2.legend()
+        ax2.legend(fontsize=9)
         ax2.grid(True, color=GRID_COLOR, alpha=0.7)
 
-    fig.suptitle("Figure 9.1: Key Marxian Indicators, 1948-2024", fontsize=14, fontweight="bold")
+    fig.suptitle("Key Marxian Indicators, 1948–2024", fontsize=13, fontweight="bold")
     fig.tight_layout()
     fig.savefig(OUTPUT_DIR / "Fig_9_1_summary.png", dpi=150)
     plt.close(fig)
     count += 1
     print("  Fig_9_1_summary: saved")
 
-    # Fig 6.1: Net Social Wage with components
+    # NSW
     _make_figure(
-        "Figure 6.1: Net Social Wage (NSW = B_w + G_w - T_w), 1952-2025",
+        "Net Social Wage (NSW = B_w + G_w – T_w), 1952–2025",
         "Billions $",
         [("NSW", "T607", "-")],
         "Fig_6_1_net_social_wage",
@@ -182,20 +176,20 @@ def generate():
     )
     count += 1
 
-    # Fig 6.4: NSW Tax vs Benefit
+    # NSW Components
     fig, ax = plt.subplots(figsize=(10, 6))
     _, t604 = _load_series("T604")
     _, t605 = _load_series("T605")
     _, t607 = _load_series("T607")
     if t604 is not None:
-        ax.plot(t604.index, t604, color="#e74c3c", lw=2, label="Total Taxes (T_w)")
+        ax.plot(t604.index, t604, color=COLORS[1], lw=2, label="Total Taxes (T_w)")
     if t605 is not None:
-        ax.plot(t605.index, t605, color="#2ecc71", lw=2, label="Benefits (B_w)")
+        ax.plot(t605.index, t605, color=COLORS[2], lw=2, label="Benefits (B_w)")
     if t607 is not None:
-        ax.plot(t607.index, t607, color=BOOK_COLOR, lw=2, label="NSW")
+        ax.plot(t607.index, t607, color=COLORS[0], lw=2, label="NSW")
         ax.axhline(0, color="black", lw=0.5)
-    ax.set_title("Figure 6.4: NSW Components — Taxes vs Benefits", fontsize=14, fontweight="bold")
-    ax.set_ylabel("Billions $", fontsize=12)
+    ax.set_title("NSW Components — Taxes vs Benefits", fontsize=13, fontweight="bold", pad=12)
+    ax.set_ylabel("Billions $", fontsize=11)
     ax.legend(loc="best", fontsize=9)
     ax.grid(True, color=GRID_COLOR, alpha=0.7)
     fig.tight_layout()
@@ -204,12 +198,11 @@ def generate():
     print("  Fig_6_4_nsw_components: saved")
     count += 1
 
-    # Fig cross-study: NSW comparison across studies
+    # Cross-study NSW
     fig, ax = plt.subplots(figsize=(12, 6))
-    study_colors = ["#3c8dbc", "#e74c3c", "#2ecc71", "#f39c12", "#9b59b6"]
     study_data = [
         ("ST 1994 NSW/V*", "T608", SERIES_OUT),
-        ("Moos NSW/GDP", "N1301", STUDIES_OUT),
+        ("Moos NSW/NI", "N1301", STUDIES_OUT),
         ("Turkey NSW/GDP", "N1602", STUDIES_OUT),
     ]
     for i, (label, sid, base) in enumerate(study_data):
@@ -217,10 +210,10 @@ def generate():
         if path.exists():
             df = pd.read_csv(path, index_col=0)
             col = "combined" if "combined" in df.columns else df.columns[0]
-            ax.plot(df.index, df[col], color=study_colors[i % len(study_colors)], lw=2, label=label)
+            ax.plot(df.index, df[col], color=COLORS[i], lw=2, label=label)
     ax.axhline(0, color="black", lw=0.5)
-    ax.set_title("Cross-Study NSW Comparison", fontsize=14, fontweight="bold")
-    ax.set_ylabel("Ratio", fontsize=12)
+    ax.set_title("Cross-Study NSW Comparison", fontsize=13, fontweight="bold", pad=12)
+    ax.set_ylabel("Ratio", fontsize=11)
     ax.legend(loc="best", fontsize=9)
     ax.grid(True, color=GRID_COLOR, alpha=0.7)
     fig.tight_layout()
@@ -229,17 +222,17 @@ def generate():
     print("  Fig_cross_study_nsw: saved")
     count += 1
 
-    # Fig ST vs Mohun exploitation rates
+    # ST vs Mohun exploitation
     fig, ax = plt.subplots(figsize=(10, 6))
     _, t506 = _load_series("T506")
     n1401_path = STUDIES_OUT / "N1401.csv"
     if t506 is not None:
-        ax.plot(t506.index, t506, color=BOOK_COLOR, lw=2, label="ST classification")
+        ax.plot(t506.index, t506, color=COLORS[0], lw=2, label="Shaikh-Tonak classification")
     if n1401_path.exists():
         df = pd.read_csv(n1401_path, index_col=0)
-        ax.plot(df.index, df["combined"], color="#e74c3c", lw=2, label="Mohun classification")
-    ax.set_title("Exploitation Rate: Shaikh-Tonak vs Mohun Classification", fontsize=14, fontweight="bold")
-    ax.set_ylabel("e = S*/V*", fontsize=12)
+        ax.plot(df.index, df["combined"], color=COLORS[1], lw=2, label="Mohun classification")
+    ax.set_title("Exploitation Rate: Shaikh-Tonak vs Mohun", fontsize=13, fontweight="bold", pad=12)
+    ax.set_ylabel("e = S*/V*", fontsize=11)
     ax.legend(loc="best", fontsize=9)
     ax.grid(True, color=GRID_COLOR, alpha=0.7)
     fig.tight_layout()
@@ -248,7 +241,7 @@ def generate():
     print("  Fig_st_vs_mohun: saved")
     count += 1
 
-    # Fig Moos structural shift
+    # Moos structural shift
     fig, ax = plt.subplots(figsize=(10, 6))
     n1301_path = STUDIES_OUT / "N1301.csv"
     if n1301_path.exists():
@@ -256,14 +249,16 @@ def generate():
         nsw = df["combined"]
         pre = nsw[nsw.index <= 2000]
         post = nsw[nsw.index > 2000]
-        ax.plot(pre.index, pre, color=BOOK_COLOR, lw=2, label="Pre-2000")
-        ax.plot(post.index, post, color="#e74c3c", lw=2, label="Post-2000")
-        ax.axhline(float(pre.mean()), color=BOOK_COLOR, ls="--", alpha=0.5, label=f"Pre mean: {float(pre.mean()):.4f}")
-        ax.axhline(float(post.mean()), color="#e74c3c", ls="--", alpha=0.5, label=f"Post mean: {float(post.mean()):.4f}")
-        ax.axvline(2000, color=SPLICE_COLOR, ls="--", alpha=0.5)
+        ax.plot(pre.index, pre, color=COLORS[0], lw=2, label="Pre-2000")
+        ax.plot(post.index, post, color=COLORS[1], lw=2, label="Post-2000")
+        ax.axhline(float(pre.mean()), color=COLORS[0], ls="--", alpha=0.5,
+                   label=f"Pre mean: {float(pre.mean()):.4f}")
+        ax.axhline(float(post.mean()), color=COLORS[1], ls="--", alpha=0.5,
+                   label=f"Post mean: {float(post.mean()):.4f}")
+        ax.axvline(2000, color=SPLICE_COLOR, ls="--", alpha=0.4)
     ax.axhline(0, color="black", lw=0.5)
-    ax.set_title("Moos (2017): Post-2000 Structural Shift in NSW/GDP", fontsize=14, fontweight="bold")
-    ax.set_ylabel("NSW/GDP", fontsize=12)
+    ax.set_title("Moos (2017): Post-2000 Structural Shift in NSW/NI", fontsize=13, fontweight="bold", pad=12)
+    ax.set_ylabel("NSW/NI", fontsize=11)
     ax.legend(loc="best", fontsize=9)
     ax.grid(True, color=GRID_COLOR, alpha=0.7)
     fig.tight_layout()
