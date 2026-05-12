@@ -66,35 +66,52 @@ def process():
         book_df, _ = load_parsed(sid)
         book = book_df["value"] if book_df is not None else pd.Series(dtype=float)
 
-        # For T513: try K*-based r* first
-        if sid == "T513" and r_star_k is not None:
-            combined = pd.concat([book, r_star_k])
-            combined = combined[~combined.index.duplicated(keep="first")].sort_index()
-            steps.append(f"T513: K*-based r* for {len(r_star_k)} extension years")
-            print(f"    [P08] T513: {len(book)} book + {len(r_star_k)} ext (K*-based r*=S*/K*)")
-        elif sid == "T514" and r_star_k is not None:
-            # r*_adj = r* / TCU
-            try:
-                from utils.fetchers.fred_fetcher import fetch_fred
-                tcu_data = fetch_fred("TCU", start_date="1990-01-01")
-                tcu_obs = {int(o["date"][:4]): float(o["value"])/100
-                           for o in tcu_data.get("observations", [])
-                           if o["value"] != "."}
-                tcu = pd.Series(tcu_obs)
-                common = r_star_k.index.intersection(tcu.index)
-                r_adj = r_star_k[common] / tcu[common]
-                combined = pd.concat([book, r_adj])
+        # For T513: growth-rate splice using K*-based S*/K* trend
+        if sid == "T513" and r_star_k is not None and 1989 in book.index:
+            # Book-period r* uses Table 5.11 values (~1.87 scale)
+            # Extension S*/K* is in a different scale (~0.31)
+            # Growth-rate splice preserves book level, uses extension dynamics
+            book_1989 = book[1989]
+            first_ext = r_star_k.index.min()
+            base_ratio = r_star_k.get(first_ext, r_star_k.iloc[0])
+            if base_ratio > 0:
+                ext_spliced = pd.Series(dtype=float)
+                for yr in r_star_k.index:
+                    ext_spliced[yr] = book_1989 * (r_star_k[yr] / base_ratio)
+                combined = pd.concat([book, ext_spliced])
                 combined = combined[~combined.index.duplicated(keep="first")].sort_index()
-                steps.append(f"T514: K*-based r*_adj for {len(r_adj)} years")
-                print(f"    [P08] T514: {len(book)} book + {len(r_adj)} ext (K*-based, TCU-adjusted)")
-            except Exception:
-                ext_path = PARSED_RAW / f"{sid}_ext_parsed.csv"
-                if ext_path.exists():
-                    ext_df = pd.read_csv(ext_path, index_col=0)
-                    ext_df.index = ext_df.index.astype(int)
-                    combined = ext_df["value"].dropna().sort_index()
-                else:
-                    combined = book
+                steps.append(f"T513: growth-rate splice at 1989 (book level preserved)")
+                print(f"    [P08] T513: {len(book)} book + {len(ext_spliced)} ext (growth-rate splice)")
+            else:
+                combined = book
+        elif sid == "T514" and r_star_k is not None and 1989 in book.index:
+            # Same growth-rate splice for r*_adj, then apply TCU
+            book_1989 = book[1989]
+            first_ext = r_star_k.index.min()
+            base_ratio = r_star_k.get(first_ext, r_star_k.iloc[0])
+            if base_ratio > 0:
+                ext_r = pd.Series(dtype=float)
+                for yr in r_star_k.index:
+                    ext_r[yr] = book_1989 * (r_star_k[yr] / base_ratio)
+                # Apply capacity utilization adjustment
+                try:
+                    from utils.fetchers.fred_fetcher import fetch_fred
+                    tcu_data = fetch_fred("TCU", start_date="1990-01-01")
+                    tcu_obs = {int(o["date"][:4]): float(o["value"])/100
+                               for o in tcu_data.get("observations", [])
+                               if o["value"] != "."}
+                    tcu = pd.Series(tcu_obs)
+                    common = ext_r.index.intersection(tcu.index)
+                    r_adj = ext_r[common] / tcu[common]
+                    combined = pd.concat([book, r_adj])
+                    combined = combined[~combined.index.duplicated(keep="first")].sort_index()
+                    steps.append(f"T514: growth-rate splice + TCU adjustment")
+                    print(f"    [P08] T514: {len(book)} book + {len(r_adj)} ext (splice + TCU)")
+                except Exception:
+                    combined = pd.concat([book, ext_r])
+                    combined = combined[~combined.index.duplicated(keep="first")].sort_index()
+            else:
+                combined = book
         else:
             ext_path = PARSED_RAW / f"{sid}_ext_parsed.csv"
             if ext_path.exists():

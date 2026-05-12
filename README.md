@@ -8,14 +8,14 @@
 
 | Measure | 1948 | 1989 (book) | 2024 (extended) | Change |
 |---------|------|-------------|-----------------|--------|
-| Rate of exploitation (e = S\*/V\*) | 1.70 | 2.44 | ~3.59 | +111% |
-| Productive labor share (Lp/L) | 0.57 | 0.36 | ~0.33 | -42% |
-| Productive wage share (V\*/W) | 0.54 | 0.36 | ~0.27 | -50% |
-| Net social wage | Negative | Negative | Negative | 92% of years |
-| Marxian profit rate (r\* = S\*/K\*) | 1.87 | 0.44 | ~0.39 | Falling trend confirmed |
+| Rate of exploitation (e = S\*/V\*) | 1.70 | 2.44 | ~7.3 | +330% |
+| Productive labor share (Lp/L) | 0.57 | 0.36 | ~0.36 | -37% (stabilized) |
+| Productive wage share (V\*/W) | 0.54 | 0.36 | ~0.33 | -39% |
+| Net social wage | Negative | Negative | Positive post-2005 | Regime change |
+| Marxian profit rate (r\* = S\*/K\*) | 1.87 | 1.86 | ~2.8 | Rising since 1990s |
 | Labor value / price R-squared | 0.93 (1958) | 0.79 (1977) | 0.85–0.99 (NAICS) | Strong correlation |
 
-The exploitation rate — the ratio of surplus value to the wages of productive workers — more than doubled over the postwar period. The net social wage is negative in 92% of years, meaning workers pay more in taxes than they receive in government benefits. The Marxian profit rate shows a secular decline, consistent with the classical prediction.
+The exploitation rate — the ratio of surplus value to the wages of productive workers — has risen dramatically, reflecting the ongoing structural shift from productive to unproductive employment. The net social wage, negative for nearly the entire book period, reversed after 2005 due to the post-GFC fiscal expansion and COVID stimulus. The Marxian profit rate shows a partial recovery since the 1990s, rising above its 1989 level. See the [methodology report](Outputs/Reports/AS2_Methodology_Report.pdf) for detailed analysis of each series.
 
 ---
 
