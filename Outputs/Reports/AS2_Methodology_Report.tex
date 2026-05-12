@@ -206,7 +206,9 @@ In 1997, the US replaced the Standard Industrial Classification (SIC) with the N
 \item \textbf{NAICS era (1997--present)}: 48 productive + 12 unproductive in our 71-sector IO mapping
 \end{itemize}
 
-New sectors emerged (Information, NAICS 51), existing sectors were reorganized (eating/drinking moved from retail to accommodation), and the level of detail changed. Our bridge uses log-linear interpolation for 1990--1997 between the book's 1989 endpoint and the first NAICS year (1997/1998). This is documented as decision DEC-007 and assumption ASM-M-002.
+New sectors emerged (Information, NAICS 51), existing sectors were reorganized (eating/drinking moved from retail to accommodation), and the level of detail changed.
+
+BEA's NAICS-consistent industry data (GDP-by-Industry, NIPA Tables 6.2D and 6.5D) begins at 1997/1998. The earlier SIC-era NIPA tables (6.5A/B/C) cover 1929--1997 but use incompatible industry definitions---a SIC ``Services'' category lumps together productive (health, education) and unproductive (legal, business services) industries that NAICS separates. Rather than introduce a SIC-to-NAICS concordance that would itself require judgment calls about boundary industries, we bridge the 1990--1997 gap via log-linear interpolation between the book's 1989 IO-based values and the 1998 NIPA NAICS values. This affects only 8 years of the 77-year series and is documented as decision DEC-007.
 
 \section{Extension Methodology}
 

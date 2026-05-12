@@ -38,7 +38,7 @@ TABLES = {
     "components": 6,
 }
 
-YEAR_RANGE = range(1997, 2025)
+YEAR_RANGE = range(1987, 2025)
 
 
 def _get_api_key() -> str:

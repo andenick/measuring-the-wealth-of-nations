@@ -32,7 +32,7 @@ PRIORITY = 22
 BASE_URL = "https://apps.bea.gov/api/data"
 CACHE_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "cache"
 
-YEAR_RANGE = range(1998, 2025)
+YEAR_RANGE = range(1987, 2025)
 
 
 def _get_api_key() -> str:
