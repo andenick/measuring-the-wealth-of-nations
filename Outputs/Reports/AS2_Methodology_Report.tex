@@ -208,7 +208,17 @@ In 1997, the US replaced the Standard Industrial Classification (SIC) with the N
 
 New sectors emerged (Information, NAICS 51), existing sectors were reorganized (eating/drinking moved from retail to accommodation), and the level of detail changed.
 
-BEA's NAICS-consistent industry data (GDP-by-Industry, NIPA Tables 6.2D and 6.5D) begins at 1997/1998. The earlier SIC-era NIPA tables (6.5A/B/C) cover 1929--1997 but use incompatible industry definitions---a SIC ``Services'' category lumps together productive (health, education) and unproductive (legal, business services) industries that NAICS separates. Rather than introduce a SIC-to-NAICS concordance that would itself require judgment calls about boundary industries, we bridge the 1990--1997 gap via log-linear interpolation between the book's 1989 IO-based values and the 1998 NIPA NAICS values. This affects only 8 years of the 77-year series and is documented as decision DEC-007.
+BEA's NAICS-consistent industry data (GDP-by-Industry, NIPA Tables 6.2D and 6.5D) begins at 1997/1998. The earlier SIC-era NIPA tables (6.5A/B/C) cover 1929--1997 but use incompatible industry definitions---a SIC ``Services'' category lumps together productive (health, education) and unproductive (legal, business services) industries that NAICS separates. Rather than introduce a SIC-to-NAICS concordance that would itself require judgment calls about boundary industries, we bridge the 1990--1997 gap via log-linear interpolation between the book's 1989 IO-based values and the 1998 NIPA NAICS values. This affects only 8 years of the 77-year series.
+
+This approach is consistent with how other researchers in this tradition handle the transition:
+\begin{itemize}
+\item \textbf{Mohun (2005)}: Stayed entirely within SIC (data ends 2001). Used NIPA under ``1972 SIC (1964--87) and 1987 SIC (1987--2001),'' noting the 1972-to-1987 SIC revision was ``not very significant at aggregation level of this paper.''
+\item \textbf{Mohun (2013)}: Crossed the boundary by using \textit{separate classification tables}---Table 2 for SIC (1964--1997) and Table 3 for NAICS (1998--2010). Two independent exercises rather than a concordance.
+\item \textbf{Moos (2017)}: Avoided the issue entirely by using aggregate NIPA tables (2.1, 3.1) that do not require industry classification. Her NSW computation allocates by labor share of personal income---an aggregate ratio that BEA reports continuously across the transition.
+\item \textbf{Tonak (1984)}: Pre-dates the issue (data ends 1980).
+\end{itemize}
+
+No study in this literature has built a formal SIC-to-NAICS concordance for the productive/unproductive classification. Our interpolation is a defensible middle ground between Mohun's dual-table approach and Moos's aggregate-only approach.
 
 \section{Extension Methodology}
 
