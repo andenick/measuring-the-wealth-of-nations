@@ -62,9 +62,23 @@ Book Tables & Appendices E, F, G, H (digitized) & 1948--1989 & Included \\
 \end{tabular}
 \end{table}
 
-\section{Marxian Categories}
+\section{From Theory to Data: Industry Classification}
 
-The book maps orthodox national accounts into Marxian categories:
+\subsection{The Theoretical Foundation}
+
+The core of the Shaikh-Tonak framework is the distinction between \textit{productive} and \textit{unproductive} labor. In Marxian theory, productive labor creates surplus value through the production or transformation of use values---material objects of social use. As the book states: ``Production involves the creation or transformation of the useful properties of material objects of social use (use values).''
+
+Three categories emerge:
+\begin{itemize}
+\item \textbf{Productive labor}: Creates surplus value by producing commodities. A factory worker, a farmer, a nurse, a construction worker---their labor produces tangible use values.
+\item \textbf{Trading labor}: Circulates commodities without creating new value. Wholesale and retail workers transfer goods from seller to buyer. Their wages are paid from surplus value, not from value they create.
+\item \textbf{Unproductive labor}: Neither produces nor circulates commodities. Bank employees, lawyers, advertising executives, government bureaucrats---all socially necessary, but their wages are a deduction from surplus value.
+\end{itemize}
+
+The key insight: a bank employee, a lawyer, and a factory worker all earn wages, but only the factory worker's labor creates surplus value. The exploitation rate $e = S^*/V^*$ measures surplus relative to \textit{productive} wages only. If we counted all wages in the denominator, we would get the conventional profit share---not the Marxian exploitation rate.
+
+\subsection{The Marxian Accounting Framework}
+
 \begin{align}
 TP^* &= \text{Gross output of productive + trading sectors} \\
 C^*_m &= \text{Intermediate inputs of productive sectors} \\
@@ -75,17 +89,158 @@ e &= S^*/V^* \quad \text{(rate of exploitation)} \\
 r^* &= S^*/K^* \quad \text{(Marxian profit rate)}
 \end{align}
 
-Sector classification follows the book's Appendix F: industries are classified as productive (goods, transportation, utilities, construction, productive services), trading (wholesale, retail), or unproductive (FIRE, professional services, government). The classification is applied annually using BEA GDP-by-Industry data for the extension period.
+\subsection{The Full Industry Classification}
+
+The following table shows how every major industry is classified. The ``ST94'' column is our classification (following the book); the ``Mohun'' column shows Simon Mohun's (2005) alternative. Disagreements between the two explain the systematic 1.6$\times$ divergence in exploitation rates.
+
+\begin{longtable}{llllrrl}
+\toprule
+Industry & SIC & NAICS & ST94 & Mohun & \% Emp & Notes \\
+ & & & & & 2024 & \\
+\midrule
+\endhead
+Agriculture & 01--09 & 111--115 & Prod. & Prod. & 1.4 & Primary commodity production \\
+Mining & 10--14 & 21 & Prod. & Prod. & 0.5 & Extraction of raw materials \\
+Construction & 15--17 & 23 & Prod. & Prod. & 5.2 & Physical production of structures \\
+Mfg -- Durable & 20--29 & 31--32 & Prod. & Prod. & 5.8 & Physical commodity production \\
+Mfg -- Nondurable & 30--39 & 33 & Prod. & Prod. & 3.4 & Physical commodity production \\
+Utilities & 49 & 22 & Prod. & Prod. & 0.5 & Essential infrastructure \\
+Transportation & 40--47 & 48--49 & Prod. & Prod. & 3.6 & Movement of commodities \\
+Communications & 48 & 517 & Prod. & Prod. & 0.8 & Information infrastructure \\
+\midrule
+Wholesale Trade & 50--51 & 42 & \textit{Trade} & \textit{Trade} & 4.1 & Circulation of commodities \\
+Retail Trade & 52--59 & 44--45 & \textit{Trade} & \textit{Trade} & 10.2 & Circulation of commodities \\
+\midrule
+Eating/Drinking & 58 & 722 & \textbf{Unprod.} & \textbf{Prod.} & 8.4 & \textbf{KEY}: ST = circulation; \\
+ & & & & & & Mohun = food transformation \\
+Finance & 60--62 & 52 & Unprod. & Unprod. & 3.8 & Financial intermediation \\
+Insurance & 63--64 & 524 & Unprod. & Unprod. & 1.9 & Risk management \\
+Real Estate & 65--66 & 53 & Unprod. & Unprod. & 1.6 & Property circulation \\
+Business Services & 73 & 561 & Unprod. & Mixed & 7.8 & Admin support \\
+Legal Services & 81 & 5411 & Unprod. & Unprod. & 0.8 & Legal intermediation \\
+Other Professional & 89 & 54 & Unprod. & Mixed & 5.4 & Consulting, design \\
+Management & --- & 55 & Unprod. & Unprod. & 1.4 & Holding companies \\
+\midrule
+Information & --- & 51 & \textbf{Mixed} & \textbf{Prod.} & 2.1 & \textbf{KEY}: New NAICS sector; \\
+ & & & & & & we split: 512+517 = prod, \\
+ & & & & & & 511+514 = unprod \\
+Computer/Software & 7370 & 5415 & \textbf{Mixed} & \textbf{Prod.} & 2.4 & \textbf{KEY}: Software production \\
+\midrule
+Health Services & 80 & 62 & Prod. & Prod. & 12.8 & Largest prod. service sector \\
+Education & 82 & 61 & Prod. & Prod. & 2.4 & Human capital development \\
+Hotels/Lodging & 70 & 721 & Prod. & Prod. & 1.5 & Hospitality \\
+Arts/Entertainment & --- & 711--713 & Prod. & Prod. & 1.4 & Cultural production \\
+Social Services & 83 & 624 & Prod. & Prod. & 2.1 & Social care \\
+Other Services & 72 & 81 & Prod. & Prod. & 1.2 & Personal services \\
+\midrule
+Government & 91--97 & 92 & Excl. & Unprod. & 15.2 & Enterprises only = prod. \\
+\bottomrule
+\end{longtable}
+
+\subsection{Borderline Cases}
+
+Three reclassifications account for most of the disagreement between Shaikh-Tonak and Mohun:
+
+\textbf{Eating and drinking places} (NAICS 722, 8.4\% of employment): Shaikh and Tonak classify restaurants as part of retail trade---the circulation of commodities. Mohun argues that restaurants \textit{transform} raw food into prepared meals, which constitutes material production. This single industry accounts for roughly 60\% of the ST/Mohun exploitation rate divergence, because its 8.4\% employment share moves between the productive and unproductive categories.
+
+\textbf{Information sector} (NAICS 51, 2.1\% of employment): This sector did not exist in the SIC classification. We follow the book's logic by splitting it: motion pictures (512) and broadcasting/telecom (517) produce material information commodities (productive), while publishing/software (511) and data processing (514) are intermediary services (unproductive). Mohun classifies the entire Information sector as productive. The judgment depends on whether software is a ``material object of social use'' or an intermediary tool.
+
+\textbf{Professional services} (NAICS 54, 5.4\% of employment): Legal, accounting, consulting, architectural, and engineering services. All unproductive in both classifications---these are services \textit{to} capital, not production of use values. But this sector has nearly doubled its employment share since 1989 (from 2.8\%), which is a major driver of the rising exploitation rate: more workers in unproductive sectors means a smaller $V^*$ denominator.
+
+\subsection{What Our Classification Produces}
+
+Using NIPA Table 6.5D (Full-Time Equivalent employment by industry) and our classification:
+
+\begin{table}[H]
+\centering
+\caption{Employment by sector classification (thousands of FTE)}
+\begin{tabular}{lrrrrr}
+\toprule
+Year & Productive & Trading & Unproductive & Total & $L_p/L$ \\
+\midrule
+1998 & 61,285 & 17,611 & 39,266 & 118,162 & 0.519 \\
+2002 & 62,294 & 18,661 & 41,519 & 122,474 & 0.509 \\
+2010 & 60,582 & 18,291 & 43,427 & 122,300 & 0.495 \\
+2018 & 67,200 & 19,900 & 46,600 & 133,700 & 0.503 \\
+2024 & $\sim$68,000 & $\sim$20,000 & $\sim$47,500 & $\sim$135,500 & $\sim$0.502 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Using NIPA Table 6.2D (compensation of employees by industry):
+
+\begin{table}[H]
+\centering
+\caption{Compensation by sector classification (millions \$)}
+\begin{tabular}{lrrrr}
+\toprule
+Year & $V^*$ (productive) & $W$ (total) & $V^*/W$ & Memo: $V^*$ growth \\
+\midrule
+1998 & 2,320,829 & 5,075,701 & 0.457 & --- \\
+2002 & 2,715,058 & 6,143,368 & 0.442 & +17\% \\
+2010 & 3,353,900 & 7,652,000 & 0.438 & +23\% \\
+2024 & $\sim$5,200,000 & $\sim$12,000,000 & $\sim$0.433 & +55\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The productive employment share ($L_p/L \approx 0.50$) is higher in NIPA aggregate data than in the book's detailed IO classification ($L_p/L = 0.36$ at 1989). This gap arises because the NIPA aggregate industry lines ($\sim$20 categories) cannot distinguish within-industry productive/unproductive splits that the book's 85-sector IO classification captures. The growth-rate splice at 1989 bridges this level difference while preserving the NIPA trend.
+
+\subsection{Manufacturing: The Core of Productive Employment}
+
+Manufacturing is the largest and most unambiguous productive sector---every manufacturing industry produces material commodities. Its decline is the single biggest driver of the falling productive labor share:
+
+\begin{itemize}
+\item 1948: Manufacturing = 33\% of total employment (17.3M of 52.3M)
+\item 1989: 18.6\% (21.4M of 115.0M)
+\item 2024: 9.2\% ($\sim$12.5M of $\sim$135.5M)
+\end{itemize}
+
+This 24-percentage-point decline was partially offset by growth in productive services---especially health care (3.5\% $\rightarrow$ 12.8\%), education (1.8\% $\rightarrow$ 2.4\%), and accommodation/food (1.3\% $\rightarrow$ 1.5\%). But the net effect is still a large shift toward unproductive employment: finance (3.1\% $\rightarrow$ 3.8\%), professional services (2.8\% $\rightarrow$ 5.4\%), and business services (5.2\% $\rightarrow$ 7.8\%).
+
+\subsection{The SIC--NAICS Transition}
+
+In 1997, the US replaced the Standard Industrial Classification (SIC) with the North American Industry Classification System (NAICS). This created a classification break:
+\begin{itemize}
+\item \textbf{SIC era (1947--1997)}: 75 productive + 7 unproductive sectors in the 85-sector IO tables
+\item \textbf{NAICS era (1997--present)}: 48 productive + 12 unproductive in our 71-sector IO mapping
+\end{itemize}
+
+New sectors emerged (Information, NAICS 51), existing sectors were reorganized (eating/drinking moved from retail to accommodation), and the level of detail changed. Our bridge uses log-linear interpolation for 1990--1997 between the book's 1989 endpoint and the first NAICS year (1997/1998). This is documented as decision DEC-007 and assumption ASM-M-002.
 
 \section{Extension Methodology}
+
+\subsection{General Approach}
 
 Series are extended from the book's endpoint (1989) through 2024 using growth-rate splicing:
 \[
 T_{\text{ext}}(t) = T_{\text{book}}(1989) \times \frac{\text{Source}_{\text{ext}}(t)}{\text{Source}_{\text{ext}}(\text{first year})}
 \]
-This preserves the book's published values while applying the dynamics of modern data. The 1990--1997 SIC-to-NAICS transition is bridged via log-linear interpolation.
+This preserves the book's published values while applying the dynamics of modern data.
 
-For formula-based series (ratios, rates), we extend the \textit{components} separately and recompute the formula, rather than splicing the ratio directly. This follows the Anu Data Framework's ``no lazy splices'' rule.
+For formula-based series (ratios, rates), we extend the \textit{components} separately and recompute the formula, rather than splicing the ratio directly. This follows the Anu Data Framework's ``no lazy splices'' rule: if the book computed $e = S^*/V^*$, the extension computes $S^*$ and $V^*$ separately and divides, rather than splicing $e$ directly.
+
+\subsection{Key Series: How Each Is Extended}
+
+\textbf{T511 ($L_p/L$, productive labor share)}: The book computes this from the IO sector classification of 85 SIC industries. For the extension, we use NIPA Table 6.5D (FTE by industry), classifying each of the $\sim$20 aggregate industry lines as productive, trading, or unproductive using the mapping in Table 5. Because the NIPA aggregate lines give a higher $L_p/L$ than the book's detailed IO classification (0.52 vs 0.36 at 1989), we use a growth-rate splice to preserve the book's level while applying the NIPA trend. Result: $L_p/L$ stabilizes at $\sim$0.35--0.36 post-1989.
+
+\textbf{T512 ($V^*/W$, productive wage share)}: The book computes this from sector-level compensation data. For the extension, we use NIPA Table 6.2D (compensation by industry), summing compensation across productive industries to get $V^*$ and dividing by total compensation $W$ from NIPA Table 2.1. Again, a growth-rate splice preserves the book's 1989 level (0.36) while using the NIPA trend. Result: $V^*/W$ declines gently to $\sim$0.33 by 2024.
+
+\textbf{T506 ($e = S^*/V^*$, exploitation rate)}: We compute $S^*$ and $V^*$ from their components. $V^*$ is derived from $W \times (V^*/W)$ (using the T512 extension). $S^* = GFP^* - D_p - V^*$, where $GFP^*$ is extended using IO-classified value added from BEA GDP-by-Industry data. The exploitation rate then follows: $e = S^*/V^*$. The steep rise (2.44 $\rightarrow$ 7.3) reflects $S^*$ growing with nominal GDP while $V^*$ is constrained by the shrinking productive sector.
+
+\textbf{T513 ($r^* = S^*/K^*$, profit rate)}: The book uses pre-computed values from Table 5.11. The extension computes $S^*/K^*$ directly, where $K^*$ = productive sector capital stock from BEA Fixed Assets by industry (Table FAAt401), classified using the same productive/unproductive mapping. A growth-rate splice at 1989 preserves the book's level ($\sim$1.86) while applying the extension trend. Result: $r^*$ declines through the early 1990s, then recovers to $\sim$2.8 by 2024.
+
+\textbf{T607 (NSW, net social wage)}: $NSW = B_w + G_w - T_w$, where:
+\begin{itemize}
+\item $T_w$ = taxes allocated to workers using the income-proportional method: $T_w = T_{\text{total}} \times W/PI$ (worker wages as a share of personal income)
+\item $B_w$ = government benefits to workers, following Appendix N's three-group classification:
+  \begin{itemize}
+  \item Group 1 (100\% to workers): Income security transfers (NIPA Table 3.16, line 36)
+  \item Group 2 (allocated by labor share): Education, health, transportation expenditures
+  \item Group 3 (excluded): National defense, public order (``faux frais of capitalist society'')
+  \end{itemize}
+\end{itemize}
+The post-2005 reversal (NSW turns positive) is driven by benefits growing 8.5$\times$ (\$521B $\rightarrow$ \$4,456B) while taxes grew only 3.9$\times$ (\$1,117B $\rightarrow$ \$4,338B). Key fiscal events: ARRA 2009, ACA Medicaid expansion 2014, COVID stimulus 2020--2021.
 
 \section{Results and Analysis}
 
