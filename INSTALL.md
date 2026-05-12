@@ -3,52 +3,67 @@
 ## Requirements
 
 - Python 3.11+
-- R 4.x (optional, for Shiny app only)
+- R 4.x (optional — only needed for the Shiny visualization app)
+- ~50 MB disk space (repo) + ~200 MB (computed outputs)
 
 ## Setup
 
 ```bash
-git clone https://github.com/andenick/AS2-ShaikhTonak.git
-cd AS2-ShaikhTonak/Technical/NickyData
+git clone https://github.com/andenick/measuring-the-wealth-of-nations.git
+cd measuring-the-wealth-of-nations/Technical/NickyData
 pip install -r requirements.txt
 ```
 
-## API Keys (for fresh data pulls)
+## Running the Pipeline
 
-Copy the example and fill in your keys:
+```bash
+# Validate cached data (no API keys needed, ~2 seconds)
+python run.py --validate-only
+
+# Full pipeline: re-fetch all data from APIs, recompute, validate (~15 seconds)
+python run.py --test-all
+
+# Other modes
+python run.py --from P          # Resume from processing phase
+python run.py --setup-only      # Just setup scripts
+python run.py --report          # Show pipeline status dashboard
+python run.py --list            # List all 85 scripts
+```
+
+## API Keys (needed only for --test-all)
+
+The `--validate-only` mode works immediately with cached data. To re-fetch fresh data from federal statistical agencies, you need free API keys:
+
+1. Copy the template:
 ```bash
 cp data/user-inputs/api_keys.env.example data/user-inputs/api_keys.env
-# Edit api_keys.env:
-#   BEA_API_KEY=your_key_here
-#   BLS_API_KEY=your_key_here
-#   FRED_API_KEY=your_key_here
 ```
 
-Free API keys from:
-- BEA: https://apps.bea.gov/api/signup/
-- BLS: https://data.bls.gov/registrationEngine/
-- FRED: https://fred.stlouisfed.org/docs/api/api_key.html
+2. Get free keys from:
+   - **BEA**: https://apps.bea.gov/API/signup/
+   - **FRED**: https://fred.stlouisfed.org/docs/api/api_key.html
+   - **BLS**: https://data.bls.gov/registrationEngine/ (optional — increases rate limits)
 
-## Reproduce
-
-```bash
-python run.py --test-all     # Full pipeline + verification (~100s)
-python run.py --report       # Status dashboard
-python run.py --list         # Show all 67 scripts
+3. Edit `data/user-inputs/api_keys.env`:
+```
+BEA_API_KEY=your_bea_key_here
+FRED_API_KEY=your_fred_key_here
 ```
 
-## Input Data
+## Troubleshooting
 
-Some input datasets are too large for git. To obtain them:
+**"BEA_API_KEY not found"**: Make sure `api_keys.env` is in `data/user-inputs/`, not the repo root.
 
-1. **IO Matrices** (SIC 1947-1977): Available from BEA historical benchmark IO tables
-2. **NAICS IO** (1997-2017): Available from `Inputs/IO_Matrices/NAICS/` or BEA API
-3. **API Data**: Re-pulled automatically by L## scripts if API keys are configured
-4. **Mohun Data**: Published in Mohun (2005) CJE Table 2
+**V15 data freshness warnings**: API data may be slightly stale if cached responses are old. Run `--test-all` to refresh.
 
-## Output
+**V01 reference value failure**: If a benchmark value changes after API refresh, this is a data vintage issue — BEA periodically revises historical estimates. The cached data in the repo represents the validated vintage.
 
-After running the pipeline:
-- Master database: `Outputs/Data/COMPLETE_DATABASE/as2_master_1948_2024.csv`
-- Figures: `Outputs/Figures/*.png`
-- Report: `Outputs/Reports/AS2_Methodology_Report.pdf`
+**R Shiny app won't start**: Install R packages: `install.packages(c("shiny", "shinydashboard", "tidyverse", "plotly", "DT", "scales"))`. Then from `Technical/ShinyApp/`: `Rscript -e "shiny::runApp('.')"`.
+
+## Outputs
+
+After running the pipeline, outputs appear in:
+
+- `Outputs/Data/COMPLETE_DATABASE/` — Master database (97 years x 48 series, CSV + Excel)
+- `Outputs/Figures/` — 11 publication-quality figures (PNG + SVG)
+- `Outputs/Reports/` — Methodology report (PDF)
