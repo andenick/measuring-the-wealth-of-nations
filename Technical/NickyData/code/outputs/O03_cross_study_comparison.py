@@ -16,8 +16,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 import pandas as pd
 from utils.paths import SERIES_OUT
 
-NSW_OUTPUT = Path("D:/Arcanum/Projects/ST2/Outputs/Data/NSW_CROSS_STUDY")
-EXPL_OUTPUT = Path("D:/Arcanum/Projects/ST2/Outputs/Data/EXPLOITATION_CROSS_STUDY")
+NSW_OUTPUT = Path(__file__).resolve().parents[3] / "Outputs" / "Data/NSW_CROSS_STUDY")
+EXPL_OUTPUT = Path(__file__).resolve().parents[3] / "Outputs" / "Data/EXPLOITATION_CROSS_STUDY")
 
 
 def _load(sid):

@@ -24,7 +24,7 @@ from utils.io.naics_parser import extract_use_matrix, extract_leontief, get_sect
 from utils.io.naics_classification import get_productive_sector_codes
 
 NAICS_DIR = INPUTS / "IO_Matrices" / "NAICS"
-KLEMS_DIR = Path("D:/Arcanum/Council/Robin/DATA/SHAIKH_TONAK/TECHNICAL_DATA/data/modern/klems_processed")
+KLEMS_DIR = Path(os.environ.get("ROBIN_DATA_DIR", str(Path(__file__).resolve().parents[5] / "Council" / "Robin"))) / "DATA" / "SHAIKH_TONAK" / "TECHNICAL_DATA" / "data" / "modern" / "klems_processed"
 
 
 def generate():

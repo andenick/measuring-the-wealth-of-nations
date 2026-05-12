@@ -24,7 +24,7 @@ MASTER_SERIES = [
     "T901",
 ]
 
-OUTPUT_DIR = Path("D:/Arcanum/Projects/ST2/Outputs/Data/COMPLETE_DATABASE")
+OUTPUT_DIR = Path(__file__).resolve().parents[3] / "Outputs" / "Data/COMPLETE_DATABASE")
 
 
 def generate():

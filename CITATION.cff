@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "Measuring the Wealth of Nations — Replication Package"
+message: "If you use this data, please cite it using the metadata from this file."
+type: dataset
+authors:
+  - family-names: Anderson
+    given-names: Nicholas
+    orcid: ""
+repository-code: "https://github.com/andenick/measuring-the-wealth-of-nations"
+license: MIT
+version: "7.0"
+date-released: "2026-05-12"
+references:
+  - type: book
+    authors:
+      - family-names: Shaikh
+        given-names: Anwar
+      - family-names: Tonak
+        given-names: E. Ahmet
+    title: "Measuring the Wealth of Nations: The Political Economy of National Accounts"
+    year: 1994
+    publisher:
+      name: Cambridge University Press

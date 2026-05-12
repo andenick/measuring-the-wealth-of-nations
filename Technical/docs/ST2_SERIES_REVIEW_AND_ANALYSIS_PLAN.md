@@ -66,14 +66,14 @@ The HDARP extraction of the full 399-page book (40 chunks, old Shaikh Tonak proj
 The project has two KBs, reflecting its evolution from the old Shaikh Tonak project to AS2/ST2:
 
 #### KB-1: Old HDARP (Shaikh Tonak project)
-- **Location**: `D:/Arcanum/Projects/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/`
+- **Location**: `../Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/`
 - **Coverage**: 40 chunks × ~10 pages = 399 pages (complete book)
 - **Content types per chunk**: full_transcription.md + tables/ + equations/ + figures/
 - **Quality**: Full HDARP v1.0 extraction with per-chunk tables (CSV), equations (LaTeX/MD), figure descriptions (MD)
 - **Status**: RICH but UNDEREXPLOITED — the pipeline references it for DEC-008 verification and a few table cross-checks, but most chunks have never been systematically mined for formula verification
 
 #### KB-2: ST2 In-Project KB
-- **Location**: `D:/Arcanum/Projects/ST2/Technical/Knowledge_Base/`
+- **Location**: `./Technical/Knowledge_Base/`
 - **Coverage**: Sparse — SUMMARY_KEY_FINDINGS.md (20 sampled pages), page-level text files (mostly pp 301–399), 1 equation file, some table/figure files
 - **Quality**: Mix of real HDARP and ZHDARP v3.3 "placeholder extraction" (pages 201–300 are placeholders, not real OCR)
 - **Status**: INCOMPLETE — the page 201–300 extraction is explicitly labeled as placeholder; equation extraction covers only 1 page

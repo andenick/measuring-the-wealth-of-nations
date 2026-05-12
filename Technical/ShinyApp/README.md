@@ -24,7 +24,7 @@ This Shiny application provides interactive exploration of:
 
 ```r
 # 1. Navigate to the ShinyApp directory
-setwd("D:/Arcanum/Projects/AS2/Technical/ShinyApp")
+setwd("")
 
 # 2. Check and install required packages
 source("check_packages.R")
@@ -57,7 +57,7 @@ install.packages(c("shiny", "shinydashboard", "tidyverse", "plotly",
 
 **Launch:**
 ```r
-shiny::runApp("D:/Arcanum/Projects/AS2/Technical/ShinyApp")
+shiny::runApp("")
 ```
 
 ---
@@ -421,7 +421,7 @@ If you use this app in research or teaching, please cite:
 - check_packages.R: Package installer (89 lines)
 - validate_data.R: Data validator (77 lines)
 
-**Project directory:** `D:/Arcanum/Projects/AS2/`
+**Project directory:** `
 
 ---
 

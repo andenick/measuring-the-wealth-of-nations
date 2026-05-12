@@ -764,8 +764,8 @@ CH7_SERIES_MAPPING <- list(
 mkdir /tmp/as2_test && cd /tmp/as2_test
 
 # 2. Copy Replicator package
-cp -r D:/Arcanum/Projects/ST2/Technical/ANU_REPLICATOR .
-cp -r D:/Arcanum/Projects/ST2/Inputs .
+cp -r ./Technical/ANU_REPLICATOR .
+cp -r ./Inputs .
 
 # 3. Create venv and install deps
 python -m venv venv && source venv/bin/activate

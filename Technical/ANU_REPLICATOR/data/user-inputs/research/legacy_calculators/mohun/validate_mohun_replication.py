@@ -41,7 +41,7 @@ class MohunReplicationValidator:
         print(f"[OK] Loaded our calculations: 1948-1989 ({len(self.our_exploitation)} years)")
 
         # Load Mohun's benchmarks
-        mohun_file = Path("D:/Arcanum/Projects/Shaikh Tonak/Knowledge_Base/HDARP_Test/mohun_2013_benchmark_years.csv")
+        mohun_file = Path(__file__).resolve().parents[5] / "Shaikh Tonak" / "Knowledge_Base" / "HDARP_Test/mohun_2013_benchmark_years.csv")
         self.mohun_benchmarks = pd.read_csv(mohun_file)
 
         print(f"[OK] Loaded Mohun benchmarks: {len(self.mohun_benchmarks)} benchmark years")

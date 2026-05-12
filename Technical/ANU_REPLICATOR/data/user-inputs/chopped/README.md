@@ -2,7 +2,7 @@
 
 AS2 stores Anu Chopped CSV source files at the project level:
 
-**Actual location**: `D:/Arcanum/Projects/ST2/Inputs/ST_Chopped/`
+**Actual location**: `./Inputs/ST_Chopped/`
 
 Organized by chapter:
 - `ch05/` — Chapter 5 tables (TableE2_RevenueAccounts.csv, Table5_7_KeyRatios.csv, etc.)

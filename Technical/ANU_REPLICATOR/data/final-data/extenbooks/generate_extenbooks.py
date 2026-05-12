@@ -8,7 +8,7 @@ from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 
 # Paths
-BASE = Path("D:/Arcanum/Projects/ST2/Technical")
+BASE = Path(__file__).resolve().parents[3] / "Technical"
 REGISTRY_PATH = BASE / "series_registry.json"
 RESEARCH_DIR = BASE / "research"
 SERIES_DIR = BASE / "ANU_REPLICATOR/data/final-data/series"

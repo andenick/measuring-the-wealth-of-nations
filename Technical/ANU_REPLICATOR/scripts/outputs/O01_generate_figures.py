@@ -25,7 +25,7 @@ except ImportError:
 
 from lib.paths import SERIES_OUT
 
-OUTPUT_DIR = Path("D:/Arcanum/Projects/ST2/Outputs/Figures")
+OUTPUT_DIR = Path(__file__).resolve().parents[3] / "Outputs" / "Figures")
 
 BOOK_COLOR = "#3c8dbc"      # Blue for book period
 EXT_COLOR = "#f39c12"       # Orange for extension

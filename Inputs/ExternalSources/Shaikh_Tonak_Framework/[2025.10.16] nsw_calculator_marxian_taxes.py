@@ -31,7 +31,7 @@ class NSWCalculatorMarxianTaxes:
         print("Initializing NSW Calculator with Marxian Tax Definitions...")
 
         # NIPA data path
-        self.nipa_path = Path("D:/Arcanum/Projects/Shaikh Tonak/Technical/archive/deprecated_databases/Database_Leontief_original/data/raw/bea-nipa/flatFiles")
+        self.nipa_path = Path("../../../Shaikh Tonak/Technical/archive/deprecated_databases/Database_Leontief_original/data/raw/bea-nipa/flatFiles")
 
         # Load NIPA data
         self.load_nipa_data()
@@ -344,7 +344,7 @@ class NSWCalculatorMarxianTaxes:
     def save_results(self, df: pd.DataFrame):
         """Save results to files"""
 
-        output_path = Path("D:/Arcanum/Projects/Shaikh Tonak/Output/Data/Results")
+        output_path = Path("../../../Shaikh Tonak/Output/Data/Results")
         output_path.mkdir(parents=True, exist_ok=True)
 
         # Save CSV

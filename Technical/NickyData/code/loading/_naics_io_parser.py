@@ -18,7 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 import numpy as np
 import pandas as pd
 
-NAICS_DIR = Path("D:/Arcanum/Projects/ST2/Inputs/IO_Matrices/NAICS")
+NAICS_DIR = Path(__file__).resolve().parents[3] / "Inputs" / "IO_Matrices/NAICS")
 BENCHMARK_YEARS = [1997, 2002, 2007, 2012, 2017]
 
 # Productive sector classification (Shaikh & Tonak criteria adapted to NAICS summary)
@@ -227,7 +227,7 @@ def load():
             91: "productive",   # Federal government enterprises
             96: "productive",   # State/local government enterprises
         }
-        fte_path = Path("D:/Arcanum/Projects/ST2/Inputs/API_Data/BEA/nipa_6_5D_fte_by_industry.csv")
+        fte_path = Path(__file__).resolve().parents[3] / "Inputs" / "API_Data/BEA/nipa_6_5D_fte_by_industry.csv")
         emp_prod_ratio = None
         if fte_path.exists():
             try:

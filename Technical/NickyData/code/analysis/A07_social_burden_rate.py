@@ -34,7 +34,7 @@ from utils.paths import SERIES_OUT, ANALYSIS_OUT, ensure_dirs
 
 H1_PATH = SERIES_OUT / "book_tableH1_1948_1989.csv"
 K_PATH = SERIES_OUT / "K_star_by_industry.csv"
-FA_PATH = Path("D:/Arcanum/Projects/ST2/Inputs/API_Data/BEA/fixed_assets_4_1_net_stock.csv")
+FA_PATH = Path(__file__).resolve().parents[3] / "Inputs" / "API_Data/BEA/fixed_assets_4_1_net_stock.csv")
 
 
 def _load_table_h1():
@@ -64,7 +64,7 @@ def _load_capital_stock():
 
 def _load_fred_tcu():
     """Load capacity utilization from FRED (cached or fetch)."""
-    tcu_path = Path("D:/Arcanum/Projects/ST2/Technical/NickyData/data/raw-data/api")
+    tcu_path = Path(__file__).resolve().parents[2] / "data/raw-data/api")
     import glob
     tcu_files = list(tcu_path.glob("fred_TCU_*.json"))
     if tcu_files:
@@ -100,9 +100,9 @@ def _load_fred_tcu():
 
 def _load_investment():
     """Load net private domestic investment from NIPA."""
-    nipa_path = Path("D:/Arcanum/Projects/ST2/Inputs/API_Data/BEA/nipa_2_1_personal_income.csv")
+    nipa_path = Path(__file__).resolve().parents[3] / "Inputs" / "API_Data/BEA/nipa_2_1_personal_income.csv")
     # Actually we need NIPA Table 1.1.5 for GDP components including investment
-    nipa_115 = Path("D:/Arcanum/Projects/ST2/Technical/NickyData/data/raw-data/parsed/moos_nipa_gdp.csv")
+    nipa_115 = Path(__file__).resolve().parents[2] / "data/raw-data/parsed/moos_nipa_gdp.csv")
     if nipa_115.exists():
         df = pd.read_csv(nipa_115, index_col="year")
         if "gross_private_domestic_investment" in df.columns:
@@ -129,7 +129,7 @@ def generate():
 
     # --- Extension period from pipeline ---
     t505_path = SERIES_OUT / "T505.csv"
-    nipa_comp_path = Path("D:/Arcanum/Projects/ST2/Inputs/API_Data/BEA/nipa_T20100_compensation_1929_2025.csv")
+    nipa_comp_path = Path(__file__).resolve().parents[3] / "Inputs" / "API_Data/BEA/nipa_T20100_compensation_1929_2025.csv")
     t201_path = SERIES_OUT / "T201.csv"
 
     s_star_ext = pd.Series(dtype=float)

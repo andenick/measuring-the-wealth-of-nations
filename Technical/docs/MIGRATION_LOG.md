@@ -3,8 +3,8 @@
 ## Migration from Shaikh Tonak Project
 
 - **Date**: 2026-03-21
-- **Source project**: D:/Arcanum/Projects/Shaikh Tonak/
-- **Target project**: D:/Arcanum/Projects/ST2/
+- **Source project**: ../Shaikh Tonak/
+- **Target project**: ./
 - **Method**: File copy (originals preserved in source project)
 
 ---

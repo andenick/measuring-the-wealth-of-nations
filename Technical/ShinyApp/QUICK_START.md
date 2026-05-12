@@ -19,7 +19,7 @@ Get the Shaikh-Tonak Shiny app running in 5 minutes.
 Navigate to the ShinyApp directory:
 
 ```r
-setwd("D:/Arcanum/Projects/AS2/Technical/ShinyApp")
+setwd("")
 ```
 
 ### Step 2: Run Setup Scripts
@@ -244,12 +244,12 @@ runApp()
 
 You're not in the correct directory. Navigate:
 ```r
-setwd("D:/Arcanum/Projects/AS2/Technical/ShinyApp")
+setwd("")
 ```
 
 Verify location:
 ```r
-getwd()  # Should show: "D:/Arcanum/Projects/AS2/Technical/ShinyApp"
+getwd()  # Should show: ""
 ```
 
 ### "Error: data/profit_rates_1948_1989.csv not found"

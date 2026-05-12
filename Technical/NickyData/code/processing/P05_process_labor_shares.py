@@ -157,7 +157,7 @@ def process():
             # Fallback: component approach (T504/W)
             if len(ext_series) == 0:
                 t504_path = SERIES_OUT / "T504.csv"
-                nipa_comp_path = Path("D:/Arcanum/Projects/ST2/Inputs/API_Data/BEA/nipa_T20100_compensation_1929_2025.csv")
+                nipa_comp_path = Path(__file__).resolve().parents[3] / "Inputs" / "API_Data/BEA/nipa_T20100_compensation_1929_2025.csv")
                 if t504_path.exists() and nipa_comp_path.exists():
                     t504 = pd.read_csv(t504_path, index_col=0)
                     v_star = t504["combined"].dropna() if "combined" in t504.columns else pd.Series(dtype=float)

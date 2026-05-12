@@ -15,7 +15,7 @@ import numpy as np
 from utils.paths import SERIES_OUT
 
 VALIDATOR_NAME = "V13_robin_crossvalidation"
-ROBIN_PATH = Path("D:/Arcanum/Council/Robin/DATA/SHAIKH_TONAK/OUTPUT_DATA/Data/[2025.09.28] 01_HISTORICAL_REPLICATION_1958-1989.csv")
+ROBIN_PATH = Path(os.environ.get("ROBIN_DATA_DIR", str(Path(__file__).resolve().parents[4] / ".." / "Council" / "Robin"))) / "DATA" / "SHAIKH_TONAK" / "OUTPUT_DATA" / "Data" / "[2025.09.28] 01_HISTORICAL_REPLICATION_1958-1989.csv"
 
 
 def validate(series_filter=None, chapter_filter=None):

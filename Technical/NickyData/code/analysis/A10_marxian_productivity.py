@@ -79,7 +79,7 @@ def generate():
         t511 = df["combined"] if "combined" in df.columns else df.iloc[:, 0]
 
     # Load PAYEMS (total nonfarm employment, thousands)
-    payems_path = Path("D:/Arcanum/Projects/ST2/Technical/NickyData/data/raw-data/parsed/total_nonfarm_employment.csv")
+    payems_path = Path(__file__).resolve().parents[2] / "data/raw-data/parsed/total_nonfarm_employment.csv")
     payems = None
     if payems_path.exists():
         pf = pd.read_csv(payems_path, index_col="year")
@@ -89,7 +89,7 @@ def generate():
     AVG_HOURS_PER_WORKER = 2000
 
     # GDP deflator from FRED GDPDEF (rebased to 1982=100, matching book's py)
-    defl_path = Path("D:/Arcanum/Projects/ST2/Technical/NickyData/data/raw-data/parsed/gdp_deflator.csv")
+    defl_path = Path(__file__).resolve().parents[2] / "data/raw-data/parsed/gdp_deflator.csv")
     deflator = None
     if defl_path.exists():
         defl_df = pd.read_csv(defl_path, index_col="year")

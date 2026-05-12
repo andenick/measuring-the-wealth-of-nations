@@ -2,7 +2,7 @@
 
 **Version**: 6.0
 **Last Updated**: 2026-04-08
-**Canonical Source**: `D:/Arcanum/Council/Druck/.claude/skills/`
+**Canonical Source**: `
 
 ---
 

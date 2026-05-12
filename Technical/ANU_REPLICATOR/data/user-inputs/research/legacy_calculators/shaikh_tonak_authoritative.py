@@ -62,7 +62,7 @@ import json
 from datetime import datetime
 
 # Base paths
-PROJECT_DIR = Path("D:/Arcanum/Projects/Shaikh Tonak")
+PROJECT_DIR = Path(__file__).resolve().parents[5] / "Shaikh Tonak"
 DATA_DIR = PROJECT_DIR / "Technical" / "data"
 KB_DIR = PROJECT_DIR / "Knowledge_Base" / "HDARP_Extractions" / "1994_Measuring_Wealth"
 OUTPUT_DIR = DATA_DIR / "authoritative_shaikh_tonak"

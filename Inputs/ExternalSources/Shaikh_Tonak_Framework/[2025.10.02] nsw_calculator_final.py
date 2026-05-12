@@ -16,7 +16,7 @@ class FinalNSWCalculator:
     """
 
     def __init__(self):
-        self.data_path = Path("D:/Arcanum/Projects/Shaikh Tonak/Technical/archive/deprecated_databases/Database_Leontief_original/data/raw/bea-nipa/flatFiles")
+        self.data_path = Path("../../../Shaikh Tonak/Technical/archive/deprecated_databases/Database_Leontief_original/data/raw/bea-nipa/flatFiles")
 
         # Load NIPA data
         self.load_nipa_data()
@@ -275,7 +275,7 @@ class FinalNSWCalculator:
 
     def save_results(self, df):
         """Save results to Excel and CSV"""
-        output_path = Path("D:/Arcanum/Projects/Shaikh Tonak/Output/Data")
+        output_path = Path("../../../Shaikh Tonak/Output/Data")
         output_path.mkdir(parents=True, exist_ok=True)
 
         # Save detailed Excel with multiple sheets

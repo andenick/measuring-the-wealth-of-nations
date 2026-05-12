@@ -23,7 +23,7 @@ except ImportError:
 
 from utils.paths import SERIES_OUT, STUDIES_OUT
 
-OUTPUT_DIR = Path("D:/Arcanum/Projects/ST2/Outputs/Figures")
+OUTPUT_DIR = Path(__file__).resolve().parents[3] / "Outputs" / "Figures")
 
 COLORS = ["#3c8dbc", "#e74c3c", "#2ecc71", "#f39c12", "#9b59b6", "#1abc9c"]
 SPLICE_COLOR = "#a0a0a0"

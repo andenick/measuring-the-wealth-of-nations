@@ -192,8 +192,8 @@ def process():
         print(f"    [P14] {year}: labor values computed ({len(labor_values)} sectors)")
 
     # NAICS era (1997-2017): use NAICS IO matrices from L11b
-    naics_dir = Path("D:/Arcanum/Projects/ST2/Inputs/IO_Matrices/NAICS")
-    fte_path = Path("D:/Arcanum/Projects/ST2/Inputs/API_Data/BEA/nipa_6_5D_fte_by_industry.csv")
+    naics_dir = Path(__file__).resolve().parents[3] / "Inputs" / "IO_Matrices/NAICS")
+    fte_path = Path(__file__).resolve().parents[3] / "Inputs" / "API_Data/BEA/nipa_6_5D_fte_by_industry.csv")
     naics_cls_path = Path(__file__).resolve().parent.parent.parent / "classifications.json"
 
     if naics_dir.exists() and naics_cls_path.exists():

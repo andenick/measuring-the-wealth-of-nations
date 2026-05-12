@@ -3,7 +3,7 @@
 AS2 stores Data Provenance Records (DPRs), Extension Provenance Records (EPRs),
 Figure Provenance Records (FPRs), and Decomposition documents at:
 
-**Actual location**: `D:/Arcanum/Projects/ST2/Technical/docs/series/`
+**Actual location**: `./Technical/docs/series/`
 
 Contents:
 - `T###_DPR.md` — Data Provenance Record (26 files)

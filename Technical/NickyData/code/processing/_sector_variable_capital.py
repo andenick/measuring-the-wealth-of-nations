@@ -22,8 +22,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 import pandas as pd
 from utils.paths import SERIES_OUT, ensure_dirs
 
-NIPA62_PATH = Path("D:/Arcanum/Projects/ST2/Inputs/API_Data/BEA/nipa_6_2D_compensation_by_industry.csv")
-NIPA65_PATH = Path("D:/Arcanum/Projects/ST2/Inputs/API_Data/BEA/nipa_6_5D_fte_by_industry.csv")
+NIPA62_PATH = Path(__file__).resolve().parents[3] / "Inputs" / "API_Data/BEA/nipa_6_2D_compensation_by_industry.csv")
+NIPA65_PATH = Path(__file__).resolve().parents[3] / "Inputs" / "API_Data/BEA/nipa_6_5D_fte_by_industry.csv")
 
 PRODUCTIVE_LINES = {
     4: "Agriculture",
@@ -84,7 +84,7 @@ def compute_sector_v_star() -> pd.Series:
         return None
 
     # Load BLS CES production worker ratios by sector for accurate V* computation
-    bls_path = Path("D:/Arcanum/Projects/ST2/Inputs/API_Data/BLS/bls_ces_production_workers.csv")
+    bls_path = Path(__file__).resolve().parents[3] / "Inputs" / "API_Data/BLS/bls_ces_production_workers.csv")
     bls_ratios = {}
     if bls_path.exists():
         bls = pd.read_csv(bls_path, index_col="year")

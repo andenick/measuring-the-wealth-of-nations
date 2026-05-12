@@ -35,7 +35,7 @@ STUDY_SERIES = [
 ]
 MASTER_SERIES = BOOK_SERIES + STUDY_SERIES
 
-OUTPUT_DIR = Path("D:/Arcanum/Projects/ST2/Outputs/Data/COMPLETE_DATABASE")
+OUTPUT_DIR = Path(__file__).resolve().parents[3] / "Outputs" / "Data/COMPLETE_DATABASE")
 
 
 def generate():

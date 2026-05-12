@@ -6,7 +6,7 @@ import time
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
-OUT_DIR = Path("D:/Arcanum/Projects/ST2/Inputs/ExternalSources/Turkey2022/muhasebat")
+OUT_DIR = Path(__file__).resolve().parent / "data" / "raw-data" / "turkey_muhasebat"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 PAGES = [

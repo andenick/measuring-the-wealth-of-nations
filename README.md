@@ -176,7 +176,7 @@ Every series is verified against the book's published values. The 15 validators 
 
 ## Data Format
 
-Series data is stored in the [Anu Data Architecture](https://github.com/andenick/anu-suite) format:
+Series data is stored in the [Anu Data Framework](https://github.com/andenick/anu-data-framework) format:
 
 - **CSV files** with structured metadata headers (Row 1: descriptions, Row 2: column IDs, Row 3+: data)
 - **Excel workbooks** with 4 sheets per series: Data, Provenance, Research, Construction

@@ -77,7 +77,7 @@ def _load_io_c_star_m():
     """
     import json
 
-    naics_dir = Path("D:/Arcanum/Projects/ST2/Inputs/IO_Matrices/NAICS")
+    naics_dir = Path(__file__).resolve().parents[3] / "Inputs" / "IO_Matrices/NAICS")
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "loading"))
     from _naics_io_parser import CLASSIFICATION
 

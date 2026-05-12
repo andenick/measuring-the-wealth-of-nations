@@ -2,7 +2,7 @@
 
 **Date**: 2026-05-07
 **Author**: Claude Opus 4.6 (Session 21)
-**Source**: 40-chunk HDARP extraction of Shaikh & Tonak (1994), located at `D:/Arcanum/Projects/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/`
+**Source**: 40-chunk HDARP extraction of Shaikh & Tonak (1994), located at `../Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/`
 **Chunks read**: 10, 11, 17, 22, 35, 36, 37, 38, 39, 40 (10 of 40 — covering Appendices G–N, Chapter 4 IO methodology, Section 5.10 price-value deviations, and Chapter 6 labor value studies)
 
 ---
