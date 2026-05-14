@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T21:18:29Z",
+  "generated_at": "2026-05-14T21:24:34Z",
   "registry_version": "1.0.0",
   "series_count": 62,
   "coverage_counts": {
@@ -8,8 +8,8 @@
     "loader": 11,
     "processor": 13,
     "validator": 13,
-    "chopped": 0,
-    "extenbook": 0
+    "chopped": 13,
+    "extenbook": 13
   },
   "coverage_pct": {
     "research": 93.5,
@@ -17,8 +17,8 @@
     "loader": 17.7,
     "processor": 21.0,
     "validator": 21.0,
-    "chopped": 0.0,
-    "extenbook": 0.0
+    "chopped": 21.0,
+    "extenbook": 21.0
   },
   "artifacts": {
     "S501": {
@@ -27,8 +27,8 @@
       "loader": true,
       "processor": true,
       "validator": true,
-      "chopped": false,
-      "extenbook": false
+      "chopped": true,
+      "extenbook": true
     },
     "S502": {
       "research": true,
@@ -36,8 +36,8 @@
       "loader": true,
       "processor": true,
       "validator": true,
-      "chopped": false,
-      "extenbook": false
+      "chopped": true,
+      "extenbook": true
     },
     "S503": {
       "research": true,
@@ -45,8 +45,8 @@
       "loader": true,
       "processor": true,
       "validator": true,
-      "chopped": false,
-      "extenbook": false
+      "chopped": true,
+      "extenbook": true
     },
     "S504": {
       "research": true,
@@ -54,8 +54,8 @@
       "loader": true,
       "processor": true,
       "validator": true,
-      "chopped": false,
-      "extenbook": false
+      "chopped": true,
+      "extenbook": true
     },
     "S505": {
       "research": true,
@@ -63,8 +63,8 @@
       "loader": true,
       "processor": true,
       "validator": true,
-      "chopped": false,
-      "extenbook": false
+      "chopped": true,
+      "extenbook": true
     },
     "S506": {
       "research": true,
@@ -72,8 +72,8 @@
       "loader": true,
       "processor": true,
       "validator": true,
-      "chopped": false,
-      "extenbook": false
+      "chopped": true,
+      "extenbook": true
     },
     "S507": {
       "research": true,
@@ -81,8 +81,8 @@
       "loader": false,
       "processor": true,
       "validator": true,
-      "chopped": false,
-      "extenbook": false
+      "chopped": true,
+      "extenbook": true
     },
     "S508": {
       "research": true,
@@ -90,8 +90,8 @@
       "loader": true,
       "processor": true,
       "validator": true,
-      "chopped": false,
-      "extenbook": false
+      "chopped": true,
+      "extenbook": true
     },
     "S509": {
       "research": true,
@@ -99,8 +99,8 @@
       "loader": true,
       "processor": true,
       "validator": true,
-      "chopped": false,
-      "extenbook": false
+      "chopped": true,
+      "extenbook": true
     },
     "S510": {
       "research": true,
@@ -117,8 +117,8 @@
       "loader": true,
       "processor": true,
       "validator": true,
-      "chopped": false,
-      "extenbook": false
+      "chopped": true,
+      "extenbook": true
     },
     "S512": {
       "research": true,
@@ -126,8 +126,8 @@
       "loader": true,
       "processor": true,
       "validator": true,
-      "chopped": false,
-      "extenbook": false
+      "chopped": true,
+      "extenbook": true
     },
     "S513": {
       "research": true,
@@ -153,8 +153,8 @@
       "loader": true,
       "processor": true,
       "validator": true,
-      "chopped": false,
-      "extenbook": false
+      "chopped": true,
+      "extenbook": true
     },
     "S516": {
       "research": true,
@@ -162,8 +162,8 @@
       "loader": false,
       "processor": true,
       "validator": true,
-      "chopped": false,
-      "extenbook": false
+      "chopped": true,
+      "extenbook": true
     },
     "S601": {
       "research": true,

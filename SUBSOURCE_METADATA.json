@@ -1,0 +1,1546 @@
+{
+  "generated_at": "2026-05-14T21:23:22Z",
+  "registry_version": "1.0.0",
+  "entries": {
+    "S501-A": {
+      "series_id": "S501",
+      "subseries_id": "S501-A",
+      "name": "Book Table E.2",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S501-B": {
+      "series_id": "S501",
+      "subseries_id": "S501-B",
+      "name": "BEA GDP-by-Industry",
+      "source": "BEA GDPbyIndustry",
+      "period": [
+        1997,
+        2024
+      ],
+      "units": "billions_dollars",
+      "color": "#ff7f0e",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S501-COMBINED": {
+      "series_id": "S501",
+      "subseries_id": "S501-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "billions_dollars",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S502-A": {
+      "series_id": "S502",
+      "subseries_id": "S502-A",
+      "name": "Book Table E.2",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S502-COMBINED": {
+      "series_id": "S502",
+      "subseries_id": "S502-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S503-A": {
+      "series_id": "S503",
+      "subseries_id": "S503-A",
+      "name": "Book Table E.2",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S503-COMBINED": {
+      "series_id": "S503",
+      "subseries_id": "S503-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S504-A": {
+      "series_id": "S504",
+      "subseries_id": "S504-A",
+      "name": "Book Table 5.5",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S504-EXT": {
+      "series_id": "S504",
+      "subseries_id": "S504-EXT",
+      "name": "Extended via V* = W \u00c3\u2014 (V*/W)",
+      "source": "BEA NIPA + BLS CES",
+      "period": [
+        1990,
+        2024
+      ],
+      "units": "billions_dollars",
+      "color": "#ff7f0e",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S504-COMBINED": {
+      "series_id": "S504",
+      "subseries_id": "S504-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "billions_dollars",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S505-A": {
+      "series_id": "S505",
+      "subseries_id": "S505-A",
+      "name": "Book Table 5.5",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S505-EXT": {
+      "series_id": "S505",
+      "subseries_id": "S505-EXT",
+      "name": "Extended via GFP - V*",
+      "source": "derived",
+      "period": [
+        1990,
+        2024
+      ],
+      "units": "billions_dollars",
+      "color": "#ff7f0e",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S505-COMBINED": {
+      "series_id": "S505",
+      "subseries_id": "S505-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "billions_dollars",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S506-A": {
+      "series_id": "S506",
+      "subseries_id": "S506-A",
+      "name": "Book Table 5.7",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "ratio",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S506-EXT": {
+      "series_id": "S506",
+      "subseries_id": "S506-EXT",
+      "name": "Extended via VA*/W decomposition",
+      "source": "BLS CES + BEA NIPA",
+      "period": [
+        1990,
+        2024
+      ],
+      "units": "ratio",
+      "color": "#ff7f0e",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S506-COMBINED": {
+      "series_id": "S506",
+      "subseries_id": "S506-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "ratio",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S507-A": {
+      "series_id": "S507",
+      "subseries_id": "S507-A",
+      "name": "Book Table 5.7",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "ratio",
+      "color": "#2ca02c",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S508-A": {
+      "series_id": "S508",
+      "subseries_id": "S508-A",
+      "name": "Book Table E.2",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S509-A": {
+      "series_id": "S509",
+      "subseries_id": "S509-A",
+      "name": "Book Table E.2",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S510-A": {
+      "series_id": "S510",
+      "subseries_id": "S510-A",
+      "name": "Book Table 5.7",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "ratio",
+      "color": "#2ca02c",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S511-A": {
+      "series_id": "S511",
+      "subseries_id": "S511-A",
+      "name": "Book Table 5.7",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "share",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S511-EXT": {
+      "series_id": "S511",
+      "subseries_id": "S511-EXT",
+      "name": "Extended via BLS CES",
+      "source": "BLS CES",
+      "period": [
+        1990,
+        2024
+      ],
+      "units": "share",
+      "color": "#ff7f0e",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S511-COMBINED": {
+      "series_id": "S511",
+      "subseries_id": "S511-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "share",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S512-A": {
+      "series_id": "S512",
+      "subseries_id": "S512-A",
+      "name": "Book Table 5.7",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "share",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S512-EXT": {
+      "series_id": "S512",
+      "subseries_id": "S512-EXT",
+      "name": "Extended via BLS CES",
+      "source": "BLS CES",
+      "period": [
+        1990,
+        2024
+      ],
+      "units": "share",
+      "color": "#ff7f0e",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S512-COMBINED": {
+      "series_id": "S512",
+      "subseries_id": "S512-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "share",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S513-A": {
+      "series_id": "S513",
+      "subseries_id": "S513-A",
+      "name": "Book Table 5.11",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "rate",
+      "color": "#2ca02c",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S513-EXT": {
+      "series_id": "S513",
+      "subseries_id": "S513-EXT",
+      "name": "Extended via BEA Fixed Assets",
+      "source": "BEA FixedAssets",
+      "period": [
+        1990,
+        2024
+      ],
+      "units": "rate",
+      "color": "#98df8a",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S513-COMBINED": {
+      "series_id": "S513",
+      "subseries_id": "S513-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "rate",
+      "color": "#2ca02c",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S514-A": {
+      "series_id": "S514",
+      "subseries_id": "S514-A",
+      "name": "Book Table 5.11",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "rate",
+      "color": "#2ca02c",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S514-EXT": {
+      "series_id": "S514",
+      "subseries_id": "S514-EXT",
+      "name": "Extended via FRED TCU",
+      "source": "FRED TCU",
+      "period": [
+        1990,
+        2024
+      ],
+      "units": "rate",
+      "color": "#98df8a",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S514-COMBINED": {
+      "series_id": "S514",
+      "subseries_id": "S514-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "rate",
+      "color": "#2ca02c",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S515-A": {
+      "series_id": "S515",
+      "subseries_id": "S515-A",
+      "name": "Book Table E.3",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "thousands",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S515-EXT": {
+      "series_id": "S515",
+      "subseries_id": "S515-EXT",
+      "name": "Extended via BLS",
+      "source": "BLS CES",
+      "period": [
+        1990,
+        2024
+      ],
+      "units": "thousands",
+      "color": "#ff7f0e",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S515-COMBINED": {
+      "series_id": "S515",
+      "subseries_id": "S515-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "thousands",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S516-A": {
+      "series_id": "S516",
+      "subseries_id": "S516-A",
+      "name": "Book Table E.3",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "thousands",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S516-EXT": {
+      "series_id": "S516",
+      "subseries_id": "S516-EXT",
+      "name": "Extended (derived L - Lp)",
+      "source": "derived",
+      "period": [
+        1990,
+        2024
+      ],
+      "units": "thousands",
+      "color": "#ff7f0e",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S516-COMBINED": {
+      "series_id": "S516",
+      "subseries_id": "S516-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1948,
+        2024
+      ],
+      "units": "thousands",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S601-A": {
+      "series_id": "S601",
+      "subseries_id": "S601-A",
+      "name": "Book Table 6.1",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#1f77b4",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S602-A": {
+      "series_id": "S602",
+      "subseries_id": "S602-A",
+      "name": "Book Table 6.1",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#1f77b4",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S603-A": {
+      "series_id": "S603",
+      "subseries_id": "S603-A",
+      "name": "Book Table 6.1",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#1f77b4",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S604-A": {
+      "series_id": "S604",
+      "subseries_id": "S604-A",
+      "name": "Book Table 6.1",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#1f77b4",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S604-COMBINED": {
+      "series_id": "S604",
+      "subseries_id": "S604-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#1f77b4",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S605-A": {
+      "series_id": "S605",
+      "subseries_id": "S605-A",
+      "name": "Book Table 6.2",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#1f77b4",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S606-A": {
+      "series_id": "S606",
+      "subseries_id": "S606-A",
+      "name": "Book Table 6.2",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#1f77b4",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S607-A": {
+      "series_id": "S607",
+      "subseries_id": "S607-A",
+      "name": "Book Table 6.3",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#1f77b4",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S607-EXT": {
+      "series_id": "S607",
+      "subseries_id": "S607-EXT",
+      "name": "Extended via BEA NIPA",
+      "source": "BEA NIPA",
+      "period": [
+        1990,
+        2025
+      ],
+      "units": "billions_dollars",
+      "color": "#aec7e8",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S607-COMBINED": {
+      "series_id": "S607",
+      "subseries_id": "S607-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1952,
+        2025
+      ],
+      "units": "billions_dollars",
+      "color": "#1f77b4",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S608-A": {
+      "series_id": "S608",
+      "subseries_id": "S608-A",
+      "name": "Book Table 6.4",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "ratio",
+      "color": "#2ca02c",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S608-COMBINED": {
+      "series_id": "S608",
+      "subseries_id": "S608-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "ratio",
+      "color": "#2ca02c",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S609-A": {
+      "series_id": "S609",
+      "subseries_id": "S609-A",
+      "name": "Book Table 6.4",
+      "source": "S&T 1994",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "share",
+      "color": "#2ca02c",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S609-COMBINED": {
+      "series_id": "S609",
+      "subseries_id": "S609-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1952,
+        1989
+      ],
+      "units": "share",
+      "color": "#2ca02c",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S901-A": {
+      "series_id": "S901",
+      "subseries_id": "S901-A",
+      "name": "Book Table 9.1",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "mixed",
+      "color": "#d62728",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S401-A": {
+      "series_id": "S401",
+      "subseries_id": "S401-A",
+      "name": "Book Table 4.1 (IO matrices)",
+      "source": "S&T 1994",
+      "period": [
+        1947,
+        1977
+      ],
+      "units": "matrix",
+      "color": "#9467bd",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S402-A": {
+      "series_id": "S402",
+      "subseries_id": "S402-A",
+      "name": "Derived Leontief Inverse B = (I-A)^-1",
+      "source": "derived from S401",
+      "period": [
+        1947,
+        1977
+      ],
+      "units": "matrix",
+      "color": "#9467bd",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S701-A": {
+      "series_id": "S701",
+      "subseries_id": "S701-A",
+      "name": "Book Table 7.1",
+      "source": "S&T 1994",
+      "period": [
+        1947,
+        1977
+      ],
+      "units": "labor_hours_per_dollar",
+      "color": "#8c564b",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S702-A": {
+      "series_id": "S702",
+      "subseries_id": "S702-A",
+      "name": "Book Table 7.2",
+      "source": "S&T 1994",
+      "period": [
+        1947,
+        1977
+      ],
+      "units": "index",
+      "color": "#8c564b",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S703-A": {
+      "series_id": "S703",
+      "subseries_id": "S703-A",
+      "name": "Book Table 7.3",
+      "source": "S&T 1994",
+      "period": [
+        1947,
+        1977
+      ],
+      "units": "percent",
+      "color": "#8c564b",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S201-A": {
+      "series_id": "S201",
+      "subseries_id": "S201-A",
+      "name": "Book Table 2.1",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "billions_dollars",
+      "color": "#7f7f7f",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S801-A": {
+      "series_id": "S801",
+      "subseries_id": "S801-A",
+      "name": "Book Table 8.1",
+      "source": "S&T 1994",
+      "period": [
+        1948,
+        1989
+      ],
+      "units": "mixed",
+      "color": "#7f7f7f",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1001-A": {
+      "series_id": "ES1001",
+      "subseries_id": "ES1001-A",
+      "name": "Tonak (1984) Table V",
+      "source": "Tonak 1984 PhD Dissertation",
+      "period": [
+        1952,
+        1980
+      ],
+      "units": "share",
+      "color": "#e377c2",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1001-COMBINED": {
+      "series_id": "ES1001",
+      "subseries_id": "ES1001-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1952,
+        1980
+      ],
+      "units": "share",
+      "color": "#e377c2",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1002-A": {
+      "series_id": "ES1002",
+      "subseries_id": "ES1002-A",
+      "name": "Tonak (1984) Table X",
+      "source": "Tonak 1984 PhD Dissertation",
+      "period": [
+        1952,
+        1980
+      ],
+      "units": "rate",
+      "color": "#e377c2",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1002-COMBINED": {
+      "series_id": "ES1002",
+      "subseries_id": "ES1002-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1952,
+        1980
+      ],
+      "units": "rate",
+      "color": "#e377c2",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1101-A": {
+      "series_id": "ES1101",
+      "subseries_id": "ES1101-A",
+      "name": "Derived from S604/S605/BEA NIPA",
+      "source": "Shaikh & Tonak 1987",
+      "period": [
+        1952,
+        1985
+      ],
+      "units": "rate",
+      "color": "#7f7f7f",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1101-COMBINED": {
+      "series_id": "ES1101",
+      "subseries_id": "ES1101-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1952,
+        1985
+      ],
+      "units": "rate",
+      "color": "#7f7f7f",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1102-A": {
+      "series_id": "ES1102",
+      "subseries_id": "ES1102-A",
+      "name": "Derived from S605/BEA NIPA",
+      "source": "Shaikh & Tonak 1987",
+      "period": [
+        1952,
+        1985
+      ],
+      "units": "rate",
+      "color": "#7f7f7f",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1102-COMBINED": {
+      "series_id": "ES1102",
+      "subseries_id": "ES1102-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1952,
+        1985
+      ],
+      "units": "rate",
+      "color": "#7f7f7f",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1103-A": {
+      "series_id": "ES1103",
+      "subseries_id": "ES1103-A",
+      "name": "Derived from S604/BEA NIPA",
+      "source": "Shaikh & Tonak 1987",
+      "period": [
+        1952,
+        1985
+      ],
+      "units": "rate",
+      "color": "#7f7f7f",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1103-COMBINED": {
+      "series_id": "ES1103",
+      "subseries_id": "ES1103-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1952,
+        1985
+      ],
+      "units": "rate",
+      "color": "#7f7f7f",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1201-A": {
+      "series_id": "ES1201",
+      "subseries_id": "ES1201-A",
+      "name": "Derived from S607/BEA GDP",
+      "source": "Shaikh & Tonak 2002",
+      "period": [
+        1952,
+        1997
+      ],
+      "units": "ratio",
+      "color": "#bcbd22",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1201-COMBINED": {
+      "series_id": "ES1201",
+      "subseries_id": "ES1201-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1952,
+        1997
+      ],
+      "units": "ratio",
+      "color": "#bcbd22",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1202-A": {
+      "series_id": "ES1202",
+      "subseries_id": "ES1202-A",
+      "name": "Derived from S607/BEA NIPA compensation",
+      "source": "Shaikh & Tonak 2002",
+      "period": [
+        1952,
+        1997
+      ],
+      "units": "ratio",
+      "color": "#bcbd22",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1202-COMBINED": {
+      "series_id": "ES1202",
+      "subseries_id": "ES1202-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1952,
+        1997
+      ],
+      "units": "ratio",
+      "color": "#bcbd22",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1301-A": {
+      "series_id": "ES1301",
+      "subseries_id": "ES1301-A",
+      "name": "Derived from S607/BEA GDP",
+      "source": "Moos 2017",
+      "period": [
+        1959,
+        2012
+      ],
+      "units": "ratio",
+      "color": "#17becf",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1301-COMBINED": {
+      "series_id": "ES1301",
+      "subseries_id": "ES1301-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1959,
+        2012
+      ],
+      "units": "ratio",
+      "color": "#17becf",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1302-A": {
+      "series_id": "ES1302",
+      "subseries_id": "ES1302-A",
+      "name": "Derived from S607/BEA NIPA compensation",
+      "source": "Moos 2017",
+      "period": [
+        1959,
+        2012
+      ],
+      "units": "ratio",
+      "color": "#17becf",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1302-COMBINED": {
+      "series_id": "ES1302",
+      "subseries_id": "ES1302-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1959,
+        2012
+      ],
+      "units": "ratio",
+      "color": "#17becf",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1304-A": {
+      "series_id": "ES1304",
+      "subseries_id": "ES1304-A",
+      "name": "NSW/GDP for overlap period",
+      "source": "Moos 2017 vs AS2",
+      "period": [
+        1959,
+        1997
+      ],
+      "units": "ratio",
+      "color": "#17becf",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1304-COMBINED": {
+      "series_id": "ES1304",
+      "subseries_id": "ES1304-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1959,
+        1997
+      ],
+      "units": "ratio",
+      "color": "#17becf",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1305-A": {
+      "series_id": "ES1305",
+      "subseries_id": "ES1305-A",
+      "name": "NSW/GDP with post-2000 regime indicator",
+      "source": "Moos 2017",
+      "period": [
+        1959,
+        2012
+      ],
+      "units": "ratio",
+      "color": "#17becf",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1305-COMBINED": {
+      "series_id": "ES1305",
+      "subseries_id": "ES1305-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1959,
+        2012
+      ],
+      "units": "ratio",
+      "color": "#17becf",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1401-A": {
+      "series_id": "ES1401",
+      "subseries_id": "ES1401-A",
+      "name": "Mohun (2005) Table 2",
+      "source": "Mohun 2005 CJE",
+      "period": [
+        1964,
+        2001
+      ],
+      "units": "ratio",
+      "color": "#ff9896",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1401-COMBINED": {
+      "series_id": "ES1401",
+      "subseries_id": "ES1401-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1964,
+        2001
+      ],
+      "units": "ratio",
+      "color": "#ff9896",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1402-A": {
+      "series_id": "ES1402",
+      "subseries_id": "ES1402-A",
+      "name": "Mohun (2005) Table 2",
+      "source": "Mohun 2005 CJE",
+      "period": [
+        1964,
+        2001
+      ],
+      "units": "share",
+      "color": "#ff9896",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1402-COMBINED": {
+      "series_id": "ES1402",
+      "subseries_id": "ES1402-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1964,
+        2001
+      ],
+      "units": "share",
+      "color": "#ff9896",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1403-A": {
+      "series_id": "ES1403",
+      "subseries_id": "ES1403-A",
+      "name": "Mohun (2005) Table 2",
+      "source": "Mohun 2005 CJE",
+      "period": [
+        1964,
+        2001
+      ],
+      "units": "billions_dollars",
+      "color": "#ff9896",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1403-COMBINED": {
+      "series_id": "ES1403",
+      "subseries_id": "ES1403-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1964,
+        2001
+      ],
+      "units": "billions_dollars",
+      "color": "#ff9896",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1404-A": {
+      "series_id": "ES1404",
+      "subseries_id": "ES1404-A",
+      "name": "Derived S506/ES1401 ratio",
+      "source": "AS2 cross-validation",
+      "period": [
+        1964,
+        2001
+      ],
+      "units": "ratio",
+      "color": "#ff9896",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1404-COMBINED": {
+      "series_id": "ES1404",
+      "subseries_id": "ES1404-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1964,
+        2001
+      ],
+      "units": "ratio",
+      "color": "#ff9896",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1501-A": {
+      "series_id": "ES1501",
+      "subseries_id": "ES1501-A",
+      "name": "Mohun (2013) \u00e2\u20ac\u201d 81.3% of Lu",
+      "source": "Mohun 2013 RRPE",
+      "period": [
+        1964,
+        2010
+      ],
+      "units": "thousands",
+      "color": "#c5b0d5",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1501-COMBINED": {
+      "series_id": "ES1501",
+      "subseries_id": "ES1501-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1964,
+        2010
+      ],
+      "units": "thousands",
+      "color": "#c5b0d5",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1502-A": {
+      "series_id": "ES1502",
+      "subseries_id": "ES1502-A",
+      "name": "Mohun (2013) \u00e2\u20ac\u201d 18.7% of Lu",
+      "source": "Mohun 2013 RRPE",
+      "period": [
+        1964,
+        2010
+      ],
+      "units": "thousands",
+      "color": "#c5b0d5",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1502-COMBINED": {
+      "series_id": "ES1502",
+      "subseries_id": "ES1502-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1964,
+        2010
+      ],
+      "units": "thousands",
+      "color": "#c5b0d5",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1503-A": {
+      "series_id": "ES1503",
+      "subseries_id": "ES1503-A",
+      "name": "Mohun (2013) total Lu",
+      "source": "Mohun 2013 RRPE",
+      "period": [
+        1964,
+        2010
+      ],
+      "units": "thousands",
+      "color": "#c5b0d5",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1503-COMBINED": {
+      "series_id": "ES1503",
+      "subseries_id": "ES1503-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1964,
+        2010
+      ],
+      "units": "thousands",
+      "color": "#c5b0d5",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1504-A": {
+      "series_id": "ES1504",
+      "subseries_id": "ES1504-A",
+      "name": "Derived Lu/Lp from Mohun data",
+      "source": "Mohun 2013 RRPE",
+      "period": [
+        1964,
+        2010
+      ],
+      "units": "ratio",
+      "color": "#c5b0d5",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1504-COMBINED": {
+      "series_id": "ES1504",
+      "subseries_id": "ES1504-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1964,
+        2010
+      ],
+      "units": "ratio",
+      "color": "#c5b0d5",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1601-A": {
+      "series_id": "ES1601",
+      "subseries_id": "ES1601-A",
+      "name": "TurkStat Table 20.37 (DEC-014)",
+      "source": "Karabacak & Tonak 2022 RRPE",
+      "period": [
+        1980,
+        2019
+      ],
+      "units": "share",
+      "color": "#aec7e8",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1601-COMBINED": {
+      "series_id": "ES1601",
+      "subseries_id": "ES1601-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1980,
+        2019
+      ],
+      "units": "share",
+      "color": "#aec7e8",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1602-A": {
+      "series_id": "ES1602",
+      "subseries_id": "ES1602-A",
+      "name": "SBB/MoF fiscal data (DEC-014)",
+      "source": "Karabacak & Tonak 2022 RRPE",
+      "period": [
+        1980,
+        2019
+      ],
+      "units": "ratio",
+      "color": "#aec7e8",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1602-COMBINED": {
+      "series_id": "ES1602",
+      "subseries_id": "ES1602-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1980,
+        2019
+      ],
+      "units": "ratio",
+      "color": "#aec7e8",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1701-A": {
+      "series_id": "ES1701",
+      "subseries_id": "ES1701-A",
+      "name": "Cronin (2001) Table 2 s/TV",
+      "source": "Cronin 2001 RPE Table 2",
+      "period": [
+        1972,
+        1995
+      ],
+      "units": "share",
+      "color": "#98df8a",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1701-COMBINED": {
+      "series_id": "ES1701",
+      "subseries_id": "ES1701-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1972,
+        1995
+      ],
+      "units": "share",
+      "color": "#98df8a",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1702-A": {
+      "series_id": "ES1702",
+      "subseries_id": "ES1702-A",
+      "name": "Cronin (2001) Table 2 s/v",
+      "source": "Cronin 2001 RPE Table 2",
+      "period": [
+        1972,
+        1995
+      ],
+      "units": "ratio",
+      "color": "#98df8a",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1702-COMBINED": {
+      "series_id": "ES1702",
+      "subseries_id": "ES1702-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1972,
+        1995
+      ],
+      "units": "ratio",
+      "color": "#98df8a",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1703-A": {
+      "series_id": "ES1703",
+      "subseries_id": "ES1703-A",
+      "name": "Cronin (2001) Table 2 c/v",
+      "source": "Cronin 2001 RPE Table 2",
+      "period": [
+        1972,
+        1995
+      ],
+      "units": "ratio",
+      "color": "#98df8a",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1703-COMBINED": {
+      "series_id": "ES1703",
+      "subseries_id": "ES1703-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1972,
+        1995
+      ],
+      "units": "ratio",
+      "color": "#98df8a",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1704-A": {
+      "series_id": "ES1704",
+      "subseries_id": "ES1704-A",
+      "name": "Cronin (2001) Table 1 Total Value",
+      "source": "Cronin 2001 RPE Table 1",
+      "period": [
+        1972,
+        1995
+      ],
+      "units": "millions_nzd",
+      "color": "#98df8a",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "ES1704-COMBINED": {
+      "series_id": "ES1704",
+      "subseries_id": "ES1704-COMBINED",
+      "name": "Full series",
+      "source": "",
+      "period": [
+        1972,
+        1995
+      ],
+      "units": "millions_nzd",
+      "color": "#98df8a",
+      "is_component": false,
+      "kind": "subseries"
+    }
+  }
+}
