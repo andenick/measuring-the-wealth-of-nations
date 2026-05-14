@@ -1,0 +1,15 @@
+series_id,year,value,units,stage,provenance
+S515-A,1948,29937.0,thousands,book_period,TableE3_LaborStatistics.csv:Lp_total
+S515-A,1949,30013.0,thousands,book_period,TableE3_LaborStatistics.csv:Lp_total
+S515-A,1950,30280.0,thousands,book_period,TableE3_LaborStatistics.csv:Lp_total
+S515-A,1951,31365.0,thousands,book_period,TableE3_LaborStatistics.csv:Lp_total
+S515-A,1952,32566.0,thousands,book_period,TableE3_LaborStatistics.csv:Lp_total
+S515-A,1953,32856.0,thousands,book_period,TableE3_LaborStatistics.csv:Lp_total
+S515-A,1954,33445.0,thousands,book_period,TableE3_LaborStatistics.csv:Lp_total
+S515-A,1955,34125.0,thousands,book_period,TableE3_LaborStatistics.csv:Lp_total
+S515-A,1956,33247.0,thousands,book_period,TableE3_LaborStatistics.csv:Lp_total
+S515-A,1957,32727.0,thousands,book_period,TableE3_LaborStatistics.csv:Lp_total
+S515-A,1958,33896.0,thousands,book_period,TableE3_LaborStatistics.csv:Lp_total
+S515-A,1959,35462.0,thousands,book_period,TableE3_LaborStatistics.csv:Lp_total
+S515-A,1960,35657.0,thousands,book_period,TableE3_LaborStatistics.csv:Lp_total
+S515-A,1961,33615.0,thousands,book_period,TableE3_LaborStatistics.csv:Lp_total

@@ -1,136 +1,142 @@
 {
-  "generated_at": "2026-05-14T19:48:32Z",
+  "generated_at": "2026-05-14T21:18:30Z",
   "registry_version": "1.0.0",
   "series": {
     "S501": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S501_research.json",
+      "dpr": "docs/series/S501_DPR.md",
       "epr": null,
-      "loader": null,
-      "processor": null,
-      "validator": null,
+      "loader": "code/L01_loaders/L01_S501_total_product.py",
+      "processor": "code/P02_processors/P02_S501_total_product.py",
+      "validator": "code/V03_validators/V03_S501_total_product.py",
       "manual": null,
-      "intermediate": null,
-      "final": null,
+      "intermediate": "data/intermediate/S501.csv",
+      "final": "data/final/S501.csv",
       "chopped": null,
       "extenbook": null,
       "source_files": []
     },
     "S502": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S502_research.json",
+      "dpr": "docs/series/S502_DPR.md",
       "epr": null,
-      "loader": null,
-      "processor": null,
-      "validator": null,
+      "loader": "code/L01_loaders/L01_S502_constant_capital.py",
+      "processor": "code/P02_processors/P02_S502_constant_capital.py",
+      "validator": "code/V03_validators/V03_S502_constant_capital.py",
       "manual": null,
-      "intermediate": null,
-      "final": null,
+      "intermediate": "data/intermediate/S502.csv",
+      "final": "data/final/S502.csv",
       "chopped": null,
       "extenbook": null,
       "source_files": []
     },
     "S503": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S503_research.json",
+      "dpr": "docs/series/S503_DPR.md",
       "epr": null,
-      "loader": null,
-      "processor": null,
-      "validator": null,
+      "loader": "code/L01_loaders/L01_S503_gross_final_product.py",
+      "processor": "code/P02_processors/P02_S503_gross_final_product.py",
+      "validator": "code/V03_validators/V03_S503_gross_final_product.py",
       "manual": null,
-      "intermediate": null,
-      "final": null,
+      "intermediate": "data/intermediate/S503.csv",
+      "final": "data/final/S503.csv",
       "chopped": null,
       "extenbook": null,
       "source_files": []
     },
     "S504": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S504_research.json",
+      "dpr": "docs/series/S504_DPR.md",
       "epr": null,
-      "loader": null,
-      "processor": null,
-      "validator": null,
+      "loader": "code/L01_loaders/L01_S504_variable_capital.py",
+      "processor": "code/P02_processors/P02_S504_variable_capital.py",
+      "validator": "code/V03_validators/V03_S504_variable_capital.py",
       "manual": null,
-      "intermediate": null,
-      "final": null,
+      "intermediate": "data/intermediate/S504.csv",
+      "final": "data/final/S504.csv",
       "chopped": null,
       "extenbook": null,
-      "source_files": []
+      "source_files": [
+        "data/source/book_tables/book_tableH1_1948_1989.csv"
+      ]
     },
     "S505": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S505_research.json",
+      "dpr": "docs/series/S505_DPR.md",
       "epr": null,
-      "loader": null,
-      "processor": null,
-      "validator": null,
+      "loader": "code/L01_loaders/L01_S505_surplus_value.py",
+      "processor": "code/P02_processors/P02_S505_surplus_value.py",
+      "validator": "code/V03_validators/V03_S505_surplus_value.py",
       "manual": null,
-      "intermediate": null,
-      "final": null,
+      "intermediate": "data/intermediate/S505.csv",
+      "final": "data/final/S505.csv",
       "chopped": null,
       "extenbook": null,
-      "source_files": []
+      "source_files": [
+        "data/source/book_tables/book_tableH1_1948_1989.csv"
+      ]
     },
     "S506": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S506_research.json",
+      "dpr": "docs/series/S506_DPR.md",
       "epr": null,
-      "loader": null,
-      "processor": null,
-      "validator": null,
+      "loader": "code/L01_loaders/L01_S506_exploitation_rate.py",
+      "processor": "code/P02_processors/P02_S506_exploitation_rate.py",
+      "validator": "code/V03_validators/V03_S506_exploitation_rate.py",
       "manual": null,
-      "intermediate": null,
-      "final": null,
+      "intermediate": "data/intermediate/S506.csv",
+      "final": "data/final/S506.csv",
       "chopped": null,
       "extenbook": null,
-      "source_files": []
+      "source_files": [
+        "data/source/book_tables/book_tableH1_1948_1989.csv"
+      ]
     },
     "S507": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S507_research.json",
+      "dpr": "docs/series/S507_DPR.md",
       "epr": null,
       "loader": null,
-      "processor": null,
-      "validator": null,
+      "processor": "code/P02_processors/P02_S507_surplus_ratio.py",
+      "validator": "code/V03_validators/V03_S507_surplus_ratio.py",
       "manual": null,
-      "intermediate": null,
-      "final": null,
+      "intermediate": "data/intermediate/S507.csv",
+      "final": "data/final/S507.csv",
       "chopped": null,
       "extenbook": null,
       "source_files": []
     },
     "S508": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S508_research.json",
+      "dpr": "docs/series/S508_DPR.md",
       "epr": null,
-      "loader": null,
-      "processor": null,
-      "validator": null,
+      "loader": "code/L01_loaders/L01_S508_productive_consumption.py",
+      "processor": "code/P02_processors/P02_S508_productive_consumption.py",
+      "validator": "code/V03_validators/V03_S508_productive_consumption.py",
       "manual": null,
-      "intermediate": null,
-      "final": null,
+      "intermediate": "data/intermediate/S508.csv",
+      "final": "data/final/S508.csv",
       "chopped": null,
       "extenbook": null,
       "source_files": []
     },
     "S509": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S509_research.json",
+      "dpr": "docs/series/S509_DPR.md",
       "epr": null,
-      "loader": null,
-      "processor": null,
-      "validator": null,
+      "loader": "code/L01_loaders/L01_S509_productive_investment.py",
+      "processor": "code/P02_processors/P02_S509_productive_investment.py",
+      "validator": "code/V03_validators/V03_S509_productive_investment.py",
       "manual": null,
-      "intermediate": null,
-      "final": null,
+      "intermediate": "data/intermediate/S509.csv",
+      "final": "data/final/S509.csv",
       "chopped": null,
       "extenbook": null,
       "source_files": []
     },
     "S510": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S510_research.json",
+      "dpr": "docs/series/S510_DPR.md",
       "epr": null,
       "loader": null,
       "processor": null,
@@ -143,36 +149,36 @@
       "source_files": []
     },
     "S511": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S511_research.json",
+      "dpr": "docs/series/S511_DPR.md",
       "epr": null,
-      "loader": null,
-      "processor": null,
-      "validator": null,
+      "loader": "code/L01_loaders/L01_S511_productive_labor_share.py",
+      "processor": "code/P02_processors/P02_S511_productive_labor_share.py",
+      "validator": "code/V03_validators/V03_S511_productive_labor_share.py",
       "manual": null,
-      "intermediate": null,
-      "final": null,
+      "intermediate": "data/intermediate/S511.csv",
+      "final": "data/final/S511.csv",
       "chopped": null,
       "extenbook": null,
       "source_files": []
     },
     "S512": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S512_research.json",
+      "dpr": "docs/series/S512_DPR.md",
       "epr": null,
-      "loader": null,
-      "processor": null,
-      "validator": null,
+      "loader": "code/L01_loaders/L01_S512_productive_wage_share.py",
+      "processor": "code/P02_processors/P02_S512_productive_wage_share.py",
+      "validator": "code/V03_validators/V03_S512_productive_wage_share.py",
       "manual": null,
-      "intermediate": null,
-      "final": null,
+      "intermediate": "data/intermediate/S512.csv",
+      "final": "data/final/S512.csv",
       "chopped": null,
       "extenbook": null,
       "source_files": []
     },
     "S513": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S513_research.json",
+      "dpr": "docs/series/S513_DPR.md",
       "epr": null,
       "loader": null,
       "processor": null,
@@ -185,8 +191,8 @@
       "source_files": []
     },
     "S514": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S514_research.json",
+      "dpr": "docs/series/S514_DPR.md",
       "epr": null,
       "loader": null,
       "processor": null,
@@ -199,35 +205,35 @@
       "source_files": []
     },
     "S515": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S515_research.json",
+      "dpr": "docs/series/S515_DPR.md",
       "epr": null,
-      "loader": null,
-      "processor": null,
-      "validator": null,
+      "loader": "code/L01_loaders/L01_S515_productive_employment.py",
+      "processor": "code/P02_processors/P02_S515_productive_employment.py",
+      "validator": "code/V03_validators/V03_S515_productive_employment.py",
       "manual": null,
-      "intermediate": null,
-      "final": null,
+      "intermediate": "data/intermediate/S515.csv",
+      "final": "data/final/S515.csv",
       "chopped": null,
       "extenbook": null,
       "source_files": []
     },
     "S516": {
-      "research": null,
-      "dpr": null,
+      "research": "research/S516_research.json",
+      "dpr": "docs/series/S516_DPR.md",
       "epr": null,
       "loader": null,
-      "processor": null,
-      "validator": null,
+      "processor": "code/P02_processors/P02_S516_unproductive_employment.py",
+      "validator": "code/V03_validators/V03_S516_unproductive_employment.py",
       "manual": null,
-      "intermediate": null,
-      "final": null,
+      "intermediate": "data/intermediate/S516.csv",
+      "final": "data/final/S516.csv",
       "chopped": null,
       "extenbook": null,
       "source_files": []
     },
     "S601": {
-      "research": null,
+      "research": "research/S601_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -241,7 +247,7 @@
       "source_files": []
     },
     "S602": {
-      "research": null,
+      "research": "research/S602_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -255,7 +261,7 @@
       "source_files": []
     },
     "S603": {
-      "research": null,
+      "research": "research/S603_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -269,7 +275,7 @@
       "source_files": []
     },
     "S604": {
-      "research": null,
+      "research": "research/S604_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -283,7 +289,7 @@
       "source_files": []
     },
     "S605": {
-      "research": null,
+      "research": "research/S605_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -297,7 +303,7 @@
       "source_files": []
     },
     "S606": {
-      "research": null,
+      "research": "research/S606_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -311,7 +317,7 @@
       "source_files": []
     },
     "S607": {
-      "research": null,
+      "research": "research/S607_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -325,7 +331,7 @@
       "source_files": []
     },
     "S608": {
-      "research": null,
+      "research": "research/S608_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -339,7 +345,7 @@
       "source_files": []
     },
     "S609": {
-      "research": null,
+      "research": "research/S609_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -353,7 +359,7 @@
       "source_files": []
     },
     "S901": {
-      "research": null,
+      "research": "research/S901_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -367,7 +373,7 @@
       "source_files": []
     },
     "S401": {
-      "research": null,
+      "research": "research/S401_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -381,7 +387,7 @@
       "source_files": []
     },
     "S402": {
-      "research": null,
+      "research": "research/S402_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -395,7 +401,7 @@
       "source_files": []
     },
     "S701": {
-      "research": null,
+      "research": "research/S701_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -409,7 +415,7 @@
       "source_files": []
     },
     "S702": {
-      "research": null,
+      "research": "research/S702_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -423,7 +429,7 @@
       "source_files": []
     },
     "S703": {
-      "research": null,
+      "research": "research/S703_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -437,7 +443,7 @@
       "source_files": []
     },
     "S201": {
-      "research": null,
+      "research": "research/S201_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -451,7 +457,7 @@
       "source_files": []
     },
     "S801": {
-      "research": null,
+      "research": "research/S801_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -465,7 +471,7 @@
       "source_files": []
     },
     "ES1001": {
-      "research": null,
+      "research": "research/ES1001_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -479,7 +485,7 @@
       "source_files": []
     },
     "ES1002": {
-      "research": null,
+      "research": "research/ES1002_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -493,7 +499,7 @@
       "source_files": []
     },
     "ES1101": {
-      "research": null,
+      "research": "research/ES1101_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -507,7 +513,7 @@
       "source_files": []
     },
     "ES1102": {
-      "research": null,
+      "research": "research/ES1102_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -521,7 +527,7 @@
       "source_files": []
     },
     "ES1103": {
-      "research": null,
+      "research": "research/ES1103_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -535,7 +541,7 @@
       "source_files": []
     },
     "ES1201": {
-      "research": null,
+      "research": "research/ES1201_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -549,7 +555,7 @@
       "source_files": []
     },
     "ES1202": {
-      "research": null,
+      "research": "research/ES1202_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -563,7 +569,7 @@
       "source_files": []
     },
     "ES1301": {
-      "research": null,
+      "research": "research/ES1301_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -577,7 +583,7 @@
       "source_files": []
     },
     "ES1302": {
-      "research": null,
+      "research": "research/ES1302_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -591,7 +597,7 @@
       "source_files": []
     },
     "ES1304": {
-      "research": null,
+      "research": "research/ES1304_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -605,7 +611,7 @@
       "source_files": []
     },
     "ES1305": {
-      "research": null,
+      "research": "research/ES1305_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -619,7 +625,7 @@
       "source_files": []
     },
     "ES1401": {
-      "research": null,
+      "research": "research/ES1401_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -633,7 +639,7 @@
       "source_files": []
     },
     "ES1402": {
-      "research": null,
+      "research": "research/ES1402_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -647,7 +653,7 @@
       "source_files": []
     },
     "ES1403": {
-      "research": null,
+      "research": "research/ES1403_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -661,7 +667,7 @@
       "source_files": []
     },
     "ES1404": {
-      "research": null,
+      "research": "research/ES1404_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -675,7 +681,7 @@
       "source_files": []
     },
     "ES1501": {
-      "research": null,
+      "research": "research/ES1501_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -689,7 +695,7 @@
       "source_files": []
     },
     "ES1502": {
-      "research": null,
+      "research": "research/ES1502_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -703,7 +709,7 @@
       "source_files": []
     },
     "ES1503": {
-      "research": null,
+      "research": "research/ES1503_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -717,7 +723,7 @@
       "source_files": []
     },
     "ES1504": {
-      "research": null,
+      "research": "research/ES1504_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -731,7 +737,7 @@
       "source_files": []
     },
     "ES1601": {
-      "research": null,
+      "research": "research/ES1601_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -745,7 +751,7 @@
       "source_files": []
     },
     "ES1602": {
-      "research": null,
+      "research": "research/ES1602_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -759,7 +765,7 @@
       "source_files": []
     },
     "ES1701": {
-      "research": null,
+      "research": "research/ES1701_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -773,7 +779,7 @@
       "source_files": []
     },
     "ES1702": {
-      "research": null,
+      "research": "research/ES1702_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -787,7 +793,7 @@
       "source_files": []
     },
     "ES1703": {
-      "research": null,
+      "research": "research/ES1703_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,
@@ -801,7 +807,7 @@
       "source_files": []
     },
     "ES1704": {
-      "research": null,
+      "research": "research/ES1704_research.json",
       "dpr": null,
       "epr": null,
       "loader": null,

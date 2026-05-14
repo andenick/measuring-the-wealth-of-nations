@@ -1,0 +1,15 @@
+series_id,year,value,units,stage,provenance
+S509-A,1948,44.27,billions_usd,book_period,TableE2_RevenueAccounts_1948_1961.csv:IG_star
+S509-A,1949,33.55,billions_usd,book_period,TableE2_RevenueAccounts_1948_1961.csv:IG_star
+S509-A,1950,51.96,billions_usd,book_period,TableE2_RevenueAccounts_1948_1961.csv:IG_star
+S509-A,1951,56.94,billions_usd,book_period,TableE2_RevenueAccounts_1948_1961.csv:IG_star
+S509-A,1952,49.73,billions_usd,book_period,TableE2_RevenueAccounts_1948_1961.csv:IG_star
+S509-A,1953,50.96,billions_usd,book_period,TableE2_RevenueAccounts_1948_1961.csv:IG_star
+S509-A,1954,49.97,billions_usd,book_period,TableE2_RevenueAccounts_1948_1961.csv:IG_star
+S509-A,1955,65.31,billions_usd,book_period,TableE2_RevenueAccounts_1948_1961.csv:IG_star
+S509-A,1956,67.95,billions_usd,book_period,TableE2_RevenueAccounts_1948_1961.csv:IG_star
+S509-A,1957,66.06,billions_usd,book_period,TableE2_RevenueAccounts_1948_1961.csv:IG_star
+S509-A,1958,58.4,billions_usd,book_period,TableE2_RevenueAccounts_1948_1961.csv:IG_star
+S509-A,1959,74.79,billions_usd,book_period,TableE2_RevenueAccounts_1948_1961.csv:IG_star
+S509-A,1960,72.55,billions_usd,book_period,TableE2_RevenueAccounts_1948_1961.csv:IG_star
+S509-A,1961,71.27,billions_usd,book_period,TableE2_RevenueAccounts_1948_1961.csv:IG_star

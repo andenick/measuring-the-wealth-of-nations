@@ -140,7 +140,7 @@
       "loader": "L01",
       "processor": "P01",
       "wave": 1,
-      "status": "api_data_partial",
+      "status": "book_period_validated",
       "units": "billions_usd",
       "content_type": "time_series"
     },
@@ -201,7 +201,7 @@
       "loader": "L01",
       "processor": "P01",
       "wave": 1,
-      "status": "data_available",
+      "status": "book_period_validated",
       "units": "billions_usd",
       "content_type": "time_series"
     },
@@ -272,7 +272,7 @@
       "loader": "L01",
       "processor": "P01",
       "wave": 1,
-      "status": "data_available",
+      "status": "book_period_validated",
       "units": "billions_usd",
       "content_type": "time_series"
     },
@@ -376,7 +376,7 @@
       "loader": "L02",
       "processor": "P02",
       "wave": 1,
-      "status": "validated",
+      "status": "book_period_validated",
       "units": "billions_usd",
       "content_type": "time_series"
     },
@@ -480,7 +480,7 @@
       "loader": "L02",
       "processor": "P03",
       "wave": 1,
-      "status": "validated",
+      "status": "book_period_validated",
       "units": "billions_usd",
       "content_type": "time_series"
     },
@@ -586,7 +586,7 @@
       "loader": "L03",
       "processor": "P04",
       "wave": 1,
-      "status": "validated",
+      "status": "book_period_validated",
       "units": "ratio",
       "content_type": "time_series"
     },
@@ -635,7 +635,7 @@
       "loader": "L05",
       "processor": "P07",
       "wave": 1,
-      "status": "data_available",
+      "status": "book_period_validated",
       "units": "ratio",
       "content_type": "time_series"
     },
@@ -684,7 +684,7 @@
       "loader": "L01",
       "processor": "P01",
       "wave": 1,
-      "status": "data_available",
+      "status": "book_period_partial_1948_1961",
       "units": "billions_usd",
       "content_type": "time_series"
     },
@@ -733,7 +733,7 @@
       "loader": "L01",
       "processor": "P01",
       "wave": 1,
-      "status": "data_available",
+      "status": "book_period_partial_1948_1961",
       "units": "billions_usd",
       "content_type": "time_series"
     },
@@ -782,9 +782,10 @@
       "loader": "L05",
       "processor": "P07",
       "wave": 1,
-      "status": "data_available",
+      "status": "pending_capital_stock_data",
       "units": "ratio",
-      "content_type": "time_series"
+      "content_type": "time_series",
+      "data_dependency": "K* (constant capital stock) not yet sourced"
     },
     "S511": {
       "name": "Productive Labor Share (Lp/L)",
@@ -882,7 +883,7 @@
       "loader": "L03",
       "processor": "P05",
       "wave": 1,
-      "status": "validated",
+      "status": "book_period_validated",
       "units": "share",
       "content_type": "time_series"
     },
@@ -980,7 +981,7 @@
       "loader": "L03",
       "processor": "P05",
       "wave": 1,
-      "status": "validated",
+      "status": "book_period_validated",
       "units": "share",
       "content_type": "time_series"
     },
@@ -1083,9 +1084,10 @@
       "loader": "L06",
       "processor": "P08",
       "wave": 1,
-      "status": "api_data_available",
+      "status": "pending_capital_stock_data",
       "units": "rate",
-      "content_type": "time_series"
+      "content_type": "time_series",
+      "data_dependency": "K* (constant capital stock) not yet sourced"
     },
     "S514": {
       "name": "Capacity-Adjusted Profit Rate (r*_adj = r*Ã—TCU)",
@@ -1184,9 +1186,10 @@
       "loader": "L06",
       "processor": "P08",
       "wave": 1,
-      "status": "api_data_available",
+      "status": "pending_capital_stock_data",
       "units": "rate",
-      "content_type": "time_series"
+      "content_type": "time_series",
+      "data_dependency": "K* (constant capital stock) not yet sourced"
     },
     "S515": {
       "name": "Productive Employment (Lp)",
@@ -1280,7 +1283,7 @@
       "loader": "L04",
       "processor": "P06",
       "wave": 1,
-      "status": "data_available",
+      "status": "book_period_partial_1948_1961",
       "units": "thousands",
       "content_type": "time_series"
     },
@@ -1381,7 +1384,7 @@
       "loader": "L04",
       "processor": "P06",
       "wave": 1,
-      "status": "data_available",
+      "status": "book_period_partial_1948_1961",
       "units": "thousands",
       "content_type": "time_series"
     },

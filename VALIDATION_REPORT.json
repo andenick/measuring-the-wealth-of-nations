@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-14T21:09:45Z",
+  "generated_at": "2026-05-14T21:18:29Z",
   "registry_version": "1.0.0",
   "series_count": 62,
   "by_status": {
-    "PASS": 9,
-    "not_run": 53
+    "PASS": 13,
+    "not_run": 49
   },
   "results": {
     "S501": {
@@ -301,10 +301,43 @@
       }
     },
     "S508": {
-      "status": "not_run"
+      "series_id": "S508",
+      "run_at": "2026-05-14T21:15:34Z",
+      "tolerance_class": "dollar_series",
+      "rel_tol": 0.01,
+      "abs_tol": 1.0,
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1948,
+            "expected": 158.46,
+            "actual": 158.46,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "S509": {
-      "status": "not_run"
+      "series_id": "S509",
+      "run_at": "2026-05-14T21:15:54Z",
+      "tolerance_class": "dollar_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "range_check": {
+        "year": 1948,
+        "value": 44.27,
+        "expected": 44.27,
+        "abs_err": 0.0,
+        "note": "No published benchmark in validation_config; round-trip check against E.2 row value."
+      }
     },
     "S510": {
       "status": "not_run"
@@ -426,10 +459,66 @@
       "status": "not_run"
     },
     "S515": {
-      "status": "not_run"
+      "series_id": "S515",
+      "run_at": "2026-05-14T21:15:58Z",
+      "tolerance_class": "level_series",
+      "rel_tol": 0.05,
+      "abs_tol": 10.0,
+      "status": "PASS",
+      "n_pass": 2,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1948,
+            "expected": 29937,
+            "actual": 29937.0,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          },
+          {
+            "year": 1961,
+            "expected": 33615,
+            "actual": 33615.0,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "S516": {
-      "status": "not_run"
+      "series_id": "S516",
+      "run_at": "2026-05-14T21:16:01Z",
+      "tolerance_class": "level_series",
+      "rel_tol": 0.05,
+      "abs_tol": 10.0,
+      "status": "PASS",
+      "n_pass": 2,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1948,
+            "expected": 36154,
+            "actual": 36154.0,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          },
+          {
+            "year": 1961,
+            "expected": 49212,
+            "actual": 49212.0,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "S601": {
       "status": "not_run"
