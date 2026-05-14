@@ -1,4 +1,8 @@
-"""L01_S501 — Load Total Product (TP*) book-period series, 1948-1989."""
+"""L01_S502 — Load Constant Capital (C*_m = M'_p) book-period series, 1948-1989.
+
+Source: Appendix H.1 (digitized), column `Mp` = constant capital consumed in
+production. Identical concept to the book's C*_m / M'_p notation.
+"""
 from __future__ import annotations
 
 import sys
@@ -11,11 +15,11 @@ from utils.series import BookColumnLoader
 
 
 LOADER = BookColumnLoader(
-    series_id    = "S501",
-    subseries_id = "S501-A",
-    source_file  = BOOK_TABLES / "book_tableH1_1948_1989.csv",
-    source_column = "TP_star",
-    units        = "billions_usd",
+    series_id     = "S502",
+    subseries_id  = "S502-A",
+    source_file   = BOOK_TABLES / "book_tableH1_1948_1989.csv",
+    source_column = "Mp",
+    units         = "billions_usd",
 )
 
 

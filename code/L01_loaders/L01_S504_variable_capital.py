@@ -1,4 +1,9 @@
-"""L01_S501 — Load Total Product (TP*) book-period series, 1948-1989."""
+"""L01_S504 — Load Variable Capital (V*) book-period series, 1948-1989.
+
+Source: Appendix H.1, column `V_star` — variable capital, i.e., the wages of
+productive labor as reconstructed by Shaikh & Tonak under their productive/
+unproductive distinction.
+"""
 from __future__ import annotations
 
 import sys
@@ -11,11 +16,11 @@ from utils.series import BookColumnLoader
 
 
 LOADER = BookColumnLoader(
-    series_id    = "S501",
-    subseries_id = "S501-A",
-    source_file  = BOOK_TABLES / "book_tableH1_1948_1989.csv",
-    source_column = "TP_star",
-    units        = "billions_usd",
+    series_id     = "S504",
+    subseries_id  = "S504-A",
+    source_file   = BOOK_TABLES / "book_tableH1_1948_1989.csv",
+    source_column = "V_star",
+    units         = "billions_usd",
 )
 
 

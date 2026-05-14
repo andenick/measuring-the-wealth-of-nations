@@ -1,4 +1,8 @@
-"""L01_S501 — Load Total Product (TP*) book-period series, 1948-1989."""
+"""L01_S505 — Load Surplus Value (S*) book-period series, 1948-1989.
+
+Source: Appendix H.1, column `S_star`. Identity: S* = VA* - V* (also satisfied
+by the H.1 columns VA_star and V_star, checked by V03_S505 identity_check).
+"""
 from __future__ import annotations
 
 import sys
@@ -11,11 +15,11 @@ from utils.series import BookColumnLoader
 
 
 LOADER = BookColumnLoader(
-    series_id    = "S501",
-    subseries_id = "S501-A",
-    source_file  = BOOK_TABLES / "book_tableH1_1948_1989.csv",
-    source_column = "TP_star",
-    units        = "billions_usd",
+    series_id     = "S505",
+    subseries_id  = "S505-A",
+    source_file   = BOOK_TABLES / "book_tableH1_1948_1989.csv",
+    source_column = "S_star",
+    units         = "billions_usd",
 )
 
 
