@@ -1,0 +1,54 @@
+{
+  "project":       "measuring-wealth-of-nations-replication",
+  "wave":          3,
+  "wave_title":    "Chapters 2, 4, 7, 8, 9 (8 series, mostly composed/derived)",
+  "review_date":   "2026-05-14",
+  "reviewer":      "agent",
+  "skill":         "anu-review",
+  "skill_version": "4.1",
+  "framework":     "Anu Framework v10.0",
+  "scope": {
+    "series_total":            8,
+    "series_implemented":      1,
+    "series_pending":          7,
+    "wave":                    3,
+    "comment":                 "Wave 3 differs structurally from Waves 1 and 2: most Ch2/4/7/8 series are derived/composed from upstream series + IO matrices + external study replications. Only S901 (Ch9 Summary Table) is purely aggregative from already-built series."
+  },
+  "implemented": {
+    "S901": {
+      "name": "Summary Indicators (Chapter 9 Summary Table)",
+      "status": "book_period_validated",
+      "construction": "Composed from S506, S511, S512, S608 via P02_S901_summary_indicators.py",
+      "validation": "V03_S901 round-trip: 164/164 populated cells match upstream values within 1e-9. 88 cells NaN (pending K* and TCU for S513 and S514 columns).",
+      "result": "PASS"
+    }
+  },
+  "pending_with_documented_path": {
+    "S201": {"reason": "Needs BEA NIPA GDP/CFC/NDP 1929-2024", "depends_on": "NIPA loader"},
+    "S401": {"reason": "Needs BEA Benchmark I-O Use/Make/Z tables", "depends_on": "IO matrix loader"},
+    "S402": {"reason": "Depends on S401 (Leontief inverse)", "depends_on": "S401"},
+    "S701": {"reason": "Needs S401 + BLS CES sectoral employment", "depends_on": "S401 + sectoral employment"},
+    "S702": {"reason": "Needs S401 + S513 (pending K*)", "depends_on": "S401 + S513"},
+    "S703": {"reason": "Depends on S701 + S702", "depends_on": "S701 + S702"},
+    "S801": {"reason": "Cross-study with Mohun 2005 (ES1401-1404); needs Wave 4", "depends_on": "Wave 4 (ES1401-ES1404)"}
+  },
+  "gate_status": {
+    "weighted_85_percent":   "N/A — wave scope is mostly forward-blocked; assessment after dependencies resolved",
+    "D13_data_authenticity": "PASS — S901 round-trip clean; pending series carry zero fabricated values",
+    "D14_outward_intelligibility": "N/A — working tree"
+  },
+  "findings_summary": {
+    "strengths": [
+      "S901 demonstrates the value of strict series-by-series — every upstream value flows clean through to the summary with zero adjustment",
+      "Pending series have documented activation paths in their DPRs — none are 'lost' or 'TBD'",
+      "No fabrication: 88 of 252 cells in S901 are explicit NaN, marked pending in the provenance column"
+    ],
+    "gaps": [
+      "IO matrix infrastructure not yet built (blocks S401, S402, S701, S702, S703)",
+      "BEA NIPA loader not yet wired (blocks S201)",
+      "Mohun 2005 replication (ES1401-1404) not yet built (blocks S801)"
+    ],
+    "blockers": []
+  },
+  "recommendation": "PARTIAL CLOSE on Wave 3. S901 implemented and validated. The remaining 7 series have explicit dependencies on either Wave 4 (Mohun), an IO matrix loader, or BEA NIPA data — all documented. The natural next push is Wave 4 (external-study replications), which unblocks S801 and provides cross-validation data for the rest of the project."
+}

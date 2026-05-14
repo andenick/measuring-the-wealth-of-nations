@@ -1980,7 +1980,7 @@
       "loader": "L10",
       "processor": "P12",
       "wave": 1,
-      "status": "calculated",
+      "status": "book_period_validated",
       "units": "mixed",
       "content_type": "time_series"
     },
@@ -2026,7 +2026,7 @@
       "loader": "L11",
       "processor": "P13",
       "wave": 2,
-      "status": "benchmark_only",
+      "status": "pending_data_sourcing",
       "units": "matrix",
       "content_type": "benchmark_only"
     },
@@ -2081,7 +2081,7 @@
       "loader": "L11",
       "processor": "P13",
       "wave": 2,
-      "status": "benchmark_only",
+      "status": "pending_data_sourcing",
       "units": "matrix",
       "content_type": "benchmark_only"
     },
@@ -2127,7 +2127,7 @@
       "loader": "L12",
       "processor": "P14",
       "wave": 2,
-      "status": "calculated",
+      "status": "pending_data_sourcing",
       "units": "labor_hours_per_dollar",
       "content_type": "benchmark_only"
     },
@@ -2173,7 +2173,7 @@
       "loader": "L12",
       "processor": "P14",
       "wave": 2,
-      "status": "calculated",
+      "status": "pending_data_sourcing",
       "units": "index",
       "content_type": "benchmark_only"
     },
@@ -2219,7 +2219,7 @@
       "loader": "L12",
       "processor": "P14",
       "wave": 2,
-      "status": "calculated",
+      "status": "pending_data_sourcing",
       "units": "percent",
       "content_type": "benchmark_only"
     },
@@ -2265,7 +2265,7 @@
       "loader": "L14",
       "processor": "P15",
       "wave": 3,
-      "status": "calculated",
+      "status": "pending_data_sourcing",
       "content_type": "cross_sectional",
       "units": "billions_usd"
     },
@@ -2311,7 +2311,7 @@
       "loader": "L13",
       "processor": "P15",
       "wave": 3,
-      "status": "calculated",
+      "status": "pending_data_sourcing",
       "content_type": "cross_sectional",
       "units": "ratio"
     },

@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-05-14T21:35:19Z",
+  "generated_at": "2026-05-14T23:56:26Z",
   "registry_version": "1.0.0",
   "series_count": 62,
   "coverage_counts": {
     "research": 58,
-    "dpr": 25,
+    "dpr": 33,
     "loader": 19,
-    "processor": 22,
-    "validator": 22,
-    "chopped": 22,
-    "extenbook": 22
+    "processor": 23,
+    "validator": 23,
+    "chopped": 23,
+    "extenbook": 23
   },
   "coverage_pct": {
     "research": 93.5,
-    "dpr": 40.3,
+    "dpr": 53.2,
     "loader": 30.6,
-    "processor": 35.5,
-    "validator": 35.5,
-    "chopped": 35.5,
-    "extenbook": 35.5
+    "processor": 37.1,
+    "validator": 37.1,
+    "chopped": 37.1,
+    "extenbook": 37.1
   },
   "artifacts": {
     "S501": {
@@ -248,16 +248,16 @@
     },
     "S901": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "S401": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -266,7 +266,7 @@
     },
     "S402": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -275,7 +275,7 @@
     },
     "S701": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -284,7 +284,7 @@
     },
     "S702": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -293,7 +293,7 @@
     },
     "S703": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -302,7 +302,7 @@
     },
     "S201": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -311,7 +311,7 @@
     },
     "S801": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
