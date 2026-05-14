@@ -1435,7 +1435,7 @@
       "loader": "L07",
       "processor": "P09",
       "wave": 1,
-      "status": "calculated",
+      "status": "book_period_validated",
       "units": "billions_usd",
       "content_type": "time_series"
     },
@@ -1484,7 +1484,7 @@
       "loader": "L07",
       "processor": "P09",
       "wave": 1,
-      "status": "calculated",
+      "status": "book_period_validated",
       "units": "billions_usd",
       "content_type": "time_series"
     },
@@ -1533,7 +1533,7 @@
       "loader": "L07",
       "processor": "P09",
       "wave": 1,
-      "status": "calculated",
+      "status": "book_period_validated",
       "units": "billions_usd",
       "content_type": "time_series",
       "proxy": true,
@@ -1602,7 +1602,7 @@
       "loader": "L07",
       "processor": "P09",
       "wave": 1,
-      "status": "calculated",
+      "status": "book_period_validated",
       "units": "billions_usd",
       "content_type": "time_series"
     },
@@ -1653,7 +1653,7 @@
       "loader": "L08",
       "processor": "P10",
       "wave": 1,
-      "status": "calculated",
+      "status": "book_period_validated",
       "units": "billions_usd",
       "content_type": "time_series"
     },
@@ -1702,7 +1702,7 @@
       "loader": "L08",
       "processor": "P10",
       "wave": 1,
-      "status": "calculated",
+      "status": "book_period_validated",
       "units": "billions_usd",
       "content_type": "time_series"
     },
@@ -1805,7 +1805,7 @@
       "loader": "L09",
       "processor": "P11",
       "wave": 1,
-      "status": "calculated",
+      "status": "book_period_validated",
       "units": "billions_usd",
       "content_type": "time_series"
     },
@@ -1867,7 +1867,7 @@
       "loader": "L09",
       "processor": "P11",
       "wave": 1,
-      "status": "calculated",
+      "status": "book_period_validated",
       "units": "ratio",
       "content_type": "time_series"
     },
@@ -1928,7 +1928,7 @@
       "loader": "L09",
       "processor": "P11",
       "wave": 1,
-      "status": "calculated",
+      "status": "book_period_validated",
       "units": "share",
       "content_type": "time_series"
     },

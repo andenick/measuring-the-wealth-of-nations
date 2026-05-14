@@ -8,10 +8,29 @@ import pandas as pd
 
 
 def read_book_table(path: Path) -> pd.DataFrame:
-    """Read a digitized book-table CSV, skipping any leading '#' header comment."""
+    """Read a digitized book-table CSV.
+
+    Handles three header conventions seen in the project's source CSVs:
+      1. Leading `#`-prefixed comment row (Ch5 tables: H.1, E.2, 5.7, E.3)
+      2. Multi-row title headers ending in a column row starting with `year`
+         (Ch6 tables: 6.1, 6.2, 6.3 — first row is title, second is source,
+         third is column header)
+      3. No header preamble — first row is the column header
+
+    Returns a DataFrame with the column-header row as columns.
+    """
     with path.open("r", encoding="utf-8") as f:
-        first = f.readline()
-        skip = 1 if first.startswith("#") else 0
+        lines = f.readlines()
+    skip = 0
+    for i, line in enumerate(lines):
+        first_cell = line.split(",", 1)[0].strip().strip('"').lower()
+        if first_cell == "year":
+            skip = i
+            break
+        # Legacy convention: leading `#` comment row, next row IS the header
+        if i == 0 and line.startswith("#"):
+            skip = 1
+            break
     return pd.read_csv(path, skiprows=skip)
 
 

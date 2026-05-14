@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-14T21:18:29Z",
+  "generated_at": "2026-05-14T21:35:19Z",
   "registry_version": "1.0.0",
   "series_count": 62,
   "by_status": {
-    "PASS": 13,
-    "not_run": 49
+    "PASS": 22,
+    "not_run": 40
   },
   "results": {
     "S501": {
@@ -521,31 +521,266 @@
       }
     },
     "S601": {
-      "status": "not_run"
+      "series_id": "S601",
+      "run_at": "2026-05-14T21:33:10Z",
+      "tolerance_class": "dollar_series",
+      "rel_tol": 0.01,
+      "abs_tol": 1.0,
+      "status": "PASS",
+      "n_pass": 2,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1952,
+            "expected": 22.7849,
+            "actual": 22.7849,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          },
+          {
+            "year": 1989,
+            "expected": 385.7297,
+            "actual": 385.7297,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "S602": {
-      "status": "not_run"
+      "series_id": "S602",
+      "run_at": "2026-05-14T21:33:11Z",
+      "tolerance_class": "dollar_series",
+      "rel_tol": 0.01,
+      "abs_tol": 1.0,
+      "status": "PASS",
+      "n_pass": 2,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1952,
+            "expected": 6.923,
+            "actual": 6.923,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          },
+          {
+            "year": 1989,
+            "expected": 385.231,
+            "actual": 385.231,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "S603": {
-      "status": "not_run"
+      "series_id": "S603",
+      "run_at": "2026-05-14T21:33:15Z",
+      "tolerance_class": "dollar_series",
+      "rel_tol": 0.01,
+      "abs_tol": 1.0,
+      "status": "PASS",
+      "n_pass": 2,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1952,
+            "expected": 4.1925,
+            "actual": 4.1925,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          },
+          {
+            "year": 1989,
+            "expected": 74.9315,
+            "actual": 74.9315,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "S604": {
-      "status": "not_run"
+      "series_id": "S604",
+      "run_at": "2026-05-14T21:33:16Z",
+      "tolerance_class": "dollar_series",
+      "rel_tol": 0.01,
+      "abs_tol": 1.0,
+      "status": "PASS",
+      "n_pass": 2,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1952,
+            "expected": 53.2083,
+            "actual": 53.2083,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          },
+          {
+            "year": 1989,
+            "expected": 1116.8898,
+            "actual": 1116.8898,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "S605": {
-      "status": "not_run"
+      "series_id": "S605",
+      "run_at": "2026-05-14T21:33:22Z",
+      "tolerance_class": "dollar_series",
+      "rel_tol": 0.01,
+      "abs_tol": 1.0,
+      "status": "PASS",
+      "n_pass": 2,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1952,
+            "expected": 10.994,
+            "actual": 10.994,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          },
+          {
+            "year": 1989,
+            "expected": 521.07,
+            "actual": 521.07,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "S606": {
-      "status": "not_run"
+      "series_id": "S606",
+      "run_at": "2026-05-14T21:33:23Z",
+      "tolerance_class": "dollar_series",
+      "rel_tol": 0.01,
+      "abs_tol": 1.0,
+      "status": "PASS",
+      "n_pass": 2,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1952,
+            "expected": 32.6949,
+            "actual": 32.6949,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          },
+          {
+            "year": 1989,
+            "expected": 494.8035,
+            "actual": 494.8035,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "S607": {
-      "status": "not_run"
+      "series_id": "S607",
+      "run_at": "2026-05-14T21:33:25Z",
+      "tolerance_class": "dollar_series",
+      "rel_tol": 0.01,
+      "abs_tol": 1.0,
+      "status": "PASS",
+      "n_pass": 2,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1952,
+            "expected": -9.5194,
+            "actual": -9.5194,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          },
+          {
+            "year": 1989,
+            "expected": -101.0163,
+            "actual": -101.0163,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "S608": {
-      "status": "not_run"
+      "series_id": "S608",
+      "run_at": "2026-05-14T21:33:27Z",
+      "tolerance_class": "rate_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "identity_check": {
+        "identity": "S608 = S607 / S504 (NSW / V*)",
+        "compared_years": 38,
+        "max_abs_err": 9.71445146547012e-17
+      }
     },
     "S609": {
-      "status": "not_run"
+      "series_id": "S609",
+      "run_at": "2026-05-14T21:33:26Z",
+      "tolerance_class": "share_series",
+      "rel_tol": 0.05,
+      "abs_tol": 0.02,
+      "status": "PASS",
+      "n_pass": 2,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1952,
+            "expected": -0.0337,
+            "actual": -0.0337,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          },
+          {
+            "year": 1989,
+            "expected": -0.0219,
+            "actual": -0.0219,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "S901": {
       "status": "not_run"

@@ -32,13 +32,19 @@ TOLERANCES = {
 
 @dataclass(frozen=True)
 class BookColumnLoader:
-    """Load one column from a digitized book table CSV (wide format with `year` index)."""
+    """Load one column from a digitized book table CSV (wide format with `year` index).
+
+    `unit_scale` divides raw values (e.g., 1000.0 converts millions→billions).
+    Defaults to 1.0 (no conversion). The DPR documents the conversion when
+    used so the provenance chain stays traceable.
+    """
 
     series_id:    str            # e.g. "S502"
     subseries_id: str            # e.g. "S502-A"
     source_file:  Path           # e.g. BOOK_TABLES / "book_tableH1_1948_1989.csv"
     source_column: str           # e.g. "Mp"
     units:        str            # e.g. "billions_usd"
+    unit_scale:   float = 1.0    # divisor applied to raw source values
 
     def load(self) -> pd.DataFrame:
         if not self.source_file.exists():
@@ -58,7 +64,7 @@ class BookColumnLoader:
         out["units"] = self.units
         out = out[["series_id", "year", "value", "units"]].reset_index(drop=True)
         out["year"] = out["year"].astype(int)
-        out["value"] = out["value"].astype(float)
+        out["value"] = out["value"].astype(float) / self.unit_scale
         return out
 
 
