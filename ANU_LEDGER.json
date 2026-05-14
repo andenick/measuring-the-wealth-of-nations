@@ -1,32 +1,32 @@
 {
-  "generated_at": "2026-05-14T19:50:04Z",
+  "generated_at": "2026-05-14T20:35:30Z",
   "registry_version": "1.0.0",
   "series_count": 62,
   "coverage_counts": {
     "research": 58,
-    "dpr": 0,
-    "loader": 0,
-    "processor": 0,
-    "validator": 0,
+    "dpr": 1,
+    "loader": 1,
+    "processor": 1,
+    "validator": 1,
     "chopped": 0,
     "extenbook": 0
   },
   "coverage_pct": {
     "research": 93.5,
-    "dpr": 0.0,
-    "loader": 0.0,
-    "processor": 0.0,
-    "validator": 0.0,
+    "dpr": 1.6,
+    "loader": 1.6,
+    "processor": 1.6,
+    "validator": 1.6,
     "chopped": 0.0,
     "extenbook": 0.0
   },
   "artifacts": {
     "S501": {
       "research": true,
-      "dpr": false,
-      "loader": false,
-      "processor": false,
-      "validator": false,
+      "dpr": true,
+      "loader": true,
+      "processor": true,
+      "validator": true,
       "chopped": false,
       "extenbook": false
     },
