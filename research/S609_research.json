@@ -1,0 +1,96 @@
+{
+  "series_id": "S609",
+  "series_name": "NSW/NI Share",
+  "chapter": 6,
+  "tables": [
+    "Table_6_4"
+  ],
+  "figures": [],
+  "research_date": "2026-03-21",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/docs/chapters/CHAPTER_6_INVESTIGATION.md",
+    "Technical/docs/reviews/NSW_COMPARISON_REVIEW.md",
+    "Inputs/ExternalSources/Moos/moos_nsw_reconciled.csv",
+    "Knowledge_Base/text/narrative_chunk_16_ch5.md",
+    "Knowledge_Base/text/narrative_chunk_18_ch6.md",
+    "Knowledge_Base/text/narrative_chunk_20_ch6.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "S609 = S607 / NI, where S607 is the Net Social Wage and NI is National Income from NIPA Table 1.7.5. This ratio expresses the net fiscal transfer as a share of total national income, providing a macroeconomic scale measure of the state's redistributive impact on workers.",
+      "source_ref": "ST_1994, Ch6; CHAPTER_6_INVESTIGATION.md"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Numerator from S607 (NSW). Denominator is National Income from BEA NIPA Table 1.7.5 (National Income by Type of Income). Both in current dollars; ratio is dimensionless.",
+      "source_ref": "BEA NIPA Table 1.7.5"
+    },
+    {
+      "entry_type": "empirical_finding",
+      "content": "NSW/NI is typically -1% to -4% during 1952-1989, indicating the state extracts 1-4% of national income net from workers. During the post-2001 positive-NSW era, the ratio rises to +1% to +3% in normal years. The COVID peak in 2020 reached +9.23% of NI, an unprecedented fiscal transfer to workers.",
+      "source_ref": "CHAPTER_6_INVESTIGATION.md; NSW_COMPARISON_REVIEW.md"
+    },
+    {
+      "entry_type": "cross_study_comparison",
+      "content": "Moos reconciled data (54 years, 1952-2012) provides NSW/NI benchmarks. AS2 and Moos track within 1 percentage point for most years. The divergence is largest in the 1970s-1980s where sales/excise tax treatment differences compound. All studies agree on the sign (negative) through the 1990s.",
+      "source_ref": "moos_nsw_reconciled.csv; NSW_COMPARISON_REVIEW.md"
+    },
+    {
+      "entry_type": "theoretical_significance",
+      "content": "NSW/NI provides the most accessible measure of the state's net fiscal impact on workers. A persistently negative ratio challenges the conventional welfare-state narrative. The post-2001 sign reversal marks a genuine structural transformation in the fiscal relationship between the state and the working class, driven by entitlement expansion outpacing revenue growth.",
+      "source_ref": "ST_1994, Ch6; Shaikh_Tonak_2002"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "BEA_NIPA",
+      "full": "Bureau of Economic Analysis. National Income and Product Accounts. https://apps.bea.gov/iTable/"
+    },
+    {
+      "id": "Shaikh_Tonak_2002",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 2002. 'The Rise and Fall of the U.S. Welfare State.' In Political Economy and Contemporary Capitalism, ed. R. Baiman et al."
+    },
+    {
+      "id": "Moos_2017",
+      "full": "Moos, Julie. 2017. The Net Social Wage in the United States, 1952-2012. PhD dissertation."
+    }
+  ],
+  "methodology_summary": "Ratio of Net Social Wage to National Income (S607/NI). Macroeconomic scale measure: typically -1% to -4% during 1952-1989, turning positive post-2001, peaking at +9.23% during COVID (2020).",
+  "decision_log_refs": [
+    "DEC-013: Moos NSW formula confirmed \u2014 E2 (govt consumption on education/health/transport) excluded from NSW computation. NSW = E1 - (T1 + T2*LS). P21 overlap mean 0.013 vs Moos published 0.011 (within 0.002). Benchmark range V11: [0.008, 0.018]."
+  ],
+  "known_issues": [
+    "Inherits all known issues from S607 (NSW)",
+    "NI definition may shift with NIPA comprehensive revisions",
+    "COVID-era ratio (+9.23%) is an extreme outlier driven by emergency legislation",
+    "Post-2001 positive ratio partly reflects demographic shift (aging population drawing more benefits)"
+  ],
+  "cross_references": [
+    "S607",
+    "S504"
+  ],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/docs/chapters/CHAPTER_6_INVESTIGATION.md",
+      "Technical/docs/reviews/NSW_COMPARISON_REVIEW.md",
+      "Inputs/ExternalSources/Moos/moos_nsw_reconciled.csv",
+      "Knowledge_Base/text/narrative_chunk_16_ch5.md",
+      "Knowledge_Base/text/narrative_chunk_18_ch6.md",
+      "Knowledge_Base/text/narrative_chunk_20_ch6.md"
+    ],
+    "L3_data_sources": [
+      "BEA NIPA Table 1.7.5"
+    ],
+    "L5_validation": [
+      "Moos 2017"
+    ]
+  },
+  "ported_from": "ST2/research/T609_research.json",
+  "port_date": "2026-05-14"
+}

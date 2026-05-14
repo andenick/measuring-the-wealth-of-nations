@@ -1,0 +1,100 @@
+{
+  "series_id": "S602",
+  "series_name": "Social Insurance Tax Workers",
+  "chapter": 6,
+  "tables": [
+    "Table_6_1"
+  ],
+  "figures": [],
+  "research_date": "2026-03-21",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/docs/chapters/CHAPTER_6_INVESTIGATION.md",
+    "Technical/docs/reviews/NSW_COMPARISON_REVIEW.md",
+    "Knowledge_Base/text/narrative_chunk_18_ch6.md",
+    "Knowledge_Base/text/narrative_chunk_19_ch6.md"
+  ],
+  "decision_log_refs": [
+    {
+      "dec_id": "DEC-008",
+      "summary": "Ch6 tax allocation methodology verified: income-proportional method (T_w = taxes \u00d7 W_p/PI) confirmed against HDARP Section 3.3 extraction (pages 63-65, NRYwp net royalty framework). P09 implementation correct.",
+      "source": "NickyData/DECISION_LOG.md"
+    }
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "Social insurance contributions allocated to workers by identifying the worker share directly. Employee contributions to Social Security (OASDI) and Medicare (HI) are fully worker-borne. Employer contributions are treated as deferred worker compensation per classical political economy: the employer share is part of the cost of labor power and thus ultimately a worker burden.",
+      "source_ref": "ST_1994, Ch6; CHAPTER_6_INVESTIGATION.md"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Total social insurance contributions from NIPA Table 3.1 (Government Current Receipts, social insurance contribution lines). Breakdown into employee vs employer shares from SSA and BEA supplementary tables. NIPA Table 3.1 provides federal social insurance receipts; state unemployment insurance from Table 3.3.",
+      "source_ref": "BEA NIPA Tables 3.1, 3.3; SSA data"
+    },
+    {
+      "entry_type": "methodological_note",
+      "content": "Both employee and employer payroll contributions are attributed to workers, following the classical view that employer contributions represent a cost of employing labor that would otherwise be paid as wages. This is standard in the Shaikh-Tonak framework and differs from neoclassical incidence analysis which may split the burden.",
+      "source_ref": "ST_1994, Ch6; Shaikh_Tonak_1987"
+    },
+    {
+      "entry_type": "empirical_finding",
+      "content": "Social insurance taxes grew substantially over the period 1952-1989, driven by rising OASDI rates (from 1.5% to 6.06% each for employee and employer) and expanding Medicare contributions after 1966. This made social insurance the second-largest tax component for workers after personal income tax.",
+      "source_ref": "CHAPTER_6_INVESTIGATION.md"
+    },
+    {
+      "entry_type": "cross_study_comparison",
+      "content": "All three studies (AS2, Moos, Tonak) agree on social insurance allocation: both employee and employer contributions assigned to workers. This component shows the highest cross-study correlation because the allocation method is unambiguous.",
+      "source_ref": "NSW_COMPARISON_REVIEW.md"
+    },
+    {
+      "entry_type": "decision_log_note",
+      "content": "DEC-008 (2026-04-09): Tax allocation methodology confirmed. The NRYwp net royalty framework (Section 3.3, pages 63-65) underpins the allocation of social insurance taxes to workers. Social insurance taxes are a direct royalty payment deducted from productive workers' wages. P09 methodology verified correct.",
+      "source_ref": "NickyData/DECISION_LOG.md, DEC-008"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "BEA_NIPA",
+      "full": "Bureau of Economic Analysis. National Income and Product Accounts. https://apps.bea.gov/iTable/"
+    },
+    {
+      "id": "Shaikh_Tonak_1987",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' New School for Social Research working paper."
+    }
+  ],
+  "methodology_summary": "Worker social insurance taxes include both employee and employer payroll contributions to OASDI, Medicare, and unemployment insurance. Both sides are attributed to workers per the classical political economy framework. DEC-008 confirms allocation method consistent with NRYwp net royalty framework.",
+  "known_issues": [
+    "Employer contribution incidence assumption differs from neoclassical analysis",
+    "Self-employment social insurance taxes require separate treatment",
+    "Medicare tax base became uncapped in 1994, changing the distributional profile"
+  ],
+  "cross_references": [
+    "S601",
+    "S603",
+    "S604",
+    "S607"
+  ],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/docs/chapters/CHAPTER_6_INVESTIGATION.md",
+      "Technical/docs/reviews/NSW_COMPARISON_REVIEW.md",
+      "Knowledge_Base/text/narrative_chunk_18_ch6.md",
+      "Knowledge_Base/text/narrative_chunk_19_ch6.md"
+    ],
+    "L3_data_sources": [
+      "BEA NIPA Table 3.1",
+      "BEA NIPA Table 3.3",
+      "SSA statistical data"
+    ],
+    "L5_validation": [
+      "Tonak 1984"
+    ]
+  },
+  "ported_from": "ST2/research/T602_research.json",
+  "port_date": "2026-05-14"
+}

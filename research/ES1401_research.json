@@ -1,0 +1,76 @@
+{
+  "series_id": "ES1401",
+  "series_name": "Exploitation Rate \u2014 Mohun Classification (Mohun 2005)",
+  "study": "study_05_mohun_2005",
+  "figures": [],
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "Rate of surplus value = (aggregate money value added - productive wages) / productive wages = S/V, using Mohun's SM approximation procedures. Mohun (2005) critiques the ST (1994) approximation methods and proposes superior SM alternatives. The exploitation rate under Mohun's classification is lower than ST's because Mohun applies a broader productive sector boundary \u2014 his Information sector is treated as entirely productive, and retail eating/drinking places are also classified productive. The SM approximation for services uses division-level BLS production worker ratios weighted against the aggregate Services BLS ratio, rather than ST's GDP-contribution weighting.",
+      "source_ref": "Mohun_2005, Section 2-4; full_transcription.md Fig 4 discussion"
+    },
+    {
+      "entry_type": "benchmark_values",
+      "content": "SM estimates from Figure 4: average rate of surplus value 1964-1982 = 1.97; value in 2001 = 3.00, representing a +52% increase over the 1964-1982 average. ST estimates for same period: average 1964-1982 = 1.71; 2001 = 2.22 (+29.8%). ST captures only 57% of the actual increase identified by the SM method.",
+      "source_ref": "Mohun_2005, Fig 4; full_transcription.md Section 4"
+    },
+    {
+      "entry_type": "approximation_performance",
+      "content": "For services sector wages 1988-2001 (where benchmark is available): ST approximation averages 172% of benchmark (sd 3.71), a massive 72% overestimate. SM approximation averages 101.5% of benchmark (sd 1.08), a 1.5% overestimate. For services employment: ST averages 91.2% of benchmark (sd 1.26); SM averages 98.6% (sd 0.23). The large ST wage overestimate flows directly into a systematic understatement of the exploitation rate, because overestimated productive wages yield an artificially compressed surplus/variable-capital ratio.",
+      "source_ref": "Mohun_2005, Section 3.1; full_transcription.md Tables 2-3"
+    },
+    {
+      "entry_type": "structural_break",
+      "content": "Both ST and SM methods identify a major structural break at the beginning of the 1980s. Mohun states: 'While both ST and SM estimates identify that something dramatic happened in the US economy at the beginning of the 1980s, marking a major and lasting change with what went before, the ST method of approximation, compared with the SM method, substantially understates its impact on the rate of surplus value.' This corresponds to the Volcker interest rate shock and the onset of neoliberal restructuring.",
+      "source_ref": "Mohun_2005, Section 4; full_transcription.md Conclusion"
+    },
+    {
+      "entry_type": "classification_boundary",
+      "content": "Mohun (2005) fully accepts ST's conceptual framework and SIC classification \u2014 he does NOT challenge which sectors are productive. His critique is solely about the approximation procedures used to calculate productive labor quantities and wages within that framework. The exploitation rate difference between ST and Mohun (ES1404 ratio \u2248 1.61) arises from classification differences introduced in the 2013 paper, not from this 2005 paper.",
+      "source_ref": "Mohun_2005, Section 1 Introduction; full_transcription.md"
+    },
+    {
+      "entry_type": "data_period",
+      "content": "Coverage: 1964-2001 (38 years). Data sources: NIPA (BEA), broken down by industrial division under 1972 SIC (1964-87) and 1987 SIC (1987-2001); BLS Employment, Hours and Earnings for production worker ratios and wages. SIC revision from 1972 to 1987 base is 'not very significant at aggregation level of this paper.'",
+      "source_ref": "Mohun_2005, Section 1; Appendix A.1"
+    }
+  ],
+  "citations": [
+    {
+      "id": "Mohun_2005",
+      "full": "Mohun, Simon. 2005. 'On measuring the wealth of nations: the US economy, 1964-2001.' Cambridge Journal of Economics 29(5): 799-815. DOI: 10.1093/cje/bei043."
+    },
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    }
+  ],
+  "methodology_summary": "Exploitation rate under Mohun's SM approximation procedures. Period 1964-2001. Average 1964-1982 = 1.97, rising to 3.00 in 2001 (+52%). ST method understates post-1980 rise, capturing only 57% of actual increase. Loaded from Mohun 2005 Table 2 via L15.",
+  "known_issues": [
+    "Data ends 2001; no extension to later years under this paper's methodology",
+    "SIC revision 1972-to-1987 at 1987 boundary introduces minor discontinuity (assessed as small by Mohun)",
+    "SM approximation still averages 101.5% of benchmark for wages \u2014 small systematic overestimate persists"
+  ],
+  "cross_references": [
+    "ES1402",
+    "ES1403",
+    "ES1404",
+    "S506"
+  ],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
+    ],
+    "L3_data_sources": [
+      "Inputs/ExternalSources/Mohun/"
+    ],
+    "L5_validation": []
+  },
+  "ported_from": "ST2/research/N1401_research.json",
+  "port_date": "2026-05-14"
+}

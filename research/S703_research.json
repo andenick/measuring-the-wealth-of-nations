@@ -1,0 +1,94 @@
+{
+  "series_id": "S703",
+  "series_name": "Value-Price Deviations (R\u00b2 Regression)",
+  "chapter": 7,
+  "book_table": "7.3",
+  "figures": [
+    "Fig_7_1"
+  ],
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_33/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_34/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_36/full_transcription.md",
+    "NickyData/series_registry.json",
+    "NickyData/DECISION_LOG.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "S703 implements a cross-sectional log-log OLS regression of total labor values against total prices of production across productive sectors, run separately for each IO benchmark year (1947, 1958, 1963, 1967, 1972, 1977). The regression formula is: log(total_labor_values_j) = \u03b1 + \u03b2 \u00b7 log(total_prices_of_production_j) + \u03b5_j, where j indexes productive sectors. R\u00b2 from this regression measures how well labor values predict market prices, providing an empirical test of the labor theory of value. The book (Shaikh & Tonak 1994, Ch. 7, Table 7.3) claims R\u00b2 > 0.95 across benchmark years, interpreted as strong confirmation that labor values are the dominant determinant of relative prices of production.",
+      "source_ref": "ST_1994, Ch7, Table 7.3; series_registry.json S703 entry"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "S703 is derived from S701 (labor values \u03bb* in hours per dollar) and S702 (prices of production pp* in labor-value terms). Sector-level total labor values are computed as S701 \u00d7 gross output for each productive sector at each IO benchmark year. Sector-level total prices of production come from S702 using the price-of-production formula pp*_j = (1 + r\u0304)(c_j_labor + v_j_labor), where r\u0304 is the uniform profit rate and c_j_labor, v_j_labor are constant and variable capital expressed in labor-value units via the labor value of money \u03bb_m = total productive hours / total value added. The regression is then run cross-sectionally across productive sectors at each benchmark year. Book subseries S703-A covers 1947\u20131977 (6 benchmark years) and is loaded from ch07/Table7_3_ValuePriceDeviations.csv.",
+      "source_ref": "series_registry.json S703, S701, S702 entries; DEC-011"
+    },
+    {
+      "entry_type": "variable_capital_context",
+      "content": "Variable capital V* (a key input to the price-of-production formula) is estimated in the book (Appendix G, Tables G.1\u2013G.2) from BLS production worker wages (wp) scaled by the NIPA employee-compensation-to-wages ratio x = EC/WS, then multiplied by productive employment Lp: V*_j = (wp_j \u00d7 x_j \u00d7 52) \u00d7 (Lp)_j. This procedure effectively excludes corporate officers' salaries from V*. Because BLS does not publish separate wage rates for nonproduction workers, unproductive wages Wu = W \u2212 V* are derived residually. The productivity appendix (Appendix J) confirms that C*/TP* is empirically stable, implying y* and q* track closely \u2014 a stability that also underpins the price-of-production computation by keeping the composition of capital (C*/VA*) well-behaved across sectors.",
+      "source_ref": "chunk_33 (Appendix G intro, Table G.1); chunk_34 (Table G.2, V* formulas); chunk_36 (Appendix J, C*/TP* stability)"
+    },
+    {
+      "entry_type": "unit_conversion_requirement",
+      "content": "Correct computation of S703 requires that labor values and prices of production be expressed in commensurable units before regression. Labor values \u03bb* are in hours per dollar of gross output; prices of production in money terms are in dollars. The conversion uses the labor value of money \u03bb_m = total productive hours / total value added. Money compensation v_j is converted to labor-value compensation v_j_labor = v_j \u00d7 \u03bb_m before computing pp*_j. The initial ST2 implementation omitted this conversion, producing R\u00b2 = 0.003\u20130.035 and MAD > 31,000%. After applying the \u03bb_m conversion, MAD improved to 72\u201387% but R\u00b2 remained low (0.003\u20130.035), indicating a residual methodological issue: surplus was computed from gross output minus V* rather than value added minus V*, contrary to the book's Section 4.2 (pp. 86\u201388) sector-level value-added decomposition.",
+      "source_ref": "DEC-011 (2026-04-09 and update)"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "DEC-011 documents three layers of the R\u00b2 inconsistency: (1) the \u03bb_m scalar conversion is applied uniformly across all sectors (same scalar V*/VA* ratio for all j), whereas the book implies sector-level value-added decomposition; (2) the 1963 IO benchmark year shows anomalous S701 and S702 values (S702 near floating-point zero at 1963, S701 dropping to 0.00037 before jumping to 0.036 in 1964), suggesting a data quality issue at that benchmark \u2014 designated WARN-03; (3) the regression spans only 6 IO benchmark years (1947, 1958, 1963, 1967, 1972, 1977), limiting statistical power and making R\u00b2 sensitive to individual outlier years. The 1963 anomaly is the most likely driver of the low R\u00b2 results in benchmark years near that point.",
+      "source_ref": "DEC-011; NickyData/data/final-data/book/series/S701.csv; NickyData/data/final-data/book/series/S702.csv; ASSUMPTIONS.md ASM-M-002"
+    },
+    {
+      "entry_type": "known_issues",
+      "content": "Current ST2 implementation achieves R\u00b2 = 0.70\u20130.98 (varies by benchmark year) versus the book's claim of R\u00b2 > 0.95. The gap is caused by: (a) scalar rather than sector-level \u03bb_m application \u2014 the book requires computing c_j and v_j in labor-value units sector by sector, not applying a single aggregate ratio; (b) incorrect surplus computation using GO \u2212 V* instead of VA \u2212 V* in the profit-rate equalization step; (c) the 1963 benchmark anomaly (WARN-03) where S702 collapses to near-zero values, likely reflecting a data gap in the underlying IO table rather than a true economic reading. Resolution is deferred to Wave 2, pending a dedicated sector-level value-added decomposition pass and diagnosis of the 1963 IO data.",
+      "source_ref": "DEC-011; series_registry.json S703 (wave: 2, status: calculated)"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "BLS_SEHE",
+      "full": "Bureau of Labor Statistics. 1989. Supplement to Employment, Hours, and Earnings, United States, 1909-84. BLS Bulletin 1312-12."
+    },
+    {
+      "id": "BEA_NIPA_1986",
+      "full": "Bureau of Economic Analysis. 1986. National Income and Product Accounts of the United States, 1929-82. U.S. Department of Commerce."
+    }
+  ],
+  "methodology_summary": "S703 is a cross-sectional log-log R\u00b2 regression of total labor values vs. total prices of production across productive sectors at each IO benchmark year (1947, 1958, 1963, 1967, 1972, 1977). The book reports R\u00b2 > 0.95, interpreted as empirical confirmation of the labor theory of value. Current implementation achieves R\u00b2 = 0.70\u20130.98 due to scalar (not sector-level) \u03bb_m application and incorrect surplus computation; resolution deferred to Wave 2.",
+  "known_issues": [
+    "R\u00b2 = 0.70\u20130.98 vs. book claim of R\u00b2 > 0.95 \u2014 gap driven by scalar \u03bb_m application and GO\u2212V* surplus error",
+    "1963 benchmark anomaly (WARN-03): S702 near-zero values at 1963, S701 discontinuity 1963\u21921964, likely IO data gap",
+    "Only 6 benchmark years available (1947, 1958, 1963, 1967, 1972, 1977) \u2014 small cross-section limits regression robustness",
+    "Sector-level value-added decomposition (ST 1994, Section 4.2, pp. 86\u201388) not yet implemented; current code uses aggregate scalar ratio",
+    "Full resolution deferred to Wave 2 pending dedicated \u03bb_m and VA* decomposition work"
+  ],
+  "cross_references": [
+    "S701",
+    "S702",
+    "DEC-011",
+    "WARN-03"
+  ],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_33/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_34/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_36/full_transcription.md"
+    ],
+    "L3_data_sources": [
+      "NickyData/data/final-data/book/series/S701.csv",
+      "NickyData/data/final-data/book/series/S702.csv",
+      "NickyData/data/final-data/book/series/S703.csv",
+      "ch07/Table7_3_ValuePriceDeviations.csv"
+    ],
+    "L5_validation": []
+  },
+  "ported_from": "ST2/research/T703_research.json",
+  "port_date": "2026-05-14"
+}

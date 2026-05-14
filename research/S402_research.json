@@ -1,0 +1,73 @@
+{
+  "series_id": "S402",
+  "series_name": "B-Matrix (Leontief Inverse)",
+  "chapter": 4,
+  "book_table": "4.2",
+  "figures": [],
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_10/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_27/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "The B-matrix (Leontief inverse, also called the total requirements matrix) is derived from the A-matrix (S401) by the formula B = (I - A)^(-1), where I is the identity matrix and A is the direct requirements matrix. Each element b_ij of B gives the total output of sector i required (directly and indirectly) per unit of final demand for sector j. The derivation requires inverting the n x n matrix (I - A) for each of the six benchmark years. The same 85x85 SIC sector structure as S401 applies. The computation uses the benchmark IO transaction matrices described in Appendix A of ST 1994, after all aggregation, force account reversal, and real estate adjustment steps have been applied to produce the standardized A-matrix.",
+      "source_ref": "ST_1994, Ch4 (chunk_10); Appendix A (chunk_27); series_registry.json S402"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Derived entirely from S401 (A-matrix); no independent raw data source. Six benchmark years: 1947, 1958, 1963, 1967, 1972, 1977. The underlying IO transaction data comes from BEA benchmark IO tables standardized to 85x85 SIC-based sectors following Appendix A of ST 1994. Source file: ch04/Table4_2_BMatrix.csv (digitized from book Table 4.2). These are cross-sectional benchmark snapshots, NOT annual time series. Year range: 1947-1977 only.",
+      "source_ref": "ST_1994, Appendix A (chunk_27); series_registry.json S402"
+    },
+    {
+      "entry_type": "economic_interpretation",
+      "content": "The Leontief inverse B captures all rounds of indirect input requirements: the direct inputs to produce a unit of final output, plus the inputs required to produce those inputs, plus inputs to produce those inputs, and so on to convergence. In the Shaikh-Tonak labor value framework (Chapter 4), B is essential for computing total (embodied) labor values. The unit labor value vector lambda satisfies lambda = hp * B, where hp is the vector of direct labor hours per unit output. Alternatively, lambda = hp (I - A)^(-1) = hp B. The total requirements structure in B also underlies the calculation of total constant capital C* and total surplus value S* transferred through the production network.",
+      "source_ref": "ST_1994, Ch4 Section 4.1, pages 78-80 (chunk_10)"
+    },
+    {
+      "entry_type": "io_framework",
+      "content": "Within the broader IO framework of Chapter 4, B maps final demand vectors to required gross output vectors: x = B * f, where f is the final demand vector. For Marxian aggregate calculations (TV*, C*, V*, S*), S&T typically work at the 6-sector aggregated level (production, trade, royalties, household, government, rest-of-world). However, the full 85x85 B-matrix is required for computing labor values at the individual sector level before aggregation. The labor value equation lambda_j = hp_j + sum_i lambda_i * a_ij is equivalent to the matrix equation lambda = hp + lambda * A, whose solution is lambda = hp * (I - A)^(-1) = hp * B.",
+      "source_ref": "ST_1994, Ch4 Section 4.1, pages 78-80 (chunk_10)"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "VAR-006: Matrix series (S401, S402) skip the chopped CSV pipeline and the extenbook extension step. These are benchmark cross-sectional matrices, not time series, so the standard annual loader/chopper/combiner pipeline does not apply. No NAICS extension is planned: the series is SIC-only, covering 1947-1977 benchmarks. S402 is fully derived from S401 \u2014 any data quality issues in the A-matrix (eating/drinking places estimation, FAC scaling, ground rent approximation) propagate into B through the matrix inversion.",
+      "source_ref": "series_registry.json S402; ST_1994 Appendix A (chunk_27)"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "BEA_IO_Benchmarks",
+      "full": "Bureau of Economic Analysis. Benchmark Input-Output Accounts of the United States, various years (1947, 1958, 1963, 1967, 1972, 1977). U.S. Department of Commerce."
+    }
+  ],
+  "methodology_summary": "The B-matrix (Leontief inverse) is derived as B = (I - A)^(-1) from the S401 A-matrix for six SIC-era benchmark years (1947-1977). It captures total (direct + indirect) input requirements per unit of final demand, and is used to compute embodied labor values in the Shaikh-Tonak framework. This is a benchmark cross-sectional series with no annual extension and no NAICS mapping.",
+  "known_issues": [
+    "All approximation errors in S401 A-matrix (eating/drinking places, FAC scaling, g=0.25 ground rent) propagate into B through matrix inversion",
+    "Matrix inversion amplifies near-singular behavior if any sector has very small output; numerical stability should be verified for each benchmark year",
+    "No NAICS extension: series terminates at 1977 benchmark"
+  ],
+  "cross_references": [
+    "S401"
+  ],
+  "status": "benchmark_only",
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_10/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_27/full_transcription.md"
+    ],
+    "L3_data_sources": [
+      "Derived from S401 (A-matrix)",
+      "Book Table 4.2 (ch04/Table4_2_BMatrix.csv)"
+    ],
+    "L5_validation": []
+  },
+  "ported_from": "ST2/research/T402_research.json",
+  "port_date": "2026-05-14"
+}

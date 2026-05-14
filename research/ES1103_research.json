@@ -1,0 +1,102 @@
+{
+  "series_id": "ES1103",
+  "series_name": "Social Tax Rate (ST 1987)",
+  "study": "study_02_st_1987",
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/Knowledge_Base/external_papers/productive_labor/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "Social tax rate = Taxes paid by workers to the state / Apparent wage (employee compensation). Formula: T_w / EC. This measures the fiscal burden on workers as a fraction of total employee compensation. The taxes (T_w) are composed of two groups: Group I (100% from workers): total employee compensation includes Employer and Employee Contributions for Social Insurance and Other Labor Income \u2014 the portion going to social security is treated as a direct tax on labor. Group II (allocated by labor share = total labor income / personal income): Personal Income Taxes (Federal and State); Motor Vehicle Licenses; Property Taxes restricted to the home-owner portion, further adjusted by labor share; Other Taxes and Non-Taxes. Corporate Profit Taxes, Indirect Business Taxes, and Estate and Gift Taxes are excluded as not levied on workers. An additional small category \u2014 net government receipts from lotteries and parimutuels \u2014 is treated as a positive net tax (Group I addition).",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Classification of Taxes pp.187; Notes 8-11 pp.193-194; Key Formulas \u2014 Tax Rate; Appendix Table 1 pp.191-192)"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Primary source: Shaikh and Tonak (1987). Tax rate is derived from the taxes column of Table 2 ('Expenditures Received and Taxes Paid by Labor \u2014 Net Transfer, 1952-85', p.192) divided by total employee compensation from BEA NIPA. Appendix Table 1 (p.191) illustrates the full tax calculation for 1964: Group I (social insurance contributions 28.66 + lotteries/parimutuels 0.002 = 28.662) plus Group II (personal income taxes 36.51 + other taxes 2.60 + motor vehicle 0.78 + property taxes 5.99 = 45.88), total taxes paid by labor 74.52 billion in 1964. BEA tax data from BEA (1981:121, 123, 129, 134); lotteries from BEA (1981:170).",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Appendix Table 1 pp.191-192; Table 2 p.192; Data Sources)"
+    },
+    {
+      "entry_type": "empirical_values",
+      "content": "Key benchmark values from Figure 2 time series (taxes as proportion of employee compensation): 1952 approx 17%; rises slowly and steadily throughout the period; 1966 approx 22% (benchmark reference year); 1975 approx 24%; by 1984 reaches approximately 31%, an all-time high \u2014 41% higher than 1966. Absolute dollar values from Table 2: 1952=34.58B, 1964=74.52B, 1975=241.70B, 1985=705.27B. The tax rate shows a more monotonic upward trend compared to the benefit rate, which is why in Phase 3 (post-1975) the tax rate rise dominates the decline in the net transfer rate.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Figure 2 description p.188; Table 2 p.192; Three Historical Phases pp.189-190)"
+    },
+    {
+      "entry_type": "tax_classification_detail",
+      "content": "Group I (100% from workers \u2014 flows directly from employee compensation): Employee Contributions for Social Insurance; Employer Contributions for Social Insurance (treated as part of employee compensation cost to capitalists); Other Labor Income (pension contributions, etc.); Government-administered lotteries and parimutuels (treated as a net tax, listed as expenditure in government accounts but consistently negative net receipts). Group II (allocated by labor share): Federal Personal Income Tax; State Personal Income Tax; Motor Vehicle Licenses; Property Taxes (home-owner portion only, then \u00d7 labor share); Other Taxes and Non-Taxes (passport fees, fines, etc. \u2014 very small). Excluded entirely: Corporate Profit Taxes; Indirect Business Taxes; Estate and Gift Taxes.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Classification of Taxes pp.187; Notes 9, 11 pp.193-194)"
+    },
+    {
+      "entry_type": "conceptual_note",
+      "content": "The framework traces taxes that flow directly out of employee compensation, not taxes that workers might bear through price shifting. This is explicitly distinct from the tax-incidence / tax-shifting approach used by Miller (1986). Total Employee Compensation (the apparent wage / AW) = Wages and Benefits + Employer Contributions for Social Insurance + Other Labor Income. This total is the cost to capitalists; workers' disposable income is less because social security contributions are deducted. The employer social security contribution is therefore counted as both part of EC (denominator) and part of T_w (numerator), which correctly reflects that the employer contribution is a cost of employing labor that workers bear in reduced take-home pay.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Note 8 p.193-194; Employee Compensation Structure section)"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "The BLS spendable earnings series (used by Bowles and Gintis) underestimates taxes paid by workers because it deducts only Federal income and social security taxes, leaving out all state, local, and other taxes. ES1103 uses the comprehensive Tonak (1984) accounting which includes state and local taxes. Any comparison with series derived from BLS spendable earnings will show ES1103 substantially higher. The Bowles and Gintis tax estimate for 1977 was $10/week versus Tonak's $30.42/week \u2014 a two-thirds underestimate.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Note 5 p.193; Notes 2-4 pp.648-650; Critique of Bowles and Gintis Methodology)"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "Property taxes in Group II are restricted to the home-owner portion only (not commercial/rental property taxes), which is then further scaled by labor share. This double restriction means ES1103 likely understates the full property tax burden on workers who rent rather than own, since renters effectively pay property taxes through rent but the framework excludes this indirect incidence by design (the framework excludes tax shifting).",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Appendix Table 1 footnote d; Classification of Taxes)"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "The steady upward trend in the tax rate (from ~17% in 1952 to ~31% in 1984) reflects growth in social security contributions and rising personal income tax rates. Reagan-era tax cuts (income tax reductions) were offset by continuing growth in social security contributions. By 1985 the tax rate reached 41% above its 1966 level despite income tax rate cuts, illustrating that the social security component dominates the long-run trend. ES1103 should not be interpreted as solely reflecting income tax policy.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Figure 2 description p.188; Phase 3 analysis pp.189-190)"
+    },
+    {
+      "entry_type": "decision_reference",
+      "content": "DEC-012 (No Synthetic Data Policy, 2026-05-03): ES1103 is not listed among the five series requiring synthetic-data remediation. However, if S604 (taxes paid by workers) contains synthetic or estimated data, ES1103 inherits that status. The 34-year series in S&T (1987) Table 2 column 2 (taxes column) provides direct validation benchmarks for P19 S604 output.",
+      "source_ref": "DECISION_LOG.md#DEC-012"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1987",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' In Robert Cherry et al. (eds.), The Imperiled Economy, Book I. New York: Union for Radical Political Economics, pp. 184-194."
+    },
+    {
+      "id": "BEA_1981",
+      "full": "Bureau of Economic Analysis. 1981. Survey of Current Business. Tables at pp. 121, 123, 129, 134 (tax data); p. 170 (lotteries/parimutuels)."
+    },
+    {
+      "id": "Tonak_1984",
+      "full": "Tonak, Ertugrul Ahmet. 1984. 'A Conceptualization of State Revenues and Expenditures U.S.: 1952-1980.' PhD Dissertation, New School for Social Research. UMI Order Number 9414212."
+    }
+  ],
+  "methodology_summary": "Social tax rate = T_w / EC, 1952-1985 (34 years). Taxes include social security contributions from employee compensation (Group I, 100%) plus labor share of personal taxes (Group II). Excludes corporate, indirect, and estate taxes. Key characteristic: monotonically rising trend throughout the period, reaching 41% above 1966 level by 1984.",
+  "known_issues": [
+    "Property tax coverage restricted to home-owner portion only \u2014 renters' indirect tax burden excluded by framework design",
+    "BLS spendable earnings comparison will show ES1103 much higher (BLS omits state/local taxes)",
+    "Employer social security contribution is counted in both EC (denominator) and T_w (numerator) \u2014 this is methodologically correct but may appear to inflate the rate",
+    "Lotteries/parimutuels is a very small addition treated as net tax (sign-inverted from BEA listing)"
+  ],
+  "cross_references": [
+    "ES1001",
+    "ES1002",
+    "ES1101",
+    "ES1102",
+    "S604"
+  ],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/Knowledge_Base/external_papers/productive_labor/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md"
+    ],
+    "L3_data_sources": [
+      "S&T 1987 Table 2 column 2 (taxes, p.192) \u2014 34 annual values",
+      "S&T 1987 Appendix Table 1 (1964 illustration, p.191)",
+      "BEA Survey of Current Business 1981, tables at pp.121, 123, 129, 134, 170",
+      "S604 (taxes paid by workers)"
+    ],
+    "L5_validation": [
+      "S&T 1987 Figure 2 benchmark values: ~17% (1952), ~22% (1966), ~24% (1975), ~31% (1984, 41% above 1966)",
+      "Appendix Table 1: total taxes paid by labor in 1964 = 74.52 billion"
+    ]
+  },
+  "ported_from": "ST2/research/N1103_research.json",
+  "port_date": "2026-05-14"
+}

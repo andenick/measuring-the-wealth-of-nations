@@ -1,0 +1,96 @@
+{
+  "series_id": "ES1102",
+  "series_name": "Social Benefit Rate (ST 1987)",
+  "study": "study_02_st_1987",
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/Knowledge_Base/external_papers/productive_labor/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "Social benefit rate = Benefits received by workers from the state / Apparent wage (employee compensation). Formula: B_w / EC. This measures social welfare expenditures directed to workers as a fraction of total employee compensation. Benefits (B_w) are composed of Group I items (directed 100% to workers: income support, social security and welfare excluding military disability and retirement, housing and community services, labor training and services) plus the labor share of Group II items (education, health and hospitals, recreational and cultural activities, energy, natural resources, transportation adjusted by gas share of passenger cars, postal services). Transportation within Group II is additionally adjusted by the 'Gas Share of Passenger Cars' factor from Tonak (1984, Appendix II). Labor share = total labor income / personal income (example 1964: 0.73).",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Empirical Methodology pp.186-187; Classification of Government Expenditures; Appendix Table 1 pp.191-192; Key Formulas \u2014 Benefit Rate)"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Primary source: Shaikh and Tonak (1987). The benefit rate is derived from the benefits column of Table 2 ('Expenditures Received and Taxes Paid by Labor \u2014 Net Transfer, 1952-85', p.192) divided by total employee compensation from BEA NIPA. Appendix Table 1 (p.191) illustrates the full benefit calculation for 1964: Group I total (income support 29.7 + housing 2.81 + labor training 0.73 = 33.24) plus labor-share-allocated Group II total (education 20.13 + health 4.69 + recreational 0.88 + energy 0.75 + natural resources 1.43 + postal 0.58 + transportation 6.31 = 34.77), summing to 68.01 billion in 1964. BEA Social Welfare Expenditure data from BEA (1981:151, 159).",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Appendix Table 1 pp.191-192; Table 2 p.192; Data Sources)"
+    },
+    {
+      "entry_type": "empirical_values",
+      "content": "Key benchmark values from Figure 2 time series (benefits as proportion of employee compensation): 1952 approx 11%; rises steadily to approximately 20% by 1968; accelerates sharply to approximately 33% by 1975 (peak); stabilizes around 31% from 1975-1980; declines to approximately 20% by 1984. By 1985 the benefit rate falls below the 1966 reference level. Absolute dollar values from Table 2: 1952=21.01B, 1964=68.01B, 1975=289.12B, 1985=467.83B.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Figure 2 description pp.188; Key Formulas \u2014 Benefit Rate; Table 2 p.192)"
+    },
+    {
+      "entry_type": "expenditure_classification",
+      "content": "Group I (100% to workers, direct benefits): Labor Training and Services; Housing and Community Services; Income Support; Social Security and Welfare (excluding Military Disability and Military Retirement, which are treated as costs of war). Group II (allocated by labor share): Education; Health and Hospitals; Recreational and Cultural Activities; Energy; Natural Resources; Transportation (with additional Gas Share adjustment); Postal Services. Group III (excluded entirely \u2014 system reproduction costs): Central Executive/Legislative/Judicial; International Affairs; Space; National Defense; Civilian Safety; Veteran Benefits; Agriculture; Economic Development; Regulation and Services; Net Interest; Others and Unallocables.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Classification of Government Expenditures pp.186-187)"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "The benefit rate (ES1102) includes public assistance (welfare payments) in Group I. The authors note (Note 12) that public assistance is appropriate for measuring overall worker living standards but must be excluded when computing the rate of exploitation adjustment, since public assistance recipients are not employed workers. The registered ES1102 series is the living-standards measure (public assistance included). Do not use ES1102 directly in surplus value rate calculations \u2014 use the productive-worker variant from Tonak (1984) Chapter IV Table XII instead.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Note 12, pp.193-194)"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "Military Disability and Military Retirement payments are explicitly excluded from Group I benefits despite appearing in Social Security and Welfare NIPA categories. The authors treat these as costs of war, not worker welfare benefits. If the underlying NIPA data aggregation includes these items without adjustment, the benefit rate will be overstated. Researchers computing ES1102 from S605 must verify that S605 excludes military disability and retirement.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Classification of Government Expenditures \u2014 GROUP I note)"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "The labor share allocation applied to Group II expenditures is an approximation based on the ratio of total labor income to personal income. This assumes workers' consumption of social services (education, health, etc.) is proportional to their income share. The actual incidence may differ across income groups, regions, and service types. The transportation item requires an additional adjustment (Gas Share of Passenger Cars from Tonak 1984 Appendix II) that has its own estimation uncertainty.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Empirical Methodology p.186-187; Appendix Table 1 footnote b)"
+    },
+    {
+      "entry_type": "decision_reference",
+      "content": "DEC-012 (No Synthetic Data Policy, 2026-05-03): ES1102 is not listed among the five series requiring synthetic-data remediation. However, if S605 (benefits received by workers) contains synthetic or estimated data, ES1102 inherits that status. The 34-year series in S&T (1987) Table 2 column 1 (benefits column) provides direct validation benchmarks for P19 S605 output. These should be used as V-layer checks.",
+      "source_ref": "DECISION_LOG.md#DEC-012"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1987",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' In Robert Cherry et al. (eds.), The Imperiled Economy, Book I. New York: Union for Radical Political Economics, pp. 184-194."
+    },
+    {
+      "id": "BEA_1981",
+      "full": "Bureau of Economic Analysis. 1981. Survey of Current Business. Tables at pp. 151, 159 (social welfare expenditures)."
+    },
+    {
+      "id": "Tonak_1984",
+      "full": "Tonak, Ertugrul Ahmet. 1984. 'A Conceptualization of State Revenues and Expenditures U.S.: 1952-1980.' PhD Dissertation, New School for Social Research. UMI Order Number 9414212."
+    }
+  ],
+  "methodology_summary": "Social benefit rate = B_w / EC, 1952-1985 (34 years). Benefits include direct worker benefits (Group I, 100% allocation) plus labor share of social consumption (Group II). Key benchmarks: ~11% (1952), ~33% peak (1975), below 1966 level (~20%) by 1985.",
+  "known_issues": [
+    "Public assistance included \u2014 not appropriate for exploitation rate adjustment",
+    "Military disability/retirement must be excluded from NIPA Social Security aggregates in S605",
+    "Transportation allocation requires Gas Share of Passenger Cars adjustment from Tonak 1984 Appendix II",
+    "Labor share allocation is a proportional approximation of actual incidence"
+  ],
+  "cross_references": [
+    "ES1001",
+    "ES1002",
+    "ES1101",
+    "ES1103",
+    "S605"
+  ],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/Knowledge_Base/external_papers/productive_labor/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md"
+    ],
+    "L3_data_sources": [
+      "S&T 1987 Table 2 column 1 (benefits, p.192) \u2014 34 annual values",
+      "S&T 1987 Appendix Table 1 (1964 illustration, p.191)",
+      "BEA Survey of Current Business 1981, tables at pp.151, 159",
+      "S605 (benefits received by workers)"
+    ],
+    "L5_validation": [
+      "S&T 1987 Figure 2 benchmark values: ~11% (1952), ~33% (1975 peak), below 1966 level by 1985"
+    ]
+  },
+  "ported_from": "ST2/research/N1102_research.json",
+  "port_date": "2026-05-14"
+}

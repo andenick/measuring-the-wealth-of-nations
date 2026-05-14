@@ -1,0 +1,196 @@
+{
+  "generated_at": "2026-05-14T19:48:32Z",
+  "registry_version": "1.0.0",
+  "series_count": 62,
+  "by_status": {
+    "not_run": 62
+  },
+  "results": {
+    "S501": {
+      "status": "not_run"
+    },
+    "S502": {
+      "status": "not_run"
+    },
+    "S503": {
+      "status": "not_run"
+    },
+    "S504": {
+      "status": "not_run"
+    },
+    "S505": {
+      "status": "not_run"
+    },
+    "S506": {
+      "status": "not_run"
+    },
+    "S507": {
+      "status": "not_run"
+    },
+    "S508": {
+      "status": "not_run"
+    },
+    "S509": {
+      "status": "not_run"
+    },
+    "S510": {
+      "status": "not_run"
+    },
+    "S511": {
+      "status": "not_run"
+    },
+    "S512": {
+      "status": "not_run"
+    },
+    "S513": {
+      "status": "not_run"
+    },
+    "S514": {
+      "status": "not_run"
+    },
+    "S515": {
+      "status": "not_run"
+    },
+    "S516": {
+      "status": "not_run"
+    },
+    "S601": {
+      "status": "not_run"
+    },
+    "S602": {
+      "status": "not_run"
+    },
+    "S603": {
+      "status": "not_run"
+    },
+    "S604": {
+      "status": "not_run"
+    },
+    "S605": {
+      "status": "not_run"
+    },
+    "S606": {
+      "status": "not_run"
+    },
+    "S607": {
+      "status": "not_run"
+    },
+    "S608": {
+      "status": "not_run"
+    },
+    "S609": {
+      "status": "not_run"
+    },
+    "S901": {
+      "status": "not_run"
+    },
+    "S401": {
+      "status": "not_run"
+    },
+    "S402": {
+      "status": "not_run"
+    },
+    "S701": {
+      "status": "not_run"
+    },
+    "S702": {
+      "status": "not_run"
+    },
+    "S703": {
+      "status": "not_run"
+    },
+    "S201": {
+      "status": "not_run"
+    },
+    "S801": {
+      "status": "not_run"
+    },
+    "ES1001": {
+      "status": "not_run"
+    },
+    "ES1002": {
+      "status": "not_run"
+    },
+    "ES1101": {
+      "status": "not_run"
+    },
+    "ES1102": {
+      "status": "not_run"
+    },
+    "ES1103": {
+      "status": "not_run"
+    },
+    "ES1201": {
+      "status": "not_run"
+    },
+    "ES1202": {
+      "status": "not_run"
+    },
+    "ES1301": {
+      "status": "not_run"
+    },
+    "ES1302": {
+      "status": "not_run"
+    },
+    "ES1304": {
+      "status": "not_run"
+    },
+    "ES1305": {
+      "status": "not_run"
+    },
+    "ES1401": {
+      "status": "not_run"
+    },
+    "ES1402": {
+      "status": "not_run"
+    },
+    "ES1403": {
+      "status": "not_run"
+    },
+    "ES1404": {
+      "status": "not_run"
+    },
+    "ES1501": {
+      "status": "not_run"
+    },
+    "ES1502": {
+      "status": "not_run"
+    },
+    "ES1503": {
+      "status": "not_run"
+    },
+    "ES1504": {
+      "status": "not_run"
+    },
+    "ES1601": {
+      "status": "not_run"
+    },
+    "ES1602": {
+      "status": "not_run"
+    },
+    "ES1701": {
+      "status": "not_run"
+    },
+    "ES1702": {
+      "status": "not_run"
+    },
+    "ES1703": {
+      "status": "not_run"
+    },
+    "ES1704": {
+      "status": "not_run"
+    },
+    "AS001": {
+      "status": "not_run"
+    },
+    "AS002": {
+      "status": "not_run"
+    },
+    "AS003": {
+      "status": "not_run"
+    },
+    "AS004": {
+      "status": "not_run"
+    }
+  }
+}

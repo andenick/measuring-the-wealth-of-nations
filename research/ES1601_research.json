@@ -1,0 +1,86 @@
+{
+  "series_id": "ES1601",
+  "series_name": "Turkey Labor Share (Karabacak & Tonak 2022)",
+  "study": "study_07_turkey_2022",
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/Knowledge_Base/external_papers/international/2022_Karabacak_Tonak_NSW_Turkey/full_transcription.md",
+    "Technical/Knowledge_Base/turkstat_indicators_1923_2011/chunk_027_summary.md",
+    "Technical/Knowledge_Base/turkstat_indicators_1923_2011/CSV_Tables/chunk_027_table03_GDP_income_approach_shares_pct_1980_2006.csv"
+  ],
+  "entries": [
+    {
+      "entry_type": "definition",
+      "content": "Labor share (ls) is defined as V / (V + S) = wages of productive workers / Net Domestic Product. In the Karabacak & Tonak (2022) operational framework, V = total compensation of employees minus unproductive workers' wages, and V + S = Net Domestic Product at factor cost. Unproductive sectors excluded from V include: wholesale and retail trade, finance and insurance, real estate, professional/administrative services, public administration and defense, private education, and private health services. Productive sectors included: agriculture, forestry, mining, manufacturing, utilities, construction, transportation, accommodation/food services, information/communication.",
+      "source_ref": "KT_2022, Section 4.4; Technical/Knowledge_Base/external_papers/international/2022_Karabacak_Tonak_NSW_Turkey/full_transcription.md"
+    },
+    {
+      "entry_type": "data_source_primary",
+      "content": "TurkStat Table 20.37 \u2014 'Share of Gross Domestic Product by cost components (at current prices)' \u2014 provides compensation_of_employees_share as percent of GDP for 1980-2006 (27 annual observations). This is the income-approach GDP decomposition from TurkStat Statistical Indicators 1923-2011, Chapter 20 (National Accounts), digitized via HDARP from chunk_027 of turkstat_indicators_1923_2011.pdf. The column 'compensation_of_employees_share' gives the economy-wide wage share at current prices, directly comparable to the labor share denominator used in KT (2022).",
+      "source_ref": "Technical/Knowledge_Base/turkstat_indicators_1923_2011/chunk_027_summary.md; Technical/Knowledge_Base/turkstat_indicators_1923_2011/CSV_Tables/chunk_027_table03_GDP_income_approach_shares_pct_1980_2006.csv"
+    },
+    {
+      "entry_type": "data_values",
+      "content": "Selected annual compensation_of_employees_share (% of GDP) from TurkStat Table 20.37: 1980=27.1, 1981=23.8, 1982=22.5, 1983=23.4, 1984=21.0, 1985=19.7. The full series runs 1980-2006. The chunk_027_summary notes: 'Compensation of employees (labor share): 27.1% in 1980, declined through 1980s to ~19-20%, rose again through 1990s crisis to 31.9% in 1991, then trended down to 26.2% by 2006.' This declining trend reflects union suppression, labor market deregulation, and informalization \u2014 consistent with KT (2022) Section 5.8 which reports ls ranging ~35-45% over 1980-2019.",
+      "source_ref": "Technical/Knowledge_Base/turkstat_indicators_1923_2011/CSV_Tables/chunk_027_table03_GDP_income_approach_shares_pct_1980_2006.csv (first 10 lines); Technical/Knowledge_Base/turkstat_indicators_1923_2011/chunk_027_summary.md"
+    },
+    {
+      "entry_type": "paper_benchmarks",
+      "content": "Karabacak & Tonak (2022) Section 5.8 report labor share over time: 1980=45.3%, 1990=42.7%, 2000=40.1%, 2010=37.5%, 2019=35.2%. Total decline: 10.1 percentage points (1980-2019). Note: the paper's ls values (from productive sector wages / NDP) are systematically higher than TurkStat Table 20.37's compensation_of_employees / GDP because (a) NDP < GDP (excludes capital consumption) and (b) total compensation includes unproductive sectors which are partially subtracted in the paper's numerator. The TurkStat series provides the official national accounts anchor; the paper's full productive/unproductive decomposition methodology requires disaggregated sector-level employment and wage data not available in Table 20.37.",
+      "source_ref": "KT_2022, Section 5.8; Technical/Knowledge_Base/external_papers/international/2022_Karabacak_Tonak_NSW_Turkey/full_transcription.md"
+    },
+    {
+      "entry_type": "data_gap",
+      "content": "Coverage is 1980-2006 only. TurkStat Statistical Indicators 1923-2011 does NOT publish income-approach GDP decomposition tables for 2007 onward (chunk_027_summary confirms this is the final chunk of Chapter 20, ending at 2006). Years 2007-2019 are NaN per DEC-012 (no-synthetic-data policy). No synthetic fill, interpolation, or proxy substitution is permissible. The 2007-2019 gap means ES1601 has 27 real observations (1980-2006) and 13 NaN years (2007-2019).",
+      "source_ref": "Technical/Knowledge_Base/turkstat_indicators_1923_2011/chunk_027_summary.md; DECISION_LOG.md#DEC-012; DECISION_LOG.md#DEC-014"
+    },
+    {
+      "entry_type": "decision_reference",
+      "content": "DEC-014 (2026-05-06): ES1601 now uses TurkStat national accounts data (Table 20.37: compensation of employees as % of GDP, 1980-2006) extracted via HDARP. The previous SBB 'Personel' budget expenditure share proxy is removed. The SBB Personel share measured government personnel spending as a fraction of total government expenditure \u2014 structurally different from the economy-wide labor share (compensation of all employees / GDP). TurkStat Table 20.37 is the official income-approach decomposition, directly comparable to the KT (2022) methodology.",
+      "source_ref": "DECISION_LOG.md#DEC-014"
+    },
+    {
+      "entry_type": "decision_reference",
+      "content": "DEC-012 (2026-05-03): Strict no-synthetic-data rule. ES1601 was previously listed as 'synthetic' (linear trend from HDARP benchmarks, np.random). This is prohibited. Real data is available from TurkStat Table 20.37 (1980-2006). Years 2007-2019 cannot be filled synthetically; they must be NaN. If real data for the 2007-2019 period is later obtained (e.g., from TurkStat NACE Rev.2 national accounts), it must be extracted via HDARP or API and documented with full provenance.",
+      "source_ref": "DECISION_LOG.md#DEC-012"
+    },
+    {
+      "entry_type": "methodology_note",
+      "content": "Labor share is used in the NSW calculation as the allocation parameter for mixed expenditures and taxes: B = E1 + E2*ls and T = T1 + T2*ls. A declining labor share mechanically worsens NSW even if tax rates and spending ratios are unchanged, because workers bear a larger share of indirect taxes (T2*ls falls more slowly than ls) and receive a smaller share of mixed benefits (E2*ls shrinks). KT (2022) Section 5.8 quantifies this: if ls had remained at the 1980 level (45%), NSW in 2019 would have been -1.8% instead of the actual -2.3% of GDP \u2014 labor share decline accounts for 0.5 pp of worsening.",
+      "source_ref": "KT_2022, Sections 3.5 and 5.8; Technical/Knowledge_Base/external_papers/international/2022_Karabacak_Tonak_NSW_Turkey/full_transcription.md"
+    }
+  ],
+  "citations": [
+    {
+      "id": "KT_2022",
+      "full": "Karabacak, Zafer, and E. Ahmet Tonak. 2022. 'The Net Social Wage in Turkey, 1980-2019.' Review of Radical Political Economics 54 (4): 577-605. DOI: 10.1177/04866134221089659."
+    },
+    {
+      "id": "TurkStat_2011",
+      "full": "Turkish Statistical Institute (TurkStat). 2011. Statistical Indicators 1923-2011. Table 20.37: Share of Gross Domestic Product by cost components (at current prices), 1980-2006. Ankara: TurkStat. [Digitized via HDARP, chunk_027.]"
+    }
+  ],
+  "methodology_summary": "ES1601 uses TurkStat Table 20.37 compensation_of_employees_share (% of GDP) for 1980-2006 as the primary data source, replacing the prior synthetic SBB proxy (DEC-014). Years 2007-2019 are NaN per DEC-012. The series is expressed as a decimal share (divide CSV percent by 100). It serves as the labor-share allocation parameter ls in the NSW calculation for ES1602.",
+  "known_issues": [
+    "2007-2019 gap: TurkStat Statistical Indicators 1923-2011 does not cover post-2006 income-approach tables. Years 2007-2019 are NaN per DEC-012.",
+    "TurkStat Table 20.37 gives total compensation / GDP (economy-wide). KT (2022) uses productive-sector wages / NDP, so levels will differ systematically. The TurkStat series is the best available official anchor for 1980-2006.",
+    "Pre-2006 data quality: KT (2022) Section 4.6 notes Turkey's fiscal and national accounts statistics improved significantly after 2006 (IMF-mandated reforms); pre-2006 data required reconciliation across sources."
+  ],
+  "cross_references": [
+    "ES1602"
+  ],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/Knowledge_Base/external_papers/international/2022_Karabacak_Tonak_NSW_Turkey/full_transcription.md",
+      "Technical/Knowledge_Base/turkstat_indicators_1923_2011/chunk_027_summary.md",
+      "Technical/Knowledge_Base/turkstat_indicators_1923_2011/CSV_Tables/chunk_027_table03_GDP_income_approach_shares_pct_1980_2006.csv"
+    ],
+    "L3_data_sources": [
+      "TurkStat Table 20.37 (chunk_027_table03_GDP_income_approach_shares_pct_1980_2006.csv)"
+    ],
+    "L5_validation": []
+  },
+  "ported_from": "ST2/research/N1601_research.json",
+  "port_date": "2026-05-14"
+}

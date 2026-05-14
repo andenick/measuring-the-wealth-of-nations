@@ -1,0 +1,79 @@
+{
+  "series_id": "ES1503",
+  "series_name": "Total Unproductive Labor \u2014 Mohun (Mohun 2013)",
+  "study": "study_06_mohun_2013",
+  "figures": [],
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "Total unproductive labor (Lu) = unproductive working class (Lu_wc) + supervisory labor (Lu_sup). Lu_wc is identified by sector location in the circuit of capital (workers in sectors that transform M\u2192C or C'\u2192M' but who are not supervisors). Lu_sup is identified by subtraction (NIPA total FTEs minus working class FTEs, by sector). Sectors classified as wholly unproductive include: wholesale trade, retail trade (except eating & drinking places), FIRE, most business services, legal services, most professional services. Private households and general government are excluded from the pre-tax analysis to avoid double-counting. Classification by SIC (1964-1997) and NAICS (1998-2010) is tabulated in Tables 2 and 3 of the paper.",
+      "source_ref": "Mohun_2013, Section 2.1, Tables 2-3, Appendix; full_transcription.md"
+    },
+    {
+      "entry_type": "empirical_values",
+      "content": "Total unproductive labor employment share of total employment: 1964 = ~42%; peak 2003 = ~49%; 2010 = 47.5%. Trend: generally increasing, most markedly in the 1980s. Total unproductive wage share of total wages: 1964 = 50.7%; peak 2007 = 65.5%; 2010 = 64.8%. Comparison with Paitaridis and Tsoulfidis (2012): small differences in levels (from minor classification/computation differences and NIPA revisions); trends are negligible. The unproductive wage share considerably exceeds the employment share and increases at a much faster rate \u2014 entirely driven by the supervisory wage component.",
+      "source_ref": "Mohun_2013, Section 3, Fig 1; full_transcription.md"
+    },
+    {
+      "entry_type": "decomposition",
+      "content": "Total unproductive decomposed into two components with divergent behavior: (1) Working class unproductive (Lu_wc, ES1501): employment share rises modestly (25.1%\u219230%), wage share of VALUE ADDED flat at 12.8%; (2) Supervisory (Lu_sup, ES1502): employment share flat (16.8-19.9%), wage share of TOTAL WAGES explodes (32%\u219247.8%). Equation 12: Y = Wp/Y + Wu_wc/Y + Wu_sup/Y + \u03a0/Y. The stability of Wu_wc/Y means working class unproductive labor is NOT a burden; only supervisory wage absorption of value added constitutes a burden in the neoliberal era.",
+      "source_ref": "Mohun_2013, Sections 4-5, Figs 1-4; full_transcription.md"
+    },
+    {
+      "entry_type": "causes_of_growth",
+      "content": "Three factors cited by Paitaridis and Tsoulfidis (2012) for unproductive labor growth: (1) intensification of competition \u2192 more sales, administration, supervision resources; (2) expansion of welfare benefits; (3) increased military expenditures. Mohun notes only (1) is relevant in his pre-tax framework. Moseley (1991) disaggregated growth as: ~2/3 commercial labor (slow productivity, person-to-person transactions), ~1/6 financial labor (checking accounts, bank output), ~1/6 supervisory labor (firm size, bureaucratic control, class conflict management). Information technology post-1994 (Moseley 1999) may have slowed unproductive employment growth without reducing wage share.",
+      "source_ref": "Mohun_2013, Section 3.1; full_transcription.md"
+    },
+    {
+      "entry_type": "accounting_framework",
+      "content": "Fundamental accounting equation (Mohun 2013, eq. 1): Y = W + \u03a0 = Wp + Wu + \u03a0. Marxian value added (eq. 2): Y = Wp + MSV where MSV = surplus value in money terms. Conservation principle: Y = Hp/\u03bbm (aggregate value added = productive hours divided by value of money). This differs from ST (1994) by ~8.41 percentage points in level (Marxian MVA / aggregate VA averages 108.41%, sd 0.83%) but the ratio is approximately constant over 1964-2007, so differences in levels but not trends between the two approaches.",
+      "source_ref": "Mohun_2013, Section 2.2, Equations 1-3; full_transcription.md"
+    },
+    {
+      "entry_type": "construction_note",
+      "content": "Series registry construction: step 1 op=load, subseries=['ES1503-A'], source='Mohun employment CSV'. ES1503 is the directly loaded total unproductive employment series from Mohun's dataset; ES1501 and ES1502 are derived from it by the 81.3%/18.7% class split. Units: thousands of FTEs. Period 1964-2010.",
+      "source_ref": "Series registry ES1503"
+    }
+  ],
+  "citations": [
+    {
+      "id": "Mohun_2013",
+      "full": "Mohun, Simon. 2013 [pub. 2014]. 'Unproductive Labor in the U.S. Economy 1964-2010.' Review of Radical Political Economics 46(3): 355-379. DOI: 10.1177/0486613413506080."
+    },
+    {
+      "id": "Mohun_2005",
+      "full": "Mohun, Simon. 2005. 'On measuring the wealth of nations: the US economy, 1964-2001.' Cambridge Journal of Economics 29(5): 799-815. DOI: 10.1093/cje/bei043."
+    },
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    }
+  ],
+  "methodology_summary": "Total unproductive labor employment (Lu = Lu_wc + Lu_sup), 1964-2010. Employment share rises from ~42% (1964) to ~49% (2003). Wage share rises from 50.7% (1964) to 65.5% (2007). Rise is entirely driven by supervisory wage escalation; working class unproductive VA absorption is flat at 12.8%. Loaded directly from Mohun employment CSV as ES1503-A.",
+  "known_issues": [
+    "Classification of NAICS categories 54 (Professional, scientific and technical) and 56 (Administrative and support) requires judgment for subdivisions; assessed as negligible",
+    "Private households and general government excluded (pre-tax framework); post-tax analysis would require different treatment",
+    "Comparison with Paitaridis and Tsoulfidis (2012) shows small level differences; trends consistent"
+  ],
+  "cross_references": [
+    "ES1501",
+    "ES1502",
+    "ES1504"
+  ],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md"
+    ],
+    "L3_data_sources": [
+      "Inputs/ExternalSources/Mohun/"
+    ],
+    "L5_validation": []
+  },
+  "ported_from": "ST2/research/N1503_research.json",
+  "port_date": "2026-05-14"
+}

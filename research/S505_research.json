@@ -1,0 +1,96 @@
+{
+  "series_id": "S505",
+  "series_name": "Surplus Value (S*)",
+  "chapter": 5,
+  "figures": [
+    "Fig_5_4",
+    "Fig_9_1"
+  ],
+  "research_date": "2026-03-21",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Knowledge_Base/chunks/chunk_23.md",
+    "Knowledge_Base/chunks/chunk_24.md",
+    "Knowledge_Base/tables/page_310_table_E2.csv",
+    "Knowledge_Base/equations/page_310_equations.txt",
+    "CHAPTER_5_INVESTIGATION.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "S* = GFP - V* (equivalently S* = TP* - C*_m - V*). Surplus value is the portion of new value created in production that is not paid to productive workers. It is the source of profit, rent, interest, taxes, and unproductive wages in the Marxian framework.",
+      "source_ref": "ST_1994, Ch5; Knowledge_Base/equations/page_310_equations.txt"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Derived from S503 (GFP) minus S504 (V*). Book period from Table 5.5. Extension spliced at 1989: for the extended period, S* = GFP_extended - V*_extended, though GFP extension is constrained by S502.",
+      "source_ref": "Knowledge_Base/tables/page_310_table_E2.csv"
+    },
+    {
+      "entry_type": "figure_context",
+      "content": "Fig 5.4 shows S* as the surplus component of GFP in the full revenue account. Fig 9.1 uses S* in long-run accumulation analysis showing that surplus value growth drives capital accumulation.",
+      "source_ref": "ST_1994, Figs 5.4, 9.1"
+    },
+    {
+      "entry_type": "theoretical_note",
+      "content": "Surplus value in the Marxian sense is fundamentally different from profit in orthodox accounts. S* includes not just corporate profits but also the portions of rent, interest, indirect taxes, and unproductive-sector wages that originate as transfers from the surplus created in production.",
+      "source_ref": "ST_1994, Ch5 chunk_23-chunk_24"
+    },
+    {
+      "entry_type": "external_comparison",
+      "content": "Mohun (2013) finds surplus value growing relative to V* over 1964-2010, consistent with ST's findings for 1948-1989. Mohun's exploitation rates are ~2.3-2.5 vs ST's 2.6-2.7, reflecting the broader productive sector classification. See mohun_exploitation_rates*.csv.",
+      "source_ref": "Mohun_2013; Inputs/ExternalSources/Mohun/"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "S* extension beyond 1989 is doubly constrained: by S502 (for GFP) and by S504 extension quality. If GFP is approximated via BEA value-added for productive sectors, the resulting S* carries both approximation errors.",
+      "source_ref": "DPR T505_DPR.md"
+    },
+    {
+      "entry_type": "decision_reference",
+      "content": "DEC-010: DIV-001 (K\u2192K* capital stock restriction) is BLOCKED pending a comprehensive unit audit. S505 (S*) is in millions from Table 5.7, while K from BEA Fixed Assets uses a different unit convention (UNIT_MULT=6). Computing S*/K or any ratio involving both series produces inflated results until unit normalization is completed. The S*/K ratio for profit rate purposes must not be computed until the unit mismatch is resolved. ADJ-001 remains BLOCKED.",
+      "source_ref": "DECISION_LOG.md DEC-010 (2026-04-09)"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "Mohun_2013",
+      "full": "Mohun, Simon. 2013. 'Unproductive Labor in the U.S. Economy 1964-2010.' Review of Radical Political Economics 46(3): 355-379."
+    }
+  ],
+  "methodology_summary": "Surplus value is derived as S* = GFP - V*. Book data from Table 5.5. Extension constrained by GFP and V* availability. Mohun provides comparison estimates. DEC-010: DIV-001 blocked by unit mismatch \u2014 S*/K ratios must not be computed until unit normalization is complete.",
+  "known_issues": [
+    "Extension constrained by S502 and S504 dependencies",
+    "Mohun's broader productive classification yields lower S*/V* ratio",
+    "Double approximation error risk in extended period",
+    "DEC-010: DIV-001 BLOCKED \u2014 unit mismatch between S505 (millions, Table 5.7) and BEA Fixed Assets K (UNIT_MULT=6) prevents S*/K computation"
+  ],
+  "cross_references": [
+    "S503",
+    "S504",
+    "S506",
+    "S507",
+    "S513"
+  ],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Knowledge_Base/chunks/chunk_23.md",
+      "Knowledge_Base/chunks/chunk_24.md",
+      "Knowledge_Base/tables/page_310_table_E2.csv",
+      "Knowledge_Base/equations/page_310_equations.txt",
+      "CHAPTER_5_INVESTIGATION.md"
+    ],
+    "L3_data_sources": [
+      "Book Table E.2 (page_310_table_E2.csv)"
+    ],
+    "L5_validation": [
+      "Inputs/ExternalSources/Mohun/mohun_exploitation_rates*.csv"
+    ]
+  },
+  "ported_from": "ST2/research/T505_research.json",
+  "port_date": "2026-05-14"
+}

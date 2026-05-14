@@ -1,0 +1,583 @@
+{
+  "generated_at": "2026-05-14T19:50:04Z",
+  "registry_version": "1.0.0",
+  "series_count": 62,
+  "coverage_counts": {
+    "research": 58,
+    "dpr": 0,
+    "loader": 0,
+    "processor": 0,
+    "validator": 0,
+    "chopped": 0,
+    "extenbook": 0
+  },
+  "coverage_pct": {
+    "research": 93.5,
+    "dpr": 0.0,
+    "loader": 0.0,
+    "processor": 0.0,
+    "validator": 0.0,
+    "chopped": 0.0,
+    "extenbook": 0.0
+  },
+  "artifacts": {
+    "S501": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S502": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S503": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S504": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S505": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S506": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S507": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S508": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S509": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S510": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S511": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S512": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S513": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S514": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S515": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S516": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S601": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S602": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S603": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S604": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S605": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S606": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S607": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S608": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S609": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S901": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S401": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S402": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S701": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S702": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S703": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S201": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "S801": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1001": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1002": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1101": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1102": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1103": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1201": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1202": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1301": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1302": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1304": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1305": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1401": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1402": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1403": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1404": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1501": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1502": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1503": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1504": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1601": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1602": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1701": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1702": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1703": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "ES1704": {
+      "research": true,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "AS001": {
+      "research": false,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "AS002": {
+      "research": false,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "AS003": {
+      "research": false,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    },
+    "AS004": {
+      "research": false,
+      "dpr": false,
+      "loader": false,
+      "processor": false,
+      "validator": false,
+      "chopped": false,
+      "extenbook": false
+    }
+  }
+}

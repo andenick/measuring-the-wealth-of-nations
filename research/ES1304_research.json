@@ -1,0 +1,82 @@
+{
+  "series_id": "ES1304",
+  "series_name": "Moos vs ST Comparison 1959-1997 (Moos 2017)",
+  "study": "study_04_moos_2017",
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Technical/Knowledge_Base/external_papers/state_welfare/2017_Moos_NSW_21st_Century/full_transcription.md",
+    "Technical/NickyData/DECISION_LOG.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "ES1304 is the Moos (2017) NSW/GDP series restricted to the 1959-1997 overlap period with Shaikh & Tonak (2002). It is constructed by filtering ES1301 to years 1959-1997. The purpose is to compare the two replications directly over the period where both have coverage, and to validate that the Moos methodology faithfully reconstructs the Shaikh-Tonak series (allowing for NIPA revision differences).",
+      "source_ref": "Moos_2017, Section 3 pp.4-5, Table 1; full_transcription.md Section 3; series_registry.json ES1304 construction"
+    },
+    {
+      "entry_type": "overlap_comparison",
+      "content": "Moos Table 1 compares summary statistics for the overlap period 1959-1997. Shaikh & Tonak original series: min=-2.1%, median=-0.2%, mean=0.0%, max=2.9%. Moos replicated series: min=-1.2%, median=1.0%, mean=1.1%, max=3.7%. Mean difference = 1.1 percentage points of GDP. Moos attributes this entirely to post-1999 NIPA comprehensive revision, not methodological differences. The qualitative pattern is preserved: both show approximately zero mean, both show same phase structure.",
+      "source_ref": "Moos_2017, Section 3 Table 1; full_transcription.md Section 3 Extended Net Social Wage Data Series"
+    },
+    {
+      "entry_type": "decision_reference",
+      "content": "DEC-013 (2026-05-06): ST2 P21 achieves 1959-1997 overlap mean NSW/GDP = 0.013, within 0.002 of Moos's published 0.011. The residual gap is attributable to NIPA vintage differences between our 2026 pull and Moos's ~2015 data. The V11 benchmark range for validation is [0.008, 0.018] \u2014 ST2 value of 0.013 passes. This is the primary validation criterion for ES1304.",
+      "source_ref": "DECISION_LOG.md DEC-013"
+    },
+    {
+      "entry_type": "validation_logic",
+      "content": "ES1304 serves as the cross-validation series between study_03 (ST 2002) and study_04 (Moos 2017). If ES1304 (Moos replication, 1959-1997) closely tracks ES1201 (ST 2002 NSW/GDP, restricted to 1959-1997), then the methodology is consistent and differences between ES1201 and ES1301 beyond 1997 are genuine time-extension findings. Moos Figure 1 plots both series together showing the close overlap with a slight upward shift in the Moos series throughout (NIPA revision effect).",
+      "source_ref": "Moos_2017, Section 3 Figure 1; full_transcription.md Section 3"
+    },
+    {
+      "entry_type": "key_finding",
+      "content": "The 1959-1997 overlap validates the Moos replication. Differences between the two series are approximately 1 percentage point of GDP throughout (NIPA vintage effect). Most importantly: Shaikh & Tonak show some years with slightly negative NSW in the 1980s-1990s; Moos's revised series shows these same years as slightly positive. This is the most significant qualitative difference \u2014 the Reagan-Bush era may show a slightly less negative NSW with the revised NIPA data. By 2000, NSW/GDP = ~0.0065 in Moos (approximately zero), consistent with the long-run Shaikh-Tonak finding.",
+      "source_ref": "Moos_2017, Section 3 pp.4-5; full_transcription.md Section 3"
+    },
+    {
+      "entry_type": "phase_context",
+      "content": "Within the 1959-1997 overlap window, both series show the same three-phase structure documented by Shaikh & Tonak (2002): (1) negative/near-zero NSW during boom 1959-1969; (2) sharp rise to peak positive ~1975; (3) secular decline through Reagan-Bush era returning to near zero by 1997. The Moos series shows the 1980s period as less negative than Shaikh-Tonak's original \u2014 attributable to revised NIPA data showing higher benefits or lower taxes in retrospect.",
+      "source_ref": "Moos_2017, Section 3, Figure 1; ST_2002 Figs 29.2-29.3; full_transcription.md Section 3"
+    },
+    {
+      "entry_type": "formula",
+      "content": "ES1304 = ES1301 filtered to year range [1959, 1997]. Construction: filter(ES1301, year <= 1997). No additional computation. Year 1997 is last year of Shaikh-Tonak (2002) coverage and the overlap endpoint. Moos extends to 2012 in ES1301/ES1302; ES1304 isolates the period of joint coverage for direct comparison with ES1201.",
+      "source_ref": "series_registry.json ES1304 construction step 1"
+    }
+  ],
+  "citations": [
+    {
+      "id": "Moos_2017",
+      "full": "Moos, Katherine A. 2017. 'Neoliberal Redistributive Policy: The U.S. Net Social Wage in the 21st Century.' Working Paper No. 2017-18, Department of Economics, University of Massachusetts Amherst. September 18, 2017."
+    },
+    {
+      "id": "ST_2002",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 2002. 'The Rise and Fall of the U.S. Welfare State.' In Political Economy and Contemporary Capitalism. M.E. Sharpe, Armonk. pp. 247-265."
+    }
+  ],
+  "methodology_summary": "ES1304 is ES1301 restricted to 1959-1997, enabling direct comparison with ST 2002 coverage. Moos's replicated series shows mean 1.1% of GDP vs Shaikh-Tonak original mean 0.0% \u2014 difference attributed to post-1999 NIPA revision. ST2 achieves 0.013 vs Moos published 0.011, within V11 benchmark range [0.008, 0.018].",
+  "known_issues": [
+    "The ~1.1 pp systematic upward shift vs Shaikh-Tonak original is documented and expected (NIPA revision effect)",
+    "ES1304 inherits all caveats from ES1301 (DEC-013 E2 exclusion, NIPA vintage gap)"
+  ],
+  "cross_references": [
+    "ES1301",
+    "ES1201",
+    "ES1202"
+  ],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Technical/Knowledge_Base/external_papers/state_welfare/2017_Moos_NSW_21st_Century/full_transcription.md"
+    ],
+    "L3_data_sources": [
+      "Moos_2017 Table 1 (overlap summary statistics)",
+      "ES1301 (source series)"
+    ],
+    "L5_validation": [
+      "V11 benchmark range [0.008, 0.018] for 1959-1997 mean; ST2 achieves 0.013"
+    ]
+  },
+  "ported_from": "ST2/research/N1304_research.json",
+  "port_date": "2026-05-14"
+}

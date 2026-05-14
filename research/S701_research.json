@@ -1,0 +1,98 @@
+{
+  "series_id": "S701",
+  "series_name": "Labor Values",
+  "chapter": 7,
+  "book_table": "7.1",
+  "figures": [],
+  "research_date": "2026-05-06",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_31/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_33/full_transcription.md",
+    "NickyData/series_registry.json"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "Labor values \u03bb_j are computed from the simultaneous equation system: \u03bb_j = (1/x_j) \u00d7 \u03a3_i(a_ij \u00d7 \u03bb_i \u00d7 x_i) + l_j, where a_ij are the direct input coefficients from the IO A-matrix (S401), x_j is gross output of sector j, and l_j is direct labor hours per unit output (= hp*_j, productive hours in sector j divided by gross output x_j). The system is solved as \u03bb = l(I \u2212 A)^{-1}, yielding the vector of unit labor values (labor hours per dollar of gross output) for all productive sectors. The labor value of money \u03bb_m is then derived as: \u03bb_m = total productive hours (H_p) / total value added (VA*), which is used as a scalar to convert between money and labor-value units across S701, S702, and S703. Book Table 7.1 reports computed labor values across 85 productive sectors for the six SIC IO benchmark years: 1947, 1958, 1963, 1967, 1972, 1977.",
+      "source_ref": "ST_1994, Ch7, Table 7.1; series_registry.json S701; S401 research (A-matrix and IO framework)"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "S701 is computed from two inputs: (1) the IO A-matrix (S401) \u2014 six BEA benchmark IO tables for 1947, 1958, 1963, 1967, 1972, 1977, aggregated to an 85x85 SIC sector classification following the multi-stage procedure in ST 1994 Appendix A; (2) the productive-hours vector hp* (S402) \u2014 direct productive labor hours per unit output by sector, derived from BLS employment data (Supplement to Employment, Hours, and Earnings, SEHE) combined with the productive/unproductive labor decomposition (Table F.1 in the book). The employment decomposition uses sector-level BLS production-worker ratios (L'p/L') applied to total sectoral employment from NIPA PEP (persons engaged in production = FEE + SEP). Book subseries S701-A covers 1947\u20131977 (6 benchmark years) and is loaded from ch07/Table7_1_LaborValues.csv.",
+      "source_ref": "chunk_33 (Table F.1 productive/unproductive labor decomposition, 1976-1989); chunk_14 (Appendix G: variable capital methodology, BLS production worker wages and employment); series_registry.json S701, S401, S402"
+    },
+    {
+      "entry_type": "employment_decomposition",
+      "content": "The productive employment vector (Lp)_j required for hp* is derived sector-by-sector. Manufacturing: BLS production worker counts (L'p)man from SEHE, applied directly. Services: productive proportion = GNP share of productive service subsectors (GNPpr,serv / GNPserv), applied to BLS total service production workers. Agriculture: mining sector ratio used as proxy (own data unavailable). Government enterprises: average ratio from private sectors used. Transportation and public utilities: SEHE data direct for 1964\u20131989; 1948\u20131963 extrapolated. The terminal year 1989 productive share Lp/L = 36.3% (down from 40.7% in 1976), reflecting continuous shift toward unproductive employment. For the IO benchmark years used in S701 (1947\u20131977), the relevant Lp/L ratios range approximately 45\u201342%.",
+      "source_ref": "chunk_33 (Table F.1 cont., footnotes a\u2013f, productive labor trends 1976-1989)"
+    },
+    {
+      "entry_type": "variable_capital_link",
+      "content": "Variable capital V*_j (wages of productive workers in sector j) is computed as: V*_j = (ecp)_j \u00d7 (Lp)_j, where (ecp)_j = (wp)_j \u00d7 x_j is employee compensation per productive worker \u2014 the product of the BLS unit wage of production workers (wp)_j and the NIPA ratio of employee compensation to wages and salaries x_j = (EC/WS)_j. For the services sector, (ecp)_serv = ec_serv (average compensation per FTE) is used because long-run BLS production wage data are unavailable. This variable capital estimate feeds into the price-of-production computation (S702) via the formula v_j = V*_j / x_j (variable capital per unit output). The imputation of wage equivalents for self-employed persons uses: W_j = ec_j \u00d7 L_j, where ec_j = (EC/FEE)_j and L_j includes both employees and self-employed (PEP).",
+      "source_ref": "chunk_14 (Section 5.3 complete formula sequence, pp. 112-113; Appendix G variable capital formulas); chunk_33 (Appendix G intro and Table G.1 methodology)"
+    },
+    {
+      "entry_type": "sector_classification",
+      "content": "The 85 productive IO sectors are classified using SIC (Standard Industrial Classification) codes throughout. The IO tables are constructed at 85x85 resolution for labor value computation before Marxian aggregation. Productive sectors include: agriculture, forestry and fisheries; mining; construction; manufacturing; transportation and public utilities; productive services (hotels/lodging, health, education, and other use-value-producing services). Trading sectors (wholesale and retail trade) enter S702 but not S701 since they do not produce new value. Finance, insurance, real estate (except productive building rental), and government (except government enterprises) are excluded as unproductive. Ground rent proportion g is set at 0.25 for IO benchmark calculations (g \u2248 0.28\u20130.30 in annual data).",
+      "source_ref": "chunk_15 (Section 5.5 sector composition; Table F.1 sectoral productive employment); chunk_31 (Table E.1 GVAp sectoral breakdown, Table E.2 productive sector aggregates)"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "DEC-011 documents that the initial ST2 implementation of S701-derived labor values produced R\u00b2 = 0.003\u20130.035 in the S703 regression (vs. book claim R\u00b2 > 0.95). Part of this failure traces to the S701\u2013S702 interface: labor values \u03bb_j (hours per dollar) must be converted to commensurable units before regression using the scalar \u03bb_m = H_p / VA*. The 1963 benchmark year shows a data discontinuity (S701 drops to 0.00037 at 1963 before jumping to 0.036 in 1964), designated WARN-03, likely reflecting a gap in the underlying 1963 BEA IO table rather than a real economic break. The six-benchmark-year design of S701 (1947, 1958, 1963, 1967, 1972, 1977) means it is a cross-sectional series with no annual interpolation and no NAICS-era extension planned.",
+      "source_ref": "DEC-011 (2026-04-09 and update); series_registry.json S701 (wave: 2, status: calculated); T703_research.json caveat entry"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "BLS_SEHE",
+      "full": "Bureau of Labor Statistics. 1989. Supplement to Employment, Hours, and Earnings, United States, 1909-84. BLS Bulletin 1312-12."
+    },
+    {
+      "id": "BEA_IO_Benchmarks",
+      "full": "Bureau of Economic Analysis. Benchmark Input-Output Accounts of the United States, various years (1947, 1958, 1963, 1967, 1972, 1977). U.S. Department of Commerce."
+    },
+    {
+      "id": "BEA_NIPA_1986",
+      "full": "Bureau of Economic Analysis. 1986. National Income and Product Accounts of the United States, 1929-82. U.S. Department of Commerce."
+    }
+  ],
+  "methodology_summary": "S701 computes unit labor values \u03bb_j (labor hours per dollar of gross output) by solving the simultaneous system \u03bb = l(I \u2212 A)^{-1} using the IO A-matrix (S401) and direct productive-hours vector hp* (S402). Six SIC benchmark years: 1947, 1958, 1963, 1967, 1972, 1977. Book data loaded from ch07/Table7_1_LaborValues.csv. No annual extension planned. Key intermediates: sector-level BLS production worker wages (wp)_j, NIPA EC/WS ratios, and productive employment (Lp)_j from the productive/unproductive labor decomposition (Table F.1).",
+  "known_issues": [
+    "1963 benchmark discontinuity (WARN-03): S701 drops to 0.00037 at 1963 before jumping to 0.036 in 1964 \u2014 likely IO data gap, not real economic break",
+    "Cross-sectional benchmark series only (6 years): no annual interpolation and no NAICS extension planned",
+    "Services sector uses average compensation ec_serv as proxy for (ecp)_serv because BLS production wage data unavailable for services",
+    "Agriculture uses mining sector Lp/L ratio as proxy for productive employment split",
+    "\u03bb_m scalar conversion required before S701 can be regressed against S702 in S703; initial ST2 implementation omitted this step (see DEC-011)"
+  ],
+  "cross_references": [
+    "S401",
+    "S402",
+    "S702",
+    "S703"
+  ],
+  "status": "benchmark_only",
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_31/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_33/full_transcription.md"
+    ],
+    "L3_data_sources": [
+      "BEA Benchmark IO Tables (1947, 1958, 1963, 1967, 1972, 1977)",
+      "BLS SEHE production worker wages and hours",
+      "BEA NIPA employee compensation tables (604B series)",
+      "Book Table 7.1 (ch07/Table7_1_LaborValues.csv)"
+    ],
+    "L5_validation": []
+  },
+  "ported_from": "ST2/research/T701_research.json",
+  "port_date": "2026-05-14"
+}

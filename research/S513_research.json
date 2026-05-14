@@ -1,0 +1,104 @@
+{
+  "series_id": "S513",
+  "series_name": "Marxian Profit Rate (r*)",
+  "chapter": 5,
+  "figures": [
+    "Fig_5_5",
+    "Fig_9_2",
+    "Fig_9_4"
+  ],
+  "research_date": "2026-03-21",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_13/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_31/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_33/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "r* = S*/(C* + V*), where C* here includes the capital stock (not just materials flow). The Marxian profit rate measures surplus value relative to the total capital advanced (constant + variable). This differs from the orthodox profit rate which uses profits (not S*) over total assets.",
+      "source_ref": "ST_1994, Ch5 Table 5.11; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/full_transcription.md"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Derived from S505 (S*), S502 (C*), and S504 (V*). Presented in Table 5.11. The capital stock (K) used in the denominator comes from BEA Fixed Assets tables. Extension depends on all component series.",
+      "source_ref": "ST_1994, Table 5.11; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_31/full_transcription.md; BEA Fixed Assets"
+    },
+    {
+      "entry_type": "figure_context",
+      "content": "Fig 5.5 plots r* over time showing the secular decline (consistent with Marx's tendency of the rate of profit to fall). Fig 9.2 compares r* with the conventional profit rate. Fig 9.4 shows r* alongside the capacity-adjusted rate r*_adj.",
+      "source_ref": "ST_1994, Figs 5.5, 9.2, 9.4; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_13/full_transcription.md"
+    },
+    {
+      "entry_type": "known_issue_detail",
+      "content": "KNOWN ISSUE: The denominator uses total capital stock K, not K* (productive capital only). ST acknowledge this as a data limitation \u2014 ideally only capital employed in productive sectors should be in the denominator. Using total K biases r* downward as unproductive-sector capital grows.",
+      "source_ref": "ST_1994, Ch5; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md"
+    },
+    {
+      "entry_type": "orthodox_comparison",
+      "content": "Table 5.14 compares the Marxian profit rate with orthodox measures. The theoretical difference between Marxian and orthodox analysis is reflected in a fundamentally different empirical picture of capitalist reality (p.180). The Marxian rate shows a clearer secular decline.",
+      "source_ref": "ST_1994, Table 5.14, p.180; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_33/full_transcription.md"
+    },
+    {
+      "entry_type": "decomposition",
+      "content": "r* can be decomposed as: r* = (S*/V*) / (C*/V* + 1) = e / (q + 1), where q = C*/V* is the value composition. A rising q (mechanization) tends to depress r* even if e rises, illustrating Marx's law of the tendency of the rate of profit to fall.",
+      "source_ref": "ST_1994, Ch5 pp.260-270; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "Extension requires all component series to be available simultaneously. The K vs K* issue means the extended r* may show stronger decline than a corrected measure would, particularly as FIRE-sector capital grows post-1989.",
+      "source_ref": "DPR T513_DPR.md; EPR T513_EPR.md"
+    },
+    {
+      "entry_type": "decision_reference",
+      "content": "DEC-002: Total private fixed assets K from BEA Fixed Assets Table 4.1 is used as the capital denominator instead of productive-sector-only K*. Restricting K to productive sectors requires the IO-based sector classification from Chapter 4 (Wave 2). Using total K understates r* level but preserves trend dynamics. Resolution planned for Wave 2 (ADJ-001).",
+      "source_ref": "DECISION_LOG.md#DEC-002"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "BEA_FA",
+      "full": "Bureau of Economic Analysis. Fixed Assets Accounts Tables. https://apps.bea.gov/iTable/"
+    }
+  ],
+  "methodology_summary": "Marxian profit rate r* = S*/(C*+V*) shows secular decline. Known issue per DEC-002: uses total K instead of K* (productive capital only) \u2014 biases r* downward. Decomposable as e/(q+1) linking exploitation rate and value composition.",
+  "known_issues": [
+    "Uses total K instead of K* (productive capital only) \u2014 biases r* downward (DEC-002)",
+    "Extension requires simultaneous availability of S*, C*, V*",
+    "FIRE-sector capital growth amplifies downward bias post-1989"
+  ],
+  "cross_references": [
+    "S502",
+    "S504",
+    "S505",
+    "S506",
+    "S510",
+    "S514"
+  ],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_13/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_31/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_33/full_transcription.md"
+    ],
+    "L3_data_sources": [
+      "BEA Fixed Assets tables",
+      "Book Table E.2 (chunk_31)",
+      "Book Table G.1/G.2 (chunk_33)"
+    ],
+    "L5_validation": []
+  },
+  "ported_from": "ST2/research/T513_research.json",
+  "port_date": "2026-05-14"
+}

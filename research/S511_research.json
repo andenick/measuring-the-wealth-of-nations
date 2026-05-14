@@ -1,0 +1,108 @@
+{
+  "series_id": "S511",
+  "series_name": "Productive Labor Share (Lp/L)",
+  "chapter": 5,
+  "figures": [
+    "Fig_5_2",
+    "Fig_5_7",
+    "Fig_9_3"
+  ],
+  "research_date": "2026-03-21",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_13/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_27/full_transcription.md",
+    "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_30/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_description",
+      "content": "Lp/L = productive employment divided by total employment. Productive sectors are classified per the 85 IO sector concordance. Employment decomposition specifics: Agriculture uses (Lp/L)_min \u00d7 L_agr; Government enterprises uses (Lp/L)_nongovtot \u00d7 L_ge; Trade is entirely unproductive; FIRE is decomposed into fi/re/br/gr subsectors.",
+      "source_ref": "ST_1994, Ch5; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md"
+    },
+    {
+      "entry_type": "benchmark_values",
+      "content": "Book benchmarks from Table 5.7: 1948=0.57, 1958=0.52, 1967=0.51, 1977=0.50, 1989=0.36. The sharp decline from 0.50 to 0.36 between 1977 and 1989 reflects deindustrialization and the shift to services.",
+      "source_ref": "ST_1994, Table 5.7; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md"
+    },
+    {
+      "entry_type": "data_source",
+      "content": "Book period from Table E.3 (Appendix E, chunk_31). Extension via BLS Current Employment Statistics (CES) production worker data as a proxy for productive labor share. BLS CES provides production/nonsupervisory worker counts by industry.",
+      "source_ref": "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_31/full_transcription.md; BLS CES"
+    },
+    {
+      "entry_type": "figure_context",
+      "content": "Fig 5.2 shows the secular decline in productive labor share. Fig 5.7 decomposes employment into productive and unproductive components. Fig 9.3 connects Lp/L to the profit rate decomposition.",
+      "source_ref": "ST_1994, Figs 5.2, 5.7, 9.3; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_13/full_transcription.md"
+    },
+    {
+      "entry_type": "external_comparison",
+      "content": "Mohun decomposes unproductive labor into Luw (unproductive wage workers) and Lum (unproductive management). His broader productive classification yields a higher Lp/L. See mohun_unproductive_decomposition*.csv and mohun_employment*.csv for comparison data.",
+      "source_ref": "Mohun_2013; Inputs/ExternalSources/Mohun/"
+    },
+    {
+      "entry_type": "employment_decomposition",
+      "content": "Special sector rules: Agriculture productive share uses mining sector ratio (Lp/L)_min as proxy. Government enterprises use non-government total ratio. All trade employment is unproductive. FIRE sectors decomposed: finance/insurance partially productive (brokers, some banking), real estate entirely unproductive.",
+      "source_ref": "ST_1994, Ch5; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_27/full_transcription.md"
+    },
+    {
+      "entry_type": "caveat",
+      "content": "BLS CES production worker classification does not perfectly match ST's theoretical productive/unproductive distinction. CES 'production workers' includes some supervisory roles in goods-producing sectors and excludes some productive workers in mixed sectors.",
+      "source_ref": "DPR T511_DPR.md; EPR T511_EPR.md"
+    },
+    {
+      "entry_type": "decision_reference",
+      "content": "DEC-005: BLS CES production/nonsupervisory worker ratios are used as the proxy for IO-based productive/unproductive labor decomposition in the extension period. S511 extension is certified at 78% faithfulness (CERTIFIED WITH NOTES). Cross-validated against Mohun (2005) estimates.",
+      "source_ref": "DECISION_LOG.md#DEC-005"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    },
+    {
+      "id": "Mohun_2013",
+      "full": "Mohun, Simon. 2013. 'Unproductive Labor in the U.S. Economy 1964-2010.' Review of Radical Political Economics 46(3): 355-379."
+    },
+    {
+      "id": "BLS_CES",
+      "full": "Bureau of Labor Statistics. Current Employment Statistics (CES). https://www.bls.gov/ces/"
+    }
+  ],
+  "methodology_summary": "Productive labor share Lp/L declines from 0.57 (1948) to 0.36 (1989). Employment decomposition uses sector-specific rules for agriculture, government enterprises, trade, and FIRE. Extended via BLS CES production worker data (DEC-005, faithfulness 78%).",
+  "known_issues": [
+    "BLS CES production worker \u2260 ST's theoretical productive worker",
+    "Agriculture and government enterprise proxy ratios introduce approximation",
+    "1977-1989 decline is very sharp \u2014 may reflect classification discontinuity"
+  ],
+  "cross_references": [
+    "S504",
+    "S512",
+    "S515",
+    "S516"
+  ],
+  "adequacy_refs": {
+    "L1_kb_pages": [
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_13/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_27/full_transcription.md",
+      "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_30/full_transcription.md"
+    ],
+    "L3_data_sources": [
+      "BLS CES production worker data",
+      "Book Table E.3 (chunk_31)"
+    ],
+    "L5_validation": [
+      "Inputs/ExternalSources/Mohun/mohun_employment*.csv",
+      "Inputs/ExternalSources/Mohun/mohun_unproductive_decomposition*.csv"
+    ]
+  },
+  "ported_from": "ST2/research/T511_research.json",
+  "port_date": "2026-05-14"
+}
