@@ -1,0 +1,34 @@
+{
+  "project": "measuring-wealth-of-nations-replication",
+  "schema_version": "anu-pipeline-v3.1",
+  "last_updated": "2026-05-14T17:50:00Z",
+  "current_wave": 0,
+  "wave_status": {
+    "wave_0_foundation": {
+      "status": "complete",
+      "completed_date": "2026-05-14",
+      "artifacts": [
+        "Inputs/Salvaged/",
+        "Inputs/README.md",
+        "Technical/series_registry.json",
+        "Technical/MIGRATION/T_N_to_S_ES_crosswalk.csv"
+      ],
+      "registry": {"S": 33, "ES": 25, "AS": 4, "total": 62}
+    },
+    "wave_1_chapter_5":  {"status": "not_started", "frontier_series": ["S501","S502","S503","S504","S505","S506","S507","S508","S509","S510","S511","S512","S513","S514","S515","S516"]},
+    "wave_2_chapter_6":  {"status": "not_started", "frontier_series": ["S601","S602","S603","S604","S605","S606","S607","S608","S609"]},
+    "wave_3_chapters_2_4_7_8_9": {"status": "not_started", "frontier_series": ["S201","S401","S402","S701","S702","S703","S801","S901"]},
+    "wave_4_external_studies":   {"status": "not_started", "frontier_series": ["ES1001","ES1002","ES1101","ES1102","ES1103","ES1201","ES1202","ES1301","ES1302","ES1304","ES1305","ES1401","ES1402","ES1403","ES1404","ES1501","ES1502","ES1503","ES1504","ES1601","ES1602","ES1701","ES1702","ES1703","ES1704"]},
+    "wave_5_analytical":         {"status": "not_started", "frontier_series": ["AS001","AS002","AS003","AS004"]},
+    "wave_6_distribution":       {"status": "not_started", "channels": ["publish","drive","archive"]}
+  },
+  "chapters": {},
+  "framework_audit": {
+    "anu_doctor_last_run": "2026-05-14T17:45:00Z",
+    "anu_doctor_status": "PASS",
+    "anu_framework_version": "v10.0",
+    "skill_count": 18,
+    "failures": 0,
+    "warnings": 0
+  }
+}

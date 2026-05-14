@@ -1,0 +1,34 @@
+# API caches and secrets
+data/raw/
+api_keys.env
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*~
+*.swp
+
+# Build artifacts
+*.aux
+*.log
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+*.out
+
+# Generated outputs that don't belong in source control
+intermediate/
+*.pkl
