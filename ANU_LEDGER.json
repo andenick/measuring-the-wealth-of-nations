@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-05-14T23:56:26Z",
+  "generated_at": "2026-05-15T01:00:53Z",
   "registry_version": "1.0.0",
   "series_count": 62,
   "coverage_counts": {
     "research": 58,
-    "dpr": 33,
-    "loader": 19,
-    "processor": 23,
-    "validator": 23,
-    "chopped": 23,
-    "extenbook": 23
+    "dpr": 58,
+    "loader": 28,
+    "processor": 33,
+    "validator": 33,
+    "chopped": 33,
+    "extenbook": 33
   },
   "coverage_pct": {
     "research": 93.5,
-    "dpr": 53.2,
-    "loader": 30.6,
-    "processor": 37.1,
-    "validator": 37.1,
-    "chopped": 37.1,
-    "extenbook": 37.1
+    "dpr": 93.5,
+    "loader": 45.2,
+    "processor": 53.2,
+    "validator": 53.2,
+    "chopped": 53.2,
+    "extenbook": 53.2
   },
   "artifacts": {
     "S501": {
@@ -320,25 +320,25 @@
     },
     "ES1001": {
       "research": true,
-      "dpr": false,
-      "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "dpr": true,
+      "loader": true,
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1002": {
       "research": true,
-      "dpr": false,
-      "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "dpr": true,
+      "loader": true,
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1101": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -347,7 +347,7 @@
     },
     "ES1102": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -356,7 +356,7 @@
     },
     "ES1103": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -365,7 +365,7 @@
     },
     "ES1201": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -374,7 +374,7 @@
     },
     "ES1202": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -383,7 +383,7 @@
     },
     "ES1301": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -392,7 +392,7 @@
     },
     "ES1302": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -401,7 +401,7 @@
     },
     "ES1304": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -410,7 +410,7 @@
     },
     "ES1305": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -419,43 +419,43 @@
     },
     "ES1401": {
       "research": true,
-      "dpr": false,
-      "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "dpr": true,
+      "loader": true,
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1402": {
       "research": true,
-      "dpr": false,
-      "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "dpr": true,
+      "loader": true,
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1403": {
       "research": true,
-      "dpr": false,
-      "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "dpr": true,
+      "loader": true,
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1404": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1501": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -464,7 +464,7 @@
     },
     "ES1502": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -473,7 +473,7 @@
     },
     "ES1503": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -482,7 +482,7 @@
     },
     "ES1504": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -491,7 +491,7 @@
     },
     "ES1601": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -500,7 +500,7 @@
     },
     "ES1602": {
       "research": true,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -509,39 +509,39 @@
     },
     "ES1701": {
       "research": true,
-      "dpr": false,
-      "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "dpr": true,
+      "loader": true,
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1702": {
       "research": true,
-      "dpr": false,
-      "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "dpr": true,
+      "loader": true,
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1703": {
       "research": true,
-      "dpr": false,
-      "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "dpr": true,
+      "loader": true,
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1704": {
       "research": true,
-      "dpr": false,
-      "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "dpr": true,
+      "loader": true,
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "AS001": {
       "research": false,

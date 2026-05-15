@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-14T23:56:26Z",
+  "generated_at": "2026-05-15T01:00:53Z",
   "registry_version": "1.0.0",
   "series_count": 62,
   "by_status": {
-    "PASS": 23,
-    "not_run": 39
+    "PASS": 33,
+    "not_run": 29
   },
   "results": {
     "S501": {
@@ -819,10 +819,58 @@
       "status": "not_run"
     },
     "ES1001": {
-      "status": "not_run"
+      "series_id": "ES1001",
+      "run_at": "2026-05-15T00:59:20Z",
+      "tolerance_class": "dollar_series",
+      "rel_tol": 0.01,
+      "abs_tol": 1.0,
+      "status": "PASS",
+      "n_pass": 2,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1952,
+            "expected": 34.58,
+            "actual": 34.58,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          },
+          {
+            "year": 1980,
+            "expected": 456.39,
+            "actual": 456.39,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "ES1002": {
-      "status": "not_run"
+      "series_id": "ES1002",
+      "run_at": "2026-05-15T00:58:38Z",
+      "tolerance_class": "dollar_series",
+      "rel_tol": 0.01,
+      "abs_tol": 1.0,
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1952,
+            "expected": 16.02,
+            "actual": 16.02,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "ES1101": {
       "status": "not_run"
@@ -852,16 +900,91 @@
       "status": "not_run"
     },
     "ES1401": {
-      "status": "not_run"
+      "series_id": "ES1401",
+      "run_at": "2026-05-15T00:58:39Z",
+      "tolerance_class": "rate_series",
+      "rel_tol": 0.001,
+      "abs_tol": 0.01,
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1948,
+            "expected": 1.6666,
+            "actual": 1.666616,
+            "abs_err": 1.6e-05,
+            "rel_err": 9e-06,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "ES1402": {
-      "status": "not_run"
+      "series_id": "ES1402",
+      "run_at": "2026-05-15T00:58:40Z",
+      "tolerance_class": "share_series",
+      "rel_tol": 0.05,
+      "abs_tol": 0.02,
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1948,
+            "expected": 0.5662,
+            "actual": 0.566229,
+            "abs_err": 2.9e-05,
+            "rel_err": 5.1e-05,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "ES1403": {
-      "status": "not_run"
+      "series_id": "ES1403",
+      "run_at": "2026-05-15T00:58:41Z",
+      "tolerance_class": "rate_series",
+      "rel_tol": 0.001,
+      "abs_tol": 0.01,
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1948,
+            "expected": 1112758.197,
+            "actual": 1112758.197373,
+            "abs_err": 0.000373,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "ES1404": {
-      "status": "not_run"
+      "series_id": "ES1404",
+      "run_at": "2026-05-15T00:58:46Z",
+      "tolerance_class": "rate_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "range_check": {
+        "expected_range": [
+          0.7,
+          1.5
+        ],
+        "actual_min": 1.0200312443932134,
+        "actual_max": 1.3035747128764466,
+        "n_rows": 42
+      }
     },
     "ES1501": {
       "status": "not_run"
@@ -882,16 +1005,96 @@
       "status": "not_run"
     },
     "ES1701": {
-      "status": "not_run"
+      "series_id": "ES1701",
+      "run_at": "2026-05-15T00:58:42Z",
+      "tolerance_class": "share_series",
+      "rel_tol": 0.05,
+      "abs_tol": 0.02,
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1972,
+            "expected": 34,
+            "actual": 34.0,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "ES1702": {
-      "status": "not_run"
+      "series_id": "ES1702",
+      "run_at": "2026-05-15T00:58:43Z",
+      "tolerance_class": "share_series",
+      "rel_tol": 0.05,
+      "abs_tol": 0.02,
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1972,
+            "expected": 206,
+            "actual": 206.0,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "ES1703": {
-      "status": "not_run"
+      "series_id": "ES1703",
+      "run_at": "2026-05-15T00:58:44Z",
+      "tolerance_class": "share_series",
+      "rel_tol": 0.05,
+      "abs_tol": 0.02,
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1972,
+            "expected": 293,
+            "actual": 293.0,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "ES1704": {
-      "status": "not_run"
+      "series_id": "ES1704",
+      "run_at": "2026-05-15T00:58:45Z",
+      "tolerance_class": "dollar_series",
+      "rel_tol": 0.01,
+      "abs_tol": 1.0,
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "benchmarks": {
+        "checks": [
+          {
+            "year": 1972,
+            "expected": 10423,
+            "actual": 10423.0,
+            "abs_err": 0.0,
+            "rel_err": 0.0,
+            "status": "PASS"
+          }
+        ]
+      }
     },
     "AS001": {
       "status": "not_run"

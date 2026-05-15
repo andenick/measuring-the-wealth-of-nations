@@ -16,6 +16,9 @@ BOOK_TABLES       = DATA_SOURCE / "book_tables"
 EXTERNAL_STUDIES  = DATA_SOURCE / "external_studies"
 CONCORDANCES      = DATA_SOURCE / "concordances"
 
+# Alias for backward compatibility / Wave 4 imports
+EXTERNAL_STUDIES_DIR = EXTERNAL_STUDIES
+
 # Validation outputs
 VALIDATION_DIR    = DATA_INTERMEDIATE / "validation"
 
