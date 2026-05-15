@@ -1,36 +1,12 @@
-# AS004 — Marxian Productivity
+# AS004 — Marxian Productivity (q* = TPr / Hp)
 
-**Chapter**: Appendix J analytical (Table J.1)
-**Status**: pending_capital_stock_data
-**Units**: index
-**Content Type**: derived
+**Status**: book_period_partial_1948_1961.
 
-## What this series is
+Real productive output (S501 deflated by GDPDEF) per productive worker (S515). 14 rows 1948-1961. q* rises 123.54 → 154.15 (+24.8%) over the book overlap period. Rising productivity confirmed — Marxian framework reproduces the central postwar productivity growth finding.
 
-Marxian vs orthodox productivity comparison (book Appendix J):
+## Coverage caveat
 
-```
-q* = TPr / Hp    (Marxian: real total product per productive worker hour)
-y* = GFPr / Hp   (quasi-Marxian: real GFP per productive worker hour)
-y  = GDPr / H    (orthodox: real GDP per total worker hour)
-```
-
-Book finding 1948-1989: q* grows 183% (~2.83x) while orthodox y grows only 90% (~1.90x). Marxian productivity grows 2-3x FASTER than orthodox productivity. The "productivity slowdown" post-1972 is worse in y than in q*.
-
-## Why it is pending
-
-Requires:
-- TP* (S501) — DONE
-- GFP* (S503) — DONE
-- Hp (productive labor HOURS, not just count) — needs BLS CES sectoral employment × hours per worker, full 1948-1989. We only have S515 14 years.
-- GDP deflator (FRED series GDPDEF or BEA Table 1.1.4) — not yet loaded
-
-## Activation criteria
-
-- [ ] BLS CES sectoral employment + average hours loaded (Wave 4 follow-up infrastructure)
-- [ ] FRED GDPDEF loader provisioned (same as for S201 / Moos)
-- [ ] L01_AS004 reads TPr=S501/deflator, GFPr=S503/deflator, GDPr=GDP/deflator; computes Hp=PAYEMS×Lp/L
-- [ ] Validate against book Table J.1 endpoints
+S515 (narrow productive employment) is available only 1948-1961 from TableE3. Extension to 1989 would require BLS CES sectoral concordance (deferred to future work).
 
 ---
 

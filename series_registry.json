@@ -2311,7 +2311,7 @@
       "loader": "L13",
       "processor": "P15",
       "wave": 3,
-      "status": "pending_data_sourcing",
+      "status": "validated_book_and_extension",
       "content_type": "cross_sectional",
       "units": "ratio"
     },
@@ -2656,7 +2656,7 @@
       },
       "processor": "P19",
       "wave": 1,
-      "status": "pending_data_assembly",
+      "status": "validated_book_and_extension",
       "units": "share",
       "content_type": "time_series"
     },
@@ -2714,7 +2714,7 @@
       },
       "processor": "P19",
       "wave": 1,
-      "status": "pending_data_assembly",
+      "status": "validated_book_and_extension",
       "units": "share",
       "content_type": "time_series"
     },
@@ -2774,7 +2774,7 @@
       },
       "processor": "P17",
       "wave": 1,
-      "status": "pending_data_assembly",
+      "status": "validated_book_and_extension",
       "units": "share",
       "content_type": "time_series"
     },
@@ -2832,7 +2832,7 @@
       },
       "processor": "P17",
       "wave": 1,
-      "status": "pending_data_assembly",
+      "status": "validated_book_and_extension",
       "units": "share",
       "content_type": "time_series"
     },
@@ -2889,7 +2889,7 @@
       },
       "processor": "P17",
       "wave": 1,
-      "status": "pending_data_assembly",
+      "status": "validated_book_and_extension",
       "units": "share",
       "content_type": "time_series"
     },
@@ -2948,7 +2948,7 @@
       },
       "processor": "P17",
       "wave": 1,
-      "status": "pending_data_assembly",
+      "status": "validated_book_and_extension",
       "units": "share",
       "content_type": "time_series"
     },
@@ -3466,7 +3466,7 @@
       },
       "processor": "P18",
       "wave": 1,
-      "status": "pending_data_assembly",
+      "status": "validated_book_and_extension",
       "units": "share",
       "content_type": "time_series"
     },
@@ -3525,7 +3525,7 @@
       },
       "processor": "P18",
       "wave": 1,
-      "status": "pending_data_assembly",
+      "status": "validated_book_and_extension",
       "units": "share",
       "content_type": "time_series"
     },
@@ -3859,7 +3859,7 @@
       "loader": null,
       "processor": null,
       "wave": 5,
-      "status": "pending_capital_stock_data",
+      "status": "book_period_partial_1948_1961",
       "units": "index",
       "content_type": "derived",
       "notes": "A10_marxian_productivity.py (legacy script)"

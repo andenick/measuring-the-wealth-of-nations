@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T03:52:02Z",
+  "generated_at": "2026-05-15T04:27:28Z",
   "registry_version": "1.0.0",
   "entries": {
     "S501-A": {
@@ -1539,6 +1539,20 @@
       ],
       "units": "millions_nzd",
       "color": "#98df8a",
+      "is_component": false,
+      "kind": "subseries"
+    },
+    "S517-A": {
+      "series_id": "S517",
+      "subseries_id": "S517-A",
+      "name": "BEA Fixed Assets 4.1 Line 1",
+      "source": "BEA",
+      "period": [
+        1925,
+        2024
+      ],
+      "units": "billions_usd",
+      "color": "#888888",
       "is_component": false,
       "kind": "subseries"
     }

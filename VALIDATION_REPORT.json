@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-15T03:52:51Z",
+  "generated_at": "2026-05-15T04:27:39Z",
   "registry_version": "1.0.0",
-  "series_count": 63,
+  "series_count": 64,
   "by_status": {
-    "PASS": 48,
-    "not_run": 15
+    "PASS": 59,
+    "not_run": 5
   },
   "results": {
     "S501": {
@@ -885,7 +885,17 @@
       }
     },
     "S801": {
-      "status": "not_run"
+      "series_id": "S801",
+      "run_at": "2026-05-15T04:18:56Z",
+      "tolerance_class": "rate_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "round_trip_check": {
+        "vs_S506_max_err": 0.0,
+        "comparison_years": 42
+      }
     },
     "ES1001": {
       "series_id": "ES1001",
@@ -993,22 +1003,113 @@
       }
     },
     "ES1201": {
-      "status": "not_run"
+      "series_id": "ES1201",
+      "run_at": "2026-05-15T04:16:29Z",
+      "tolerance_class": "share_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "range_check": {
+        "expected": [
+          -0.05,
+          0.1
+        ],
+        "actual": [
+          -0.0367519150169759,
+          0.0847881906207455
+        ]
+      }
     },
     "ES1202": {
-      "status": "not_run"
+      "series_id": "ES1202",
+      "run_at": "2026-05-15T04:17:58Z",
+      "tolerance_class": "share_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "range_check": {
+        "expected": [
+          -0.1,
+          0.2
+        ],
+        "actual": [
+          -0.0643401406360585,
+          0.1562639968588061
+        ]
+      }
     },
     "ES1301": {
-      "status": "not_run"
+      "series_id": "ES1301",
+      "run_at": "2026-05-15T04:20:14Z",
+      "tolerance_class": "share_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "range_check": {
+        "expected": [
+          -0.05,
+          0.1
+        ],
+        "actual": [
+          -0.0202125821307303,
+          0.0796081856267275
+        ]
+      }
     },
     "ES1302": {
-      "status": "not_run"
+      "series_id": "ES1302",
+      "run_at": "2026-05-15T04:21:41Z",
+      "tolerance_class": "share_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "range_check": {
+        "expected": [
+          -0.2,
+          0.2
+        ],
+        "actual": [
+          -0.0353716090009817,
+          0.1503672858884741
+        ]
+      }
     },
     "ES1304": {
-      "status": "not_run"
+      "series_id": "ES1304",
+      "run_at": "2026-05-15T04:23:23Z",
+      "tolerance_class": "share_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "range_check": {
+        "expected": [
+          -0.1,
+          0.1
+        ],
+        "actual": [
+          0.0114308686089502,
+          0.0237925673068363
+        ]
+      }
     },
     "ES1305": {
-      "status": "not_run"
+      "series_id": "ES1305",
+      "run_at": "2026-05-15T04:24:19Z",
+      "tolerance_class": "share_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "structural_break": {
+        "pre_2000_avg": -0.006723315126565145,
+        "post_2000_avg": 0.030875830671693826,
+        "detected": true
+      }
     },
     "ES1401": {
       "series_id": "ES1401",
@@ -1184,10 +1285,38 @@
       }
     },
     "ES1601": {
-      "status": "not_run"
+      "series_id": "ES1601",
+      "run_at": "2026-05-15T04:25:24Z",
+      "tolerance_class": "share_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "range_check": {
+        "expected": [
+          0.2,
+          0.8
+        ],
+        "actual": [
+          0.47995,
+          0.5677
+        ]
+      }
     },
     "ES1602": {
-      "status": "not_run"
+      "series_id": "ES1602",
+      "run_at": "2026-05-15T04:26:07Z",
+      "tolerance_class": "share_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "kt_finding": {
+        "n_negative": 30,
+        "n_total": 30,
+        "pct_negative": 1.0,
+        "rule": "K&T 2022: NSW negative for nearly all 1980-2019 years"
+      }
     },
     "ES1701": {
       "series_id": "ES1701",
@@ -1353,7 +1482,20 @@
       }
     },
     "AS004": {
-      "status": "not_run"
+      "series_id": "AS004",
+      "run_at": "2026-05-15T04:26:26Z",
+      "tolerance_class": "rate_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "trend_check": {
+        "first_value": 123.53889015807349,
+        "last_value": 154.15178867378364,
+        "growth_pct": 24.77996886368301,
+        "rising": true,
+        "n_years": 14
+      }
     },
     "S617": {
       "series_id": "S617",
@@ -1384,6 +1526,25 @@
             "status": "PASS"
           }
         ]
+      }
+    },
+    "S517": {
+      "series_id": "S517",
+      "run_at": "2026-05-15T03:34:33Z",
+      "tolerance_class": "level_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "checks": {
+        "all_positive": true,
+        "v_1948": 291.557,
+        "v_1989": 6699.84,
+        "v_2024": 35899.94,
+        "nominal_drop_years": {
+          "6": -0.10732606358470276,
+          "7": -0.07399951825470563
+        }
       }
     }
   }
