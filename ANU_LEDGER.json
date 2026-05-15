@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-05-15T01:02:43Z",
+  "generated_at": "2026-05-15T01:49:43Z",
   "registry_version": "1.0.0",
-  "series_count": 62,
+  "series_count": 63,
   "coverage_counts": {
     "research": 58,
-    "dpr": 58,
-    "loader": 28,
-    "processor": 35,
-    "validator": 35,
-    "chopped": 35,
-    "extenbook": 35
+    "dpr": 62,
+    "loader": 32,
+    "processor": 43,
+    "validator": 43,
+    "chopped": 43,
+    "extenbook": 43
   },
   "coverage_pct": {
-    "research": 93.5,
-    "dpr": 93.5,
-    "loader": 45.2,
-    "processor": 56.5,
-    "validator": 56.5,
-    "chopped": 56.5,
-    "extenbook": 56.5
+    "research": 92.1,
+    "dpr": 98.4,
+    "loader": 50.8,
+    "processor": 68.3,
+    "validator": 68.3,
+    "chopped": 68.3,
+    "extenbook": 68.3
   },
   "artifacts": {
     "S501": {
@@ -340,28 +340,28 @@
       "research": true,
       "dpr": true,
       "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1102": {
       "research": true,
       "dpr": true,
       "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1103": {
       "research": true,
       "dpr": true,
       "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1201": {
       "research": true,
@@ -456,38 +456,38 @@
     "ES1501": {
       "research": true,
       "dpr": true,
-      "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "loader": true,
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1502": {
       "research": true,
       "dpr": true,
-      "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "loader": true,
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1503": {
       "research": true,
       "dpr": true,
-      "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "loader": true,
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1504": {
       "research": true,
       "dpr": true,
       "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "ES1601": {
       "research": true,
@@ -545,7 +545,7 @@
     },
     "AS001": {
       "research": false,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
@@ -554,7 +554,7 @@
     },
     "AS002": {
       "research": false,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": true,
       "validator": true,
@@ -563,7 +563,7 @@
     },
     "AS003": {
       "research": false,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": true,
       "validator": true,
@@ -572,12 +572,21 @@
     },
     "AS004": {
       "research": false,
-      "dpr": false,
+      "dpr": true,
       "loader": false,
       "processor": false,
       "validator": false,
       "chopped": false,
       "extenbook": false
+    },
+    "S617": {
+      "research": false,
+      "dpr": false,
+      "loader": true,
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     }
   }
 }
