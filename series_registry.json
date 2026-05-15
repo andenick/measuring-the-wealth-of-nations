@@ -782,7 +782,7 @@
       "loader": "L05",
       "processor": "P07",
       "wave": 1,
-      "status": "pending_capital_stock_data",
+      "status": "validated_book_and_extension",
       "units": "ratio",
       "content_type": "time_series",
       "data_dependency": "K* (constant capital stock) not yet sourced"
@@ -1084,7 +1084,7 @@
       "loader": "L06",
       "processor": "P08",
       "wave": 1,
-      "status": "pending_capital_stock_data",
+      "status": "validated_book_and_extension",
       "units": "rate",
       "content_type": "time_series",
       "data_dependency": "K* (constant capital stock) not yet sourced"
@@ -1186,7 +1186,7 @@
       "loader": "L06",
       "processor": "P08",
       "wave": 1,
-      "status": "pending_capital_stock_data",
+      "status": "validated_book_and_extension_partial",
       "units": "rate",
       "content_type": "time_series",
       "data_dependency": "K* (constant capital stock) not yet sourced"
@@ -2265,7 +2265,7 @@
       "loader": "L14",
       "processor": "P15",
       "wave": 3,
-      "status": "pending_data_sourcing",
+      "status": "validated_book_and_extension",
       "content_type": "cross_sectional",
       "units": "billions_usd"
     },
@@ -3787,7 +3787,7 @@
       "loader": null,
       "processor": null,
       "wave": 5,
-      "status": "pending_capital_stock_data",
+      "status": "validated_book_and_extension",
       "units": "ratio",
       "content_type": "derived",
       "notes": "A07_social_burden_rate.py (legacy script)"
@@ -3865,6 +3865,38 @@
       "notes": "A10_marxian_productivity.py (legacy script)"
     },
     "S617": {
+      "status": "book_period_validated"
+    },
+    "S517": {
+      "name": "Productive Capital Stock (K*)",
+      "chapter": 5,
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "subseries": {
+        "S517-A": {
+          "name": "BEA Fixed Assets 4.1 Line 1",
+          "source": "BEA",
+          "period": [
+            1925,
+            2024
+          ],
+          "units": "billions_usd"
+        }
+      },
+      "construction": [
+        {
+          "step": 1,
+          "op": "load",
+          "subseries": [
+            "S517-A"
+          ]
+        }
+      ],
+      "extension": null,
+      "validation": {},
+      "loader": "L01",
+      "processor": "P02",
+      "wave": 2,
       "status": "book_period_validated"
     }
   },

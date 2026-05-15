@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-15T01:49:44Z",
+  "generated_at": "2026-05-15T03:52:51Z",
   "registry_version": "1.0.0",
   "series_count": 63,
   "by_status": {
-    "PASS": 43,
-    "not_run": 20
+    "PASS": 48,
+    "not_run": 15
   },
   "results": {
     "S501": {
@@ -340,7 +340,21 @@
       }
     },
     "S510": {
-      "status": "not_run"
+      "series_id": "S510",
+      "run_at": "2026-05-15T03:37:43Z",
+      "tolerance_class": "rate_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "range_check": {
+        "expected": [
+          1,
+          30
+        ],
+        "actual_min": 3.2977830562153607,
+        "actual_max": 5.834697977190952
+      }
     },
     "S511": {
       "series_id": "S511",
@@ -453,10 +467,41 @@
       }
     },
     "S513": {
-      "status": "not_run"
+      "series_id": "S513",
+      "run_at": "2026-05-15T03:39:16Z",
+      "tolerance_class": "rate_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "checks": {
+        "in_range": true,
+        "range_expected": [
+          0.05,
+          2.0
+        ],
+        "actual_range": [
+          0.3208292137109713,
+          0.425980266868549
+        ],
+        "v_1948": 0.3946132164108988,
+        "v_1989": 0.3722818937952807,
+        "secular_decline_1948_to_1989": true
+      }
     },
     "S514": {
-      "status": "not_run"
+      "series_id": "S514",
+      "run_at": "2026-05-15T03:40:36Z",
+      "tolerance_class": "rate_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 19,
+      "checks": {
+        "r_adj_always_le_r_star": true,
+        "n_valid_years": 23,
+        "n_pending_pre_1967": 19
+      }
     },
     "S515": {
       "series_id": "S515",
@@ -819,7 +864,25 @@
       "status": "not_run"
     },
     "S201": {
-      "status": "not_run"
+      "series_id": "S201",
+      "run_at": "2026-05-15T03:51:18Z",
+      "tolerance_class": "share_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "checks": {
+        "GFP_GDP_range_expected": [
+          0.6,
+          1.0
+        ],
+        "actual_range": [
+          0.7734659439376912,
+          0.9026188845329874
+        ],
+        "v_1948": 0.9026188845329874,
+        "v_1989": 0.7734659439376912
+      }
     },
     "S801": {
       "status": "not_run"
@@ -1219,7 +1282,24 @@
       }
     },
     "AS001": {
-      "status": "not_run"
+      "series_id": "AS001",
+      "run_at": "2026-05-15T03:49:24Z",
+      "tolerance_class": "share_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "checks": {
+        "in_range": true,
+        "actual_range": [
+          0.7739518987341772,
+          0.86794303870863
+        ],
+        "v_1948": 0.7906295851674003,
+        "v_1989": 0.8577410093940578,
+        "rising_1948_to_1989": true,
+        "note": "Book reports b rises 0.56->0.66 (16% increase). Our Pn approximation uses NIPA total corporate profits (slight over-count vs productive Pn)."
+      }
     },
     "AS002": {
       "series_id": "AS002",

@@ -1,0 +1,22 @@
+{
+  "script": "pull_fred_ch05.py",
+  "project": "AS2",
+  "chapter": 5,
+  "api": "FRED",
+  "base_url": "https://api.stlouisfed.org/fred/series/observations",
+  "timestamp": "2026-02-24T20:52:08.848035+00:00",
+  "series": [
+    {
+      "series_id": "TCU",
+      "description": "Capacity Utilization: Total Industry (CAPUTLB50001SQ)",
+      "output_file": "fred_tcu_capacity_utilization.csv",
+      "row_count": 59,
+      "as2_series": [
+        "T514"
+      ],
+      "purpose": "Capacity-adjusted profit rate r*_adj = r* \u00d7 (1/TCU)",
+      "units": "Percent of Capacity",
+      "status": "success"
+    }
+  ]
+}

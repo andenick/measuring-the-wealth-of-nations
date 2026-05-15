@@ -1,0 +1,23 @@
+{
+  "script": "pull_bea_fixed_assets.py",
+  "project": "AS2",
+  "chapter": 5,
+  "api": "BEA Fixed Assets",
+  "base_url": "https://apps.bea.gov/api/data",
+  "timestamp": "2026-02-24T20:43:22.520859+00:00",
+  "tables": [
+    {
+      "table_id": "FAAt401",
+      "table_name": "FAAt401",
+      "description": "Current-Cost Net Stock of Private Fixed Assets (Fixed Assets 4.1)",
+      "output_file": "fixed_assets_4_1_net_stock.csv",
+      "row_count": 7600,
+      "as2_series": [
+        "T513",
+        "T514"
+      ],
+      "purpose": "Capital stock K for profit rate r* = S*/(C*+V*)",
+      "status": "success"
+    }
+  ]
+}

@@ -1,5 +1,15 @@
 # API caches and secrets
-data/raw/
+data/raw/**
+!data/raw/
+!data/raw/bea/
+!data/raw/bls/
+!data/raw/fred/
+!data/raw/bea/*.csv
+!data/raw/bea/*.json
+!data/raw/bls/*.csv
+!data/raw/bls/*.json
+!data/raw/fred/*.csv
+!data/raw/fred/*.json
 api_keys.env
 .env
 *.env

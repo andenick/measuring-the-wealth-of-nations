@@ -1,0 +1,65 @@
+{
+  "script": "pull_bea_nipa_ch06.py",
+  "project": "AS2",
+  "chapter": 6,
+  "api": "BEA NIPA",
+  "base_url": "https://apps.bea.gov/api/data",
+  "timestamp": "2026-02-24T20:42:26.946964+00:00",
+  "tables": [
+    {
+      "table_id": "T20100",
+      "table_name": "T20100",
+      "description": "Personal Income and Its Disposition (NIPA 2.1)",
+      "output_file": "nipa_2_1_personal_income.csv",
+      "row_count": 4074,
+      "as2_series": [
+        "T605",
+        "T606"
+      ],
+      "purpose": "Transfer payments, social insurance contributions",
+      "status": "success"
+    },
+    {
+      "table_id": "T30100",
+      "table_name": "T30100",
+      "description": "Government Current Receipts and Expenditures (NIPA 3.1)",
+      "output_file": "nipa_3_1_govt_receipts_expenditures.csv",
+      "row_count": 3815,
+      "as2_series": [
+        "T601",
+        "T602",
+        "T603",
+        "T604",
+        "T607"
+      ],
+      "purpose": "Total government taxes and expenditures for NSW",
+      "status": "success"
+    },
+    {
+      "table_id": "T30200",
+      "table_name": "T30200",
+      "description": "Federal Government Current Receipts and Expenditures (NIPA 3.2)",
+      "output_file": "nipa_3_2_federal_govt.csv",
+      "row_count": 4235,
+      "as2_series": [
+        "T601",
+        "T602"
+      ],
+      "purpose": "Federal tax decomposition (personal, corporate, social insurance)",
+      "status": "success"
+    },
+    {
+      "table_id": "T30300",
+      "table_name": "T30300",
+      "description": "State and Local Government Current Receipts and Expenditures (NIPA 3.3)",
+      "output_file": "nipa_3_3_state_local_govt.csv",
+      "row_count": 3886,
+      "as2_series": [
+        "T603",
+        "T604"
+      ],
+      "purpose": "State/local tax decomposition",
+      "status": "success"
+    }
+  ]
+}
