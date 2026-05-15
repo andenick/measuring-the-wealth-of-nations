@@ -1,0 +1,7 @@
+series_id,year,value,units,stage,provenance
+S701-A,1947,44.69718165489747,labor_hours_per_unit,benchmark_only_matrix_derived,mean(column_sum(Leontief inverse B)) per benchmark IO year
+S701-A,1958,18.399301852052265,labor_hours_per_unit,benchmark_only_matrix_derived,mean(column_sum(Leontief inverse B)) per benchmark IO year
+S701-A,1963,18.47703815217319,labor_hours_per_unit,benchmark_only_matrix_derived,mean(column_sum(Leontief inverse B)) per benchmark IO year
+S701-A,1967,2.079344184211604,labor_hours_per_unit,benchmark_only_matrix_derived,mean(column_sum(Leontief inverse B)) per benchmark IO year
+S701-A,1972,51.858541267564185,labor_hours_per_unit,benchmark_only_matrix_derived,mean(column_sum(Leontief inverse B)) per benchmark IO year
+S701-A,1977,51.71750101575981,labor_hours_per_unit,benchmark_only_matrix_derived,mean(column_sum(Leontief inverse B)) per benchmark IO year

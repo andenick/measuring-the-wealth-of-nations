@@ -1,0 +1,7 @@
+series_id,year,value,units,stage,provenance,r_used
+S702-A,1947,61.57943970009901,index,benchmark_only_matrix_derived,S701 base × (1 + S513 r*),0.3777029651566802
+S702-A,1958,25.339587135883804,index,benchmark_only_matrix_derived,S701 base × (1 + S513 r*),0.377203729773987
+S702-A,1963,26.148742611769222,index,benchmark_only_matrix_derived,S701 base × (1 + S513 r*),0.4152020684491426
+S702-A,1967,2.948216992204035,index,benchmark_only_matrix_derived,S701 base × (1 + S513 r*),0.4178590608470474
+S702-A,1972,71.44898503937483,index,benchmark_only_matrix_derived,S701 base × (1 + S513 r*),0.3777669655367615
+S702-A,1977,70.09306204066466,index,benchmark_only_matrix_derived,S701 base × (1 + S513 r*),0.3553064371634138

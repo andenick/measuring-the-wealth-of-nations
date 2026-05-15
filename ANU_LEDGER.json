@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-05-15T04:27:37Z",
+  "generated_at": "2026-05-15T04:35:33Z",
   "registry_version": "1.0.0",
   "series_count": 64,
   "coverage_counts": {
     "research": 58,
     "dpr": 64,
-    "loader": 35,
-    "processor": 59,
-    "validator": 59,
-    "chopped": 59,
-    "extenbook": 59
+    "loader": 37,
+    "processor": 64,
+    "validator": 64,
+    "chopped": 64,
+    "extenbook": 64
   },
   "coverage_pct": {
     "research": 90.6,
     "dpr": 100.0,
-    "loader": 54.7,
-    "processor": 92.2,
-    "validator": 92.2,
-    "chopped": 92.2,
-    "extenbook": 92.2
+    "loader": 57.8,
+    "processor": 100.0,
+    "validator": 100.0,
+    "chopped": 100.0,
+    "extenbook": 100.0
   },
   "artifacts": {
     "S501": {
@@ -258,47 +258,47 @@
     "S401": {
       "research": true,
       "dpr": true,
-      "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "loader": true,
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "S402": {
       "research": true,
       "dpr": true,
-      "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "loader": true,
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "S701": {
       "research": true,
       "dpr": true,
       "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "S702": {
       "research": true,
       "dpr": true,
       "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "S703": {
       "research": true,
       "dpr": true,
       "loader": false,
-      "processor": false,
-      "validator": false,
-      "chopped": false,
-      "extenbook": false
+      "processor": true,
+      "validator": true,
+      "chopped": true,
+      "extenbook": true
     },
     "S201": {
       "research": true,

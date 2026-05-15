@@ -1,0 +1,7 @@
+series_id,year,value,units,stage,provenance
+S703-A,1947,37.77029651566801,percent,benchmark_only_derived,(S702 - S701) / S701 × 100
+S703-A,1958,37.72037297739869,percent,benchmark_only_derived,(S702 - S701) / S701 × 100
+S703-A,1963,41.520206844914256,percent,benchmark_only_derived,(S702 - S701) / S701 × 100
+S703-A,1967,41.78590608470474,percent,benchmark_only_derived,(S702 - S701) / S701 × 100
+S703-A,1972,37.77669655367616,percent,benchmark_only_derived,(S702 - S701) / S701 × 100
+S703-A,1977,35.53064371634139,percent,benchmark_only_derived,(S702 - S701) / S701 × 100

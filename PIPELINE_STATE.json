@@ -1,7 +1,7 @@
 {
   "project": "measuring-wealth-of-nations-replication",
   "schema_version": "anu-pipeline-v3.1",
-  "last_updated": "2026-05-15T01:49:45Z",
+  "last_updated": "2026-05-15T04:37:16Z",
   "current_wave": 0,
   "wave_status": {
     "wave_0_foundation": {
@@ -56,7 +56,7 @@
       ]
     },
     "wave_3_chapters_2_4_7_8_9": {
-      "status": "not_started",
+      "status": "in_progress",
       "frontier_series": [
         "S201",
         "S401",

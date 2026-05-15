@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-05-15T04:27:39Z",
+  "generated_at": "2026-05-15T04:37:15Z",
   "registry_version": "1.0.0",
   "series_count": 64,
   "by_status": {
-    "PASS": 59,
-    "not_run": 5
+    "PASS": 64
   },
   "results": {
     "S501": {
@@ -849,19 +848,87 @@
       }
     },
     "S401": {
-      "status": "not_run"
+      "series_id": "S401",
+      "run_at": "2026-05-15T04:33:43Z",
+      "tolerance_class": "rate_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "checks": {
+        "hawkins_simon_all_lt_1": true,
+        "max_eig_max": 0.981982,
+        "sparsity_in_unit_interval": true,
+        "n_benchmark_years": 6
+      }
     },
     "S402": {
-      "status": "not_run"
+      "series_id": "S402",
+      "run_at": "2026-05-15T04:33:53Z",
+      "tolerance_class": "rate_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "checks": {
+        "b_trace_ge_n": true,
+        "n_benchmark_years": 6,
+        "frobenius_range": [
+          10.4717,
+          103.0209
+        ]
+      }
     },
     "S701": {
-      "status": "not_run"
+      "series_id": "S701",
+      "run_at": "2026-05-15T04:37:14Z",
+      "tolerance_class": "rate_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "range_check": {
+        "expected": [
+          1,
+          60
+        ],
+        "actual": [
+          2.079344184211604,
+          51.858541267564185
+        ]
+      }
     },
     "S702": {
-      "status": "not_run"
+      "series_id": "S702",
+      "run_at": "2026-05-15T04:34:41Z",
+      "tolerance_class": "rate_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "checks": {
+        "markup_positive_all_years": true,
+        "n_benchmark_years": 6
+      }
     },
     "S703": {
-      "status": "not_run"
+      "series_id": "S703",
+      "run_at": "2026-05-15T04:34:52Z",
+      "tolerance_class": "share_series",
+      "status": "PASS",
+      "n_pass": 1,
+      "n_fail": 0,
+      "n_missing": 0,
+      "range_check": {
+        "expected": [
+          0,
+          100
+        ],
+        "actual": [
+          35.53064371634139,
+          41.78590608470474
+        ]
+      }
     },
     "S201": {
       "series_id": "S201",

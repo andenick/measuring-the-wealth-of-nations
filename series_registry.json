@@ -2026,7 +2026,7 @@
       "loader": "L11",
       "processor": "P13",
       "wave": 2,
-      "status": "pending_data_sourcing",
+      "status": "validated_book_and_extension",
       "units": "matrix",
       "content_type": "benchmark_only"
     },
@@ -2081,7 +2081,7 @@
       "loader": "L11",
       "processor": "P13",
       "wave": 2,
-      "status": "pending_data_sourcing",
+      "status": "validated_book_and_extension",
       "units": "matrix",
       "content_type": "benchmark_only"
     },
@@ -2127,7 +2127,7 @@
       "loader": "L12",
       "processor": "P14",
       "wave": 2,
-      "status": "pending_data_sourcing",
+      "status": "benchmark_only_matrix_derived",
       "units": "labor_hours_per_dollar",
       "content_type": "benchmark_only"
     },
@@ -2173,7 +2173,7 @@
       "loader": "L12",
       "processor": "P14",
       "wave": 2,
-      "status": "pending_data_sourcing",
+      "status": "benchmark_only_matrix_derived",
       "units": "index",
       "content_type": "benchmark_only"
     },
@@ -2219,7 +2219,7 @@
       "loader": "L12",
       "processor": "P14",
       "wave": 2,
-      "status": "pending_data_sourcing",
+      "status": "validated_book_and_extension",
       "units": "percent",
       "content_type": "benchmark_only"
     },

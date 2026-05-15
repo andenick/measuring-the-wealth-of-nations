@@ -1,0 +1,7 @@
+series_id,year,value,units,stage,provenance,n_sectors,max_b_element,b_column_sum_max,b_trace,b_frobenius_norm
+S402-A,1947,79.9427,matrix_summary,benchmark_only,BEA Benchmark IO via io_matrix.b_matrix_summary,84,5.8687,50.2194,143.7506,79.9427
+S402-A,1958,32.0272,matrix_summary,benchmark_only,BEA Benchmark IO via io_matrix.b_matrix_summary,84,2.8149,21.676,116.1279,32.0272
+S402-A,1963,32.6916,matrix_summary,benchmark_only,BEA Benchmark IO via io_matrix.b_matrix_summary,84,2.5196,21.9001,117.1699,32.6916
+S402-A,1967,10.4717,matrix_summary,benchmark_only,BEA Benchmark IO via io_matrix.b_matrix_summary,84,1.4992,3.081,91.9506,10.4717
+S402-A,1972,103.0209,matrix_summary,benchmark_only,BEA Benchmark IO via io_matrix.b_matrix_summary,84,7.2357,59.2132,153.7414,103.0209
+S402-A,1977,98.9415,matrix_summary,benchmark_only,BEA Benchmark IO via io_matrix.b_matrix_summary,84,6.1881,58.6162,153.0758,98.9415
