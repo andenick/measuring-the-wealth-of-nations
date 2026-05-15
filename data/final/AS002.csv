@@ -1,0 +1,6 @@
+series_id,year,value,units,stage,provenance,khanjian_e_star_rev,khanjian_e_rev,book_published_gap_pct,our_gap_to_khanjian_pct
+AS002-A,1958,2.01,ratio,cross_validation,S506 vs Khanjian Table 5.12,2.445,2.638,7.3,21.64
+AS002-A,1963,2.07,ratio,cross_validation,S506 vs Khanjian Table 5.12,2.467,2.644,6.7,19.18
+AS002-A,1967,2.1,ratio,cross_validation,S506 vs Khanjian Table 5.12,2.648,2.884,8.2,26.1
+AS002-A,1972,1.99,ratio,cross_validation,S506 vs Khanjian Table 5.12,2.606,2.874,9.3,30.95
+AS002-A,1977,2.1,ratio,cross_validation,S506 vs Khanjian Table 5.12,2.674,2.913,8.2,27.33

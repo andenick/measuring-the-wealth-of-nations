@@ -3787,7 +3787,7 @@
       "loader": null,
       "processor": null,
       "wave": 5,
-      "status": "stub",
+      "status": "pending_capital_stock_data",
       "units": "ratio",
       "content_type": "derived",
       "notes": "A07_social_burden_rate.py (legacy script)"
@@ -3811,7 +3811,7 @@
       "loader": null,
       "processor": null,
       "wave": 5,
-      "status": "stub",
+      "status": "book_period_validated",
       "units": "ratio",
       "content_type": "derived",
       "notes": "A08_khanjian_crossvalidation.py (legacy script)"
@@ -3835,7 +3835,7 @@
       "loader": null,
       "processor": null,
       "wave": 5,
-      "status": "stub",
+      "status": "book_period_validated",
       "units": "ratio",
       "content_type": "derived",
       "notes": "A09_unproductive_exploitation.py (legacy script)"
@@ -3859,7 +3859,7 @@
       "loader": null,
       "processor": null,
       "wave": 5,
-      "status": "stub",
+      "status": "pending_capital_stock_data",
       "units": "index",
       "content_type": "derived",
       "notes": "A10_marxian_productivity.py (legacy script)"
