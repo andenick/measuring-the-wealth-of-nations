@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+title: "Measuring the Wealth of Nations: Replication Package"
+message: "If you use this software, please cite both this replication package and the original Shaikh & Tonak (1994) work."
+type: software
+authors:
+  - family-names: Anderson
+    given-names: Nick
+    email: protonnicky@gmail.com
+repository-code: "https://github.com/andenick/measuring-wealth-of-nations-replication"
+abstract: >-
+  Complete replication and extension of every empirical claim in Shaikh & Tonak's
+  Measuring the Wealth of Nations (1994), plus 8 follow-up studies (Tonak 1984,
+  Shaikh & Tonak 1987 and 2002, Moos 2017, Mohun 2005 and 2013, Karabacak & Tonak
+  2022 Turkey, Cronin 2001 New Zealand), with 64 data series covering 1925-2025.
+  Built on the Anu Framework v10.0 with strict no-fabrication and full-provenance
+  discipline; every value traces to a published source, cached API response, or
+  documented derivation. 100% validation pass rate against book benchmarks and
+  identity/cross-source consistency checks.
+keywords:
+  - marxian-economics
+  - replication
+  - shaikh-tonak
+  - net-social-wage
+  - rate-of-exploitation
+  - input-output
+  - heterodox-economics
+license: MIT
+version: "1.0.0"
+date-released: "2026-05-15"
+references:
+  - type: book
+    authors:
+      - family-names: Shaikh
+        given-names: Anwar
+      - family-names: Tonak
+        given-names: E. Ahmet
+    title: "Measuring the Wealth of Nations: The Political Economy of National Accounts"
+    publisher: Cambridge University Press
+    year: 1994
+    isbn: "9780521564793"
