@@ -50,8 +50,8 @@
     },
     {
       "entry_type": "decision_reference",
-      "content": "DEC-007 (SIC-NAICS Gap Interpolation, 2026-04-08): Log-linear interpolation is used for the ec_u/ec_p ratio over 1990-1997, bridging from the 1989 book value to the first NAICS-era BEA NIPA 6.2D value (1998). This affects S501 indirectly via downstream series that depend on the sector classification boundary. The max deviation from the constant assumption is 0.42. Series values for 1990-1997 carry interpolated classification weights.",
-      "source_ref": "DECISION_LOG.md#DEC-007"
+      "content": "[internal-decision-record] (SIC-NAICS Gap Interpolation, 2026-04-08): Log-linear interpolation is used for the ec_u/ec_p ratio over 1990-1997, bridging from the 1989 book value to the first NAICS-era BEA NIPA 6.2D value (1998). This affects S501 indirectly via downstream series that depend on the sector classification boundary. The max deviation from the constant assumption is 0.42. Series values for 1990-1997 carry interpolated classification weights.",
+      "source_ref": "[internal-decision-log]#[internal-decision-record]"
     }
   ],
   "citations": [
@@ -66,7 +66,7 @@
   ],
   "methodology_summary": "Total Product measures the gross output of productive and trading sectors combined. Book data (1948-1989) from Table E.2 is extended via BEA GDPbyIndustry (1997-2024) using growth-rate splicing at 1997.",
   "known_issues": [
-    "SIC-to-NAICS classification break at 1997 splice point (see DEC-007)",
+    "SIC-to-NAICS classification break at 1997 splice point (see [internal-decision-record])",
     "1990-1996 gap requires interpolation",
     "Trading sector boundary (wholesale vs retail) may shift under NAICS"
   ],

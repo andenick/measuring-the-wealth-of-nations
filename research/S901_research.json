@@ -44,12 +44,12 @@
     },
     {
       "entry_type": "dependency_chain",
-      "content": "S901 depends on six series: S506 (e = S*/V*), S511 (Lp/L), S512 (V*/W), S513 (r*), S514 (r*_adj), S608 (NSW/V*). Additionally, Table 5.14 comparison data is sourced from page_140_marxian_orthodox_comparison.csv. All upstream series must be built and validated before S901 can be assembled. No BEA or other external data feeds are needed \u2014 S901 is purely an aggregation layer.",
+      "content": "S901 depends on six series: S506 (e = S*/V*), S511 (Lp/L), S512 (V*/W), S513 (r*), S514 (r*_adj), S608 (NSW/V*). Additionally, Table 5.14 comparison data is sourced from page_140_marxian_orthodox_comparison.csv. All upstream series must be built and validated before S901 can be assembled. No BEA or other external data feeds are needed — S901 is purely an aggregation layer.",
       "source_ref": "CHAPTER_9_INVESTIGATION.md"
     },
     {
       "entry_type": "key_finding",
-      "content": "The book's central empirical conclusion (p.240): 'The theoretical difference between Marxian and orthodox economic analysis is reflected in a fundamentally different empirical picture of capitalist reality.' The summary table quantifies this divergence across every major aggregate \u2014 output, wages, profit, exploitation, and accumulation.",
+      "content": "The book's central empirical conclusion (p.240): 'The theoretical difference between Marxian and orthodox economic analysis is reflected in a fundamentally different empirical picture of capitalist reality.' The summary table quantifies this divergence across every major aggregate — output, wages, profit, exploitation, and accumulation.",
       "source_ref": "ST_1994, p.240"
     },
     {
@@ -59,7 +59,7 @@
     },
     {
       "entry_type": "methodology_description",
-      "content": "The summary table serves as the capstone of the book's empirical framework, synthesizing results from the production accounts (Ch5) and distribution accounts (Ch6) into a single view. The Marxian categories \u2014 productive labor, variable capital, surplus value \u2014 are shown alongside their orthodox counterparts to highlight systematic divergences in level and trend.",
+      "content": "The summary table serves as the capstone of the book's empirical framework, synthesizing results from the production accounts (Ch5) and distribution accounts (Ch6) into a single view. The Marxian categories — productive labor, variable capital, surplus value — are shown alongside their orthodox counterparts to highlight systematic divergences in level and trend.",
       "source_ref": "ST_1994, Ch9 pp.236-240; Knowledge_Base/SUMMARY_KEY_FINDINGS.md"
     }
   ],
@@ -71,12 +71,12 @@
   ],
   "methodology_summary": "S901 is a purely derived summary table assembling key Marxian indicators from Ch5 (S506, S511-T514) and Ch6 (S608) into Table 9.1. No independent data inputs. Covers 1948-1989 (subseries A). Includes Marxian-vs-orthodox comparison ratios from Table 5.14.",
   "decision_log_refs": [
-    "DEC-002: Profit rate r* uses total K (not productive K*) \u2014 S513/S514 levels understated but trend correct. Resolution blocked pending unit normalization (DEC-010).",
-    "DEC-003: VA*/W constant assumption partially resolved in Session 14 \u2014 S506/S512 extension period carries small systematic error from SIC-NAICS gap interpolation (DEC-007).",
-    "chunk_17_ch5 (pp.142-151) contains Table 5.14 comparison ratios and Sec 5.12 empirical summary \u2014 primary source for S901 comparison data."
+    "[internal-decision-record]: Profit rate r* uses total K (not productive K*) — S513/S514 levels understated but trend correct. Resolution blocked pending unit normalization ([internal-decision-record]).",
+    "[internal-decision-record]: VA*/W constant assumption partially resolved in Session 14 — S506/S512 extension period carries small systematic error from SIC-NAICS gap interpolation ([internal-decision-record]).",
+    "chunk_17_ch5 (pp.142-151) contains Table 5.14 comparison ratios and Sec 5.12 empirical summary — primary source for S901 comparison data."
   ],
   "known_issues": [
-    "Purely derived \u2014 inherits all upstream caveats from S506, S511-T514, S608",
+    "Purely derived — inherits all upstream caveats from S506, S511-T514, S608",
     "Extension beyond 1989 blocked until all six upstream series are independently extended",
     "Table 5.14 comparison ratios are period-specific and may not hold under NAICS reclassification"
   ],

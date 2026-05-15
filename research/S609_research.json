@@ -63,7 +63,7 @@
   ],
   "methodology_summary": "Ratio of Net Social Wage to National Income (S607/NI). Macroeconomic scale measure: typically -1% to -4% during 1952-1989, turning positive post-2001, peaking at +9.23% during COVID (2020).",
   "decision_log_refs": [
-    "DEC-013: Moos NSW formula confirmed \u2014 E2 (govt consumption on education/health/transport) excluded from NSW computation. NSW = E1 - (T1 + T2*LS). P21 overlap mean 0.013 vs Moos published 0.011 (within 0.002). Benchmark range V11: [0.008, 0.018]."
+    "[internal-decision-record]: Moos NSW formula confirmed — E2 (govt consumption on education/health/transport) excluded from NSW computation. NSW = E1 - (T1 + T2*LS). P21 overlap mean 0.013 vs Moos published 0.011 (within 0.002). Benchmark range V11: [0.008, 0.018]."
   ],
   "known_issues": [
     "Inherits all known issues from S607 (NSW)",

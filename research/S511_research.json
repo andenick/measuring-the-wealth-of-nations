@@ -20,7 +20,7 @@
   "entries": [
     {
       "entry_type": "methodology_description",
-      "content": "Lp/L = productive employment divided by total employment. Productive sectors are classified per the 85 IO sector concordance. Employment decomposition specifics: Agriculture uses (Lp/L)_min \u00d7 L_agr; Government enterprises uses (Lp/L)_nongovtot \u00d7 L_ge; Trade is entirely unproductive; FIRE is decomposed into fi/re/br/gr subsectors.",
+      "content": "Lp/L = productive employment divided by total employment. Productive sectors are classified per the 85 IO sector concordance. Employment decomposition specifics: Agriculture uses (Lp/L)_min × L_agr; Government enterprises uses (Lp/L)_nongovtot × L_ge; Trade is entirely unproductive; FIRE is decomposed into fi/re/br/gr subsectors.",
       "source_ref": "ST_1994, Ch5; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md"
     },
     {
@@ -55,8 +55,8 @@
     },
     {
       "entry_type": "decision_reference",
-      "content": "DEC-005: BLS CES production/nonsupervisory worker ratios are used as the proxy for IO-based productive/unproductive labor decomposition in the extension period. S511 extension is certified at 78% faithfulness (CERTIFIED WITH NOTES). Cross-validated against Mohun (2005) estimates.",
-      "source_ref": "DECISION_LOG.md#DEC-005"
+      "content": "[internal-decision-record]: BLS CES production/nonsupervisory worker ratios are used as the proxy for IO-based productive/unproductive labor decomposition in the extension period. S511 extension is certified at 78% faithfulness (CERTIFIED WITH NOTES). Cross-validated against Mohun (2005) estimates.",
+      "source_ref": "[internal-decision-log]#[internal-decision-record]"
     }
   ],
   "citations": [
@@ -73,11 +73,11 @@
       "full": "Bureau of Labor Statistics. Current Employment Statistics (CES). https://www.bls.gov/ces/"
     }
   ],
-  "methodology_summary": "Productive labor share Lp/L declines from 0.57 (1948) to 0.36 (1989). Employment decomposition uses sector-specific rules for agriculture, government enterprises, trade, and FIRE. Extended via BLS CES production worker data (DEC-005, faithfulness 78%).",
+  "methodology_summary": "Productive labor share Lp/L declines from 0.57 (1948) to 0.36 (1989). Employment decomposition uses sector-specific rules for agriculture, government enterprises, trade, and FIRE. Extended via BLS CES production worker data ([internal-decision-record], faithfulness 78%).",
   "known_issues": [
-    "BLS CES production worker \u2260 ST's theoretical productive worker",
+    "BLS CES production worker ≠ ST's theoretical productive worker",
     "Agriculture and government enterprise proxy ratios introduce approximation",
-    "1977-1989 decline is very sharp \u2014 may reflect classification discontinuity"
+    "1977-1989 decline is very sharp — may reflect classification discontinuity"
   ],
   "cross_references": [
     "S504",

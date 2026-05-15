@@ -23,12 +23,12 @@
   "entries": [
     {
       "entry_type": "methodology_description",
-      "content": "V* = W \u00d7 (V*/W), where W is total employee compensation and V*/W is the productive wage share. The productive wage share approximation V*/W \u2248 Lp/L holds because the ratio of unproductive to productive employee compensation per worker (ec_u/ec_p) is approximately 1 (p.113). More precisely, V* = w_p \u00d7 x \u00d7 L_p where w_p is the productive wage rate and x is hours per worker.",
+      "content": "V* = W × (V*/W), where W is total employee compensation and V*/W is the productive wage share. The productive wage share approximation V*/W ≈ Lp/L holds because the ratio of unproductive to productive employee compensation per worker (ec_u/ec_p) is approximately 1 (p.113). More precisely, V* = w_p × x × L_p where w_p is the productive wage rate and x is hours per worker.",
       "source_ref": "ST_1994, Ch5 p.113; Knowledge_Base/equations/page_340_equations.txt"
     },
     {
       "entry_type": "data_source",
-      "content": "Subseries A (1948-1989): from book Table 5.5. Extension S504-EXT derives V* = W \u00d7 (V*/W) using BEA NIPA Table 1.12 for total compensation (W) and BLS CES production worker share for V*/W proxy. Spliced at 1989 to form S504-COMBINED. Depends on S512 for the productive wage share.",
+      "content": "Subseries A (1948-1989): from book Table 5.5. Extension S504-EXT derives V* = W × (V*/W) using BEA NIPA Table 1.12 for total compensation (W) and BLS CES production worker share for V*/W proxy. Spliced at 1989 to form S504-COMBINED. Depends on S512 for the productive wage share.",
       "source_ref": "Knowledge_Base/tables/page_310_table_E2.csv; BEA NIPA 1.12; BLS CES"
     },
     {
@@ -48,18 +48,18 @@
     },
     {
       "entry_type": "caveat",
-      "content": "The ec_u/ec_p \u2248 1 approximation may deteriorate over time as wage inequality between productive and unproductive sectors diverges. Post-1989 extension quality depends on this approximation holding.",
+      "content": "The ec_u/ec_p ≈ 1 approximation may deteriorate over time as wage inequality between productive and unproductive sectors diverges. Post-1989 extension quality depends on this approximation holding.",
       "source_ref": "ST_1994, p.113; CHAPTER_5_INVESTIGATION.md"
     },
     {
       "entry_type": "decision_reference",
-      "content": "DEC-007 (SIC-NAICS Gap Interpolation, 2026-04-08): Log-linear interpolation is used for the ec_u/ec_p ratio over 1990-1997, bridging from the 1989 book endpoint to the first NAICS-era BEA NIPA 6.2D value (1998). S504 is directly affected: the V*/W proxy used in the extension period relies on this interpolated ec_u/ec_p ratio. Confirmed max deviation from constant assumption = 0.42. Values for 1990-1997 carry interpolated classification weights and are documented under ADJ-002.",
-      "source_ref": "DECISION_LOG.md#DEC-007"
+      "content": "[internal-decision-record] (SIC-NAICS Gap Interpolation, 2026-04-08): Log-linear interpolation is used for the ec_u/ec_p ratio over 1990-1997, bridging from the 1989 book endpoint to the first NAICS-era BEA NIPA 6.2D value (1998). S504 is directly affected: the V*/W proxy used in the extension period relies on this interpolated ec_u/ec_p ratio. Confirmed max deviation from constant assumption = 0.42. Values for 1990-1997 carry interpolated classification weights and are documented under ADJ-002.",
+      "source_ref": "[internal-decision-log]#[internal-decision-record]"
     },
     {
       "entry_type": "decision_reference",
-      "content": "DEC-009 (S504 Splice Fix Deferred \u2014 Unit Scaling Issue, 2026-04-09): The S504 splice quality is documented at CR=0.81 (WARN-04, accepted). An attempted fix using NIPA T20100 aggregate compensation worsened the splice to CR=0.11 due to a unit scaling mismatch: book-period V* (millions, from Table 5.7 ec_p \u00d7 L_p pathway) differs in base unit from extension-period W \u00d7 (V*/W) (derived from BEA 6.2D). The correct fix requires a comprehensive Wave 2 unit normalization. In the meantime, `Inputs/API_Data/BEA/nipa_T20100_compensation_1929_2025.csv` has been fetched and is available for that future work. The CR=0.81 splice is the accepted current state.",
-      "source_ref": "DECISION_LOG.md#DEC-009"
+      "content": "[internal-decision-record] (S504 Splice Fix Deferred — Unit Scaling Issue, 2026-04-09): The S504 splice quality is documented at CR=0.81 (WARN-04, accepted). An attempted fix using NIPA T20100 aggregate compensation worsened the splice to CR=0.11 due to a unit scaling mismatch: book-period V* (millions, from Table 5.7 ec_p × L_p pathway) differs in base unit from extension-period W × (V*/W) (derived from BEA 6.2D). The correct fix requires a comprehensive Wave 2 unit normalization. In the meantime, `Inputs/API_Data/BEA/nipa_T20100_compensation_1929_2025.csv` has been fetched and is available for that future work. The CR=0.81 splice is the accepted current state.",
+      "source_ref": "[internal-decision-log]#[internal-decision-record]"
     }
   ],
   "citations": [
@@ -72,13 +72,13 @@
       "full": "Mohun, Simon. 2013. 'Unproductive Labor in the U.S. Economy 1964-2010.' Review of Radical Political Economics 46(3): 355-379."
     }
   ],
-  "methodology_summary": "Variable capital measures the wages of productive workers: V* = W \u00d7 (Lp/L). Book data (1948-1989) extended via BEA compensation \u00d7 BLS production worker share, spliced at 1989. Depends on S512.",
+  "methodology_summary": "Variable capital measures the wages of productive workers: V* = W × (Lp/L). Book data (1948-1989) extended via BEA compensation × BLS production worker share, spliced at 1989. Depends on S512.",
   "known_issues": [
-    "ec_u/ec_p \u2248 1 approximation may weaken post-1989",
+    "ec_u/ec_p ≈ 1 approximation may weaken post-1989",
     "Extension depends on S512 productive wage share quality",
     "Mohun classification yields systematically higher V*",
-    "Splice quality CR=0.81 (WARN-04, accepted) \u2014 unit mismatch blocks improvement until Wave 2 normalization (DEC-009)",
-    "1990-1997 ec_u/ec_p interpolated via log-linear method (DEC-007)"
+    "Splice quality CR=0.81 (WARN-04, accepted) — unit mismatch blocks improvement until Wave 2 normalization ([internal-decision-record])",
+    "1990-1997 ec_u/ec_p interpolated via log-linear method ([internal-decision-record])"
   ],
   "cross_references": [
     "S503",

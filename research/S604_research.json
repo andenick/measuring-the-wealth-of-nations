@@ -17,9 +17,9 @@
   ],
   "decision_log_refs": [
     {
-      "dec_id": "DEC-008",
-      "summary": "Ch6 tax allocation methodology verified: income-proportional method (T_w = taxes \u00d7 W_p/PI) confirmed against HDARP Section 3.3 extraction (pages 63-65, NRYwp net royalty framework). P09 implementation correct. S604 = S601 + S602 + S603 + indirect taxes is the formula verified.",
-      "source": "NickyData/DECISION_LOG.md"
+      "dec_id": "[internal-decision-record]",
+      "summary": "Ch6 tax allocation methodology verified: income-proportional method (T_w = taxes × W_p/PI) confirmed against HDARP Section 3.3 extraction (pages 63-65, NRYwp net royalty framework). P09 implementation correct. S604 = S601 + S602 + S603 + indirect taxes is the formula verified.",
+      "source": "[internal-decision-log]"
     }
   ],
   "entries": [
@@ -50,13 +50,13 @@
     },
     {
       "entry_type": "formula",
-      "content": "T_w = S601 + S602 + S603 + (sales_excise_taxes \u00d7 worker_consumption_share). Worker consumption share \u2248 W / personal_consumption_expenditure, bounded [0,1].",
+      "content": "T_w = S601 + S602 + S603 + (sales_excise_taxes × worker_consumption_share). Worker consumption share ≈ W / personal_consumption_expenditure, bounded [0,1].",
       "source_ref": "ST_1994, Ch6"
     },
     {
       "entry_type": "decision_log_note",
-      "content": "DEC-008 (2026-04-09): The income-proportional tax allocation (T_w = taxes \u00d7 W_p/PI) is the formula that applies to all T60x components summed in S604. HDARP extraction of Section 3.3 (pages 63-65) documents the NRYwp net royalty framework: the total tax allocation to workers in S604 is the empirical implementation of that framework at the aggregate level. P09 methodology verified correct.",
-      "source_ref": "NickyData/DECISION_LOG.md, DEC-008"
+      "content": "[internal-decision-record] (2026-04-09): The income-proportional tax allocation (T_w = taxes × W_p/PI) is the formula that applies to all T60x components summed in S604. HDARP extraction of Section 3.3 (pages 63-65) documents the NRYwp net royalty framework: the total tax allocation to workers in S604 is the empirical implementation of that framework at the aggregate level. P09 methodology verified correct.",
+      "source_ref": "[internal-decision-log], [internal-decision-record]"
     }
   ],
   "citations": [
@@ -73,7 +73,7 @@
       "full": "Moos, Julie. 2017. The Net Social Wage in the United States, 1952-2012. PhD dissertation."
     }
   ],
-  "methodology_summary": "Total worker taxes sum personal income tax (S601), social insurance (S602), property tax (S603), and indirect sales/excise taxes allocated by worker consumption share. Tax/EC ratio rose 78% from 0.18 to 0.32 over 1952-1989. DEC-008 confirms T_w = taxes \u00d7 W_p/PI income-proportional allocation is the correct methodology.",
+  "methodology_summary": "Total worker taxes sum personal income tax (S601), social insurance (S602), property tax (S603), and indirect sales/excise taxes allocated by worker consumption share. Tax/EC ratio rose 78% from 0.18 to 0.32 over 1952-1989. [internal-decision-record] confirms T_w = taxes × W_p/PI income-proportional allocation is the correct methodology.",
   "known_issues": [
     "Sales/excise tax inclusion is the main methodological divergence from Tonak benchmark",
     "Worker consumption share proxy is approximate",

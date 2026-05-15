@@ -16,12 +16,12 @@
     },
     {
       "entry_type": "data_source",
-      "content": "Primary source: Tonak (1984) PhD Dissertation, New School for Social Research, Chapter IV Table II ('Calculation of Labor Share, 1952-80', p.92), covering 1952-1980 (28 annual observations). Underlying raw data from U.S. National Income and Product Accounts (NIPA). Table III ('Comparison of Labor Shares \u2014 Weisskopf and Tonak', p.93) provides cross-validation against Weisskopf's estimates. Per DEC-012, the data_quality must be 'real_extracted' \u2014 values must be taken from HDARP-extracted Table II, not synthetically generated.",
+      "content": "Primary source: Tonak (1984) PhD Dissertation, New School for Social Research, Chapter IV Table II ('Calculation of Labor Share, 1952-80', p.92), covering 1952-1980 (28 annual observations). Underlying raw data from U.S. National Income and Product Accounts (NIPA). Table III ('Comparison of Labor Shares — Weisskopf and Tonak', p.93) provides cross-validation against Weisskopf's estimates. Per [internal-decision-record], the data_quality must be 'real_extracted' — values must be taken from HDARP-extracted Table II, not synthetically generated.",
       "source_ref": "1984_Tonak_State_Revenues/chunk_002/full_transcription.md (List of Tables p.v, Chapter IV Table II p.92, Table III p.93)"
     },
     {
       "entry_type": "table_identification",
-      "content": "The primary table is Chapter IV Table II: 'Calculation of Labor Share, 1952-80' (p.92). A comparison table, Chapter IV Table III: 'Comparison of Labor Shares \u2014 Weisskopf and Tonak' (p.93), provides external validation. The labor share formula is also referenced in Chapter IV Table IV: 'Labor and Non-Labor Portions of Total Taxes \u2014 Selected Years' (p.95) and Table V: 'Labor and Non-Labor Portions of Total Taxes' (p.98). These tables are located in later HDARP chunks (not yet extracted in chunks 001-002).",
+      "content": "The primary table is Chapter IV Table II: 'Calculation of Labor Share, 1952-80' (p.92). A comparison table, Chapter IV Table III: 'Comparison of Labor Shares — Weisskopf and Tonak' (p.93), provides external validation. The labor share formula is also referenced in Chapter IV Table IV: 'Labor and Non-Labor Portions of Total Taxes — Selected Years' (p.95) and Table V: 'Labor and Non-Labor Portions of Total Taxes' (p.98). These tables are located in later HDARP chunks (not yet extracted in chunks 001-002).",
       "source_ref": "1984_Tonak_State_Revenues/chunk_002/full_transcription.md (List of Tables pp.v-vi)"
     },
     {
@@ -31,8 +31,8 @@
     },
     {
       "entry_type": "caveat",
-      "content": "Per DEC-012 (No Synthetic Data Policy, 2026-05-03): ES1001 was previously identified as using synthetic data generated from summary statistics. The annual Table II values have not yet been extracted from the later HDARP chunks of Tonak (1984). Until a full HDARP extraction of Chapter IV (chunks covering pp.88-98) is completed, this series must be marked data_unavailable with an empty CSV. No np.random or benchmark-interpolation fills are permitted.",
-      "source_ref": "DECISION_LOG.md#DEC-012"
+      "content": "Per [internal-decision-record] (No Synthetic Data Policy, 2026-05-03): ES1001 was previously identified as using synthetic data generated from summary statistics. The annual Table II values have not yet been extracted from the later HDARP chunks of Tonak (1984). Until a full HDARP extraction of Chapter IV (chunks covering pp.88-98) is completed, this series must be marked data_unavailable with an empty CSV. No np.random or benchmark-interpolation fills are permitted.",
+      "source_ref": "[internal-decision-log]#[internal-decision-record]"
     },
     {
       "entry_type": "caveat",
@@ -46,8 +46,8 @@
     },
     {
       "entry_type": "decision_reference",
-      "content": "DEC-012 (No Synthetic Data Policy, 2026-05-03): ES1001 was explicitly named as one of five series with prohibited synthetic data. Remediation plan specifies: 'Extract real annual data from HDARP Table V.B (28 years available)'. Note \u2014 the registry entry references 'Table II' (labor share) while DEC-012 references 'Table V.B' (which is an Appendix III table for surplus value data). The correct source table for labor share is Chapter IV Table II (p.92). Researcher should verify which specific table the HDARP extraction covers when the relevant chunks become available.",
-      "source_ref": "DECISION_LOG.md#DEC-012; 1984_Tonak_State_Revenues/chunk_002/full_transcription.md (List of Tables)"
+      "content": "[internal-decision-record] (No Synthetic Data Policy, 2026-05-03): ES1001 was explicitly named as one of five series with prohibited synthetic data. Remediation plan specifies: 'Extract real annual data from HDARP Table V.B (28 years available)'. Note — the registry entry references 'Table II' (labor share) while [internal-decision-record] references 'Table V.B' (which is an Appendix III table for surplus value data). The correct source table for labor share is Chapter IV Table II (p.92). Researcher should verify which specific table the HDARP extraction covers when the relevant chunks become available.",
+      "source_ref": "[internal-decision-log]#[internal-decision-record]; 1984_Tonak_State_Revenues/chunk_002/full_transcription.md (List of Tables)"
     }
   ],
   "citations": [
@@ -62,9 +62,9 @@
   ],
   "methodology_summary": "Labor share of national income from Tonak (1984) Chapter IV Table II, 1952-1980, 28 annual observations. Defined as total labor income / personal income; serves as allocation key throughout the dissertation's net tax framework.",
   "known_issues": [
-    "Annual data not yet extracted \u2014 later HDARP chunks (covering pp.88-98) required",
-    "DEC-012 prohibits synthetic fill; series is data_unavailable until HDARP extraction completes",
-    "Registry entry cites 'Table II' but DEC-012 mentions 'Table V.B' \u2014 source table identity requires verification against the actual HDARP extraction"
+    "Annual data not yet extracted — later HDARP chunks (covering pp.88-98) required",
+    "[internal-decision-record] prohibits synthetic fill; series is data_unavailable until HDARP extraction completes",
+    "Registry entry cites 'Table II' but [internal-decision-record] mentions 'Table V.B' — source table identity requires verification against the actual HDARP extraction"
   ],
   "cross_references": [
     "ES1002",

@@ -48,7 +48,7 @@
   ],
   "methodology_summary": "Ratio of Net Social Wage to variable capital (S607/S504). Dimensionless measure of state fiscal extraction from workers as a share of their value product. Typically -5% to -15% during 1952-1989.",
   "decision_log_refs": [
-    "DEC-008: Ch6 tax allocation methodology verified \u2014 income-proportional T_w = taxes\u00d7W_p/PI aligns with book framework (chunk_09, pp.63-65; Section 5.9 and Appendix N)"
+    "[internal-decision-record]: Ch6 tax allocation methodology verified — income-proportional T_w = taxes×W_p/PI aligns with book framework (chunk_09, pp.63-65; Section 5.9 and Appendix N)"
   ],
   "known_issues": [
     "Inherits all known issues from S607 (NSW) and S504 (V*)",

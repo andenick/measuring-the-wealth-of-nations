@@ -6,7 +6,7 @@
   "researcher": "agent",
   "kb_sources_searched": [
     "Technical/Knowledge_Base/external_papers/state_welfare/2017_Moos_NSW_21st_Century/full_transcription.md",
-    "Technical/NickyData/DECISION_LOG.md"
+    "Technical/[internal-decision-log]"
   ],
   "entries": [
     {
@@ -21,8 +21,8 @@
     },
     {
       "entry_type": "decision_reference",
-      "content": "DEC-013 (2026-05-06): ST2 P21 achieves 1959-1997 overlap mean NSW/GDP = 0.013, within 0.002 of Moos's published 0.011. The residual gap is attributable to NIPA vintage differences between our 2026 pull and Moos's ~2015 data. The V11 benchmark range for validation is [0.008, 0.018] \u2014 ST2 value of 0.013 passes. This is the primary validation criterion for ES1304.",
-      "source_ref": "DECISION_LOG.md DEC-013"
+      "content": "[internal-decision-record] (2026-05-06): ST2 P21 achieves 1959-1997 overlap mean NSW/GDP = 0.013, within 0.002 of Moos's published 0.011. The residual gap is attributable to NIPA vintage differences between our 2026 pull and Moos's ~2015 data. The V11 benchmark range for validation is [0.008, 0.018] — ST2 value of 0.013 passes. This is the primary validation criterion for ES1304.",
+      "source_ref": "[internal-decision-log] [internal-decision-record]"
     },
     {
       "entry_type": "validation_logic",
@@ -31,12 +31,12 @@
     },
     {
       "entry_type": "key_finding",
-      "content": "The 1959-1997 overlap validates the Moos replication. Differences between the two series are approximately 1 percentage point of GDP throughout (NIPA vintage effect). Most importantly: Shaikh & Tonak show some years with slightly negative NSW in the 1980s-1990s; Moos's revised series shows these same years as slightly positive. This is the most significant qualitative difference \u2014 the Reagan-Bush era may show a slightly less negative NSW with the revised NIPA data. By 2000, NSW/GDP = ~0.0065 in Moos (approximately zero), consistent with the long-run Shaikh-Tonak finding.",
+      "content": "The 1959-1997 overlap validates the Moos replication. Differences between the two series are approximately 1 percentage point of GDP throughout (NIPA vintage effect). Most importantly: Shaikh & Tonak show some years with slightly negative NSW in the 1980s-1990s; Moos's revised series shows these same years as slightly positive. This is the most significant qualitative difference — the Reagan-Bush era may show a slightly less negative NSW with the revised NIPA data. By 2000, NSW/GDP = ~0.0065 in Moos (approximately zero), consistent with the long-run Shaikh-Tonak finding.",
       "source_ref": "Moos_2017, Section 3 pp.4-5; full_transcription.md Section 3"
     },
     {
       "entry_type": "phase_context",
-      "content": "Within the 1959-1997 overlap window, both series show the same three-phase structure documented by Shaikh & Tonak (2002): (1) negative/near-zero NSW during boom 1959-1969; (2) sharp rise to peak positive ~1975; (3) secular decline through Reagan-Bush era returning to near zero by 1997. The Moos series shows the 1980s period as less negative than Shaikh-Tonak's original \u2014 attributable to revised NIPA data showing higher benefits or lower taxes in retrospect.",
+      "content": "Within the 1959-1997 overlap window, both series show the same three-phase structure documented by Shaikh & Tonak (2002): (1) negative/near-zero NSW during boom 1959-1969; (2) sharp rise to peak positive ~1975; (3) secular decline through Reagan-Bush era returning to near zero by 1997. The Moos series shows the 1980s period as less negative than Shaikh-Tonak's original — attributable to revised NIPA data showing higher benefits or lower taxes in retrospect.",
       "source_ref": "Moos_2017, Section 3, Figure 1; ST_2002 Figs 29.2-29.3; full_transcription.md Section 3"
     },
     {
@@ -55,10 +55,10 @@
       "full": "Shaikh, Anwar, and E. Ahmet Tonak. 2002. 'The Rise and Fall of the U.S. Welfare State.' In Political Economy and Contemporary Capitalism. M.E. Sharpe, Armonk. pp. 247-265."
     }
   ],
-  "methodology_summary": "ES1304 is ES1301 restricted to 1959-1997, enabling direct comparison with ST 2002 coverage. Moos's replicated series shows mean 1.1% of GDP vs Shaikh-Tonak original mean 0.0% \u2014 difference attributed to post-1999 NIPA revision. ST2 achieves 0.013 vs Moos published 0.011, within V11 benchmark range [0.008, 0.018].",
+  "methodology_summary": "ES1304 is ES1301 restricted to 1959-1997, enabling direct comparison with ST 2002 coverage. Moos's replicated series shows mean 1.1% of GDP vs Shaikh-Tonak original mean 0.0% — difference attributed to post-1999 NIPA revision. ST2 achieves 0.013 vs Moos published 0.011, within V11 benchmark range [0.008, 0.018].",
   "known_issues": [
     "The ~1.1 pp systematic upward shift vs Shaikh-Tonak original is documented and expected (NIPA revision effect)",
-    "ES1304 inherits all caveats from ES1301 (DEC-013 E2 exclusion, NIPA vintage gap)"
+    "ES1304 inherits all caveats from ES1301 ([internal-decision-record] E2 exclusion, NIPA vintage gap)"
   ],
   "cross_references": [
     "ES1301",

@@ -18,7 +18,7 @@
   "entries": [
     {
       "entry_type": "methodology_description",
-      "content": "r*_adj = r* \u00d7 TCU, where TCU is total capacity utilization from the Federal Reserve G.17 release. The adjustment weights the profit rate by the fraction of capital actually in use. Book Table 5.11 data confirms: S514/S513 ratios match historical TCU values (e.g., 1989: 1.562/1.863 = 0.838 \u2248 TCU). The text describes r*/(K\u00d7TCU) but the computed series is r*\u00d7TCU \u2014 the profit rate on total capital weighted by utilization.",
+      "content": "r*_adj = r* × TCU, where TCU is total capacity utilization from the Federal Reserve G.17 release. The adjustment weights the profit rate by the fraction of capital actually in use. Book Table 5.11 data confirms: S514/S513 ratios match historical TCU values (e.g., 1989: 1.562/1.863 = 0.838 ≈ TCU). The text describes r*/(K×TCU) but the computed series is r*×TCU — the profit rate on total capital weighted by utilization.",
       "source_ref": "ST_1994, Ch5 Table 5.11; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/full_transcription.md"
     },
     {
@@ -33,7 +33,7 @@
     },
     {
       "entry_type": "theoretical_note",
-      "content": "The capacity adjustment is important because it reveals how much of the measured profit rate is attributable to capital actually in use. During recessions, TCU falls, and r*_adj falls below r* \u2014 showing that profitability on total capital (including idle) is lower than the raw rate suggests.",
+      "content": "The capacity adjustment is important because it reveals how much of the measured profit rate is attributable to capital actually in use. During recessions, TCU falls, and r*_adj falls below r* — showing that profitability on total capital (including idle) is lower than the raw rate suggests.",
       "source_ref": "ST_1994, Ch5 pp.265-270; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md"
     },
     {
@@ -43,13 +43,13 @@
     },
     {
       "entry_type": "caveat",
-      "content": "The formula r*_adj = r* \u00d7 TCU inherits all known issues from S513, including the K vs K* problem per DEC-002. TCU is reported as a percentage (typically 70-85%) and must be divided by 100 before multiplication.",
+      "content": "The formula r*_adj = r* × TCU inherits all known issues from S513, including the K vs K* problem per [internal-decision-record]. TCU is reported as a percentage (typically 70-85%) and must be divided by 100 before multiplication.",
       "source_ref": "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md"
     },
     {
       "entry_type": "decision_reference",
-      "content": "DEC-002: S514 inherits the total K (not K*) capital denominator from S513. The profit rate levels are understated relative to the book's intended productive-sector-only denominator, but trend dynamics are preserved. Resolution requires Wave 2 IO-based sector classification (ADJ-001).",
-      "source_ref": "DECISION_LOG.md#DEC-002"
+      "content": "[internal-decision-record]: S514 inherits the total K (not K*) capital denominator from S513. The profit rate levels are understated relative to the book's intended productive-sector-only denominator, but trend dynamics are preserved. Resolution requires Wave 2 IO-based sector classification (ADJ-001).",
+      "source_ref": "[internal-decision-log]#[internal-decision-record]"
     }
   ],
   "citations": [
@@ -62,9 +62,9 @@
       "full": "Board of Governors of the Federal Reserve System. G.17 Industrial Production and Capacity Utilization. https://www.federalreserve.gov/releases/g17/"
     }
   ],
-  "methodology_summary": "Capacity-adjusted profit rate r*_adj = r*/TCU, using Fed G.17 capacity utilization. Adds cyclical variation to the secular profit rate trend. Extension straightforward from continuously published sources. Inherits DEC-002 K vs K* constraint from S513.",
+  "methodology_summary": "Capacity-adjusted profit rate r*_adj = r*/TCU, using Fed G.17 capacity utilization. Adds cyclical variation to the secular profit rate trend. Extension straightforward from continuously published sources. Inherits [internal-decision-record] K vs K* constraint from S513.",
   "known_issues": [
-    "Inherits S513 K vs K* problem (DEC-002)",
+    "Inherits S513 K vs K* problem ([internal-decision-record])",
     "G.17 TCU covers manufacturing/industry, not full productive sector",
     "TCU percentage scaling must be handled consistently",
     "Pre-1967 TCU data limited"

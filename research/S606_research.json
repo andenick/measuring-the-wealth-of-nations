@@ -16,15 +16,15 @@
   ],
   "decision_log_refs": [
     {
-      "dec_id": "DEC-006",
+      "dec_id": "[internal-decision-record]",
       "summary": "1996 welfare reform bridge: NIPA Tables 2.1 and 3.1 used for continuous coverage across the 1996 Personal Responsibility and Work Opportunity Reconciliation Act transition. Policy discontinuity documented but not adjusted. S606 shows structural break around 1996-1997, flagged in V03 continuity checks.",
-      "source": "NickyData/DECISION_LOG.md"
+      "source": "[internal-decision-log]"
     }
   ],
   "entries": [
     {
       "entry_type": "methodology_description",
-      "content": "G_w captures government expenditures on services that benefit workers: public education, public health services, transportation infrastructure, and other general government services \u00d7 worker share. Worker share is estimated by usage patterns: education allocated by enrollment demographics, health by income-based utilization, infrastructure by commuter/residential usage.",
+      "content": "G_w captures government expenditures on services that benefit workers: public education, public health services, transportation infrastructure, and other general government services × worker share. Worker share is estimated by usage patterns: education allocated by enrollment demographics, health by income-based utilization, infrastructure by commuter/residential usage.",
       "source_ref": "ST_1994, Ch6; CHAPTER_6_INVESTIGATION.md"
     },
     {
@@ -49,8 +49,8 @@
     },
     {
       "entry_type": "decision_log_note",
-      "content": "DEC-006 (2026-03-30): The 1996 welfare reform changed the composition of government services available to workers, particularly in means-tested program structures. NIPA Table 3.1 continuous coverage bridges this transition. S606 shows a structural break around 1996-1997 \u2014 documented in V03 continuity checks but not adjusted. Note: Per DEC-013, government consumption (E2: education, health, transportation from NIPA T3.16) is retained in L17 but excluded from the Moos NSW formula \u2014 included here in G_w under the broader Shaikh-Tonak definition.",
-      "source_ref": "NickyData/DECISION_LOG.md, DEC-006; DEC-013"
+      "content": "[internal-decision-record] (2026-03-30): The 1996 welfare reform changed the composition of government services available to workers, particularly in means-tested program structures. NIPA Table 3.1 continuous coverage bridges this transition. S606 shows a structural break around 1996-1997 — documented in V03 continuity checks but not adjusted. Note: Per [internal-decision-record], government consumption (E2: education, health, transportation from NIPA T3.16) is retained in L17 but excluded from the Moos NSW formula — included here in G_w under the broader Shaikh-Tonak definition.",
+      "source_ref": "[internal-decision-log], [internal-decision-record]; [internal-decision-record]"
     }
   ],
   "citations": [
@@ -67,13 +67,13 @@
       "full": "Moos, Julie. 2017. The Net Social Wage in the United States, 1952-2012. PhD dissertation."
     }
   ],
-  "methodology_summary": "Government services to workers allocate public education, health, and infrastructure spending by worker usage share. Military and police spending excluded. Education is the dominant component. DEC-006: 1996 welfare reform structural break handled via NIPA continuous coverage; break documented in V03.",
+  "methodology_summary": "Government services to workers allocate public education, health, and infrastructure spending by worker usage share. Military and police spending excluded. Education is the dominant component. [internal-decision-record]: 1996 welfare reform structural break handled via NIPA continuous coverage; break documented in V03.",
   "known_issues": [
     "Military/police exclusion is theoretically motivated but empirically debatable",
     "Worker share of education spending changes with demographic shifts",
     "Infrastructure allocation between workers and capital is highly approximate",
     "Scope difference between Tonak (narrow) and Moos (broad) definitions creates reconciliation challenges",
-    "1996 welfare reform structural break documented in V03 continuity checks (DEC-006)"
+    "1996 welfare reform structural break documented in V03 continuity checks ([internal-decision-record])"
   ],
   "cross_references": [
     "S604",

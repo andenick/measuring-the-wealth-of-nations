@@ -12,22 +12,22 @@
   "entries": [
     {
       "entry_type": "definition",
-      "content": "NSW/GDP ratio = (B - T) / GDP, where B = E1 + E2*ls (benefits to labor = direct labor benefits + mixed expenditures allocated by labor share), T = T1 + T2*ls (taxes from labor = direct labor taxes + mixed taxes allocated by labor share), and ls = ES1601 (Turkish labor share). A negative ratio means workers are net contributors to the state \u2014 they pay more in taxes than they receive in benefits. This is the primary output of the Shaikh-Tonak NSW framework as applied to Turkey by Karabacak & Tonak (2022).",
+      "content": "NSW/GDP ratio = (B - T) / GDP, where B = E1 + E2*ls (benefits to labor = direct labor benefits + mixed expenditures allocated by labor share), T = T1 + T2*ls (taxes from labor = direct labor taxes + mixed taxes allocated by labor share), and ls = ES1601 (Turkish labor share). A negative ratio means workers are net contributors to the state — they pay more in taxes than they receive in benefits. This is the primary output of the Shaikh-Tonak NSW framework as applied to Turkey by Karabacak & Tonak (2022).",
       "source_ref": "KT_2022, Sections 3.3, 4.5; Technical/Knowledge_Base/external_papers/international/2022_Karabacak_Tonak_NSW_Turkey/full_transcription.md"
     },
     {
       "entry_type": "key_result",
-      "content": "Main finding of Karabacak & Tonak (2022): NSW was NEGATIVE for all 40 years (1980-2019). Mean NSW/GDP = -0.0113 (-1.13% of GDP). Paper reports -0.011 (rounded). ST2 series ES1602 achieves mean = -0.0098 after DEC-014 fix (TurkStat labor share replaces SBB proxy). The remaining gap of ~0.0015 is attributable to: (a) the 2007-2019 period having NaN values in ES1602 (reducing the denominator of the mean), (b) TurkStat Table 20.37 economy-wide ls vs. the paper's productive-sector ls, and (c) benefit/tax level data not yet fully disaggregated from Turkish ministry sources. The direction, sign, and order of magnitude match the paper.",
-      "source_ref": "KT_2022, Section 5.1 and Abstract; DECISION_LOG.md#DEC-014; Technical/Knowledge_Base/external_papers/international/2022_Karabacak_Tonak_NSW_Turkey/full_transcription.md"
+      "content": "Main finding of Karabacak & Tonak (2022): NSW was NEGATIVE for all 40 years (1980-2019). Mean NSW/GDP = -0.0113 (-1.13% of GDP). Paper reports -0.011 (rounded). ST2 series ES1602 achieves mean = -0.0098 after [internal-decision-record] fix (TurkStat labor share replaces SBB proxy). The remaining gap of ~0.0015 is attributable to: (a) the 2007-2019 period having NaN values in ES1602 (reducing the denominator of the mean), (b) TurkStat Table 20.37 economy-wide ls vs. the paper's productive-sector ls, and (c) benefit/tax level data not yet fully disaggregated from Turkish ministry sources. The direction, sign, and order of magnitude match the paper.",
+      "source_ref": "KT_2022, Section 5.1 and Abstract; [internal-decision-log]#[internal-decision-record]; Technical/Knowledge_Base/external_papers/international/2022_Karabacak_Tonak_NSW_Turkey/full_transcription.md"
     },
     {
       "entry_type": "sign_characterization",
-      "content": "NSW was negative for ALL 40 years (1980-2019) \u2014 100% of observations. No year had a positive NSW. This is the central empirical claim of KT (2022): the Turkish 'pseudo-welfare state' extracts more from workers than it returns. ST2 ES1602 must reproduce this universal-negative property. Any year with a computed positive value should be flagged as a data error, not accepted as consistent with the source.",
+      "content": "NSW was negative for ALL 40 years (1980-2019) — 100% of observations. No year had a positive NSW. This is the central empirical claim of KT (2022): the Turkish 'pseudo-welfare state' extracts more from workers than it returns. ST2 ES1602 must reproduce this universal-negative property. Any year with a computed positive value should be flagged as a data error, not accepted as consistent with the source.",
       "source_ref": "KT_2022, Sections 1 (Preview of Findings) and 5.1; Technical/Knowledge_Base/external_papers/international/2022_Karabacak_Tonak_NSW_Turkey/full_transcription.md"
     },
     {
       "entry_type": "period_breakdown",
-      "content": "NSW by sub-period (from KT 2022 Section 5.4 and 5.5): 1980-1989 (Military/Ozal era): avg -1.0% of GDP. 1990-2001 (pre-AKP coalitions): avg -0.8% of GDP \u2014 the best period for workers, least negative NSW. 2002-2008 (early AKP, economic boom): avg -1.0% of GDP. 2009-2013 (post-financial crisis recovery): avg -0.9% of GDP. 2014-2019 (AKP austerity): avg -1.8% of GDP \u2014 WORST period. Pre-AKP average (1980-2001): -0.93%. AKP average (2002-2019): -1.24%. Best single year: 1998 (-0.5%). Worst single year: 2018 (-2.5%).",
+      "content": "NSW by sub-period (from KT 2022 Section 5.4 and 5.5): 1980-1989 (Military/Ozal era): avg -1.0% of GDP. 1990-2001 (pre-AKP coalitions): avg -0.8% of GDP — the best period for workers, least negative NSW. 2002-2008 (early AKP, economic boom): avg -1.0% of GDP. 2009-2013 (post-financial crisis recovery): avg -0.9% of GDP. 2014-2019 (AKP austerity): avg -1.8% of GDP — WORST period. Pre-AKP average (1980-2001): -0.93%. AKP average (2002-2019): -1.24%. Best single year: 1998 (-0.5%). Worst single year: 2018 (-2.5%).",
       "source_ref": "KT_2022, Section 5.4 and 5.5; Technical/Knowledge_Base/external_papers/international/2022_Karabacak_Tonak_NSW_Turkey/full_transcription.md"
     },
     {
@@ -37,28 +37,28 @@
     },
     {
       "entry_type": "data_gap",
-      "content": "ES1602 coverage is limited to 1980-2006 (27 years) because ES1601 (labor share, the ls parameter) only has real data through 2006 from TurkStat Table 20.37. Years 2007-2019 are NaN per DEC-012 (no-synthetic-data policy). The DEC-014 note confirms: 'Years 2007-2019 are NaN per DEC-012 (no synthetic fill).' The paper's full 1980-2019 series cannot be reproduced without real ls and fiscal data for 2007-2019. OECD data was considered for 2007-2019 but only has tax/GDP ratios, not compensation-of-employees data needed for ls.",
-      "source_ref": "DECISION_LOG.md#DEC-012; DECISION_LOG.md#DEC-014"
+      "content": "ES1602 coverage is limited to 1980-2006 (27 years) because ES1601 (labor share, the ls parameter) only has real data through 2006 from TurkStat Table 20.37. Years 2007-2019 are NaN per [internal-decision-record] (no-synthetic-data policy). The [internal-decision-record] note confirms: 'Years 2007-2019 are NaN per [internal-decision-record] (no synthetic fill).' The paper's full 1980-2019 series cannot be reproduced without real ls and fiscal data for 2007-2019. OECD data was considered for 2007-2019 but only has tax/GDP ratios, not compensation-of-employees data needed for ls.",
+      "source_ref": "[internal-decision-log]#[internal-decision-record]; [internal-decision-log]#[internal-decision-record]"
     },
     {
       "entry_type": "decision_reference",
-      "content": "DEC-014 (2026-05-06): Switching ES1601 from SBB Personel proxy to TurkStat Table 20.37 improved ES1602 mean from -0.0025 to -0.0098 (paper target: -0.011). The prior proxy calibration artifacts \u2014 a '*0.3' transfer multiplier and '*1.1' tax multiplier in P18 Path A/B \u2014 have been removed. These were not part of the KT (2022) methodology; they were correction factors patching the wrong proxy. With TurkStat ls, the raw NSW formula (B - T)/GDP produces -0.0098, within 13% of the paper's reported -0.011.",
-      "source_ref": "DECISION_LOG.md#DEC-014"
+      "content": "[internal-decision-record] (2026-05-06): Switching ES1601 from SBB Personel proxy to TurkStat Table 20.37 improved ES1602 mean from -0.0025 to -0.0098 (paper target: -0.011). The prior proxy calibration artifacts — a '*0.3' transfer multiplier and '*1.1' tax multiplier in P18 Path A/B — have been removed. These were not part of the KT (2022) methodology; they were correction factors patching the wrong proxy. With TurkStat ls, the raw NSW formula (B - T)/GDP produces -0.0098, within 13% of the paper's reported -0.011.",
+      "source_ref": "[internal-decision-log]#[internal-decision-record]"
     },
     {
       "entry_type": "decision_reference",
-      "content": "DEC-012 (2026-05-03): No-synthetic-data policy. ES1602 was previously generated using synthetic ES1601 values (np.random linear trend). This is prohibited. The 2007-2019 gap must remain as NaN. ES1602 must not be filled with modeled, estimated, or interpolated values for 2007-2019 absent real fiscal and labor share data from TurkStat or equivalent official sources extracted via HDARP or API with full provenance.",
-      "source_ref": "DECISION_LOG.md#DEC-012"
+      "content": "[internal-decision-record] (2026-05-03): No-synthetic-data policy. ES1602 was previously generated using synthetic ES1601 values (np.random linear trend). This is prohibited. The 2007-2019 gap must remain as NaN. ES1602 must not be filled with modeled, estimated, or interpolated values for 2007-2019 absent real fiscal and labor share data from TurkStat or equivalent official sources extracted via HDARP or API with full provenance.",
+      "source_ref": "[internal-decision-log]#[internal-decision-record]"
     },
     {
       "entry_type": "methodology_description",
-      "content": "NSW calculation procedure (KT 2022 Section 4.5): Step 1: B = E1 + E2*ls (benefits to labor). E1 = direct labor benefits (pensions, disability/survivor benefits, unemployment insurance, public education, social assistance, public health). E2 = mixed expenditures (general public services, defense, infrastructure, environment, culture) allocated by ls. Step 2: T = T1 + T2*ls (taxes from labor). T1 = direct taxes (personal income tax on wages, employee social security contributions). T2 = indirect/mixed taxes (VAT, Special Consumption Tax, customs duties, property taxes, corporate income tax) allocated by ls. T3 = taxes on capital (non-wage income tax, dividends, interest, rent, capital gains) \u2014 excluded from T. Step 3: NSW = B - T. Step 4: NSW_ratio = NSW / GDP.",
+      "content": "NSW calculation procedure (KT 2022 Section 4.5): Step 1: B = E1 + E2*ls (benefits to labor). E1 = direct labor benefits (pensions, disability/survivor benefits, unemployment insurance, public education, social assistance, public health). E2 = mixed expenditures (general public services, defense, infrastructure, environment, culture) allocated by ls. Step 2: T = T1 + T2*ls (taxes from labor). T1 = direct taxes (personal income tax on wages, employee social security contributions). T2 = indirect/mixed taxes (VAT, Special Consumption Tax, customs duties, property taxes, corporate income tax) allocated by ls. T3 = taxes on capital (non-wage income tax, dividends, interest, rent, capital gains) — excluded from T. Step 3: NSW = B - T. Step 4: NSW_ratio = NSW / GDP.",
       "source_ref": "KT_2022, Sections 4.2-4.5; Technical/Knowledge_Base/external_papers/international/2022_Karabacak_Tonak_NSW_Turkey/full_transcription.md"
     },
     {
       "entry_type": "validation_target",
-      "content": "Validation benchmark: KT (2022) Abstract and Section 5.1 report mean NSW/GDP = -0.0113 (stated as '-1.13% of GDP'). The paper rounds to '-1.1%' in the Abstract. ST2 achieves -0.0098 after DEC-014 fix. The 0.0015 residual gap is acceptable given: (a) TurkStat total-compensation ls vs. paper's productive-sector ls, (b) 2007-2019 NaN years affecting the mean, (c) benefit/tax source data provenance differences. The sign (negative) and universal negativity (100% of years) are the primary validation criteria. V-layer acceptance range: [-0.008, -0.015].",
-      "source_ref": "KT_2022, Abstract and Section 5.1; DECISION_LOG.md#DEC-014; Technical/Knowledge_Base/external_papers/international/2022_Karabacak_Tonak_NSW_Turkey/full_transcription.md"
+      "content": "Validation benchmark: KT (2022) Abstract and Section 5.1 report mean NSW/GDP = -0.0113 (stated as '-1.13% of GDP'). The paper rounds to '-1.1%' in the Abstract. ST2 achieves -0.0098 after [internal-decision-record] fix. The 0.0015 residual gap is acceptable given: (a) TurkStat total-compensation ls vs. paper's productive-sector ls, (b) 2007-2019 NaN years affecting the mean, (c) benefit/tax source data provenance differences. The sign (negative) and universal negativity (100% of years) are the primary validation criteria. V-layer acceptance range: [-0.008, -0.015].",
+      "source_ref": "KT_2022, Abstract and Section 5.1; [internal-decision-log]#[internal-decision-record]; Technical/Knowledge_Base/external_papers/international/2022_Karabacak_Tonak_NSW_Turkey/full_transcription.md"
     },
     {
       "entry_type": "theoretical_context",
@@ -80,9 +80,9 @@
       "full": "Turkish Statistical Institute (TurkStat). 2011. Statistical Indicators 1923-2011. Table 20.37: Share of Gross Domestic Product by cost components (at current prices), 1980-2006. Ankara: TurkStat. [Digitized via HDARP, chunk_027. Used for ES1601 labor share.]"
     }
   ],
-  "methodology_summary": "ES1602 = (B - T) / GDP following KT (2022) Section 4.5. B = E1 + E2*ls, T = T1 + T2*ls, ls = ES1601 (TurkStat Table 20.37 labor share). Mean = -0.0098 (paper reports -0.011). Universal negativity (all 40 years negative) is the primary structural validation criterion. Coverage 1980-2006 (27 years real); 2007-2019 are NaN per DEC-012. SBB proxy calibration artifacts (transfer and tax multipliers) removed per DEC-014.",
+  "methodology_summary": "ES1602 = (B - T) / GDP following KT (2022) Section 4.5. B = E1 + E2*ls, T = T1 + T2*ls, ls = ES1601 (TurkStat Table 20.37 labor share). Mean = -0.0098 (paper reports -0.011). Universal negativity (all 40 years negative) is the primary structural validation criterion. Coverage 1980-2006 (27 years real); 2007-2019 are NaN per [internal-decision-record]. SBB proxy calibration artifacts (transfer and tax multipliers) removed per [internal-decision-record].",
   "known_issues": [
-    "2007-2019 gap: ES1601 has no real data after 2006; years 2007-2019 are NaN per DEC-012. The full 1980-2019 KT (2022) series cannot be reproduced without additional TurkStat income-approach data for post-2006 years.",
+    "2007-2019 gap: ES1601 has no real data after 2006; years 2007-2019 are NaN per [internal-decision-record]. The full 1980-2019 KT (2022) series cannot be reproduced without additional TurkStat income-approach data for post-2006 years.",
     "Mean residual: ST2 achieves -0.0098 vs. paper's -0.011. Gap of 0.0015 is within acceptable range given ls methodology differences (total compensation / GDP vs. productive-sector wages / NDP).",
     "ls denominator mismatch: TurkStat Table 20.37 uses GDP as denominator; KT (2022) uses NDP. This systematically understates ls, which partially offsets benefit/tax allocation and contributes to the residual gap."
   ],

@@ -25,25 +25,25 @@
   ],
   "decision_log_refs": [
     {
-      "dec_id": "DEC-006",
+      "dec_id": "[internal-decision-record]",
       "summary": "1996 welfare reform bridge: NIPA Tables 2.1 and 3.1 used for continuous coverage across the 1996 PRWORA transition. Policy discontinuity documented but not adjusted. S607 shows structural break in underlying components (S605, S606) around 1996-1997, flagged in V03 continuity checks.",
-      "source": "NickyData/DECISION_LOG.md"
+      "source": "[internal-decision-log]"
     },
     {
-      "dec_id": "DEC-013",
+      "dec_id": "[internal-decision-record]",
       "summary": "Moos NSW formula uses NSW = E1 - (T1 + T2*LS): direct benefits minus taxes. E2 (government consumption: education, health, transportation from NIPA T3.16) is excluded from the P21 Moos replication. With E2 excluded, 1959-1997 overlap mean = 0.013 vs Moos published 0.011. This is the central NSW formula for the independent Moos replication benchmark.",
-      "source": "NickyData/DECISION_LOG.md"
+      "source": "[internal-decision-log]"
     }
   ],
   "entries": [
     {
       "entry_type": "methodology_description",
-      "content": "NSW = B_w + G_w - T_w, where B_w is government benefits to workers (S605), G_w is government services to workers (S606), and T_w is total taxes paid by workers (S604). A negative NSW means workers pay more in taxes than they receive in benefits and services \u2014 the state extracts net revenue from the working class.",
+      "content": "NSW = B_w + G_w - T_w, where B_w is government benefits to workers (S605), G_w is government services to workers (S606), and T_w is total taxes paid by workers (S604). A negative NSW means workers pay more in taxes than they receive in benefits and services — the state extracts net revenue from the working class.",
       "source_ref": "ST_1994, Ch6; CHAPTER_6_INVESTIGATION.md"
     },
     {
       "entry_type": "central_finding",
-      "content": "NSW is predominantly NEGATIVE for 1952-1989: 35 of 38 years show workers paying more in taxes than receiving in benefits and services. Only 3 years show positive NSW: 1975, 1976, and 1983 \u2014 all deep recessions with countercyclical benefit spikes and falling tax receipts. This contradicts the 'welfare state' narrative that government fiscal activity redistributes income toward workers.",
+      "content": "NSW is predominantly NEGATIVE for 1952-1989: 35 of 38 years show workers paying more in taxes than receiving in benefits and services. Only 3 years show positive NSW: 1975, 1976, and 1983 — all deep recessions with countercyclical benefit spikes and falling tax receipts. This contradicts the 'welfare state' narrative that government fiscal activity redistributes income toward workers.",
       "source_ref": "ST_1994, Ch6 Table 6.3; CHAPTER_6_INVESTIGATION.md"
     },
     {
@@ -78,8 +78,8 @@
     },
     {
       "entry_type": "decision_log_note",
-      "content": "DEC-006 (2026-03-30): 1996 welfare reform (PRWORA) creates a structural break in S607's underlying components. NIPA Tables 2.1 and 3.1 bridge this transition with continuous coverage. The break is documented but not adjusted; flagged in V03 continuity checks. DEC-013 (2026-05-06): The independent Moos replication formula is NSW = E1 - (T1 + T2*LS). E2 government consumption is excluded \u2014 with E2 excluded, 1959-1997 mean = 0.013 vs Moos published 0.011 (residual gap from NIPA vintage). V11 benchmark range [0.008, 0.018].",
-      "source_ref": "NickyData/DECISION_LOG.md, DEC-006; DEC-013"
+      "content": "[internal-decision-record] (2026-03-30): 1996 welfare reform (PRWORA) creates a structural break in S607's underlying components. NIPA Tables 2.1 and 3.1 bridge this transition with continuous coverage. The break is documented but not adjusted; flagged in V03 continuity checks. [internal-decision-record] (2026-05-06): The independent Moos replication formula is NSW = E1 - (T1 + T2*LS). E2 government consumption is excluded — with E2 excluded, 1959-1997 mean = 0.013 vs Moos published 0.011 (residual gap from NIPA vintage). V11 benchmark range [0.008, 0.018].",
+      "source_ref": "[internal-decision-log], [internal-decision-record]; [internal-decision-record]"
     }
   ],
   "citations": [
@@ -104,14 +104,14 @@
       "full": "Bureau of Economic Analysis. National Income and Product Accounts. https://apps.bea.gov/iTable/"
     }
   ],
-  "methodology_summary": "Net Social Wage = (Benefits + Services) - Taxes for workers. Predominantly negative 1952-1989 (35/38 years), meaning the state extracts net revenue from workers. Three positive years (1975, 1976, 1983) during deep recessions. Post-2001 structural shift to persistently positive NSW. DEC-006: 1996 welfare reform structural break documented. DEC-013: Central Moos NSW formula confirmed as NSW = E1 - (T1 + T2*LS) with E2 excluded; 1959-1997 mean 0.013 vs published 0.011.",
+  "methodology_summary": "Net Social Wage = (Benefits + Services) - Taxes for workers. Predominantly negative 1952-1989 (35/38 years), meaning the state extracts net revenue from workers. Three positive years (1975, 1976, 1983) during deep recessions. Post-2001 structural shift to persistently positive NSW. [internal-decision-record]: 1996 welfare reform structural break documented. [internal-decision-record]: Central Moos NSW formula confirmed as NSW = E1 - (T1 + T2*LS) with E2 excluded; 1959-1997 mean 0.013 vs published 0.011.",
   "known_issues": [
     "Sales/excise tax inclusion (AS2) vs exclusion (Tonak) is the primary methodological divergence",
     "Post-2001 positive NSW reflects structural policy changes (Medicare Part D, ACA) not present in original framework",
     "COVID-era transfers (2020-2021) are extreme outliers requiring careful treatment",
     "Modified exploitation rate formula assumes NSW directly adjusts V and S",
     "Government services allocation is the most assumption-sensitive component",
-    "1996 welfare reform structural break in S605/S606 propagates into S607 (DEC-006, V03)"
+    "1996 welfare reform structural break in S605/S606 propagates into S607 ([internal-decision-record], V03)"
   ],
   "cross_references": [
     "S601",

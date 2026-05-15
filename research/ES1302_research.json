@@ -6,18 +6,18 @@
   "researcher": "agent",
   "kb_sources_searched": [
     "Technical/Knowledge_Base/external_papers/state_welfare/2017_Moos_NSW_21st_Century/full_transcription.md",
-    "Technical/NickyData/DECISION_LOG.md"
+    "Technical/[internal-decision-log]"
   ],
   "entries": [
     {
       "entry_type": "methodology_description",
       "content": "ES1302 expresses Moos (2017)'s extended NSW series as a ratio to total employee compensation (EC), rather than GDP (ES1301). This matches Shaikh & Tonak (2002)'s primary normalization (ES1202). Moos primarily reports NSW/GDP (her Figure 1-2) but also presents NSW/EC in Figure 2 (1959-2012). The switch from GDP to EC as denominator amplifies the ratio since EC < GDP; the post-2001 peak is 16.1% of EC in 2010 vs 8.6% of GDP (from Table 2 summary statistics).",
-      "source_ref": "Moos_2017, Section 3 pp.4-5, Table 2; full_transcription.md Section 3 and Figure 2 reference; DECISION_LOG.md DEC-013"
+      "source_ref": "Moos_2017, Section 3 pp.4-5, Table 2; full_transcription.md Section 3 and Figure 2 reference; [internal-decision-log] [internal-decision-record]"
     },
     {
       "entry_type": "decision_reference",
-      "content": "DEC-013 (2026-05-06): Standard Shaikh-Tonak/Moos formula is NSW = E1 - T1 - T2*LS (E2 excluded). With this formula, ST2 P21 achieves 1959-1997 overlap mean NSW/GDP = 0.013 vs Moos published 0.011. The same E2 exclusion applies to ES1302 (NSW/EC). Mean NSW/EC for overlap period from ST2 is correspondingly higher than NSW/GDP due to EC < GDP. V11 benchmark range [0.008, 0.018] applies to the NSW/GDP ratio (ES1301); ES1302 NSW/EC expected to be roughly 1.5-2x higher given EC/GDP ratio historically ~0.55-0.65.",
-      "source_ref": "DECISION_LOG.md DEC-013"
+      "content": "[internal-decision-record] (2026-05-06): Standard Shaikh-Tonak/Moos formula is NSW = E1 - T1 - T2*LS (E2 excluded). With this formula, ST2 P21 achieves 1959-1997 overlap mean NSW/GDP = 0.013 vs Moos published 0.011. The same E2 exclusion applies to ES1302 (NSW/EC). Mean NSW/EC for overlap period from ST2 is correspondingly higher than NSW/GDP due to EC < GDP. V11 benchmark range [0.008, 0.018] applies to the NSW/GDP ratio (ES1301); ES1302 NSW/EC expected to be roughly 1.5-2x higher given EC/GDP ratio historically ~0.55-0.65.",
+      "source_ref": "[internal-decision-log] [internal-decision-record]"
     },
     {
       "entry_type": "key_finding",
@@ -31,12 +31,12 @@
     },
     {
       "entry_type": "formula",
-      "content": "ES1302 = NSW / EC, where NSW = E1 - T1 - T2*LS (per DEC-013 E2 excluded). EC = total employee compensation from BEA NIPA Table 2.1 (wages + salaries + employer social insurance contributions + other labor income). Labor share LS = wages and salaries / total personal income (secularly declining from ~0.73 in 1960s to ~0.62 by 2010s). Robustness check with Mohun (2016) income share (declining from 0.70 to ~0.45) produces nearly identical NSW/EC path.",
+      "content": "ES1302 = NSW / EC, where NSW = E1 - T1 - T2*LS (per [internal-decision-record] E2 excluded). EC = total employee compensation from BEA NIPA Table 2.1 (wages + salaries + employer social insurance contributions + other labor income). Labor share LS = wages and salaries / total personal income (secularly declining from ~0.73 in 1960s to ~0.62 by 2010s). Robustness check with Mohun (2016) income share (declining from 0.70 to ~0.45) produces nearly identical NSW/EC path.",
       "source_ref": "Moos_2017, Section 2 pp.3-4, Section 4.3 pp.20-23; full_transcription.md Sections 2 and 4.3"
     },
     {
       "entry_type": "cyclical_driver",
-      "content": "Moos confirms Shaikh & Tonak's finding that unemployment drives NSW variations but extends the analysis: in 1983 and 2010, official unemployment was identical at 9.6%, yet NSW/GDP was 2.1% in 1983 and 8.6% in 2010 (Table 3). The difference is unemployment intensity \u2014 product of unemployment rate and duration index. 1983 intensity=18.95%; 2010 intensity=31.46% (66% higher). Long-term unemployment means extended benefit collection. This explains the unprecedented post-2007 NSW/EC without requiring a structural change in benefit generosity.",
+      "content": "Moos confirms Shaikh & Tonak's finding that unemployment drives NSW variations but extends the analysis: in 1983 and 2010, official unemployment was identical at 9.6%, yet NSW/GDP was 2.1% in 1983 and 8.6% in 2010 (Table 3). The difference is unemployment intensity — product of unemployment rate and duration index. 1983 intensity=18.95%; 2010 intensity=31.46% (66% higher). Long-term unemployment means extended benefit collection. This explains the unprecedented post-2007 NSW/EC without requiring a structural change in benefit generosity.",
       "source_ref": "Moos_2017, Section 4.2.1 pp.17-19; full_transcription.md Table 3 and Section 4.2.1"
     },
     {
@@ -59,11 +59,11 @@
       "full": "Bureau of Economic Analysis. National Income and Product Accounts. Survey of Current Business, various years."
     }
   ],
-  "methodology_summary": "NSW/EC extended to 2012 by Moos (2017), using same formula as ES1301 but normalized by employee compensation rather than GDP. Period 1959-2012. EC < GDP so NSW/EC magnitudes are larger; post-2001 peak is 16.1% of EC vs 8.6% of GDP. E2 excluded per DEC-013. Direct comparator to ES1202 (ST 2002 NSW/EC).",
+  "methodology_summary": "NSW/EC extended to 2012 by Moos (2017), using same formula as ES1301 but normalized by employee compensation rather than GDP. Period 1959-2012. EC < GDP so NSW/EC magnitudes are larger; post-2001 peak is 16.1% of EC vs 8.6% of GDP. E2 excluded per [internal-decision-record]. Direct comparator to ES1202 (ST 2002 NSW/EC).",
   "known_issues": [
     "NIPA vintage difference between Moos (~2015 pull) and ST2 (2026 pull) affects historical EC values",
     "EC/GDP ratio declining in neoliberal era means normalization choice matters more for post-2001 period",
-    "E2 excluded from NSW per DEC-013; E2 data available for sensitivity analysis"
+    "E2 excluded from NSW per [internal-decision-record]; E2 data available for sensitivity analysis"
   ],
   "cross_references": [
     "ES1301",

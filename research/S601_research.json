@@ -20,15 +20,15 @@
   ],
   "decision_log_refs": [
     {
-      "dec_id": "DEC-008",
-      "summary": "Ch6 tax allocation methodology verified: income-proportional method (T_w = taxes \u00d7 W_p/PI) confirmed against HDARP Section 3.3 extraction (pages 63-65, NRYwp net royalty framework). P09 implementation correct.",
-      "source": "NickyData/DECISION_LOG.md"
+      "dec_id": "[internal-decision-record]",
+      "summary": "Ch6 tax allocation methodology verified: income-proportional method (T_w = taxes × W_p/PI) confirmed against HDARP Section 3.3 extraction (pages 63-65, NRYwp net royalty framework). P09 implementation correct.",
+      "source": "[internal-decision-log]"
     }
   ],
   "entries": [
     {
       "entry_type": "methodology_description",
-      "content": "Personal income tax allocated to workers using income-proportional method: S601 = Personal income tax \u00d7 (W / total personal income). W is employee compensation; total personal income is from NIPA Table 2.1. This yields the worker share of federal + state/local personal income taxes.",
+      "content": "Personal income tax allocated to workers using income-proportional method: S601 = Personal income tax × (W / total personal income). W is employee compensation; total personal income is from NIPA Table 2.1. This yields the worker share of federal + state/local personal income taxes.",
       "source_ref": "ST_1994, Ch6; CHAPTER_6_INVESTIGATION.md"
     },
     {
@@ -53,8 +53,8 @@
     },
     {
       "entry_type": "decision_log_note",
-      "content": "DEC-008 (2026-04-09): Income-proportional tax allocation method confirmed correct. HDARP extraction of Section 3.3 (pages 63-65) documents the net royalty framework: NRYwp = net taxes on productive workers. Book quote p.64: 'The true measure of variable capital is the nominal wage of productive workers minus any net royalty payments made by them.' P09 implementation verified.",
-      "source_ref": "NickyData/DECISION_LOG.md, DEC-008"
+      "content": "[internal-decision-record] (2026-04-09): Income-proportional tax allocation method confirmed correct. HDARP extraction of Section 3.3 (pages 63-65) documents the net royalty framework: NRYwp = net taxes on productive workers. Book quote p.64: 'The true measure of variable capital is the nominal wage of productive workers minus any net royalty payments made by them.' P09 implementation verified.",
+      "source_ref": "[internal-decision-log], [internal-decision-record]"
     }
   ],
   "citations": [
@@ -71,7 +71,7 @@
       "full": "Moos, Julie. 2017. The Net Social Wage in the United States, 1952-2012. PhD dissertation."
     }
   ],
-  "methodology_summary": "Worker share of personal income taxes allocated via income-proportional method (W/total personal income) applied to combined federal + state/local personal income tax revenue from NIPA Tables 3.2 and 3.3. Method confirmed by DEC-008 against book Section 3.3 NRYwp framework.",
+  "methodology_summary": "Worker share of personal income taxes allocated via income-proportional method (W/total personal income) applied to combined federal + state/local personal income tax revenue from NIPA Tables 3.2 and 3.3. Method confirmed by [internal-decision-record] against book Section 3.3 NRYwp framework.",
   "known_issues": [
     "Income-proportional allocation ignores progressive rate structure",
     "Does not distinguish between wage income tax and capital gains tax within personal income tax",

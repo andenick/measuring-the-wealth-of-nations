@@ -48,8 +48,8 @@
     },
     {
       "entry_type": "decision_reference",
-      "content": "DEC-010: DIV-001 (K\u2192K* capital stock restriction) is BLOCKED pending a comprehensive unit audit. S505 (S*) is in millions from Table 5.7, while K from BEA Fixed Assets uses a different unit convention (UNIT_MULT=6). Computing S*/K or any ratio involving both series produces inflated results until unit normalization is completed. The S*/K ratio for profit rate purposes must not be computed until the unit mismatch is resolved. ADJ-001 remains BLOCKED.",
-      "source_ref": "DECISION_LOG.md DEC-010 (2026-04-09)"
+      "content": "[internal-decision-record]: DIV-001 (K→K* capital stock restriction) is BLOCKED pending a comprehensive unit audit. S505 (S*) is in millions from Table 5.7, while K from BEA Fixed Assets uses a different unit convention (UNIT_MULT=6). Computing S*/K or any ratio involving both series produces inflated results until unit normalization is completed. The S*/K ratio for profit rate purposes must not be computed until the unit mismatch is resolved. ADJ-001 remains BLOCKED.",
+      "source_ref": "[internal-decision-log] [internal-decision-record] (2026-04-09)"
     }
   ],
   "citations": [
@@ -62,12 +62,12 @@
       "full": "Mohun, Simon. 2013. 'Unproductive Labor in the U.S. Economy 1964-2010.' Review of Radical Political Economics 46(3): 355-379."
     }
   ],
-  "methodology_summary": "Surplus value is derived as S* = GFP - V*. Book data from Table 5.5. Extension constrained by GFP and V* availability. Mohun provides comparison estimates. DEC-010: DIV-001 blocked by unit mismatch \u2014 S*/K ratios must not be computed until unit normalization is complete.",
+  "methodology_summary": "Surplus value is derived as S* = GFP - V*. Book data from Table 5.5. Extension constrained by GFP and V* availability. Mohun provides comparison estimates. [internal-decision-record]: DIV-001 blocked by unit mismatch — S*/K ratios must not be computed until unit normalization is complete.",
   "known_issues": [
     "Extension constrained by S502 and S504 dependencies",
     "Mohun's broader productive classification yields lower S*/V* ratio",
     "Double approximation error risk in extended period",
-    "DEC-010: DIV-001 BLOCKED \u2014 unit mismatch between S505 (millions, Table 5.7) and BEA Fixed Assets K (UNIT_MULT=6) prevents S*/K computation"
+    "[internal-decision-record]: DIV-001 BLOCKED — unit mismatch between S505 (millions, Table 5.7) and BEA Fixed Assets K (UNIT_MULT=6) prevents S*/K computation"
   ],
   "cross_references": [
     "S503",

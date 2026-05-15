@@ -6,7 +6,7 @@
   "researcher": "agent",
   "kb_sources_searched": [
     "Technical/Knowledge_Base/external_papers/state_welfare/2017_Moos_NSW_21st_Century/full_transcription.md",
-    "Technical/NickyData/DECISION_LOG.md"
+    "Technical/[internal-decision-log]"
   ],
   "entries": [
     {
@@ -16,8 +16,8 @@
     },
     {
       "entry_type": "decision_reference",
-      "content": "DEC-013 (2026-05-06): With E2 excluded from NSW computation (standard Shaikh-Tonak/Moos formula), ST2 P21 produces a structural shift of +0.054 across the 2000-2001 boundary (mean post-2000 minus mean pre-2000 for NSW/EC), compared to a structural shift of +0.030 in NSW/EC implied by Moos's published data. For NSW/GDP the analogous comparison: ST2 mean 1959-1997 = 0.013 vs Moos published 0.011. The structural shift is larger in ST2 than in Moos \u2014 attributable to NIPA vintage differences (2026 pull vs ~2015 pull).",
-      "source_ref": "DECISION_LOG.md DEC-013"
+      "content": "[internal-decision-record] (2026-05-06): With E2 excluded from NSW computation (standard Shaikh-Tonak/Moos formula), ST2 P21 produces a structural shift of +0.054 across the 2000-2001 boundary (mean post-2000 minus mean pre-2000 for NSW/EC), compared to a structural shift of +0.030 in NSW/EC implied by Moos's published data. For NSW/GDP the analogous comparison: ST2 mean 1959-1997 = 0.013 vs Moos published 0.011. The structural shift is larger in ST2 than in Moos — attributable to NIPA vintage differences (2026 pull vs ~2015 pull).",
+      "source_ref": "[internal-decision-log] [internal-decision-record]"
     },
     {
       "entry_type": "structural_break_evidence",
@@ -26,17 +26,17 @@
     },
     {
       "entry_type": "validation_target",
-      "content": "series_registry.json ES1305 validation reference_values: structural_shift = 0.030. This is the Moos-published magnitude of the post-2000 mean shift in NSW/EC. ST2 achieves structural_shift = 0.054 (DEC-013), which is larger due to NIPA vintage. Expected range for ES1305 is [-0.05, 0.10] for NSW/GDP values. The V11 validator should confirm: (1) pre-2000 mean approximately zero; (2) post-2000 mean substantially positive; (3) shift magnitude in plausible range.",
-      "source_ref": "DECISION_LOG.md DEC-013; series_registry.json ES1305 validation"
+      "content": "series_registry.json ES1305 validation reference_values: structural_shift = 0.030. This is the Moos-published magnitude of the post-2000 mean shift in NSW/EC. ST2 achieves structural_shift = 0.054 ([internal-decision-record]), which is larger due to NIPA vintage. Expected range for ES1305 is [-0.05, 0.10] for NSW/GDP values. The V11 validator should confirm: (1) pre-2000 mean approximately zero; (2) post-2000 mean substantially positive; (3) shift magnitude in plausible range.",
+      "source_ref": "[internal-decision-log] [internal-decision-record]; series_registry.json ES1305 validation"
     },
     {
       "entry_type": "causal_decomposition",
-      "content": "Moos Section 4 decomposes the post-2001 structural shift into four contributing factors: (1) Income support growth (dominant factor): E1 rising as share of GDP driven by Social Security expansion, Medicare/Medicaid growth (healthcare inflation 6.6%/yr 2000-2010), and refundable tax credits (EITC $1.3bn\u2192$96.5bn from 1980-2010). (2) Tax cuts: Bush EGTRRA (2001) + JGTRRA (2003) reduced federal income tax revenue; extended under Obama through 2012. Tax revenue dropped sharply after dot-com bust (2001) and again after financial crisis (2008). (3) Unemployment intensity: 2010 intensity 31.46% vs 1983 18.95% at same 9.6% unemployment rate. (4) Demographic: Baby Boomer cohort aging, but peak eligibility (age 65+) not reached until 2011, so demographic shift explains gradual long-run trend but not sharp 2001 break.",
+      "content": "Moos Section 4 decomposes the post-2001 structural shift into four contributing factors: (1) Income support growth (dominant factor): E1 rising as share of GDP driven by Social Security expansion, Medicare/Medicaid growth (healthcare inflation 6.6%/yr 2000-2010), and refundable tax credits (EITC $1.3bn→$96.5bn from 1980-2010). (2) Tax cuts: Bush EGTRRA (2001) + JGTRRA (2003) reduced federal income tax revenue; extended under Obama through 2012. Tax revenue dropped sharply after dot-com bust (2001) and again after financial crisis (2008). (3) Unemployment intensity: 2010 intensity 31.46% vs 1983 18.95% at same 9.6% unemployment rate. (4) Demographic: Baby Boomer cohort aging, but peak eligibility (age 65+) not reached until 2011, so demographic shift explains gradual long-run trend but not sharp 2001 break.",
       "source_ref": "Moos_2017, Section 4.1-4.2 pp.6-20; full_transcription.md Sections 4.1-4.2"
     },
     {
       "entry_type": "robustness_check",
-      "content": "Moos Section 4.3 confirms the structural shift is not an artifact of labor share measurement. Using Mohun (2016) alternative income share (declining from ~0.70 to ~0.45, much steeper than traditional LS 0.73\u21920.62) produces nearly identical NSW/GDP path. Maximum difference between traditional LS series and Mohun series is <1 percentage point throughout 1959-2012. The post-2001 shift appears in both. This is because the shift is primarily driven by E1 (direct benefits, not multiplied by LS) and T2 cuts, not by changes in LS-weighted components.",
+      "content": "Moos Section 4.3 confirms the structural shift is not an artifact of labor share measurement. Using Mohun (2016) alternative income share (declining from ~0.70 to ~0.45, much steeper than traditional LS 0.73→0.62) produces nearly identical NSW/GDP path. Maximum difference between traditional LS series and Mohun series is <1 percentage point throughout 1959-2012. The post-2001 shift appears in both. This is because the shift is primarily driven by E1 (direct benefits, not multiplied by LS) and T2 cuts, not by changes in LS-weighted components.",
       "source_ref": "Moos_2017, Section 4.3 pp.20-23; full_transcription.md Section 4.3"
     },
     {

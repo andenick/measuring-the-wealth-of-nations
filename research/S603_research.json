@@ -16,9 +16,9 @@
   ],
   "decision_log_refs": [
     {
-      "dec_id": "DEC-008",
-      "summary": "Ch6 tax allocation methodology verified: income-proportional method (T_w = taxes \u00d7 W_p/PI) confirmed against HDARP Section 3.3 extraction (pages 63-65, NRYwp net royalty framework). P09 implementation correct.",
-      "source": "NickyData/DECISION_LOG.md"
+      "dec_id": "[internal-decision-record]",
+      "summary": "Ch6 tax allocation methodology verified: income-proportional method (T_w = taxes × W_p/PI) confirmed against HDARP Section 3.3 extraction (pages 63-65, NRYwp net royalty framework). P09 implementation correct.",
+      "source": "[internal-decision-log]"
     }
   ],
   "entries": [
@@ -29,7 +29,7 @@
     },
     {
       "entry_type": "data_source",
-      "content": "Total property tax revenue from NIPA Table 3.3 (State and Local Government Current Receipts, line 9 \u2014 property taxes). Worker housing share derived from Census housing data and homeownership rates cross-referenced with income distribution.",
+      "content": "Total property tax revenue from NIPA Table 3.3 (State and Local Government Current Receipts, line 9 — property taxes). Worker housing share derived from Census housing data and homeownership rates cross-referenced with income distribution.",
       "source_ref": "BEA NIPA Table 3.3; Census Bureau housing data"
     },
     {
@@ -44,8 +44,8 @@
     },
     {
       "entry_type": "decision_log_note",
-      "content": "DEC-008 (2026-04-09): Tax allocation methodology confirmed. Property tax worker share is allocated via the income-proportional (housing share) method consistent with the NRYwp framework verified in Section 3.3 (pages 63-65). The broader principle \u2014 that taxes borne by productive workers reduce V* \u2014 applies here. P09 implementation verified.",
-      "source_ref": "NickyData/DECISION_LOG.md, DEC-008"
+      "content": "[internal-decision-record] (2026-04-09): Tax allocation methodology confirmed. Property tax worker share is allocated via the income-proportional (housing share) method consistent with the NRYwp framework verified in Section 3.3 (pages 63-65). The broader principle — that taxes borne by productive workers reduce V* — applies here. P09 implementation verified.",
+      "source_ref": "[internal-decision-log], [internal-decision-record]"
     }
   ],
   "citations": [
@@ -58,7 +58,7 @@
       "full": "Bureau of Economic Analysis. National Income and Product Accounts. https://apps.bea.gov/iTable/"
     }
   ],
-  "methodology_summary": "Worker share of property taxes allocated via worker housing share applied to state/local property tax revenue from NIPA Table 3.3 line 9. Includes pass-through of property taxes to renters. Method consistent with DEC-008 tax allocation framework.",
+  "methodology_summary": "Worker share of property taxes allocated via worker housing share applied to state/local property tax revenue from NIPA Table 3.3 line 9. Includes pass-through of property taxes to renters. Method consistent with [internal-decision-record] tax allocation framework.",
   "known_issues": [
     "Worker housing share proxy may not capture regional variation in property tax rates",
     "Renter pass-through assumption is debated in public finance literature",

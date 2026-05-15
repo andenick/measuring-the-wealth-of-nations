@@ -3423,7 +3423,7 @@
       ],
       "subseries": {
         "ES1601-A": {
-          "name": "TurkStat Table 20.37 (DEC-014)",
+          "name": "TurkStat Table 20.37",
           "source": "Karabacak & Tonak 2022 RRPE",
           "period": [
             1980,
@@ -3449,7 +3449,7 @@
           "subseries": [
             "ES1601-A"
           ],
-          "desc": "TurkStat HDARP extraction (DEC-014)"
+          "desc": "TurkStat HDARP extraction"
         }
       ],
       "extension": null,
@@ -3482,7 +3482,7 @@
       ],
       "subseries": {
         "ES1602-A": {
-          "name": "SBB/MoF fiscal data (DEC-014)",
+          "name": "SBB/MoF fiscal data",
           "source": "Karabacak & Tonak 2022 RRPE",
           "period": [
             1980,
@@ -3508,7 +3508,7 @@
           "subseries": [
             "ES1602-A"
           ],
-          "desc": "SBB/MoF fiscal data + World Bank (DEC-014)"
+          "desc": "SBB/MoF fiscal data + World Bank"
         }
       ],
       "extension": null,

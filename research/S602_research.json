@@ -16,9 +16,9 @@
   ],
   "decision_log_refs": [
     {
-      "dec_id": "DEC-008",
-      "summary": "Ch6 tax allocation methodology verified: income-proportional method (T_w = taxes \u00d7 W_p/PI) confirmed against HDARP Section 3.3 extraction (pages 63-65, NRYwp net royalty framework). P09 implementation correct.",
-      "source": "NickyData/DECISION_LOG.md"
+      "dec_id": "[internal-decision-record]",
+      "summary": "Ch6 tax allocation methodology verified: income-proportional method (T_w = taxes × W_p/PI) confirmed against HDARP Section 3.3 extraction (pages 63-65, NRYwp net royalty framework). P09 implementation correct.",
+      "source": "[internal-decision-log]"
     }
   ],
   "entries": [
@@ -49,8 +49,8 @@
     },
     {
       "entry_type": "decision_log_note",
-      "content": "DEC-008 (2026-04-09): Tax allocation methodology confirmed. The NRYwp net royalty framework (Section 3.3, pages 63-65) underpins the allocation of social insurance taxes to workers. Social insurance taxes are a direct royalty payment deducted from productive workers' wages. P09 methodology verified correct.",
-      "source_ref": "NickyData/DECISION_LOG.md, DEC-008"
+      "content": "[internal-decision-record] (2026-04-09): Tax allocation methodology confirmed. The NRYwp net royalty framework (Section 3.3, pages 63-65) underpins the allocation of social insurance taxes to workers. Social insurance taxes are a direct royalty payment deducted from productive workers' wages. P09 methodology verified correct.",
+      "source_ref": "[internal-decision-log], [internal-decision-record]"
     }
   ],
   "citations": [
@@ -67,7 +67,7 @@
       "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' New School for Social Research working paper."
     }
   ],
-  "methodology_summary": "Worker social insurance taxes include both employee and employer payroll contributions to OASDI, Medicare, and unemployment insurance. Both sides are attributed to workers per the classical political economy framework. DEC-008 confirms allocation method consistent with NRYwp net royalty framework.",
+  "methodology_summary": "Worker social insurance taxes include both employee and employer payroll contributions to OASDI, Medicare, and unemployment insurance. Both sides are attributed to workers per the classical political economy framework. [internal-decision-record] confirms allocation method consistent with NRYwp net royalty framework.",
   "known_issues": [
     "Employer contribution incidence assumption differs from neoclassical analysis",
     "Self-employment social insurance taxes require separate treatment",

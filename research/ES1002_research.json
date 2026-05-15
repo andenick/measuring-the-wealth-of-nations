@@ -16,7 +16,7 @@
     },
     {
       "entry_type": "data_source",
-      "content": "Primary source: Tonak (1984) PhD Dissertation, Chapter IV, covering 1952-1980 (28 annual observations). Key tables: Table V ('Labor and Non-Labor Portions of Total Taxes', p.98), Table IX ('Total and the Portion of Benefits and Income Received by Labor', p.112), Table X ('Net Tax Paid by Labor', p.113), Table XI ('Transfer Ratio and Welfare-Adjusted Transfer Ratio', p.114). Raw inputs from U.S. NIPA. Appendix I details taxation methodology (pp.162-167); Appendix II covers expenditures (pp.169-173). Per DEC-012, values must be extracted from these HDARP tables, not synthetically generated.",
+      "content": "Primary source: Tonak (1984) PhD Dissertation, Chapter IV, covering 1952-1980 (28 annual observations). Key tables: Table V ('Labor and Non-Labor Portions of Total Taxes', p.98), Table IX ('Total and the Portion of Benefits and Income Received by Labor', p.112), Table X ('Net Tax Paid by Labor', p.113), Table XI ('Transfer Ratio and Welfare-Adjusted Transfer Ratio', p.114). Raw inputs from U.S. NIPA. Appendix I details taxation methodology (pp.162-167); Appendix II covers expenditures (pp.169-173). Per [internal-decision-record], values must be extracted from these HDARP tables, not synthetically generated.",
       "source_ref": "1984_Tonak_State_Revenues/chunk_002/full_transcription.md (List of Tables pp.v-vi)"
     },
     {
@@ -31,12 +31,12 @@
     },
     {
       "entry_type": "caveat",
-      "content": "Per DEC-012 (No Synthetic Data Policy, 2026-05-03): ES1002 was explicitly identified as using prohibited synthetic data. The annual series must be extracted from HDARP chunks covering Chapter IV pp.95-113 (Tables V, IX, X). Until that extraction is complete, the series is data_unavailable. No synthetic fill is permitted under any circumstances.",
-      "source_ref": "DECISION_LOG.md#DEC-012"
+      "content": "Per [internal-decision-record] (No Synthetic Data Policy, 2026-05-03): ES1002 was explicitly identified as using prohibited synthetic data. The annual series must be extracted from HDARP chunks covering Chapter IV pp.95-113 (Tables V, IX, X). Until that extraction is complete, the series is data_unavailable. No synthetic fill is permitted under any circumstances.",
+      "source_ref": "[internal-decision-log]#[internal-decision-record]"
     },
     {
       "entry_type": "caveat",
-      "content": "The net tax concept in Tonak (1984) covers the working class as a whole (employed and unemployed). A narrower variant \u2014 net tax paid exclusively by productive workers \u2014 appears in Table XII and feeds into the adjusted rate of surplus value (Table XIII). ES1002 as registered corresponds to the broader 'all workers' net tax rate. The productive-workers variant is a distinct series. Researchers must confirm which definition is intended before using either series in surplus value calculations.",
+      "content": "The net tax concept in Tonak (1984) covers the working class as a whole (employed and unemployed). A narrower variant — net tax paid exclusively by productive workers — appears in Table XII and feeds into the adjusted rate of surplus value (Table XIII). ES1002 as registered corresponds to the broader 'all workers' net tax rate. The productive-workers variant is a distinct series. Researchers must confirm which definition is intended before using either series in surplus value calculations.",
       "source_ref": "1984_Tonak_State_Revenues/chunk_001/full_transcription.md (Abstract); chunk_002/full_transcription.md (List of Tables p.vi, Chapter IV Tables XII-XIII)"
     },
     {
@@ -51,8 +51,8 @@
     },
     {
       "entry_type": "decision_reference",
-      "content": "DEC-012 (No Synthetic Data Policy, 2026-05-03): ES1002 named as one of five series requiring remediation. Remediation plan: 'Extract real annual data from HDARP Table V.B (28 years available).' Note: 'Table V.B' likely refers to an Appendix III table on surplus value data; the correct source for the net tax rate series is Chapter IV Table X (p.113). This should be clarified when the HDARP extraction of the relevant chunks is undertaken.",
-      "source_ref": "DECISION_LOG.md#DEC-012"
+      "content": "[internal-decision-record] (No Synthetic Data Policy, 2026-05-03): ES1002 named as one of five series requiring remediation. Remediation plan: 'Extract real annual data from HDARP Table V.B (28 years available).' Note: 'Table V.B' likely refers to an Appendix III table on surplus value data; the correct source for the net tax rate series is Chapter IV Table X (p.113). This should be clarified when the HDARP extraction of the relevant chunks is undertaken.",
+      "source_ref": "[internal-decision-log]#[internal-decision-record]"
     }
   ],
   "citations": [
@@ -67,10 +67,10 @@
   ],
   "methodology_summary": "Net tax rate on workers from Tonak (1984), 1952-1980 (28 years). Defined as taxes paid by workers minus benefits received, expressed as a proportion of employee compensation. Central empirical finding: workers are net taxpayers to the state throughout most of the period.",
   "known_issues": [
-    "Annual data not yet extracted \u2014 HDARP chunks covering Chapter IV pp.95-113 required",
-    "DEC-012 prohibits synthetic fill; series is data_unavailable until HDARP extraction completes",
+    "Annual data not yet extracted — HDARP chunks covering Chapter IV pp.95-113 required",
+    "[internal-decision-record] prohibits synthetic fill; series is data_unavailable until HDARP extraction completes",
     "Registry cites 'Table III' but the correct source is Chapter IV Table X (p.113); requires verification",
-    "Sign convention: Tonak uses 'net tax' (T_w - B); S&T 1987 uses 'net transfer' (B - T_w) \u2014 opposite signs"
+    "Sign convention: Tonak uses 'net tax' (T_w - B); S&T 1987 uses 'net transfer' (B - T_w) — opposite signs"
   ],
   "cross_references": [
     "ES1001",

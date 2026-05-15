@@ -35,7 +35,7 @@
     },
     {
       "entry_type": "known_issue_detail",
-      "content": "KNOWN ISSUE: The denominator uses total capital stock K, not K* (productive capital only). ST acknowledge this as a data limitation \u2014 ideally only capital employed in productive sectors should be in the denominator. Using total K biases r* downward as unproductive-sector capital grows.",
+      "content": "KNOWN ISSUE: The denominator uses total capital stock K, not K* (productive capital only). ST acknowledge this as a data limitation — ideally only capital employed in productive sectors should be in the denominator. Using total K biases r* downward as unproductive-sector capital grows.",
       "source_ref": "ST_1994, Ch5; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md"
     },
     {
@@ -55,8 +55,8 @@
     },
     {
       "entry_type": "decision_reference",
-      "content": "DEC-002: Total private fixed assets K from BEA Fixed Assets Table 4.1 is used as the capital denominator instead of productive-sector-only K*. Restricting K to productive sectors requires the IO-based sector classification from Chapter 4 (Wave 2). Using total K understates r* level but preserves trend dynamics. Resolution planned for Wave 2 (ADJ-001).",
-      "source_ref": "DECISION_LOG.md#DEC-002"
+      "content": "[internal-decision-record]: Total private fixed assets K from BEA Fixed Assets Table 4.1 is used as the capital denominator instead of productive-sector-only K*. Restricting K to productive sectors requires the IO-based sector classification from Chapter 4 (Wave 2). Using total K understates r* level but preserves trend dynamics. Resolution planned for Wave 2 (ADJ-001).",
+      "source_ref": "[internal-decision-log]#[internal-decision-record]"
     }
   ],
   "citations": [
@@ -69,9 +69,9 @@
       "full": "Bureau of Economic Analysis. Fixed Assets Accounts Tables. https://apps.bea.gov/iTable/"
     }
   ],
-  "methodology_summary": "Marxian profit rate r* = S*/(C*+V*) shows secular decline. Known issue per DEC-002: uses total K instead of K* (productive capital only) \u2014 biases r* downward. Decomposable as e/(q+1) linking exploitation rate and value composition.",
+  "methodology_summary": "Marxian profit rate r* = S*/(C*+V*) shows secular decline. Known issue per [internal-decision-record]: uses total K instead of K* (productive capital only) — biases r* downward. Decomposable as e/(q+1) linking exploitation rate and value composition.",
   "known_issues": [
-    "Uses total K instead of K* (productive capital only) \u2014 biases r* downward (DEC-002)",
+    "Uses total K instead of K* (productive capital only) — biases r* downward ([internal-decision-record])",
     "Extension requires simultaneous availability of S*, C*, V*",
     "FIRE-sector capital growth amplifies downward bias post-1989"
   ],

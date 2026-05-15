@@ -19,15 +19,15 @@
   ],
   "decision_log_refs": [
     {
-      "dec_id": "DEC-006",
+      "dec_id": "[internal-decision-record]",
       "summary": "1996 welfare reform bridge: NIPA Tables 2.1 and 3.1 used for continuous coverage across the 1996 Personal Responsibility and Work Opportunity Reconciliation Act transition. Policy discontinuity documented but not adjusted. S605 shows structural break around 1996-1997, flagged in V03 continuity checks.",
-      "source": "NickyData/DECISION_LOG.md"
+      "source": "[internal-decision-log]"
     }
   ],
   "entries": [
     {
       "entry_type": "methodology_description",
-      "content": "B_w captures government transfer payments to workers: Social Security (OASDI), Medicare, Medicaid, unemployment insurance (UI), and other transfers \u00d7 worker share. Worker share for each program is estimated from program eligibility and recipient income data. Social Security and UI are predominantly worker-directed; Medicare/Medicaid allocation uses income-based worker share.",
+      "content": "B_w captures government transfer payments to workers: Social Security (OASDI), Medicare, Medicaid, unemployment insurance (UI), and other transfers × worker share. Worker share for each program is estimated from program eligibility and recipient income data. Social Security and UI are predominantly worker-directed; Medicare/Medicaid allocation uses income-based worker share.",
       "source_ref": "ST_1994, Ch6; CHAPTER_6_INVESTIGATION.md"
     },
     {
@@ -37,7 +37,7 @@
     },
     {
       "entry_type": "empirical_finding",
-      "content": "Benefit rate (B/EC) rose from approximately 0.11 in 1952 to 0.28 by 1989, a 155% increase \u2014 nearly double the rate of tax growth. The acceleration came from Medicare introduction (1966), Medicaid expansion, Social Security benefit increases (1972 automatic COLA), and countercyclical UI spikes during recessions.",
+      "content": "Benefit rate (B/EC) rose from approximately 0.11 in 1952 to 0.28 by 1989, a 155% increase — nearly double the rate of tax growth. The acceleration came from Medicare introduction (1966), Medicaid expansion, Social Security benefit increases (1972 automatic COLA), and countercyclical UI spikes during recessions.",
       "source_ref": "CHAPTER_6_INVESTIGATION.md"
     },
     {
@@ -57,8 +57,8 @@
     },
     {
       "entry_type": "decision_log_note",
-      "content": "DEC-006 (2026-03-30): The 1996 Personal Responsibility and Work Opportunity Reconciliation Act (welfare reform) restructured federal benefits programs. NIPA Tables 2.1 and 3.1 provide continuous coverage across this transition, though benefits composition changed significantly. S605 shows a structural break around 1996-1997. The discontinuity is documented but not adjusted \u2014 splitting pre/post-1996 would overcomplicate for minimal analytical gain. Flagged in V03 continuity checks.",
-      "source_ref": "NickyData/DECISION_LOG.md, DEC-006"
+      "content": "[internal-decision-record] (2026-03-30): The 1996 Personal Responsibility and Work Opportunity Reconciliation Act (welfare reform) restructured federal benefits programs. NIPA Tables 2.1 and 3.1 provide continuous coverage across this transition, though benefits composition changed significantly. S605 shows a structural break around 1996-1997. The discontinuity is documented but not adjusted — splitting pre/post-1996 would overcomplicate for minimal analytical gain. Flagged in V03 continuity checks.",
+      "source_ref": "[internal-decision-log], [internal-decision-record]"
     }
   ],
   "citations": [
@@ -75,13 +75,13 @@
       "full": "Moos, Julie. 2017. The Net Social Wage in the United States, 1952-2012. PhD dissertation."
     }
   ],
-  "methodology_summary": "Government benefits to workers sum Social Security, Medicare, Medicaid, UI, and other transfers allocated by worker share. B/EC ratio rose 155% from 0.11 to 0.28 over 1952-1989, with countercyclical spikes during recessions. DEC-006: 1996 welfare reform creates documented structural break handled via NIPA continuous coverage.",
+  "methodology_summary": "Government benefits to workers sum Social Security, Medicare, Medicaid, UI, and other transfers allocated by worker share. B/EC ratio rose 155% from 0.11 to 0.28 over 1952-1989, with countercyclical spikes during recessions. [internal-decision-record]: 1996 welfare reform creates documented structural break handled via NIPA continuous coverage.",
   "known_issues": [
     "Medicaid worker allocation is debated given employer-sponsored insurance substitution",
     "Medicare Part D and ACA expansion create structural breaks in post-2003 data",
     "COVID-era emergency transfers (2020-2021) are extreme outliers requiring separate treatment",
     "In-kind benefits (food stamps, housing assistance) may be underrepresented in NIPA transfer data",
-    "1996 welfare reform structural break documented in V03 continuity checks (DEC-006)"
+    "1996 welfare reform structural break documented in V03 continuity checks ([internal-decision-record])"
   ],
   "cross_references": [
     "S604",

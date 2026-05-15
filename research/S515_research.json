@@ -35,7 +35,7 @@
     },
     {
       "entry_type": "sector_decomposition",
-      "content": "Agriculture: Lp_agr = (Lp/L)_min \u00d7 L_agr (uses mining sector productive ratio as proxy). Government enterprises: Lp_ge = (Lp/L)_nongovtot \u00d7 L_ge. Trade: all employment classified as unproductive (Lu). FIRE: decomposed into finance/insurance, real estate, brokers, and general \u2014 each with specific productive/unproductive ratios.",
+      "content": "Agriculture: Lp_agr = (Lp/L)_min × L_agr (uses mining sector productive ratio as proxy). Government enterprises: Lp_ge = (Lp/L)_nongovtot × L_ge. Trade: all employment classified as unproductive (Lu). FIRE: decomposed into finance/insurance, real estate, brokers, and general — each with specific productive/unproductive ratios.",
       "source_ref": "ST_1994, Ch5; Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_27/full_transcription.md"
     },
     {
@@ -68,12 +68,12 @@
       "full": "Bureau of Labor Statistics. Current Employment Statistics (CES). https://www.bls.gov/ces/"
     }
   ],
-  "methodology_summary": "Productive employment counts workers in productive sectors via 85 IO \u2192 13 NIPA concordance. Special rules for agriculture, government enterprises, trade, and FIRE. Extended via BLS CES production worker data (see DEC-005 in S511/S512).",
+  "methodology_summary": "Productive employment counts workers in productive sectors via 85 IO → 13 NIPA concordance. Special rules for agriculture, government enterprises, trade, and FIRE. Extended via BLS CES production worker data (see [internal-decision-record] in S511/S512).",
   "known_issues": [
-    "BLS CES production worker \u2260 ST's sector-based productive worker",
+    "BLS CES production worker ≠ ST's sector-based productive worker",
     "SIC-to-NAICS transition affects consistency",
     "Agriculture and government enterprise use proxy ratios",
-    "Trade classified as entirely unproductive \u2014 debatable for some subsectors"
+    "Trade classified as entirely unproductive — debatable for some subsectors"
   ],
   "cross_references": [
     "S501",
