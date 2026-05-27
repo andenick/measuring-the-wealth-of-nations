@@ -9,8 +9,8 @@
 ## Install
 
 ```bash
-git clone https://github.com/andenick/measuring-wealth-of-nations-replication.git
-cd measuring-wealth-of-nations-replication
+git clone https://github.com/andenick/measuring-the-wealth-of-nations.git
+cd measuring-the-wealth-of-nations
 pip install -r requirements.txt
 ```
 

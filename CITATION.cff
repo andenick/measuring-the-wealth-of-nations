@@ -6,7 +6,7 @@ authors:
   - family-names: Anderson
     given-names: Nick
     email: protonnicky@gmail.com
-repository-code: "https://github.com/andenick/measuring-wealth-of-nations-replication"
+repository-code: "https://github.com/andenick/measuring-the-wealth-of-nations"
 abstract: >-
   Complete replication and extension of every empirical claim in Shaikh & Tonak's
   Measuring the Wealth of Nations (1994), plus 8 follow-up studies (Tonak 1984,
