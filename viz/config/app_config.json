@@ -1,0 +1,231 @@
+{
+  "version": "2.0",
+  "app_title": "RMWND — Measuring the Wealth of Nations Replication",
+  "subtitle": "Shaikh & Tonak (1994) — Interactive Data Explorer",
+  "debug": false,
+  "host": "127.0.0.1",
+  "port_dash": 8051,
+  "port_shiny": 3838,
+  "default_tab": "ch5",
+  "default_theme": "light",
+  "chopped_dir": "../chopped",
+  "registry_path": "../series_registry.json",
+  "style_path": "viz_style.json",
+  "color_palettes": {
+    "sources": {
+      "BEA": "#1f77b4",
+      "FRED": "#2ca02c",
+      "MeasuringWorth": "#ff7f0e",
+      "BLS": "#d62728",
+      "Ibbotson": "#9467bd",
+      "Shiller": "#e377c2",
+      "calculated": "#7f7f7f",
+      "historical": "#8c564b",
+      "Federal Reserve": "#2ca02c",
+      "extension": "#00ff88",
+      "shaikh_original": "#ffcc00",
+      "extended": "#00ccff"
+    },
+    "status": {
+      "verified": "#28a745",
+      "partial": "#ffc107",
+      "needs_review": "#dc3545",
+      "conceptual": "#6c757d",
+      "extended_2025": "#543c8a"
+    },
+    "multi_series": [
+      "#ffcc00",
+      "#00ccff",
+      "#ff7f0e",
+      "#2ca02c",
+      "#d62728",
+      "#9467bd",
+      "#e377c2",
+      "#8c564b"
+    ],
+    "subsource": [
+      "#ffcc00",
+      "#00ccff",
+      "#ff7f0e",
+      "#2ca02c",
+      "#d62728",
+      "#9467bd",
+      "#e377c2",
+      "#8c564b",
+      "#17becf",
+      "#bcbd22",
+      "#7f7f7f",
+      "#1f77b4",
+      "#98df8a",
+      "#ff9896",
+      "#c5b0d5",
+      "#ffbb78"
+    ],
+    "status_badges": {
+      "verified": "#28a745",
+      "extended_2025": "#543c8a",
+      "calculated": "#ffc107",
+      "needs_source": "#dc3545",
+      "conceptual": "#6c757d",
+      "partial": "#fd7e14",
+      "historical": "#8c564b",
+      "not_applicable": "#6c757d"
+    },
+    "section_headers": {
+      "success": "#28a745",
+      "warning": "#ffc107",
+      "info": "#543c8a",
+      "danger": "#dc3545"
+    },
+    "book_period": "#3c8dbc",
+    "extension_period": "#f39c12",
+    "transition": "#605ca8"
+  },
+  "status_labels": {
+    "verified": "✓ Verified",
+    "extended_2025": "↗ Extended",
+    "calculated": "⚙ Calculated",
+    "needs_source": "⚠ Needs Source",
+    "conceptual": "📊 Conceptual",
+    "partial": "◐ Partial",
+    "historical": "📜 Historical",
+    "not_applicable": "— N/A"
+  },
+  "view_modes": {
+    "all_sources": "All Sources",
+    "final_series": "Final Series",
+    "author_construction": "Author Construction",
+    "final_extension": "Final Extension",
+    "select_individual": "Select Individual",
+    "show_components": "Show Components"
+  },
+  "chart_theme": {
+    "paper_bgcolor": "#ffffff",
+    "plot_bgcolor": "#ffffff",
+    "font_color": "#333333",
+    "grid_color": "#e8e8e8",
+    "zeroline_color": "#cccccc",
+    "accent_color": "#543c8a",
+    "legend_bgcolor": "rgba(255,255,255,0.85)"
+  },
+  "chart_theme_dark": {
+    "paper_bgcolor": "#16213e",
+    "plot_bgcolor": "#16213e",
+    "font_color": "#e8e8e8",
+    "grid_color": "#333333",
+    "zeroline_color": "#555555",
+    "accent_color": "#7c5cbf",
+    "legend_bgcolor": "rgba(22,33,62,0.85)"
+  },
+  "chart_defaults": {
+    "height": 480,
+    "margin": {
+      "l": 70,
+      "r": 50,
+      "t": 60,
+      "b": 80
+    },
+    "font_family": "Inter, system-ui, -apple-system, sans-serif",
+    "font_size": 12
+  },
+  "tabs": {
+    "ch5": {
+      "label": "Ch 5 · Exploitation",
+      "series_ids": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S507",
+        "S508",
+        "S509",
+        "S510",
+        "S511",
+        "S512",
+        "S513",
+        "S514",
+        "S515",
+        "S516",
+        "S517"
+      ]
+    },
+    "ch6": {
+      "label": "Ch 6 · Net Social Wage",
+      "series_ids": [
+        "S601",
+        "S602",
+        "S603",
+        "S604",
+        "S605",
+        "S606",
+        "S607",
+        "S608",
+        "S609",
+        "S617"
+      ]
+    },
+    "special": {
+      "label": "Ch 2/4/7/8/9 · Special",
+      "series_ids": [
+        "S201",
+        "S401",
+        "S402",
+        "S701",
+        "S702",
+        "S703",
+        "S801",
+        "S901"
+      ]
+    },
+    "external": {
+      "label": "External Studies",
+      "series_ids": [
+        "ES1001",
+        "ES1002",
+        "ES1101",
+        "ES1102",
+        "ES1103",
+        "ES1201",
+        "ES1202",
+        "ES1301",
+        "ES1302",
+        "ES1304",
+        "ES1305",
+        "ES1401",
+        "ES1402",
+        "ES1403",
+        "ES1404",
+        "ES1501",
+        "ES1502",
+        "ES1503",
+        "ES1504",
+        "ES1601",
+        "ES1602",
+        "ES1701",
+        "ES1702",
+        "ES1703",
+        "ES1704"
+      ]
+    },
+    "analytical": {
+      "label": "Analytical",
+      "series_ids": [
+        "AS001",
+        "AS002",
+        "AS003",
+        "AS004"
+      ]
+    }
+  },
+  "year_range": [
+    1925,
+    2025
+  ],
+  "default_year_range": [
+    1929,
+    2025
+  ],
+  "splice_year": 1989
+}

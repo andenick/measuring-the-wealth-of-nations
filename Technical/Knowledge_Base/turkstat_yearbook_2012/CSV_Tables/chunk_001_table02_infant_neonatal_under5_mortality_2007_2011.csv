@@ -1,8 +1,0 @@
-table_id,table_number,source,title_tr,title_en
-chunk_001_table02,5.8,TurkStat Yearbook 2012,Bebek neonatal ve 5 yaş altı ölüm hızları Türkiye 2007-2011,Infant neonatal and under-5 mortality rate Turkey 2007-2011
-
-unit: per thousand (permille)
-indicator,2007,2008,2009,2010,2011
-Bebek ölüm hızı - Infant mortality rate,13.9,12.1,10.2,7.8,7.7
-Neonatal ölüm hızı - Neonatal mortality rate,11.2,9.4,7.7,6.5,4.6
-5 yaş altı ölüm hızı - Under 5 age mortality rate,20.0,16.8,14.1,11.7,11.3

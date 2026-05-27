@@ -1,0 +1,121 @@
+{
+  "chapter": "Ch10",
+  "chapter_label": "Tonak 1984 Dissertation Replication (ES1001-ES1002)",
+  "external_paper": {
+    "author": "Tonak, E. Ahmet",
+    "year": 1984,
+    "title": "A Conceptualization of State Revenues and Expenditures U.S.: 1952-1980",
+    "venue": "PhD Dissertation, New School for Social Research (UMI 9414212)",
+    "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1984_Tonak_State_Revenues/"
+  },
+  "series_count": 2,
+  "series_ids": ["ES1001", "ES1002"],
+  "report_date": "2026-05-23T23:51:50Z",
+  "reporter": "agent",
+  "stage": 2,
+  "cohort": "stage2_c1",
+  "skill": "anu-adequacy",
+  "skill_version": "1.2",
+  "framework": "Anu Framework v12.0",
+  "gate_threshold": 80,
+  "layers": {
+    "L1_kb_completeness": {
+      "score": 90,
+      "status": "PASS",
+      "evidence": {
+        "kb_directory": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1984_Tonak_State_Revenues/",
+        "chunks_found": 13,
+        "chunk_inventory": "chunk_001..chunk_04 (early sessions), chunk_03..chunk_07 with per-chunk 4-type extraction (full_transcription / table_descriptions / equations / figures), chunk_08..chunk_13 (later sessions), plus aggregate equations/, figures/, tables/ directories and 3 session summaries",
+        "critical_pages_covered": "chunk_11 covers Chapter IV pp.88-93 (Table II Labor Share, p.92; Weisskopf comparison Table III, p.93); chunk_13 covers Chapter IV pp.110-115 (Net Tax Section 5, Table X p.113, Table XI p.114, Figure II)",
+        "verbatim_quotes_extracted": "ES1001 has 4 verbatim quotes (LS formula p.90, Table II structure p.92, 1980 worked example LS=0.71, Weisskopf comparison p.91); ES1002 has 3 verbatim quotes (net tax definition p.110, Section 5 narrative p.111 with 1975 sign-flip anchor, transfer-ratio narrative p.111)",
+        "extracted_equations": "labor_share_formula.md present in chunk_11/equations/"
+      },
+      "blockers": [],
+      "notes": "KB extraction is rich. The two anchor pages required for ES1001 (Table II, p.92) and ES1002 (Tables V/IX/X/XI on pp.98-114) both lie within already-extracted chunks (11 and 13). Earlier-session chunks 001/002/03-07 also contain front matter, TOC, and Chapter I-III narrative. Only minor deduction: chunks for Appendix III Table V.B (annual surplus value series) are not separately confirmed in inventory."
+    },
+    "L2_data_source_availability": {
+      "score": 90,
+      "status": "PASS",
+      "evidence": {
+        "external_csv_path": "Inputs/ST2/Inputs/ExternalSources/Tonak1984/",
+        "external_csvs_present": [
+          "table_V_taxes_labor_nonlabor_1952_1980.csv",
+          "table_IX_benefits_labor_1952_1980.csv",
+          "table_X_net_tax_1952_1980.csv"
+        ],
+        "coverage": "Tables V, IX, X cover the entire 1952-1980 (28-year) book period for both ES1001 (LS) and ES1002 (net tax) construction",
+        "underlying_nipa": "BEA NIPA cached series available at Inputs/ST2/Inputs/API_Data/BEA/ (17 NIPA files including nipa_2_1_personal_income.csv, nipa_3_1_govt_receipts_expenditures.csv, nipa_T20100_compensation_1929_2025.csv)",
+        "no_extension_required": "Ch10 series have year_range [1952,1980] and extension: null; no API extension fetch needed for adequacy"
+      },
+      "blockers": [],
+      "notes": "External CSVs from Tonak 1984 are digitized and cover the full book period. NIPA underlying source is cached. ES1001 specifically depends on Table II (Labor Share) which is NOT directly in the external CSV list (only Tables V/IX/X are present) but is recoverable from the HDARP chunk_11 extraction. Minor: a dedicated table_II_labor_share CSV would simplify L01 work."
+    },
+    "L3_methodology_clarity": {
+      "score": 92,
+      "status": "PASS",
+      "evidence": {
+        "ES1001_methodology_summary": "Populated: 'Labor share of national income from Tonak (1984) Chapter IV Table II, 1952-1980, 28 annual observations. Defined as total labor income / personal income; serves as allocation key throughout the dissertation's net tax framework.'",
+        "ES1002_methodology_summary": "Populated: 'Net tax rate on workers from Tonak (1984), 1952-1980 (28 years). Defined as taxes paid by workers minus benefits received, expressed as a proportion of employee compensation. Central empirical finding: workers are net taxpayers to the state throughout most of the period.'",
+        "formulas_present": "ES1001: LS = Total Labor Income / Adjusted Personal Income (verbatim from chunk_11). ES1002: Net Tax = T_w - B; tax side via Group I/II classification with labor share allocation",
+        "construction_logic_documented": "Both series have explicit Group I (100% to labor) and Group II (labor-share-weighted) classifications documented in research entries",
+        "worked_example_anchor": "ES1001 has 1980 worked example (LS = 1483.370 / 2101.10 = 0.71); ES1002 has 1975 sign-flip qualitative anchor"
+      },
+      "blockers": [],
+      "notes": "Both research JSONs carry strong methodological documentation with verbatim formula quotes from the dissertation chapter."
+    },
+    "L4_registry_completeness": {
+      "score": 78,
+      "status": "WARN",
+      "evidence": {
+        "ES1001_required_fields": "name, study, chapter, year_range, subseries, construction, validation, processor, wave, status, units, content_type all present",
+        "ES1002_required_fields": "name, study, chapter, year_range, subseries, construction, validation, processor, wave, status, units, content_type all present",
+        "construction_thinness": "Both series have single 'load' op with desc 'HDARP extraction from Table V' / 'HDARP extraction from Table X' — no formula breakdown, no input subseries chain, no group-classification step list",
+        "ES1002_units_field_mismatch": "ES1002 units='billions_usd' but series is a rate per name and per research methodology_summary ('expressed as a proportion of employee compensation'). Registry tolerance_class='rate_series' but units string contradicts content_type intent",
+        "paper_table_field": "ES1001 paper_table='Table V' but research entry identifies primary source as 'Chapter IV Table II (p.92)'. Misalignment flagged in research known_issues.",
+        "ES1002_paper_table": "Registry paper_table='Table X' — correct per research entry."
+      },
+      "blockers": [],
+      "notes": "Required fields present, but two precision issues: (a) ES1002 units field 'billions_usd' contradicts rate-series semantics; (b) ES1001 paper_table='Table V' contradicts research-confirmed primary source Table II. Both are remediable in ingestion (Stage 3) and do not block proceeding."
+    },
+    "L5_validation_refs": {
+      "score": 62,
+      "status": "WARN",
+      "evidence": {
+        "ES1001_reference_values": "{1952: 34.58, 1980: 456.39} — present but values appear in billions of dollars (NIPA totals), NOT labor share ratios (which should be 0.71-0.75). MISALIGNED with expected_range [0.6, 0.8]",
+        "ES1002_reference_values": "{1952: 16.02} — single anchor, units unclear; expected_range [0.0, 0.1] suggests rate but value 16.02 is not in [0.0, 0.1]",
+        "expected_range_present": "Both series have expected_range populated",
+        "tolerance_class_present": "Both series have tolerance_class, tolerance_rel, tolerance_abs",
+        "verbatim_validation_anchors_available": "ES1001 has 1980 worked example (LS=0.71); ES1002 has 1975 sign-flip qualitative anchor — both extractable to reference_values during Stage 3 ingestion"
+      },
+      "blockers": [
+        "ES1001 reference_values are scale-inconsistent with expected_range (0.6-0.8) — values 34.58 and 456.39 appear to be raw NIPA totals, not labor-share ratios",
+        "ES1002 reference_value 16.02 inconsistent with rate-series expected_range [0.0, 0.1]"
+      ],
+      "notes": "Reference values are present but appear to be cross-pasted from a different series (likely a billions-USD level series like S604/S605). Strong verbatim anchors from chunk_11 (LS_1980=0.71) and chunk_13 (1975 sign-flip year) are available for correction during Stage 3."
+    },
+    "L6_classification_accuracy": {
+      "score": 85,
+      "status": "PASS",
+      "evidence": {
+        "ES1001_content_type": "time_series — CORRECT (28 annual observations 1952-1980)",
+        "ES1002_content_type": "time_series — CORRECT (28 annual observations 1952-1980)",
+        "ES1001_units": "share — CORRECT for labor share ratio",
+        "ES1002_units": "billions_usd — INCONSISTENT with rate-series classification (see L4)",
+        "no_proxy_flags_needed": "Neither series substitutes a proxy for the original — both source directly from Tonak 1984 Chapter IV tables",
+        "status_field": "Both 'book_period_validated' — consistent with extension: null per Decision 0003 binary-extension rule"
+      },
+      "blockers": [],
+      "notes": "content_type correct for both; the ES1002 units field error overlaps with L4 finding."
+    }
+  },
+  "chapter_score": 82.83,
+  "gate_passed": true,
+  "recommendations": [
+    "Stage 3 ingestion MUST repair ES1001 validation.reference_values: replace {1952: 34.58, 1980: 456.39} with labor-share ratios anchored on verbatim 1980 worked example (LS_1980=0.71) and Table II range [0.71, 0.75]",
+    "Stage 3 ingestion MUST repair ES1002 validation.reference_values: anchor on Tonak 1984 Table X annual values once chunk_13 Table X transcription is parsed; use the 1975 sign-flip year as a structural validation anchor",
+    "Stage 3 ingestion SHOULD fix ES1002 units field ('billions_usd' -> 'rate' or 'share') to align with content_type semantics and tolerance_class",
+    "Stage 3 ingestion SHOULD correct ES1001 paper_table from 'Table V' to 'Table II' to match the research-confirmed primary source",
+    "Stage 3 ingestion SHOULD expand construction step for both series to enumerate the Group I / Group II / labor-share-allocation logic chain rather than a single 'load' step",
+    "OPTIONAL Stage 3: emit Table II annual values to a dedicated table_II_labor_share_1952_1980.csv to mirror the Tables V/IX/X external CSV pattern and simplify L01 loader"
+  ]
+}

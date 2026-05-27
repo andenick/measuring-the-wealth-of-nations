@@ -1,0 +1,3116 @@
+{
+  "S501": {
+    "series_id": "S501",
+    "name": "Total Product (TP*)",
+    "chapter": 5,
+    "book_table": "E.2",
+    "year_range": [
+      1929,
+      2025
+    ],
+    "units": "billions_usd",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S501-A",
+        "name": "Book Table E.2",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#d62728"
+      },
+      {
+        "id": "S501-B",
+        "name": "BEA GDP-by-Industry",
+        "source": "BEA GDPbyIndustry",
+        "period": [
+          1997,
+          2024
+        ],
+        "units": "billions_dollars",
+        "color": "#ff7f0e"
+      },
+      {
+        "id": "S501-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1948,
+          2024
+        ],
+        "units": "billions_dollars",
+        "color": "#d62728"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S501-A"
+        ]
+      },
+      {
+        "step": 2,
+        "op": "load",
+        "subseries": [
+          "S501-B"
+        ],
+        "source": "BEA GDPbyIndustry API"
+      },
+      {
+        "step": 3,
+        "op": "splice",
+        "inputs": [
+          "S501-A",
+          "S501-B"
+        ],
+        "at_year": 1997,
+        "method": "growth_rate",
+        "output": "S501-COMBINED"
+      }
+    ],
+    "figures": [
+      "Fig_5_4",
+      "Fig_5_6",
+      "Fig_9_1",
+      "Fig_9_2"
+    ]
+  },
+  "S502": {
+    "series_id": "S502",
+    "name": "Constant Capital (C*_m)",
+    "chapter": 5,
+    "book_table": "E.2",
+    "year_range": [
+      1929,
+      2025
+    ],
+    "units": "billions_usd",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S502-A",
+        "name": "Book Table E.2",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#d62728"
+      },
+      {
+        "id": "S502-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#d62728"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S502-A"
+        ]
+      }
+    ],
+    "figures": [
+      "Fig_5_4"
+    ]
+  },
+  "S503": {
+    "series_id": "S503",
+    "name": "Gross Final Product (GFP = TP* - C*_m)",
+    "chapter": 5,
+    "book_table": "E.2",
+    "year_range": [
+      1929,
+      2025
+    ],
+    "units": "billions_usd",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S503-A",
+        "name": "Book Table E.2",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#d62728"
+      },
+      {
+        "id": "S503-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#d62728"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S503-A"
+        ]
+      },
+      {
+        "step": 2,
+        "op": "derive",
+        "formula": "GFP = TP* - C*_m",
+        "inputs": [
+          "S501-A",
+          "S502-A"
+        ],
+        "output": "S503-COMBINED"
+      }
+    ],
+    "figures": [
+      "Fig_5_4"
+    ]
+  },
+  "S504": {
+    "series_id": "S504",
+    "name": "Variable Capital (V*)",
+    "chapter": 5,
+    "book_table": "H.1",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "billions_usd",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S504-A",
+        "name": "Book Table 5.5",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#d62728"
+      },
+      {
+        "id": "S504-EXT",
+        "name": "Extended via V* = W — (V*/W)",
+        "source": "BEA NIPA + BLS CES",
+        "period": [
+          1990,
+          2024
+        ],
+        "units": "billions_dollars",
+        "color": "#ff7f0e"
+      },
+      {
+        "id": "S504-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1948,
+          2024
+        ],
+        "units": "billions_dollars",
+        "color": "#d62728"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S504-A"
+        ]
+      },
+      {
+        "step": 2,
+        "op": "derive",
+        "formula": "V* = W — (V*/W)",
+        "inputs": [
+          "S512-EXT"
+        ],
+        "output": "S504-EXT"
+      },
+      {
+        "step": 3,
+        "op": "splice",
+        "inputs": [
+          "S504-A",
+          "S504-EXT"
+        ],
+        "at_year": 1989,
+        "output": "S504-COMBINED"
+      }
+    ],
+    "figures": [
+      "Fig_5_4",
+      "Fig_6_1",
+      "Fig_6_2",
+      "Fig_6_3",
+      "Fig_9_1"
+    ]
+  },
+  "S505": {
+    "series_id": "S505",
+    "name": "Surplus Value (S* = VA* - V*)",
+    "chapter": 5,
+    "book_table": "H.1",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "billions_usd",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S505-A",
+        "name": "Book Table 5.5",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#d62728"
+      },
+      {
+        "id": "S505-EXT",
+        "name": "Extended via GFP - V*",
+        "source": "derived",
+        "period": [
+          1990,
+          2024
+        ],
+        "units": "billions_dollars",
+        "color": "#ff7f0e"
+      },
+      {
+        "id": "S505-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1948,
+          2024
+        ],
+        "units": "billions_dollars",
+        "color": "#d62728"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S505-A"
+        ]
+      },
+      {
+        "step": 2,
+        "op": "derive",
+        "formula": "S* = GFP - V*",
+        "inputs": [
+          "S503-COMBINED",
+          "S504-COMBINED"
+        ],
+        "output": "S505-EXT"
+      },
+      {
+        "step": 3,
+        "op": "splice",
+        "inputs": [
+          "S505-A",
+          "S505-EXT"
+        ],
+        "at_year": 1989,
+        "output": "S505-COMBINED"
+      }
+    ],
+    "figures": [
+      "Fig_5_4",
+      "Fig_9_1"
+    ]
+  },
+  "S506": {
+    "series_id": "S506",
+    "name": "Rate of Exploitation (e = S*/V*)",
+    "chapter": 5,
+    "book_table": "H.1",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "ratio",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S506-A",
+        "name": "Book Table 5.7",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "ratio",
+        "color": "#d62728"
+      },
+      {
+        "id": "S506-EXT",
+        "name": "Extended via VA*/W decomposition",
+        "source": "BLS CES + BEA NIPA",
+        "period": [
+          1990,
+          2024
+        ],
+        "units": "ratio",
+        "color": "#ff7f0e"
+      },
+      {
+        "id": "S506-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1948,
+          2024
+        ],
+        "units": "ratio",
+        "color": "#d62728"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S506-A"
+        ]
+      },
+      {
+        "step": 2,
+        "op": "derive",
+        "formula": "e = 1.238/(V*/W) - 1",
+        "output": "S506-EXT"
+      },
+      {
+        "step": 3,
+        "op": "splice",
+        "inputs": [
+          "S506-A",
+          "S506-EXT"
+        ],
+        "at_year": 1989,
+        "output": "S506-COMBINED"
+      }
+    ],
+    "figures": [
+      "Fig_5_3",
+      "Fig_9_3",
+      "Fig_9_5"
+    ]
+  },
+  "S507": {
+    "series_id": "S507",
+    "name": "Surplus Ratio (S*/Y = S*/(S*+V*))",
+    "chapter": 5,
+    "book_table": "5.7",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "ratio",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S507-A",
+        "name": "Book Table 5.7",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "ratio",
+        "color": "#2ca02c"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S507-A"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  "S508": {
+    "series_id": "S508",
+    "name": "Productive Consumption (CON*)",
+    "chapter": 5,
+    "book_table": "E.2",
+    "year_range": [
+      1929,
+      2025
+    ],
+    "units": "billions_usd",
+    "status": "book_period_partial_1948_1961",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S508-A",
+        "name": "Book Table E.2",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#d62728"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S508-A"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  "S509": {
+    "series_id": "S509",
+    "name": "Productive Investment (IG*)",
+    "chapter": 5,
+    "book_table": "E.2",
+    "year_range": [
+      1929,
+      2025
+    ],
+    "units": "billions_usd",
+    "status": "book_period_partial_1948_1961",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S509-A",
+        "name": "Book Table E.2",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#d62728"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S509-A"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  "S510": {
+    "series_id": "S510",
+    "name": "Value Composition of Capital (K/V*)",
+    "chapter": 5,
+    "book_table": "5.7",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "ratio",
+    "status": "validated_book_and_extension",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S510-A",
+        "name": "Book Table 5.7",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "ratio",
+        "color": "#2ca02c"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S510-A"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  "S511": {
+    "series_id": "S511",
+    "name": "Productive Labor Share (Lp/L)",
+    "chapter": 5,
+    "book_table": "5.7",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "share",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S511-A",
+        "name": "Book Table 5.7",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "share",
+        "color": "#d62728"
+      },
+      {
+        "id": "S511-EXT",
+        "name": "Extended via BLS CES",
+        "source": "BLS CES",
+        "period": [
+          1990,
+          2024
+        ],
+        "units": "share",
+        "color": "#ff7f0e"
+      },
+      {
+        "id": "S511-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1948,
+          2024
+        ],
+        "units": "share",
+        "color": "#d62728"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S511-A"
+        ]
+      },
+      {
+        "step": 2,
+        "op": "load",
+        "subseries": [
+          "S511-EXT"
+        ],
+        "source": "BLS CES API"
+      },
+      {
+        "step": 3,
+        "op": "splice",
+        "inputs": [
+          "S511-A",
+          "S511-EXT"
+        ],
+        "at_year": 1989,
+        "output": "S511-COMBINED"
+      }
+    ],
+    "figures": [
+      "Fig_5_2",
+      "Fig_5_7",
+      "Fig_9_3"
+    ]
+  },
+  "S512": {
+    "series_id": "S512",
+    "name": "Productive Wage Share (V*/W)",
+    "chapter": 5,
+    "book_table": "5.7",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "share",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S512-A",
+        "name": "Book Table 5.7",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "share",
+        "color": "#d62728"
+      },
+      {
+        "id": "S512-EXT",
+        "name": "Extended via BLS CES",
+        "source": "BLS CES",
+        "period": [
+          1990,
+          2024
+        ],
+        "units": "share",
+        "color": "#ff7f0e"
+      },
+      {
+        "id": "S512-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1948,
+          2024
+        ],
+        "units": "share",
+        "color": "#d62728"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S512-A"
+        ]
+      },
+      {
+        "step": 2,
+        "op": "load",
+        "subseries": [
+          "S512-EXT"
+        ],
+        "source": "BLS CES API"
+      },
+      {
+        "step": 3,
+        "op": "splice",
+        "inputs": [
+          "S512-A",
+          "S512-EXT"
+        ],
+        "at_year": 1989,
+        "output": "S512-COMBINED"
+      }
+    ],
+    "figures": [
+      "Fig_9_3"
+    ]
+  },
+  "S513": {
+    "series_id": "S513",
+    "name": "Marxian Profit Rate (r* = S*/(C*+V*))",
+    "chapter": 5,
+    "book_table": "5.11",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "rate",
+    "status": "validated_book_and_extension",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S513-A",
+        "name": "Book Table 5.11",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "rate",
+        "color": "#2ca02c"
+      },
+      {
+        "id": "S513-EXT",
+        "name": "Extended via BEA Fixed Assets",
+        "source": "BEA FixedAssets",
+        "period": [
+          1990,
+          2024
+        ],
+        "units": "rate",
+        "color": "#98df8a"
+      },
+      {
+        "id": "S513-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1948,
+          2024
+        ],
+        "units": "rate",
+        "color": "#2ca02c"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S513-A"
+        ]
+      },
+      {
+        "step": 2,
+        "op": "derive",
+        "formula": "r* = S*/(C*+V*)",
+        "inputs": [
+          "S505-COMBINED",
+          "S502-COMBINED",
+          "S504-COMBINED"
+        ],
+        "output": "S513-EXT"
+      },
+      {
+        "step": 3,
+        "op": "splice",
+        "inputs": [
+          "S513-A",
+          "S513-EXT"
+        ],
+        "at_year": 1989,
+        "output": "S513-COMBINED"
+      }
+    ],
+    "figures": [
+      "Fig_5_5",
+      "Fig_9_2",
+      "Fig_9_4"
+    ]
+  },
+  "S514": {
+    "series_id": "S514",
+    "name": "Capacity-Adjusted Profit Rate (r*_adj = r*—TCU)",
+    "chapter": 5,
+    "book_table": "5.11",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "rate",
+    "status": "validated_book_and_extension_partial",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S514-A",
+        "name": "Book Table 5.11",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "rate",
+        "color": "#2ca02c"
+      },
+      {
+        "id": "S514-EXT",
+        "name": "Extended via FRED TCU",
+        "source": "FRED TCU",
+        "period": [
+          1990,
+          2024
+        ],
+        "units": "rate",
+        "color": "#98df8a"
+      },
+      {
+        "id": "S514-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1948,
+          2024
+        ],
+        "units": "rate",
+        "color": "#2ca02c"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S514-A"
+        ]
+      },
+      {
+        "step": 2,
+        "op": "derive",
+        "formula": "r*_adj = r* — TCU",
+        "inputs": [
+          "S513-COMBINED"
+        ],
+        "output": "S514-EXT"
+      },
+      {
+        "step": 3,
+        "op": "splice",
+        "inputs": [
+          "S514-A",
+          "S514-EXT"
+        ],
+        "at_year": 1989,
+        "output": "S514-COMBINED"
+      }
+    ],
+    "figures": [
+      "Fig_5_5",
+      "Fig_9_4"
+    ]
+  },
+  "S515": {
+    "series_id": "S515",
+    "name": "Productive Employment (Lp)",
+    "chapter": 5,
+    "book_table": "E.3",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "thousands",
+    "status": "book_period_partial_1948_1961",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S515-A",
+        "name": "Book Table E.3",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "thousands",
+        "color": "#d62728"
+      },
+      {
+        "id": "S515-EXT",
+        "name": "Extended via BLS",
+        "source": "BLS CES",
+        "period": [
+          1990,
+          2024
+        ],
+        "units": "thousands",
+        "color": "#ff7f0e"
+      },
+      {
+        "id": "S515-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1948,
+          2024
+        ],
+        "units": "thousands",
+        "color": "#d62728"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S515-A"
+        ]
+      },
+      {
+        "step": 2,
+        "op": "load",
+        "subseries": [
+          "S515-EXT"
+        ],
+        "source": "BLS CES API"
+      },
+      {
+        "step": 3,
+        "op": "splice",
+        "inputs": [
+          "S515-A",
+          "S515-EXT"
+        ],
+        "at_year": 1989,
+        "output": "S515-COMBINED"
+      }
+    ],
+    "figures": [
+      "Fig_5_2",
+      "Fig_5_6",
+      "Fig_5_7"
+    ]
+  },
+  "S516": {
+    "series_id": "S516",
+    "name": "Unproductive Employment (Lu = L - Lp)",
+    "chapter": 5,
+    "book_table": "E.3",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "thousands",
+    "status": "book_period_partial_1948_1961",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S516-A",
+        "name": "Book Table E.3",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "thousands",
+        "color": "#d62728"
+      },
+      {
+        "id": "S516-EXT",
+        "name": "Extended (derived L - Lp)",
+        "source": "derived",
+        "period": [
+          1990,
+          2024
+        ],
+        "units": "thousands",
+        "color": "#ff7f0e"
+      },
+      {
+        "id": "S516-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1948,
+          2024
+        ],
+        "units": "thousands",
+        "color": "#d62728"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S516-A"
+        ]
+      },
+      {
+        "step": 2,
+        "op": "derive",
+        "formula": "Lu = L - Lp",
+        "inputs": [
+          "S515-COMBINED"
+        ],
+        "output": "S516-EXT"
+      },
+      {
+        "step": 3,
+        "op": "splice",
+        "inputs": [
+          "S516-A",
+          "S516-EXT"
+        ],
+        "at_year": 1989,
+        "output": "S516-COMBINED"
+      }
+    ],
+    "figures": [
+      "Fig_5_2",
+      "Fig_5_7"
+    ]
+  },
+  "S601": {
+    "series_id": "S601",
+    "name": "Personal Tax Workers",
+    "chapter": 6,
+    "book_table": "6.1",
+    "year_range": [
+      1952,
+      2025
+    ],
+    "units": "billions_usd",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S601-A",
+        "name": "Book Table 6.1",
+        "source": "S&T 1994",
+        "period": [
+          1952,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#1f77b4"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S601-A"
+        ]
+      }
+    ],
+    "figures": [
+      "Fig_6_4"
+    ]
+  },
+  "S602": {
+    "series_id": "S602",
+    "name": "Social Insurance Tax Workers",
+    "chapter": 6,
+    "book_table": "6.1",
+    "year_range": [
+      1952,
+      2025
+    ],
+    "units": "billions_usd",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S602-A",
+        "name": "Book Table 6.1",
+        "source": "S&T 1994",
+        "period": [
+          1952,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#1f77b4"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S602-A"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  "S603": {
+    "series_id": "S603",
+    "name": "Property Tax Workers",
+    "chapter": 6,
+    "book_table": "6.1",
+    "year_range": [
+      1952,
+      2025
+    ],
+    "units": "billions_usd",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S603-A",
+        "name": "Book Table 6.1",
+        "source": "S&T 1994",
+        "period": [
+          1952,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#1f77b4"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S603-A"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  "S604": {
+    "series_id": "S604",
+    "name": "Total Tax Workers (T_w = sum)",
+    "chapter": 6,
+    "book_table": "6.1",
+    "year_range": [
+      1952,
+      2025
+    ],
+    "units": "billions_usd",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S604-A",
+        "name": "Book Table 6.1",
+        "source": "S&T 1994",
+        "period": [
+          1952,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#1f77b4"
+      },
+      {
+        "id": "S604-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1952,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#1f77b4"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S601-A",
+          "S602-A",
+          "S603-A"
+        ]
+      },
+      {
+        "step": 2,
+        "op": "derive",
+        "formula": "T_w = S601 + S602 + S603 + indirect",
+        "output": "S604-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "S605": {
+    "series_id": "S605",
+    "name": "Government Benefits to Workers (B_w)",
+    "chapter": 6,
+    "book_table": "6.2",
+    "year_range": [
+      1952,
+      2025
+    ],
+    "units": "billions_usd",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S605-A",
+        "name": "Book Table 6.2",
+        "source": "S&T 1994",
+        "period": [
+          1952,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#1f77b4"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S605-A"
+        ]
+      }
+    ],
+    "figures": [
+      "Fig_6_4"
+    ]
+  },
+  "S606": {
+    "series_id": "S606",
+    "name": "Government Services Workers (G_w)",
+    "chapter": 6,
+    "book_table": "6.2",
+    "year_range": [
+      1952,
+      2024
+    ],
+    "units": "billions_usd",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S606-A",
+        "name": "Book Table 6.2",
+        "source": "S&T 1994",
+        "period": [
+          1952,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#1f77b4"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S606-A"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  "S607": {
+    "series_id": "S607",
+    "name": "Net Social Wage (NSW = B_w + G_w - T_w)",
+    "chapter": 6,
+    "book_table": "6.3",
+    "year_range": [
+      1952,
+      2025
+    ],
+    "units": "billions_usd",
+    "status": "validated_book_and_extension",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S607-A",
+        "name": "Book Table 6.3",
+        "source": "S&T 1994",
+        "period": [
+          1952,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#1f77b4"
+      },
+      {
+        "id": "S607-EXT",
+        "name": "Extended via BEA NIPA",
+        "source": "BEA NIPA",
+        "period": [
+          1990,
+          2025
+        ],
+        "units": "billions_dollars",
+        "color": "#aec7e8"
+      },
+      {
+        "id": "S607-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1952,
+          2025
+        ],
+        "units": "billions_dollars",
+        "color": "#1f77b4"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S607-A"
+        ]
+      },
+      {
+        "step": 2,
+        "op": "derive",
+        "formula": "NSW = B_w + G_w - T_w",
+        "inputs": [
+          "S605",
+          "S606",
+          "S604"
+        ],
+        "output": "S607-EXT"
+      },
+      {
+        "step": 3,
+        "op": "splice",
+        "inputs": [
+          "S607-A",
+          "S607-EXT"
+        ],
+        "at_year": 1989,
+        "output": "S607-COMBINED"
+      }
+    ],
+    "figures": [
+      "Fig_6_1",
+      "Fig_6_3",
+      "Fig_6_4"
+    ]
+  },
+  "S608": {
+    "series_id": "S608",
+    "name": "NSW/V* Ratio",
+    "chapter": 6,
+    "book_table": "6.4",
+    "year_range": [
+      1952,
+      2024
+    ],
+    "units": "ratio",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S608-A",
+        "name": "Book Table 6.4",
+        "source": "S&T 1994",
+        "period": [
+          1952,
+          1989
+        ],
+        "units": "ratio",
+        "color": "#2ca02c"
+      },
+      {
+        "id": "S608-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1952,
+          1989
+        ],
+        "units": "ratio",
+        "color": "#2ca02c"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "derive",
+        "formula": "NSW/V* = S607/S504",
+        "inputs": [
+          "S607-A",
+          "S504-A"
+        ],
+        "output": "S608-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "S609": {
+    "series_id": "S609",
+    "name": "NSW/NI Share",
+    "chapter": 6,
+    "book_table": "6.4",
+    "year_range": [
+      1952,
+      2025
+    ],
+    "units": "share",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S609-A",
+        "name": "Book Table 6.4",
+        "source": "S&T 1994",
+        "period": [
+          1952,
+          1989
+        ],
+        "units": "share",
+        "color": "#2ca02c"
+      },
+      {
+        "id": "S609-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1952,
+          1989
+        ],
+        "units": "share",
+        "color": "#2ca02c"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "derive",
+        "formula": "NSW/NI",
+        "inputs": [
+          "S607-A"
+        ],
+        "output": "S609-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "S901": {
+    "series_id": "S901",
+    "name": "Summary Table",
+    "chapter": 9,
+    "book_table": "9.1",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "mixed",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S901-A",
+        "name": "Book Table 9.1",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "mixed",
+        "color": "#d62728"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "assemble",
+        "inputs": [
+          "S506-COMBINED",
+          "S511-COMBINED",
+          "S512-COMBINED",
+          "S513-COMBINED",
+          "S514-COMBINED",
+          "S608-COMBINED"
+        ],
+        "output": "S901-A"
+      }
+    ],
+    "figures": []
+  },
+  "S401": {
+    "series_id": "S401",
+    "name": "A-Matrix",
+    "chapter": 4,
+    "book_table": "4.1",
+    "year_range": [
+      1947,
+      1977
+    ],
+    "units": "matrix",
+    "status": "validated_book_and_extension",
+    "content_type": "benchmark_only",
+    "subseries": [
+      {
+        "id": "S401-A",
+        "name": "Book Table 4.1 (IO matrices)",
+        "source": "S&T 1994",
+        "period": [
+          1947,
+          1977
+        ],
+        "units": "matrix",
+        "color": "#9467bd"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S401-A"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  "S402": {
+    "series_id": "S402",
+    "name": "B-Matrix (Leontief Inverse)",
+    "chapter": 4,
+    "book_table": "4.2",
+    "year_range": [
+      1947,
+      1977
+    ],
+    "units": "matrix",
+    "status": "validated_book_and_extension",
+    "content_type": "benchmark_only",
+    "subseries": [
+      {
+        "id": "S402-A",
+        "name": "Derived Leontief Inverse B = (I-A)^-1",
+        "source": "derived from S401",
+        "period": [
+          1947,
+          1977
+        ],
+        "units": "matrix",
+        "color": "#9467bd"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S401-A"
+        ]
+      },
+      {
+        "step": 2,
+        "op": "derive",
+        "formula": "B = (I - A)^{-1}",
+        "inputs": [
+          "S401-A"
+        ],
+        "output": "S402-A"
+      }
+    ],
+    "figures": []
+  },
+  "S701": {
+    "series_id": "S701",
+    "name": "Labor Values",
+    "chapter": 7,
+    "book_table": "7.1",
+    "year_range": [
+      1947,
+      1977
+    ],
+    "units": "labor_hours_per_dollar",
+    "status": "benchmark_only_matrix_derived",
+    "content_type": "benchmark_only",
+    "subseries": [
+      {
+        "id": "S701-A",
+        "name": "Book Table 7.1",
+        "source": "S&T 1994",
+        "period": [
+          1947,
+          1977
+        ],
+        "units": "labor_hours_per_dollar",
+        "color": "#8c564b"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S701-A"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  "S702": {
+    "series_id": "S702",
+    "name": "Prices of Production",
+    "chapter": 7,
+    "book_table": "7.2",
+    "year_range": [
+      1947,
+      1977
+    ],
+    "units": "index",
+    "status": "benchmark_only_matrix_derived",
+    "content_type": "benchmark_only",
+    "subseries": [
+      {
+        "id": "S702-A",
+        "name": "Book Table 7.2",
+        "source": "S&T 1994",
+        "period": [
+          1947,
+          1977
+        ],
+        "units": "index",
+        "color": "#8c564b"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S702-A"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  "S703": {
+    "series_id": "S703",
+    "name": "Value-Price Deviations",
+    "chapter": 7,
+    "book_table": "7.3",
+    "year_range": [
+      1947,
+      1977
+    ],
+    "units": "percent",
+    "status": "validated_book_and_extension",
+    "content_type": "benchmark_only",
+    "subseries": [
+      {
+        "id": "S703-A",
+        "name": "Book Table 7.3",
+        "source": "S&T 1994",
+        "period": [
+          1947,
+          1977
+        ],
+        "units": "percent",
+        "color": "#8c564b"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S703-A"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  "S201": {
+    "series_id": "S201",
+    "name": "Alternative GFP Measures",
+    "chapter": 2,
+    "book_table": "2.1",
+    "year_range": [
+      1929,
+      2025
+    ],
+    "units": "billions_usd",
+    "status": "validated_book_and_extension",
+    "content_type": "cross_sectional",
+    "subseries": [
+      {
+        "id": "S201-A",
+        "name": "Book Table 2.1",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "billions_dollars",
+        "color": "#7f7f7f"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S201-A"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  "S801": {
+    "series_id": "S801",
+    "name": "Cross-Study Comparison",
+    "chapter": 8,
+    "book_table": "8.1",
+    "year_range": [
+      1948,
+      1989
+    ],
+    "units": "ratio",
+    "status": "validated_book_and_extension",
+    "content_type": "cross_sectional",
+    "subseries": [
+      {
+        "id": "S801-A",
+        "name": "Book Table 8.1",
+        "source": "S&T 1994",
+        "period": [
+          1948,
+          1989
+        ],
+        "units": "mixed",
+        "color": "#7f7f7f"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S801-A"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  "ES1001": {
+    "series_id": "ES1001",
+    "name": "Labor Share of National Income (Tonak 1984)",
+    "chapter": "Study 1",
+    "book_table": "Table V",
+    "year_range": [
+      1952,
+      1980
+    ],
+    "units": "share",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1001-A",
+        "name": "Tonak (1984) Table V",
+        "source": "Tonak 1984 PhD Dissertation",
+        "period": [
+          1952,
+          1980
+        ],
+        "units": "share",
+        "color": "#e377c2"
+      },
+      {
+        "id": "ES1001-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1952,
+          1980
+        ],
+        "units": "share",
+        "color": "#e377c2"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "ES1001-A"
+        ],
+        "desc": "HDARP extraction from Table V"
+      }
+    ],
+    "figures": []
+  },
+  "ES1002": {
+    "series_id": "ES1002",
+    "name": "Net Tax Rate on Workers (Tonak 1984)",
+    "chapter": "Study 1",
+    "book_table": "Table X",
+    "year_range": [
+      1952,
+      1980
+    ],
+    "units": "billions_usd",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1002-A",
+        "name": "Tonak (1984) Table X",
+        "source": "Tonak 1984 PhD Dissertation",
+        "period": [
+          1952,
+          1980
+        ],
+        "units": "rate",
+        "color": "#e377c2"
+      },
+      {
+        "id": "ES1002-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1952,
+          1980
+        ],
+        "units": "rate",
+        "color": "#e377c2"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "ES1002-A"
+        ],
+        "desc": "HDARP extraction from Table X"
+      }
+    ],
+    "figures": []
+  },
+  "ES1101": {
+    "series_id": "ES1101",
+    "name": "Net Transfer Rate (ST 1987)",
+    "chapter": "Study 2",
+    "book_table": "Table 1",
+    "year_range": [
+      1952,
+      1985
+    ],
+    "units": "share",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1101-A",
+        "name": "Derived from S604/S605/BEA NIPA",
+        "source": "Shaikh & Tonak 1987",
+        "period": [
+          1952,
+          1985
+        ],
+        "units": "rate",
+        "color": "#7f7f7f"
+      },
+      {
+        "id": "ES1101-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1952,
+          1985
+        ],
+        "units": "rate",
+        "color": "#7f7f7f"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "derive",
+        "formula": "(B_w - T_w) / EC",
+        "inputs": [
+          "S605",
+          "S604",
+          "BEA_NIPA"
+        ],
+        "output": "ES1101-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "ES1102": {
+    "series_id": "ES1102",
+    "name": "Social Benefit Rate (ST 1987)",
+    "chapter": "Study 2",
+    "book_table": "Table 1",
+    "year_range": [
+      1952,
+      1985
+    ],
+    "units": "share",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1102-A",
+        "name": "Derived from S605/BEA NIPA",
+        "source": "Shaikh & Tonak 1987",
+        "period": [
+          1952,
+          1985
+        ],
+        "units": "rate",
+        "color": "#7f7f7f"
+      },
+      {
+        "id": "ES1102-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1952,
+          1985
+        ],
+        "units": "rate",
+        "color": "#7f7f7f"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "derive",
+        "formula": "B_w / EC",
+        "inputs": [
+          "S605",
+          "BEA_NIPA"
+        ],
+        "output": "ES1102-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "ES1103": {
+    "series_id": "ES1103",
+    "name": "Social Tax Rate (ST 1987)",
+    "chapter": "Study 2",
+    "book_table": "Table 1",
+    "year_range": [
+      1952,
+      1985
+    ],
+    "units": "share",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1103-A",
+        "name": "Derived from S604/BEA NIPA",
+        "source": "Shaikh & Tonak 1987",
+        "period": [
+          1952,
+          1985
+        ],
+        "units": "rate",
+        "color": "#7f7f7f"
+      },
+      {
+        "id": "ES1103-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1952,
+          1985
+        ],
+        "units": "rate",
+        "color": "#7f7f7f"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "derive",
+        "formula": "T_w / EC",
+        "inputs": [
+          "S604",
+          "BEA_NIPA"
+        ],
+        "output": "ES1103-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "ES1201": {
+    "series_id": "ES1201",
+    "name": "NSW/GDP (ST 2002)",
+    "chapter": "Study 3",
+    "book_table": "Table 2",
+    "year_range": [
+      1952,
+      1997
+    ],
+    "units": "share",
+    "status": "validated_book_and_extension",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1201-A",
+        "name": "Derived from S607/BEA GDP",
+        "source": "Shaikh & Tonak 2002",
+        "period": [
+          1952,
+          1997
+        ],
+        "units": "ratio",
+        "color": "#bcbd22"
+      },
+      {
+        "id": "ES1201-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1952,
+          1997
+        ],
+        "units": "ratio",
+        "color": "#bcbd22"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "derive",
+        "formula": "NSW / GDP",
+        "inputs": [
+          "S607",
+          "BEA_GDP"
+        ],
+        "output": "ES1201-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "ES1202": {
+    "series_id": "ES1202",
+    "name": "NSW/EC (ST 2002)",
+    "chapter": "Study 3",
+    "book_table": "Table 2",
+    "year_range": [
+      1952,
+      1997
+    ],
+    "units": "share",
+    "status": "validated_book_and_extension",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1202-A",
+        "name": "Derived from S607/BEA NIPA compensation",
+        "source": "Shaikh & Tonak 2002",
+        "period": [
+          1952,
+          1997
+        ],
+        "units": "ratio",
+        "color": "#bcbd22"
+      },
+      {
+        "id": "ES1202-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1952,
+          1997
+        ],
+        "units": "ratio",
+        "color": "#bcbd22"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "derive",
+        "formula": "NSW / EC",
+        "inputs": [
+          "S607",
+          "BEA_NIPA"
+        ],
+        "output": "ES1202-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "ES1301": {
+    "series_id": "ES1301",
+    "name": "NSW/GDP Extended (Moos 2017)",
+    "chapter": "Study 4",
+    "book_table": "Table 1",
+    "year_range": [
+      1959,
+      2024
+    ],
+    "units": "share",
+    "status": "validated_book_and_extension",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1301-A",
+        "name": "Derived from S607/BEA GDP",
+        "source": "Moos 2017",
+        "period": [
+          1959,
+          2012
+        ],
+        "units": "ratio",
+        "color": "#17becf"
+      },
+      {
+        "id": "ES1301-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1959,
+          2012
+        ],
+        "units": "ratio",
+        "color": "#17becf"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "derive",
+        "formula": "NSW / GDP",
+        "inputs": [
+          "S607",
+          "BEA_GDP"
+        ],
+        "output": "ES1301-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "ES1302": {
+    "series_id": "ES1302",
+    "name": "NSW/EC Extended (Moos 2017)",
+    "chapter": "Study 4",
+    "book_table": "Table 1",
+    "year_range": [
+      1959,
+      2024
+    ],
+    "units": "share",
+    "status": "validated_book_and_extension",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1302-A",
+        "name": "Derived from S607/BEA NIPA compensation",
+        "source": "Moos 2017",
+        "period": [
+          1959,
+          2012
+        ],
+        "units": "ratio",
+        "color": "#17becf"
+      },
+      {
+        "id": "ES1302-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1959,
+          2012
+        ],
+        "units": "ratio",
+        "color": "#17becf"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "derive",
+        "formula": "NSW / EC",
+        "inputs": [
+          "S607",
+          "BEA_NIPA"
+        ],
+        "output": "ES1302-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "ES1304": {
+    "series_id": "ES1304",
+    "name": "Moos vs ST Comparison 1959-1997 (Moos 2017)",
+    "chapter": "Study 4",
+    "book_table": "Table 3",
+    "year_range": [
+      1959,
+      1997
+    ],
+    "units": "share",
+    "status": "validated_book_and_extension",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1304-A",
+        "name": "NSW/GDP for overlap period",
+        "source": "Moos 2017 vs AS2",
+        "period": [
+          1959,
+          1997
+        ],
+        "units": "ratio",
+        "color": "#17becf"
+      },
+      {
+        "id": "ES1304-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1959,
+          1997
+        ],
+        "units": "ratio",
+        "color": "#17becf"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "filter",
+        "inputs": [
+          "ES1301"
+        ],
+        "desc": "Restrict to 1959-1997 overlap",
+        "output": "ES1304-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "ES1305": {
+    "series_id": "ES1305",
+    "name": "Post-2000 Structural Shift Indicator (Moos 2017)",
+    "chapter": "Study 4",
+    "book_table": "Table 4",
+    "year_range": [
+      1959,
+      2024
+    ],
+    "units": "share",
+    "status": "validated_book_and_extension",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1305-A",
+        "name": "NSW/GDP with post-2000 regime indicator",
+        "source": "Moos 2017",
+        "period": [
+          1959,
+          2012
+        ],
+        "units": "ratio",
+        "color": "#17becf"
+      },
+      {
+        "id": "ES1305-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1959,
+          2012
+        ],
+        "units": "ratio",
+        "color": "#17becf"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "derive",
+        "inputs": [
+          "ES1301"
+        ],
+        "desc": "Add post-2000 regime dummy",
+        "output": "ES1305-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "ES1401": {
+    "series_id": "ES1401",
+    "name": "Exploitation Rate â€” Mohun Classification (Mohun 2005)",
+    "chapter": "Study 5",
+    "book_table": "Table 2",
+    "year_range": [
+      1948,
+      1989
+    ],
+    "units": "ratio",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1401-A",
+        "name": "Mohun (2005) Table 2",
+        "source": "Mohun 2005 CJE",
+        "period": [
+          1964,
+          2001
+        ],
+        "units": "ratio",
+        "color": "#ff9896"
+      },
+      {
+        "id": "ES1401-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1964,
+          2001
+        ],
+        "units": "ratio",
+        "color": "#ff9896"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "ES1401-A"
+        ],
+        "source": "L15 parsed CSV"
+      }
+    ],
+    "figures": []
+  },
+  "ES1402": {
+    "series_id": "ES1402",
+    "name": "Productive Labor Share â€” Mohun Classification (Mohun 2005)",
+    "chapter": "Study 5",
+    "book_table": "Table 2",
+    "year_range": [
+      1948,
+      1989
+    ],
+    "units": "share",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1402-A",
+        "name": "Mohun (2005) Table 2",
+        "source": "Mohun 2005 CJE",
+        "period": [
+          1964,
+          2001
+        ],
+        "units": "share",
+        "color": "#ff9896"
+      },
+      {
+        "id": "ES1402-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1964,
+          2001
+        ],
+        "units": "share",
+        "color": "#ff9896"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "ES1402-A"
+        ],
+        "source": "L15 parsed CSV"
+      }
+    ],
+    "figures": []
+  },
+  "ES1403": {
+    "series_id": "ES1403",
+    "name": "Variable Capital â€” Mohun Classification (Mohun 2005)",
+    "chapter": "Study 5",
+    "book_table": "Table 2",
+    "year_range": [
+      1948,
+      1989
+    ],
+    "units": "ratio",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1403-A",
+        "name": "Mohun (2005) Table 2",
+        "source": "Mohun 2005 CJE",
+        "period": [
+          1964,
+          2001
+        ],
+        "units": "billions_dollars",
+        "color": "#ff9896"
+      },
+      {
+        "id": "ES1403-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1964,
+          2001
+        ],
+        "units": "billions_dollars",
+        "color": "#ff9896"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "ES1403-A"
+        ],
+        "source": "L15 parsed CSV"
+      }
+    ],
+    "figures": []
+  },
+  "ES1404": {
+    "series_id": "ES1404",
+    "name": "ST/Mohun Exploitation Rate Ratio (Mohun 2005)",
+    "chapter": "Study 5",
+    "book_table": null,
+    "year_range": [
+      1948,
+      1989
+    ],
+    "units": "ratio",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1404-A",
+        "name": "Derived S506/ES1401 ratio",
+        "source": "AS2 cross-validation",
+        "period": [
+          1964,
+          2001
+        ],
+        "units": "ratio",
+        "color": "#ff9896"
+      },
+      {
+        "id": "ES1404-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1964,
+          2001
+        ],
+        "units": "ratio",
+        "color": "#ff9896"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "derive",
+        "formula": "S506 / ES1401",
+        "inputs": [
+          "S506",
+          "ES1401"
+        ],
+        "output": "ES1404-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "ES1501": {
+    "series_id": "ES1501",
+    "name": "Working Class Unproductive Labor (Mohun 2013)",
+    "chapter": "Study 6",
+    "book_table": "Table 1",
+    "year_range": [
+      1948,
+      1989
+    ],
+    "units": "thousands",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1501-A",
+        "name": "Mohun (2013) â€” 81.3% of Lu",
+        "source": "Mohun 2013 RRPE",
+        "period": [
+          1964,
+          2010
+        ],
+        "units": "thousands",
+        "color": "#c5b0d5"
+      },
+      {
+        "id": "ES1501-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1964,
+          2010
+        ],
+        "units": "thousands",
+        "color": "#c5b0d5"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "derive",
+        "formula": "Lu — 0.813",
+        "inputs": [
+          "Mohun Lu"
+        ],
+        "output": "ES1501-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "ES1502": {
+    "series_id": "ES1502",
+    "name": "Managerial Unproductive Labor (Mohun 2013)",
+    "chapter": "Study 6",
+    "book_table": "Table 1",
+    "year_range": [
+      1948,
+      1989
+    ],
+    "units": "thousands",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1502-A",
+        "name": "Mohun (2013) â€” 18.7% of Lu",
+        "source": "Mohun 2013 RRPE",
+        "period": [
+          1964,
+          2010
+        ],
+        "units": "thousands",
+        "color": "#c5b0d5"
+      },
+      {
+        "id": "ES1502-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1964,
+          2010
+        ],
+        "units": "thousands",
+        "color": "#c5b0d5"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "derive",
+        "formula": "Lu — 0.187",
+        "inputs": [
+          "Mohun Lu"
+        ],
+        "output": "ES1502-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "ES1503": {
+    "series_id": "ES1503",
+    "name": "Total Unproductive Labor â€” Mohun (Mohun 2013)",
+    "chapter": "Study 6",
+    "book_table": "Table 1",
+    "year_range": [
+      1948,
+      1989
+    ],
+    "units": "thousands",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1503-A",
+        "name": "Mohun (2013) total Lu",
+        "source": "Mohun 2013 RRPE",
+        "period": [
+          1964,
+          2010
+        ],
+        "units": "thousands",
+        "color": "#c5b0d5"
+      },
+      {
+        "id": "ES1503-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1964,
+          2010
+        ],
+        "units": "thousands",
+        "color": "#c5b0d5"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "ES1503-A"
+        ],
+        "source": "Mohun employment CSV"
+      }
+    ],
+    "figures": []
+  },
+  "ES1504": {
+    "series_id": "ES1504",
+    "name": "Unproductive Burden Ratio Lu/Lp (Mohun 2013)",
+    "chapter": "Study 6",
+    "book_table": "Table 1",
+    "year_range": [
+      1948,
+      1989
+    ],
+    "units": "share",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1504-A",
+        "name": "Derived Lu/Lp from Mohun data",
+        "source": "Mohun 2013 RRPE",
+        "period": [
+          1964,
+          2010
+        ],
+        "units": "ratio",
+        "color": "#c5b0d5"
+      },
+      {
+        "id": "ES1504-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1964,
+          2010
+        ],
+        "units": "ratio",
+        "color": "#c5b0d5"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "derive",
+        "formula": "Lu / Lp",
+        "inputs": [
+          "Mohun Lu",
+          "Mohun Lp"
+        ],
+        "output": "ES1504-COMBINED"
+      }
+    ],
+    "figures": []
+  },
+  "ES1601": {
+    "series_id": "ES1601",
+    "name": "Turkey Labor Share (Karabacak & Tonak 2022)",
+    "chapter": "Study 7",
+    "book_table": "Table 2",
+    "year_range": [
+      1980,
+      2019
+    ],
+    "units": "share",
+    "status": "validated_book_and_extension",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1601-A",
+        "name": "TurkStat Table 20.37",
+        "source": "Karabacak & Tonak 2022 RRPE",
+        "period": [
+          1980,
+          2019
+        ],
+        "units": "share",
+        "color": "#aec7e8"
+      },
+      {
+        "id": "ES1601-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1980,
+          2019
+        ],
+        "units": "share",
+        "color": "#aec7e8"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "ES1601-A"
+        ],
+        "desc": "TurkStat HDARP extraction"
+      }
+    ],
+    "figures": []
+  },
+  "ES1602": {
+    "series_id": "ES1602",
+    "name": "Turkey NSW/GDP (Karabacak & Tonak 2022)",
+    "chapter": "Study 7",
+    "book_table": "Table 3",
+    "year_range": [
+      1980,
+      2019
+    ],
+    "units": "share",
+    "status": "validated_book_and_extension",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1602-A",
+        "name": "SBB/MoF fiscal data",
+        "source": "Karabacak & Tonak 2022 RRPE",
+        "period": [
+          1980,
+          2019
+        ],
+        "units": "ratio",
+        "color": "#aec7e8"
+      },
+      {
+        "id": "ES1602-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1980,
+          2019
+        ],
+        "units": "ratio",
+        "color": "#aec7e8"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "ES1602-A"
+        ],
+        "desc": "SBB/MoF fiscal data + World Bank"
+      }
+    ],
+    "figures": []
+  },
+  "ES1701": {
+    "series_id": "ES1701",
+    "name": "NZ Surplus Share of Total Value (Cronin 2001)",
+    "chapter": "Study 8",
+    "book_table": "Table 2",
+    "year_range": [
+      1972,
+      1995
+    ],
+    "units": "share",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1701-A",
+        "name": "Cronin (2001) Table 2 s/TV",
+        "source": "Cronin 2001 RPE Table 2",
+        "period": [
+          1972,
+          1995
+        ],
+        "units": "share",
+        "color": "#98df8a"
+      },
+      {
+        "id": "ES1701-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1972,
+          1995
+        ],
+        "units": "share",
+        "color": "#98df8a"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "ES1701-A"
+        ],
+        "desc": "Direct from Cronin Table 2 s/TV column"
+      }
+    ],
+    "figures": []
+  },
+  "ES1702": {
+    "series_id": "ES1702",
+    "name": "NZ Rate of Surplus Value (Cronin 2001)",
+    "chapter": "Study 8",
+    "book_table": "Table 2",
+    "year_range": [
+      1972,
+      1995
+    ],
+    "units": "share",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1702-A",
+        "name": "Cronin (2001) Table 2 s/v",
+        "source": "Cronin 2001 RPE Table 2",
+        "period": [
+          1972,
+          1995
+        ],
+        "units": "ratio",
+        "color": "#98df8a"
+      },
+      {
+        "id": "ES1702-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1972,
+          1995
+        ],
+        "units": "ratio",
+        "color": "#98df8a"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "ES1702-A"
+        ],
+        "desc": "Direct from Cronin Table 2 s/v column"
+      }
+    ],
+    "figures": []
+  },
+  "ES1703": {
+    "series_id": "ES1703",
+    "name": "NZ Value Composition of Capital (Cronin 2001)",
+    "chapter": "Study 8",
+    "book_table": "Table 2",
+    "year_range": [
+      1972,
+      1995
+    ],
+    "units": "share",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1703-A",
+        "name": "Cronin (2001) Table 2 c/v",
+        "source": "Cronin 2001 RPE Table 2",
+        "period": [
+          1972,
+          1995
+        ],
+        "units": "ratio",
+        "color": "#98df8a"
+      },
+      {
+        "id": "ES1703-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1972,
+          1995
+        ],
+        "units": "ratio",
+        "color": "#98df8a"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "ES1703-A"
+        ],
+        "desc": "Direct from Cronin Table 2 c/v column"
+      }
+    ],
+    "figures": []
+  },
+  "ES1704": {
+    "series_id": "ES1704",
+    "name": "NZ Total Value (Cronin 2001)",
+    "chapter": "Study 8",
+    "book_table": "Table 1",
+    "year_range": [
+      1972,
+      1995
+    ],
+    "units": "share",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "ES1704-A",
+        "name": "Cronin (2001) Table 1 Total Value",
+        "source": "Cronin 2001 RPE Table 1",
+        "period": [
+          1972,
+          1995
+        ],
+        "units": "millions_nzd",
+        "color": "#98df8a"
+      },
+      {
+        "id": "ES1704-COMBINED",
+        "name": "Full series",
+        "source": "",
+        "period": [
+          1972,
+          1995
+        ],
+        "units": "millions_nzd",
+        "color": "#98df8a"
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "ES1704-A"
+        ],
+        "desc": "Direct from Cronin Table 1 total_value column"
+      }
+    ],
+    "figures": []
+  },
+  "AS001": {
+    "series_id": "AS001",
+    "name": "Social Burden Rate",
+    "chapter": "",
+    "book_table": "",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "ratio",
+    "status": "validated_book_and_extension",
+    "content_type": "derived",
+    "subseries": [],
+    "construction": [],
+    "figures": []
+  },
+  "AS002": {
+    "series_id": "AS002",
+    "name": "Khanjian Cross-Validation",
+    "chapter": "",
+    "book_table": "",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "ratio",
+    "status": "book_period_validated",
+    "content_type": "derived",
+    "subseries": [],
+    "construction": [],
+    "figures": []
+  },
+  "AS003": {
+    "series_id": "AS003",
+    "name": "Unproductive Exploitation Rate",
+    "chapter": "",
+    "book_table": "",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "ratio",
+    "status": "book_period_validated",
+    "content_type": "derived",
+    "subseries": [],
+    "construction": [],
+    "figures": []
+  },
+  "AS004": {
+    "series_id": "AS004",
+    "name": "Marxian Productivity",
+    "chapter": "",
+    "book_table": "",
+    "year_range": [
+      1948,
+      2024
+    ],
+    "units": "index",
+    "status": "book_period_partial_1948_1961",
+    "content_type": "derived",
+    "subseries": [],
+    "construction": [],
+    "figures": []
+  },
+  "S617": {
+    "series_id": "S617",
+    "name": "S617",
+    "chapter": "",
+    "book_table": "",
+    "year_range": null,
+    "units": "",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [],
+    "construction": [],
+    "figures": []
+  },
+  "S517": {
+    "series_id": "S517",
+    "name": "Productive Capital Stock (K*)",
+    "chapter": 5,
+    "book_table": "",
+    "year_range": null,
+    "units": "billions_usd",
+    "status": "book_period_validated",
+    "content_type": "time_series",
+    "subseries": [
+      {
+        "id": "S517-A",
+        "name": "BEA Fixed Assets 4.1 Line 1",
+        "source": "BEA",
+        "period": [
+          1925,
+          2024
+        ],
+        "units": "billions_usd",
+        "color": null
+      }
+    ],
+    "construction": [
+      {
+        "step": 1,
+        "op": "load",
+        "subseries": [
+          "S517-A"
+        ]
+      }
+    ],
+    "figures": []
+  }
+}

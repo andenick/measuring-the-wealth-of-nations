@@ -1,15 +1,35 @@
 cff-version: 1.2.0
-title: "Measuring the Wealth of Nations — Replication Package"
-message: "If you use this data, please cite it using the metadata from this file."
-type: dataset
+title: "Measuring the Wealth of Nations: Replication Package"
+message: "If you use this software, please cite both this replication package and the original Shaikh & Tonak (1994) work."
+type: software
 authors:
   - family-names: Anderson
-    given-names: Nicholas
-    orcid: ""
-repository-code: "https://github.com/andenick/measuring-the-wealth-of-nations"
+    given-names: Nick
+    email: protonnicky@gmail.com
+repository-code: "https://github.com/andenick/measuring-wealth-of-nations-replication"
+abstract: >-
+  Complete replication and extension of every empirical claim in Shaikh & Tonak's
+  Measuring the Wealth of Nations (1994), plus 8 follow-up studies (Tonak 1984,
+  Shaikh & Tonak 1987 and 2002, Moos 2017, Mohun 2005 and 2013, Karabacak & Tonak
+  2022 Turkey, Cronin 2001 New Zealand), with 64 data series covering 1925-2025.
+  Built on the Anu Framework v12.0 with strict no-fabrication and full-provenance
+  discipline; every value traces to a published source, cached API response, or
+  documented derivation. 100% validation pass rate against book benchmarks and
+  identity/cross-source consistency checks. v1.2 retires Chapter 7
+  labor-coefficient proxies (3 series), adopts S513/S514 in stock form per
+  Decision 0008, and enforces 8 framework decisions across DIVERGENCE_REGISTER
+  (12 entries) and V03 validators (90/90 tests pass).
+keywords:
+  - marxian-economics
+  - replication
+  - shaikh-tonak
+  - net-social-wage
+  - rate-of-exploitation
+  - input-output
+  - heterodox-economics
 license: MIT
-version: "7.0"
-date-released: "2026-05-12"
+version: "1.2.0"
+date-released: "2026-05-24"
 references:
   - type: book
     authors:
@@ -18,6 +38,6 @@ references:
       - family-names: Tonak
         given-names: E. Ahmet
     title: "Measuring the Wealth of Nations: The Political Economy of National Accounts"
+    publisher: Cambridge University Press
     year: 1994
-    publisher:
-      name: Cambridge University Press
+    isbn: "9780521564793"

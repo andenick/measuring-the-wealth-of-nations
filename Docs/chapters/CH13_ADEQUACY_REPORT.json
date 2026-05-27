@@ -1,0 +1,126 @@
+{
+  "chapter": "Ch13",
+  "chapter_label": "Moos 2017 Extended NSW Series (ES1301, ES1302, ES1304, ES1305) — note: ES1303 not in registry",
+  "external_paper": {
+    "author": "Moos, Katherine A.",
+    "year": 2017,
+    "title": "Neoliberal Redistributive Policy: The U.S. Net Social Wage in the 21st Century",
+    "venue": "UMass Amherst Working Paper 2017-18, September 18 2017",
+    "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2017_Moos_NSW_21st_Century/",
+    "standalone_methodology_extract": "Inputs/Shaikh Tonak/Knowledge_Base/[2025.10.02] MOOS_2017_NSW_METHODOLOGY_EXTRACTED.md"
+  },
+  "series_count": 4,
+  "series_ids": ["ES1301", "ES1302", "ES1304", "ES1305"],
+  "missing_series_note": "ES1303 referenced in task scope but not present in series_registry.json — confirmed by grep on registry; numbering jumps ES1301 -> ES1302 -> ES1304 -> ES1305. Likely either renumbered/deprecated or never instantiated.",
+  "report_date": "2026-05-23T23:51:50Z",
+  "reporter": "agent",
+  "stage": 2,
+  "cohort": "stage2_c1",
+  "skill": "anu-adequacy",
+  "skill_version": "1.2",
+  "framework": "Anu Framework v12.0",
+  "gate_threshold": 80,
+  "layers": {
+    "L1_kb_completeness": {
+      "score": 95,
+      "status": "PASS",
+      "evidence": {
+        "kb_directory": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2017_Moos_NSW_21st_Century/ — same KB as Ch12, fully covering Sections 1-6 + Tables 1-3 + Figures 1-2 + Appendix",
+        "standalone_methodology_extract": "[2025.10.02] MOOS_2017_NSW_METHODOLOGY_EXTRACTED.md — Table 2 summary statistics directly cited in ES1202/ES1302 verbatim quotes",
+        "verbatim_anchors_ES1301": "3 quotes: 8.6% GDP peak in 2010, NSW formula NetSocialWage=TotalLaborBenefits-TotalLaborTaxes with TLB=E1+E2*LS and TLT=T1+T2*LS, structural break (1959-2000 mean ~0%, 2001-2012 mean ~5%)",
+        "verbatim_anchors_ES1302": "3 quotes: NSW/EC range -2.2% to 16.1% (2010 peak), Figure 2 NSW/EC persistently positive after 1970, methodology footnote distinguishing NSW/GDP vs NSW/EC denominators",
+        "verbatim_anchors_ES1304": "3 quotes: ~1pp NIPA-revision gap explanation, Table 1 summary stats (ST original: min=-2.1%, median=-0.2%, mean=0.0%, max=2.9%; Moos: min=-1.2%, median=1.0%, mean=1.1%, max=3.7%), 'faithful reconstruction' authorial statement",
+        "verbatim_anchors_ES1305": "3 quotes: 8.6% GDP peak 2010, pre-2000 mean ~0% vs post-2000 mean ~5% (5pp structural break), explicit research question for the post-2001 discrepancy"
+      },
+      "blockers": [],
+      "notes": "KB completeness is excellent across all four series; same KB as Ch12 plus the dedicated methodology extract. Every series has verbatim numeric anchors for V03 validation."
+    },
+    "L2_data_source_availability": {
+      "score": 95,
+      "status": "PASS",
+      "evidence": {
+        "moos_external_csvs": "Inputs/ST2/Inputs/ExternalSources/Moos/ (21 files) — dedicated reconciled Moos NSW data, 10 BEA NIPA tables, 9 FRED series. Coverage 1959-2012+ (Moos paper period) extending to present via FRED",
+        "ES1301_inputs": "S607 + BEA_GDP — fully cached (GDPA_gdp_annual.csv + bea_nipa_T10105_gdp.csv); extension to 2024 supported by FRED",
+        "ES1302_inputs": "S607 + BEA_NIPA — fully cached (T20100 personal income/compensation)",
+        "ES1304_inputs": "ES1301 (filter to 1959-1997 overlap) — derivative of ES1301, no additional data required",
+        "ES1305_inputs": "ES1301 (add post-2000 regime dummy) — derivative of ES1301, no additional data required",
+        "robustness_data": "Moos Section 4.3 uses Mohun (2016) alternative labor share — Mohun cross-validation data available at Inputs/ST2/Inputs/ExternalSources/Mohun/",
+        "extension_window_to_present": "Moos paper ends 2012 but FRED + BEA caches extend through 2025, supporting Stage 4 extension"
+      },
+      "blockers": [],
+      "notes": "Strongest data position of all four cohort-1 chapters. Dedicated Moos folder + Mohun cross-validation folder + post-2012 FRED extension data all in place."
+    },
+    "L3_methodology_clarity": {
+      "score": 95,
+      "status": "PASS",
+      "evidence": {
+        "ES1301_methodology_summary": "Populated: 'NSW/GDP extended to 2012 by Moos (2017), replicating Shaikh & Tonak methodology with post-1999 NIPA revision. 1959-2012 coverage. E2 excluded per [internal-decision-record]; standard formula NSW = E1 - T1 - T2*LS. 1959-1997 overlap mean = 0.013 in ST2 (Moos published = 0.011). Post-2001 structural break: unprecedented NSW rise to 8.6% of GDP in 2010.'",
+        "ES1302_methodology_summary": "Populated: 'NSW/EC extended to 2012 by Moos (2017), using same formula as ES1301 but normalized by employee compensation rather than GDP.'",
+        "ES1304_methodology_summary": "Populated: 'ES1301 restricted to 1959-1997, enabling direct comparison with ST 2002 coverage.'",
+        "ES1305_methodology_summary": "Populated: 'ES1301 with post-2000 regime indicator. Quantifies the structural break in NSW/GDP identified by Moos (2017) as the main contribution of her paper.'",
+        "causal_decomposition_documented": "ES1301 + ES1305 both document Moos's 4-factor causal decomposition (income support growth, healthcare inflation, neoliberal tax cuts, unemployment intensity)",
+        "decision_record_anchored": "All four reference internal decision (2026-05-06): E2 excluded from NSW; ST2 overlap mean 0.013 vs Moos 0.011",
+        "robustness_check_documented": "ES1305 documents Section 4.3 robustness with Mohun (2016) alternative labor share"
+      },
+      "blockers": [],
+      "notes": "Methodology is exceptionally well documented — formula, decomposition, robustness, and causal interpretation all in place for every series."
+    },
+    "L4_registry_completeness": {
+      "score": 80,
+      "status": "PASS",
+      "evidence": {
+        "all_required_fields_present": "All 4 series have name, study, chapter, year_range, subseries, construction, validation, processor, wave, status, units, content_type, year_range_target",
+        "construction_with_formula": "ES1301: derive 'NSW/GDP'; ES1302: derive 'NSW/EC'; ES1304: filter (ES1301 -> 1959-1997); ES1305: derive (add post-2000 regime dummy)",
+        "year_range_target_consistency": "All four have year_range_target — ES1301/ES1302/ES1305 target [1959, 2024] supporting extension to present; ES1304 target [1959, 1997] correctly matches overlap scope",
+        "registry_year_range": "All four have year_range [1959, 2012] matching Moos paper coverage",
+        "ES1303_missing": "Series ID ES1303 referenced in task scope is NOT in registry — confirmed via grep. Numbering jumps 1302 -> 1304. Either deprecated/renumbered or never instantiated.",
+        "status_downgrade_documented": "All four have status_downgrade_note from Hyper-review 2026-05-19",
+        "ES1304_construction_clean": "ES1304 filter op on ES1301 is correct derivative pattern; ES1305 derive op on ES1301 adds regime dummy"
+      },
+      "blockers": [],
+      "notes": "Registry hygiene is good. ES1303 absence should be confirmed as intentional (or recovered) in Stage 3. year_range [1959,2012] vs year_range_target [1959,2024] discrepancy suggests Stage 4 extension is anticipated but not yet implemented."
+    },
+    "L5_validation_refs": {
+      "score": 65,
+      "status": "WARN",
+      "evidence": {
+        "ES1301_reference_values": "{1959_1997_mean: 0.011} — POPULATED with Moos published overlap mean (sole anchor)",
+        "ES1302_reference_values": "{} — EMPTY",
+        "ES1304_reference_values": "{} — EMPTY",
+        "ES1305_reference_values": "{structural_shift: 0.03} — POPULATED with Moos published structural shift magnitude (sole anchor)",
+        "expected_range_populated": "ES1301: [-0.05, 0.1]; ES1302: [-0.1, 0.2]; ES1304: [-0.05, 0.05]; ES1305: [-0.05, 0.1]",
+        "verbatim_anchors_available_for_backfill": "ES1301: 2010 peak 0.086 GDP, 1959-2000 mean ~0, 2001-2012 mean ~0.05. ES1302: max 0.161 (2010), min -0.022, mean 0.037, median 0.024 (Table 2 stats). ES1304: ST original mean 0.0 vs Moos mean 0.011, ST max 0.029 vs Moos max 0.037, ST min -0.021 vs Moos min -0.012. ES1305: pre-2000 mean ~0, post-2000 mean ~0.05, ST2-achieved structural_shift 0.054",
+        "tolerance_class_populated": "All four share_series with tolerance_rel=0.001, tolerance_abs=0.01"
+      },
+      "blockers": [
+        "ES1302 reference_values empty — Moos Table 2 summary statistics (min -0.022, mean 0.037, median 0.024, max 0.161) provide direct anchors",
+        "ES1304 reference_values empty — Moos Table 1 overlap statistics directly populate this"
+      ],
+      "notes": "Better than Ch11/Ch12 (2 of 4 are non-empty) but two series still lack reference_values despite having strong KB-verified anchors available. Stage 3 must backfill."
+    },
+    "L6_classification_accuracy": {
+      "score": 92,
+      "status": "PASS",
+      "evidence": {
+        "all_content_type_time_series": "ES1301, ES1302, ES1304, ES1305 all content_type='time_series' — CORRECT",
+        "all_units_share": "All four units='share' — CORRECT for ratio quantities",
+        "no_proxies": "Direct derivation from S607 + BEA_GDP/BEA_NIPA; no proxy substitution required",
+        "derivative_series_construction": "ES1304 and ES1305 are correctly classified as derivative of ES1301 (filter and derive ops respectively); no synthetic generation",
+        "extension_binary_invariant": "All four have extension: null and no -EXT/-COMBINED subseries; year_range_target [1959,2024] vs registry year_range [1959,2012] indicates extension is desired but not yet populated — soft inconsistency with Decision 0003 binary rule",
+        "structural_shift_indicator_classification": "ES1305 is functionally a derived analytical series (ES1301 + regime dummy); could arguably be content_type='derived' but 'time_series' is acceptable since the underlying quantity is the time series"
+      },
+      "blockers": [],
+      "notes": "Classification correct across all four series."
+    }
+  },
+  "chapter_score": 87.0,
+  "gate_passed": true,
+  "recommendations": [
+    "URGENT — Stage 3 ingestion MUST clarify ES1303 status: either restore the series in the registry (if it was deprecated by mistake) or formally document the renumbering decision and update task-scope references",
+    "Stage 3 ingestion MUST populate ES1302 validation.reference_values from Moos Table 2: {min: -0.022, median: 0.024, mean: 0.037, max: 0.161, max_year: 2010}",
+    "Stage 3 ingestion MUST populate ES1304 validation.reference_values from Moos Table 1 overlap statistics: {1959_1997_min: -0.012, 1959_1997_median: 0.010, 1959_1997_mean: 0.011, 1959_1997_max: 0.037, ST_original_mean: 0.0 (cross-validation benchmark)}",
+    "Stage 3 ingestion SHOULD enrich ES1301 reference_values beyond the single 1959_1997_mean anchor: add {2010: 0.086 (peak), 1959_2000_mean: 0.0, 2001_2012_mean: 0.05}",
+    "Stage 3 ingestion SHOULD enrich ES1305 reference_values beyond the single structural_shift anchor: add {pre_2000_mean: 0.0, post_2000_mean: 0.05, expected_st2_structural_shift: 0.054 (NIPA-vintage-adjusted)}",
+    "Stage 4 extension: ES1301/ES1302/ES1305 explicitly target year_range [1959, 2024] but registry year_range stops at 2012 — extension to 2024 via cached FRED + BEA NIPA data is the natural next step and will resolve the binary-extension inconsistency"
+  ]
+}

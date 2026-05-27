@@ -1,0 +1,56 @@
+{
+  "chapter": "Ch9",
+  "chapter_label": "Summary Indicators Table (S901) — maps to book Ch7 §§7.1-7.5 summary, NOT a real Ch9",
+  "series_count": 1,
+  "series_ids": ["S901"],
+  "report_date": "2026-05-23T00:00:00Z",
+  "reporter": "agent",
+  "skill": "anu-adequacy",
+  "framework": "Anu Framework v12.0",
+  "stage": 2,
+  "cohort": "stage3_c2_reverify",
+  "layers": {
+    "L1_kb_completeness": {
+      "score": 80,
+      "evidence": "+10 from baseline (was 70). The 'no Ch9 in book' concern persists but is now formally encoded in registry taxonomic_note per Stage 3 cohort 1: 'S901 maps to book Ch7 §§7.1-7.5 (pp.213-225, the book's actual summary/conclusion chapter)'. Upstream chunks (S506, S511-S514, S608) all well-extracted. S901_DPR.md (8681 bytes, 7 H2 sections, KB-anchored) consolidates the cross-chunk evidence.",
+      "blockers": ["No 'Ch9' exists in source book — now documented in taxonomic_note; Stage 5 SERIES_CORRESPONDENCE_MATRIX update still pending"]
+    },
+    "L2_data_source_availability": {
+      "score": 85,
+      "evidence": "Unchanged. S901 is a pure derived assembly; all six input series produce chopped outputs that can be reassembled into the summary table. Composite ch09/Table9_1 CSV still not assembled, but inputs are available.",
+      "blockers": ["Composite ch09/Table9_1 CSV not assembled (low-risk — all inputs available)"]
+    },
+    "L3_methodology_clarity": {
+      "score": 95,
+      "evidence": "Unchanged at ceiling. Crystal-clear methodology summary; construction block lists all six input series; DPR adds 7-section formalization.",
+      "blockers": []
+    },
+    "L4_registry_completeness": {
+      "score": 90,
+      "evidence": "+5 from baseline (was 85). All required fields present; taxonomic_note now populated. Status='book_period_validated' with extension:null is binary-invariant compliant. content_type='time_series' for a summary indicator table remains questionable (see L6) but is no longer a blocker.",
+      "blockers": []
+    },
+    "L5_validation_refs": {
+      "score": 75,
+      "evidence": "+55 from baseline (was 20). validation.reference_values NOW POPULATED with 7 keyed entries spanning two endpoints (1948 and 1989) across multiple indicators: {1948_LpL:0.57, 1948_VW:0.54, 1948_e:1.7, 1989_LpL:0.36, 1989_VW:0.36, 1989_e:2.44, 1989_NSW_V:-0.084}. This matches the book Ch7 summary narrative (productive labor share declining from 57% to 36%; exploitation rate rising from 1.7 to 2.44; NSW turning negative by 1989). expected_range and tolerance still null. 25-point dock for missing expected_range and tolerance, and partial-period coverage (only endpoints, not midpoints).",
+      "blockers": ["expected_range and tolerance null; only endpoint reference values, midpoint years missing"]
+    },
+    "L6_classification_accuracy": {
+      "score": 75,
+      "evidence": "+45 from baseline (was 30). The taxonomic mismatch is now formally documented in taxonomic_note (not silently ignored), substantially de-risking the issue. content_type='time_series' remains semantically questionable for a static endpoint summary — 'derived' or 'cross_sectional' would be more accurate. Units field is now consistent ('mixed' at both top-level and subseries level). proxy:false correct. 25-point dock retained for: lingering content_type='time_series' classification choice (10), pending SERIES_CORRESPONDENCE_MATRIX update (10), and wave=1 reconciliation with upstream wave classifications (5).",
+      "blockers": ["content_type='time_series' arguably should be 'derived' for a summary table; SERIES_CORRESPONDENCE_MATRIX still labels chapter=9 / book_table=9.1"]
+    }
+  },
+  "chapter_score": 83.33,
+  "gate_passed": true,
+  "recommendations": [
+    "Set validation.expected_range and tolerance to close L5; consider adding midpoint reference values (1958, 1972) per book Ch7 summary",
+    "Stage 5: reclassify content_type from 'time_series' to 'derived' or 'cross_sectional'",
+    "Stage 5: rename S901 → S705 (or S7xx) and update chapter=7 with book_table reference to Ch7 §§7.1-7.5, OR update SERIES_CORRESPONDENCE_MATRIX to formally document the project-internal 'Ch9' slot mapping per the existing taxonomic_note",
+    "Verify wave=1 matches upstream dependencies' waves (S608 is wave 1; cross-check S511-S514 wave assignments)"
+  ],
+  "revision_history": [
+    {"ts": "2026-05-23T00:00:00+00:00", "score": 64.17, "gate": false, "agent": "stage2_cohort1"},
+    {"ts": "2026-05-24T00:30:00+00:00", "score": 83.33, "gate": true, "agent": "stage3_cohort2_reverify"}
+  ]
+}

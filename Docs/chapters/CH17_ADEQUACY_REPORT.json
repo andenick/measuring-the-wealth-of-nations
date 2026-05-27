@@ -1,0 +1,65 @@
+{
+  "chapter": "Ch17",
+  "chapter_label": "Cronin 2001 New Zealand Productive/Unproductive Capital Replication (ES1701-ES1704)",
+  "external_paper": {
+    "author": "Bruce Cronin",
+    "year": 2001,
+    "title": "Productive and Unproductive Capital: A mapping of the New Zealand system of national accounts to classical economic categories, 1972-95",
+    "journal": "Review of Political Economy 13(3): 309-327",
+    "doi": "10.1080/09538250120055168",
+    "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2001_Cronin_New_Zealand/"
+  },
+  "series_count": 4,
+  "series_ids": ["ES1701", "ES1702", "ES1703", "ES1704"],
+  "report_date": "2026-05-23T23:53:59Z",
+  "reporter": "agent",
+  "skill": "anu-adequacy",
+  "skill_version": "1.2",
+  "framework": "Anu Framework v12.0",
+  "layers": {
+    "L1_kb_completeness": {
+      "score": 100,
+      "status": "PASS",
+      "detail": "Cronin 2001 has the most complete 4-type HDARP extraction in the cohort: body_text.md (301 lines), tables.csv (all of Cronin's Table 1 NZSNA-to-classical mapping + Table 2 ratios for 1972-1995), equations.tex, figures.md, SUMMARY.md, extraction_notes.md — all 5 content types under Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2001_Cronin_New_Zealand/. Source PDF also on disk. Every numeric reference value used by ES1701-ES1704 can be traced to tables.csv.",
+      "gaps": ["Research JSONs cite legacy path Technical/Knowledge_Base/external_papers/international/2001_Cronin_New_Zealand/ — cosmetic mismatch only; all referenced files exist under Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/."]
+    },
+    "L2_data_source_availability": {
+      "score": 95,
+      "status": "PASS",
+      "detail": "Inputs/ST2/Inputs/ExternalSources/Cronin2001/ has: Cronin_2001_Productive_Unproductive_Capital_NZ.pdf, cronin_table1_nzsna_classical_1972_1995.csv, cronin_table2_ratios_1972_1995.csv, fred_nz_gdp_current_lcu.csv, fred_nz_labor_share.csv, nz_fiscal_time_series_1972_2023.xlsx, statsnz_national_accounts_historical.pdf, worldbank_nz_govt_consumption_1972_1995.csv, worldbank_nz_national_accounts_1972_1995.csv. Both registry source_file paths (cronin_table1_*.csv for ES1704, cronin_table2_*.csv for ES1701-ES1703) point at existing files.",
+      "gaps": ["For extension beyond 1995: Stats NZ historical PDF plus FRED NZ GDP / labor share series are on disk but post-1995 mapping back to classical categories would require redoing the productive/unproductive sector classification under SNA08 (NZSNA was revised 1995+)."]
+    },
+    "L3_methodology_clarity": {
+      "score": 95,
+      "status": "PASS",
+      "detail": "All four research JSONs are publication-quality. ES1701 alone has 9 entries including verbatim_quote, periodization (3 periods: 1972-83 profitability crisis, 1984-89 Rogernomics recovery, 1990-95 stagnation), structural_break (1984 reforms), figure_context (Fig 10, Fig 12), caveat. Annual values for s/TV 1972-1995 fully transcribed. Method documented: NZSNA -> Shaikh-Tonak classical categories mapping for 25 NZ production groups.",
+      "gaps": []
+    },
+    "L4_registry_completeness": {
+      "score": 100,
+      "status": "PASS",
+      "detail": "All 4 series registry entries complete with: name, study=study_08_cronin_nz_2001, chapter=17, paper_table (Table 1 for ES1704, Table 2 for ES1701-ES1703), source_file (real CSV paths), year_range 1972-1995, subseries with name/source/period/units/color, construction[load], extension=null, validation block, processor=P20, wave, status=book_period_validated, units, content_type=time_series.",
+      "gaps": []
+    },
+    "L5_validation_refs": {
+      "score": 95,
+      "status": "PASS",
+      "detail": "Best validation coverage in the cohort: ES1701 has 3 reference points (1972=0.34, 1989=0.38, 1995=0.38); ES1702 has 3 (1972=2.06, 1984=2.28, 1995=3.07); ES1703 has 3 (1972=2.93, 1984=3.85, 1995=3.97); ES1704 has 2 endpoints (1972=10423, 1995=123284). All values traceable to Cronin Table 2 / Table 1 in tables.csv. ES1701 research JSON adequacy_refs.L5_validation already populated with reference_values list.",
+      "gaps": ["Could enrich to full 24-year reference series from tables.csv for V03 point-by-point checks (currently 2-3 spot checks per series)."]
+    },
+    "L6_classification_accuracy": {
+      "score": 100,
+      "status": "PASS",
+      "detail": "All 4 series: content_type=time_series correct (annual 1972-1995). No proxy flags needed — direct digitizations of Cronin's published Tables 1 and 2. Units correctly specified (share/ratio/ratio/millions_nzd). No derived/composite series in Ch17 — all four are loaded directly from CSV.",
+      "gaps": []
+    }
+  },
+  "chapter_score": 97.5,
+  "gate_passed": true,
+  "recommendations": [
+    "PROCEED to Stage 3 INGESTION. Highest-scoring chapter in the cohort (97.5) — exemplary KB structure (4-type HDARP extraction) and registry completeness.",
+    "Optional: enrich validation.reference_values to all 24 annual values from cronin_table2_ratios_1972_1995.csv to enable point-by-point V03 reproduction checks.",
+    "Cosmetic cleanup: align research JSON kb_sources_searched paths with Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2001_Cronin_New_Zealand/ canonical location.",
+    "Extension beyond 1995 is feasible from disk data (FRED + Stats NZ) but would require a full Anu Extension EPR with SNA68/SNA08 productive/unproductive sector remapping — substantial Stage 4 work, not a blocker for Stage 3."
+  ]
+}

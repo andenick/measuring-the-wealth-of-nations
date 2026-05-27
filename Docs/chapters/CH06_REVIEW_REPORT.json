@@ -1,0 +1,71 @@
+{
+  "project":       "measuring-wealth-of-nations-replication",
+  "chapter":       6,
+  "chapter_title": "The Net Social Wage",
+  "review_date":   "2026-05-14",
+  "reviewer":      "agent",
+  "skill":         "anu-review",
+  "skill_version": "4.1",
+  "framework":     "Anu Framework v10.0",
+  "scope": {
+    "series_total":           9,
+    "series_implemented":     9,
+    "series_pending":         0,
+    "wave":                   2
+  },
+  "weighted_score_raw":            88.5,
+  "weighted_score_scope_adjusted": 96.2,
+  "scope_adjustment_note":         "D10 (Viz Integration) excluded — Wave 6.",
+  "gate_status": {
+    "weighted_85_percent":   "PASS (96.2% scope-adjusted; 88.5% raw)",
+    "D13_data_authenticity": "PASS",
+    "D14_outward_intelligibility": "N/A_NOT_YET_DISTRIBUTED"
+  },
+  "dimensions": {
+    "D1_KB_completeness":           {"weight":  6, "score": 80, "status": "PASS",
+      "detail": "Source tables 6.1/6.2/6.3 fully digitized through 1989 plus extension to 2024. Chapter narrative pages thin in salvaged KB but mathematics is transparent."},
+    "D2_absorption_quality":        {"weight":  5, "score": 100, "status": "PASS",
+      "detail": "4 canonical CSVs copied to data/source/book_tables/, byte-faithful to ST2's digitization."},
+    "D3_research_coverage":         {"weight":  8, "score": 100, "status": "PASS",
+      "detail": "9/9 research JSONs."},
+    "D4_decomposition_coverage":    {"weight":  9, "score": 100, "status": "PASS",
+      "detail": "9/9 DECOMPOSITION.md files."},
+    "D5_DPR_completeness":          {"weight": 10, "score": 100, "status": "PASS",
+      "detail": "9/9 DPRs (re-authored from scratch)."},
+    "D6_EPR_completeness":          {"weight":  8, "score": 100, "status": "PASS",
+      "detail": "1 of 1 extendable series (S607) has EPR documenting splice methodology and activation criteria."},
+    "D7_chopped_validation":        {"weight":  9, "score": 100, "status": "PASS",
+      "detail": "9/9 chopped CSVs follow Anu Chopped Standard v2.0."},
+    "D8_replicator_scripts":        {"weight": 12, "score": 100, "status": "PASS",
+      "detail": "9/9 series have L+P+V (S608 derived has P+V only by design). All 9 PASS book benchmarks at both endpoints (1952 and 1989). S608 identity check: max abs err 1e-16."},
+    "D9_extenbook_quality":         {"weight":  6, "score": 100, "status": "PASS",
+      "detail": "9/9 4-sheet xlsx workbooks."},
+    "D10_viz_integration":          {"weight":  8, "score": null, "status": "DEFERRED",
+      "detail": "Wave 6."},
+    "D11_test_coverage":            {"weight":  7, "score": 100, "status": "PASS",
+      "detail": "9/9 PASS validators."},
+    "D12_documentation":            {"weight": 12, "score": 90, "status": "PASS",
+      "detail": "DPRs, decompositions, EPR, adequacy report all present. Top-level public README is Wave 6."}
+  },
+  "D13_data_authenticity_checklist": {
+    "no_np_random":                        "PASS",
+    "no_status_synthetic":                 "PASS",
+    "every_csv_value_traceable":           "PASS — all values trace to a column in data/source/book_tables/",
+    "EPR_faithfulness":                    "S607 extension uses identical methodology (same NIPA tables) — 100% faithfulness; no proxies"
+  },
+  "findings_summary": {
+    "strengths": [
+      "Cleanest chapter so far — 9/9 series PASS at 1952 + 1989 endpoints",
+      "S608 (NSW/V*) identity check shows max 1e-16 absolute error — floating-point round-trip clean",
+      "S607 extension data is already in source tree (Table6_3_Extended); splice activation is a single follow-up task",
+      "Core finding preserved: NSW negative for the entire postwar book period — workers as net subsidizers of the state",
+      "No proxies, no fabrication, no lazy splices"
+    ],
+    "gaps": [
+      "S607 extension splice not yet executed (data present, EPR documents activation)",
+      "NSW identity check (S607 = S605 + S606 − S604) could be added as V05 — left as a follow-up"
+    ],
+    "blockers": []
+  },
+  "recommendation": "PROCEED to Wave 3 (Chapters 2, 4, 7, 8, 9). Ch6 cleared the 85% gate with substantial margin (96.2%)."
+}

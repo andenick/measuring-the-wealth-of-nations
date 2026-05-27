@@ -1,0 +1,201 @@
+{
+  "project": "measuring-wealth-of-nations-replication",
+  "chapter": 5,
+  "chapter_title": "The Marxian Categories — Exploitation Accounting",
+  "assessment_date": "2026-05-14",
+  "assessor": "agent",
+  "skill": "anu-adequacy",
+  "skill_version": "1.2",
+  "framework": "Anu Framework v10.0",
+  "overall_adequacy": "ADEQUATE",
+  "overall_score": 83,
+  "layers": {
+    "L1_source_text": {
+      "score": 65,
+      "status": "PASS",
+      "checks": {
+        "chapter_narrative_pages": {
+          "expected": "pages 95-165 (~16 narrative pages)",
+          "found": 2,
+          "files": ["page_100_producer_purchaser_prices.md", "page_140_productivity_analysis.md"],
+          "pct": 12.5,
+          "status": "WARN",
+          "detail": "HDARP extraction of Ch5 narrative is sparse — only 2 of ~16 expected text MDs. Surrounding tables/figures were extracted, but discursive narrative on the Marxian categories is thin in the salvaged KB."
+        },
+        "appendix_table_E2": {
+          "expected": 1,
+          "found": 1,
+          "files": ["page_310_table_E2.csv"],
+          "pct": 100.0,
+          "status": "PASS",
+          "detail": "Table E.2 (Revenue Accounts) is the primary data source for S501-S510 — extracted as CSV."
+        },
+        "supporting_tables": {
+          "expected": ">=5 supporting tables (Ch5 + Appendix)",
+          "found": 6,
+          "files": [
+            "page_060_sectoral_structure.csv",
+            "page_070_marxian_io_measures.csv",
+            "page_120_marxian_estimates_1953_1961.csv",
+            "page_140_marxian_orthodox_comparison.csv",
+            "page_310_table_E2.csv",
+            "page_320_labor_statistics.csv"
+          ],
+          "pct": 100.0,
+          "status": "PASS"
+        },
+        "equations_extracted": {
+          "expected": ">=3 key formulas (e=S*/V*, V*/W, GFP)",
+          "found": 1,
+          "files": ["page-range eq files"],
+          "pct": 33.3,
+          "status": "WARN",
+          "detail": "Only one equation file in the 95-165 page range. Formulas are present in research JSONs but underextracted from the source PDF. Mitigation: research JSONs ported from ST2 carry the canonical formulas verbatim."
+        }
+      },
+      "gaps": [
+        "Ch5 narrative text extraction is sparse (2/16 pages). Mitigation: methodology_summary fields in 16/16 research JSONs carry the construction logic.",
+        "Page-range equation extraction is thin. Formulas live in research JSONs and the registry's construction blocks."
+      ],
+      "remediation": "Optional re-run of /sphdarp on Ch5 if more narrative coverage is desired before Wave 2. Not blocking for Wave 1."
+    },
+    "L2_series_definition": {
+      "score": 100,
+      "status": "PASS",
+      "checks": {
+        "series_inventory": {"expected": 16, "found": 16, "pct": 100.0, "status": "PASS"},
+        "subseries_defined": {"pct": 100.0, "status": "PASS", "detail": "16/16 have non-empty subseries"},
+        "construction_documented": {"pct": 100.0, "status": "PASS", "detail": "16/16 have construction steps"},
+        "units_present": {"pct": 100.0, "status": "PASS", "detail": "All series have mandatory units field"},
+        "content_type_present": {"pct": 100.0, "status": "PASS", "detail": "All series have mandatory content_type field"},
+        "research_dossiers": {"expected": 16, "found": 16, "pct": 100.0, "status": "PASS", "detail": "All 16 research JSONs ported from ST2 with ID transform"},
+        "id_convention": {"status": "PASS", "detail": "All Ch5 series use canonical S### prefix per project prefix_scheme"}
+      },
+      "gaps": []
+    },
+    "L3_data_availability": {
+      "score": 88,
+      "status": "PASS",
+      "checks": {
+        "book_period_data": {
+          "expected": "Table E.2 1948-1989 + any auxiliary tables",
+          "found": "2 authoritative CSVs (1948-1989 and 1948-2024) in ST2/BookTables/ch05/",
+          "pct": 100.0,
+          "status": "PASS",
+          "detail": "Definitive digitized book values available; will be copied/symlinked into Technical/data/source/book_tables/ during Wave 1 task 15."
+        },
+        "api_endpoints_identified": {
+          "expected": "BEA NIPA + BEA GDP-by-Industry + BLS CES table IDs",
+          "found": "documented in registry subseries.source fields and research JSONs",
+          "pct": 100.0,
+          "status": "PASS",
+          "detail": "S501 splices to BEA GDP-by-Industry at 1997; S511/S512 to BLS CES; S504/S505 derived from S511/S512."
+        },
+        "api_fetchable": {
+          "status": "UNTESTED",
+          "detail": "API keys not yet present in Technical/. /anu-replicator will provide; non-blocking — book benchmarks validate book-period before extension."
+        },
+        "external_benchmarks": {
+          "expected": "Mohun 2005/2013 cross-validation datasets",
+          "found": "ST2/Inputs/ExternalSources/ has them; will port subset",
+          "pct": 75.0,
+          "status": "WARN"
+        },
+        "structural_breaks": {
+          "expected": "SIC->NAICS 1997, NIPA revisions",
+          "found": "documented in registry construction.steps and research entries",
+          "pct": 100.0,
+          "status": "PASS"
+        }
+      },
+      "gaps": [
+        "API fetchability not yet tested (api_keys.env absent). Non-blocking for adequacy gate; will be verified in /anu-replicator at Wave 1 task 16."
+      ]
+    },
+    "L4_construction_logic": {
+      "score": 85,
+      "status": "PASS",
+      "checks": {
+        "decompositions_exist": {
+          "status": "PRE_INGESTION",
+          "detail": "Decompositions are produced by /anu-ingestion (Wave 1 task 13). Assessment is forward-looking: 'Could an agent write them?' Research JSONs are comprehensive enough — yes."
+        },
+        "formulas_in_research": {
+          "pct": 100.0,
+          "status": "PASS",
+          "detail": "Every research JSON carries the canonical formula (e = S*/V*, V*/W decomposition, splice equations)"
+        },
+        "input_chain_documented": {
+          "pct": 100.0,
+          "status": "PASS",
+          "detail": "construction.subseries chains traceable: S511 -> S512 -> S504 -> S505 -> S506"
+        }
+      },
+      "gaps": [
+        "Decomposition MDs not yet written (Wave 1 task 13 produces them)"
+      ]
+    },
+    "L5_validation_data": {
+      "score": 82,
+      "status": "PASS",
+      "checks": {
+        "benchmark_coverage": {
+          "expected": 16,
+          "found": 12,
+          "covered_series": ["S501","S502","S503","S504","S505","S506","S507","S508","S511","S512","S513","S515"],
+          "uncovered_series": ["S509","S510","S514","S516"],
+          "pct": 75.0,
+          "status": "PASS",
+          "detail": "12/16 Ch5 series have published book benchmark values; sourced from ST2 validation_config.json benchmark_validation block."
+        },
+        "figure_mapping": {
+          "pct": 100.0,
+          "status": "PASS",
+          "detail": "Registry figures field links each series to its book figure (Fig 5_3 through 5_8, plus Fig 9_*)."
+        },
+        "external_validation_sources": {
+          "expected": ">=2 (Mohun 2005, Mohun 2013)",
+          "found": 2,
+          "pct": 100.0,
+          "status": "PASS",
+          "detail": "Cross-validation via ES1401-ES1404 (Mohun 2005) and ES1501-ES1504 (Mohun 2013) — replication scope of new build."
+        },
+        "tolerances_defined": {
+          "pct": 100.0,
+          "status": "PASS",
+          "detail": "Per-class tolerances inherited: rate_series 0.001/0.01, dollar_series 0.01/1.0, share_series 0.05/0.02."
+        }
+      },
+      "gaps": [
+        "S509, S510, S514, S516 have no published benchmark values in book — these are auxiliary/derived series. Their validation relies on cross-series identity checks (V05) and consistency (V03), which is acceptable."
+      ]
+    },
+    "L6_data_authenticity": {
+      "score": 100,
+      "status": "PASS",
+      "checks": {
+        "no_synthetic_planned": {"pct": 100.0, "status": "PASS", "detail": "Zero series have status synthetic|estimated_from_benchmarks"},
+        "no_np_random_in_research": {"pct": 100.0, "status": "PASS", "detail": "No fabrication referenced in any of 16 research JSONs"},
+        "gap_register_policy": {"status": "PASS", "detail": "Project policy: missing data -> status data_unavailable, never fabricated. Anu-extension Principle 10 (FAIL ON UNCERTAINTY) enforced."}
+      },
+      "gaps": []
+    }
+  },
+  "blocking_gaps": [],
+  "non_blocking_gaps": [
+    "L1: Ch5 narrative text extraction is sparse (12.5% page coverage in salvaged KB). Mitigated by complete research-JSON coverage; can be remediated later with /sphdarp re-run if needed.",
+    "L3: API fetchability untested (no api_keys.env yet). Will be verified at pipeline run time.",
+    "L5: S509, S510, S514, S516 lack direct book benchmarks (auxiliary/derived series); fall back to cross-series identity checks."
+  ],
+  "recommendation": "PROCEED — all blocking requirements met. Ch5 is ready for /anu-ingestion (Wave 1 task 13).",
+  "remediation_checklist": [
+    "[ ] (optional) Re-run /sphdarp on Ch5 pages 95-165 to enrich narrative KB before Wave 2 review",
+    "[ ] (deferred to task 16) Provision api_keys.env in Technical/data/user-inputs/ for BEA/BLS/FRED extension fetch"
+  ],
+  "next_steps": [
+    "Wave 1 task 13: /anu-ingestion produces DPRs + decompositions for S501-S516",
+    "Wave 1 task 14: /anu-extension produces EPRs for the 10 extendable series",
+    "Wave 1 task 15: write L01_*, P02_*, V03_* scripts (RE-AUTHORED FROM SCRATCH per user mandate — ST2 only as reference)",
+    "Wave 1 task 16: run pipeline, validate against 12 series book benchmarks"
+  ]
+}

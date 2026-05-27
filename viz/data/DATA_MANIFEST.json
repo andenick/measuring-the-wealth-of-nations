@@ -1,0 +1,23 @@
+{
+  "schema_version": "anu-visualize-v6.0",
+  "generated_at": "2026-05-17T17:50:00Z",
+  "project": "measuring-wealth-of-nations-replication",
+  "description": "SHA-256 manifest for RMWND visualization canonical data files. Hashes are placeholder pending first full generation.",
+  "files": [
+    {
+      "path": "catalogs/DEFINITIVE_SERIES_CATALOG.json",
+      "role": "series_catalog",
+      "sha256": "pending"
+    },
+    {
+      "path": "catalogs/SUBSOURCE_METADATA.json",
+      "role": "subsource_metadata",
+      "sha256": "pending"
+    },
+    {
+      "path": "catalogs/HDARP_SERIES_LINKAGE.json",
+      "role": "series_linkage",
+      "sha256": "pending"
+    }
+  ]
+}

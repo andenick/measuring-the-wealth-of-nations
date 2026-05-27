@@ -1,8 +1,0 @@
-table_id,table_number,source,title_tr,title_en
-chunk_001_table05,5.11,TurkStat Yearbook 2012,Cinsiyete göre toplam kanser insidansı Türkiye 2004-2008,Total cancer incidence by sex Turkey 2004-2008
-
-unit: per 100000 population
-sex_tr,sex_en,2004,2005,2006,2007,2008
-Toplam,Total,189.6,198.1,207.3,219.3,226.3
-Erkek,Males,236.3,246.5,256.4,271.7,280.5
-Kadın,Females,142.9,149.7,158.1,166.8,172.0

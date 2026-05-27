@@ -2,76 +2,34 @@
 __pycache__/
 *.pyc
 *.pyo
-.venv/
 *.egg-info/
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
 
-# API keys (NEVER commit)
-api_keys.env
-Technical/NickyData/api_keys.env
-Technical/NickyData/api_keys.env.example
-Technical/NickyData/data/user-inputs/api_keys.env
+# Secrets - NEVER commit
+.env
+*.env
+!api_keys.env.template
+data/user-inputs/api_keys.env
 
-# Regenerable pipeline data
-Technical/NickyData/data/final-data/
-Technical/NickyData/data/raw-data/
-Technical/NickyData/data/adjusted-final-data/
-Technical/NickyData/data/scratch/
-Technical/NickyData/outputs/
-
-# Regenerable outputs
-Outputs/Data/
-Outputs/Figures/
-
-# Shiny backup files
-Technical/ShinyApp/*.backup*
-Technical/ShinyApp/app.R.backup*
-
-# Large input data (provide instructions to obtain)
-Inputs/IO_Matrices/
-Inputs/API_Data/
-Inputs/NIPA/
-Inputs/BLS/
-Inputs/ExternalSources/Mohun/
-Inputs/ExternalSources/Turkey2022/*.pdf
-Inputs/ExternalSources/Turkey2022/muhasebat/*.pdf
-Inputs/ExternalSources/Cronin2001/*.pdf
-
-# API cache (regenerable)
-Technical/NickyData/data/cache/
-
-# Replication package ZIP (regenerable)
-Outputs/*.zip
-
-# Keep these input directories:
-# Inputs/BookTables/ (book chopped CSVs, small)
-# Inputs/ST_Chopped/ (book chopped CSVs, small)
-# Inputs/Concordances/ (sector mappings, small)
-
-# Knowledge Base HDARP chunks (large, reproducible)
-Technical/Knowledge_Base/HDARP_Extractions/
-
-# Archive
-Technical/_archive/
-
-# OS files
+# OS / editor
 .DS_Store
 Thumbs.db
 desktop.ini
+.idea/
+.vscode/
+*.swp
 
 # LaTeX auxiliary
 *.aux
 *.bbl
-*.bcf
 *.blg
-*.fdb_latexmk
-*.fls
 *.log
 *.out
-*.run.xml
 *.toc
 *.synctex.gz
 
-# IDE
-.idea/
-.vscode/
-*.swp
+# Regenerable pipeline state (recreated by build.py)
+PIPELINE_STATE.json
+ANU_LEDGER.json

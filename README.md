@@ -1,210 +1,198 @@
-# Measuring the Wealth of Nations — Replication Package
+# Measuring the Wealth of Nations - Replication Package
 
-**Complete replication and extension of every empirical claim in Shaikh & Tonak's *Measuring the Wealth of Nations* (1994), with 59 data series covering 1948–2024.**
+![CI](https://github.com/andenick/measuring-the-wealth-of-nations/actions/workflows/replicate.yml/badge.svg)
 
----
+Complete replication and extension of every empirical claim in
+Shaikh & Tonak (1994), *Measuring the Wealth of Nations: The Political
+Economy of National Accounts*, plus eight follow-up studies. All 64 data
+series cover 1925-2025 (book period plus extension where applicable)
+and are reproducible from the included loaders, processors, and
+validators.
 
-## Key Findings
+## Mission
 
-| Measure | 1948 | 1989 (book) | 2024 (extended) | Change |
-|---------|------|-------------|-----------------|--------|
-| Rate of exploitation (e = S\*/V\*) | 1.70 | 2.44 | ~7.3 | +330% |
-| Productive labor share (Lp/L) | 0.57 | 0.36 | ~0.36 | -37% (stabilized) |
-| Productive wage share (V\*/W) | 0.54 | 0.36 | ~0.33 | -39% |
-| Net social wage | Negative | Negative | Positive post-2005 | Regime change |
-| Marxian profit rate (r\* = S\*/K\*) | 1.87 | 1.86 | ~2.8 | Rising since 1990s |
-| Labor value / price R-squared | 0.93 (1958) | 0.79 (1977) | 0.85–0.99 (NAICS) | Strong correlation |
+Reconstruct, verify, and extend the empirical core of Shaikh & Tonak
+(1994) under modern provenance discipline:
 
-The exploitation rate — the ratio of surplus value to the wages of productive workers — has risen dramatically, reflecting the ongoing structural shift from productive to unproductive employment. The net social wage, negative for nearly the entire book period, reversed after 2005 due to the post-GFC fiscal expansion and COVID stimulus. The Marxian profit rate shows a partial recovery since the 1990s, rising above its 1989 level. See the [methodology report](Outputs/Reports/AS2_Methodology_Report.pdf) for detailed analysis of each series.
+- 100% of values trace to a published source, cached API response, or
+  documented derivation;
+- every series has a Data Provenance Record (DPR) and, where extended
+  past the original book window, an Extension Provenance Record (EPR);
+- every output passes V03 validators against book benchmarks and
+  cross-source identity checks before publication.
 
----
+## Series Inventory (64 total)
+
+| Prefix | Meaning                                  | Count |
+| ------ | ---------------------------------------- | :---: |
+| `S`    | Primary book series (Ch. 2, 4, 5, 6, 7, 8, 9) | 35 |
+| `ES`   | External follow-up study series          |  25   |
+| `AS`   | Analytical / auxiliary aggregates        |   4   |
+
+Follow-up studies covered (ES-prefix):
+
+- Tonak (1984) - labor share, net tax
+- Shaikh & Tonak (1987, 2002) - productive labor refinements
+- Moos (2017) - accumulation
+- Mohun (2005, 2013) - exploitation rate, productive / unproductive labor
+- Karabacak & Tonak (2022) - Turkey
+- Cronin (2001) - New Zealand
 
 ## Quick Start
 
 ```bash
-git clone https://github.com/andenick/measuring-the-wealth-of-nations.git
-cd measuring-the-wealth-of-nations/Technical/NickyData
+# 1. Create a clean virtual environment
+python -m venv .venv
+source .venv/bin/activate         # Linux / macOS
+# .venv\Scripts\activate          # Windows
+
+# 2. Install dependencies
 pip install -r requirements.txt
 
-python run.py --validate-only   # Verify all 59 series against benchmarks (2 seconds)
-python run.py --test-all        # Full pipeline: fetch data, compute, validate (~15 seconds)
+# 3. Run the full replication pipeline (Makefile and Docker variants
+#    are also provided; see INSTALL.md)
+python build.py status
+
+# 4. Run the test suite (90/90 PASS expected)
+pytest tests/
 ```
 
-API keys are needed only for `--test-all` (which re-fetches data from BEA, BLS, and FRED). The `--validate-only` mode works immediately with the cached data included in the repository.
+The orchestrator discovers and runs scripts in canonical phase order:
+**S -> L -> P -> V -> M -> A -> O -> E** (Setup -> Load -> Process ->
+Validate -> Manual -> Analysis -> Output -> Extend).
 
-See [INSTALL.md](INSTALL.md) for API key setup and troubleshooting.
+See `INSTALL.md` for environment setup details and (optional) API key
+configuration for fresh data fetches.
 
----
-
-## What This Replicates
-
-Shaikh and Tonak (1994) reconstruct the US national accounts from a Marxian perspective. They distinguish *productive* labor (which creates surplus value) from *unproductive* labor (administration, finance, government), and show that orthodox national accounting systematically conflates the two. Their framework produces measures — the rate of exploitation, the Marxian profit rate, the net social wage — that differ substantially from conventional statistics and reveal the class structure of the American economy.
-
-This package:
-
-1. **Replicates** every table and figure from Chapters 2, 4–9 of the book (33 T-series, 1948–1989)
-2. **Extends** all extendable series through 2024 using BEA, BLS, and FRED public data
-3. **Replicates 8 related studies** that build on the Shaikh-Tonak framework (25 N-series):
-   - Tonak (1984) — Workers as net subsidizers of the state
-   - Shaikh & Tonak (1987) — "Social wage" is a myth
-   - Shaikh & Tonak (2002) — NSW through the Clinton era
-   - Moos (2017) — Post-2000 structural shift (+3.0 pp)
-   - Mohun (2005) — Alternative productive/unproductive classification
-   - Mohun (2013) — Class decomposition (81.3% working class)
-   - Karabacak & Tonak (2022) — Turkey: NSW negative for ALL 40 years
-   - Cronin (2001) — New Zealand post-reform shift
-
-4. **Computes 4 analytical series**: social burden rate, unproductive exploitation rate, Marxian productivity, and Khanjian cross-validation
-
-Everything runs from a single command with zero manual intervention.
-
----
-
-## Data Sources
-
-All data used in this project is publicly available:
-
-| Source | Tables | Coverage | Access |
-|--------|--------|----------|--------|
-| BEA NIPA | 1.7.5, 2.1, 3.1–3.3, 6.2D, 6.5D | 1929–2025 | [Free API key](https://apps.bea.gov/API/signup/) |
-| BEA Fixed Assets | Table 4.1 (net stock by industry) | 1925–2024 | Same API key |
-| BEA GDP-by-Industry | Value added, components by industry | 1997–2024 | Same API key |
-| BEA Input-Output | Benchmark Use/Make tables | 1947–2017 | [Public download](https://www.bea.gov/industry/input-output-accounts-data) |
-| BLS CES | Production workers by industry | 1948–2024 | [Free API key](https://data.bls.gov/registrationEngine/) |
-| FRED | Capacity utilization, Turkey labor share | 1948–2024 | [Free API key](https://fred.stlouisfed.org/docs/api/api_key.html) |
-| Book tables | Appendices E, F, G, H (digitized) | 1948–1989 | Included in this repo |
-| TurkStat | Compensation of employees (HDARP-extracted) | 1980–2006 | Included in this repo |
-
-Cached API responses are included in `data/raw-data/`, so the pipeline can run without API keys in validation mode.
-
----
-
-## Repository Structure
+## Repository Layout
 
 ```
-measuring-the-wealth-of-nations/
-  Inputs/                    Source data
-    BookTables/              Digitized tables from the book
-    ST_Chopped/              Book data in structured CSV format
-    Concordances/            SIC-NAICS sector classification mappings
-    ExternalSources/         Data for the 8 replicated studies
-
-  Technical/
-    NickyData/               Self-contained pipeline (run.py + 85 scripts)
-      run.py                 Master orchestrator
-      code/                  Scripts organized by phase (S/L/P/V/M/A/O/E)
-      utils/                 Shared libraries (API fetchers, data transforms)
-      data/                  Raw inputs, cached API data, computed outputs
-      series_registry.json   Canonical registry of all 59 series
-      validation_config.json Benchmark values and tolerance thresholds
-
-    docs/                    Data provenance documentation
-      series/                Per-series provenance records (58 files)
-      figures/               Per-figure provenance records (17 files)
-      chapters/              Chapter-level review reports
-
-    Knowledge_Base/          Text extracted from the book (380 pages)
-    ShinyApp/                Interactive R Shiny visualization (15 tabs)
-
-  Outputs/
-    Data/                    Master database (97 years x 48 series, CSV + Excel)
-    Figures/                 11 publication-quality figures (PNG + SVG)
-    Reports/                 Methodology report (LaTeX/PDF)
+Publish/
+|-- README.md                  # this file
+|-- VERSION.txt                # bundle version string (v1.2)
+|-- LICENSE                    # MIT (Code) + CC-BY-4.0 (Data)
+|-- CITATION.cff               # machine-readable citation
+|-- INSTALL.md                 # setup details
+|-- requirements.txt           # Python dependencies
+|-- pyproject.toml             # project metadata
+|-- Makefile                   # convenience targets (replicate, validate, viz)
+|-- Dockerfile                 # reproducible build container
+|-- build.py                   # build orchestrator + status reporter
+|-- series_registry.json       # single source of truth (64 series)
+|-- DIVERGENCE_REGISTER.json   # intentional methodology divergences (12 entries)
+|-- Data/                      # 64 chopped CSVs (one per series, wide format)
+|-- Extenbooks/                # 64 Excel workbooks (4 sheets per series)
+|-- Docs/
+|   |-- series/                # 149 DPR / EPR markdown docs
+|   |-- chapters/              # 24 chapter adequacy/review reports
+|   |-- decisions/             # framework decisions 0007, 0008 (v1.2)
+|   |-- methodology/           # methodology.md (replicator-facing narrative)
+|   `-- precommit/             # pre-commit hook policy
+|-- code/                      # L01 loaders, P02 processors, V03 validators, M04, A05, O06
+|-- viz/                       # Plotly Dash / Shiny visualization apps
+`-- tests/                     # 90/90 PASS regression + identity test suite
 ```
 
----
+## What's in This Release
 
-## Pipeline Architecture
+- **64 chopped CSVs** (`Data/`) - canonical wide format (Row 1
+  metadata, Row 2 column IDs, Row 3+ data).
+- **64 extenbooks** (`Extenbooks/`) - human-readable Excel workbooks
+  with 4 sheets per series (Data / Provenance / Research /
+  Construction).
+- **149 per-series docs** (`Docs/`) - DPRs for every series, EPRs
+  where extension applies, decomposition notes for compound series.
+- **17 chapter adequacy reports** (`Docs/chapters/`) - Stage 2 anu-adequacy
+  six-layer readiness scoring.
+- **185 pipeline scripts** (`code/`) - L01/P02/V03/M04/A05/O06 phase
+  scripts plus shared `lib/` helpers.
+- **Visualization app** (`viz/`) - Dash + Shiny apps for interactive
+  exploration.
+- **DIVERGENCE_REGISTER.json** - every intentional deviation from
+  upstream sources and predecessor methodology (12 entries).
 
-The pipeline has 8 phases, each containing numbered scripts that run in order:
+## Data License
 
-| Phase | Scripts | What it does |
-|-------|---------|--------------|
-| **S** Setup | S01–S05 | Validate environment, generate artifact registry and provenance index |
-| **L** Loading | L01–L22 | Parse source CSVs, fetch data from BEA/BLS/FRED APIs |
-| **P** Processing | P01–P23 | Compute all 59 series with correct dependency ordering |
-| **V** Validation | V01–V15 | 348 automated checks against book benchmarks |
-| **M** Manual Adj | M01–M04 | Documented adjustments (K-to-K\* correction, ec_u/ec_p ratios) |
-| **A** Analysis | A01–A11 | Cross-study comparisons, sensitivity analysis, period decomposition |
-| **O** Output | O01–O08 | Figures, master database, structured CSVs, Excel workbooks |
-| **E** Exploration | E01 | Investigative analysis |
-
-**85 scripts | 59 series | 15 validators | 348 checks | 0 failures**
-
----
-
-## Series Documentation
-
-Every series has a detailed write-up in [`docs/series/`](docs/series/) explaining what it measures, what Shaikh & Tonak wrote about it, the mathematical formulas, and how we replicate it. See the [full series index](docs/README.md).
-
-## Series Coverage
-
-| Chapter | Series | Content | Period |
-|---------|--------|---------|--------|
-| Ch 2 | T201 | Orthodox vs Marxian GDP comparison | 1948–1989 |
-| Ch 4 | T401–T402 | Input-output A-matrix + Leontief inverse (11 benchmarks) | 1947–2017 |
-| Ch 5 | T501–T516 | Exploitation accounting: TP\*, V\*, S\*, e, Lp/L, V\*/W, r\* | 1948–2024 |
-| Ch 6 | T601–T609 | Net social wage: taxes, benefits, NSW, NSW/V\* | 1952–2025 |
-| Ch 7 | T701–T703 | Labor values, prices of production, value-price deviations | 1947–2017 |
-| Ch 8 | T801 | Cross-study comparison (Shaikh-Tonak vs Mohun) | 1948–1989 |
-| Ch 9 | T901 | Summary indicators | 1948–2024 |
-| Studies | N1001–N1704 | 8 external papers, 25 series (US, Turkey, New Zealand) | Various |
-
----
-
-## Validation
-
-Every series is verified against the book's published values. The 15 validators cover:
-
-| Validator | What it checks |
-|-----------|---------------|
-| V01 | 31 reference values from the book (exact match within tolerance) |
-| V02 | Range checks on all 59 series (no impossible values) |
-| V03 | Year-to-year continuity (no unexplained jumps) |
-| V04 | Completeness (no missing years in expected ranges) |
-| V05 | Cross-series identities (e.g., GFP\* = TP\* - C\*m) |
-| V06 | Splice quality at book/extension transition (1989–1990) |
-| V07 | Overlap correlation between book and extension data |
-| V08 | Hash integrity (data files unchanged since last validation) |
-| V09 | Cross-validation against Mohun (2005) estimates |
-| V10 | Input-output matrix consistency |
-| V11 | External benchmark comparison |
-| V12 | Net social wage cross-study consistency |
-| V13–V15 | Unit consistency, data freshness, Robin cross-validation |
-
----
-
-## Data Format
-
-Series data is stored in the [Anu Data Framework](https://github.com/andenick/anu-data-framework) format:
-
-- **CSV files** with structured metadata headers (Row 1: descriptions, Row 2: column IDs, Row 3+: data)
-- **Excel workbooks** with 4 sheets per series: Data, Provenance, Research, Construction
-- **Provenance records** documenting the source, methodology, and construction steps for every series
-
-The `series_registry.json` file is the canonical definition of all 59 series — every output format reads from this single source of truth.
-
----
+Code is released under the **MIT License** (see `LICENSE`). Data
+outputs in `Data/` and `Extenbooks/` are released under **Creative
+Commons Attribution 4.0 International (CC BY 4.0)** - the data file
+itself, not the upstream sources, which retain their own terms (BEA,
+BLS, FRED, etc.).
 
 ## Citation
 
-```bibtex
-@book{shaikh1994measuring,
-  author    = {Shaikh, Anwar and Tonak, E. Ahmet},
-  title     = {Measuring the Wealth of Nations: The Political Economy of National Accounts},
-  publisher = {Cambridge University Press},
-  year      = {1994}
-}
-```
+If you use this replication package, please cite both this package
+and the original book:
 
-See [CITATION.cff](CITATION.cff) for this replication package's citation metadata.
+> Shaikh, A., & Tonak, E. A. (1994). *Measuring the Wealth of
+> Nations: The Political Economy of National Accounts*. Cambridge
+> University Press.
 
----
+A machine-readable citation is available in `CITATION.cff`.
 
-## Requirements
+## Reproducibility
 
-- **Python 3.11+** — pipeline, data processing, API fetching
-- **R 4.x** (optional) — Shiny interactive visualization only
-- **APIs** — BEA, BLS, FRED (free registration, see [INSTALL.md](INSTALL.md))
-- **Disk** — ~50 MB (repo) + ~200 MB (computed outputs)
-- **Time** — ~15 seconds for full pipeline run
+Continuous Integration runs the full replicator in a clean Python
+3.13 virtual environment on every push to `main` and on every pull
+request; see `.github/workflows/replicate.yml`. A green build means:
+all V03 validators PASS against book benchmarks and cross-source
+identities.
+
+## Methodology
+
+See `methodology/methodology.md` for the conceptual narrative.
+Per-series details live in `Docs/` (one DPR and, where applicable,
+one EPR per series). Chapter-level readiness assessments live in
+`Docs/chapters/`.
+
+## Known Limitations
+
+- **Chapter 7 labor-value series (S701, S702, S703)** are now
+  first-class implementations (`proxy: false` in the registry),
+  built from BLS CES sectoral employment, BEA Benchmark I-O matrices,
+  and the Appendix F productive-share filter. They replace the v1.0
+  matrix-structure proxies. Sector coverage is bounded by the eight
+  Shaikh-Tonak productive sectors (Appendix G Table G.2); benchmark
+  years without I-O coverage are reported as `nan` rather than
+  interpolated. See `DIVERGENCE_REGISTER.json` entry **DIV-011**.
+- Some series with `status: book_period_validated` cover only the
+  book's original window (typically 1947-1989); extension to the
+  present is documented in their EPR when applicable.
+- All limitations are documented in per-series DPRs / EPRs and in
+  `DIVERGENCE_REGISTER.json`.
+
+## Known Data Quirks
+
+- **S517 (Productive Capital Stock K\*) - net vs. gross.**
+  Shaikh & Tonak (1994) Table 5.8 labels K\* as the "gross" private
+  nonresidential capital stock, but the published book values match
+  BEA Fixed Assets Table 4.1 **Net** Stock exactly at all 5 benchmark
+  years (1948 = 292, 1958 = 551, 1967 = 871, 1980 = 3 800, 1989 =
+  6 700 $B). The book's terminology is in error; the implementation
+  uses net stock. BEA publishes no current-cost gross stock for
+  private nonresidential fixed assets, so a gross-stock variant is
+  not constructible from BEA sources. See `DIVERGENCE_REGISTER.json`
+  entry **DIV-008** and `Docs/S517_EPR.md` Section 5 for the full
+  divergence record.
+
+## Version
+
+**Current: v1.2** (see `VERSION.txt`). This is the definitive
+release. Highlights of the current package:
+
+- **Chapter 7 proxy retired**: S701/S702/S703 are now first-class
+  labor-value series (`proxy: false`), built from BLS CES, BEA
+  Benchmark I-O, and the Appendix F productive-share filter
+  (`DIVERGENCE_REGISTER.json` DIV-011).
+- **S513 / S514 adopted in stock form** (prior dual-form treatment
+  retired; `Docs/decisions/0008_reference_values_year_keyed_scalars.md`).
+- **8 framework decisions enforced** end-to-end, including
+  Decision 0007 (verbatim quote schema) and Decision 0008
+  (year-keyed `reference_values` for stock series).
+- **DIVERGENCE_REGISTER.json: 12 entries** capturing every
+  intentional deviation from upstream methodology.
+- **90/90 test suite** (`tests/`) plus V03 validators driven off
+  year-keyed `reference_values`.
+- **Reproducibility infrastructure**: `Dockerfile`, `Makefile`,
+  `tests/`, CI, and `Docs/precommit/` ship with the bundle so a
+  clean replicator can `docker build` or `make` the entire pipeline.

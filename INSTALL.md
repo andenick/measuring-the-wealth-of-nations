@@ -1,69 +1,89 @@
-# Installation and Reproduction Guide
+# Install / Setup
 
-## Requirements
+## Prerequisites
 
-- Python 3.11+
-- R 4.x (optional — only needed for the Shiny visualization app)
-- ~50 MB disk space (repo) + ~200 MB (computed outputs)
+- Python 3.10 or newer (tested on 3.13)
+- ~50 MB disk free (working tree + cached data)
+- Optional: BEA, BLS, FRED API keys for fresh data fetches
 
-## Setup
+## Install
 
 ```bash
-git clone https://github.com/andenick/measuring-the-wealth-of-nations.git
-cd measuring-the-wealth-of-nations/Technical/NickyData
+git clone https://github.com/andenick/measuring-wealth-of-nations-replication.git
+cd measuring-wealth-of-nations-replication
 pip install -r requirements.txt
 ```
 
-## Running the Pipeline
+Required Python packages (in `requirements.txt`):
+
+```
+pandas>=2.0
+numpy>=1.24
+openpyxl>=3.1
+requests>=2.31
+```
+
+## Quick verify (no API key needed)
 
 ```bash
-# Validate cached data (no API keys needed, ~2 seconds)
 python run.py --validate-only
-
-# Full pipeline: re-fetch all data from APIs, recompute, validate (~15 seconds)
-python run.py --test-all
-
-# Other modes
-python run.py --from P          # Resume from processing phase
-python run.py --setup-only      # Just setup scripts
-python run.py --report          # Show pipeline status dashboard
-python run.py --list            # List all 85 scripts
 ```
 
-## API Keys (needed only for --test-all)
+Expected output:
 
-The `--validate-only` mode works immediately with cached data. To re-fetch fresh data from federal statistical agencies, you need free API keys:
-
-1. Copy the template:
-```bash
-cp data/user-inputs/api_keys.env.example data/user-inputs/api_keys.env
+```
+Validation report: 64 series; status counts = {'PASS': 64}
 ```
 
-2. Get free keys from:
+This runs against the cached `data/raw/` BEA/BLS/FRED responses included in the repo. The build is fully reproducible offline.
+
+## Fresh API fetches (optional)
+
+To re-fetch data from the agencies directly rather than using the cached responses:
+
+1. Get free API keys:
    - **BEA**: https://apps.bea.gov/API/signup/
+   - **BLS**: https://data.bls.gov/registrationEngine/
    - **FRED**: https://fred.stlouisfed.org/docs/api/api_key.html
-   - **BLS**: https://data.bls.gov/registrationEngine/ (optional — increases rate limits)
+
+2. Copy the template:
+   ```bash
+   cp data/user-inputs/api_keys.env.template data/user-inputs/api_keys.env
+   ```
 
 3. Edit `data/user-inputs/api_keys.env`:
-```
-BEA_API_KEY=your_bea_key_here
-FRED_API_KEY=your_fred_key_here
-```
+   ```
+   BEA_API_KEY=your-key-here
+   BLS_API_KEY=your-key-here
+   FRED_API_KEY=your-key-here
+   ```
+
+4. Run the full pipeline:
+   ```bash
+   python run.py --test-all
+   ```
+
+   This re-fetches everything from the agencies, validates against the cached responses for parity, and produces the same 64 final CSVs.
+
+`api_keys.env` is gitignored — your keys never leave your machine.
 
 ## Troubleshooting
 
-**"BEA_API_KEY not found"**: Make sure `api_keys.env` is in `data/user-inputs/`, not the repo root.
+**`ModuleNotFoundError: utils.paths`**: run scripts from the repo root, not from inside subdirectories. Each script adds the parent dir to `sys.path` but assumes you're invoking from the repo root.
 
-**V15 data freshness warnings**: API data may be slightly stale if cached responses are old. Run `--test-all` to refresh.
+**BEA rate-limit errors**: BEA caps free-tier at 100 requests/minute. The fetcher uses exponential backoff but if you hit a sustained 429, wait 1 minute and re-run with `--from L01_loaders` (resume mode, TBD).
 
-**V01 reference value failure**: If a benchmark value changes after API refresh, this is a data vintage issue — BEA periodically revises historical estimates. The cached data in the repo represents the validated vintage.
+**LaTeX errors building the methodology PDF**: install `texlive-full` (Linux) or MacTeX (macOS) / MiKTeX (Windows). The methodology PDF builds with `latexmk -pdf docs/methodology/methodology.tex`.
 
-**R Shiny app won't start**: Install R packages: `install.packages(c("shiny", "shinydashboard", "tidyverse", "plotly", "DT", "scales"))`. Then from `Technical/ShinyApp/`: `Rscript -e "shiny::runApp('.')"`.
+**Output dir permissions**: `data/intermediate/`, `data/final/`, `chopped/`, `extenbooks/` are written by the pipeline. Ensure they're writable.
 
-## Outputs
+## Development setup
 
-After running the pipeline, outputs appear in:
+For contributors:
 
-- `Outputs/Data/COMPLETE_DATABASE/` — Master database (97 years x 48 series, CSV + Excel)
-- `Outputs/Figures/` — 11 publication-quality figures (PNG + SVG)
-- `Outputs/Reports/` — Methodology report (PDF)
+```bash
+pip install -e .
+pytest code/tests/  # unit tests for utility modules (io_matrix, bea_cache, etc.)
+```
+
+CI runs `python run.py --validate-only` on every push; any series PASS → FAIL regression fails the build.

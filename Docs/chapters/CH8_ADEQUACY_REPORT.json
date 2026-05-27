@@ -1,0 +1,56 @@
+{
+  "chapter": "Ch8",
+  "chapter_label": "Cross-Study Comparison of Exploitation Rates (S801)",
+  "series_count": 1,
+  "series_ids": ["S801"],
+  "report_date": "2026-05-23T00:00:00Z",
+  "reporter": "agent",
+  "skill": "anu-adequacy",
+  "framework": "Anu Framework v12.0",
+  "stage": 2,
+  "cohort": "stage3_c2_reverify",
+  "layers": {
+    "L1_kb_completeness": {
+      "score": 60,
+      "evidence": "+20 from baseline (was 40). Mapping concern (no 'Ch8' in source book) PERSISTS but is now formally documented in registry taxonomic_note field per Stage 3 cohort 1 patch. taxonomic_note explicitly states 'S801 maps to book Ch7 §7.3-7.4 (pp.221-225)' and references the verified MASTER_INDEX evidence. S801_DPR.md (8142 bytes, 7 H2 sections, KB-anchored) consolidates evidence. The chunk_26 (Appendix A) and chunk_38 (Appendices M, N) references in S801_research.json remain valid.",
+      "blockers": ["Source-book chapter mapping still requires Stage 5 SERIES_CORRESPONDENCE_MATRIX update"]
+    },
+    "L2_data_source_availability": {
+      "score": 80,
+      "evidence": "Unchanged. Composite CSV not assembled, but inputs (S506 chopped + Mohun 2005 external CSV at external_studies/) are both present on disk.",
+      "blockers": ["Composite source CSV not assembled; relies on assembling from S506 + ES1401 outputs"]
+    },
+    "L3_methodology_clarity": {
+      "score": 90,
+      "evidence": "Unchanged. Methodology summary is precise; DPR adds 7-section formalization.",
+      "blockers": []
+    },
+    "L4_registry_completeness": {
+      "score": 95,
+      "evidence": "+10 from baseline (was 85). Status downgraded from 'validated_book_and_extension' to 'book_period_validated' per Decision 0003 cohort1 patch — binary invariant now satisfied. taxonomic_note field added. Lingering top-level units='ratio' vs subseries 'mixed' note remains a minor inconsistency but is now overridden by units_note semantics.",
+      "blockers": []
+    },
+    "L5_validation_refs": {
+      "score": 75,
+      "evidence": "+50 from baseline (was 25). validation.reference_values NOW POPULATED with 6 benchmark-year exploitation rates: {1948:1.70, 1958:2.01, 1964:2.12, 1972:1.99, 1980:2.07, 1989:2.44}. These align with the ST/Mohun ratio narrative (S506 absolute values ~1.7-2.44 across the period). expected_range still null; tolerance still null. 25-point dock retained for missing expected_range and tolerance.",
+      "blockers": ["expected_range and tolerance still null"]
+    },
+    "L6_classification_accuracy": {
+      "score": 90,
+      "evidence": "+15 from baseline (was 75). The binary-invariant violation is RESOLVED (status='book_period_validated', extension:null). The chapter-mapping concern is now documented in taxonomic_note field rather than left implicit. content_type='cross_sectional' remains correct. proxy:false correct. 10-point dock retained for the minor units field inconsistency (top-level 'ratio' vs subseries 'mixed') and the still-pending SERIES_CORRESPONDENCE_MATRIX update.",
+      "blockers": []
+    }
+  },
+  "chapter_score": 81.67,
+  "gate_passed": true,
+  "recommendations": [
+    "Set validation.expected_range (e.g., [1.0, 3.5]) and tolerance (e.g., tolerance_class='rate_series') to close L5",
+    "Assemble ch08/Table8_1_CrossStudy.csv from existing S506 + ES1401 outputs to make L2 fully concrete",
+    "Resolve units field inconsistency: either set top-level units='mixed' to match subseries, or document the convention in units_note",
+    "Stage 5: update SERIES_CORRESPONDENCE_MATRIX to reflect 'Ch8' as a project-internal slot mapping to book Ch7 §7.3-7.4 (the taxonomic_note already records this; matrix update will operationalize it)"
+  ],
+  "revision_history": [
+    {"ts": "2026-05-23T00:00:00+00:00", "score": 65.83, "gate": false, "agent": "stage2_cohort1"},
+    {"ts": "2026-05-24T00:30:00+00:00", "score": 81.67, "gate": true, "agent": "stage3_cohort2_reverify"}
+  ]
+}

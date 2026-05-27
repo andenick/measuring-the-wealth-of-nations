@@ -1,0 +1,64 @@
+{
+  "chapter": "Ch14",
+  "chapter_label": "Mohun 2005 US Profit Rate Replication (ES1401-ES1404)",
+  "external_paper": {
+    "author": "Simon Mohun",
+    "year": 2005,
+    "title": "On measuring the wealth of nations: the US economy, 1964-2001",
+    "journal": "Cambridge Journal of Economics 29(5): 799-815",
+    "doi": "10.1093/cje/bei043",
+    "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2005_Mohun_US_1964_2001/full_transcription.md"
+  },
+  "series_count": 4,
+  "series_ids": ["ES1401", "ES1402", "ES1403", "ES1404"],
+  "report_date": "2026-05-23T23:53:59Z",
+  "reporter": "agent",
+  "skill": "anu-adequacy",
+  "skill_version": "1.2",
+  "framework": "Anu Framework v12.0",
+  "layers": {
+    "L1_kb_completeness": {
+      "score": 80,
+      "status": "PASS",
+      "detail": "External paper transcription is present at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2005_Mohun_US_1964_2001/full_transcription.md (1044 lines). Body of paper, Tables 2-3, Figure 4 narrative, Sections 1-5, Appendix A.1 are all covered. PDF source ([2005] Mohun - On measuring the wealth of nations the US economy, 1964-2001.pdf) is also on disk. Only single-file extraction (no separate equations/figures/tables CSV splits), but Tables 2-3 and Figure 4 numeric content is transcribed inline in the markdown.",
+      "gaps": ["Research JSONs (ES1401-ES1404) cite legacy path Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md which does not exist — actual file lives under Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/. Cosmetic path mismatch; content present."]
+    },
+    "L2_data_source_availability": {
+      "score": 95,
+      "status": "PASS",
+      "detail": "Inputs/ST2/Inputs/ExternalSources/Mohun/ contains 16 CSVs and a methodology summary: mohun_exploitation_rates_1948_1989_CORRECTED.csv, mohun_variable_capital_1948_1989_CORRECTED.csv, mohun_employment_*.csv, mohun_industry_classification.csv, nipa_13_to_mohun_classification.csv, mohun_replication_validation_1964_1989.csv, mohun_vs_st_*.csv, detailed_exploitation_comparison_ST_vs_Mohun.csv, MOHUN_METHODOLOGY_SUMMARY.md. All four ES series have direct CSV inputs.",
+      "gaps": ["Registry source_file = 'Inputs/ExternalSources/Mohun/' (legacy relative path); actual location is Inputs/ST2/Inputs/ExternalSources/Mohun/. Resolved at L01 loader level."]
+    },
+    "L3_methodology_clarity": {
+      "score": 90,
+      "status": "PASS",
+      "detail": "All four research JSONs (ES1401-ES1404) populated with legacy verbatim schema (entries[].verbatim_quote + verbatim_source). methodology_summary fields concise. ES1401: Mohun SM approximation procedures, exploitation rate definition, ST critique. ES1402-ES1403: productive labor share + variable capital under Mohun classification. ES1404: cross-validation ratio S506/ES1401 (ST vs Mohun exploitation). Mohun's full critique of ST approximation method documented (Sections 2-4).",
+      "gaps": ["ES1404 is a derived cross-validation ratio with no kb_sources_searched field in the underlying research JSON — derived from other series, so no external KB required."]
+    },
+    "L4_registry_completeness": {
+      "score": 95,
+      "status": "PASS",
+      "detail": "All 4 series present in series_registry.json with: name, study (study_05_mohun_2005), chapter=14, paper_table, source_file, year_range, subseries with units/color/period, construction (load/derive), extension=null, validation block with reference_values/expected_range/tolerance, loader (L15)/processor (P16), wave, status=book_period_validated, units, content_type=time_series.",
+      "gaps": ["ES1404 lacks 'loader' field (derived series, computes from inputs)."]
+    },
+    "L5_validation_refs": {
+      "score": 90,
+      "status": "PASS",
+      "detail": "All four series have validation.reference_values populated (ES1401: 1948=1.6666; ES1402: 1948=0.5662; ES1403: 1948=1112758.197; ES1404: mean=1.61) plus expected_range and tolerance. Research JSONs include benchmark values from Mohun Fig 4 (SM avg 1964-82=1.97, 2001=3.00, +52%; ST avg 1964-82=1.71, 2001=2.22, +29.8%; ST captures only 57% of actual increase).",
+      "gaps": ["Reference values are sparse (1 point per series for ES1401-ES1403, mean only for ES1404). Mohun paper has 38 annual values for Table 2 — opportunity to enrich V03 with multi-year checkpoints."]
+    },
+    "L6_classification_accuracy": {
+      "score": 100,
+      "status": "PASS",
+      "detail": "content_type=time_series correct for all 4 (annual 1964-2001 series). No proxy flags needed — these are direct digitizations of Mohun's published Table 2 (ES1401-ES1403) and a derived cross-validation ratio (ES1404). Units correctly specified: ratio/share/billions_dollars/ratio. ES1404 construction.op='derive' correctly flags it as a composite, not a directly-observed series.",
+      "gaps": []
+    }
+  },
+  "chapter_score": 91.7,
+  "gate_passed": true,
+  "recommendations": [
+    "PROCEED to Stage 3 INGESTION. All four series cleared the L >= 80 gate.",
+    "Update research JSON kb_sources_searched paths to point at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2005_Mohun_US_1964_2001/full_transcription.md (cosmetic).",
+    "Optional V05 enrichment: add multi-year reference values from Mohun Table 2 for stronger validation checkpoints."
+  ]
+}
