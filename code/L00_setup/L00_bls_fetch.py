@@ -25,7 +25,7 @@ bridge is handled internally by BLS).
 API key
 -------
 Uses the registered BLS_API_KEY from Council/Robin (centralized) or the
-ST2 NickyData env file. With a registered key the BLS public API v2 allows
+ST2 AnuData env file. With a registered key the BLS public API v2 allows
 500 queries/day and 50 series per request - far more than this script needs.
 
 Outputs
@@ -76,7 +76,7 @@ OUTPUT_DIR = PROJECT_ROOT / "Inputs" / "ST2" / "Inputs" / "API_Data" / "BLS"
 # Env file candidates (searched in order)
 ENV_CANDIDATES: List[Path] = [
     Path("<workspace>/Council/Robin/API_MODULES/SOCIAL_SCIENCE/api_keys.env"),
-    PROJECT_ROOT / "Inputs/ST2/Technical/NickyData/data/user-inputs/api_keys.env",
+    PROJECT_ROOT / "Inputs/ST2/Technical/AnuData/data/user-inputs/api_keys.env",
     Path("<workspace>/Projects/RSCD/Technical/config/api_keys.env"),
 ]
 

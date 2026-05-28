@@ -16,7 +16,7 @@ from urllib.request import urlopen
 PROJECT_ROOT = Path("<workspace>/Projects/RMWND")
 OUT_CSV = PROJECT_ROOT / "Inputs/ST2/Inputs/API_Data/BEA/fixed_assets_4_2_gross_stock.csv"
 PROV_JSON = PROJECT_ROOT / "Inputs/ST2/Inputs/API_Data/BEA/provenance_fixed_assets_4_2.json"
-ENV_FILE = PROJECT_ROOT / "Inputs/ST2/Technical/NickyData/data/user-inputs/api_keys.env"
+ENV_FILE = PROJECT_ROOT / "Inputs/ST2/Technical/AnuData/data/user-inputs/api_keys.env"
 
 
 def load_bea_key() -> str:
