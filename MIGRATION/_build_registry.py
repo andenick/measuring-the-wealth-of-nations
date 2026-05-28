@@ -1,6 +1,6 @@
 import json, re
 
-src_path = "D:/Arcanum/Projects/RMWND/Inputs/ST2/Technical/NickyData/series_registry.json"
+src_path = "D:/Arcanum/Projects/RMWND/Inputs/ST2/Technical/AnuData/series_registry.json"
 out_path = "D:/Arcanum/Projects/RMWND/Technical/series_registry.json"
 
 r = json.load(open(src_path))
