@@ -1,18 +1,119 @@
-"""P02_S502 — Process Constant Capital (C*_m); pass-through for book period."""
+"""P02_S502 — Process Constant Capital (C*_m = M'_p) with BEA extension.
+
+Three subseries emitted (mirrors S501 pattern):
+  S502-A        : Book Table H.1 Mp column, 1948-1989 (pass-through).
+  S502-EXT      : BEA Intermediate Inputs (GO - VA) for productive+trade NAICS
+                  top-level industries, 1997-2024. Growth-rate splice at 1997
+                  per registry (the EXT series enters at its observed 1997
+                  level; the 1990-1996 gap is log-linearly bridged in COMBINED).
+  S502-COMBINED : Book 1948-1989, log-linear bridge 1990-1996, EXT 1997-2024.
+
+See L01_S502 docstring for the materials-only Marxian rationale.
+"""
 from __future__ import annotations
 
 import sys
 from pathlib import Path
 
+import numpy as np
+import pandas as pd
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from L01_loaders.L01_S502_constant_capital import LOADER  # noqa: E402
-from utils.series import run_pipeline_for_series  # noqa: E402
+from L01_loaders.L01_S502_constant_capital import load  # noqa: E402
+from utils.io import write_series_csv  # noqa: E402
+
+
+SERIES_ID = "S502"
+BOOK_LAST_YEAR = 1989
+EXT_FIRST_YEAR = 1997
+EXT_LAST_YEAR = 2024
+
+
+def _log_linear_bridge(book_endpoint: float, ext_endpoint: float,
+                       y0: int, y1: int) -> pd.DataFrame:
+    """Log-linear interpolation from (y0, book_endpoint) to (y1, ext_endpoint),
+    returning rows for years y0+1 .. y1-1 (open interval)."""
+    if book_endpoint <= 0 or ext_endpoint <= 0:
+        raise ValueError("log-linear bridge requires positive endpoints")
+    n = y1 - y0
+    log0 = np.log(book_endpoint)
+    log1 = np.log(ext_endpoint)
+    rows = []
+    for k in range(1, n):
+        frac = k / n
+        val = float(np.exp(log0 + frac * (log1 - log0)))
+        rows.append({"year": y0 + k, "value": val})
+    return pd.DataFrame(rows)
 
 
 def run():
-    final_path = run_pipeline_for_series(LOADER, "book_tableH1_1948_1989.csv:Mp")
-    print(f"    [P02_{LOADER.series_id}] wrote {final_path.name}")
+    book, bea_raw = load()
+
+    # ---- S502-A : book pass-through ----
+    book_out = book.copy()
+    book_out["stage"] = "book_period"
+    book_out["provenance"] = "book_tableH1_1948_1989.csv:Mp"
+    book_out = book_out[["series_id", "year", "value", "units", "stage", "provenance"]]
+
+    # ---- S502-EXT : growth-rate splice ----
+    book_1989 = float(book.loc[book["year"] == BOOK_LAST_YEAR, "value"].iloc[0])
+    bea_1997 = float(bea_raw.loc[bea_raw["year"] == EXT_FIRST_YEAR, "value"].iloc[0])
+
+    ext = bea_raw.copy()
+    ext = ext[(ext["year"] >= EXT_FIRST_YEAR) & (ext["year"] <= EXT_LAST_YEAR)].copy()
+    ext["series_id"] = "S502-EXT"
+    ext["units"] = "billions_usd"
+    ext["stage"] = "extension"
+    ext["provenance"] = (
+        "BEA GDP-by-Industry: Intermediate Inputs = Gross Output - Value Added; "
+        "sum of productive+trade top-level NAICS industries [11,21,22,23,31G,42,44RT,48TW]; "
+        "growth_rate splice at 1997 per registry"
+    )
+    ext_out = ext[["series_id", "year", "value", "units", "stage", "provenance"]]
+
+    # ---- S502-COMBINED : book + log-linear bridge 1990-1996 + EXT 1997-2024 ----
+    bridge = _log_linear_bridge(book_1989, bea_1997,
+                                y0=BOOK_LAST_YEAR, y1=EXT_FIRST_YEAR)
+    bridge["series_id"] = "S502-COMBINED"
+    bridge["units"] = "billions_usd"
+    bridge["stage"] = "extension_bridge"
+    bridge["provenance"] = (
+        f"Log-linear interpolation between book(1989)={book_1989:.2f} and "
+        f"BEA(1997)={bea_1997:.2f}; M04_S502 methodological adjustment"
+    )
+
+    combined_book = book.copy()
+    combined_book["series_id"] = "S502-COMBINED"
+    combined_book["stage"] = "book_period"
+    combined_book["provenance"] = "book_tableH1_1948_1989.csv:Mp (combined)"
+
+    combined_ext = ext.copy()
+    combined_ext["series_id"] = "S502-COMBINED"
+    combined_ext["stage"] = "extension"
+    combined_ext["provenance"] = (
+        "BEA II = GO - VA (productive+trade NAICS) — combined arm"
+    )
+
+    combined_out = pd.concat([
+        combined_book[["series_id", "year", "value", "units", "stage", "provenance"]],
+        bridge[["series_id", "year", "value", "units", "stage", "provenance"]],
+        combined_ext[["series_id", "year", "value", "units", "stage", "provenance"]],
+    ], ignore_index=True).sort_values("year").reset_index(drop=True)
+
+    # ---- Stack and write ----
+    out = pd.concat([book_out, ext_out, combined_out], ignore_index=True)
+    write_series_csv(out, SERIES_ID, stage="intermediate")
+    final_path = write_series_csv(out, SERIES_ID, stage="final")
+
+    print(f"    [P02_S502] wrote {final_path.name}  ({len(out)} rows: "
+          f"{(out['series_id']=='S502-A').sum()} A, "
+          f"{(out['series_id']=='S502-EXT').sum()} EXT, "
+          f"{(out['series_id']=='S502-COMBINED').sum()} COMBINED)")
+    print(f"    [P02_S502] book_endpoint(1989)={book_1989:.2f}; "
+          f"bea_endpoint(1997)={bea_1997:.2f}; "
+          f"EXT_2024={float(ext_out.loc[ext_out['year']==2024, 'value'].iloc[0]):.2f}")
+    return out
 
 
 if __name__ == "__main__":

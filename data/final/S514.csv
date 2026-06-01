@@ -1,43 +1,208 @@
 series_id,year,value,units,stage,provenance
-S514-A,1948,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1949,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1950,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1951,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1952,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1953,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1954,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1955,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1956,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1957,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1958,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1959,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1960,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1961,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1962,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1963,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1964,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1965,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1966,,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1967,0.3635248471651058,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1968,0.36092264262683155,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1969,0.34777472221990213,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1970,0.3108471303397541,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1971,0.3041845013179543,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1972,0.31998033058556863,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1973,0.32918607762051305,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1974,0.28866777104557745,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1975,0.26314689601753766,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1976,0.2820396673342173,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1977,0.2961745633584927,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1978,0.3003675442361031,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1979,0.28748391977950766,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1980,0.2621203370003683,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1981,0.2617747290377996,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1982,0.2362743536082311,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1983,0.2504807047709059,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1984,0.283484894326389,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1985,0.2842176076650408,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1986,0.28564407684369914,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1987,0.2979321586062128,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1988,0.3108336367856671,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
-S514-A,1989,0.3117626322942385,rate,book_period_derived,S513 × (TCU/100); TCU NaN pre-1967
+S514-A,1948,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1949,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1950,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1951,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1952,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1953,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1954,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1955,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1956,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1957,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1958,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1959,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1960,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1961,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1962,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1963,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1964,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1965,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1966,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1967,0.3635248471651058,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1968,0.36092264262683155,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1969,0.34777472221990213,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1970,0.3108471303397541,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1971,0.3041845013179543,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1972,0.31998033058556863,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1973,0.32918607762051305,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1974,0.28866777104557745,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1975,0.26314689601753766,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1976,0.2820396673342173,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1977,0.2961745633584927,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1978,0.3003675442361031,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1979,0.28748391977950766,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1980,0.2621203370003683,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1981,0.2617747290377996,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1982,0.2362743536082311,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1983,0.2504807047709059,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1984,0.283484894326389,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1985,0.2842176076650408,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1986,0.28564407684369914,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1987,0.2979321586062128,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1988,0.3108336367856671,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-A,1989,0.3117626322942385,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-EXT,1998,0.14028681060682138,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,1999,0.13593447537161576,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2000,0.1332815158914473,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2001,0.11894185716131413,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2002,0.11634874315808934,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2003,0.12524313260085942,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2004,0.1310291500287822,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2005,0.13496589357705555,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2006,0.1356765130087573,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2007,0.13360682117474323,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2008,0.12157614917190965,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2009,0.10495042361965781,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2010,0.11890788775084543,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2011,0.12409658747244837,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2012,0.1250528826785501,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2013,0.12797980147378804,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2014,0.12859226530059018,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2015,0.12394596992016757,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2016,0.11749656910491293,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2017,0.12037363026883176,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2018,0.12587822178653194,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2019,0.12044583421852988,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2020,0.10586293513828965,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2021,0.12108167622553168,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2022,0.1270723912269368,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2023,0.12598163684570127,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-EXT,2024,0.12206912262827292,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,1948,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1949,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1950,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1951,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1952,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1953,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1954,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1955,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1956,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1957,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1958,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1959,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1960,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1961,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1962,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1963,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1964,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1965,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1966,,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1967,0.3635248471651058,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1968,0.36092264262683155,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1969,0.34777472221990213,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1970,0.3108471303397541,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1971,0.3041845013179543,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1972,0.31998033058556863,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1973,0.32918607762051305,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1974,0.28866777104557745,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1975,0.26314689601753766,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1976,0.2820396673342173,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1977,0.2961745633584927,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1978,0.3003675442361031,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1979,0.28748391977950766,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1980,0.2621203370003683,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1981,0.2617747290377996,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1982,0.2362743536082311,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1983,0.2504807047709059,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1984,0.283484894326389,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1985,0.2842176076650408,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1986,0.28564407684369914,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1987,0.2979321586062128,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1988,0.3108336367856671,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1989,0.3117626322942385,rate,book_period_derived,Stock-form r*_adj = S513-A (stock) x (TCU/100); Book Table 5.11; TCU NaN pre-1967
+S514-COMBINED,1998,0.14028681060682138,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,1999,0.13593447537161576,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2000,0.1332815158914473,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2001,0.11894185716131413,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2002,0.11634874315808934,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2003,0.12524313260085942,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2004,0.1310291500287822,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2005,0.13496589357705555,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2006,0.1356765130087573,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2007,0.13360682117474323,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2008,0.12157614917190965,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2009,0.10495042361965781,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2010,0.11890788775084543,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2011,0.12409658747244837,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2012,0.1250528826785501,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2013,0.12797980147378804,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2014,0.12859226530059018,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2015,0.12394596992016757,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2016,0.11749656910491293,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2017,0.12037363026883176,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2018,0.12587822178653194,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2019,0.12044583421852988,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2020,0.10586293513828965,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2021,0.12108167622553168,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2022,0.1270723912269368,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2023,0.12598163684570127,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-COMBINED,2024,0.12206912262827292,rate,extension,"Stock-form r*_adj = S513-EXT (stock) x (FRED TCU/100); fresh ratio per year, no growth-splice; v1.2 Iter 3 stock-form primary"
+S514-FLOW,1948,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1949,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1950,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1951,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1952,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1953,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1954,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1955,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1956,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1957,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1958,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1959,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1960,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1961,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1962,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1963,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1964,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1965,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1966,,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1967,0.5514065279250124,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1968,0.551442494084997,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1969,0.5402679653321695,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1970,0.5099705529957611,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1971,0.509888768651513,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1972,0.5268142508689331,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1973,0.5262930173691314,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1974,0.49941946911837953,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1975,0.457546108258454,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1976,0.4691985095084276,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1977,0.47946454200034,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1978,0.4866642430248842,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1979,0.4815545374125889,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1980,0.4618536152943936,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1981,0.4658068394143172,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1982,0.43780681432816065,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1983,0.45484327690596804,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1984,0.4939701093834375,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1985,0.4992649841299935,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1986,0.5148500095904212,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1987,0.5374170858702283,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1988,0.5429636122327081,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1989,0.5496237597025408,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1998,0.2969115291726033,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,1999,0.2895235125122113,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2000,0.2829012329952844,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2001,0.2689342353940895,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2002,0.27858259453558654,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2003,0.3001029841404466,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2004,0.31325152549350127,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2005,0.3176712700142493,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2006,0.327165782160615,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2007,0.32124171239258464,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2008,0.29838070751330364,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2009,0.308713541439433,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2010,0.32278664344741465,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2011,0.3162482097618785,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2012,0.3156874438667393,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2013,0.3236520914058031,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2014,0.32523781550361686,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2015,0.33407009475514177,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2016,0.32949653437892684,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2017,0.33393981249830235,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2018,0.3416471307123513,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2019,0.3418239062895684,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2020,0.3285784589988791,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2021,0.3521957586584067,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2022,0.36081562284995927,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2023,0.37819734345298395,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"
+S514-FLOW,2024,0.37315520984242634,rate,secondary_variant,"SECONDARY flow-form r*_adj = S513-FLOW (flow) x (FRED TCU/100); retained as reference variant, NOT primary (see VPR_S513_stock_vs_flow_DECISION_BRIEF)"

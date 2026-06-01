@@ -1,4 +1,8 @@
-"""V03_S502 — Validate Constant Capital (C*_m) against book benchmarks + cross-source E.2."""
+"""V03_S502 — Validate Constant Capital (C*_m) against book benchmarks + cross-source E.2.
+
+Refactored 2026-05-24 per Decision 0002 — reads benchmarks from registry
+(`validation.reference_values`) via `utils.registry_validator.get_reference_values`.
+"""
 from __future__ import annotations
 
 import sys
@@ -7,6 +11,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from utils.paths import BOOK_TABLES, DATA_FINAL  # noqa: E402
+from utils.registry_validator import get_reference_values  # noqa: E402
 from utils.series import BenchmarkValidator, cross_source_e2_check  # noqa: E402
 from utils.io import write_validation_result  # noqa: E402
 
@@ -14,7 +19,7 @@ from utils.io import write_validation_result  # noqa: E402
 VALIDATOR = BenchmarkValidator(
     series_id        = "S502",
     tolerance_class  = "dollar_series",
-    benchmarks       = {1948: 198.47},  # validation_config T502 benchmark
+    benchmarks       = get_reference_values("S502"),
     subseries_filter = "S502-A",
 )
 

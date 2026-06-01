@@ -1,0 +1,136 @@
+bea_io_85_code,bea_io_85_name,sic_range,st_classification,bea_naics_71_code,naics_71_st_classification,bridge_quality,notes
+1,Dairy farm products,01,productive,111CA,productive,coarse_aggregation,classification_agree
+1,Dairy farm products,01,productive,113FF,productive,coarse_aggregation,classification_agree
+2,Poultry & eggs,01,productive,111CA,productive,coarse_aggregation,classification_agree
+2,Poultry & eggs,01,productive,113FF,productive,coarse_aggregation,classification_agree
+3,Meat animals & misc livestock,01,productive,111CA,productive,coarse_aggregation,classification_agree
+3,Meat animals & misc livestock,01,productive,113FF,productive,coarse_aggregation,classification_agree
+4,"Cotton, food grains, tobacco, fruits, vegetables",01-02,productive,111CA,productive,coarse_aggregation,classification_agree
+4,"Cotton, food grains, tobacco, fruits, vegetables",01-02,productive,113FF,productive,coarse_aggregation,classification_agree
+5,Coal mining,11-12,productive,212,productive,coarse_aggregation,classification_agree
+6,Crude petroleum & natural gas,13,productive,211,productive,coarse_aggregation,classification_agree
+7,Stone & clay mining,14,productive,212,productive,coarse_aggregation,classification_agree
+7,Stone & clay mining,14,productive,213,productive,coarse_aggregation,classification_agree
+8,Chemical & fertilizer mineral mining,14,productive,212,productive,coarse_aggregation,classification_agree
+8,Chemical & fertilizer mineral mining,14,productive,213,productive,coarse_aggregation,classification_agree
+9,New construction,15-17,productive,23,productive,coarse_aggregation,classification_agree
+10,Maintenance & repair construction,15-17,productive,23,productive,coarse_aggregation,classification_agree
+11,Ordnance & accessories,19,productive,332,productive,coarse_aggregation,classification_agree
+12,Meat products,20,productive,311FT,productive,coarse_aggregation,classification_agree
+13,Dairy products,20,productive,311FT,productive,coarse_aggregation,classification_agree
+14,Canned & frozen foods,20,productive,311FT,productive,coarse_aggregation,classification_agree
+15,Grain mill products,20,productive,311FT,productive,coarse_aggregation,classification_agree
+16,Bakery products,20,productive,311FT,productive,coarse_aggregation,classification_agree
+17,Sugar,20,productive,311FT,productive,coarse_aggregation,classification_agree
+18,Confectionery products,20,productive,311FT,productive,coarse_aggregation,classification_agree
+19,Alcoholic beverages,20,productive,311FT,productive,coarse_aggregation,classification_agree
+20,Soft drinks & flavorings,20,productive,311FT,productive,coarse_aggregation,classification_agree
+21,Tobacco manufactures,21,productive,311FT,productive,coarse_aggregation,classification_agree
+22,Fabrics & yarn,22-23,productive,313TT,productive,coarse_aggregation,classification_agree
+22,Fabrics & yarn,22-23,productive,315AL,productive,coarse_aggregation,classification_agree
+23,"Floor covering, misc textiles",22-23,productive,313TT,productive,coarse_aggregation,classification_agree
+23,"Floor covering, misc textiles",22-23,productive,315AL,productive,coarse_aggregation,classification_agree
+24,Lumber & wood products,24,productive,321,productive,coarse_aggregation,classification_agree
+25,Wooden containers,24,productive,321,productive,coarse_aggregation,classification_agree
+26,Household furniture,25,productive,337,productive,coarse_aggregation,classification_agree
+27,Other furniture & fixtures,25,productive,337,productive,coarse_aggregation,classification_agree
+28,Paper & paperboard,26,productive,322,productive,coarse_aggregation,classification_agree
+29,Paper containers & products,26,productive,322,productive,coarse_aggregation,classification_agree
+30,Printing & publishing,27,productive,323,productive,coarse_aggregation,classification_agree
+30,Printing & publishing,27,productive,511,productive,coarse_aggregation,classification_agree
+31,Basic chemicals,28,productive,325,productive,coarse_aggregation,classification_agree
+32,Synthetic materials,28,productive,325,productive,coarse_aggregation,classification_agree
+33,"Drugs, cleaning & toilet items",28,productive,325,productive,coarse_aggregation,classification_agree
+34,Paints & allied products,28,productive,325,productive,coarse_aggregation,classification_agree
+35,Petroleum refining,29,productive,324,productive,coarse_aggregation,classification_agree
+36,Rubber & plastic products,30,productive,326,productive,coarse_aggregation,classification_agree
+37,Leather tanning & finishing,31,productive,316,unknown,coarse_aggregation,classification_disagree
+38,Footwear & leather products,31,productive,316,unknown,coarse_aggregation,classification_disagree
+39,Glass & glass products,32,productive,327,productive,coarse_aggregation,classification_agree
+40,Stone & clay products,32,productive,327,productive,coarse_aggregation,classification_agree
+41,Primary iron & steel,33,productive,331,productive,coarse_aggregation,classification_agree
+42,Primary nonferrous metals,33,productive,331,productive,coarse_aggregation,classification_agree
+43,Metal containers,34,productive,332,productive,coarse_aggregation,classification_agree
+44,"Heating, plumbing, structural metal",34,productive,332,productive,coarse_aggregation,classification_agree
+45,Screw machine products,34,productive,332,productive,coarse_aggregation,classification_agree
+46,Other fabricated metal products,34,productive,332,productive,coarse_aggregation,classification_agree
+47,Engines & turbines,35,productive,333,productive,coarse_aggregation,classification_agree
+48,Farm machinery,35,productive,333,productive,coarse_aggregation,classification_agree
+49,Construction & mining machinery,35,productive,333,productive,coarse_aggregation,classification_agree
+50,Materials handling equipment,35,productive,333,productive,coarse_aggregation,classification_agree
+51,Metalworking machinery,35,productive,333,productive,coarse_aggregation,classification_agree
+52,Special industry machinery,35,productive,333,productive,coarse_aggregation,classification_agree
+53,General industrial machinery,35,productive,333,productive,coarse_aggregation,classification_agree
+54,Machine shop products,35,productive,333,productive,coarse_aggregation,classification_agree
+55,Office & computing machines,35-36,productive,333,productive,coarse_aggregation,classification_agree
+55,Office & computing machines,35-36,productive,334,productive,coarse_aggregation,classification_agree
+55,Office & computing machines,35-36,productive,335,productive,coarse_aggregation,classification_agree
+56,Service industry machines,35-36,productive,333,productive,coarse_aggregation,classification_agree
+56,Service industry machines,35-36,productive,334,productive,coarse_aggregation,classification_agree
+56,Service industry machines,35-36,productive,335,productive,coarse_aggregation,classification_agree
+57,Electric industrial equipment,36,productive,335,productive,coarse_aggregation,classification_agree
+57,Electric industrial equipment,36,productive,334,productive,coarse_aggregation,classification_agree
+58,Household appliances,36,productive,335,productive,coarse_aggregation,classification_agree
+58,Household appliances,36,productive,334,productive,coarse_aggregation,classification_agree
+59,Electric lighting & wiring,36,productive,335,productive,coarse_aggregation,classification_agree
+59,Electric lighting & wiring,36,productive,334,productive,coarse_aggregation,classification_agree
+60,"Radio, TV, communication equipment",36,productive,335,productive,coarse_aggregation,classification_agree
+60,"Radio, TV, communication equipment",36,productive,334,productive,coarse_aggregation,classification_agree
+61,Electronic components,36,productive,335,productive,coarse_aggregation,classification_agree
+61,Electronic components,36,productive,334,productive,coarse_aggregation,classification_agree
+62,Misc electrical machinery,36,productive,335,productive,coarse_aggregation,classification_agree
+62,Misc electrical machinery,36,productive,334,productive,coarse_aggregation,classification_agree
+63,Motor vehicles & equipment,37,productive,3361MV,productive,coarse_aggregation,classification_agree
+63,Motor vehicles & equipment,37,productive,3364OT,productive,coarse_aggregation,classification_agree
+64,Aircraft & parts,37,productive,3361MV,productive,coarse_aggregation,classification_agree
+64,Aircraft & parts,37,productive,3364OT,productive,coarse_aggregation,classification_agree
+65,Transportation & warehousing,40-47,productive,481,productive,coarse_aggregation,classification_agree
+65,Transportation & warehousing,40-47,productive,482,productive,coarse_aggregation,classification_agree
+65,Transportation & warehousing,40-47,productive,483,productive,coarse_aggregation,classification_agree
+65,Transportation & warehousing,40-47,productive,484,productive,coarse_aggregation,classification_agree
+65,Transportation & warehousing,40-47,productive,485,productive,coarse_aggregation,classification_agree
+65,Transportation & warehousing,40-47,productive,486,productive,coarse_aggregation,classification_agree
+65,Transportation & warehousing,40-47,productive,487OS,productive,coarse_aggregation,classification_agree
+65,Transportation & warehousing,40-47,productive,493,productive,coarse_aggregation,classification_agree
+66,Communications except radio & TV,48,productive,513,productive,coarse_aggregation,classification_agree
+66,Communications except radio & TV,48,productive,514,productive,coarse_aggregation,classification_agree
+66,Communications except radio & TV,48,productive,511,productive,coarse_aggregation,classification_agree
+67,Radio & TV broadcasting,48,productive,513,productive,coarse_aggregation,classification_agree
+67,Radio & TV broadcasting,48,productive,514,productive,coarse_aggregation,classification_agree
+67,Radio & TV broadcasting,48,productive,511,productive,coarse_aggregation,classification_agree
+68,"Electric, gas, water & sanitary services",49,productive,22,productive,coarse_aggregation,classification_agree
+69,Wholesale trade,50-51,unproductive,42,trading,coarse_aggregation,classification_agree
+70,Retail trade,52-59,unproductive,441,trading,coarse_aggregation,classification_agree
+70,Retail trade,52-59,unproductive,445,trading,coarse_aggregation,classification_agree
+70,Retail trade,52-59,unproductive,452,trading,coarse_aggregation,classification_agree
+70,Retail trade,52-59,unproductive,4A0,trading,coarse_aggregation,classification_agree
+71,Finance & insurance,60-67,unproductive,521CI,unproductive,coarse_aggregation,classification_agree
+71,Finance & insurance,60-67,unproductive,523,unproductive,coarse_aggregation,classification_agree
+71,Finance & insurance,60-67,unproductive,524,unproductive,coarse_aggregation,classification_agree
+72,Real estate & rental,65,unproductive,532RL,trading,coarse_aggregation,classification_agree
+72,Real estate & rental,65,unproductive,ORE,unproductive,coarse_aggregation,classification_agree
+73,Hotels & personal services,70,productive,721,productive,coarse_aggregation,classification_agree
+74,Business services,73,unproductive,5411,unproductive,coarse_aggregation,classification_agree
+74,Business services,73,unproductive,5412OP,unproductive,coarse_aggregation,classification_agree
+74,Business services,73,unproductive,5415,unproductive,coarse_aggregation,classification_agree
+74,Business services,73,unproductive,55,unproductive,coarse_aggregation,classification_agree
+74,Business services,73,unproductive,561,unproductive,coarse_aggregation,classification_agree
+75,Eating & drinking places,58,productive,722,productive,coarse_aggregation,classification_agree
+76,Automobile repair & services,75,productive,811,unknown,coarse_aggregation,classification_disagree
+77,Amusements,79,productive,711AS,productive,coarse_aggregation,classification_agree
+77,Amusements,79,productive,713,productive,coarse_aggregation,classification_agree
+78,"Medical, educational services & nonprofit orgs",80,productive,621,productive,coarse_aggregation,classification_agree
+78,"Medical, educational services & nonprofit orgs",80,productive,622,productive,coarse_aggregation,classification_agree
+78,"Medical, educational services & nonprofit orgs",80,productive,623,productive,coarse_aggregation,classification_agree
+78,"Medical, educational services & nonprofit orgs",80,productive,624,productive,coarse_aggregation,classification_agree
+78,"Medical, educational services & nonprofit orgs",80,productive,61,productive,coarse_aggregation,classification_agree
+79,Federal government enterprises,gov,productive,GFE,govt_enterprise,coarse_aggregation,classification_agree
+79,Federal government enterprises,gov,productive,GSLE,govt_enterprise,coarse_aggregation,classification_agree
+80,State & local government enterprises,gov,productive,GFE,govt_enterprise,coarse_aggregation,classification_agree
+80,State & local government enterprises,gov,productive,GSLE,govt_enterprise,coarse_aggregation,classification_agree
+81,Gross imports of goods & services,import,n/a,,,unmapped,no direct SIC<->NAICS mapping; classification only
+82,"Business travel, entertainment, gifts",special,unproductive,,,unmapped,no direct SIC<->NAICS mapping; classification only
+83,Office supplies,special,unproductive,,,unmapped,no direct SIC<->NAICS mapping; classification only
+84,"Scrap, used & secondhand goods",special,n/a,,,unmapped,no direct SIC<->NAICS mapping; classification only
+85,Government industry,gov,mixed,GFE,govt_enterprise,coarse_aggregation,classification_agree
+85,Government industry,gov,mixed,GSLE,govt_enterprise,coarse_aggregation,classification_agree

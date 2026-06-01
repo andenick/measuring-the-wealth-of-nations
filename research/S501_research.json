@@ -52,6 +52,51 @@
       "entry_type": "decision_reference",
       "content": "[internal-decision-record] (SIC-NAICS Gap Interpolation, 2026-04-08): Log-linear interpolation is used for the ec_u/ec_p ratio over 1990-1997, bridging from the 1989 book value to the first NAICS-era BEA NIPA 6.2D value (1998). This affects S501 indirectly via downstream series that depend on the sector classification boundary. The max deviation from the constant assumption is 0.42. Series values for 1990-1997 carry interpolated classification weights.",
       "source_ref": "[internal-decision-log]#[internal-decision-record]"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Total value TV*: Sum of gross outputs of production and total trade sectors. Elements in bold rectangle.",
+      "source_ref": "ST_1994, Ch5, p.92; chunk_12",
+      "page_reference": "92",
+      "context": "Verbatim definition of Total Value/Total Product as TV* = GOp + GOtt; this is the exact identity S501 measures from Table E.2 (production sector gross output plus total trade sector gross output)."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "For all of these reasons, one cannot simply use NIPA data to fill in observations between IO benchmark years. Instead, we use NIPA data directly for components such as GVAp or CON (containing the latest available revisions) and indirectly to interpolate between benchmark estimates of other components such as M'p or RYcon.",
+      "source_ref": "ST_1994, Ch5, p.94; chunk_12",
+      "page_reference": "94",
+      "context": "Verbatim methodological statement for the annual 1948-1989 TP* series construction: mixed IO/NIPA estimation with linear interpolation of coefficients between benchmark years. This is the exact procedure replicated when loading Table E.2 into S501-A and the basis for the growth-rate splice rationale used in S501-COMBINED."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Throughout the postwar period, the gross trading margin GOtt/TV* holds steady at about 18%, while the input use share M'/TP* holds steady at about 50% of the total product. A similar constancy holds for the productive inputs share M'p/TP* (calculated from Table 5.4), which hovers around 43% throughout, rising slightly during the oil shock and then coming back down to normal levels.",
+      "source_ref": "ST_1994, Ch5, p.97; chunk_12",
+      "page_reference": "97",
+      "context": "Verbatim empirical structural-stability statement justifying growth-rate splicing for S501 at the 1989-1997 boundary: the relative composition of TP* (trading margin share, intermediate input share, productive input share) is empirically stable across the postwar period, so BEA growth rates of productive-plus-trading gross output post-1997 can be applied to the 1989 book level without introducing structural break."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "TV* = GOp + GOtt. Total value is the sum of gross outputs of the production and total trade sectors.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.92",
+      "context": "Operational definition of Total Product/Total Value in Section 5.1, p. 92, derived from Figure 5.2 (1972 IO table). S501 tabulates this annually from Table E.2."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "For all of these reasons, one cannot simply use NIPA data to fill in observations between IO benchmark years. Instead, we use NIPA data directly for components such as GVAp or CON (containing the latest available revisions) and indirectly to interpolate between benchmark estimates of other components such as M′p or RYcon.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.94",
+      "context": "Section 5.2: mixed estimation methodology used to extend TP* annually 1948-1989. Foundation for the book-period TP* series and for splice anchoring in S501 extension."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Throughout the postwar period, the gross trading margin GOtt/TV* holds steady at about 18%, while the input use share M′/TP* holds steady at about 50% of the total product.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.97",
+      "context": "Structural stability of TP*'s composition over 1948-1989, justifying the use of growth-rate splicing at the 1989 boundary for the extension series."
     }
   ],
   "citations": [
@@ -90,5 +135,29 @@
     "L5_validation": []
   },
   "ported_from": "ST2/research/T501_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "text": "TV* = GOp + GOtt. Total value is the sum of gross outputs of the production and total trade sectors.",
+      "page": 92,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Operational definition of Total Product/Total Value in Section 5.1, p. 92, derived from Figure 5.2 (1972 IO table). S501 tabulates this annually from Table E.2."
+    },
+    {
+      "text": "For all of these reasons, one cannot simply use NIPA data to fill in observations between IO benchmark years. Instead, we use NIPA data directly for components such as GVAp or CON (containing the latest available revisions) and indirectly to interpolate between benchmark estimates of other components such as M′p or RYcon.",
+      "page": 94,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.2: mixed estimation methodology used to extend TP* annually 1948-1989. Foundation for the book-period TP* series and for splice anchoring in S501 extension."
+    },
+    {
+      "text": "Throughout the postwar period, the gross trading margin GOtt/TV* holds steady at about 18%, while the input use share M′/TP* holds steady at about 50% of the total product.",
+      "page": 97,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Structural stability of TP*'s composition over 1948-1989, justifying the use of growth-rate splicing at the 1989 boundary for the extension series."
+    }
+  ],
+  "verbatim_quotes_deprecated": true
 }

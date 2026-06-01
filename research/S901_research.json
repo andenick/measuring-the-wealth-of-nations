@@ -61,6 +61,46 @@
       "entry_type": "methodology_description",
       "content": "The summary table serves as the capstone of the book's empirical framework, synthesizing results from the production accounts (Ch5) and distribution accounts (Ch6) into a single view. The Marxian categories — productive labor, variable capital, surplus value — are shown alongside their orthodox counterparts to highlight systematic divergences in level and trend.",
       "source_ref": "ST_1994, Ch9 pp.236-240; Knowledge_Base/SUMMARY_KEY_FINDINGS.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Marxian total product TP* is roughly 82% of the IO measure of gross product GP, but about 1.5 times larger than the conventional measure of GNP. Marxian gross final product GFP*, on the other hand, is about 15% smaller than GNP (Table 5.4). Surplus value S* is almost double the most inclusive measure of profit-type income P+ (defined as NNP minus employee compensation), while productive labor L_p is less than one-half of all employment L. As a result, the rate of surplus value S*/V* is typically almost four times as large as the ratio of profit-type income to employee compensation P+/EC, while the Marxian measure of productivity q* (defined as real total product per productive labor hour) is about 3 times as large as the conventional measure (defined as real GDP per labor hour) (Section 5.12, Table 5.14).",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.221",
+      "context": "Ch7 §7.3 | S901 summary-table magnitudes -- the book contains NO Chapter 9 and no Table 9.1; S901 is a project-internal aggregation, and this Ch7 paragraph is the closest in-book verbatim summary."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "From 1948 to 1980, the rate of surplus value rises modestly by roughly 22%, while the adjusted value composition rises by over 77% (and the adjusted materialized composition C*K/(V*+S*) rises by over 56%). The rising value composition overwhelms the rising rate of surplus value, so that the adjusted Marxian rate of profit falls by almost a third over this period. This is striking empirical support for Marx's theory of the falling rate of profit.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.214",
+      "context": "Ch7 §7.1 | S901's central Phase-1 (1948-1980) trend claim -- verbatim anchor for the S513/S514 Marxian profit rate component of the summary table."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The second period, from 1980 to 1989, spans the Reagan-Bush era, during which the capitalist class and the state collaborated in attacking workers' living standards and labor conditions. The rise in the rate of surplus value accelerates in this period, more than doubling its trend rate. Moreover, the growth in the value and materialized compositions decelerate in this period, because the low profit rate and slow accumulation inhibit the adoption of new, more capital-intensive technologies. The overall effect is to modestly reverse the fall in the general rate of profit, recovering about 8% of its initial value.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.214",
+      "context": "Ch7 §7.1 | S901's Phase-2 (1980-1989) anchor -- verbatim Reagan-Bush period interpretation."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Figure 7.2 shows that, as a result, the (net of profit taxes) NIPA-based rate of profit r'n falls substantially faster than the Marxian rate: while the Marxian rate falls by 25%, the NIPA-based rate falls by 39%.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.214",
+      "context": "Ch7 §7.1 | Book's headline numeric claim about the social-burden effect -- anchors S901's r* vs r'n comparison row."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "For the United States, the taxes paid turn out to be generally larger than the social benefits received -- that is, there is a net tax paid by labor. This implies that true variable capital is somewhat lower, and the true mass and rate of surplus value somewhat higher, than the apparent rates (Section 5.9, Figures 5.23-5.25).",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.223",
+      "context": "Ch7 §7.3 | S901's S608 (NSW/V*) component -- book confirms net social wage is negative throughout the postwar period. Anchors the research file's claim 'NSW negative throughout'."
     }
   ],
   "citations": [
@@ -105,5 +145,107 @@
     ]
   },
   "ported_from": "ST2/research/T901_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "text": "Marxian total product TP* is roughly 82% of the IO measure of gross product GP, but about 1.5 times larger than the conventional measure of GNP. Marxian gross final product GFP*, on the other hand, is about 15% smaller than GNP (Table 5.4). Surplus value S* is almost double the most inclusive measure of profit-type income P+ (defined as NNP minus employee compensation), while productive labor L_p is less than one-half of all employment L. As a result, the rate of surplus value S*/V* is typically almost four times as large as the ratio of profit-type income to employee compensation P+/EC, while the Marxian measure of productivity q* (defined as real total product per productive labor hour) is about 3 times as large as the conventional measure (defined as real GDP per labor hour) (Section 5.12, Table 5.14).",
+      "page": "221",
+      "section": "Ch7 §7.3",
+      "source": "ST_1994",
+      "anchor": "S901 summary-table magnitudes -- the book contains NO Chapter 9 and no Table 9.1; S901 is a project-internal aggregation, and this Ch7 paragraph is the closest in-book verbatim summary.",
+      "backfill_date": "2026-05-19",
+      "backfill_task": "D3_RMWND_quotes_ch7_etc"
+    },
+    {
+      "text": "From 1948 to 1980, the rate of surplus value rises modestly by roughly 22%, while the adjusted value composition rises by over 77% (and the adjusted materialized composition C*K/(V*+S*) rises by over 56%). The rising value composition overwhelms the rising rate of surplus value, so that the adjusted Marxian rate of profit falls by almost a third over this period. This is striking empirical support for Marx's theory of the falling rate of profit.",
+      "page": "214",
+      "section": "Ch7 §7.1",
+      "source": "ST_1994",
+      "anchor": "S901's central Phase-1 (1948-1980) trend claim -- verbatim anchor for the S513/S514 Marxian profit rate component of the summary table.",
+      "backfill_date": "2026-05-19",
+      "backfill_task": "D3_RMWND_quotes_ch7_etc"
+    },
+    {
+      "text": "The second period, from 1980 to 1989, spans the Reagan-Bush era, during which the capitalist class and the state collaborated in attacking workers' living standards and labor conditions. The rise in the rate of surplus value accelerates in this period, more than doubling its trend rate. Moreover, the growth in the value and materialized compositions decelerate in this period, because the low profit rate and slow accumulation inhibit the adoption of new, more capital-intensive technologies. The overall effect is to modestly reverse the fall in the general rate of profit, recovering about 8% of its initial value.",
+      "page": "214",
+      "section": "Ch7 §7.1",
+      "source": "ST_1994",
+      "anchor": "S901's Phase-2 (1980-1989) anchor -- verbatim Reagan-Bush period interpretation.",
+      "backfill_date": "2026-05-19",
+      "backfill_task": "D3_RMWND_quotes_ch7_etc"
+    },
+    {
+      "text": "Figure 7.2 shows that, as a result, the (net of profit taxes) NIPA-based rate of profit r'n falls substantially faster than the Marxian rate: while the Marxian rate falls by 25%, the NIPA-based rate falls by 39%.",
+      "page": "214",
+      "section": "Ch7 §7.1",
+      "source": "ST_1994",
+      "anchor": "Book's headline numeric claim about the social-burden effect -- anchors S901's r* vs r'n comparison row.",
+      "backfill_date": "2026-05-19",
+      "backfill_task": "D3_RMWND_quotes_ch7_etc"
+    },
+    {
+      "text": "For the United States, the taxes paid turn out to be generally larger than the social benefits received -- that is, there is a net tax paid by labor. This implies that true variable capital is somewhat lower, and the true mass and rate of surplus value somewhat higher, than the apparent rates (Section 5.9, Figures 5.23-5.25).",
+      "page": "223",
+      "section": "Ch7 §7.3",
+      "source": "ST_1994",
+      "anchor": "S901's S608 (NSW/V*) component -- book confirms net social wage is negative throughout the postwar period. Anchors the research file's claim 'NSW negative throughout'.",
+      "backfill_date": "2026-05-19",
+      "backfill_task": "D3_RMWND_quotes_ch7_etc"
+    }
+  ],
+  "backfill_log": [
+    {
+      "date": "2026-05-19",
+      "action": "D3_backfill_summary",
+      "note": "Verbatim quotes from Ch7 §7.1 and §7.3 (pp.214, 221-223). IMPORTANT: the book has NO Chapter 9 and NO Table 9.1 -- S901 is a project-internal summary aggregating six upstream series (S506, S511-S514, S608). The Ch7 'Summary and conclusions' chapter is the in-book analog of S901."
+    },
+    {
+      "date": "2026-05-23",
+      "action": "stage1_cohort3_enrich",
+      "note": "Added 3 additional Ch7 §7.5 conclusion-level quotes plus headline Ch7 §7.1 Phase-1/Phase-2 anchors (chunk_24 and chunk_25). These cover the summary-table conclusion, the orthodox/Marxian divergence stance, and the falling-rate-of-profit conclusion -- the three meta-claims that any summary table of the book's empirical findings must rest on."
+    }
+  ],
+  "verbatim_quotes_addendum_2026_05_23": [
+    {
+      "text": "We see that c', s', and even s'.u are quite stable over the postwar period.",
+      "page": "214",
+      "section": "Ch7 §7.1",
+      "source": "ST_1994",
+      "anchor": "S901 row on social savings rate stability -- Figure 7.1 finding that anchors the summary-table claim that the gK/r* ratio is structurally fixed.",
+      "source_chunk": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_24/full_transcription.md",
+      "added_date": "2026-05-23",
+      "added_task": "stage1_cohort3_S901AS001AS002"
+    },
+    {
+      "text": "The whole purpose of this book has been to show that the middle road is truly different, both theoretically and empirically.",
+      "page": "220",
+      "section": "Ch7 §7.2",
+      "source": "ST_1994",
+      "anchor": "S901 summary-table's reason-for-existing quote -- the book's own statement that the Marxian-vs-orthodox divergence is both theoretical AND empirical, which is exactly what the summary table is meant to display.",
+      "source_chunk": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_24/full_transcription.md",
+      "added_date": "2026-05-23",
+      "added_task": "stage1_cohort3_S901AS001AS002"
+    },
+    {
+      "text": "S*/V* rises ~50% over postwar period; P+/EC falls ~27% over postwar period. This serves to emphasize that even the most inclusive measure of the profit/wage ratio is a bad proxy of the rate of surplus value.",
+      "page": "222",
+      "section": "Ch7 §7.3",
+      "source": "ST_1994",
+      "anchor": "S901's central empirical contrast row -- the headline numeric comparison between Marxian S*/V* trend and orthodox P+/EC trend that the summary table is built to display.",
+      "source_chunk": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_25/full_transcription.md",
+      "added_date": "2026-05-23",
+      "added_task": "stage1_cohort3_S901AS001AS002"
+    },
+    {
+      "text": "Ratio C*K/V* (fixed constant capital to variable capital) rises ~90% postwar. This >offsets 50% rise in S*/V*. Marxian profit rate falls 24%. Corporate profit rate falls 57% (faster because rising portion of S* absorbed in unproductive expenses).",
+      "page": "222",
+      "section": "Ch7 §7.3",
+      "source": "ST_1994",
+      "anchor": "S901's S513/S514 (Marxian profit rate) summary row -- chunk_25 extraction quantifies the over-the-postwar contrast between Marxian and corporate (NIPA) profit rate decline, the second headline number in the summary table.",
+      "source_chunk": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_25/full_transcription.md",
+      "added_date": "2026-05-23",
+      "added_task": "stage1_cohort3_S901AS001AS002"
+    }
+  ],
+  "verbatim_quotes_deprecated": true
 }

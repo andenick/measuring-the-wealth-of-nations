@@ -46,6 +46,69 @@
       "entry_type": "decision_log_note",
       "content": "[internal-decision-record] (2026-04-09): Tax allocation methodology confirmed. Property tax worker share is allocated via the income-proportional (housing share) method consistent with the NRYwp framework verified in Section 3.3 (pages 63-65). The broader principle — that taxes borne by productive workers reduce V* — applies here. P09 implementation verified.",
       "source_ref": "[internal-decision-log], [internal-decision-record]"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Group II - Personal taxes (workers' share = labor income/personal income): Personal income taxes (federal and state); Motor vehicle licenses; Property taxes (primarily on homes - adjusted for homeowners only); Other taxes and nontaxes.",
+      "source_ref": "ST_1994, Appendix N (Tax Classification, Group II), page 357; HDARP chunk_38 lines 262-266",
+      "page_reference": "Appendix N, p. 357",
+      "context": "Authors place property taxes in Group II (labor-share allocation) and explicitly restrict to residential/homeowner portion — the operational rule that defines S603."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Property taxes: Only homeowner portion, then × labor share (Tonak 1984, chap. IV, apx. I).",
+      "source_ref": "ST_1994, Appendix N methodology notes; HDARP chunk_38 line 325",
+      "page_reference": "Appendix N, p. 358",
+      "context": "Two-step allocation for S603: first restrict total property tax to the residential/homeowner subset, then apply labor-income share (≈0.727 in 1964 benchmark). Cites Tonak (1984) as primary methodological source."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Personal property taxes 1964: total 8.4, labor portion 6.1 (× 0.727 homeowner adjustment); Motor vehicle taxes and licenses 1964: total 1.1, labor portion 0.8 (× 0.727).",
+      "source_ref": "ST_1994, Table N.1 Group II line items 1964; HDARP chunk_38 lines 304-305",
+      "page_reference": "Table N.1, p. 358",
+      "context": "1964 benchmark for S603 components: residential property tax labor portion = 8.4 × 0.727 ≈ 6.1; motor vehicle taxes 1.1 × 0.727 ≈ 0.8. Confirms the multiplicative labor-share applied to the homeowner-restricted base."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "It is important to note that the taxes we estimate are those flowing directly out of total employee compensation (the purchase price of labor power to individual capitalists). From a Marxian point of view, we are concerned with the actual flows of royalties into, and out of, the actual flow of variable capital.",
+      "source_ref": "ST_1994, Section 5.9 (Scope of analysis), page 137; HDARP chunk_16 lines 95-97",
+      "page_reference": "p. 137",
+      "context": "Restricts S603 (and the NSW family) to social-accounting flows out of EC, not hypothetical tax-shifting incidence. Justifies the income-proportional allocation rule used for property taxes paid by working homeowners."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Property taxes (primarily on homes - adjusted for homeowners only) ... Personal property taxes 1964: total 8.4, labor portion 6.1 (× 0.727 homeowner adjustment).",
+      "source_ref": "ST_1994, Appendix N (Group II) + Table N.1; KB chunk_38 lines 265, 305",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Motor vehicle taxes and licenses 1964: total 1.1, labor portion 0.8 (x 0.727).",
+      "source_ref": "ST_1994, Table N.1; KB chunk_38 line 304",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Property taxes: Only homeowner portion, then × labor share (Tonak 1984, chap. IV, apx. I).",
+      "source_ref": "ST_1994, Appendix N methodology notes; KB chunk_38 line 325",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Other taxes and nontaxes (passport fees, fines, etc. - very small) belong to Group II personal taxes (workers' share = labor income/personal income).",
+      "source_ref": "ST_1994, Appendix N (Tax Classification, Group II); KB chunk_38 lines 262-266",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Group II (labor share = 0.727): Personal income taxes (federal + state) 50.0 -> 36.4; Other taxes and nontaxes 3.8 -> 2.8; Motor vehicle taxes and licenses 1.1 -> 0.8; Personal property taxes 8.4 -> 6.1 (homeowner adjustment).",
+      "source_ref": "ST_1994, Table N.1 Group II line items 1964; KB chunk_38 lines 301-305",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
     }
   ],
   "citations": [
@@ -56,6 +119,33 @@
     {
       "id": "BEA_NIPA",
       "full": "Bureau of Economic Analysis. National Income and Product Accounts. https://apps.bea.gov/iTable/"
+    }
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "Property taxes (primarily on homes - adjusted for homeowners only) ... Personal property taxes 1964: total 8.4, labor portion 6.1 (× 0.727 homeowner adjustment).",
+      "source_ref": "ST_1994, Appendix N (Group II) + Table N.1; KB chunk_38 lines 265, 305",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Motor vehicle taxes and licenses 1964: total 1.1, labor portion 0.8 (x 0.727).",
+      "source_ref": "ST_1994, Table N.1; KB chunk_38 line 304",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Property taxes: Only homeowner portion, then × labor share (Tonak 1984, chap. IV, apx. I).",
+      "source_ref": "ST_1994, Appendix N methodology notes; KB chunk_38 line 325",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Other taxes and nontaxes (passport fees, fines, etc. - very small) belong to Group II personal taxes (workers' share = labor income/personal income).",
+      "source_ref": "ST_1994, Appendix N (Tax Classification, Group II); KB chunk_38 lines 262-266",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Group II (labor share = 0.727): Personal income taxes (federal + state) 50.0 -> 36.4; Other taxes and nontaxes 3.8 -> 2.8; Motor vehicle taxes and licenses 1.1 -> 0.8; Personal property taxes 8.4 -> 6.1 (homeowner adjustment).",
+      "source_ref": "ST_1994, Table N.1 Group II line items 1964; KB chunk_38 lines 301-305",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
     }
   ],
   "methodology_summary": "Worker share of property taxes allocated via worker housing share applied to state/local property tax revenue from NIPA Table 3.3 line 9. Includes pass-through of property taxes to renters. Method consistent with [internal-decision-record] tax allocation framework.",
@@ -84,5 +174,6 @@
     "L5_validation": []
   },
   "ported_from": "ST2/research/T603_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes_deprecated": true
 }

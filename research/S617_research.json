@@ -1,0 +1,172 @@
+{
+  "series_id": "S617",
+  "series_name": "Chapter 6 Supplementary Series",
+  "chapter": 6,
+  "figures": [],
+  "research_date": "2026-05-16",
+  "researcher": "agent",
+  "kb_sources_searched": [],
+  "entries": [
+    {
+      "entry_type": "methodology_derived",
+      "content": "S617 is a Chapter 6 series added late to the registry with minimal metadata. The registry entry contains only a status field ('book_period_validated'). Based on its ID placement (after S609, the last fully-defined Chapter 6 series), S617 likely represents a supplementary tax, benefit, or net social wage variant not covered by S601-S609.",
+      "source_ref": "series_registry.json (S617: {status: 'book_period_validated'})",
+      "confidence": "medium"
+    },
+    {
+      "entry_type": "construction_reference",
+      "content": "The Chapter 6 series family covers the social wage framework: S601-S603 (tax components: personal, social insurance, property), S604 (total tax on workers), S605 (government benefits to workers), S606 (government services to workers), S607 (Net Social Wage = B_w + G_w - T_w), S608 (NSW/V* ratio), S609 (NSW/NI share). S617 may represent an additional ratio, alternative deflation, or extended decomposition within this framework.",
+      "source_ref": "series_registry.json Chapter 6 series overview",
+      "confidence": "medium"
+    },
+    {
+      "entry_type": "construction_reference",
+      "content": "No construction steps, subseries, name, units, or source file are specified in the registry. The series was likely added as a placeholder or late addition. Full metadata needs to be populated from the book or from the construction scripts.",
+      "source_ref": "series_registry.json",
+      "confidence": "medium"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Productive worker wage bill Wp (= variable capital V*) falls relative to total wages W. Unproductive wage bill Wu rises sharply relative to Wp. This tells us that it is movement in relative employment levels, not in relative wage rates, which is crucial.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.221",
+      "context": "Ch7 §7.3 | Direct S617 (EC) context: total employee compensation EC = Wp + Wu (productive + unproductive wage bills). The fall of V*/EC reflects the rise of unproductive Wu inside EC. Confirms EC as the orthodox aggregate that masks the productive/unproductive split.",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_24/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Surplus value S* approximately 2x most inclusive measure of profit-type income P+, where P+ = NNP - employee compensation.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.221",
+      "context": "Ch7 §7.3 | EC (S617) defines the residual that produces orthodox P+. The book's central empirical claim (S* ~ 2 P+) is operationally an EC-mediated identity: P+ = NNP - EC. S617 is therefore the load-bearing aggregate for the entire orthodox-vs-Marxian profit comparison.",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_24/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Employee compensation is our starting point because it represents the direct cost incurred by capitalists for hiring labor power; to the individual capitalist this is the same as variable capital. But for the system as a whole, we must adjust for the net transfer between wage and salary workers and the state.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.137",
+      "context": "Ch5 §5.9 fn.21 | Defines EC's analytical status: the micro-level wage cost. S617 supplies the EC series that S&T then adjust (via Appendix N net transfer) into V*. EC is the entry point for the entire Marxian wage-bill recasting.",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Both surplus value S* and profit-type income P rise strongly over the postwar period, but the former is much larger and rises somewhat faster. On the other hand variable capital V* (the productive worker wage bill) is much smaller and rises much more slowly than total employee compensation EC.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.222",
+      "context": "Ch7 §7.3 | Defines EC (employee compensation) as the orthodox aggregate against which Marxian variable capital V* is contrasted. S617 is the EC time series."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Thus the true rate of surplus value is not only almost four times as large as its naive counterpart, the profit/wage ratio P+/EC, but also moves very differently: the rate of surplus value rises by almost 50%, while the profit/wage ratio actually falls by almost 27%.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.222",
+      "context": "Ch7 §7.3 | EC enters the conventional profit/wage ratio P+/EC -- the orthodox proxy ST critique. S617 supplies the EC denominator."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Variable capital is estimated from BLS production worker wages (wp) scaled by the NIPA employee-compensation-to-wages ratio x = EC/WS, then multiplied by productive employment Lp.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.305-307 (paraphrased from Appendix G)",
+      "context": "Appendix G | EC is a structural input to V* via the EC/WS ratio, which scales BLS production-worker wages up to a full compensation basis. S617's role: orthodox-side anchor for downstream Marxian construction."
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    }
+  ],
+  "methodology_summary": "Sparse registry entry for a Chapter 6 series (status: book_period_validated only). Likely a supplementary social wage measure. Full definition pending — needs metadata population from book or construction scripts.",
+  "known_issues": [
+    "Registry entry contains only status — no name, description, units, or construction steps",
+    "Series purpose must be determined from book Chapter 6 or legacy scripts",
+    "May need registry update once the series is fully characterized"
+  ],
+  "cross_references": [
+    "S607",
+    "S608",
+    "S609"
+  ],
+  "adequacy_refs": {
+    "L1_kb_pages": [],
+    "L3_data_sources": [],
+    "L5_validation": []
+  },
+  "verbatim_quotes": [
+    {
+      "text": "Productive worker wage bill Wp (= variable capital V*) falls relative to total wages W. Unproductive wage bill Wu rises sharply relative to Wp. This tells us that it is movement in relative employment levels, not in relative wage rates, which is crucial.",
+      "page": "221",
+      "section": "Ch7 §7.3",
+      "source": "ST_1994",
+      "anchor": "Direct S617 (EC) context: total employee compensation EC = Wp + Wu (productive + unproductive wage bills). The fall of V*/EC reflects the rise of unproductive Wu inside EC. Confirms EC as the orthodox aggregate that masks the productive/unproductive split.",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_24/full_transcription.md",
+      "entry_type": "verbatim_quote",
+      "backfill_date": "2026-05-23",
+      "backfill_task": "stage1_c3_S617_enrich"
+    },
+    {
+      "text": "Surplus value S* approximately 2x most inclusive measure of profit-type income P+, where P+ = NNP - employee compensation.",
+      "page": "221",
+      "section": "Ch7 §7.3",
+      "source": "ST_1994",
+      "anchor": "EC (S617) defines the residual that produces orthodox P+. The book's central empirical claim (S* ~ 2 P+) is operationally an EC-mediated identity: P+ = NNP - EC. S617 is therefore the load-bearing aggregate for the entire orthodox-vs-Marxian profit comparison.",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_24/full_transcription.md",
+      "entry_type": "verbatim_quote",
+      "backfill_date": "2026-05-23",
+      "backfill_task": "stage1_c3_S617_enrich"
+    },
+    {
+      "text": "Employee compensation is our starting point because it represents the direct cost incurred by capitalists for hiring labor power; to the individual capitalist this is the same as variable capital. But for the system as a whole, we must adjust for the net transfer between wage and salary workers and the state.",
+      "page": "137",
+      "section": "Ch5 §5.9 fn.21",
+      "source": "ST_1994",
+      "anchor": "Defines EC's analytical status: the micro-level wage cost. S617 supplies the EC series that S&T then adjust (via Appendix N net transfer) into V*. EC is the entry point for the entire Marxian wage-bill recasting.",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md",
+      "entry_type": "verbatim_quote",
+      "backfill_date": "2026-05-23",
+      "backfill_task": "stage1_c3_S617_enrich"
+    },
+    {
+      "text": "Both surplus value S* and profit-type income P rise strongly over the postwar period, but the former is much larger and rises somewhat faster. On the other hand variable capital V* (the productive worker wage bill) is much smaller and rises much more slowly than total employee compensation EC.",
+      "page": "222",
+      "section": "Ch7 §7.3",
+      "source": "ST_1994",
+      "anchor": "Defines EC (employee compensation) as the orthodox aggregate against which Marxian variable capital V* is contrasted. S617 is the EC time series.",
+      "backfill_date": "2026-05-19",
+      "backfill_task": "D3_RMWND_quotes_ch7_etc"
+    },
+    {
+      "text": "Thus the true rate of surplus value is not only almost four times as large as its naive counterpart, the profit/wage ratio P+/EC, but also moves very differently: the rate of surplus value rises by almost 50%, while the profit/wage ratio actually falls by almost 27%.",
+      "page": "222",
+      "section": "Ch7 §7.3",
+      "source": "ST_1994",
+      "anchor": "EC enters the conventional profit/wage ratio P+/EC -- the orthodox proxy ST critique. S617 supplies the EC denominator.",
+      "backfill_date": "2026-05-19",
+      "backfill_task": "D3_RMWND_quotes_ch7_etc"
+    },
+    {
+      "text": "Variable capital is estimated from BLS production worker wages (wp) scaled by the NIPA employee-compensation-to-wages ratio x = EC/WS, then multiplied by productive employment Lp.",
+      "page": "305-307 (paraphrased from Appendix G)",
+      "section": "Appendix G",
+      "source": "ST_1994",
+      "anchor": "EC is a structural input to V* via the EC/WS ratio, which scales BLS production-worker wages up to a full compensation basis. S617's role: orthodox-side anchor for downstream Marxian construction.",
+      "backfill_date": "2026-05-19",
+      "backfill_task": "D3_RMWND_quotes_ch7_etc"
+    }
+  ],
+  "backfill_log": [
+    {
+      "date": "2026-05-19",
+      "action": "D3_backfill_ec",
+      "note": "Verbatim quotes added. NB: registry confirms S617 = 'Employee Compensation (EC)' with reference values 1948=142.09, 1989=3079.0 billions_usd -- NOT the supplementary social-wage variant that the original research entry speculated. Quotes from Ch7 §7.3 (pp.221-223) anchor EC as the orthodox aggregate against which Marxian V* is contrasted."
+    }
+  ],
+  "verbatim_quotes_deprecated": true
+}

@@ -1,0 +1,94 @@
+{
+  "series_id": "AS003",
+  "series_name": "Unproductive Exploitation Rate",
+  "chapter": null,
+  "figures": [],
+  "research_date": "2026-05-16",
+  "researcher": "agent",
+  "kb_sources_searched": [
+    "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_35/full_transcription.md",
+    "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_36/full_transcription.md"
+  ],
+  "entries": [
+    {
+      "entry_type": "methodology_derived",
+      "content": "AS003 is a derived analytical series computing the Unproductive Exploitation Rate, defined as S* / V_u* where S* is Marxian surplus value and V_u* is the variable capital equivalent for unproductive workers. This measures the rate at which surplus value relates to unproductive labor costs.",
+      "source_ref": "series_registry.json (AS003 definition: 'S_star / V_u_star (unproductive vc)')",
+      "confidence": "medium",
+      "verbatim_quote": "Known: ep = S*/V* (rate of surplus value for productive workers). Solve for eu: eu = (hu/hp) / (ecu/ecp) · [1 + S*/V*] - 1.",
+      "verbatim_source": "KB: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_35/full_transcription.md (Appendix I, Table I.1)"
+    },
+    {
+      "entry_type": "construction_reference",
+      "content": "Registry describes AS003 with description 'S_star / V_u_star (unproductive vc)', source_type 'analytical'. The legacy construction script is A09_unproductive_exploitation.py. Units are ratio. The series covers 1948-2024.",
+      "source_ref": "series_registry.json",
+      "confidence": "medium",
+      "verbatim_quote": "Main Formula: (1 + eu) / (1 + ep) ≈ (hu/hp) / (ecu/ecp). Where eu = rate of exploitation of unproductive workers; ep = rate of exploitation of productive workers.",
+      "verbatim_source": "KB: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_35/full_transcription.md (Appendix I, Table I.1)"
+    },
+    {
+      "entry_type": "construction_reference",
+      "content": "In the Shaikh-Tonak framework, unproductive workers (those in FIRE, services, government, and parts of trade beyond the trading markup) receive wages (V_u*) that represent a deduction from the total surplus. The ratio S*/V_u* provides a measure of the 'exploitation rate' applicable to unproductive sectors — how much surplus is generated per unit of unproductive labor cost.",
+      "source_ref": "ST_1994, Ch5 productive/unproductive labor distinction",
+      "confidence": "medium",
+      "verbatim_quote": "Table I.1: Rates of Exploitation of Unproductive Workers, 1948-89. Purpose: Annual calculation of eu using 25-step methodology.",
+      "verbatim_source": "KB: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_35/full_transcription.md (Appendix I, Table I.1)"
+    },
+    {
+      "entry_type": "construction_reference",
+      "content": "Key inputs: S505 or equivalent surplus value series (S*), and a variable capital series for unproductive workers (V_u*, likely derived from S510 or related compensation series). The construction array in the registry is empty, indicating this was handled by a standalone analytical script.",
+      "source_ref": "series_registry.json",
+      "confidence": "medium",
+      "verbatim_quote": "Theoretical basis: Section 4.2 derives formula for relative rates of exploitation. APPENDIX I: Rates of Exploitation of Productive and Unproductive Workers.",
+      "verbatim_source": "KB: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_35/full_transcription.md (Appendix I, Table I.1)"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Direct verbatim from Appendix I main formula (chunk_35): the central identity linking relative rates of exploitation to relative hours and relative compensation, used to derive eu from observable inputs.",
+      "source_ref": "ST_1994, Appendix I (chunk_35)",
+      "confidence": "high",
+      "verbatim_quote": "(1 + eu) / (1 + ep) approximately equals (hu/hp) / (ecu/ecp). Where: eu = rate of exploitation of unproductive workers; ep = rate of exploitation of productive workers; hu = hours per unproductive worker; hp = hours per productive worker; ecu = employee compensation per unproductive worker; ecp = employee compensation per productive worker. Key insight: Relative exploitation rates depend on relative hours and relative compensation.",
+      "verbatim_source": "KB: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_35/full_transcription.md, lines 263-275 (APPENDIX I main formula)"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Worked 1948 example from Appendix I showing the full chain of inputs producing eu = 1.35 and eu/ep = 0.80. Canonical benchmark for AS003 validation in the book period.",
+      "source_ref": "ST_1994, Appendix I, Table I.1 Selected Results (chunk_35)",
+      "confidence": "high",
+      "verbatim_quote": "1948: hp = 2,079 hours/year; hu = 2,043 hours/year; hu/hp = 0.98; ecu = $3,017; ecp = $2,680; ecu/ecp = 1.13; (1+eu)/(1+ep) = 0.87; S*/V* = 1.70; eu = 1.35; eu/ep = 0.80.",
+      "verbatim_source": "KB: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_35/full_transcription.md, lines 506-516 (Table I.1 Selected Results)"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Terminal-year (1989) Table I.1 completion from chunk_36 confirming the convergence pattern (eu/ep -> 0.97 by 1989) and providing terminal exploitation rates for replication validation against the book period endpoint.",
+      "source_ref": "ST_1994, Appendix I, Table I.1 Completion (chunk_36)",
+      "confidence": "high",
+      "verbatim_quote": "1967: eu=1.88, ep=2.10, eu/ep=0.89 (Both exploitation rates rising). 1972: eu=1.89, ep=1.99, eu/ep=0.95 (Convergence continues). 1978: eu=2.07, ep=2.11, eu/ep=1.02 (Unproductive rate exceeds productive). 1982: eu=2.16, ep=2.19, eu/ep=0.99 (Near parity). 1985: eu=2.26, ep=2.33, eu/ep=0.97. 1989: eu=2.38, ep=2.44, eu/ep=0.97 (Final convergence ~97%).",
+      "verbatim_source": "KB: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_36/full_transcription.md, lines 13-20 (Table I.1 Final Years Data)"
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    }
+  ],
+  "methodology_summary": "Derived analytical ratio S*/V_u* measuring the unproductive exploitation rate — surplus value relative to unproductive variable capital. Legacy script: A09_unproductive_exploitation.py.",
+  "known_issues": [
+    "Construction steps not specified in registry (empty array) — relies on legacy script",
+    "Exact V_u* input series not confirmed (likely derived from compensation data)",
+    "Conceptual distinction between productive and unproductive VC depends on sector classification"
+  ],
+  "cross_references": [
+    "S505",
+    "S506",
+    "S510"
+  ],
+  "adequacy_refs": {
+    "L1_kb_pages": [],
+    "L3_data_sources": [
+      "Derived from surplus value (S505) and unproductive variable capital series"
+    ],
+    "L5_validation": []
+  }
+}

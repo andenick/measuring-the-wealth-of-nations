@@ -1,0 +1,66 @@
+{
+  "chapter": "Ch16",
+  "chapter_label": "Karabacak & Tonak 2022 Turkey NSW Replication (ES1601-ES1602)",
+  "external_paper": {
+    "author": "Zafer Karabacak and E. Ahmet Tonak",
+    "year": 2022,
+    "title": "The Net Social Wage in Turkey, 1980-2019",
+    "journal": "Review of Radical Political Economics 54(4): 577-605",
+    "doi": "10.1177/04866134221089659",
+    "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2022_Karabacak_Tonak_NSW_Turkey/full_transcription.md"
+  },
+  "series_count": 2,
+  "series_ids": ["ES1601", "ES1602"],
+  "report_date": "2026-05-23T23:53:59Z",
+  "reporter": "agent",
+  "skill": "anu-adequacy",
+  "skill_version": "1.2",
+  "framework": "Anu Framework v12.0",
+  "layers": {
+    "L1_kb_completeness": {
+      "score": 90,
+      "status": "PASS",
+      "detail": "External paper HDARP extraction is comprehensive: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2022_Karabacak_Tonak_NSW_Turkey/ contains full_transcription.md (1324 lines) + equations/nsw_equations.md + figures/all_figures.md + table_descriptions/table_descriptions.md. Best-structured of the four external-paper KBs in this cohort. Source PDF also on disk. Coverage: Sections 1-6, methodology Sections 3-4, period breakdowns 5.1-5.8, abstract benchmarks (-1.13% mean NSW/GDP).",
+      "gaps": ["TurkStat Statistical Indicators 1923-2011 PDF is on disk (Inputs/ST2/Inputs/ExternalSources/Turkey2022/turkstat_statistical_indicators_1923_2011.pdf) but its HDARP chunk_027 extraction referenced in research JSONs (Technical/Knowledge_Base/turkstat_indicators_1923_2011/chunk_027_*) lives in the legacy ST2 tree (Inputs/ST2/Technical/Knowledge_Base/turkstat_indicators_1923_2011/) — present but not under the current Inputs/Shaikh Tonak/ KB root. Path consolidation pending."]
+    },
+    "L2_data_source_availability": {
+      "score": 75,
+      "status": "BELOW_GATE",
+      "detail": "Inputs/ST2/Inputs/ExternalSources/Turkey2022/ has 9 source files: turkstat_statistical_indicators_1923_2011.pdf, turkstat_yearbook_2012.pdf, sbb_kkbg_butce_turleri_gsyh_oran.xlsx, sbb_konsolide_butce_gelir_harcama.xlsx, fred_turkey_*.csv (4 files), oecd_turkey_tax_gdp_2000_2023.csv, worldbank_turkey_fiscal_1980_2019.csv, worldbank_turkey_structural_1980_2019.csv, plus muhasebat/ subdir. Pre-parsed turkstat_compensation_labor_share_1980_2006.csv exists at Inputs/ST2/Technical/AnuData/data/raw-data/parsed/.",
+      "gaps": ["ES1601 labor-share data ends 2006 — TurkStat Statistical Indicators 1923-2011 does not publish income-approach GDP tables for 2007+. Years 2007-2019 are NaN per project's no-synthetic-data policy.", "ES1602 NSW reconstruction depends on Turkish Ministry of Treasury / SGK / Revenue Administration data not yet ingested for 2007-2019. Currently achieves -0.0098 vs paper target -0.0113 (residual 0.0015) with 27 real years + 13 NaN years.", "registry source_file=null for both ES1601 and ES1602 — data sources are documented in research JSONs but not pinned in registry."]
+    },
+    "L3_methodology_clarity": {
+      "score": 95,
+      "status": "PASS",
+      "detail": "Both research JSONs are unusually rich (130-line ES1601, 130-line ES1602) with 8-11 verbatim_quote entries each covering: definition, data_source_primary, data_values, paper_benchmarks, data_gap, decision_reference (no-synthetic-data + TurkStat switch), methodology_description (full B=E1+E2*ls, T=T1+T2*ls formulas), validation_target, theoretical_context. Paper's full NSW algebra is transcribed.",
+      "gaps": []
+    },
+    "L4_registry_completeness": {
+      "score": 80,
+      "status": "PASS",
+      "detail": "Both series present in registry: ES1601 (name, study, chapter=16, paper_table=Table 2, year_range 1980-2019, subseries 'ES1601-A TurkStat Table 20.37', construction[load], extension=null, validation reference_values mean=0.397/std=0.032/range[0.3,0.5], processor=P18, status=book_period_validated, content_type=time_series). ES1602 parallel structure with reference_values mean=-0.0113/n_negative=40. Both carry status_downgrade_note from 2026-05-19 hyper-review (was 'validated_book_and_extension' downgraded to 'book_period_validated' because extension=null).",
+      "gaps": ["source_file=null for both — should reference turkstat_compensation_labor_share_1980_2006.csv (ES1601) and the SBB/MoF XLSX bundle (ES1602).", "No 'loader' field on either entry."]
+    },
+    "L5_validation_refs": {
+      "score": 90,
+      "status": "PASS",
+      "detail": "Strong validation targets: ES1601 mean=0.397, std=0.032; ES1602 mean=-0.0113 with universal-negativity invariant n_negative=40 (all 40 years negative per paper Section 5.1). Research JSONs document period breakdowns (1980-89 avg -1.0%, 1990-2001 -0.8%, 2002-08 -1.0%, 2009-13 -0.9%, 2014-19 -1.8%) and acceptance range [-0.008, -0.015] for V-layer.",
+      "gaps": ["n_negative=40 is a structural invariant but ES1602 only has 27 real observations (1980-2006) — V03 must condition the invariant check on 1980-2006 only, not assume all 40 years are reproducible."]
+    },
+    "L6_classification_accuracy": {
+      "score": 85,
+      "status": "PASS",
+      "detail": "Both content_type=time_series correct. ES1601 (labor share) is a direct TurkStat digitization — no proxy. ES1602 (NSW/GDP) follows the paper's published B=E1+E2*ls, T=T1+T2*ls formula with ls=ES1601 — composite construction. Both correctly carry units=share (with subseries-level units=ratio for ES1602 numerator).",
+      "gaps": ["TurkStat Table 20.37 uses GDP as labor-share denominator; KT 2022 uses NDP — known systematic discrepancy. Should be flagged in registry as 'concept_match: partial' with proxy_justification documenting the GDP-for-NDP substitution (the only available official data) per the no-proxies rule's documentation requirement."]
+    }
+  },
+  "chapter_score": 85.8,
+  "gate_passed": true,
+  "recommendations": [
+    "PROCEED to Stage 3 INGESTION. Chapter score 85.8 clears the gate.",
+    "L2 is the constraint (75): 2007-2019 data gap for both series is a hard structural limit — accept as NaN per Decision 0003 no-synthetic-data policy; document explicitly in DPR.",
+    "Add source_file references to registry: turkstat_compensation_labor_share_1980_2006.csv for ES1601, SBB/MoF XLSX bundle for ES1602.",
+    "Flag ES1601 in registry as proxy=true with proxy_justification='TurkStat Table 20.37 uses GDP denominator; paper used NDP. GDP-denominator series is the only official Turkish income-approach data available 1980-2006.' per .claude/rules/anu-framework.md proxy disclosure rule.",
+    "V03 universal-negativity check for ES1602 must restrict to 1980-2006 (real-data window), not 1980-2019."
+  ]
+}

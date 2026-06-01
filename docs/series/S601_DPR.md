@@ -5,8 +5,7 @@
 **Units**: billions_usd
 **Period**: 1952–1989 (book; S607 extends through 2024 via Table6_3_Extended)
 **Content Type**: time_series
-**Status**: calculated
-
+**Status**: book_period_validated
 ## Definition
 
 Personal income taxes paid by workers (the working class, per S&T's class decomposition of NIPA tables).

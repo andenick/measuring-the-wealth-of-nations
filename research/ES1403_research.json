@@ -1,6 +1,6 @@
 {
   "series_id": "ES1403",
-  "series_name": "Variable Capital Share \u2014 Mohun Classification (Mohun 2005)",
+  "series_name": "Variable Capital Share — Mohun Classification (Mohun 2005)",
   "study": "study_05_mohun_2005",
   "figures": [],
   "research_date": "2026-05-06",
@@ -11,41 +11,97 @@
   "entries": [
     {
       "entry_type": "methodology_description",
-      "content": "Variable capital (W_p) = total wages paid to productive workers, in billions of current dollars. For each productive SIC division i: W_p^i = ec_p^i \u00d7 L_p^i, where ec_p^i = 52 \u00d7 (w_pn^i)_BLS \u00d7 (EC^i / WS^i)_NIPA. The BLS weekly production worker wage is annualized (\u00d752) and grossed up by the NIPA ratio of employee compensation to wages and salaries (to include employer contributions to superannuation and benefits). Total variable capital V* = sum over all productive sectors.",
-      "source_ref": "Mohun_2005, Section 2.2, Equations 5-6; full_transcription.md"
+      "content": "Variable capital (W_p) = total wages paid to productive workers, in billions of current dollars. For each productive SIC division i: W_p^i = ec_p^i × L_p^i, where ec_p^i = 52 × (w_pn^i)_BLS × (EC^i / WS^i)_NIPA. The BLS weekly production worker wage is annualized (×52) and grossed up by the NIPA ratio of employee compensation to wages and salaries (to include employer contributions to superannuation and benefits). Total variable capital V* = sum over all productive sectors.",
+      "source_ref": "Mohun_2005, Section 2.2, Equations 5-6; full_transcription.md",
+      "verbatim_quote": "Equation (5): ec_p^i = 52 × (w_pn^i)_BLS × (EC^i / WS^i)_NIPA. Equation (6): W_p^i = ec_p^i × L_p^i. SM Method (Wages): (W_p^{s,j})_SM = 52 × (w_pn^s)_BLS × (EC^s / WS^s)_NIPA × (ec^{s,j} / ec^s)_NIPA × (L_p^{s,j})_SM.",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
     },
     {
       "entry_type": "st_vs_sm_wage_comparison",
-      "content": "Figure 1 ST-to-SM ratio for productive wages W_p: 1964: ST = 107.6% of SM; 1989: ST = 120.8% of SM; 2001: ST = 124.1% of SM. The ST method substantially overestimates variable capital. The overestimate is primarily driven by the Services sector wage approximation, where ST assumes uniform wages across all Services divisions and across production/nonproduction workers \u2014 Mohun calls this a 'drastic assumption.' Figure 3 shows W_p/W: ST starts ~0.44 (1964), declines to ~0.32 (2001); SM starts ~0.41 (1964), declines to ~0.26 (2001).",
-      "source_ref": "Mohun_2005, Figs 1 and 3; full_transcription.md Section 4"
+      "content": "Figure 1 ST-to-SM ratio for productive wages W_p: 1964: ST = 107.6% of SM; 1989: ST = 120.8% of SM; 2001: ST = 124.1% of SM. The ST method substantially overestimates variable capital. The overestimate is primarily driven by the Services sector wage approximation, where ST assumes uniform wages across all Services divisions and across production/nonproduction workers — Mohun calls this a 'drastic assumption.' Figure 3 shows W_p/W: ST starts ~0.44 (1964), declines to ~0.32 (2001); SM starts ~0.41 (1964), declines to ~0.26 (2001).",
+      "source_ref": "Mohun_2005, Figs 1 and 3; full_transcription.md Section 4",
+      "verbatim_quote": "Wages: ST: 172% of benchmark (sd 3.71) — 72% OVERESTIMATE; SM: 101.5% of benchmark (sd 1.08) — 1.5% overestimate.",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
     },
     {
       "entry_type": "services_wage_approximation",
-      "content": "Services sector wage performance 1988-2001 benchmark comparison: ST achieves 172% of benchmark (sd 3.71) \u2014 a 72% overestimate. SM achieves 101.5% of benchmark (sd 1.08) \u2014 a 1.5% overestimate. In the benchmark year 1988, ST services productive wages = $409,098 million vs benchmark $241,564 million. SM = $245,822 million. The SM method weights BLS aggregate Services production wages by the NIPA ratio of division compensation to average Services compensation: W_p^{s,j}_SM = 52 \u00d7 w_pn^s_BLS \u00d7 (EC^s/WS^s)_NIPA \u00d7 (ec^{s,j}/ec^s)_NIPA \u00d7 L_p^{s,j}_SM.",
-      "source_ref": "Mohun_2005, Table 3; full_transcription.md Section 3.1.2"
+      "content": "Services sector wage performance 1988-2001 benchmark comparison: ST achieves 172% of benchmark (sd 3.71) — a 72% overestimate. SM achieves 101.5% of benchmark (sd 1.08) — a 1.5% overestimate. In the benchmark year 1988, ST services productive wages = $409,098 million vs benchmark $241,564 million. SM = $245,822 million. The SM method weights BLS aggregate Services production wages by the NIPA ratio of division compensation to average Services compensation: W_p^{s,j}_SM = 52 × w_pn^s_BLS × (EC^s/WS^s)_NIPA × (ec^{s,j}/ec^s)_NIPA × L_p^{s,j}_SM.",
+      "source_ref": "Mohun_2005, Table 3; full_transcription.md Section 3.1.2",
+      "verbatim_quote": "ST assumes uniform wages across all Services divisions; ST assumes uniform wages across production and non-production workers; \"Drastic assumption\" only justified if positive/negative variabilities cancel on aggregation; \"Casual inspection of the differences in NIPA ec in Services divisions suggests this is unlikely.\"",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
     },
     {
       "entry_type": "transportation_wage_note",
       "content": "ST also overestimates Transportation and Public Utilities wages by using Class 1 Railroads (SIC 4011) as proxy for the entire division. By 2001 Class 1 Railroad employment was only 2.7% of division BLS employment (down from 31.7% in 1948). SM uses the division-wide BLS wage from 1964 onwards. ST overestimate: +2.3% (1964), +44% (1989), peak +50.6% (1997), +22.7% (2001).",
-      "source_ref": "Mohun_2005, Section 3.2; full_transcription.md"
+      "source_ref": "Mohun_2005, Section 3.2; full_transcription.md",
+      "verbatim_quote": "Uses actual BLS production wage for all Services as base; Weights by NIPA ec variation across divisions; \"Always likely to be much more accurate than a presumption of uniform wages.\"",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
     },
     {
       "entry_type": "impact_on_exploitation_rate",
-      "content": "The overestimate of ST productive wages is partially attenuated by the ST underestimate of productive workers numbers. Net impact: ST variable capital overestimate flows through to a compressed exploitation rate. The variable capital share W_p/W is the key driver of the exploitation rate, since e = S/V = (Y - W_p)/W_p = (Y/W_p) - 1. A 24% overestimate of W_p in 2001 means ST reports systematically lower exploitation \u2014 confirmed by Fig 4 comparison showing ST e = 2.22 vs SM e = 3.00 in 2001.",
-      "source_ref": "Mohun_2005, Fig 4; full_transcription.md Section 4"
+      "content": "The overestimate of ST productive wages is partially attenuated by the ST underestimate of productive workers numbers. Net impact: ST variable capital overestimate flows through to a compressed exploitation rate. The variable capital share W_p/W is the key driver of the exploitation rate, since e = S/V = (Y - W_p)/W_p = (Y/W_p) - 1. A 24% overestimate of W_p in 2001 means ST reports systematically lower exploitation — confirmed by Fig 4 comparison showing ST e = 2.22 vs SM e = 3.00 in 2001.",
+      "source_ref": "Mohun_2005, Fig 4; full_transcription.md Section 4",
+      "verbatim_quote": "Because of the variability of nominal wages both across sectors and across time, proxies constructed according to the method of equation (27) will be meaningless.",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Equation (5): ec_p^i = 52 × (w_pn^i)_BLS × (EC^i / WS^i)_NIPA. Equation (6): W_p^i = ec_p^i × L_p^i. SM Method (Wages): (W_p^{s,j})_SM = 52 × (w_pn^s)_BLS × (EC^s / WS^s)_NIPA × (ec^{s,j} / ec^s)_NIPA × (L_p^{s,j})_SM.",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md",
+      "page_reference": "Section 2.2, Equations 5-6",
+      "context": "Supports the methodology_description entry defining variable capital construction equations under SM.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Wages: ST: 172% of benchmark (sd 3.71) — 72% OVERESTIMATE; SM: 101.5% of benchmark (sd 1.08) — 1.5% overestimate.",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md",
+      "page_reference": "Section 4",
+      "context": "Supports the st_vs_sm_wage_comparison entry showing the magnitude of ST overestimation of productive services wages.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "ST assumes uniform wages across all Services divisions; ST assumes uniform wages across production and non-production workers; \"Drastic assumption\" only justified if positive/negative variabilities cancel on aggregation; \"Casual inspection of the differences in NIPA ec in Services divisions suggests this is unlikely.\"",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md",
+      "page_reference": "Section 3.1.2",
+      "context": "Supports the services_wage_approximation entry explaining the source of the 72% overestimate in ST services wages.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Uses actual BLS production wage for all Services as base; Weights by NIPA ec variation across divisions; \"Always likely to be much more accurate than a presumption of uniform wages.\"",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md",
+      "page_reference": "Section 3.2",
+      "context": "Supports the transportation_wage_note entry contrasting SM's division-wide BLS wage with ST's Class 1 Railroads proxy.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Because of the variability of nominal wages both across sectors and across time, proxies constructed according to the method of equation (27) will be meaningless.",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md",
+      "page_reference": "Section 4",
+      "context": "Supports the impact_on_exploitation_rate entry on how variable-capital mismeasurement compresses the exploitation rate.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
     }
   ],
   "citations": [
     {
       "id": "Mohun_2005",
-      "full": "Mohun, Simon. 2005. 'On measuring the wealth of nations: the US economy, 1964-2001.' Cambridge Journal of Economics 29(5): 799-815. DOI: 10.1093/cje/bei043."
+      "full": "Mohun, Simon. 2005. 'On measuring the wealth of nations: the US economy, 1964-2001.' Cambridge Journal of Economics 29(5): 799-815. DOI: 10.1093/cje/bei043.",
+      "doi": "10.1093/cje/bei043",
+      "doi_source": "crossref",
+      "doi_verified": "2026-05-24"
     },
     {
       "id": "ST_1994",
-      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press.",
+      "doi": "10.1017/cbo9780511528330",
+      "doi_source": "crossref",
+      "doi_verified": "2026-05-24"
     }
   ],
-  "methodology_summary": "Variable capital (wages of productive workers) under Mohun SM approximation, billions of current dollars. W_p/W declines from ~0.41 (1964) to ~0.26 (2001) under SM \u2014 steeper than ST's 0.44 to 0.32. ST overestimates by 7.6% (1964) to 24.1% (2001), primarily from services sector wage mis-approximation. Loaded from Mohun 2005 Table 2 via L15.",
+  "methodology_summary": "Variable capital (wages of productive workers) under Mohun SM approximation, billions of current dollars. W_p/W declines from ~0.41 (1964) to ~0.26 (2001) under SM — steeper than ST's 0.44 to 0.32. ST overestimates by 7.6% (1964) to 24.1% (2001), primarily from services sector wage mis-approximation. Loaded from Mohun 2005 Table 2 via L15.",
   "known_issues": [
     "Services wage approximation has no benchmark validation pre-1988",
     "Transportation and Public Utilities: Mohun's SM correction is large (up to 50.6% overestimate for ST); SM uses division-wide BLS wage",
@@ -68,5 +124,7 @@
     "L5_validation": []
   },
   "ported_from": "ST2/research/N1403_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "citation_dois_added_date": "2026-05-24",
+  "citation_dois_added_by": "v1.2-iter5-C5-crossref-dois"
 }

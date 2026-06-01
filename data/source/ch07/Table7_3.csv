@@ -1,0 +1,14 @@
+# Table not extractable from KB - escalated to Stage 5 BLS CES sourcing per CH7_REAL_FIX_PLAN.md
+#
+# Search trail:
+#   - chunk_23, chunk_24, chunk_25, chunk_26: no Table 7.3 numeric content
+#       (Table 7.3 R^2 cross-sectional regression results across 6 IO benchmark years
+#        not present in extracted body text)
+#   - chunk_33 (Appendix G): V* methodology only
+#   - chunk_36 (Appendix J): productivity tables only
+#
+# S703 per registry: log-log OLS of total labor values vs prices of production across
+# productive sectors, run separately for each of 6 IO benchmark years (1947, 1958, 1963,
+# 1967, 1972, 1977). Book reports R^2 > 0.95; ST2 implementation reports R^2 = 0.70-0.98
+# with known 1963 benchmark anomaly (WARN-03). Real fix tracked in CH7_REAL_FIX_PLAN.md
+# and requires sector-level value-added decomposition. Current S703 carries proxy:true.

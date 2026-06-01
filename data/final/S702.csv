@@ -1,7 +1,81 @@
-series_id,year,value,units,stage,provenance,r_used
-S702-A,1947,61.57943970009901,index,benchmark_only_matrix_derived,S701 base × (1 + S513 r*),0.3777029651566802
-S702-A,1958,25.339587135883804,index,benchmark_only_matrix_derived,S701 base × (1 + S513 r*),0.377203729773987
-S702-A,1963,26.148742611769222,index,benchmark_only_matrix_derived,S701 base × (1 + S513 r*),0.4152020684491426
-S702-A,1967,2.948216992204035,index,benchmark_only_matrix_derived,S701 base × (1 + S513 r*),0.4178590608470474
-S702-A,1972,71.44898503937483,index,benchmark_only_matrix_derived,S701 base × (1 + S513 r*),0.3777669655367615
-S702-A,1977,70.09306204066466,index,benchmark_only_matrix_derived,S701 base × (1 + S513 r*),0.3553064371634138
+series_id,year,value,units,stage,provenance
+S702-A,1958,,hours_per_dollar,benchmark_book_sic,no_BLS_coverage_for_year_1958
+S702-A,1963,,hours_per_dollar,benchmark_book_sic,no_BLS_coverage_for_year_1963
+S702-A,1967,,hours_per_dollar,benchmark_book_sic,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1967; n_covered_unprod_sectors=3
+S702-A,1972,5.347013283304268,hours_per_dollar,benchmark_book_sic,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1972; n_covered_unprod_sectors=5
+S702-A,1977,2.810157742437455,hours_per_dollar,benchmark_book_sic,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5
+S702-EXT,1990,3.765127359428933,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,1991,3.685887444483894,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,1992,3.7020900294860346,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,1993,3.800555157949322,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,1994,3.9414424599958258,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,1995,4.021011638677892,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,1996,4.1202155536529,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,1997,4.261970834618607,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,1998,4.399495248788817,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,1999,4.516561097571412,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2000,4.57966286604413,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2001,4.547298769439453,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2002,4.515572542059796,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2003,4.496367973833807,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2004,4.536788028537494,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2005,4.642481911391622,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2006,4.741330241717404,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2007,4.808837227007343,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2008,4.755979040546843,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2009,4.499557793437309,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2010,4.499634493567239,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2011,4.581150452828323,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2012,4.681444024458998,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2013,4.739533602593766,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2014,4.818530357607626,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2015,4.9117209049192905,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2016,4.972763414689856,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2017,5.064385322566594,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2018,5.119029358120903,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2019,5.140999263264199,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2020,4.985181376003024,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2021,5.125579342570314,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2022,5.243292077004708,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2023,5.255120516328793,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-EXT,2024,5.250680148824775,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,1958,,hours_per_dollar,benchmark_book_sic,no_BLS_coverage_for_year_1958
+S702-COMBINED,1963,,hours_per_dollar,benchmark_book_sic,no_BLS_coverage_for_year_1963
+S702-COMBINED,1967,,hours_per_dollar,benchmark_book_sic,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1967; n_covered_unprod_sectors=3
+S702-COMBINED,1972,5.347013283304268,hours_per_dollar,benchmark_book_sic,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1972; n_covered_unprod_sectors=5
+S702-COMBINED,1977,2.810157742437455,hours_per_dollar,benchmark_book_sic,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5
+S702-COMBINED,1990,3.765127359428933,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,1991,3.685887444483894,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,1992,3.7020900294860346,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,1993,3.800555157949322,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,1994,3.9414424599958258,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,1995,4.021011638677892,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,1996,4.1202155536529,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,1997,4.261970834618607,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,1998,4.399495248788817,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,1999,4.516561097571412,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2000,4.57966286604413,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2001,4.547298769439453,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2002,4.515572542059796,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2003,4.496367973833807,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2004,4.536788028537494,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2005,4.642481911391622,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2006,4.741330241717404,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2007,4.808837227007343,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2008,4.755979040546843,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2009,4.499557793437309,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2010,4.499634493567239,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2011,4.581150452828323,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2012,4.681444024458998,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2013,4.739533602593766,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2014,4.818530357607626,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2015,4.9117209049192905,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2016,4.972763414689856,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2017,5.064385322566594,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2018,5.119029358120903,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2019,5.140999263264199,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2020,4.985181376003024,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2021,5.125579342570314,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2022,5.243292077004708,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2023,5.255120516328793,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward
+S702-COMBINED,2024,5.250680148824775,hours_per_dollar,extension_annual_bls,hu*=BLS_emp_hr_per_year/X_j; lambda_u*=hu*x(I-A)^-1; X_year=1977; n_covered_unprod_sectors=5; IO_aging=1977_SIC_weights_held_forward

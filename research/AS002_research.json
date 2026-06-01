@@ -1,0 +1,147 @@
+{
+  "series_id": "AS002",
+  "series_name": "Khanjian Cross-Validation",
+  "chapter": null,
+  "figures": [],
+  "research_date": "2026-05-16",
+  "researcher": "agent",
+  "kb_sources_searched": [],
+  "entries": [
+    {
+      "entry_type": "methodology_derived",
+      "content": "AS002 is a derived analytical series performing a cross-validation of S506 (Rate of Surplus Value, e = S*/V*) against an alternative computation method attributed to Khanjian. This serves as an internal consistency check for the exploitation rate estimates.",
+      "source_ref": "series_registry.json (AS002 definition)",
+      "confidence": "medium",
+      "verbatim_quote": "Main Formula: (1 + eu) / (1 + ep) ≈ (hu/hp) / (ecu/ecp). Key insight: Relative exploitation rates depend on relative hours and relative compensation.",
+      "verbatim_source": "KB: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_35/full_transcription.md (Appendix I, Table I.1)"
+    },
+    {
+      "entry_type": "construction_reference",
+      "content": "Registry describes AS002 as 'cross-check of S506 vs alternative method' with source_type 'analytical'. The legacy construction script is A08_khanjian_crossvalidation.py. Units are ratio. The series covers 1948-2024.",
+      "source_ref": "series_registry.json",
+      "confidence": "medium",
+      "verbatim_quote": "If hu/hp > ecu/ecp → eu > ep (unproductive workers more exploited); If hu/hp < ecu/ecp → eu < ep (productive workers more exploited); If hu/hp = ecu/ecp → eu = ep (equal exploitation).",
+      "verbatim_source": "KB: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_35/full_transcription.md (Appendix I, Table I.1)"
+    },
+    {
+      "entry_type": "construction_reference",
+      "content": "The Khanjian method likely computes the rate of surplus value through an alternative decomposition path — possibly arriving at S*/V* via different intermediate aggregations of the IO accounts. The cross-validation compares this alternative result against the primary S506 series to verify consistency.",
+      "source_ref": "series_registry.json; ST_1994 methodology context",
+      "confidence": "medium",
+      "verbatim_quote": "Table I.1: Rates of Exploitation of Unproductive Workers, 1948-89. Purpose: Annual calculation of eu using 25-step methodology.",
+      "verbatim_source": "KB: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_35/full_transcription.md (Appendix I, Table I.1)"
+    },
+    {
+      "entry_type": "construction_reference",
+      "content": "Key input: S506 (Rate of Surplus Value). The construction array in the registry is empty, indicating this was handled by a standalone analytical script rather than the standard pipeline. Status is book_period_validated, confirming the cross-check passed for the original 1948-1989 period.",
+      "source_ref": "series_registry.json",
+      "confidence": "medium",
+      "verbatim_quote": "Hp = H'p - (Hp)t - (Hp)fire. Reason: Authors' productive labor excludes government dummy and FIRE sectors. Example (1948): H'p = 1,379,560; (Hp)t = 40.40 × 8,629 = 348,612 thousand weekly hours; (Hp)fire = 37.90 × 1,496 = 56,698 thousand weekly hours; Hp = 974,250 thousand weekly hours.",
+      "verbatim_source": "KB: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_35/full_transcription.md (Appendix I, Table I.1)"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Khanjian (1989) using consistent procedure: Value and price rates of surplus value differ by only 6%-9%. Price-value deviations have minor effects on aggregate measures (Section 5.10, Table 5.12, Figure 5.25).",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.223",
+      "context": "Ch7 §7.3 | AS002 primary anchor -- this is the book's direct reference to the Khanjian benchmark that AS002 uses as the cross-validation target. Establishes the 6%-9% deviation envelope AS002's cross-check should reproduce."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Khanjian's S*/V* uniformly lower than S/V by 6%-9% (Khanjian 1988, p. 109, table 19). Wolff's inconsistent procedure biases money rate S*/V* upward by 12%-15% (sum of two differences).",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.223",
+      "context": "Ch7 §7.3 | AS002 methodology anchor -- contrasts Khanjian's consistent procedure (the reference standard AS002 emulates) against Wolff's biased alternative. Justifies WHY a Khanjian-style cross-validation is the right consistency check rather than a Wolff-style one."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Main Formula: (1 + eu) / (1 + ep) approx (hu/hp) / (ecu/ecp). Known: ep = S*/V* (rate of surplus value for productive workers). Solve for eu: eu = (hu/hp) / (ecu/ecp) . [1 + S*/V*] - 1.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.323",
+      "context": "Appendix I | AS002 derivation anchor -- Appendix I formal derivation of the rate-of-exploitation formula. This is the alternative-decomposition path against which AS002 cross-validates S506 (productive workers' rate of surplus value)."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Exploitation rate ratio (eu/ep): 1948: 0.80 (unproductive 20% less exploited); 1960: 0.89; 1972: 0.92; 1980: 0.92; 1989: 0.97 (3% less). Convergence: Exploitation rates converging. Both rising, but unproductive rising faster.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.330-331",
+      "context": "Appendix I | AS002 validation target -- the headline annual numeric results from Appendix I Table I.1 that AS002's cross-validation must reproduce (eu/ep ratio converging from 0.80 to 0.97 over 1948-1989)."
+    }
+  ],
+  "citations": [
+    {
+      "id": "ST_1994",
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+    }
+  ],
+  "methodology_summary": "Cross-validation analytical series comparing S506 (Rate of Surplus Value) against the Khanjian alternative computation method. Legacy script: A08_khanjian_crossvalidation.py.",
+  "known_issues": [
+    "Construction steps not specified in registry (empty array) — relies on legacy script",
+    "Khanjian method details not yet extracted from knowledge base",
+    "Alternative decomposition path not yet documented"
+  ],
+  "cross_references": [
+    "S506"
+  ],
+  "adequacy_refs": {
+    "L1_kb_pages": [],
+    "L3_data_sources": [
+      "Derived from S506 (Rate of Surplus Value) via alternative method"
+    ],
+    "L5_validation": []
+  },
+  "verbatim_quotes": [
+    {
+      "text": "Khanjian (1989) using consistent procedure: Value and price rates of surplus value differ by only 6%-9%. Price-value deviations have minor effects on aggregate measures (Section 5.10, Table 5.12, Figure 5.25).",
+      "page": "223",
+      "section": "Ch7 §7.3",
+      "source": "ST_1994",
+      "anchor": "AS002 primary anchor -- this is the book's direct reference to the Khanjian benchmark that AS002 uses as the cross-validation target. Establishes the 6%-9% deviation envelope AS002's cross-check should reproduce.",
+      "source_chunk": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_25/full_transcription.md",
+      "added_date": "2026-05-23",
+      "added_task": "stage1_cohort3_S901AS001AS002"
+    },
+    {
+      "text": "Khanjian's S*/V* uniformly lower than S/V by 6%-9% (Khanjian 1988, p. 109, table 19). Wolff's inconsistent procedure biases money rate S*/V* upward by 12%-15% (sum of two differences).",
+      "page": "223",
+      "section": "Ch7 §7.3",
+      "source": "ST_1994",
+      "anchor": "AS002 methodology anchor -- contrasts Khanjian's consistent procedure (the reference standard AS002 emulates) against Wolff's biased alternative. Justifies WHY a Khanjian-style cross-validation is the right consistency check rather than a Wolff-style one.",
+      "source_chunk": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_25/full_transcription.md",
+      "added_date": "2026-05-23",
+      "added_task": "stage1_cohort3_S901AS001AS002"
+    },
+    {
+      "text": "Main Formula: (1 + eu) / (1 + ep) approx (hu/hp) / (ecu/ecp). Known: ep = S*/V* (rate of surplus value for productive workers). Solve for eu: eu = (hu/hp) / (ecu/ecp) . [1 + S*/V*] - 1.",
+      "page": "323",
+      "section": "Appendix I",
+      "source": "ST_1994",
+      "anchor": "AS002 derivation anchor -- Appendix I formal derivation of the rate-of-exploitation formula. This is the alternative-decomposition path against which AS002 cross-validates S506 (productive workers' rate of surplus value).",
+      "source_chunk": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_35/full_transcription.md",
+      "added_date": "2026-05-23",
+      "added_task": "stage1_cohort3_S901AS001AS002"
+    },
+    {
+      "text": "Exploitation rate ratio (eu/ep): 1948: 0.80 (unproductive 20% less exploited); 1960: 0.89; 1972: 0.92; 1980: 0.92; 1989: 0.97 (3% less). Convergence: Exploitation rates converging. Both rising, but unproductive rising faster.",
+      "page": "330-331",
+      "section": "Appendix I",
+      "source": "ST_1994",
+      "anchor": "AS002 validation target -- the headline annual numeric results from Appendix I Table I.1 that AS002's cross-validation must reproduce (eu/ep ratio converging from 0.80 to 0.97 over 1948-1989).",
+      "source_chunk": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_35/full_transcription.md",
+      "added_date": "2026-05-23",
+      "added_task": "stage1_cohort3_S901AS001AS002"
+    }
+  ],
+  "backfill_log": [
+    {
+      "date": "2026-05-23",
+      "action": "stage1_cohort3_enrich",
+      "note": "Added top-level verbatim_quotes[] array (4 quotes) sourced from chunk_25 (Ch7 §7.3 - direct book reference to Khanjian (1989) consistent procedure as the 6%-9% benchmark, contrast with Wolff's biased procedure) and chunk_35 (Appendix I - eu derivation and Table I.1 numeric results). The four quotes pin down AS002's identity: WHO is the reference (Khanjian), WHAT the cross-check is (6%-9% deviation envelope), HOW the formula derives, and WHAT numbers must reproduce."
+    }
+  ],
+  "verbatim_quotes_deprecated": true
+}

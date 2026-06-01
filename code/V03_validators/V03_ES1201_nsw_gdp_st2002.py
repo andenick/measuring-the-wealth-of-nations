@@ -1,4 +1,7 @@
-"""V03_ES1201 — NSW/GDP range check + sign progression."""
+"""V03_ES1201 — NSW/GDP range check + registry benchmark check (ST 2002).
+
+Refactored 2026-05-24 per Decision 0002.
+"""
 from __future__ import annotations
 
 import sys
@@ -11,26 +14,38 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from utils.io import write_validation_result  # noqa: E402
 from utils.paths import DATA_FINAL  # noqa: E402
+from utils.registry_validator import get_reference_values, get_tolerance_class  # noqa: E402
+from utils.series import BenchmarkValidator  # noqa: E402
 
 
 def run():
     df = pd.read_csv(DATA_FINAL / "ES1201.csv")
     df = df[df["series_id"] == "ES1201-A"]
     in_range = bool(df["value"].between(-0.05, 0.10).all())
-    status = "PASS" if in_range and len(df) > 0 else "FAIL"
+
+    bench = BenchmarkValidator(
+        series_id="ES1201",
+        tolerance_class=get_tolerance_class("ES1201", default="share_series"),
+        benchmarks=get_reference_values("ES1201"),
+        subseries_filter="ES1201-A",
+    ).run(DATA_FINAL / "ES1201.csv")
+
+    rule_pass = in_range and len(df) > 0
+    status = "PASS" if (rule_pass and bench["status"] == "PASS") else "FAIL"
     result = {
         "series_id": "ES1201",
         "run_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "tolerance_class": "share_series",
+        "tolerance_class": get_tolerance_class("ES1201", default="share_series"),
         "status": status,
-        "n_pass": 1 if status == "PASS" else 0,
-        "n_fail": 0 if status == "PASS" else 1,
-        "n_missing": 0,
+        "n_pass": bench["n_pass"] + (1 if rule_pass else 0),
+        "n_fail": bench["n_fail"] + (0 if rule_pass else 1),
+        "n_missing": bench["n_missing"],
         "range_check": {"expected": [-0.05, 0.10],
                         "actual": [float(df["value"].min()), float(df["value"].max())]},
+        "benchmarks": bench.get("benchmarks", {}),
     }
     write_validation_result("ES1201", result)
-    print(f"    [V03_ES1201] status={status} NSW/GDP range=[{df['value'].min():.4f}, {df['value'].max():.4f}]")
+    print(f"    [V03_ES1201] status={status} NSW/GDP range=[{df['value'].min():.4f}, {df['value'].max():.4f}]; bench={bench['n_pass']}/{bench['n_pass']+bench['n_fail']+bench['n_missing']}")
     return result
 
 

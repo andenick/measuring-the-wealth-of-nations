@@ -18,7 +18,7 @@ S512-A,1963,0.468,share,book_period,Table5_7_KeyRatios.csv:T512A
 S512-A,1964,0.464,share,book_period,Table5_7_KeyRatios.csv:T512A
 S512-A,1965,0.46,share,book_period,Table5_7_KeyRatios.csv:T512A
 S512-A,1966,0.456,share,book_period,Table5_7_KeyRatios.csv:T512A
-S512-A,1967,0.452,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-A,1967,0.42,share,book_period,Table5_7_KeyRatios.csv:T512A
 S512-A,1968,0.448,share,book_period,Table5_7_KeyRatios.csv:T512A
 S512-A,1969,0.444,share,book_period,Table5_7_KeyRatios.csv:T512A
 S512-A,1970,0.44,share,book_period,Table5_7_KeyRatios.csv:T512A
@@ -41,3 +41,115 @@ S512-A,1986,0.373,share,book_period,Table5_7_KeyRatios.csv:T512A
 S512-A,1987,0.369,share,book_period,Table5_7_KeyRatios.csv:T512A
 S512-A,1988,0.364,share,book_period,Table5_7_KeyRatios.csv:T512A
 S512-A,1989,0.36,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-EXT,1998,0.31949999999999995,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,1999,0.3165114284735395,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2000,0.31171144335915457,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2001,0.30044246263510777,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2002,0.2884424367957939,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2003,0.2807348720050808,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2004,0.27781606045446483,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2005,0.27543583019282863,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2006,0.2738621271830954,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2007,0.2697375441649561,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2008,0.2631146660255516,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2009,0.2450153902631809,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2010,0.2392116640452947,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2011,0.24007545472435662,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2012,0.2418850197157117,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2013,0.24151447266938744,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2014,0.24345649225032598,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2015,0.24246031071688073,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2016,0.24012364530018873,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2017,0.2408035254901317,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2018,0.2423167237469966,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2019,0.24277695996292487,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2020,0.23702597180082882,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2021,0.23318397056683782,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2022,0.23593426206747295,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2023,0.23579556717442715,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-EXT,2024,0.2350377147803383,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-INTERP,1990,0.3552576427974514,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-INTERP,1991,0.35057775768333777,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-INTERP,1992,0.34595952169944083,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-INTERP,1993,0.34140212272854753,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-INTERP,1994,0.3369047593516389,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-INTERP,1995,0.33246664070696075,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-INTERP,1996,0.32808698635095024,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-INTERP,1997,0.323765026120995,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-COMBINED,1948,0.54,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1949,0.535,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1950,0.53,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1951,0.525,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1952,0.52,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1953,0.515,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1954,0.51,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1955,0.505,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1956,0.5,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1957,0.495,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1958,0.49,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1959,0.485,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1960,0.48,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1961,0.476,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1962,0.472,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1963,0.468,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1964,0.464,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1965,0.46,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1966,0.456,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1967,0.42,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1968,0.448,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1969,0.444,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1970,0.44,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1971,0.436,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1972,0.432,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1973,0.428,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1974,0.424,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1975,0.42,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1976,0.416,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1977,0.412,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1978,0.408,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1979,0.404,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1980,0.4,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1981,0.396,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1982,0.391,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1983,0.387,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1984,0.382,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1985,0.378,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1986,0.373,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1987,0.369,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1988,0.364,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1989,0.36,share,book_period,Table5_7_KeyRatios.csv:T512A
+S512-COMBINED,1990,0.3552576427974514,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-COMBINED,1991,0.35057775768333777,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-COMBINED,1992,0.34595952169944083,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-COMBINED,1993,0.34140212272854753,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-COMBINED,1994,0.3369047593516389,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-COMBINED,1995,0.33246664070696075,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-COMBINED,1996,0.32808698635095024,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-COMBINED,1997,0.323765026120995,share,extension_bridge,Log-linear interpolation between book(1989)=0.3600 and EXT(1998)=0.3195; M04_S512 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S512-COMBINED,1998,0.31949999999999995,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,1999,0.3165114284735395,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2000,0.31171144335915457,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2001,0.30044246263510777,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2002,0.2884424367957939,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2003,0.2807348720050808,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2004,0.27781606045446483,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2005,0.27543583019282863,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2006,0.2738621271830954,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2007,0.2697375441649561,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2008,0.2631146660255516,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2009,0.2450153902631809,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2010,0.2392116640452947,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2011,0.24007545472435662,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2012,0.2418850197157117,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2013,0.24151447266938744,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2014,0.24345649225032598,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2015,0.24246031071688073,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2016,0.24012364530018873,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2017,0.2408035254901317,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2018,0.2423167237469966,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2019,0.24277695996292487,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2020,0.23702597180082882,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2021,0.23318397056683782,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2022,0.23593426206747295,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2023,0.23579556717442715,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"
+S512-COMBINED,2024,0.2350377147803383,share,extension,"BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; level-spliced (scale=1.1868 anchored at projected 1998 = 0.3195)"

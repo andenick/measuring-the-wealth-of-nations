@@ -1,101 +1,155 @@
 series_id,year,value,units,stage,provenance
-S517-A,1925,126.977,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1926,131.537,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1927,134.175,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1928,137.774,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1929,137.07,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1930,130.22,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1931,116.244,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1932,107.642,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1933,109.278,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1934,110.648,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1935,110.315,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1936,121.36,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1937,126.498,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1938,125.187,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1939,125.5,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1940,133.587,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1941,150.956,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1942,160.521,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1943,163.319,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1944,165.236,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1945,180.207,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1946,221.007,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1947,265.725,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1948,291.557,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1949,296.671,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1950,335.868,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1951,366.226,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1952,386.31,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1953,403.718,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1954,414.924,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1955,457.052,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1956,505.534,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1957,540.636,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1958,551.356,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1959,573.959,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1960,586.872,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1961,604.328,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1962,626.795,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1963,650.603,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1964,689.318,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1965,738.843,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1966,804.263,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1967,871.188,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1968,957.886,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1969,1055.775,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1970,1161.635,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1971,1275.119,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1972,1385.696,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1973,1560.649,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1974,1893.965,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1975,2083.536,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1976,2280.237,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1977,2532.629,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1978,2870.135,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1979,3313.954,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1980,3800.29,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1981,4300.221,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1982,4589.165,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1983,4744.723,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1984,5040.975,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1985,5332.407,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1986,5603.761,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1987,5919.104,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1988,6311.228,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1989,6699.84,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1990,7071.254,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1991,7242.497,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1992,7487.351,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1993,7838.125,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1994,8273.204,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1995,8723.558,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1996,9152.132,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1997,9674.473,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1998,10226.721,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,1999,10849.249,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2000,11607.864,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2001,12189.396,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2002,12616.326,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2003,13038.217,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2004,14152.545,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2005,15429.476,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2006,16706.002,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2007,17647.597,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2008,18787.982,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2009,18233.843,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2010,18681.707,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2011,19549.432,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2012,20201.795,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2013,21039.791,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2014,22022.201,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2015,22494.315,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2016,23161.992,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2017,24066.902,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2018,25227.313,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2019,26423.854,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2020,27010.148,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2021,30051.849,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2022,33673.661,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2023,34771.025,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
-S517-A,2024,35899.94,billions_usd,book_period_and_extension,BEA Fixed Assets 4.1 Line 1 (Private nonresidential)
+S517-A,1948,291.557,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1949,296.671,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1950,335.868,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1951,366.226,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1952,386.31,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1953,403.718,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1954,414.924,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1955,457.052,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1956,505.534,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1957,540.636,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1958,551.356,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1959,573.959,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1960,586.872,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1961,604.328,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1962,626.795,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1963,650.603,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1964,689.318,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1965,738.843,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1966,804.263,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1967,871.188,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1968,957.886,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1969,1055.775,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1970,1161.635,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1971,1275.119,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1972,1385.696,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1973,1560.649,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1974,1893.965,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1975,2083.536,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1976,2280.237,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1977,2532.629,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1978,2870.135,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1979,3313.954,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1980,3800.29,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1981,4300.221,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1982,4589.165,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1983,4744.723,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1984,5040.975,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1985,5332.407,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1986,5603.761,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1987,5919.104,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1988,6311.228,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-A,1989,6699.84,billions_usd,book_period,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; operational book reference for K* in lieu of Appendix H extraction (Appendix H is text-only)"
+S517-EXT,1990,7071.254,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,1991,7242.497,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,1992,7487.351,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,1993,7838.125,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,1994,8273.204,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,1995,8723.558,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,1996,9152.132,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,1997,9674.473,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,1998,10226.721,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,1999,10849.249,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2000,11607.864,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2001,12189.396,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2002,12616.326,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2003,13038.217,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2004,14152.545,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2005,15429.476,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2006,16706.002,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2007,17647.597,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2008,18787.982,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2009,18233.843,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2010,18681.707,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2011,19549.432,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2012,20201.795,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2013,21039.791,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2014,22022.201,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2015,22494.315,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2016,23161.992,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2017,24066.902,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2018,25227.313,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2019,26423.854,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2020,27010.148,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2021,30051.849,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2022,33673.661,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2023,34771.025,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-EXT,2024,35899.94,billions_usd,extension,"BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential fixed assets), Current-Cost Net Stock; level splice at 1989 with rescale_factor=1.0 (book and extension share the same underlying BEA series)"
+S517-COMBINED,1948,291.557,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1949,296.671,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1950,335.868,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1951,366.226,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1952,386.31,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1953,403.718,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1954,414.924,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1955,457.052,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1956,505.534,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1957,540.636,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1958,551.356,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1959,573.959,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1960,586.872,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1961,604.328,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1962,626.795,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1963,650.603,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1964,689.318,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1965,738.843,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1966,804.263,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1967,871.188,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1968,957.886,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1969,1055.775,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1970,1161.635,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1971,1275.119,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1972,1385.696,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1973,1560.649,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1974,1893.965,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1975,2083.536,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1976,2280.237,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1977,2532.629,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1978,2870.135,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1979,3313.954,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1980,3800.29,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1981,4300.221,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1982,4589.165,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1983,4744.723,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1984,5040.975,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1985,5332.407,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1986,5603.761,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1987,5919.104,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1988,6311.228,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1989,6699.84,billions_usd,book_period,BEA Fixed Assets 4.1 Line 1 (book arm of combined series)
+S517-COMBINED,1990,7071.254,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,1991,7242.497,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,1992,7487.351,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,1993,7838.125,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,1994,8273.204,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,1995,8723.558,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,1996,9152.132,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,1997,9674.473,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,1998,10226.721,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,1999,10849.249,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2000,11607.864,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2001,12189.396,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2002,12616.326,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2003,13038.217,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2004,14152.545,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2005,15429.476,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2006,16706.002,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2007,17647.597,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2008,18787.982,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2009,18233.843,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2010,18681.707,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2011,19549.432,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2012,20201.795,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2013,21039.791,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2014,22022.201,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2015,22494.315,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2016,23161.992,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2017,24066.902,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2018,25227.313,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2019,26423.854,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2020,27010.148,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2021,30051.849,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2022,33673.661,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2023,34771.025,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"
+S517-COMBINED,2024,35899.94,billions_usd,extension,"BEA Fixed Assets 4.1 Line 1 (extension arm of combined series, level splice)"

@@ -1,0 +1,14 @@
+author_code,author_full,benchmark_year,gfp_pct_of_official_gnp,source,note
+NT,Nordhaus and Tobin,1965,195.0,"Eisner (1988) p.1638 table S.5 via ST 1994 Figure 1.1",extended account heavy in leisure-time valuation
+Z,Zolotas,1965,110.0,"Eisner (1988) p.1638 table S.5 via ST 1994 Figure 1.1",
+JF,Jorgenson and Fraumeni,1966,468.0,"Eisner (1988) p.1638 table S.5 via ST 1994 Figure 1.1",inflated by leisure-time + human-capital investment imputations
+K,Kendrick,1966,150.0,"Eisner (1988) p.1638 table S.5 via ST 1994 Figure 1.1",
+R,Ruggles and Ruggles,1969,112.0,"Eisner (1988) p.1638 table S.5 via ST 1994 Figure 1.1",
+E,Eisner,1966,155.0,"Eisner (1988) p.1638 table S.5 via ST 1994 Figure 1.1",
+ST,Shaikh and Tonak,1966,180.0,"ST 1994 Table 5.4 + Eisner (1985) p.36 housework $267.9B for comparability",ST-preferred pure market basis is ~121% of GNP; 180% includes housework supplement only for comparability
+BEA,Official BEA GNP,1965-1969,100.0,"ST 1994 Figure 1.1 baseline",reference
+# Source: KB chunk_04/full_transcription.md page 36 (book page 16), Figure 1.1 caption + bar chart description
+# Annual 1948-1989 series (per registry S201 mapping) is NOT present in HDARP KB chunks 3-5; only the Figure 1.1
+# mid-1960s cross-section is reproducible from KB. Annual digitization of book Table 2.1 (if it exists in book Ch2)
+# is wave3_planned per series_registry.json S201 entry and remains to be sourced. See CH7_REAL_FIX_PLAN.md
+# template for cross-chapter wave-3 sourcing pattern.

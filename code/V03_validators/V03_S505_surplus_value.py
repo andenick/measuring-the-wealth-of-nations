@@ -1,4 +1,8 @@
-"""V03_S505 — Validate Surplus Value (S*) against book benchmarks + identity check."""
+"""V03_S505 — Validate Surplus Value (S*) against book benchmarks + identity check.
+
+Refactored 2026-05-24 per Decision 0002 — reads benchmarks from registry
+(`validation.reference_values`) via `utils.registry_validator.get_reference_values`.
+"""
 from __future__ import annotations
 
 import sys
@@ -9,6 +13,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from utils.paths import BOOK_TABLES, DATA_FINAL  # noqa: E402
+from utils.registry_validator import get_reference_values  # noqa: E402
 from utils.series import BenchmarkValidator, TOLERANCES  # noqa: E402
 from utils.io import read_book_table, write_validation_result  # noqa: E402
 
@@ -16,7 +21,7 @@ from utils.io import read_book_table, write_validation_result  # noqa: E402
 VALIDATOR = BenchmarkValidator(
     series_id        = "S505",
     tolerance_class  = "dollar_series",
-    benchmarks       = {1948: 149.94, 1972: 645.98, 1989: 2943.35},
+    benchmarks       = get_reference_values("S505"),
     subseries_filter = "S505-A",
 )
 

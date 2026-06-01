@@ -43,16 +43,43 @@
       "entry_type": "theoretical_interpretation",
       "content": "Moos interprets the positive 21st-century NSW through de Brunhoff (1978) and Kotz (2015) SSA theory: a positive NSW may indicate worsening worker conditions (state compensating for neoliberal wage suppression), not genuine redistribution. State must 'minimize or relocate the specifically proletarian risk.' Rising NSW/GDP in neoliberal era reflects: low wages requiring supplementation, dysfunctional healthcare system costs borne by state, and macroeconomic instability requiring countercyclical spending. A zero or modest NSW may indicate a better political-economic context for workers than a high positive NSW.",
       "source_ref": "Moos_2017, Section 5 pp.23-28; full_transcription.md Section 5 Discussion"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "This paper replicates the methodology and extends the data series in Shaikh and Tonak (2000) in order to examine fiscal transfers between the state and workers in the United States in the 21st century. Strikingly, the updated net social wage data reveals a sizable deviation starting in 2002, with much higher positive net social wages for a decade. In fact, the net social wage rises to a historic high of positive 8.6 percent of GDP in 2010.",
+      "source_ref": "Moos 2017, Introduction, p.2",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Verbatim statement of the central ES1301 finding — 8.6% of GDP peak in 2010.",
+      "kb_path": "2017_Moos_NSW_21st_Century/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "NetSocialWage = TotalLaborBenefits − TotalLaborTaxes    (1) ... TotalLaborBenefits = E1 + E2 ∗ LS    (2) ... TotalLaborTaxes = T1 + T2 ∗ LS    (3)",
+      "source_ref": "Moos 2017, Net Social Wage Methodology, p.3-4",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Verbatim NSW formulas that ES1301 implements.",
+      "kb_path": "2017_Moos_NSW_21st_Century/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The mean NSW/GDP for the entire period is 2.0%, which represents a substantial shift from Shaikh and Tonak's finding of approximately zero. However, this overall mean masks an important structural break. As I will discuss further, the period 1959-2000 shows a mean NSW ≈ 0%, consistent with Shaikh and Tonak's findings. But the period 2001-2012 shows a mean NSW ≈ 5% of GDP, representing an unprecedented positive net transfer to workers.",
+      "source_ref": "Moos 2017, Extended Data Series, p.5",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Headline structural-break finding for ES1301.",
+      "kb_path": "2017_Moos_NSW_21st_Century/full_transcription.md"
     }
   ],
   "citations": [
     {
       "id": "Moos_2017",
-      "full": "Moos, Katherine A. 2017. 'Neoliberal Redistributive Policy: The U.S. Net Social Wage in the 21st Century.' Working Paper No. 2017-18, Department of Economics, University of Massachusetts Amherst. September 18, 2017."
+      "full": "Moos, Katherine A. 2017. 'Neoliberal Redistributive Policy: The U.S. Net Social Wage in the 21st Century.' Working Paper No. 2017-18, Department of Economics, University of Massachusetts Amherst. September 18, 2017.",
+      "no_doi_reason": "UMass Amherst Economics Department Working Paper No. 2017-18 (Sept 2017); working papers rarely have DOIs. Published version: Moos, Katherine A. 2019. 'Neoliberal Redistributive Policy: The US Net Social Wage in the Early Twenty-First Century.' Review of Radical Political Economics 51(4): 581-605. DOI: 10.1177/0486613419848097.",
+      "published_version_doi": "10.1177/0486613419848097"
     },
     {
       "id": "ST_2002",
-      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 2002. 'The Rise and Fall of the U.S. Welfare State.' In Political Economy and Contemporary Capitalism. M.E. Sharpe, Armonk. pp. 247-265."
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 2002. 'The Rise and Fall of the U.S. Welfare State.' In Political Economy and Contemporary Capitalism. M.E. Sharpe, Armonk. pp. 247-265.",
+      "no_doi_reason": "Book chapter in 'Political Economy and Contemporary Capitalism' (M.E. Sharpe, 2002); no DOI on file at Crossref for this chapter or the volume."
     },
     {
       "id": "BEA_NIPA",
@@ -85,5 +112,33 @@
     ]
   },
   "ported_from": "ST2/research/N1301_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "quote": "This paper replicates the methodology and extends the data series in Shaikh and Tonak (2000) in order to examine fiscal transfers between the state and workers in the United States in the 21st century. Strikingly, the updated net social wage data reveals a sizable deviation starting in 2002, with much higher positive net social wages for a decade. In fact, the net social wage rises to a historic high of positive 8.6 percent of GDP in 2010.",
+      "source": "Moos 2017, Introduction, p.2",
+      "kb_path": "2017_Moos_NSW_21st_Century/full_transcription.md",
+      "verbatim_check": true,
+      "notes": "Verbatim statement of the central ES1301 finding — 8.6% of GDP peak in 2010."
+    },
+    {
+      "quote": "NetSocialWage = TotalLaborBenefits − TotalLaborTaxes    (1) ... TotalLaborBenefits = E1 + E2 ∗ LS    (2) ... TotalLaborTaxes = T1 + T2 ∗ LS    (3)",
+      "source": "Moos 2017, Net Social Wage Methodology, p.3-4",
+      "kb_path": "2017_Moos_NSW_21st_Century/full_transcription.md",
+      "verbatim_check": true,
+      "notes": "Verbatim NSW formulas that ES1301 implements."
+    },
+    {
+      "quote": "The mean NSW/GDP for the entire period is 2.0%, which represents a substantial shift from Shaikh and Tonak's finding of approximately zero. However, this overall mean masks an important structural break. As I will discuss further, the period 1959-2000 shows a mean NSW ≈ 0%, consistent with Shaikh and Tonak's findings. But the period 2001-2012 shows a mean NSW ≈ 5% of GDP, representing an unprecedented positive net transfer to workers.",
+      "source": "Moos 2017, Extended Data Series, p.5",
+      "kb_path": "2017_Moos_NSW_21st_Century/full_transcription.md",
+      "verbatim_check": true,
+      "notes": "Headline structural-break finding for ES1301."
+    }
+  ],
+  "verbatim_quotes_added_date": "2026-05-19",
+  "verbatim_quotes_added_by": "D4_es_ch10_13_backfill",
+  "verbatim_quotes_deprecated": true,
+  "citation_dois_added_date": "2026-05-24",
+  "citation_dois_added_by": "v1.2-iter5-C5-crossref-dois"
 }

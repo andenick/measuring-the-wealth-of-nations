@@ -1,6 +1,6 @@
 """P02_ES1504 — Compute Lu/Lp burden ratio (Mohun 2013).
 
-ES1504 = Mohun's Lu (S1503) / Mohun's Lp (from mohun_employment_annual_1948_1989.csv).
+ES1504 = Mohun's Lu (ES1503) / Mohun's Lp (from mohun_employment_annual_1948_1989.csv).
 The "unproductive burden" — how many unproductive workers per productive worker.
 
 Book finding: burden ratio rises from ~0.77 (1948) to higher in later years.

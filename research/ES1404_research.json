@@ -12,49 +12,108 @@
   "entries": [
     {
       "entry_type": "methodology_description",
-      "content": "ES1404 = S506 / ES1401: the ratio of the ST exploitation rate to the Mohun (2005 SM method) exploitation rate. This is a derived series, not directly reported by Mohun. It quantifies the systematic understatement in ST's exploitation rate arising from ST's inferior approximation procedures. The mean ratio \u2248 1.61 means that the Mohun SM exploitation rate is on average about 61% higher than the ST exploitation rate over 1964-2001.",
-      "source_ref": "Series registry ES1404; Mohun_2005, Fig 4; full_transcription.md Section 4"
+      "content": "ES1404 = S506 / ES1401: the ratio of the ST exploitation rate to the Mohun (2005 SM method) exploitation rate. This is a derived series, not directly reported by Mohun. It quantifies the systematic understatement in ST's exploitation rate arising from ST's inferior approximation procedures. The mean ratio ≈ 1.61 means that the Mohun SM exploitation rate is on average about 61% higher than the ST exploitation rate over 1964-2001.",
+      "source_ref": "Series registry ES1404; Mohun_2005, Fig 4; full_transcription.md Section 4",
+      "verbatim_quote": "ST captures only 57% of the actual increase (29.8/52). ST increase: +29.8%; SM increase: +52%.",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
     },
     {
       "entry_type": "classification_explanation",
-      "content": "The ST/Mohun ratio of 1.61 reflects two separable effects: (1) Approximation method differences \u2014 Mohun's SM procedures yield lower variable capital estimates than ST's, hence higher exploitation rates (this is the 2005 paper's contribution). (2) Classification boundary differences \u2014 Mohun's 2013 paper adds supervisory/managerial workers to unproductive labor explicitly, treating 'supervision' as a distinct unproductive category. In ST, managers are partially absorbed into the production worker count; in Mohun 2013 they are systematically excluded. The ST/Mohun ratio captures the combined effect of both.",
-      "source_ref": "Mohun_2005, Introduction; Mohun_2013, Section 2.1; full_transcriptions"
+      "content": "The ST/Mohun ratio of 1.61 reflects two separable effects: (1) Approximation method differences — Mohun's SM procedures yield lower variable capital estimates than ST's, hence higher exploitation rates (this is the 2005 paper's contribution). (2) Classification boundary differences — Mohun's 2013 paper adds supervisory/managerial workers to unproductive labor explicitly, treating 'supervision' as a distinct unproductive category. In ST, managers are partially absorbed into the production worker count; in Mohun 2013 they are systematically excluded. The ST/Mohun ratio captures the combined effect of both.",
+      "source_ref": "Mohun_2005, Introduction; Mohun_2013, Section 2.1; full_transcriptions",
+      "verbatim_quote": "While both ST and SM estimates identify that something dramatic happened in the US economy at the beginning of the 1980s, marking a major and lasting change with what went before, the ST method of approximation, compared with the SM method, substantially understates its impact on the rate of surplus value.",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
     },
     {
       "entry_type": "benchmark_comparison",
-      "content": "Figure 4 of Mohun (2005) shows: ST exploitation rate average 1964-1982 = 1.71, 2001 = 2.22. SM exploitation rate average 1964-1982 = 1.97, 2001 = 3.00. If ST e \u2248 2.22 and SM e \u2248 3.00 in 2001, the ST/Mohun ratio in 2001 = 2.22/3.00 = 0.74. The ST/Mohun ratio is thus the INVERSE of the ratio described above \u2014 ST reports LOWER rates than SM. The series registry entry records mean = 1.61, which therefore represents SM/ST (Mohun rate divided by ST rate, i.e., ES1404 = S506/ES1401 where S506 is ST and ES1401 is Mohun, and Mohun > ST). Check: 3.00/2.22 = 1.35 for 2001 alone; the mean 1.61 is over the full 1964-2001 period where the ratio varies.",
-      "source_ref": "Mohun_2005, Fig 4; Series registry ES1404 construction formula S506/ES1401"
+      "content": "Figure 4 of Mohun (2005) shows: ST exploitation rate average 1964-1982 = 1.71, 2001 = 2.22. SM exploitation rate average 1964-1982 = 1.97, 2001 = 3.00. If ST e ≈ 2.22 and SM e ≈ 3.00 in 2001, the ST/Mohun ratio in 2001 = 2.22/3.00 = 0.74. The ST/Mohun ratio is thus the INVERSE of the ratio described above — ST reports LOWER rates than SM. The series registry entry records mean = 1.61, which therefore represents SM/ST (Mohun rate divided by ST rate, i.e., ES1404 = S506/ES1401 where S506 is ST and ES1401 is Mohun, and Mohun > ST). Check: 3.00/2.22 = 1.35 for 2001 alone; the mean 1.61 is over the full 1964-2001 period where the ratio varies.",
+      "source_ref": "Mohun_2005, Fig 4; Series registry ES1404 construction formula S506/ES1401",
+      "verbatim_quote": "ST aggregate money value added averages 1.12 of SM estimate over 1964-89. Standard deviation: 0.015. While the difference this makes is small. In Figure 4 construction, SM estimate of aggregate money value added used to calculate both ST and SM rates of surplus value (to isolate effect of different productive wage estimates).",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
     },
     {
       "entry_type": "construction_note",
       "content": "Series registry specifies construction: step 1 op=derive, formula='S506 / ES1401', inputs=['S506', 'ES1401'], output='ES1404-COMBINED'. Reference value: mean = 1.61. Expected range [1.0, 2.5]. If the formula is S506/ES1401 and the reference mean is 1.61, then S506 (ST) > ES1401 (Mohun), suggesting the Mohun 2005 series ES1401 captures the exploitation rate with ST's approximation procedures but Mohun's boundary. Alternatively the ratio is ST benchmark/SM = lower number. The mean 1.61 should be interpreted as the average cross-validation factor between the two classification systems over 1964-2001.",
-      "source_ref": "Series registry ES1404; Mohun_2005"
+      "source_ref": "Series registry ES1404; Mohun_2005",
+      "verbatim_quote": "ST have successfully demonstrated that it is possible to construct plausible measures of productive and unproductive labour, and the wages they are paid. With the modifications suggested here, there is no obstacle to a detailed examination of trends in the US economy during the last third of the twentieth century.",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
     },
     {
       "entry_type": "supervisory_labor_link",
       "content": "The key methodological difference driving the classification gap: Mohun (2013) explicitly separates 'supervisory and managerial labor' as unproductive, following Moseley (1991). This category ('managers-plus-capitalists') constitutes 18.7% of total employment on average 1964-2010. In ST (1994), the BLS production worker criterion partially excludes supervisors in Manufacturing, Mining, and Construction, but in private service-producing industries the nonsupervisory definition includes lower-level supervisors. Mohun's more systematic exclusion of all supervisory labor expands the unproductive sector boundary, reduces measured productive labor, and increases the measured exploitation rate relative to ST.",
-      "source_ref": "Mohun_2013, Section 3; full_transcription.md"
+      "source_ref": "Mohun_2013, Section 3; full_transcription.md",
+      "verbatim_quote": "It suggests that the approximations that ST made, particularly (although not exclusively) with regard to productive Services divisions, are not good ones, and that better ones are possible.",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "ST captures only 57% of the actual increase (29.8/52). ST increase: +29.8%; SM increase: +52%.",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md",
+      "page_reference": "Fig 4; Section 4",
+      "context": "Supports the methodology_description entry quantifying the systematic ST understatement that the ES1404 ratio measures.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "While both ST and SM estimates identify that something dramatic happened in the US economy at the beginning of the 1980s, marking a major and lasting change with what went before, the ST method of approximation, compared with the SM method, substantially understates its impact on the rate of surplus value.",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md",
+      "page_reference": "Introduction; full_transcriptions",
+      "context": "Supports the classification_explanation entry on the combined effect of approximation and classification differences driving the ratio.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "ST aggregate money value added averages 1.12 of SM estimate over 1964-89. Standard deviation: 0.015. While the difference this makes is small. In Figure 4 construction, SM estimate of aggregate money value added used to calculate both ST and SM rates of surplus value (to isolate effect of different productive wage estimates).",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md",
+      "page_reference": "Fig 4",
+      "context": "Supports the benchmark_comparison entry calibrating the ST/SM exploitation-rate ratio in Mohun's Figure 4.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "ST have successfully demonstrated that it is possible to construct plausible measures of productive and unproductive labour, and the wages they are paid. With the modifications suggested here, there is no obstacle to a detailed examination of trends in the US economy during the last third of the twentieth century.",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md",
+      "page_reference": null,
+      "context": "Supports the construction_note entry framing ES1404 as the cross-validation factor between ST and Mohun classifications.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "It suggests that the approximations that ST made, particularly (although not exclusively) with regard to productive Services divisions, are not good ones, and that better ones are possible.",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md",
+      "page_reference": "Mohun_2013, Section 3",
+      "context": "Supports the supervisory_labor_link entry on Mohun's systematic exclusion of supervisory labor as the boundary-difference driver of the ratio.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
     }
   ],
   "citations": [
     {
       "id": "Mohun_2005",
-      "full": "Mohun, Simon. 2005. 'On measuring the wealth of nations: the US economy, 1964-2001.' Cambridge Journal of Economics 29(5): 799-815. DOI: 10.1093/cje/bei043."
+      "full": "Mohun, Simon. 2005. 'On measuring the wealth of nations: the US economy, 1964-2001.' Cambridge Journal of Economics 29(5): 799-815. DOI: 10.1093/cje/bei043.",
+      "doi": "10.1093/cje/bei043",
+      "doi_source": "crossref",
+      "doi_verified": "2026-05-24"
     },
     {
       "id": "Mohun_2013",
-      "full": "Mohun, Simon. 2013 [pub. 2014]. 'Unproductive Labor in the U.S. Economy 1964-2010.' Review of Radical Political Economics 46(3): 355-379. DOI: 10.1177/0486613413506080."
+      "full": "Mohun, Simon. 2013 [pub. 2014]. 'Unproductive Labor in the U.S. Economy 1964-2010.' Review of Radical Political Economics 46(3): 355-379. DOI: 10.1177/0486613413506080.",
+      "doi": "10.1177/0486613413506080",
+      "doi_source": "crossref",
+      "doi_verified": "2026-05-24"
     },
     {
       "id": "ST_1994",
-      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press.",
+      "doi": "10.1017/cbo9780511528330",
+      "doi_source": "crossref",
+      "doi_verified": "2026-05-24"
     }
   ],
-  "methodology_summary": "Derived ratio S506/ES1401 (ST rate / Mohun 2005 SM rate). Mean \u2248 1.61 over 1964-2001. Reflects combined effect of: (1) ST approximation procedure errors (services wage overestimate, transportation wage overestimate); (2) classification boundary differences (Mohun's systematic exclusion of supervisory labor). The ratio rises over time as the post-1980 exploitation rate increase is larger under SM than under ST.",
+  "methodology_summary": "Derived ratio S506/ES1401 (ST rate / Mohun 2005 SM rate). Mean ≈ 1.61 over 1964-2001. Reflects combined effect of: (1) ST approximation procedure errors (services wage overestimate, transportation wage overestimate); (2) classification boundary differences (Mohun's systematic exclusion of supervisory labor). The ratio rises over time as the post-1980 exploitation rate increase is larger under SM than under ST.",
   "known_issues": [
-    "Ratio interpretation depends on whether S506 or ES1401 is the numerator \u2014 registry formula S506/ES1401 with mean=1.61 should be verified against actual computed values",
+    "Ratio interpretation depends on whether S506 or ES1401 is the numerator — registry formula S506/ES1401 with mean=1.61 should be verified against actual computed values",
     "Two distinct sources of divergence (approximation errors vs. classification boundaries) are conflated in a single ratio",
-    "Period mismatch: ES1401 covers 1964-2001; S506 covers different period \u2014 ratio only defined over intersection"
+    "Period mismatch: ES1401 covers 1964-2001; S506 covers different period — ratio only defined over intersection"
   ],
   "cross_references": [
     "ES1401",
@@ -75,5 +134,7 @@
     "L5_validation": []
   },
   "ported_from": "ST2/research/N1404_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "citation_dois_added_date": "2026-05-24",
+  "citation_dois_added_by": "v1.2-iter5-C5-crossref-dois"
 }

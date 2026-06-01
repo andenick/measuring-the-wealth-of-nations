@@ -1,0 +1,56 @@
+{
+  "chapter": "Ch2",
+  "chapter_label": "Production and Labor — Alternative GFP Measures (S201)",
+  "series_count": 1,
+  "series_ids": ["S201"],
+  "report_date": "2026-05-23T00:00:00Z",
+  "reporter": "agent",
+  "skill": "anu-adequacy",
+  "framework": "Anu Framework v12.0",
+  "stage": 2,
+  "cohort": "stage6_c1_reverify",
+  "layers": {
+    "L1_kb_completeness": {
+      "score": 85,
+      "evidence": "Unchanged. KB chunks 03, 04, 05 (book pages 21-50) cover the production/labor framework underlying Ch2; chunk_26 (Appendix A) covers the IO data source. S201_DPR.md (7-section, KB-anchored) consolidates the evidence.",
+      "blockers": []
+    },
+    "L2_data_source_availability": {
+      "score": 70,
+      "evidence": "+50 from stage3_c2 baseline (was 20). Although Technical/data/source/book_tables/ch02/Table2_1_AlternativeGFP.csv has STILL not been digitized as a dedicated source CSV, Stage 5 has produced a complete runnable L01/P02/V03 triad: chopped/S201.csv (44 rows, 1948-1989, proper Anu Chopped wide format with Row 1 metadata + Row 2 column IDs), data/intermediate/S201.csv, data/final/S201.csv, and data/intermediate/validation/S201.json (status=PASS, tolerance_class=share_series, actual_range=[0.773, 0.903] inside expected [0.6, 1.0]). The Ch2 series is therefore data-source adequate IN OPERATIONAL TERMS even though the canonical ch02/ source-CSV digitization remains the recommended cleanup. 30-point dock retained for the still-absent dedicated Table 2.1 source CSV.",
+      "blockers": ["Dedicated Table 2.1 source CSV not digitized (operationally non-blocking — Stage 5 triad produces validated output)"]
+    },
+    "L3_methodology_clarity": {
+      "score": 90,
+      "evidence": "Unchanged. S201_research.json carries complete methodology_summary plus 8 entries including 3 verbatim quotes. S201_DPR.md (7 H2 sections, KB-anchored) formalizes the construction.",
+      "blockers": []
+    },
+    "L4_registry_completeness": {
+      "score": 95,
+      "evidence": "Unchanged. All required fields present. Status correctly 'book_period_validated' with extension:null (binary invariant compliant). S201_DPR.md present. Extenbook S201.xlsx exists.",
+      "blockers": []
+    },
+    "L5_validation_refs": {
+      "score": 85,
+      "evidence": "+5 from stage3_c2 (was 80). reference_values still populated with 5 benchmark-year ratios. V03 validator NOW empirically PASSES (data/intermediate/validation/S201.json, status=PASS) — adds confidence that reference_values and expected_range are well-specified. 15-point dock retained for tolerance specification (validator infers share_series class but registry-level tolerance field not declared).",
+      "blockers": ["Registry-level tolerance still implicit"]
+    },
+    "L6_classification_accuracy": {
+      "score": 90,
+      "evidence": "Unchanged. Binary invariant satisfied. content_type='cross_sectional' correct for the Figure 1.1 mid-1960s benchmark snapshot; year_range/content_type cosmetic mismatch mitigated by year_range_target documentation.",
+      "blockers": []
+    }
+  },
+  "chapter_score": 85.83,
+  "gate_passed": true,
+  "recommendations": [
+    "Optional cleanup: digitize Table 2.1 to Technical/data/source/book_tables/ch02/Table2_1_AlternativeGFP.csv to retire the L2 dock (operationally non-blocking now that the Stage 5 triad PASSES)",
+    "Declare validation.tolerance_class='share_series' explicitly in registry to close L5",
+    "Optional: split year_range into book_year_range[1948,1989] vs extension_year_range[1990,2024]"
+  ],
+  "revision_history": [
+    {"ts": "2026-05-23T00:00:00+00:00", "score": 64.17, "gate": false, "agent": "stage2_cohort1"},
+    {"ts": "2026-05-24T00:30:00+00:00", "score": 76.67, "gate": false, "agent": "stage3_cohort2_reverify"},
+    {"ts": "2026-05-24T03:15:00+00:00", "score": 85.83, "gate": true, "agent": "stage6_reverify"}
+  ]
+}

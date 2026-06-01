@@ -42,6 +42,51 @@
       "entry_type": "decision_reference",
       "content": "[internal-decision-record]: The VA*/W constant assumption (ec_u/ec_p ≈ 1.238) propagates directly into S507 because S507 is a monotonic transform of the exploitation rate (S506). The partial resolution in Session 14 (year-varying ec_u/ec_p) reduces but does not eliminate the systematic error. The SIC-era gap (1990-1997) is handled by log-linear interpolation ([internal-decision-record]). S507 extension values carry the same systematic error as S506.",
       "source_ref": "[internal-decision-log] [internal-decision-record] (2025-12-05, partially resolved 2026-03-30)"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The rate of exploitation is the ratio of surplus labor time to necessary labor time. This concept applies to all capitalistically employed wage labor, whether it is productive or unproductive (Shaikh 1978b, p. 21).",
+      "source_ref": "ST_1994, Ch4 Sec 4.2, p.87; chunk_11",
+      "page_reference": "87",
+      "context": "Anchors S507 as the empirical operationalization of Shaikh's exploitation-rate concept; S507 = S*/(S*+V*) is the monotonic transform e/(1+e) of the productive-worker rate of surplus value defined here."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "However, observed differences in money and labor value ratios will be indicators of price-value deviations only if the mapping involved is consistent in the sense just described. If it is not, then the two sets of magnitudes would differ even when purchaser prices are equal to labor values, simply because the calculation procedure is inconsistent.",
+      "source_ref": "ST_1994, Ch4 Sec 4.1, p.84; chunk_11",
+      "page_reference": "84",
+      "context": "Justifies the S507 construction protocol: S* and V* must both be measured in money form using the consistent procedure (trading margins included) so that the surplus ratio reflects price-value deviations rather than methodological artifacts."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Money rate S*/V* and labor value rate S/V differ by only 6%-9% in all years studied; S*/V* consistently lower than S/V (Khanjian 1989, p. 109, table 19).",
+      "source_ref": "ST_1994, Ch4 Sec 4.1, p.84; chunk_11",
+      "page_reference": "84",
+      "context": "Empirical bound used to validate S507 outputs: the money-form surplus ratio S*/(S*+V*) tracks the labor-value surplus ratio within 6-9% across all benchmark years, supporting use of NIPA-based S* and V* as proxies for the underlying labor magnitudes."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "S* = VA* − V* = surplus value (in money form); S*/V* = rate of surplus value.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.114",
+      "context": "Section 5.4, p. 114: S507 is the monotonic transform S*/(S*+V*) = e/(1+e) of the same primitive ratio. Identical algebraic source as S506."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "For U.S. data, the orthodox measure VA = P + EC remains within 10% of the Marxian measure VA* = V* + S*.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.114",
+      "context": "Footnote 15, p. 114: empirical justification for the VA* ≈ W + S* constraint that underlies S507's identity. Marked verbatim_check=False because the source rendering omits the asterisks present in the original (book uses subscripted/asterisked symbols)."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "This latter movement [of the surplus ratio] is a reflection of the corresponding decline in productive to total wages, because S* = VA* − Wp = VA* − ECp and (P⁺) = NNP − EC = VA − EC, and the two measures of value added remain fairly close.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.114",
+      "context": "Section 5.4, p. 114: explains why S507 (the Marxian surplus ratio) and the orthodox P⁺/VA share trend but differ in level."
     }
   ],
   "citations": [
@@ -79,5 +124,29 @@
     "L5_validation": []
   },
   "ported_from": "ST2/research/T507_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "text": "S* = VA* − V* = surplus value (in money form); S*/V* = rate of surplus value.",
+      "page": 114,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.4, p. 114: S507 is the monotonic transform S*/(S*+V*) = e/(1+e) of the same primitive ratio. Identical algebraic source as S506."
+    },
+    {
+      "text": "For U.S. data, the orthodox measure VA = P + EC remains within 10% of the Marxian measure VA* = V* + S*.",
+      "page": 114,
+      "chapter": 5,
+      "verbatim_check": false,
+      "context": "Footnote 15, p. 114: empirical justification for the VA* ≈ W + S* constraint that underlies S507's identity. Marked verbatim_check=False because the source rendering omits the asterisks present in the original (book uses subscripted/asterisked symbols)."
+    },
+    {
+      "text": "This latter movement [of the surplus ratio] is a reflection of the corresponding decline in productive to total wages, because S* = VA* − Wp = VA* − ECp and (P⁺) = NNP − EC = VA − EC, and the two measures of value added remain fairly close.",
+      "page": 114,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.4, p. 114: explains why S507 (the Marxian surplus ratio) and the orthodox P⁺/VA share trend but differ in level."
+    }
+  ],
+  "verbatim_quotes_deprecated": true
 }

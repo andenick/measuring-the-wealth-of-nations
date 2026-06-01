@@ -50,6 +50,58 @@
       "entry_type": "decision_reference",
       "content": "[internal-decision-record]: S514 inherits the total K (not K*) capital denominator from S513. The profit rate levels are understated relative to the book's intended productive-sector-only denominator, but trend dynamics are preserved. Resolution requires Wave 2 IO-based sector classification (ADJ-001).",
       "source_ref": "[internal-decision-log]#[internal-decision-record]"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Finally, since we are concerned here with the long-term tendencies of the rates of profit, all measured ratios are adjusted for cyclical fluctuations by means of a measure of capacity utilization developed in Shaikh (1987, 1992a). The rate of profit may be thought of as responding to long-term structural changes in the rate of surplus value and the organic composition of capital, and to short-term fluctuations arising from cycles and from specific historical events such as wars, droughts, and so on. The latter will be reflected as fluctuations in the rate of utilization of the capital stock, which show up as corresponding fluctuations in the mass of profit. To eliminate this effect, we divide the mass of profit by the rate of capacity utilization, in much the same way as actual output is traditionally divided by capacity utilization to estimate potential output.",
+      "source_ref": "ST_1994, Ch5, p.124; chunk_15",
+      "page_reference": "124",
+      "context": "Section 5.5: complete methodological justification for r*_adj (S514). Confirms the formula divides the mass of profit by capacity utilization to isolate long-term structural movement from short-term cyclical noise."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "We also estimate the value composition of (fixed) capital C*/V* = K/V*, as well as the materialized composition of (fixed) capital C*/(V* + S*) = K/(V* + S*). All variables are in current dollars, including the capital stock that is measured at current replacement costs.",
+      "source_ref": "ST_1994, Ch5, p.122; chunk_15",
+      "page_reference": "122",
+      "context": "Section 5.5: confirms that the value composition C*/V* uses fixed capital K in the numerator (with circulating capital omitted per Footnote 16), and that all magnitudes are current-dollar at replacement cost — a critical scaling constraint S514's L01 loader must honor."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The second period represents the Reagan-Bush era from 1980 to 1989, in which the capitalist class unleashed a systematic assault on workers' living standards and working conditions (see Section 5.9 for further details). The rise in the rate of surplus value accelerates over this interval, its trend rate more than doubling. Moreover, the rates of growth of C*/V* and C*/(V* + S*) slow down in this period, because the rate of profit is still low and accumulation is slow (which in turn slows down the adoption of new, more capital-intensive technologies). The overall effect is to reverse the trends in the three measures of the rate of profit: During this nine-year interval, the Marxian rate of profit recovers about 7% of its initial (1948) value, the NIPA-based average rate about 5%, and the corporate rate a mere 3%.",
+      "source_ref": "ST_1994, Ch5, p.129; chunk_15",
+      "page_reference": "129",
+      "context": "Section 5.5: documents the 1980-89 Reagan-era reversal — accelerating rate of surplus value, decelerating C*/V* growth, partial profit-rate recovery. S514 must reproduce both the secular decline (1948-80) and this end-of-period reversal."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Figure 5.15 compares the value composition (of the flows) of capital C*/V* with its orthodox counterpart, the ratio of intermediate inputs to wages M/EC. Once again, we see that the orthodox measure is not a proxy for the Marxian one. C*/V* is from 50% to 90% larger than M/EC, and during the postwar period rises by 23% while the latter falls by almost 11%. Neither the level nor the trend of the former is captured by that of the latter.",
+      "source_ref": "ST_1994, Ch5, p.121; chunk_14",
+      "page_reference": "121",
+      "context": "Section 5.4 closing: empirical comparison of Marxian C*/V* against the orthodox M/EC proxy. Confirms that S514's value-composition variant cannot be substituted by orthodox intermediate-input data."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Since we are concerned here with the long-term tendencies of the rates of profit, all measured ratios are adjusted for cyclical fluctuations by means of a measure of capacity utilization developed in Shaikh (1987, 1992a). The rate of profit may be thought of as responding to long-term structural changes in the rate of surplus value and the organic composition of capital, and to short-term fluctuations arising from cycles and from specific historical events such as wars, droughts, and so on. The latter will be reflected as fluctuations in the rate of utilization of the capital stock, which show up as corresponding fluctuations in the mass of profit. To eliminate this effect, we divide the mass of profit by the rate of capacity utilization, in much the same way as actual output is traditionally divided by capacity utilization to estimate potential output.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.124",
+      "context": "Section 5.5, p. 124: exact methodology for the capacity-adjusted profit rate r*_adj. S514 implements r*_adj = r*/TCU using Fed G.17 capacity utilization."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The overall effect is to reverse the trends in the three measures of the rate of profit: During this nine-year interval, the Marxian rate of profit recovers about 7% of its initial (1948) value, the NIPA-based average rate about 5%, and the corporate rate a mere 3%.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.129",
+      "context": "Section 5.5, p. 129: documents the 1980-1989 Reagan-era recovery in the capacity-adjusted profit rate, a key empirical pattern S514 tabulates."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The rise in the rate of surplus value accelerates over this interval, its trend rate more than doubling. Moreover, the rates of growth of C*/V* and C*/(V*+S*) slow down in this period, because the rate of profit is still low and accumulation is slow.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.129",
+      "context": "Section 5.5, p. 129: decomposition of the Reagan-era r*_adj recovery into accelerating e (S506) and decelerating OCC growth. S514 inherits this structural diagnosis."
     }
   ],
   "citations": [
@@ -88,5 +140,29 @@
     "L5_validation": []
   },
   "ported_from": "ST2/research/T514_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "text": "Since we are concerned here with the long-term tendencies of the rates of profit, all measured ratios are adjusted for cyclical fluctuations by means of a measure of capacity utilization developed in Shaikh (1987, 1992a). The rate of profit may be thought of as responding to long-term structural changes in the rate of surplus value and the organic composition of capital, and to short-term fluctuations arising from cycles and from specific historical events such as wars, droughts, and so on. The latter will be reflected as fluctuations in the rate of utilization of the capital stock, which show up as corresponding fluctuations in the mass of profit. To eliminate this effect, we divide the mass of profit by the rate of capacity utilization, in much the same way as actual output is traditionally divided by capacity utilization to estimate potential output.",
+      "page": 124,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.5, p. 124: exact methodology for the capacity-adjusted profit rate r*_adj. S514 implements r*_adj = r*/TCU using Fed G.17 capacity utilization."
+    },
+    {
+      "text": "The overall effect is to reverse the trends in the three measures of the rate of profit: During this nine-year interval, the Marxian rate of profit recovers about 7% of its initial (1948) value, the NIPA-based average rate about 5%, and the corporate rate a mere 3%.",
+      "page": 129,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.5, p. 129: documents the 1980-1989 Reagan-era recovery in the capacity-adjusted profit rate, a key empirical pattern S514 tabulates."
+    },
+    {
+      "text": "The rise in the rate of surplus value accelerates over this interval, its trend rate more than doubling. Moreover, the rates of growth of C*/V* and C*/(V*+S*) slow down in this period, because the rate of profit is still low and accumulation is slow.",
+      "page": 129,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.5, p. 129: decomposition of the Reagan-era r*_adj recovery into accelerating e (S506) and decelerating OCC growth. S514 inherits this structural diagnosis."
+    }
+  ],
+  "verbatim_quotes_deprecated": true
 }

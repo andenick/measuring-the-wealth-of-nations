@@ -51,6 +51,69 @@
       "entry_type": "decision_log_note",
       "content": "[internal-decision-record] (2026-04-09): Tax allocation methodology confirmed. The NRYwp net royalty framework (Section 3.3, pages 63-65) underpins the allocation of social insurance taxes to workers. Social insurance taxes are a direct royalty payment deducted from productive workers' wages. P09 methodology verified correct.",
       "source_ref": "[internal-decision-log], [internal-decision-record]"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "As noted in Section 3.3, the nominal wages of production workers must be adjusted for the net transfers of royalties (ground rent, interest, and taxes) from variable capital. We calculate only the portion of this arising from the net transfer between workers and the state. The methodology and actual estimates are from Shaikh and Tonak (1987) for the United States from 1952 to 1985.",
+      "source_ref": "ST_1994, Section 5.9, page 137; HDARP chunk_16 lines 69-73",
+      "page_reference": "p. 137",
+      "context": "Frames social insurance tax allocation to workers as part of the net royalty transfer between labor and the state — the conceptual basis for S602."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Group I - Social security taxes (100% from workers): Employee contributions; Employer contributions (deducted before workers receive income); Net government receipts from lotteries (treated as direct tax - footnote 1).",
+      "source_ref": "ST_1994, Appendix N (Tax Classification, Group I), page 357; HDARP chunk_38 lines 257-260",
+      "page_reference": "Appendix N, p. 357",
+      "context": "Authors' explicit operational rule that 100% of social insurance contributions (both employee and employer side) are attributed to workers — the direct allocation rule implemented in S602."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Contributions for social insurance 1964: total 30.1, labor portion 30.1 (Direct, 100% from labor).",
+      "source_ref": "ST_1994, Table N.1 (Taxes, Group I), 1964 benchmark; HDARP chunk_38 line 300",
+      "page_reference": "Table N.1, p. 358",
+      "context": "Numeric benchmark for 1964 confirming S602 allocation ratio = 1.00 (no labor-share scaling); both employee and employer portions count toward worker tax burden."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Starting point: Total employee compensation (EC) - Cost to capitalists of hiring workers - Includes wages + employer contributions for social insurance + other labor income.",
+      "source_ref": "ST_1994, Appendix N preamble; HDARP chunk_38 lines 253-256",
+      "page_reference": "Appendix N, p. 357",
+      "context": "Justifies employer SI contribution treatment: because EC already includes employer SI contributions, attributing those contributions to workers (S602) is consistent with the classical view of variable capital."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Group I - Social security taxes (100% from workers): Employee contributions; Employer contributions (deducted before workers receive income); Net government receipts from lotteries (treated as direct tax - footnote 1).",
+      "source_ref": "ST_1994, Appendix N (Tax Classification, Group I); KB chunk_38 lines 257-260",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Starting point: Total employee compensation (EC) - Cost to capitalists of hiring workers - Includes wages + employer contributions for social insurance + other labor income.",
+      "source_ref": "ST_1994, Appendix N (Tax Classification preamble); KB chunk_38 lines 253-256",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Contributions for social insurance 1964: total 30.1, labor portion 30.1 (Direct, 100% from labor).",
+      "source_ref": "ST_1994, Table N.1 (Taxes, Group I); KB chunk_38 line 300",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Tax rate (T1/EC): 1952: 0.18 (18%) -> 1989: 0.32 (32%) - Increased 1.8x (workers paid more taxes).",
+      "source_ref": "ST_1994, Table N.2 trends 1952-89; KB chunk_38 lines 363-365",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Excluded taxes (not levied on workers - footnote 2): Corporate profit taxes; Indirect business taxes; Estate and gift taxes (only apply to highest income levels).",
+      "source_ref": "ST_1994, Appendix N footnote 2; KB chunk_38 lines 268-271",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
     }
   ],
   "citations": [
@@ -65,6 +128,33 @@
     {
       "id": "Shaikh_Tonak_1987",
       "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' New School for Social Research working paper."
+    }
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "Group I - Social security taxes (100% from workers): Employee contributions; Employer contributions (deducted before workers receive income); Net government receipts from lotteries (treated as direct tax - footnote 1).",
+      "source_ref": "ST_1994, Appendix N (Tax Classification, Group I); KB chunk_38 lines 257-260",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Starting point: Total employee compensation (EC) - Cost to capitalists of hiring workers - Includes wages + employer contributions for social insurance + other labor income.",
+      "source_ref": "ST_1994, Appendix N (Tax Classification preamble); KB chunk_38 lines 253-256",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Contributions for social insurance 1964: total 30.1, labor portion 30.1 (Direct, 100% from labor).",
+      "source_ref": "ST_1994, Table N.1 (Taxes, Group I); KB chunk_38 line 300",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Tax rate (T1/EC): 1952: 0.18 (18%) -> 1989: 0.32 (32%) - Increased 1.8x (workers paid more taxes).",
+      "source_ref": "ST_1994, Table N.2 trends 1952-89; KB chunk_38 lines 363-365",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Excluded taxes (not levied on workers - footnote 2): Corporate profit taxes; Indirect business taxes; Estate and gift taxes (only apply to highest income levels).",
+      "source_ref": "ST_1994, Appendix N footnote 2; KB chunk_38 lines 268-271",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
     }
   ],
   "methodology_summary": "Worker social insurance taxes include both employee and employer payroll contributions to OASDI, Medicare, and unemployment insurance. Both sides are attributed to workers per the classical political economy framework. [internal-decision-record] confirms allocation method consistent with NRYwp net royalty framework.",
@@ -96,5 +186,6 @@
     ]
   },
   "ported_from": "ST2/research/T602_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes_deprecated": true
 }

@@ -50,6 +50,58 @@
       "entry_type": "decision_reference",
       "content": "[internal-decision-record]: DIV-001 (K→K* capital stock restriction) is BLOCKED pending a comprehensive unit audit. S505 (S*) is in millions from Table 5.7, while K from BEA Fixed Assets uses a different unit convention (UNIT_MULT=6). Computing S*/K or any ratio involving both series produces inflated results until unit normalization is completed. The S*/K ratio for profit rate purposes must not be computed until the unit mismatch is resolved. ADJ-001 remains BLOCKED.",
       "source_ref": "[internal-decision-log] [internal-decision-record] (2026-04-09)"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The estimates of variable capital in the previous section allow us to calculate surplus value and surplus product. By definition, S* = VA* − V* = surplus value (in money form); S*/V* = rate of surplus value; NP* = the necessary product (consumption of productive workers) = V*; SP* = FP* − NP* = surplus product.",
+      "source_ref": "ST_1994, Ch5, p.113-114; chunk_14",
+      "page_reference": "113-114",
+      "context": "Section 5.4 (pp. 113-114) — canonical definition of S* as Marxian value-added minus variable capital. This is the identity S505 implements as S503 (GFP/VA*) − S504 (V*)."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "P+ is intended as a 'naive' measure of surplus value, as directly derived from NIPA. Since NIPA does not estimate the wage equivalent, the only wage cost directly shown would be EC. Hence, P+ = VA−EC = NNP−EC.",
+      "source_ref": "ST_1994, Ch5, p.114, footnote 14; chunk_14",
+      "page_reference": "114",
+      "context": "Footnote 14, p. 114 — distinguishes S* from the orthodox 'naive' surplus measure P+. Anchors the divergence between S505 and any profit-type aggregate computed from NIPA EC alone; warrants S505 ≠ corporate profits."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "For U.S. data, the orthodox measure VA = P + EC remains within 10% of the Marxian measure VA* = V* + S*, so the difference between P/EC and S*/V* is largely due to the fact that V* = Wp << EC. But we cannot assume that the rough equality that holds for the United States between the two value-added measures is a universal phenomenon.",
+      "source_ref": "ST_1994, Ch5, p.114, footnote 15; chunk_14",
+      "page_reference": "114",
+      "context": "Footnote 15, p. 114 — quantifies the VA* vs VA gap (≤10% for U.S.) and locates the principal source of S*/V* >> P/EC in the V* << EC inequality. Bounds the magnitude of error from approximating S* via NIPA value-added in the extension period."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Figure 5.12 compares real surplus value and real profits (defined here as real P). Both rise strongly, but not equally so; real surplus value rises about 16% relative to real profits.",
+      "source_ref": "ST_1994, Ch5, p.114; chunk_14",
+      "page_reference": "114",
+      "context": "Section 5.4, Figure 5.12 (p. 114) — empirical magnitude: real S* grows ~16% more than real profits 1948-1989. Documents the level/trend divergence between S505 and orthodox profit aggregates."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "S* = VA* − V* = surplus value (in money form); S*/V* = rate of surplus value; NP* = the necessary product (consumption of productive workers) = V*; SP* = FP* − NP* = surplus product.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.114",
+      "context": "Section 5.4, p. 114: the canonical definition of S* used to derive S505 as GFP - V*. Confirms the S505 derivation S* = S503 − S504."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "P⁺ is intended as a 'naive' measure of surplus value, as directly derived from NIPA. Since NIPA does not estimate the wage equivalent, the only wage cost directly shown would be EC. Hence, P⁺ = VA − EC = NNP − EC.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.114",
+      "context": "Footnote 14, p. 114: clarifies why S* >> P⁺ (the naive orthodox surplus). Anchors the divergence between S505 and orthodox profit-type income reported in Mohun's comparison."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Figure 5.12 compares real surplus value and real profits (defined here as real P). Both rise strongly, but not equally so; real surplus value rises about 16% relative to real profits.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.114",
+      "context": "Empirical magnitude: S*_real grows ~16% more than P_real over 1948-1989. Documents the divergence between S505 and the orthodox profit aggregate."
     }
   ],
   "citations": [
@@ -92,5 +144,29 @@
     ]
   },
   "ported_from": "ST2/research/T505_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "text": "S* = VA* − V* = surplus value (in money form); S*/V* = rate of surplus value; NP* = the necessary product (consumption of productive workers) = V*; SP* = FP* − NP* = surplus product.",
+      "page": 114,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.4, p. 114: the canonical definition of S* used to derive S505 as GFP - V*. Confirms the S505 derivation S* = S503 − S504."
+    },
+    {
+      "text": "P⁺ is intended as a 'naive' measure of surplus value, as directly derived from NIPA. Since NIPA does not estimate the wage equivalent, the only wage cost directly shown would be EC. Hence, P⁺ = VA − EC = NNP − EC.",
+      "page": 114,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Footnote 14, p. 114: clarifies why S* >> P⁺ (the naive orthodox surplus). Anchors the divergence between S505 and orthodox profit-type income reported in Mohun's comparison."
+    },
+    {
+      "text": "Figure 5.12 compares real surplus value and real profits (defined here as real P). Both rise strongly, but not equally so; real surplus value rises about 16% relative to real profits.",
+      "page": 114,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Empirical magnitude: S*_real grows ~16% more than P_real over 1948-1989. Documents the divergence between S505 and the orthodox profit aggregate."
+    }
+  ],
+  "verbatim_quotes_deprecated": true
 }

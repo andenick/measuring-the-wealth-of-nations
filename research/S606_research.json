@@ -51,6 +51,69 @@
       "entry_type": "decision_log_note",
       "content": "[internal-decision-record] (2026-03-30): The 1996 welfare reform changed the composition of government services available to workers, particularly in means-tested program structures. NIPA Table 3.1 continuous coverage bridges this transition. S606 shows a structural break around 1996-1997 — documented in V03 continuity checks but not adjusted. Note: Per [internal-decision-record], government consumption (E2: education, health, transportation from NIPA T3.16) is retained in L17 but excluded from the Moos NSW formula — included here in G_w under the broader Shaikh-Tonak definition.",
       "source_ref": "[internal-decision-log], [internal-decision-record]; [internal-decision-record]"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Group II - Social consumption (workers' share = labor income/personal income): Education; Health and hospitals; Recreational and cultural activities; Energy; Natural resources; Transportation (adjusted by gas share of passenger cars); Postal services.",
+      "source_ref": "ST_1994, Appendix N (Expenditure Classification, Group II); KB chunk_38 lines 226-233",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Group III - Excluded from labor consumption: (a) Faux frais of capitalist society (Marx 1977, p. 446): Central executive, legislative, judicial activities; International affairs; Space; National defense; Civilian safety; Veteran benefits; Agriculture.",
+      "source_ref": "ST_1994, Appendix N (Expenditure Classification, Group III(a)); KB chunk_38 lines 235-243",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Group II (labor share = 0.727) 1964: Education 27.6 -> 20.1; Health and hospitals 6.4 -> 4.7; Recreational and cultural activities 1.2 -> 0.9; Energy 1.0 -> 0.7; Natural resources 2.0 -> 1.5; Postal service 0.8 -> 0.6; Transportation 13.1 -> 6.7 (+ gas adjustment).",
+      "source_ref": "ST_1994, Table N.1 Group II expenditures 1964; KB chunk_38 lines 285-292",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Transportation adjusted by gas share of passenger cars (Tonak 1984, chap. IV, apx. II).",
+      "source_ref": "ST_1994, Appendix N methodology notes; KB chunk_38 line 324",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "(b) Capitalist-directed expenditures: Economic development, regulation, services; Net interest (to highest income brackets); Others and unallocables (small businesses, related administration).",
+      "source_ref": "ST_1994, Appendix N (Expenditure Classification, Group III(b)); KB chunk_38 lines 244-247",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Property taxes: Only homeowner portion, then x labor share (Tonak 1984, chap. IV, apx. I).",
+      "source_ref": "ST_1994, Appendix N methodology notes; KB chunk_38 line 325",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Labor share 1964: 0.727 (labor income / personal income).",
+      "source_ref": "ST_1994, Table N.1 data sources; KB chunk_38 line 321",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Exception: Military disability and military retirement (treated as costs of war, excluded).",
+      "source_ref": "ST_1994, Appendix N (Group I exclusion); KB chunk_38 line 224",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "For Phase 1 NSW: Government as secondary sector receiving transfers from primary; Cannot double-count government revenues; Must track actual uses of product induced by government expenditures.",
+      "source_ref": "ST_1994, Ch7 Section 7.2 application to NSW; KB chunk_24 lines 410-413",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_24/full_transcription.md"
     }
   ],
   "citations": [
@@ -65,6 +128,53 @@
     {
       "id": "Moos_2017",
       "full": "Moos, Julie. 2017. The Net Social Wage in the United States, 1952-2012. PhD dissertation."
+    }
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "Group II - Social consumption (workers' share = labor income/personal income): Education; Health and hospitals; Recreational and cultural activities; Energy; Natural resources; Transportation (adjusted by gas share of passenger cars); Postal services.",
+      "source_ref": "ST_1994, Appendix N (Expenditure Classification, Group II); KB chunk_38 lines 226-233",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Group III - Excluded from labor consumption: (a) Faux frais of capitalist society (Marx 1977, p. 446): Central executive, legislative, judicial activities; International affairs; Space; National defense; Civilian safety; Veteran benefits; Agriculture.",
+      "source_ref": "ST_1994, Appendix N (Expenditure Classification, Group III(a)); KB chunk_38 lines 235-243",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Group II (labor share = 0.727) 1964: Education 27.6 -> 20.1; Health and hospitals 6.4 -> 4.7; Recreational and cultural activities 1.2 -> 0.9; Energy 1.0 -> 0.7; Natural resources 2.0 -> 1.5; Postal service 0.8 -> 0.6; Transportation 13.1 -> 6.7 (+ gas adjustment).",
+      "source_ref": "ST_1994, Table N.1 Group II expenditures 1964; KB chunk_38 lines 285-292",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Transportation adjusted by gas share of passenger cars (Tonak 1984, chap. IV, apx. II).",
+      "source_ref": "ST_1994, Appendix N methodology notes; KB chunk_38 line 324",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "(b) Capitalist-directed expenditures: Economic development, regulation, services; Net interest (to highest income brackets); Others and unallocables (small businesses, related administration).",
+      "source_ref": "ST_1994, Appendix N (Expenditure Classification, Group III(b)); KB chunk_38 lines 244-247",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Property taxes: Only homeowner portion, then x labor share (Tonak 1984, chap. IV, apx. I).",
+      "source_ref": "ST_1994, Appendix N methodology notes; KB chunk_38 line 325",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Labor share 1964: 0.727 (labor income / personal income).",
+      "source_ref": "ST_1994, Table N.1 data sources; KB chunk_38 line 321",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Exception: Military disability and military retirement (treated as costs of war, excluded).",
+      "source_ref": "ST_1994, Appendix N (Group I exclusion); KB chunk_38 line 224",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "For Phase 1 NSW: Government as secondary sector receiving transfers from primary; Cannot double-count government revenues; Must track actual uses of product induced by government expenditures.",
+      "source_ref": "ST_1994, Ch7 Section 7.2 application to NSW; KB chunk_24 lines 410-413",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_24/full_transcription.md"
     }
   ],
   "methodology_summary": "Government services to workers allocate public education, health, and infrastructure spending by worker usage share. Military and police spending excluded. Education is the dominant component. [internal-decision-record]: 1996 welfare reform structural break handled via NIPA continuous coverage; break documented in V03.",
@@ -96,5 +206,6 @@
     "L5_validation": []
   },
   "ported_from": "ST2/research/T606_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes_deprecated": true
 }

@@ -11,7 +11,7 @@
     "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md",
     "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_31/full_transcription.md",
     "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_33/full_transcription.md",
-    "NickyData/series_registry.json"
+    "AnuData/series_registry.json"
   ],
   "entries": [
     {
@@ -43,6 +43,62 @@
       "entry_type": "caveat",
       "content": "[internal-decision-record] documents the R² issues in S703 that reflect back on S702 computation quality. Three layers of concern: (1) The λ_m scalar is applied uniformly across all sectors, whereas ST 1994 Section 4.2 requires sector-level value-added decomposition (c_j and v_j computed within each sector's value-added account, not via a single aggregate ratio). (2) The 1963 benchmark year shows S702 values collapsing to near floating-point zero before the λ_m fix — designated WARN-03 — suggesting a data gap in the 1963 BEA IO table, not a real economic reading. (3) Surplus in the current implementation is computed from GO_j − V*_j rather than VA*_j − V*_j, contrary to the book's price-of-production derivation; this misallocates depreciation and inflates the profit-rate numerator. Resolution is deferred to Wave 2.",
       "source_ref": "[internal-decision-record]; series_registry.json S702 (wave: 2, status: calculated); T703_research.json known_issues"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "For aggregate money value calculations, this is adequate because we are only interested in the sum of money values. But for labor value calculations, we generally need to know the individual elements of the productive sectors. Therefore we may also think of the production-row elements in Figure 4.1 as matrices representing corresponding partitions of the matrix pictured in Figure 3.11.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.79",
+      "context": "Ch4 §4.1 | BOOK methodology for sector-disaggregated labor-value/price-of-production work (S702's intended concept). The proxy lacks sector-level disaggregation."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Since the lambda_j*'s are ratios of labor values to producer prices, we must be careful to apply them only to the producer-price components of commodity flows. Thus the labor value of productive inputs C is derived by multiplying the producer price of the ith input by the labor-value/producer-price ratio lambda_i*. In terms of Figure 4.1, this means that the matrix of constant capital is calculated by multiplying only the matrix of elements (M_p)_p by lambda*.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.81",
+      "context": "Ch4 §4.1 | Constant-capital construction for price-of-production formula. C must be computed sector-by-sector via lambda_i* * (M_p)_p. S702 proxy uses aggregate matrix scalar instead."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The same issue arises in the calculation of the labor value of productive labor power V. Given some estimate of the consumption basket of production workers CONW_p, the labor value of this is the labor-value/producer-price ratio vector lambda* multiplied only by the producer price component (CONW_p)_p (see Figure 4.1).",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.81-82",
+      "context": "Ch4 §4.1 | Variable-capital component of price-of-production formula. V_labor = lambda*(CONW_p)_p (book formula). Proxy uses single aggregate lambda_m = H_p/VA* scalar."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Using the consistent procedure, Khanjian (1989) shows that value and price rates of surplus value differ by only small amounts (6%-9%), which indicates that the effects of price-value deviations on aggregate measures are quite minor (Section 5.10, Table 5.12, and Figure 5.25).",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.223",
+      "context": "Ch7 §7.3 | Ch7 verbatim -- under a CONSISTENT procedure, price-of-production deviations from labor values are small. This is the book's empirical claim S702 (as intended) is meant to verify; proxy implementation cannot speak to this."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Corresponding labor coefficients: hp*_j = hp_j / p_j. Empirical formulas: lambda* = hp* + lambda* * app*; lambda* = hp* * (I - app*)^{-1}; where lambda* = row vector of labor-value/producer-price ratios, lambda*_j = lambda_j / p_j. Since the lambda*_j's are ratios of labor values to producer prices, we must be careful to apply them only to the producer-price components of commodity flows.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.81-82",
+      "context": "Ch4 §4.1 | REAL-FIX ANCHOR for S702: prices of production pp*_j = (1+r_bar)(c_j + v_j) require c_j and v_j to be SECTOR-LEVEL constructions using hp*_j (hr/$) per sector. The current proxy lacks per-sector hp* entirely. The Khanjian 6-9% deviation benchmark (Section 5.10) presumes a consistent sector-disaggregated procedure."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Key derivation (one productive sector case): app* = [1/5] ($/$ input coefficient); hp* = (8/5) (hr/$ labor coefficient); lambda* = hp* * [I - app*]^{-1} = (8/5) * [1 - 1/5]^{-1} = (8/5) * (5/4) = 2 hr/$. Verification: lambda* should equal TV/GO_p = 2000 hr / $1000 = 2 hr/$. Aggregate labor value added: Hp = V + S = 1600 hr; aggregate wages of production workers: Wp = $200; implied hourly wage rate: $200/1600 = $1/8 per hour. Sectoral labor flows derived by dividing wage bills by this rate.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.82-83",
+      "context": "Ch4 §4.1 Figure 4.2/4.3 footnote 4 | PROXY DISCLOSURE for S702: book's worked example shows lambda_m-equivalent (Hp / TV at producer prices) is derivable BY SECTOR via wage bill / hourly wage rate, but the proxy applies a single aggregate scalar uniformly. The footnote 4 procedure (sectoral labor flow = sectoral wage bill / aggregate hourly wage rate) is the simplest available BLS-data-only sector hp* construction and should anchor the real-fix plan."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Note that the productive employment estimates required for hp*: (Lp)agr = Estimated total productive labor in agriculture, forestry, and fisheries; (Lp)con = Estimated total productive labor in construction; (Lp)gefed = Estimated total productive labor in government enterprises (federal); (Lp)gesl = Estimated total productive labor in government enterprises (state and local); (Lp)man = Estimated total productive labor in manufacturing; (Lp)min = Estimated total productive labor in mining; (Lp)serv = Estimated total productive labor in productive services; (Lp)tut = Estimated total productive labor in transportation and public utilities.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "p.Appendix G Table G.2 variable definitions",
+      "context": "Appendix G | DATA-SOURCING ANCHOR for the real S701/S702 fix: book already publishes the SECTORAL productive-employment vector (Lp)_sector that, combined with average weekly hours, yields hp_j hours per sector. Divided by sector gross output X_j (producer prices, from IO benchmark tables) yields hp*_j in hr/$. This is the path the proxy bypasses. Answer to 'BLS CES or Leontief or other': it is BLS productive-employment hours (CES filtered through Table F.1 productive shares), divided by IO gross output -- a HYBRID source, not pure CES."
     }
   ],
   "citations": [
@@ -95,5 +151,83 @@
     "L5_validation": []
   },
   "ported_from": "ST2/research/T702_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "text": "For aggregate money value calculations, this is adequate because we are only interested in the sum of money values. But for labor value calculations, we generally need to know the individual elements of the productive sectors. Therefore we may also think of the production-row elements in Figure 4.1 as matrices representing corresponding partitions of the matrix pictured in Figure 3.11.",
+      "page": "79",
+      "section": "Ch4 §4.1",
+      "source": "ST_1994",
+      "anchor": "BOOK methodology for sector-disaggregated labor-value/price-of-production work (S702's intended concept). The proxy lacks sector-level disaggregation.",
+      "backfill_date": "2026-05-19",
+      "backfill_task": "D3_RMWND_quotes_ch7_etc"
+    },
+    {
+      "text": "Since the lambda_j*'s are ratios of labor values to producer prices, we must be careful to apply them only to the producer-price components of commodity flows. Thus the labor value of productive inputs C is derived by multiplying the producer price of the ith input by the labor-value/producer-price ratio lambda_i*. In terms of Figure 4.1, this means that the matrix of constant capital is calculated by multiplying only the matrix of elements (M_p)_p by lambda*.",
+      "page": "81",
+      "section": "Ch4 §4.1",
+      "source": "ST_1994",
+      "anchor": "Constant-capital construction for price-of-production formula. C must be computed sector-by-sector via lambda_i* * (M_p)_p. S702 proxy uses aggregate matrix scalar instead.",
+      "backfill_date": "2026-05-19",
+      "backfill_task": "D3_RMWND_quotes_ch7_etc"
+    },
+    {
+      "text": "The same issue arises in the calculation of the labor value of productive labor power V. Given some estimate of the consumption basket of production workers CONW_p, the labor value of this is the labor-value/producer-price ratio vector lambda* multiplied only by the producer price component (CONW_p)_p (see Figure 4.1).",
+      "page": "81-82",
+      "section": "Ch4 §4.1",
+      "source": "ST_1994",
+      "anchor": "Variable-capital component of price-of-production formula. V_labor = lambda*(CONW_p)_p (book formula). Proxy uses single aggregate lambda_m = H_p/VA* scalar.",
+      "backfill_date": "2026-05-19",
+      "backfill_task": "D3_RMWND_quotes_ch7_etc"
+    },
+    {
+      "text": "Using the consistent procedure, Khanjian (1989) shows that value and price rates of surplus value differ by only small amounts (6%-9%), which indicates that the effects of price-value deviations on aggregate measures are quite minor (Section 5.10, Table 5.12, and Figure 5.25).",
+      "page": "223",
+      "section": "Ch7 §7.3",
+      "source": "ST_1994",
+      "anchor": "Ch7 verbatim -- under a CONSISTENT procedure, price-of-production deviations from labor values are small. This is the book's empirical claim S702 (as intended) is meant to verify; proxy implementation cannot speak to this.",
+      "backfill_date": "2026-05-19",
+      "backfill_task": "D3_RMWND_quotes_ch7_etc"
+    },
+    {
+      "text": "Corresponding labor coefficients: hp*_j = hp_j / p_j. Empirical formulas: lambda* = hp* + lambda* * app*; lambda* = hp* * (I - app*)^{-1}; where lambda* = row vector of labor-value/producer-price ratios, lambda*_j = lambda_j / p_j. Since the lambda*_j's are ratios of labor values to producer prices, we must be careful to apply them only to the producer-price components of commodity flows.",
+      "page": "81-82",
+      "section": "Ch4 §4.1",
+      "source": "ST_1994",
+      "anchor": "REAL-FIX ANCHOR for S702: prices of production pp*_j = (1+r_bar)(c_j + v_j) require c_j and v_j to be SECTOR-LEVEL constructions using hp*_j (hr/$) per sector. The current proxy lacks per-sector hp* entirely. The Khanjian 6-9% deviation benchmark (Section 5.10) presumes a consistent sector-disaggregated procedure.",
+      "backfill_date": "2026-05-23",
+      "backfill_task": "stage1-cohort3-S701S702S703"
+    },
+    {
+      "text": "Key derivation (one productive sector case): app* = [1/5] ($/$ input coefficient); hp* = (8/5) (hr/$ labor coefficient); lambda* = hp* * [I - app*]^{-1} = (8/5) * [1 - 1/5]^{-1} = (8/5) * (5/4) = 2 hr/$. Verification: lambda* should equal TV/GO_p = 2000 hr / $1000 = 2 hr/$. Aggregate labor value added: Hp = V + S = 1600 hr; aggregate wages of production workers: Wp = $200; implied hourly wage rate: $200/1600 = $1/8 per hour. Sectoral labor flows derived by dividing wage bills by this rate.",
+      "page": "82-83",
+      "section": "Ch4 §4.1 Figure 4.2/4.3 footnote 4",
+      "source": "ST_1994",
+      "anchor": "PROXY DISCLOSURE for S702: book's worked example shows lambda_m-equivalent (Hp / TV at producer prices) is derivable BY SECTOR via wage bill / hourly wage rate, but the proxy applies a single aggregate scalar uniformly. The footnote 4 procedure (sectoral labor flow = sectoral wage bill / aggregate hourly wage rate) is the simplest available BLS-data-only sector hp* construction and should anchor the real-fix plan.",
+      "backfill_date": "2026-05-23",
+      "backfill_task": "stage1-cohort3-S701S702S703"
+    },
+    {
+      "text": "Note that the productive employment estimates required for hp*: (Lp)agr = Estimated total productive labor in agriculture, forestry, and fisheries; (Lp)con = Estimated total productive labor in construction; (Lp)gefed = Estimated total productive labor in government enterprises (federal); (Lp)gesl = Estimated total productive labor in government enterprises (state and local); (Lp)man = Estimated total productive labor in manufacturing; (Lp)min = Estimated total productive labor in mining; (Lp)serv = Estimated total productive labor in productive services; (Lp)tut = Estimated total productive labor in transportation and public utilities.",
+      "page": "Appendix G Table G.2 variable definitions",
+      "section": "Appendix G",
+      "source": "ST_1994",
+      "anchor": "DATA-SOURCING ANCHOR for the real S701/S702 fix: book already publishes the SECTORAL productive-employment vector (Lp)_sector that, combined with average weekly hours, yields hp_j hours per sector. Divided by sector gross output X_j (producer prices, from IO benchmark tables) yields hp*_j in hr/$. This is the path the proxy bypasses. Answer to 'BLS CES or Leontief or other': it is BLS productive-employment hours (CES filtered through Table F.1 productive shares), divided by IO gross output -- a HYBRID source, not pure CES.",
+      "backfill_date": "2026-05-23",
+      "backfill_task": "stage1-cohort3-S701S702S703"
+    }
+  ],
+  "backfill_log": [
+    {
+      "date": "2026-05-19",
+      "action": "D3_backfill_ch7",
+      "note": "Verbatim Ch4 + Ch7 quotes added. Book's actual Table 7.2 (p.218 cont.) is a continuation of the profit/accumulation/burden Table 7.1 -- not 'Prices of Production'. Registry book_table='7.2' is a project-internal label. Real price-of-production methodology lives in Ch4 §4.1 (pp.78-88), quoted here."
+    },
+    {
+      "date": "2026-05-23",
+      "action": "stage1-cohort3-S701S702S703",
+      "note": "Cohort 3 verbatim enrichment. Added quotes anchoring (a) the per-sector hp*_j (hr/$) requirement for c_j and v_j construction, (b) the worked numerical example showing sector-disaggregated labor flow derivation from wage bill / hourly wage rate (footnote 4 procedure), and (c) Appendix G Table G.2 sectoral productive-employment vector (Lp)_sector which is the data source the real-fix plan should use. Determined that the real-fix labor coefficient data source is HYBRID: BLS production-worker employment (CES) filtered through Table F.1 productive shares, times average weekly hours, divided by IO benchmark gross output in producer prices. NOT pure BLS CES; NOT a Leontief property."
+    }
+  ],
+  "verbatim_quotes_deprecated": true
 }

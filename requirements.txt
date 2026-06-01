@@ -1,4 +1,43 @@
-pandas>=2.0
-numpy>=1.24
-openpyxl>=3.1
-requests>=2.31
+# RMWND — Measuring the Wealth of Nations (Shaikh & Tonak 1994) Replication
+# Pinned dependencies for reproducible builds.
+#
+# Target Python: 3.11+ (tested under CPython 3.13.7)
+# Author with: pip install -r requirements.txt
+#
+# Authored 2026-05-24 (v1.1 phase 5 reproducibility infra). When upgrading,
+# re-pin via `pip freeze` and re-run `make test && make doctor`.
+
+# ---- data (numerics) -------------------------------------------------
+numpy==2.4.3
+pandas==2.3.3
+scipy==1.16.3
+pyarrow==21.0.0
+
+# ---- io (workbooks, http, xml) --------------------------------------
+openpyxl==3.1.5
+requests==2.32.5
+requests-cache==1.2.1
+lxml==5.4.0
+beautifulsoup4==4.14.2
+jsonschema==4.25.1
+tabulate==0.9.0
+
+# ---- api clients (BEA / BLS / FRED extension stages) ----------------
+fredapi==0.5.2
+pandas-datareader==0.10.0
+pandaSDMX==1.6.0
+
+# ---- viz (Dash + Plotly + matplotlib for figure exports) ------------
+dash==3.2.0
+dash-bootstrap-components==2.0.4
+plotly==6.3.0
+matplotlib==3.10.7
+seaborn==0.13.2
+
+# ---- test ------------------------------------------------------------
+pytest==9.0.1
+pytest-cov==7.1.0
+
+# ---- dev (formatters / linters) -------------------------------------
+black==25.12.0
+ruff==0.15.13

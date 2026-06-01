@@ -1,4 +1,8 @@
-"""V03_S607 — Validate NSW + V06 overlap + regime-change check."""
+"""V03_S607 — Validate NSW + V06 overlap + regime-change check.
+
+Refactored 2026-05-24 per Decision 0002 — reads benchmarks from registry
+(`validation.reference_values`) via `utils.registry_validator.get_reference_values`.
+"""
 from __future__ import annotations
 
 import sys
@@ -11,13 +15,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from utils.io import write_validation_result  # noqa: E402
 from utils.paths import DATA_FINAL  # noqa: E402
+from utils.registry_validator import get_reference_values  # noqa: E402
 from utils.series import BenchmarkValidator  # noqa: E402
 
 
 VALIDATOR = BenchmarkValidator(
     series_id        = "S607",
     tolerance_class  = "dollar_series",
-    benchmarks       = {1952: -9.5194, 1989: -101.0163},
+    benchmarks       = get_reference_values("S607"),
     subseries_filter = "S607-A",
 )
 

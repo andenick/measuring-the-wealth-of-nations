@@ -1,0 +1,431 @@
+/* ==========================================================================
+   RMWND Shiny — Theme System
+   Light mode (default) + Dark mode via body.dark-mode
+   Shared style contract from viz_style.json
+   ========================================================================== */
+
+/* ---------- CSS Custom Properties: Light (default) ---------- */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f7;
+  --bg-tertiary: #eaeaef;
+  --bg-panel: #f0f0f5;
+  --bg-quote: #f8f5ff;
+  --bg-error: #fff0f0;
+  --bg-grad-start: #f0f0f5;
+  --bg-grad-end: #e8e8f0;
+
+  --text-primary: #1a1a2e;
+  --text-secondary: #555555;
+  --text-muted: #888888;
+  --text-label: #666666;
+
+  --border-color: #dddddd;
+  --border-subtle: #eeeeee;
+
+  --accent: #543c8a;
+  --accent-hover: #6f42c1;
+  --success: #28a745;
+  --warning: #d4a017;
+  --danger: #dc3545;
+  --info: #543c8a;
+  --highlight: #c0392b;
+
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #333333;
+  --sidebar-border: #e0e0e0;
+  --header-bg: #543c8a;
+  --header-text: #ffffff;
+
+  --tab-bg: #f5f5f7;
+  --tab-active-bg: #ffffff;
+  --tab-text: #666666;
+  --tab-active-text: #1a1a2e;
+
+  --bg-input: #ffffff;
+
+  --chart-paper-bg: #ffffff;
+  --chart-plot-bg: #ffffff;
+  --chart-font: #333333;
+  --chart-grid: #e8e8e8;
+  --chart-zeroline: #cccccc;
+  --chart-legend-bg: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- CSS Custom Properties: Dark override ---------- */
+body.dark-mode {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-tertiary: #0f3460;
+  --bg-panel: #0f3460;
+  --bg-quote: #0a2647;
+  --bg-error: #3d0000;
+  --bg-grad-start: #0f3460;
+  --bg-grad-end: #16213e;
+
+  --text-primary: #e8e8e8;
+  --text-secondary: #cccccc;
+  --text-muted: #999999;
+  --text-label: #888888;
+
+  --border-color: #333333;
+  --border-subtle: #444444;
+
+  --accent: #7c5cbf;
+  --accent-hover: #1fcbe0;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #ff6b6b;
+  --info: #7c5cbf;
+  --highlight: #e94560;
+
+  --sidebar-bg: #16213e;
+  --sidebar-text: #e8e8e8;
+  --sidebar-border: #444444;
+  --header-bg: #16213e;
+  --header-text: #e8e8e8;
+
+  --tab-bg: #16213e;
+  --tab-active-bg: #0f3460;
+  --tab-text: #aaaaaa;
+  --tab-active-text: #ffffff;
+
+  --bg-input: #2c2c3a;
+
+  --chart-paper-bg: #16213e;
+  --chart-plot-bg: #16213e;
+  --chart-font: #e8e8e8;
+  --chart-grid: #333333;
+  --chart-zeroline: #555555;
+  --chart-legend-bg: rgba(22, 33, 62, 0.85);
+}
+
+/* ==========================================================================
+   Shinydashboard Overrides
+   ========================================================================== */
+
+.skin-blue .main-header .logo,
+.skin-blue .main-header .navbar {
+  background-color: var(--header-bg) !important;
+  color: var(--header-text) !important;
+}
+
+.skin-blue .main-header .logo:hover {
+  background-color: var(--header-bg) !important;
+}
+
+.skin-blue .main-header .navbar .nav>li>a {
+  color: var(--header-text) !important;
+}
+
+.skin-blue .main-sidebar,
+.skin-blue .left-side {
+  background-color: var(--sidebar-bg) !important;
+}
+
+.skin-blue .sidebar-menu>li>a {
+  color: var(--sidebar-text) !important;
+}
+
+.skin-blue .sidebar-menu>li.active>a {
+  color: var(--accent) !important;
+  border-left-color: var(--accent) !important;
+}
+
+.skin-blue .sidebar a {
+  color: var(--sidebar-text) !important;
+}
+
+.skin-blue .sidebar .shiny-input-container label {
+  color: var(--text-primary) !important;
+}
+
+.skin-blue .sidebar .selectize-input,
+.skin-blue .sidebar .form-control {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.skin-blue .sidebar .selectize-dropdown {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.skin-blue .sidebar .selectize-dropdown .option {
+  color: var(--text-primary) !important;
+}
+
+.skin-blue .sidebar .selectize-dropdown .active {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--accent) !important;
+}
+
+.skin-blue .sidebar .checkbox label,
+.skin-blue .sidebar .radio label {
+  color: var(--text-primary) !important;
+}
+
+/* Selectize global overrides */
+.selectize-input {
+  background-color: var(--bg-input, #fff) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color, #ccc) !important;
+}
+
+.selectize-input input {
+  color: var(--text-primary) !important;
+}
+
+.selectize-input .item {
+  color: var(--text-primary) !important;
+}
+
+.selectize-dropdown {
+  background-color: var(--bg-input, #fff) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color, #ccc) !important;
+}
+
+.selectize-dropdown .option {
+  color: var(--text-primary) !important;
+}
+
+.selectize-dropdown .option.active,
+.selectize-dropdown .option:hover {
+  background-color: var(--accent) !important;
+  color: #fff !important;
+}
+
+.skin-blue .form-control {
+  background-color: var(--bg-input) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color, #ccc) !important;
+}
+
+/* Main content area */
+.content-wrapper,
+.right-side,
+.main-footer {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Boxes */
+.box {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-top: none !important;
+}
+
+.box-header {
+  color: var(--text-primary) !important;
+}
+
+.box-body {
+  color: var(--text-primary) !important;
+}
+
+/* ==========================================================================
+   App Component Classes
+   ========================================================================== */
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  margin-left: 10px;
+}
+
+.info-panel {
+  background: var(--bg-panel);
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.info-label {
+  color: var(--text-muted);
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.info-value {
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.book-quote {
+  background: var(--bg-quote);
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 3px solid var(--accent);
+  margin: 10px 0;
+}
+
+.nav-tabs>li>a {
+  color: var(--tab-text) !important;
+  background: var(--tab-bg) !important;
+  border: none !important;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+  color: var(--tab-active-text) !important;
+  background: var(--tab-active-bg) !important;
+  border: none !important;
+}
+
+.tab-content {
+  background: var(--bg-secondary);
+  padding: 15px;
+  border-radius: 0 0 5px 5px;
+}
+
+.chart-container {
+  min-height: 400px;
+}
+
+.figure-header {
+  background: linear-gradient(135deg, var(--bg-grad-start) 0%, var(--bg-grad-end) 100%);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.figure-title {
+  color: var(--text-primary);
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+.figure-chapter {
+  color: var(--accent);
+  font-size: 13px;
+}
+
+.methodology-item {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.source-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.source-link:hover {
+  color: var(--accent-hover);
+}
+
+.subsource-card {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: var(--bg-tertiary);
+  border-radius: 5px;
+}
+
+.quote-card {
+  background: var(--bg-panel);
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 3px solid var(--highlight);
+  margin-bottom: 10px;
+}
+
+/* Theme toggle button */
+#theme_toggle {
+  font-size: 18px;
+  padding: 15px;
+  color: var(--header-text) !important;
+  cursor: pointer;
+}
+
+#theme_toggle:hover {
+  opacity: 0.8;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Form focus */
+.form-control:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 0.2rem rgba(84, 60, 138, 0.25) !important;
+}
+
+/* Slider range override */
+.irs--shiny .irs-bar {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+.irs--shiny .irs-handle {
+  border-color: var(--accent) !important;
+}
+
+.irs--shiny .irs-from,
+.irs--shiny .irs-to,
+.irs--shiny .irs-single {
+  background: var(--accent) !important;
+}
+
+.irs--shiny .irs-min,
+.irs--shiny .irs-max {
+  color: var(--text-muted) !important;
+}
+
+.irs--shiny .irs-grid-text {
+  color: var(--text-muted) !important;
+}
+
+/* Radio buttons & checkboxes */
+.radio label,
+.checkbox label {
+  color: var(--text-primary) !important;
+}
+
+/* DT table styling */
+.dataTables_wrapper {
+  color: var(--text-primary) !important;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  background: var(--bg-input) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+table.dataTable {
+  color: var(--text-primary) !important;
+}
+
+table.dataTable thead th {
+  color: var(--text-primary) !important;
+}
+
+/* Font */
+body,
+.content-wrapper {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}

@@ -1,4 +1,8 @@
-"""V03_S503 — Validate GFP against book benchmark, identity, and cross-source E.2."""
+"""V03_S503 — Validate GFP against book benchmark, identity, and cross-source E.2.
+
+Refactored 2026-05-24 per Decision 0002 — reads benchmarks from registry
+(`validation.reference_values`) via `utils.registry_validator.get_reference_values`.
+"""
 from __future__ import annotations
 
 import sys
@@ -9,6 +13,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from utils.paths import BOOK_TABLES, DATA_FINAL  # noqa: E402
+from utils.registry_validator import get_reference_values  # noqa: E402
 from utils.series import BenchmarkValidator, cross_source_e2_check, TOLERANCES  # noqa: E402
 from utils.io import write_validation_result  # noqa: E402
 
@@ -16,7 +21,7 @@ from utils.io import write_validation_result  # noqa: E402
 VALIDATOR = BenchmarkValidator(
     series_id        = "S503",
     tolerance_class  = "dollar_series",
-    benchmarks       = {1948: 247.74},  # validation_config T503 benchmark
+    benchmarks       = get_reference_values("S503"),
     subseries_filter = "S503-A",
 )
 

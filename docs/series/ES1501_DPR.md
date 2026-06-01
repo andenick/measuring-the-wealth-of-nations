@@ -1,5 +1,7 @@
 # ES1501 — Working Class Unproductive Labor (Mohun 2013)
 
+**Status**: book_period_validated
+
 **Chapter**: External study — Mohun (2013). **Status**: book_period_validated. **Period**: 1948-1989. **Units**: thousands of workers.
 
 ## Definition

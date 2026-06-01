@@ -19,9 +19,10 @@ Variable Capital: wages of productive labor under S&T's classification. Drives t
 
 | Subseries | Source | Period | Units |
 |---|---|---|---|
-| `S504-A` | S&T 1994 | 1948-1989 | billions_dollars |
-| `S504-EXT` | BEA NIPA + BLS CES | 1990-2024 | billions_dollars |
-| `S504-COMBINED` |  | 1948-2024 | billions_dollars |
+| `S504-A` | S&T 1994 Appendix H.1 | 1948-1989 | billions_dollars |
+| `S504-EXT` | BEA NIPA + BLS CES (derived V* = (V*/W)·W) | 1998-2024 | billions_dollars |
+| `S504-INTERP` | Log-linear interp between S504-A(1989) and S504-EXT(1998) | 1990-1997 | billions_dollars |
+| `S504-COMBINED` | S504-A ∪ S504-INTERP ∪ S504-EXT | 1948-2024 | billions_dollars |
 
 ---
 
@@ -34,6 +35,32 @@ Variable Capital: wages of productive labor under S&T's classification. Drives t
 3. No further transformation — this is the canonical published value.
 
 Validator includes an identity check that verifies the algebraic relation against other already-built series in this chapter.
+
+### S504-INTERP (1990-1997 bridge)
+
+**1990-1997 bridge**: log-linear interpolation between the book 1989 endpoint
+(`S504-A[1989]` = 1206.40 $B) and the BEA-derived first-EXT value
+(`S504-EXT[1998]` = 1620.23 $B), consistent with the S501–S503 bridge per
+`Technical/Build/BUILD_NARRATIVE.md` Stage 5 cohort 3.
+
+Formula: `v(t) = exp( ln(v0) + (t - 1989)/(1998 - 1989) · (ln(v1) - ln(v0)) )`
+
+These eight values are **INTERPOLATED estimates**, not published BEA data.
+Documentation script: `code/M04_manual/M04_S504_1990_1997_bridge.py`
+(also acts as a verifier — re-derives values from endpoints and asserts
+equality with the on-disk S504-INTERP rows). Sample values: 1991 = 1288.12,
+1995 = 1468.52.
+
+### S504-EXT (1998-2024)
+
+Derived V* = (V*/W) · W where V*/W comes from `S504-EXT` (S512 must run
+first) and W is BEA NIPA T20100 total compensation. Begins 1998 because
+BEA NIPA 6.2D (compensation by industry, NAICS) begins 1998.
+
+### S504-COMBINED
+
+Concatenation: 1948-1989 from S504-A, 1990-1997 from S504-INTERP (bridge),
+1998-2024 from S504-EXT.
 
 ---
 

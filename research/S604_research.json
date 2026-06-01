@@ -57,6 +57,69 @@
       "entry_type": "decision_log_note",
       "content": "[internal-decision-record] (2026-04-09): The income-proportional tax allocation (T_w = taxes × W_p/PI) is the formula that applies to all T60x components summed in S604. HDARP extraction of Section 3.3 (pages 63-65) documents the NRYwp net royalty framework: the total tax allocation to workers in S604 is the empirical implementation of that framework at the aggregate level. P09 methodology verified correct.",
       "source_ref": "[internal-decision-log], [internal-decision-record]"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Our adjustment procedure involves two steps. First, we estimate the social benefit expenditures directed toward wage and salary earners by the state, the taxes paid by them, and the difference between the two, which is the net transfer (a positive number when benefits exceed taxes and negative in the opposite case). The true compensation of wage and salary earners is their apparent compensation plus the net transfer.",
+      "source_ref": "ST_1994, Section 5.9, page 137; HDARP chunk_16 lines 79-83",
+      "page_reference": "p. 137",
+      "context": "Defines the T1 = total taxes on labor concept that S604 implements: sum of all worker-borne tax components, paired with B1 (benefits) to compute NSW = B1 - T1."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Appendix N lists the detailed calculations of our social accounting of taxes and benefits. Figure 5.22 shows the resulting tax and benefit rates (relative to total employee compensation), and Figure 5.23 shows the corresponding net transfer rate for the United States from 1952 to 1985.",
+      "source_ref": "ST_1994, Section 5.9 (Empirical Results), page 141; HDARP chunk_16 line 117",
+      "page_reference": "p. 141",
+      "context": "Anchors S604 (Total Tax Workers / T1) to Appendix N as the canonical source of the disaggregated tax components and confirms that T1/EC is the published benchmark series displayed in Figure 5.22."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "It is immediately evident that, for most of the postwar period, wage and salary earners paid more in taxes than they received in social benefit expenditures. As a result, the true rate of surplus value is generally higher than the apparent one (see Figure 5.24).",
+      "source_ref": "ST_1994, Section 5.9 key finding, page 141; HDARP chunk_16 lines 123-125",
+      "page_reference": "p. 141",
+      "context": "Authors' headline empirical claim about NSW: T1 > B1 (i.e., S604 > S607 in our scheme) for most years 1952-85, hence negative net social wage. This is the substantive result S604 must replicate."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "T1 = Total taxes from labor 1964 = 76.2 billion dollars (Social insurance 30.1 + Personal income 36.4 + Other 2.8 + Motor vehicle 0.8 + Personal property 6.1).",
+      "source_ref": "ST_1994, Table N.1 Taxes total, 1964 benchmark; HDARP chunk_38 lines 296-306",
+      "page_reference": "Table N.1, p. 358",
+      "context": "Authoritative 1964 aggregation: S604 = 76.2 = S602(30.1) + S601_components(36.4+2.8) + S603_components(0.8+6.1). Provides the direct numeric crosswalk for V03 validation of the S604 = S601 + S602 + S603 identity."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "T1 = Total taxes from labor 1964 = 76.2 billion dollars (Social insurance 30.1 + Personal income 36.4 + Other 2.8 + Motor vehicle 0.8 + Personal property 6.1).",
+      "source_ref": "ST_1994, Table N.1 Taxes total; KB chunk_38 lines 296-306",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Tax rate (T1/EC): 1952: 0.18 (18%) -> 1989: 0.32 (32%); Increased 1.8x (workers paid more taxes).",
+      "source_ref": "ST_1994, Table N.2 (Tax rate trend 1952-89); KB chunk_38 lines 363-365",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Excluded taxes (not levied on workers - footnote 2): Corporate profit taxes; Indirect business taxes; Estate and gift taxes (only apply to highest income levels).",
+      "source_ref": "ST_1994, Appendix N footnote 2; KB chunk_38 lines 268-271",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Group I - Social security taxes (100% from workers): Employee contributions; Employer contributions (deducted before workers receive income); Net government receipts from lotteries (treated as direct tax - footnote 1).",
+      "source_ref": "ST_1994, Appendix N (Tax Classification, Group I); KB chunk_38 lines 257-260",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Group II - Personal taxes (workers' share = labor income/personal income): Personal income taxes (federal and state); Motor vehicle licenses; Property taxes (primarily on homes - adjusted for homeowners only); Other taxes and nontaxes.",
+      "source_ref": "ST_1994, Appendix N (Tax Classification, Group II); KB chunk_38 lines 262-266",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
     }
   ],
   "citations": [
@@ -71,6 +134,33 @@
     {
       "id": "Moos_2017",
       "full": "Moos, Julie. 2017. The Net Social Wage in the United States, 1952-2012. PhD dissertation."
+    }
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "T1 = Total taxes from labor 1964 = 76.2 billion dollars (Social insurance 30.1 + Personal income 36.4 + Other 2.8 + Motor vehicle 0.8 + Personal property 6.1).",
+      "source_ref": "ST_1994, Table N.1 Taxes total; KB chunk_38 lines 296-306",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Tax rate (T1/EC): 1952: 0.18 (18%) -> 1989: 0.32 (32%); Increased 1.8x (workers paid more taxes).",
+      "source_ref": "ST_1994, Table N.2 (Tax rate trend 1952-89); KB chunk_38 lines 363-365",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Excluded taxes (not levied on workers - footnote 2): Corporate profit taxes; Indirect business taxes; Estate and gift taxes (only apply to highest income levels).",
+      "source_ref": "ST_1994, Appendix N footnote 2; KB chunk_38 lines 268-271",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Group I - Social security taxes (100% from workers): Employee contributions; Employer contributions (deducted before workers receive income); Net government receipts from lotteries (treated as direct tax - footnote 1).",
+      "source_ref": "ST_1994, Appendix N (Tax Classification, Group I); KB chunk_38 lines 257-260",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Group II - Personal taxes (workers' share = labor income/personal income): Personal income taxes (federal and state); Motor vehicle licenses; Property taxes (primarily on homes - adjusted for homeowners only); Other taxes and nontaxes.",
+      "source_ref": "ST_1994, Appendix N (Tax Classification, Group II); KB chunk_38 lines 262-266",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
     }
   ],
   "methodology_summary": "Total worker taxes sum personal income tax (S601), social insurance (S602), property tax (S603), and indirect sales/excise taxes allocated by worker consumption share. Tax/EC ratio rose 78% from 0.18 to 0.32 over 1952-1989. [internal-decision-record] confirms T_w = taxes × W_p/PI income-proportional allocation is the correct methodology.",
@@ -106,5 +196,6 @@
     ]
   },
   "ported_from": "ST2/research/T604_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes_deprecated": true
 }

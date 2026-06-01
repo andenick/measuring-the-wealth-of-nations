@@ -40,6 +40,51 @@
       "entry_type": "caveat",
       "content": "No modern extension is available. Any future extension would require reconstructing productive-sector intermediate inputs from BEA Use tables, which demands a full sector concordance update.",
       "source_ref": "DPR T502_DPR.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "C*m = M'p = materials inputs into production; C*d = {Dp} = depreciation of productive fixed capital; C* = M'p + Dp = constant capital used up (flow).",
+      "source_ref": "ST_1994, Ch5, p.95; chunk_12",
+      "page_reference": "95",
+      "context": "Verbatim algebraic definitions from Section 5.2 establishing that C*m (which S502 measures) is materials inputs into production (M'p) — strictly the materials-flow portion of constant capital, exclusive of fixed-capital depreciation Dp. This is the exact decomposition that justifies S502's scope being limited to circulating constant capital."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Materials used up C*m and productive use U*m: Both net of depreciation. C*m = C* - Depreciation. Simply equal to M'p (sum of first two entries in top left corner of the IO table).",
+      "source_ref": "ST_1994, Ch5, p.92; chunk_12",
+      "page_reference": "92",
+      "context": "Verbatim instruction on how to read C*m from Figure 5.2 (the 1972 benchmark IO table). S502 loads C*m directly from Table E.2, where the underlying data are these IO upper-left intermediate-input cells aggregated to the production sector. The 'sum of first two entries in top left corner' clause is the operational identification rule for the variable S502 tabulates annually."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "C*m = M'p = materials inputs into production... GVA* = TV* - C*m = Marxian gross value added.",
+      "source_ref": "ST_1994, Ch5, p.95; chunk_12",
+      "page_reference": "95",
+      "context": "Verbatim definition pair linking S502 (C*m) to S501 (TV* / TP*) and S503 (GVA*). C*m is the deduction taken from total value to yield Marxian gross value added, anchoring S502's role in the central revenue-account identity GVA* = TV* - C*m."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "C*m = M′p = materials inputs into production; C*d = {Dp} = depreciation of productive fixed capital; C* = M′p + Dp = constant capital used up (flow).",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.95",
+      "context": "Section 5.2 (p. 95) provides the exact definitions of C*m and its NIPA decomposition. S502 measures C*_m specifically (materials only, net of depreciation), matching the upper-left entry of the IO table."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Materials used up C*m and productive use U*m: Both net of depreciation. C*m = C* − Depreciation. Simply equal to M′p (sum of first two entries in top left corner of the IO table).",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.92",
+      "context": "Figure 5.2 / Table 5.1 commentary on the 1972 benchmark: C*m identification within the IO grid. S502 is loaded from Table E.2 for the 1948-1989 period only because NIPA does not directly tabulate M′p annually after 1989."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Figure 5.14 pursues the analysis of the central value categories by breaking down real total value into its principal components: TV* = C* + V* + S*, in 1982 constant dollars. By far the biggest component is C*, which is roughly 50% of total value.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.120",
+      "context": "Empirical magnitude: C* ≈ 50% of TV* throughout 1948-1989. Anchors the central role of S502 in the surplus-value identity."
     }
   ],
   "citations": [
@@ -50,7 +95,7 @@
   ],
   "methodology_summary": "Constant capital (materials) measures intermediate inputs of productive and trading sectors. Available only for 1948-1989 from Table E.2 with no modern extension.",
   "known_issues": [
-    "No extension beyond 1989 \u2014 requires full IO table reconstruction",
+    "No extension beyond 1989 — requires full IO table reconstruction",
     "Fixed capital depreciation excluded (materials-flow only)"
   ],
   "cross_references": [
@@ -74,5 +119,29 @@
     "L5_validation": []
   },
   "ported_from": "ST2/research/T502_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "text": "C*m = M′p = materials inputs into production; C*d = {Dp} = depreciation of productive fixed capital; C* = M′p + Dp = constant capital used up (flow).",
+      "page": 95,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.2 (p. 95) provides the exact definitions of C*m and its NIPA decomposition. S502 measures C*_m specifically (materials only, net of depreciation), matching the upper-left entry of the IO table."
+    },
+    {
+      "text": "Materials used up C*m and productive use U*m: Both net of depreciation. C*m = C* − Depreciation. Simply equal to M′p (sum of first two entries in top left corner of the IO table).",
+      "page": 92,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Figure 5.2 / Table 5.1 commentary on the 1972 benchmark: C*m identification within the IO grid. S502 is loaded from Table E.2 for the 1948-1989 period only because NIPA does not directly tabulate M′p annually after 1989."
+    },
+    {
+      "text": "Figure 5.14 pursues the analysis of the central value categories by breaking down real total value into its principal components: TV* = C* + V* + S*, in 1982 constant dollars. By far the biggest component is C*, which is roughly 50% of total value.",
+      "page": 120,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Empirical magnitude: C* ≈ 50% of TV* throughout 1948-1989. Anchors the central role of S502 in the surplus-value identity."
+    }
+  ],
+  "verbatim_quotes_deprecated": true
 }

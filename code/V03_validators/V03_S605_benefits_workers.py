@@ -1,4 +1,8 @@
-"""V03_S605 — Validate Government Benefits to Workers (B_w) against book benchmark values."""
+"""V03_S605 — Validate Government Benefits to Workers (B_w) against book benchmark values.
+
+Refactored 2026-05-24 per Decision 0002 — reads benchmarks from registry
+(`validation.reference_values`) via `utils.registry_validator.get_reference_values`.
+"""
 from __future__ import annotations
 
 import sys
@@ -7,13 +11,14 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from utils.paths import DATA_FINAL  # noqa: E402
+from utils.registry_validator import get_reference_values  # noqa: E402
 from utils.series import BenchmarkValidator  # noqa: E402
 
 
 VALIDATOR = BenchmarkValidator(
     series_id        = "S605",
     tolerance_class  = "dollar_series",
-    benchmarks       = {1952: 10.994,  1989: 521.07},
+    benchmarks       = get_reference_values("S605"),
     subseries_filter = "S605-A",
 )
 

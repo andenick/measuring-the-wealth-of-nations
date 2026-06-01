@@ -5,8 +5,7 @@
 **Units**: ratio
 **Period**: 1952–1989 (book; S607 extends through 2024 via Table6_3_Extended)
 **Content Type**: time_series
-**Status**: calculated
-
+**Status**: book_period_validated
 ## Definition
 
 NSW expressed as a fraction of variable capital (productive wage bill). A cleaner measure of state redistribution than NSW alone because it normalizes for the scale of the productive economy. DERIVED — no source column.

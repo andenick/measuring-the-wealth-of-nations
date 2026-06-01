@@ -13,7 +13,7 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from L01_loaders.L01_moos_2017 import load_moos  # noqa: E402
+from L01_loaders.shared_moos_2017_loader import load_moos  # noqa: E402
 from utils.bea_cache import load_bea_line  # noqa: E402
 from utils.io import write_series_csv  # noqa: E402
 

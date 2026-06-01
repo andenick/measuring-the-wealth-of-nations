@@ -43,16 +43,43 @@
       "entry_type": "formula",
       "content": "ES1304 = ES1301 filtered to year range [1959, 1997]. Construction: filter(ES1301, year <= 1997). No additional computation. Year 1997 is last year of Shaikh-Tonak (2002) coverage and the overlap endpoint. Moos extends to 2012 in ES1301/ES1302; ES1304 isolates the period of joint coverage for direct comparison with ES1201.",
       "source_ref": "series_registry.json ES1304 construction step 1"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The NSW series presented in this paper differs slightly from Shaikh and Tonak's series. This may be due, at least in part, because the NIPA tables were revised several times since Shaikh and Tonak's data was constructed, including a comprehensive revision in 1999. As illustrated by Figure 1, the NSW follows the same pattern in both sets of data. The differences in the series in the overlap years (1959 - 1997) are slight (approximately 1 percent of GDP).",
+      "source_ref": "Moos 2017, Section 3, p.4-5",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Verbatim explanation that ES1304 must validate — ~1pp NIPA-revision gap, qualitatively identical pattern.",
+      "kb_path": "2017_Moos_NSW_21st_Century/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Shaikh and Tonak's series shows a minimum of -2.1% of GDP, median of -0.2%, mean of 0.0%, and maximum of 2.9%. My replicated series shows minimum of -1.2%, median of 1.0%, mean of 1.1%, and maximum of 3.7%. The mean difference is approximately 1.1 percentage points of GDP, which I attribute to NIPA revisions rather than methodological differences.",
+      "source_ref": "Moos 2017, Section 3 Table 1 discussion, p.5",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Verbatim summary statistics for the 1959-1997 overlap; direct ES1304 validation targets (mean 1.1%, ST original 0.0%).",
+      "kb_path": "2017_Moos_NSW_21st_Century/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "the variation in the series is assumed to be the result of revisions of NIPA data and the series used in this paper can be considered a faithful reconstruction of Shaikh and Tonak's series.",
+      "source_ref": "Moos 2017, Section 3, p.5",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Author's own statement of replication fidelity that ES1304 records.",
+      "kb_path": "2017_Moos_NSW_21st_Century/full_transcription.md"
     }
   ],
   "citations": [
     {
       "id": "Moos_2017",
-      "full": "Moos, Katherine A. 2017. 'Neoliberal Redistributive Policy: The U.S. Net Social Wage in the 21st Century.' Working Paper No. 2017-18, Department of Economics, University of Massachusetts Amherst. September 18, 2017."
+      "full": "Moos, Katherine A. 2017. 'Neoliberal Redistributive Policy: The U.S. Net Social Wage in the 21st Century.' Working Paper No. 2017-18, Department of Economics, University of Massachusetts Amherst. September 18, 2017.",
+      "no_doi_reason": "UMass Amherst Economics Department Working Paper No. 2017-18 (Sept 2017); working papers rarely have DOIs. Published version: Moos, Katherine A. 2019. 'Neoliberal Redistributive Policy: The US Net Social Wage in the Early Twenty-First Century.' Review of Radical Political Economics 51(4): 581-605. DOI: 10.1177/0486613419848097.",
+      "published_version_doi": "10.1177/0486613419848097"
     },
     {
       "id": "ST_2002",
-      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 2002. 'The Rise and Fall of the U.S. Welfare State.' In Political Economy and Contemporary Capitalism. M.E. Sharpe, Armonk. pp. 247-265."
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 2002. 'The Rise and Fall of the U.S. Welfare State.' In Political Economy and Contemporary Capitalism. M.E. Sharpe, Armonk. pp. 247-265.",
+      "no_doi_reason": "Book chapter in 'Political Economy and Contemporary Capitalism' (M.E. Sharpe, 2002); no DOI on file at Crossref for this chapter or the volume."
     }
   ],
   "methodology_summary": "ES1304 is ES1301 restricted to 1959-1997, enabling direct comparison with ST 2002 coverage. Moos's replicated series shows mean 1.1% of GDP vs Shaikh-Tonak original mean 0.0% — difference attributed to post-1999 NIPA revision. ST2 achieves 0.013 vs Moos published 0.011, within V11 benchmark range [0.008, 0.018].",
@@ -78,5 +105,33 @@
     ]
   },
   "ported_from": "ST2/research/N1304_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "quote": "The NSW series presented in this paper differs slightly from Shaikh and Tonak's series. This may be due, at least in part, because the NIPA tables were revised several times since Shaikh and Tonak's data was constructed, including a comprehensive revision in 1999. As illustrated by Figure 1, the NSW follows the same pattern in both sets of data. The differences in the series in the overlap years (1959 - 1997) are slight (approximately 1 percent of GDP).",
+      "source": "Moos 2017, Section 3, p.4-5",
+      "kb_path": "2017_Moos_NSW_21st_Century/full_transcription.md",
+      "verbatim_check": true,
+      "notes": "Verbatim explanation that ES1304 must validate — ~1pp NIPA-revision gap, qualitatively identical pattern."
+    },
+    {
+      "quote": "Shaikh and Tonak's series shows a minimum of -2.1% of GDP, median of -0.2%, mean of 0.0%, and maximum of 2.9%. My replicated series shows minimum of -1.2%, median of 1.0%, mean of 1.1%, and maximum of 3.7%. The mean difference is approximately 1.1 percentage points of GDP, which I attribute to NIPA revisions rather than methodological differences.",
+      "source": "Moos 2017, Section 3 Table 1 discussion, p.5",
+      "kb_path": "2017_Moos_NSW_21st_Century/full_transcription.md",
+      "verbatim_check": true,
+      "notes": "Verbatim summary statistics for the 1959-1997 overlap; direct ES1304 validation targets (mean 1.1%, ST original 0.0%)."
+    },
+    {
+      "quote": "the variation in the series is assumed to be the result of revisions of NIPA data and the series used in this paper can be considered a faithful reconstruction of Shaikh and Tonak's series.",
+      "source": "Moos 2017, Section 3, p.5",
+      "kb_path": "2017_Moos_NSW_21st_Century/full_transcription.md",
+      "verbatim_check": true,
+      "notes": "Author's own statement of replication fidelity that ES1304 records."
+    }
+  ],
+  "verbatim_quotes_added_date": "2026-05-19",
+  "verbatim_quotes_added_by": "D4_es_ch10_13_backfill",
+  "verbatim_quotes_deprecated": true,
+  "citation_dois_added_date": "2026-05-24",
+  "citation_dois_added_by": "v1.2-iter5-C5-crossref-dois"
 }

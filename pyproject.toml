@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rmwnd-technical"
+version = "1.1.0"
+description = "Replication of Shaikh & Tonak (1994) Measuring the Wealth of Nations — Technical pipeline"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+# Exclude code/ from collection: it contains its own __init__.py that shadows
+# the stdlib `code` module, which pdb (loaded by pytest's debugging plugin)
+# imports. Collecting code/ as a package would break pytest startup.
+norecursedirs = ["code", "data", "chopped", "extenbooks", "docs", "research", "Build", "Handoffs", "scripts", "tools", "viz", "MIGRATION", "tmp", "_v1.1_patches", "_stage3_patches", "_stage5_patches"]
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--tb=short",
+    "-p", "no:cacheprovider",
+]
+markers = [
+    "regression: regression tests that compare generated chopped CSVs against golden snapshots",
+    "identity: algebraic identity tests across constructed series",
+    "unit: unit tests for utility modules in code/utils/",
+    "slow: tests that take more than a few seconds",
+]

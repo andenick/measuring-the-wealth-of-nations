@@ -12,7 +12,7 @@
   "entries": [
     {
       "entry_type": "methodology_description",
-      "content": "c/v is the value composition of capital \u2014 the ratio of constant capital to variable capital. Constant capital (c) is material inputs into production: intermediate consumption of productive industries plus depreciation of fixed capital (wear and tear of machinery in production). Variable capital (v) is wage payments to productive workers only. c/v is expressed as a percentage (e.g., 293% means constant capital is 2.93 times variable capital). Derived via Shaikh-Tonak methodology applied to NZSNA data for 25 NZ production groups.",
+      "content": "c/v is the value composition of capital — the ratio of constant capital to variable capital. Constant capital (c) is material inputs into production: intermediate consumption of productive industries plus depreciation of fixed capital (wear and tear of machinery in production). Variable capital (v) is wage payments to productive workers only. c/v is expressed as a percentage (e.g., 293% means constant capital is 2.93 times variable capital). Derived via Shaikh-Tonak methodology applied to NZSNA data for 25 NZ production groups.",
       "source_ref": "Cronin_2001, body_text.md Section 3 (Constant Capital, Variable Capital); SUMMARY.md"
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "entry_type": "periodization",
-      "content": "Three phases: (1) 1972-1983 \u2014 c/v rose approximately 20% from 293% to 355%, the primary driver of the profitability crisis as rising capital intensity squeezed the surplus share; rate of surplus-value was roughly stable, so the rising composition drove falling accumulation rate. (2) 1984-1989 \u2014 c/v fell 12% from peak 407% (1985) to 356% (1989) as recession devalued and wrote off constant capital (equipment write-offs, asset devaluations); this capital devaluation combined with rising s/v to boost the accumulation rate. (3) 1990-1995 \u2014 c/v rose again from 357% to 397%, renewed rise offsetting the continuing increase in s/v and causing accumulation rate to plateau at 38%.",
+      "content": "Three phases: (1) 1972-1983 — c/v rose approximately 20% from 293% to 355%, the primary driver of the profitability crisis as rising capital intensity squeezed the surplus share; rate of surplus-value was roughly stable, so the rising composition drove falling accumulation rate. (2) 1984-1989 — c/v fell 12% from peak 407% (1985) to 356% (1989) as recession devalued and wrote off constant capital (equipment write-offs, asset devaluations); this capital devaluation combined with rising s/v to boost the accumulation rate. (3) 1990-1995 — c/v rose again from 357% to 397%, renewed rise offsetting the continuing increase in s/v and causing accumulation rate to plateau at 38%.",
       "source_ref": "Cronin_2001, body_text.md Section 5; SUMMARY.md"
     },
     {
@@ -42,18 +42,52 @@
     },
     {
       "entry_type": "figure_context",
-      "content": "Cronin Fig 11: plots c/v alongside s/v for 1972-1995, showing the divergent dynamics \u2014 c/v rising in the crisis period, falling mid-1980s with write-offs, rising again post-1991. The figure illustrates the classical squeeze: rising composition offsetting rising exploitation.",
+      "content": "Cronin Fig 11: plots c/v alongside s/v for 1972-1995, showing the divergent dynamics — c/v rising in the crisis period, falling mid-1980s with write-offs, rising again post-1991. The figure illustrates the classical squeeze: rising composition offsetting rising exploitation.",
       "source_ref": "Cronin_2001, body_text.md Section 5"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The 1972-83 decline is related to: A 20% rise in value composition of capital (c/v); Alongside a fairly constant rate of surplus-value (s/v) (see Table 2 and Fig. 11); That is, classic conditions for a falling rate of profit (Marx, 1859, Pt. 3).",
+      "source_ref": "Cronin_2001, body_text.md Section 5 (1972-83 Decline)",
+      "page_reference": "p. 320 (Section 5)",
+      "context": "Cronin's classical interpretation of the 1972-83 NZ profitability decline, identifying c/v rise as primary driver with s/v approximately stable — the canonical Marx Vol III TRPF mechanism."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The 1984-89 rise in surplus value is associated with: The 37% rise in the rate of surplus-value over the same period; A 12% fall in the value composition of capital between 1985 and 1989 as recession devalued and wrote-off constant capital.",
+      "source_ref": "Cronin_2001, body_text.md Section 5 (1984-89 Rise)",
+      "page_reference": "p. 320-321 (Section 5)",
+      "context": "Documents the recession-driven devaluation of constant capital that pulled c/v down from its 1985 peak, providing the empirical basis for ES1703's mid-period decline."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Pearce also overestimates the classical category constant capital by including: The wages and salaries of non-productive workers; The stock of fixed capital (Pearce, 1986, pp. 308, 341). Whereas on an annual basis, only the depreciation of fixed capital should be included. Pearce's estimates of the value composition of capital are thus six to eight times those of Shaikh & Tonak for the United States and those in this study (see Fig. 8). The inclusion of (annually accumulating) fixed capital stocks in the definition of constant capital also leads Pearce wrongly to perceive a rise in the value composition of capital in the 1950s and 60s.",
+      "source_ref": "Cronin_2001, body_text.md Section 4 (Comparison with Earlier Studies)",
+      "page_reference": "p. 318 (Section 4)",
+      "context": "Establishes the methodological imperative for using depreciation flows rather than capital stocks in c — the core distinction underpinning ES1703's construction and its comparability with Shaikh-Tonak USA estimates."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The classical category of constant capital consists of the material inputs into production, that is the portion of intermediate consumption used in the productive industries. This can be derived simply from the official accounts item 'intermediate production' by: Deducting the intermediate production not attributable to productive industries and the 'trading sector'; Adding the depreciation of fixed capital, representing the wear and tear or use over time of machinery in the course of production, which is recorded in the official accounts as part of value added (see Shaikh & Tonak, 1994, pp. 47-48).",
+      "source_ref": "Cronin_2001, body_text.md Section 3 (Constant Capital)",
+      "page_reference": "p. 316 (Section 3)",
+      "context": "Verbatim definition of the numerator of c/v as constructed in Cronin 2001 and ported to ES1703."
     }
   ],
   "citations": [
     {
       "id": "Cronin_2001",
-      "full": "Cronin, Bruce. 2001. 'Productive and Unproductive Capital: A mapping of the New Zealand system of national accounts to classical economic categories, 1972-95.' Review of Political Economy 13(3): 309-327. https://doi.org/10.1080/09538250120055168"
+      "full": "Cronin, Bruce. 2001. 'Productive and Unproductive Capital: A mapping of the New Zealand system of national accounts to classical economic categories, 1972-95.' Review of Political Economy 13(3): 309-327. https://doi.org/10.1080/09538250120055168",
+      "doi": "10.1080/09538250120055168",
+      "doi_source": "crossref",
+      "doi_verified": "2026-05-24"
     },
     {
       "id": "ST_1994",
-      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press.",
+      "doi": "10.1017/cbo9780511528330",
+      "doi_source": "crossref",
+      "doi_verified": "2026-05-24"
     }
   ],
   "methodology_summary": "Value composition of capital (c/v) directly digitized from Cronin (2001) Table 2. Constant capital uses depreciation flows (not capital stocks), following Shaikh-Tonak. Variable capital restricted to productive workers. Applied to 25 NZ production groups from NZSNA, 1972-1995. No extension beyond 1995.",
@@ -81,5 +115,7 @@
     ]
   },
   "ported_from": "ST2/research/N1703_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "citation_dois_added_date": "2026-05-24",
+  "citation_dois_added_by": "v1.2-iter5-C5-crossref-dois"
 }

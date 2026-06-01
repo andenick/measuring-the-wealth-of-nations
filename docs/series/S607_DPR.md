@@ -5,8 +5,7 @@
 **Units**: billions_usd
 **Period**: 1952–1989 (book; S607 extends through 2024 via Table6_3_Extended)
 **Content Type**: time_series
-**Status**: calculated
-
+**Status**: validated_book_and_extension
 ## Definition
 
 The central Ch6 finding: the algebraic balance between what workers receive from the state (benefits + services) and what they pay in (taxes). NEGATIVE for most of the postwar period — workers subsidize the state, not the reverse, contradicting common 'welfare state' rhetoric.

@@ -47,12 +47,52 @@
       "entry_type": "decision_reference",
       "content": "[internal-decision-record] (No Synthetic Data Policy, 2026-05-03): The ES1101-N1103 series are not listed among the five synthetic-data series requiring remediation, suggesting they were computed from real NIPA inputs via S604/S605. However, if S604 or S605 themselves contain synthetic data, ES1101 inherits that problem. The raw 34-year series is directly available in S&T (1987) Table 2 (p.192) and should be used as the benchmark validation for P19 output.",
       "source_ref": "[internal-decision-log]#[internal-decision-record]; 1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Table 2 p.192)"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "VERBATIM (Shaikh & Tonak 1987, p.186, Empirical Methodology): \"Net Transfer (NT) = Benefits and income received by workers from the state - Taxes paid by workers to the state \\n NT = B - T_w \\n Where: B = Benefits received by workers; T_w = Taxes paid by workers.\" This is the formal construction of the ES1101 numerator, sign-reversed from Tonak (1984) net tax. It comes directly from the external paper being replicated.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Empirical Methodology, Definition of Net Transfer, pp.151-160)"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "VERBATIM (Shaikh & Tonak 1987, p.186): \"Because the net transfer is negative over most of this period (1952-1985), it actually represents a net tax on workers.\" This is the central qualitative claim that ES1101 instantiates over 34 annual observations and is the cross-check for sign conventions when reconciling with ES1002.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Empirical Methodology, Key Point following NT formula, p.162)"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "VERBATIM (Shaikh & Tonak 1987, p.190, Phase 3 analysis): \"It is striking that by 1985 the social benefit rate is at a level below that of 1966 ... while the tax rate continued to climb to an all time high (41 percent higher than in 1966, in Figure 3). The net transfer rate therefore falls dramatically from +5.4 percent in 1975 to -11.0 percent in 1985 (an all time low).\" Provides the two endpoint validation anchors for ES1101 (+5.4% in 1975, -11.0% in 1985) and the 1966 baseline comparison — drawn from the external paper, not ST 1994.",
+      "source_ref": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md (Empirical Results, Phase 3, Critical Finding for 1985, lines 492-495)"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Net Transfer (NT) = Benefits and income received by workers from the state - Taxes paid by workers to the state\n\nNT = B - T_w",
+      "source_ref": "Shaikh & Tonak 1987, Empirical Methodology, p.186",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Verbatim formula for the net transfer that the ES1101 rate is built from.",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Because the net transfer is negative over most of this period (1952-1985), it actually represents a net tax on workers.",
+      "source_ref": "Shaikh & Tonak 1987, Empirical Methodology, p.186",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Key qualitative finding of the ES1101 series.",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The net transfer rate therefore falls dramatically from +5.4 percent in 1975 to -11.0 percent in 1985 (an all time low)",
+      "source_ref": "Shaikh & Tonak 1987, Empirical Results, p.190",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Headline ES1101 trajectory endpoint, anchors the Phase 2 -> Phase 3 transition.",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md"
     }
   ],
   "citations": [
     {
       "id": "ST_1987",
-      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' In Robert Cherry et al. (eds.), The Imperiled Economy, Book I. New York: Union for Radical Political Economics, pp. 184-194."
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' In Robert Cherry et al. (eds.), The Imperiled Economy, Book I. New York: Union for Radical Political Economics, pp. 184-194.",
+      "no_doi_reason": "Book chapter in URPE edited volume 'The Imperiled Economy' (1987); Crossref has no DOI on file for this chapter."
     },
     {
       "id": "BEA_1981",
@@ -90,5 +130,33 @@
     ]
   },
   "ported_from": "ST2/research/N1101_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "quote": "Net Transfer (NT) = Benefits and income received by workers from the state - Taxes paid by workers to the state\n\nNT = B - T_w",
+      "source": "Shaikh & Tonak 1987, Empirical Methodology, p.186",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md",
+      "verbatim_check": true,
+      "notes": "Verbatim formula for the net transfer that the ES1101 rate is built from."
+    },
+    {
+      "quote": "Because the net transfer is negative over most of this period (1952-1985), it actually represents a net tax on workers.",
+      "source": "Shaikh & Tonak 1987, Empirical Methodology, p.186",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md",
+      "verbatim_check": true,
+      "notes": "Key qualitative finding of the ES1101 series."
+    },
+    {
+      "quote": "The net transfer rate therefore falls dramatically from +5.4 percent in 1975 to -11.0 percent in 1985 (an all time low)",
+      "source": "Shaikh & Tonak 1987, Empirical Results, p.190",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md",
+      "verbatim_check": true,
+      "notes": "Headline ES1101 trajectory endpoint, anchors the Phase 2 -> Phase 3 transition."
+    }
+  ],
+  "verbatim_quotes_added_date": "2026-05-19",
+  "verbatim_quotes_added_by": "D4_es_ch10_13_backfill",
+  "verbatim_quotes_deprecated": true,
+  "citation_dois_added_date": "2026-05-24",
+  "citation_dois_added_by": "v1.2-iter5-C5-crossref-dois"
 }

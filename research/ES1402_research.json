@@ -1,6 +1,6 @@
 {
   "series_id": "ES1402",
-  "series_name": "Productive Labor Share \u2014 Mohun Classification (Mohun 2005)",
+  "series_name": "Productive Labor Share — Mohun Classification (Mohun 2005)",
   "study": "study_05_mohun_2005",
   "figures": [],
   "research_date": "2026-05-06",
@@ -11,45 +11,101 @@
   "entries": [
     {
       "entry_type": "methodology_description",
-      "content": "Productive labor share = L_p / L, where L_p is total productive full-time equivalent employment and L is total employment. Calculated using the SM (Simon Mohun) approximation: for each productive SIC division i, L_p^i = (L_pn^i / L^i)_BLS \u00d7 (L^i)_NIPA, where BLS production worker ratios are applied to NIPA total employment. For Services divisions the SM approximation uses division-level BLS ratios weighted by a factor alpha^{s,j} = geometric mean of division BLS ratio / geometric mean of aggregate Services BLS ratio (first 5 years available).",
-      "source_ref": "Mohun_2005, Section 2.1, Equations 1-3, 13-14; full_transcription.md"
+      "content": "Productive labor share = L_p / L, where L_p is total productive full-time equivalent employment and L is total employment. Calculated using the SM (Simon Mohun) approximation: for each productive SIC division i, L_p^i = (L_pn^i / L^i)_BLS × (L^i)_NIPA, where BLS production worker ratios are applied to NIPA total employment. For Services divisions the SM approximation uses division-level BLS ratios weighted by a factor alpha^{s,j} = geometric mean of division BLS ratio / geometric mean of aggregate Services BLS ratio (first 5 years available).",
+      "source_ref": "Mohun_2005, Section 2.1, Equations 1-3, 13-14; full_transcription.md",
+      "verbatim_quote": "Equation (1): L_p^i = (L_pn^i / L^i)_BLS × (L^i)_NIPA. Calculate BLS ratio of production workers to all employees in division i; apply this ratio to NIPA total employment (which includes self-employed); result = productive labor in division i (ftes). Equation (13): (L_p^{s,j})_SM = α^{s,j} × (L_pn^s / L^s)_BLS × (L^{s,j})_NIPA.",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
     },
     {
       "entry_type": "trend_description",
       "content": "Both ST and SM estimates show a declining trend in L_p/L from 1964 to 2001. SM estimates: start ~0.45 (1964), decline to ~0.38 (2001), with more volatility in the 1970s. ST estimates: start ~0.45 (1964), decline to ~0.36 (2001), smoother decline. The SM series is systematically higher than ST by an amount that widens over time: ST averages 96.4% of SM in 1989, 95.1% in 2001.",
-      "source_ref": "Mohun_2005, Fig 2; full_transcription.md Section 4"
+      "source_ref": "Mohun_2005, Fig 2; full_transcription.md Section 4",
+      "verbatim_quote": "Numbers: ST: 91.2% of benchmark (sd 1.26) — 8.8% underestimate; SM: 98.6% of benchmark (sd 0.23) — 1.4% underestimate.",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
     },
     {
       "entry_type": "st_vs_sm_comparison",
       "content": "Figure 1 ST-to-SM ratio for productive workers L_p: 1964: ST = 99.7% of SM; 1989: ST = 96.4% of SM; 2001: ST = 95.1% of SM. The ST approximation systematically underestimates the productive labor share because its GDP-weighted services method is less accurate than SM's ratio-weighted method. The underestimate widens over time as the services sector grows (from 16.1% of employment in 1964 to 31.3% in 2001).",
-      "source_ref": "Mohun_2005, Fig 1 and Fig 2; full_transcription.md Section 4"
+      "source_ref": "Mohun_2005, Fig 1 and Fig 2; full_transcription.md Section 4",
+      "verbatim_quote": "For Services Numbers: Not dependent on problematic GDP estimates; Individual division BLS ratios not very different from aggregate Services BLS ratio; Low variation — stable approximation.",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
     },
     {
       "entry_type": "services_sector_note",
       "content": "Services sector (SIC divisions 70-89) is the most important source of discrepancy between ST and SM. In 1988 benchmark year, ST productive services employment = 14,170 thousand (91.2% of benchmark), SM = 15,313 thousand (98.5% of benchmark). The SM approximation does not depend on problematic GDP contribution estimates for services; instead it exploits the empirical finding that individual Services division BLS production worker ratios are not very different from the aggregate Services BLS ratio.",
-      "source_ref": "Mohun_2005, Table 2; full_transcription.md Section 3.1.1"
+      "source_ref": "Mohun_2005, Table 2; full_transcription.md Section 3.1.1",
+      "verbatim_quote": "GDP contributions in Services notoriously difficult to estimate (non-tangible outputs, labor-intensive processes, variety of national accounts methods); ST method depends on accurate GDP data; GDP variations don't map well to employment variations.",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
     },
     {
       "entry_type": "bls_production_worker_definition",
       "content": "BLS 'production workers' in private service-producing industries are nonsupervisory employees: employees not above working supervisory level, including office and clerical workers, repairers, salespersons, operators, drivers, physicians, lawyers, accountants, nurses, social workers, research aides, teachers, drafters, photographers, beauticians, musicians, restaurant workers, custodial workers, attendants, line installers, laborers, janitors, guards, and 'other employees at similar occupational levels whose services are closely associated with those of the employees listed.'",
-      "source_ref": "Mohun_2005, Section 2.1; full_transcription.md"
+      "source_ref": "Mohun_2005, Section 2.1; full_transcription.md",
+      "verbatim_quote": "Nonsupervisory employees (Private service-producing industries): Employees not above working supervisory level. Examples: office and clerical workers, repairers, salespersons, operators, drivers, physicians, lawyers, accountants, nurses, social workers, research aides, teachers, drafters, photographers, beauticians, musicians, restaurant workers, custodial workers, attendants, line installers and repairers, laborers, janitors, guards. \"Other employees at similar occupational levels whose services are closely associated with those of the employees listed.\"",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Equation (1): L_p^i = (L_pn^i / L^i)_BLS × (L^i)_NIPA. Calculate BLS ratio of production workers to all employees in division i; apply this ratio to NIPA total employment (which includes self-employed); result = productive labor in division i (ftes). Equation (13): (L_p^{s,j})_SM = α^{s,j} × (L_pn^s / L^s)_BLS × (L^{s,j})_NIPA.",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md",
+      "page_reference": "Section 2.1, Equations 1-3, 13-14",
+      "context": "Supports the methodology_description entry defining the SM productive-labor equations and the services-sector α weighting.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Numbers: ST: 91.2% of benchmark (sd 1.26) — 8.8% underestimate; SM: 98.6% of benchmark (sd 0.23) — 1.4% underestimate.",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md",
+      "page_reference": "Section 4",
+      "context": "Supports the trend_description entry showing SM is systematically higher than ST for productive labor share.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "For Services Numbers: Not dependent on problematic GDP estimates; Individual division BLS ratios not very different from aggregate Services BLS ratio; Low variation — stable approximation.",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md",
+      "page_reference": "Fig 1 and Fig 2; Section 4",
+      "context": "Supports the st_vs_sm_comparison entry explaining why ST systematically underestimates the productive labor share in Services.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "GDP contributions in Services notoriously difficult to estimate (non-tangible outputs, labor-intensive processes, variety of national accounts methods); ST method depends on accurate GDP data; GDP variations don't map well to employment variations.",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md",
+      "page_reference": "Section 3.1.1",
+      "context": "Supports the services_sector_note entry explaining why GDP-weighted services approximation is unreliable and why ratio-weighted SM is preferable.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Nonsupervisory employees (Private service-producing industries): Employees not above working supervisory level. Examples: office and clerical workers, repairers, salespersons, operators, drivers, physicians, lawyers, accountants, nurses, social workers, research aides, teachers, drafters, photographers, beauticians, musicians, restaurant workers, custodial workers, attendants, line installers and repairers, laborers, janitors, guards. \"Other employees at similar occupational levels whose services are closely associated with those of the employees listed.\"",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2005_Mohun_US_1964_2001/full_transcription.md",
+      "page_reference": "Section 2.1",
+      "context": "Supports the bls_production_worker_definition entry enumerating the occupational scope of BLS nonsupervisory employees in private service-producing industries.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
     }
   ],
   "citations": [
     {
       "id": "Mohun_2005",
-      "full": "Mohun, Simon. 2005. 'On measuring the wealth of nations: the US economy, 1964-2001.' Cambridge Journal of Economics 29(5): 799-815. DOI: 10.1093/cje/bei043."
+      "full": "Mohun, Simon. 2005. 'On measuring the wealth of nations: the US economy, 1964-2001.' Cambridge Journal of Economics 29(5): 799-815. DOI: 10.1093/cje/bei043.",
+      "doi": "10.1093/cje/bei043",
+      "doi_source": "crossref",
+      "doi_verified": "2026-05-24"
     },
     {
       "id": "ST_1994",
-      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press.",
+      "doi": "10.1017/cbo9780511528330",
+      "doi_source": "crossref",
+      "doi_verified": "2026-05-24"
     }
   ],
   "methodology_summary": "Productive labor share (L_p/L) under Mohun SM approximation. Declines from ~0.45 (1964) to ~0.38 (2001). SM systematically higher than ST (ST = 95.1% of SM by 2001) due to superior services sector approximation. Loaded from Mohun 2005 Table 2 via L15.",
   "known_issues": [
     "Services sector data gaps prior to 1988 require approximation; no benchmark validation possible for 1964-1987",
-    "Agriculture sector uses Mining BLS ratio as proxy for Farms component \u2014 assessed by Mohun as having small net effect",
-    "Government enterprises use Transportation/Public Utilities BLS ratio as proxy \u2014 very small sector weight"
+    "Agriculture sector uses Mining BLS ratio as proxy for Farms component — assessed by Mohun as having small net effect",
+    "Government enterprises use Transportation/Public Utilities BLS ratio as proxy — very small sector weight"
   ],
   "cross_references": [
     "ES1401",
@@ -67,5 +123,7 @@
     "L5_validation": []
   },
   "ported_from": "ST2/research/N1402_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "citation_dois_added_date": "2026-05-24",
+  "citation_dois_added_by": "v1.2-iter5-C5-crossref-dois"
 }

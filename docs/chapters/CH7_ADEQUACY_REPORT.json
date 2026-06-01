@@ -1,0 +1,63 @@
+{
+  "chapter": "Ch7",
+  "chapter_label": "Labor Values, Prices of Production, and Value-Price Deviations (S701, S702, S703)",
+  "series_count": 3,
+  "series_ids": ["S701", "S702", "S703"],
+  "report_date": "2026-05-23T00:00:00Z",
+  "reporter": "agent",
+  "skill": "anu-adequacy",
+  "framework": "Anu Framework v12.0",
+  "stage": 2,
+  "cohort": "stage6_c1_reverify",
+  "layers": {
+    "L1_kb_completeness": {
+      "score": 60,
+      "evidence": "Unchanged. The book has no numbered 'Ch7 Labor Values' chapter; methodology lives in Appendix G (chunk_33), Appendix J (chunk_36), and chunk_11 table_4.1. S701/S702/S703 DPRs (10205/9764/9727 bytes, 7 H2 sections each, KB-anchored) consolidate the cross-chunk evidence. This is a fundamental mapping issue, not a documentation gap.",
+      "blockers": ["Book has no 'Ch7 Labor Values' chapter; series mapping is conceptual not chapter-aligned"]
+    },
+    "L2_data_source_availability": {
+      "score": 55,
+      "evidence": "+40 from stage3_c2 baseline (was 15). Dedicated ch07/ source CSVs (Tables 7.1/7.2/7.3) STILL not digitized; the BLS-CES real-fix data sourcing has not been executed (CH7_REAL_FIX_BLOCKER waiver formalized). HOWEVER, Stage 5 has produced complete proxy-based runnable triads: chopped/S701.csv, chopped/S702.csv, chopped/S703.csv (8 rows each, benchmark years 1947, 1958, 1963, 1967, 1972, 1977 per Leontief inverse matrix structure), final/, intermediate/, validation JSONs all status=PASS (S701 actual_range [2.08, 51.86] within expected [1, 60]). Extenbooks present for all three series. Score reflects the dual reality: PROXY data flows cleanly through the pipeline (operational adequacy), but REAL data sources required by the book concept are absent (substantive inadequacy). The waiver is formalized but does not retire the substantive dock.",
+      "blockers": ["Real BLS-CES inputs absent (multi-session BLS work required); ch07/ book-table CSVs not digitized"]
+    },
+    "L3_methodology_clarity": {
+      "score": 92,
+      "evidence": "+2 from stage3_c2 (was 90). DPRs explicitly delineate proxy methodology AND the book's real-fix methodology side-by-side. The CH7_REAL_FIX_BLOCKER report formally documents the gap. Methodology clarity is now actually a strength because of the explicit proxy disclosure.",
+      "blockers": []
+    },
+    "L4_registry_completeness": {
+      "score": 90,
+      "evidence": "Unchanged. Strong baseline. proxy:true + proxy_justification + status='benchmark_only_matrix_derived' all present. Extenbooks present.",
+      "blockers": []
+    },
+    "L5_validation_refs": {
+      "score": 78,
+      "evidence": "+8 from stage3_c2 (was 70). reference_values populated for benchmark years; V03 validators all empirically PASS in data/intermediate/validation/ (S701/S702/S703.json status=PASS). 22-point dock retained for: S702 expected_range still null, tolerance unspecified across all three, AND the persistent units mismatch (registry units='dimensionless_matrix_proxy' vs reference_values in 'labor_hours_per_dollar' on S701) — the V03 PASS is on the proxy concept, not on book-replication fidelity to hp*-based units.",
+      "blockers": ["S702 expected_range null; tolerance unspecified; concept-vs-units mismatch persists"]
+    },
+    "L6_classification_accuracy": {
+      "score": 42,
+      "evidence": "+2 from stage3_c2 (was 40). PER USER INSTRUCTION + project CLAUDE.md anti-pattern #2, L6 MUST remain low until the BLS real fix lands. The CH7_REAL_FIX_BLOCKER waiver does NOT retire this dock — it merely documents WHY the dock cannot currently be closed. The substantive concept mismatch (matrix-derived mean(column_sum(Leontief inverse)) ≠ book's hp*-based labor-coefficient vector) is unchanged. S703 remains algebraically S513*100. Without the multi-session BLS sourcing project, Ch7 cannot reach L6>=80. 58-point dock breakdown: 30 for proxy substitution, 20 for S703 redundancy with S513, 8 for unresolved units/concept mismatch.",
+      "blockers": ["All three series are proxies for missing book concepts; S703 duplicates S513; concept-vs-units mismatch — waivered, not resolved"]
+    }
+  },
+  "chapter_score": 69.50,
+  "gate_passed": false,
+  "recommendations": [
+    "PRIMARY BLOCKER UNCHANGED: Execute the multi-session BLS-CES real-fix per Technical/Handoffs/CH7_REAL_FIX_PLAN.md to lift L6 above 80. Until then, Ch7 cannot pass the adequacy gate regardless of Stage 5/6 operational completeness",
+    "Honest disclosure: Ch7 ADEQUACY FAILURE is structural — the waiver is correct and the proxy pipeline runs cleanly, but a 'PASS' on Ch7 would misrepresent the substantive validity of the labor-value series",
+    "Eliminate S703 as a separate series or formally re-document it as a units transformation of S513 (multiply-by-100)",
+    "Set S702 validation.expected_range and tolerance for all three series",
+    "Digitize book Tables 7.1, 7.2, 7.3 to ch07/ CSVs to enable book-replication validation distinct from proxy internal-consistency validation"
+  ],
+  "waiver": {
+    "type": "BLOCKED",
+    "report": "Technical/Handoffs/CH7_REAL_FIX_BLOCKER.md",
+    "rationale": "Real-fix requires multi-session BLS-CES sourcing project outside Stage 5 scope; proxy methodology is fully disclosed in registry + DPRs + research JSONs"
+  },
+  "revision_history": [
+    {"ts": "2026-05-23T00:00:00+00:00", "score": 50.00, "gate": false, "agent": "stage2_cohort1"},
+    {"ts": "2026-05-24T00:30:00+00:00", "score": 60.83, "gate": false, "agent": "stage3_cohort2_reverify"},
+    {"ts": "2026-05-24T03:15:00+00:00", "score": 69.50, "gate": false, "agent": "stage6_reverify"}
+  ]
+}

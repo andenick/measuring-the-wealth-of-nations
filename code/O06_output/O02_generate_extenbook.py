@@ -117,7 +117,7 @@ def write_provenance_sheet(ws, sid: str, entry: dict, dpr_path: Path) -> None:
         ("Book Table",    entry.get("book_table", "")),
         ("Units",         entry.get("units", "")),
         ("Content Type",  entry.get("content_type", "")),
-        ("Year Range",    f"{entry.get('year_range', [None,None])[0]}–{entry.get('year_range', [None,None])[1]}"),
+        ("Year Range",    f"{entry.get('year_range', [None,None])[0]}-{entry.get('year_range', [None,None])[1]}"),
         ("Status",        entry.get("status", "")),
         ("Figures",       ", ".join(entry.get("figures", []))),
         ("Loader",        entry.get("loader", "") or ""),
@@ -126,6 +126,38 @@ def write_provenance_sheet(ws, sid: str, entry: dict, dpr_path: Path) -> None:
     ]
     for k, v in rows:
         ws.append([k, v])
+
+    # Proxy disclosure section (Decision 0001 + RMWND CLAUDE.md anti-pattern #2)
+    if entry.get("proxy") is True:
+        ws.append([])
+        ws.append(["PROXY DISCLOSURE", ""])
+        for cell in ws[ws.max_row]:
+            cell.fill = FILL_HEADER
+            cell.font = HEADER_FONT
+        ws.append(["proxy", "TRUE — this series is NOT a direct replication of the book concept."])
+        ws.append(["proxy_basis", str(entry.get("proxy_basis") or "<not specified>")])
+        ws.append(["proxy_disclosure", str(entry.get("proxy_disclosure") or "Matrix-derived or surrogate construction; consult docs/series/" + sid + "_DPR.md for full disclosure.")])
+        if entry.get("proxy_real_fix_plan"):
+            ws.append(["proxy_real_fix_plan", str(entry["proxy_real_fix_plan"])])
+
+    # KB sources / provenance index
+    if entry.get("kb_sources"):
+        ws.append([])
+        ws.append(["KB Sources", ""])
+        for src in entry.get("kb_sources", []):
+            ws.append(["", str(src)])
+
+    # Subseries provenance
+    if entry.get("subseries"):
+        ws.append([])
+        ws.append(["Subseries", "source / role"])
+        for cell in ws[ws.max_row]:
+            cell.fill = FILL_HEADER
+            cell.font = HEADER_FONT
+        for sub_id, sub_meta in entry["subseries"].items():
+            src = sub_meta.get("source", "")
+            role = sub_meta.get("role", sub_meta.get("description", ""))
+            ws.append([sub_id, f"{src} | {role}" if role else src])
 
     # Append DPR text as a single multi-line block
     if dpr_path.exists():
@@ -149,12 +181,37 @@ def write_research_sheet(ws, sid: str, research_path: Path) -> None:
         cell.fill = FILL_HEADER
         cell.font = HEADER_FONT
 
+    # Verbatim quotes first (Decision 0001 emphasizes these)
+    verbatim_first: list = []
+    other_entries: list = []
     for e in r.get("entries", []):
-        # Both compact and full formats are supported
+        et = e.get("entry_type", e.get("type", ""))
+        if et == "verbatim_quote":
+            verbatim_first.append(e)
+        else:
+            other_entries.append(e)
+    for e in verbatim_first + other_entries:
         eid = e.get("entry_id", e.get("entry_type", e.get("type", "")))
         content = e.get("content", e.get("quote", ""))
         ref = e.get("source_ref", e.get("source_location", e.get("kb_reference", "")))
         ws.append([str(eid), str(content), str(ref)])
+
+    # Top-level verbatim_quotes block (alternative format)
+    if r.get("verbatim_quotes"):
+        ws.append([])
+        ws.append(["VERBATIM QUOTES (top-level)", "", ""])
+        for cell in ws[ws.max_row]:
+            cell.fill = FILL_HEADER
+            cell.font = HEADER_FONT
+        for q in r["verbatim_quotes"]:
+            if isinstance(q, dict):
+                ws.append([
+                    q.get("id", q.get("quote_id", "")),
+                    q.get("quote", q.get("content", "")),
+                    q.get("source_ref", q.get("source_location", q.get("page", ""))),
+                ])
+            else:
+                ws.append(["", str(q), ""])
 
     ws.append([])
     ws.append(["methodology_summary", r.get("methodology_summary", "")])
@@ -191,14 +248,30 @@ def write_construction_sheet(ws, sid: str, entry: dict) -> None:
             s.get("formula", "") or s.get("at_year", "") or s.get("method", ""),
         ])
 
+    # Proxy disclosure in Construction sheet (mirrors Provenance for accountability)
+    if entry.get("proxy") is True:
+        ws.append([])
+        ws.append(["PROXY CONSTRUCTION NOTICE", ""])
+        for cell in ws[ws.max_row]:
+            cell.fill = FILL_HEADER
+            cell.font = HEADER_FONT
+        ws.append(["proxy", "TRUE"])
+        ws.append(["proxy_basis", str(entry.get("proxy_basis") or "<not specified>")])
+        ws.append(["proxy_disclosure", str(entry.get("proxy_disclosure") or "Series is a proxy, not a direct replication. See DPR.")])
+        if entry.get("proxy_real_fix_plan"):
+            ws.append(["real_fix_plan", str(entry["proxy_real_fix_plan"])])
+
     if entry.get("extension"):
         ws.append([])
         ws.append(["EXTENSION", ""])
+        for cell in ws[ws.max_row]:
+            cell.fill = FILL_HEADER
+            cell.font = HEADER_FONT
         for k, v in entry["extension"].items():
-            ws.append([k, str(v)])
+            ws.append([k, json.dumps(v) if isinstance(v, (dict, list)) else str(v)])
     elif entry.get("extension") is None:
         ws.append([])
-        ws.append(["EXTENSION", "null — series does not extend beyond book period"])
+        ws.append(["EXTENSION", "null - series does not extend beyond book period"])
 
     val = entry.get("validation", {})
     if val:

@@ -12,7 +12,7 @@
   "entries": [
     {
       "entry_type": "methodology_description",
-      "content": "s/TV is the accumulation rate \u2014 surplus-value as a share of total value (TV = c + v + s). Total value is the classical concept of value produced by productive and trading sectors, derived by mapping NZSNA data to classical economic categories following Shaikh & Tonak (1994). Surplus-value is total value minus constant capital (c) minus variable capital (v). The ratio measures the productive economy's capacity to generate surplus relative to total productive activity.",
+      "content": "s/TV is the accumulation rate — surplus-value as a share of total value (TV = c + v + s). Total value is the classical concept of value produced by productive and trading sectors, derived by mapping NZSNA data to classical economic categories following Shaikh & Tonak (1994). Surplus-value is total value minus constant capital (c) minus variable capital (v). The ratio measures the productive economy's capacity to generate surplus relative to total productive activity.",
       "source_ref": "Cronin_2001, body_text.md Section 3 (Deriving Classical Economic Categories); SUMMARY.md"
     },
     {
@@ -27,12 +27,12 @@
     },
     {
       "entry_type": "periodization",
-      "content": "Three distinct periods: (1) 1972-1983 profitability crisis \u2014 s/TV fell from 34% to 31%, reflecting a rising value composition of capital with stable exploitation rate; classic falling rate of profit conditions. (2) 1984-1989 neo-liberal recovery \u2014 s/TV rose from 32% to 38%, driven by a 37% jump in the rate of surplus-value as Rogernomics reforms intensified labor exploitation. (3) 1990-1995 stagnation \u2014 s/TV plateaued at 38% despite continued rise in s/v, because renewed rise in value composition of capital offset gains in exploitation.",
+      "content": "Three distinct periods: (1) 1972-1983 profitability crisis — s/TV fell from 34% to 31%, reflecting a rising value composition of capital with stable exploitation rate; classic falling rate of profit conditions. (2) 1984-1989 neo-liberal recovery — s/TV rose from 32% to 38%, driven by a 37% jump in the rate of surplus-value as Rogernomics reforms intensified labor exploitation. (3) 1990-1995 stagnation — s/TV plateaued at 38% despite continued rise in s/v, because renewed rise in value composition of capital offset gains in exploitation.",
       "source_ref": "Cronin_2001, body_text.md Section 5; SUMMARY.md"
     },
     {
       "entry_type": "structural_break",
-      "content": "The 1984 Rogernomics reforms (Roger Douglas, Labour government) are the key structural break. Post-1984, the expansion of unproductive activity (financial sector, trade, administration) increased the unproductive share of gross output relative to total value \u2014 visible in gross output growing faster than total value from the late 1980s onward. The s/TV ratio improvement 1984-1989 masks the underlying dynamic: gains were exploitation-driven, not productivity-driven, and the unproductive sector drained surplus from productive investment.",
+      "content": "The 1984 Rogernomics reforms (Roger Douglas, Labour government) are the key structural break. Post-1984, the expansion of unproductive activity (financial sector, trade, administration) increased the unproductive share of gross output relative to total value — visible in gross output growing faster than total value from the late 1980s onward. The s/TV ratio improvement 1984-1989 masks the underlying dynamic: gains were exploitation-driven, not productivity-driven, and the unproductive sector drained surplus from productive investment.",
       "source_ref": "Cronin_2001, body_text.md Section 5 (Growth of Unproductive Activity); SUMMARY.md"
     },
     {
@@ -42,24 +42,51 @@
     },
     {
       "entry_type": "caveat",
-      "content": "s/TV is described by Cronin as the 'accumulation rate' \u2014 the share of total productive value available for accumulation. It differs from the conventional profit share because total value excludes unproductive activity. The conventional proxy (operating surplus / employee compensation) understates s/v by a factor of roughly 3-4 and shows little variation, while classical s/TV rises meaningfully from 1984.",
+      "content": "s/TV is described by Cronin as the 'accumulation rate' — the share of total productive value available for accumulation. It differs from the conventional profit share because total value excludes unproductive activity. The conventional proxy (operating surplus / employee compensation) understates s/v by a factor of roughly 3-4 and shows little variation, while classical s/TV rises meaningfully from 1984.",
       "source_ref": "Cronin_2001, body_text.md Section 4 (Conventional Proxy Measures); SUMMARY.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "From a classical perspective, however, the conditions for renewed economic growth are not so apparent. Examining the relationship of surplus-value to total value reveals: A declining surplus in the period 1972 to 1983; A rise to 1989; Then a levelling out thereafter (see Table 2 and Fig. 10).",
+      "source_ref": "Cronin 2001, Section 5 (Classical View)",
+      "page_reference": "319-320",
+      "context": "Cronin's own three-period summary of the s/TV (accumulation rate) trajectory — the direct narrative anchor for series ES1701's periodization (1972-83 decline, 1984-89 rise, 1990-95 plateau)."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The conventional category of gross output increases faster than the classical concept of total value, particularly during the late 1980s and early 1990s, because of the growth of classically unproductive activity in the economy in this period (Fig. 13). The growth of unproductive activity can be seen in the relationship of total wages to variable capital, the latter growing more quickly, reflecting the growth of unproductive employment.",
+      "source_ref": "Cronin 2001, Section 5 (Growth of Unproductive Activity)",
+      "page_reference": "321-322",
+      "context": "Verbatim justification for excluding unproductive activity from the s/TV denominator — explains why classical s/TV diverges from conventional profit-share ratios after 1984."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Thus, the improvement in economic fundamentals emphasised by the neo-liberal reformers in New Zealand appears to arise from a short-term rise in the rate of surplus-value. The growth in unproductive activity throughout the 1980s and 90s gives an appearance of sustainable growth, but productive activity capable of generating surplus-value, and thus lagging indicators such as productivity and employment, remains weak.",
+      "source_ref": "Cronin 2001, Section 6 (Conclusions)",
+      "page_reference": "324",
+      "context": "Cronin's concluding interpretation of the s/TV plateau — establishes the political-economic significance of the series for the Rogernomics-era critique."
     }
   ],
   "citations": [
     {
       "id": "Cronin_2001",
-      "full": "Cronin, Bruce. 2001. 'Productive and Unproductive Capital: A mapping of the New Zealand system of national accounts to classical economic categories, 1972-95.' Review of Political Economy 13(3): 309-327. https://doi.org/10.1080/09538250120055168"
+      "full": "Cronin, Bruce. 2001. 'Productive and Unproductive Capital: A mapping of the New Zealand system of national accounts to classical economic categories, 1972-95.' Review of Political Economy 13(3): 309-327. https://doi.org/10.1080/09538250120055168",
+      "doi": "10.1080/09538250120055168",
+      "doi_source": "crossref",
+      "doi_verified": "2026-05-24"
     },
     {
       "id": "ST_1994",
-      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press.",
+      "doi": "10.1017/cbo9780511528330",
+      "doi_source": "crossref",
+      "doi_verified": "2026-05-24"
     }
   ],
   "methodology_summary": "s/TV (productive capital share / accumulation rate) is directly digitized from Cronin (2001) Table 2. Derived from NZSNA mapped to classical categories via Shaikh-Tonak methodology applied to 25 NZ production groups, 1972-1995. No extension beyond 1995.",
   "known_issues": [
     "No post-1995 extension available from this source",
-    "Non-capitalist production (small self-employed and non-profit sector) assumed negligible and included as capitalist \u2014 Cronin notes data insufficient to isolate",
+    "Non-capitalist production (small self-employed and non-profit sector) assumed negligible and included as capitalist — Cronin notes data insufficient to isolate",
     "Some inter-industry years interpolated using annual NZSNA data rather than full IO tables"
   ],
   "cross_references": [
@@ -81,5 +108,7 @@
     ]
   },
   "ported_from": "ST2/research/N1701_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "citation_dois_added_date": "2026-05-24",
+  "citation_dois_added_by": "v1.2-iter5-C5-crossref-dois"
 }

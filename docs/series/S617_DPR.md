@@ -1,5 +1,7 @@
 # S617 — Employee Compensation (EC)
 
+**Status**: book_period_validated
+
 **Chapter**: 6 (supporting). **Status**: book_period_validated. **Period**: 1948-1989. **Units**: billions_usd.
 
 ## Definition

@@ -52,12 +52,52 @@
       "entry_type": "decision_reference",
       "content": "[internal-decision-record] (No Synthetic Data Policy, 2026-05-03): ES1103 is not listed among the five series requiring synthetic-data remediation. However, if S604 (taxes paid by workers) contains synthetic or estimated data, ES1103 inherits that status. The 34-year series in S&T (1987) Table 2 column 2 (taxes column) provides direct validation benchmarks for P19 S604 output.",
       "source_ref": "[internal-decision-log]#[internal-decision-record]"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "VERBATIM (ST 1987, transcription line 264-266): \"Taxes (from workers): = Group I (Social Security contributions from employee compensation) + Labor's share of Group II (personal taxes)\". This is the formal construction of the social tax numerator T_w used in ES1103. External source: Shaikh & Tonak 1987, 'The Welfare State and the Myth of the Social Wage', p.187.",
+      "source_ref": "EXTERNAL: Shaikh, Anwar and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' In The Imperiled Economy, Book I, p.187. Verbatim from Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md lines 264-266."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "VERBATIM (ST 1987 Figure 2 description, transcription line 324-330): \"Tax Rate: 1952: ~0.17 (17%) ... Rises slowly and steadily throughout period ... 1968: ~0.22 (22%) ... 1975: ~0.24 (24%) ... 1984: ~0.31 (31%) ... By 1984: Reaches all-time high (41% higher than 1966)\". These benchmark values from Figure 2 (p.188) are the primary validation targets for the ES1103 replication trajectory. External source.",
+      "source_ref": "EXTERNAL: Shaikh & Tonak 1987, Figure 2, p.188. Verbatim from Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md lines 324-330."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "VERBATIM (ST 1987, transcription line 305): \"Arguments such as those of Bowles and Gintis, which claim that 'there has been a substantial redistribution from capital to labor' over the postwar period, and which trace the current economic crisis back to a supposed increased social wage, appear to be quite ill-founded.\" This is the central interpretive thrust of the rising-tax-rate finding underpinning ES1103. External source.",
+      "source_ref": "EXTERNAL: Shaikh & Tonak 1987, p.187 (Figure 1 implication). Verbatim from Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md line 305."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Taxes (from workers): = Group I (Social Security contributions from employee compensation) + Labor's share of Group II (personal taxes)",
+      "source_ref": "Shaikh & Tonak 1987, Empirical Methodology, p.187",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Formal construction of the social tax numerator for ES1103.",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "By 1984: Reaches all-time high (41% higher than 1966)",
+      "source_ref": "Shaikh & Tonak 1987, Figure 2 Tax Rate, p.188",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Anchor figure for ES1103 trajectory — 1984 tax rate is the historical peak.",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Tax Rate: 1952: ~0.17 (17%) ... 1968: ~0.22 (22%) ... 1975: ~0.24 (24%) ... 1984: ~0.31 (31%)",
+      "source_ref": "Shaikh & Tonak 1987, Figure 2, p.188",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Tax rate benchmark values from Figure 2; used to validate ES1103 series replication.",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md"
     }
   ],
   "citations": [
     {
       "id": "ST_1987",
-      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' In Robert Cherry et al. (eds.), The Imperiled Economy, Book I. New York: Union for Radical Political Economics, pp. 184-194."
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' In Robert Cherry et al. (eds.), The Imperiled Economy, Book I. New York: Union for Radical Political Economics, pp. 184-194.",
+      "no_doi_reason": "Book chapter in URPE edited volume 'The Imperiled Economy' (1987); Crossref has no DOI on file for this chapter."
     },
     {
       "id": "BEA_1981",
@@ -65,7 +105,8 @@
     },
     {
       "id": "Tonak_1984",
-      "full": "Tonak, Ertugrul Ahmet. 1984. 'A Conceptualization of State Revenues and Expenditures U.S.: 1952-1980.' PhD Dissertation, New School for Social Research. UMI Order Number 9414212."
+      "full": "Tonak, Ertugrul Ahmet. 1984. 'A Conceptualization of State Revenues and Expenditures U.S.: 1952-1980.' PhD Dissertation, New School for Social Research. UMI Order Number 9414212.",
+      "no_doi_reason": "PhD dissertation, New School for Social Research, 1984. UMI Order Number 9414212. Dissertations rarely have DOIs (predates ProQuest DOI assignment)."
     }
   ],
   "methodology_summary": "Social tax rate = T_w / EC, 1952-1985 (34 years). Taxes include social security contributions from employee compensation (Group I, 100%) plus labor share of personal taxes (Group II). Excludes corporate, indirect, and estate taxes. Key characteristic: monotonically rising trend throughout the period, reaching 41% above 1966 level by 1984.",
@@ -98,5 +139,33 @@
     ]
   },
   "ported_from": "ST2/research/N1103_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "quote": "Taxes (from workers): = Group I (Social Security contributions from employee compensation) + Labor's share of Group II (personal taxes)",
+      "source": "Shaikh & Tonak 1987, Empirical Methodology, p.187",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md",
+      "verbatim_check": true,
+      "notes": "Formal construction of the social tax numerator for ES1103."
+    },
+    {
+      "quote": "By 1984: Reaches all-time high (41% higher than 1966)",
+      "source": "Shaikh & Tonak 1987, Figure 2 Tax Rate, p.188",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md",
+      "verbatim_check": true,
+      "notes": "Anchor figure for ES1103 trajectory — 1984 tax rate is the historical peak."
+    },
+    {
+      "quote": "Tax Rate: 1952: ~0.17 (17%) ... 1968: ~0.22 (22%) ... 1975: ~0.24 (24%) ... 1984: ~0.31 (31%)",
+      "source": "Shaikh & Tonak 1987, Figure 2, p.188",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md",
+      "verbatim_check": true,
+      "notes": "Tax rate benchmark values from Figure 2; used to validate ES1103 series replication."
+    }
+  ],
+  "verbatim_quotes_added_date": "2026-05-19",
+  "verbatim_quotes_added_by": "D4_es_ch10_13_backfill",
+  "verbatim_quotes_deprecated": true,
+  "citation_dois_added_date": "2026-05-24",
+  "citation_dois_added_by": "v1.2-iter5-C5-crossref-dois"
 }

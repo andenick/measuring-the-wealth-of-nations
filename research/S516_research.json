@@ -50,6 +50,58 @@
       "entry_type": "caveat",
       "content": "As a residual series, Lu inherits all measurement issues from S515. Any overcount in Lp leads to undercount in Lu and vice versa. The classification of entire sectors as unproductive (especially all of trade) is the most debated aspect of ST's methodology.",
       "source_ref": "DPR T516_DPR.md; EPR T516_EPR.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Lu = L - Lp = total unproductive labor",
+      "source_ref": "ST_1994, p. 109, Section 5.3 notation block",
+      "page_reference": "p. 109 (book), chunk_13 lines 47-61",
+      "context": "Verbatim formula from Section 5.3 'Methodology: Total Labor and Productive Labor' calculation block. Direct definitional anchor for S516 construction: Lu is the residual of total employment minus productive employment."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Productive labor is the production labor employed in capitalist production sectors: agriculture, mining, construction, transportation and public utilities, manufacturing, and productive services (defined as all services except business services, legal services, and private households, as in Table E.1).",
+      "source_ref": "ST_1994, pp. 108-109, Section 5.3",
+      "page_reference": "pp. 108-109 (book), chunk_13 lines 32-33",
+      "context": "Verbatim definition of Lp boundary, which by complement defines the unproductive labor universe Lu = L - Lp. Establishes the sectoral scope: everything outside this list (plus nonproduction workers within these sectors) is Lu."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Figures 5.10 and 5.11 make quite explicit that the unit wages of productive and unproductive workers change only slightly, whereas their relative employments change drastically. We can therefore unambiguously conclude that the relative decline in productive to total wages Wp/W (= V*/W) is almost entirely due to the relative decline in productive to total employment Lp/L.",
+      "source_ref": "ST_1994, p. 113, Section 5.3 empirical results summary",
+      "page_reference": "p. 113 (book), chunk_14 lines 84-86",
+      "context": "Verbatim conclusion from Section 5.3 — the empirical centerpiece justifying ST's focus on the Lu/Lp employment composition. Confirms that Lu's rise is the structural driver, not wage differentials. Anchors Figure 5.7 / Figure 5.11 interpretation."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Total unproductive labor = nonproduction workers in production sectors + all workers in nonproduction sectors",
+      "source_ref": "ST_1994, p. 109, Section 5.3 textual definition",
+      "page_reference": "p. 109 (book), chunk_13 line 38",
+      "context": "Verbatim conceptual decomposition of Lu (replaces the earlier verbatim_check=False paraphrase in verbatim_quotes block). Two-component construction: (a) sales/clerical/managerial workers inside productive sectors plus (b) all workers in trade/FIRE/government/business-services."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Lu = L − Lp = total unproductive labor.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.109",
+      "context": "Section 5.3, p. 109: S516 is the residual Lu = L - Lp. Construction follows directly from S515."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Total unproductive labor = nonproduction workers in production sectors + all workers in nonproduction sectors.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.109",
+      "context": "Section 5.3, p. 109: conceptual decomposition of Lu — paraphrased from the surrounding text (chunk_13 extraction labels this as 'total unproductive labor' construction). Marked verbatim_check=False because exact original wording would need PDF verification. Mohun's Luw/Lum decomposition refines this further."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Footnote 7: Notes asymmetry between production and nonproduction sectors: Production sectors always have nonproduction activities (buying, selling, finance); Nonproduction sectors have no systematic reason to incorporate production activities. Data limitations prevent further breakdown of nonproduction sectors.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.109",
+      "context": "Section 5.3, Footnote 7, p. 109 (paraphrased summary from chunk_13 extraction): explains why Lu is treated as a single aggregate without further sectoral breakdown of nonproduction activity. Marked verbatim_check=False because the chunk renders the footnote as a paraphrase."
     }
   ],
   "citations": [
@@ -64,8 +116,8 @@
   ],
   "methodology_summary": "Unproductive employment Lu = L - Lp. Residual series derived from S515. Shows secular growth reflecting shift to services, FIRE, and government. Mohun provides Luw/Lum decomposition. Industry classifications per Appendix B (chunk_27).",
   "known_issues": [
-    "Residual series \u2014 inherits all S515 measurement issues",
-    "Trade classified entirely as unproductive \u2014 debatable",
+    "Residual series — inherits all S515 measurement issues",
+    "Trade classified entirely as unproductive — debatable",
     "Mohun's Luw/Lum decomposition reveals heterogeneity within Lu"
   ],
   "cross_references": [
@@ -90,5 +142,29 @@
     ]
   },
   "ported_from": "ST2/research/T516_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "text": "Lu = L − Lp = total unproductive labor.",
+      "page": 109,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.3, p. 109: S516 is the residual Lu = L - Lp. Construction follows directly from S515."
+    },
+    {
+      "text": "Total unproductive labor = nonproduction workers in production sectors + all workers in nonproduction sectors.",
+      "page": 109,
+      "chapter": 5,
+      "verbatim_check": false,
+      "context": "Section 5.3, p. 109: conceptual decomposition of Lu — paraphrased from the surrounding text (chunk_13 extraction labels this as 'total unproductive labor' construction). Marked verbatim_check=False because exact original wording would need PDF verification. Mohun's Luw/Lum decomposition refines this further."
+    },
+    {
+      "text": "Footnote 7: Notes asymmetry between production and nonproduction sectors: Production sectors always have nonproduction activities (buying, selling, finance); Nonproduction sectors have no systematic reason to incorporate production activities. Data limitations prevent further breakdown of nonproduction sectors.",
+      "page": 109,
+      "chapter": 5,
+      "verbatim_check": false,
+      "context": "Section 5.3, Footnote 7, p. 109 (paraphrased summary from chunk_13 extraction): explains why Lu is treated as a single aggregate without further sectoral breakdown of nonproduction activity. Marked verbatim_check=False because the chunk renders the footnote as a paraphrase."
+    }
+  ],
+  "verbatim_quotes_deprecated": true
 }

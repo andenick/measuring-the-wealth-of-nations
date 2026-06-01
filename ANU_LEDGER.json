@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-05-15T13:06:29Z",
-  "registry_version": "1.0.0",
+  "generated_at": "2026-05-24T06:55:39Z",
+  "registry_version": "2.2.0",
   "series_count": 64,
   "coverage_counts": {
-    "research": 58,
+    "research": 64,
     "dpr": 64,
-    "loader": 37,
+    "loader": 39,
     "processor": 64,
     "validator": 64,
     "chopped": 64,
     "extenbook": 64
   },
   "coverage_pct": {
-    "research": 90.6,
+    "research": 100.0,
     "dpr": 100.0,
-    "loader": 57.8,
+    "loader": 60.9,
     "processor": 100.0,
     "validator": 100.0,
     "chopped": 100.0,
@@ -276,7 +276,7 @@
     "S701": {
       "research": true,
       "dpr": true,
-      "loader": false,
+      "loader": true,
       "processor": true,
       "validator": true,
       "chopped": true,
@@ -285,7 +285,7 @@
     "S702": {
       "research": true,
       "dpr": true,
-      "loader": false,
+      "loader": true,
       "processor": true,
       "validator": true,
       "chopped": true,
@@ -544,7 +544,7 @@
       "extenbook": true
     },
     "AS001": {
-      "research": false,
+      "research": true,
       "dpr": true,
       "loader": false,
       "processor": true,
@@ -553,7 +553,7 @@
       "extenbook": true
     },
     "AS002": {
-      "research": false,
+      "research": true,
       "dpr": true,
       "loader": false,
       "processor": true,
@@ -562,7 +562,7 @@
       "extenbook": true
     },
     "AS003": {
-      "research": false,
+      "research": true,
       "dpr": true,
       "loader": false,
       "processor": true,
@@ -571,7 +571,7 @@
       "extenbook": true
     },
     "AS004": {
-      "research": false,
+      "research": true,
       "dpr": true,
       "loader": false,
       "processor": true,
@@ -580,7 +580,7 @@
       "extenbook": true
     },
     "S617": {
-      "research": false,
+      "research": true,
       "dpr": true,
       "loader": true,
       "processor": true,
@@ -589,7 +589,7 @@
       "extenbook": true
     },
     "S517": {
-      "research": false,
+      "research": true,
       "dpr": true,
       "loader": true,
       "processor": true,

@@ -1,6 +1,6 @@
 # S510 — Value Composition of Capital (K/V*)
 
-**Status**: validated_book_and_extension
+**Status**: book_period_validated
 
 **Chapter**: 5 supporting. **Units**: ratio.
 

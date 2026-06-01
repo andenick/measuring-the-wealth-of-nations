@@ -1,7 +1,6 @@
 # ES1202 — NSW/EC (Shaikh & Tonak 2002)
 
-**Status**: validated_book_and_extension.
-
+**Status**: book_period_validated
 S607-COMBINED / NIPA T20100 compensation. 74 rows 1952-2025. 1952=-4.73%, 1997=-2.03%. Range [-6.43%, +15.63%]. Normalizing by labor compensation rather than GDP gives larger swings (since NSW changes faster than wages over the period).
 
 ---

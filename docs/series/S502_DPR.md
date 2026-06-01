@@ -5,7 +5,7 @@
 **Units**: billions_usd
 **Period**: 1948-1989 (book period; extension via n/a (book period only) when API access provisioned)
 **Content Type**: time_series
-**Status**: book_period_validated
+**Status**: validated_book_and_extension
 
 ---
 

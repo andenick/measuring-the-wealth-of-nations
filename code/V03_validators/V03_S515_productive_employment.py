@@ -1,4 +1,12 @@
-"""V03_S515 — Validate Productive Employment (Lp) against book TableE3 row directly."""
+"""V03_S515 — Validate Productive Employment (Lp) against book TableE3 row directly.
+
+Refactored 2026-05-24 per Decision 0002 — reads benchmarks from registry
+(`validation.reference_values`) via `utils.registry_validator.get_reference_values`.
+
+Note: ST2's validation_config T515 benchmark of 17331.95 was in DOLLARS (wage bill
+Lp*w). Our S515 is COUNT in thousands; the registry stores the TableE3 Lp_total
+counts (1948 = 29937, 1961 = 33615), which is the correct unit for this series.
+"""
 from __future__ import annotations
 
 import sys
@@ -7,17 +15,14 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from utils.paths import DATA_FINAL  # noqa: E402
+from utils.registry_validator import get_reference_values  # noqa: E402
 from utils.series import BenchmarkValidator  # noqa: E402
 
 
-# Note: validation_config T515 benchmark of 17331.95 is in DOLLARS (the wage bill
-# Lp*w?). Our S515 is COUNT in thousands. Use TableE3 published Lp_total values
-# directly as benchmarks for the 14 known years.
 VALIDATOR = BenchmarkValidator(
     series_id        = "S515",
     tolerance_class  = "level_series",
-    # TableE3 Lp_total row, 1948 = 29937, 1961 = 33615 (head/tail of the wide row)
-    benchmarks       = {1948: 29937, 1961: 33615},
+    benchmarks       = get_reference_values("S515"),
     subseries_filter = "S515-A",
 )
 

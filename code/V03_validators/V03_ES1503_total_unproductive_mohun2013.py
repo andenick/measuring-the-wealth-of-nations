@@ -1,15 +1,20 @@
-"""V03_ES1503 — Validate Total Unproductive Labor (Mohun 2013)."""
+"""V03_ES1503 — Validate Total Unproductive Labor (Mohun 2013).
+
+Refactored 2026-05-24 per Decision 0002 — benchmarks sourced from registry.
+"""
 from __future__ import annotations
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from utils.paths import DATA_FINAL
+from utils.registry_validator import get_reference_values, get_tolerance_class
 from utils.series import BenchmarkValidator
 
 VALIDATOR = BenchmarkValidator(
-    series_id="ES1503", tolerance_class="level_series",
-    benchmarks={1948: 14095.8293},
+    series_id="ES1503",
+    tolerance_class=get_tolerance_class("ES1503", default="level_series"),
+    benchmarks=get_reference_values("ES1503"),
     subseries_filter="ES1503-A",
 )
 

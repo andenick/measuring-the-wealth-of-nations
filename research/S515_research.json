@@ -52,6 +52,58 @@
       "entry_type": "caveat",
       "content": "BLS CES classification does not perfectly match ST's theoretical framework. The transition from SIC to NAICS industry codes affects time-series consistency. CES production worker definition is occupation-based, while ST's is sector-based.",
       "source_ref": "Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "We must now divide total wages into those of productive and unproductive workers. Given our previous data on the numbers of productive and unproductive workers (Lp, Lu), and on the total wage bill of all workers (W), an estimate of the unit employee compensation of productive workers (ecp) would be sufficient to derive the wage bill of unproductive workers (Wp = ecp · Lp) and also that of unproductive workers (Wu = W - Wp).",
+      "source_ref": "ST_1994, Ch5, p.112; chunk_14",
+      "page_reference": "112",
+      "context": "Section 5.3: states the problem that requires Lp as a primary input. S515 supplies the Lp series that this wage-bill decomposition consumes downstream."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Figures 5.10 and 5.11 make quite explicit that the unit wages of productive and unproductive workers change only slightly, whereas their relative employments change drastically. We can therefore unambiguously conclude that the relative decline in productive to total wages Wp/W (= V*/W) is almost entirely due to the relative decline in productive to total employment Lp/L.",
+      "source_ref": "ST_1994, Ch5, p.113; chunk_14",
+      "page_reference": "113",
+      "context": "Section 5.3: key empirical claim that the falling productive-wage share is driven by the falling productive-employment share Lp/L. V03 validation for S515 should reproduce the ~37% decline in Lp/L referenced on the same page."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "V*/W declines by 34%, while Lp/L declines by 37%.",
+      "source_ref": "ST_1994, Ch5, p.113; chunk_14",
+      "page_reference": "113",
+      "context": "Section 5.3 empirical magnitudes for 1948-89: the 37% decline in Lp/L is the canonical validation target for S515 trend dynamics, and explains 34/37 = ~92% of the V*/W decline."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Wj = ecj · Lj = estimated wage equivalent of employees and self-employed persons in the jth sector; and W = Sum Wj = total wage and wage equivalent. This extends the coverage of employee compensation to include the wage equivalent of self-employed persons.",
+      "source_ref": "ST_1994, Ch5, p.112; chunk_14",
+      "page_reference": "112",
+      "context": "Section 5.3: confirms the sector-level construction that uses Lj (which decomposes into Lp_j + Lu_j) and the imputation of self-employed wage equivalents. S515's L01 must combine FEE + SEP, not FEE alone."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Productive labor is the production labor employed in capitalist production sectors: agriculture, mining, construction, transportation and public utilities, manufacturing, and productive services (defined as all services except business services, legal services, and private households, as in Table E.1).",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.109",
+      "context": "Section 5.3, p. 109: the operational definition of productive labor. S515 tabulates Lp — the absolute level rather than the share (S511 = Lp/L)."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "L_j = total employment in jth sector (from NIPA) = 'persons engaged in production' (PEP) = full-time equivalent employees (FEE) + self-employed persons (SEP); L = ∑L_j = total labor; (Lp/L)_j = ratio of production/total workers in jth production sector (BLS); (Lp)_j = (Lp/L)_j · (L_j) = estimated production worker employment in the jth production sector.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.109",
+      "context": "Section 5.3, p. 109: exact algorithmic construction of Lp (= S515) by sector j, combining NIPA PEP totals with BLS production-worker shares. Drives the 85-IO-to-13-NIPA concordance."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "In production sectors, [BLS production and nonsupervisory workers] ≈ production workers.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.108",
+      "context": "Section 5.3, Footnote 6, p. 108: justifies the proxy that drives S515's BLS CES extension post-1989 — production-and-nonsupervisory headcount approximates productive labor in production sectors."
     }
   ],
   "citations": [
@@ -98,5 +150,29 @@
     ]
   },
   "ported_from": "ST2/research/T515_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "text": "Productive labor is the production labor employed in capitalist production sectors: agriculture, mining, construction, transportation and public utilities, manufacturing, and productive services (defined as all services except business services, legal services, and private households, as in Table E.1).",
+      "page": 109,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.3, p. 109: the operational definition of productive labor. S515 tabulates Lp — the absolute level rather than the share (S511 = Lp/L)."
+    },
+    {
+      "text": "L_j = total employment in jth sector (from NIPA) = 'persons engaged in production' (PEP) = full-time equivalent employees (FEE) + self-employed persons (SEP); L = ∑L_j = total labor; (Lp/L)_j = ratio of production/total workers in jth production sector (BLS); (Lp)_j = (Lp/L)_j · (L_j) = estimated production worker employment in the jth production sector.",
+      "page": 109,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.3, p. 109: exact algorithmic construction of Lp (= S515) by sector j, combining NIPA PEP totals with BLS production-worker shares. Drives the 85-IO-to-13-NIPA concordance."
+    },
+    {
+      "text": "In production sectors, [BLS production and nonsupervisory workers] ≈ production workers.",
+      "page": 108,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.3, Footnote 6, p. 108: justifies the proxy that drives S515's BLS CES extension post-1989 — production-and-nonsupervisory headcount approximates productive labor in production sectors."
+    }
+  ],
+  "verbatim_quotes_deprecated": true
 }

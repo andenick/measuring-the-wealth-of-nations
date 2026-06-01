@@ -1,0 +1,56 @@
+{
+  "chapter": "Ch0_Analytical",
+  "chapter_label": "Anu-Original Analytical Series (AS001-AS004): Aggregate profit, productivity index, unproductive exploitation, GDP deflator analytical wrappers",
+  "series_count": 4,
+  "series_ids": ["AS001", "AS002", "AS003", "AS004"],
+  "report_date": "2026-05-23T00:00:00Z",
+  "reporter": "agent",
+  "skill": "anu-adequacy",
+  "framework": "Anu Framework v12.0",
+  "stage": 2,
+  "cohort": "stage6_c1_reverify",
+  "layers": {
+    "L1_kb_completeness": {
+      "score": 88,
+      "evidence": "+23 from stage3_c2 baseline (was 65). MAJOR IMPROVEMENT: AS003_DPR.md has been expanded from 1283 bytes / 3 H2 sections to 11101 bytes / 7 H2 sections, fully KB-anchored (cites chunk_35 and chunk_36 verbatim with the Appendix I main formula, the 1948 worked example, and the full 1967-1989 convergence sequence from Table I.1). All four analytical-series DPRs are now 7-section, KB-anchored, and substantively complete. The prior L1 regression risk is resolved.",
+      "blockers": []
+    },
+    "L2_data_source_availability": {
+      "score": 75,
+      "evidence": "+15 from stage3_c2 (was 60). AS003 has AS003_TableI1_EC_RATIO.csv source CSV (1948-1989, 42 rows). Stage 5/6 has produced complete chopped CSVs for all 4 series: AS001.csv (44 rows, 1948-1989), AS002.csv (7 rows, benchmark years), AS003.csv (44 rows, 1948-1989), AS004.csv (16 rows, 1948-1963). final/, intermediate/, validation JSONs, and extenbook XLSX files exist for all 4. AS001/AS002/AS004 still derive from upstream chopped outputs without dedicated source CSVs (acceptable for derived analytical wrappers).",
+      "blockers": ["No dedicated source CSVs for AS001, AS002, AS004 (acceptable for analytical wrappers if upstream series validate)"]
+    },
+    "L3_methodology_clarity": {
+      "score": 95,
+      "evidence": "+10 from stage3_c2 (was 85). All 4 DPRs are now 7-section, KB-anchored, substantively complete. AS003 DPR is particularly rich (full Appendix I derivation chain + 1948 worked example + convergence narrative). Methodology coverage is 4/4 strong.",
+      "blockers": []
+    },
+    "L4_registry_completeness": {
+      "score": 88,
+      "evidence": "+3 from stage3_c2 (was 85). All 4 series status correctly set per Decision 0003 (binary invariant satisfied). Extenbooks present. construction=[] arrays remain unpopulated for all four — 12-point dock retained for this registry-cleanness issue.",
+      "blockers": ["construction=[] for all 4 series — needs explicit input list and formula"]
+    },
+    "L5_validation_refs": {
+      "score": 85,
+      "evidence": "+5 from stage3_c2 (was 80). All 4 series have reference_values populated. V03 validators all empirically PASS: AS001/AS002/AS003/AS004 validation JSONs status=PASS. AS003 in particular shows clean two-endpoint benchmark passes (1948 expected 1.3655 vs actual 1.365487, abs_err 1.3e-05; 1989 expected 2.3719 vs actual 2.371881, abs_err 1.9e-05). AS002 Khanjian range-check PASS. 15-point dock retained for AS002/AS003/AS004 expected_range still null (validator handles via tolerance_class but explicit declaration improves auditability).",
+      "blockers": ["AS002, AS003, AS004 expected_range still null at registry level"]
+    },
+    "L6_classification_accuracy": {
+      "score": 88,
+      "evidence": "+3 from stage3_c2 (was 85). Binary invariant satisfied across all four. content_type='derived', proxy:false, source_type='analytical' all correct. AS004 status 'book_period_partial_1948_1961' honestly reports partial validation. 12-point dock retained for unpopulated construction[] arrays (mirrors L4).",
+      "blockers": []
+    }
+  },
+  "chapter_score": 86.50,
+  "gate_passed": true,
+  "recommendations": [
+    "Populate construction[] arrays for all four analytical series with explicit input series IDs and analytical formulas — closes both L4 and L6 docks simultaneously",
+    "Declare explicit registry-level expected_range for AS002, AS003, AS004 (tolerance_class already handles validation; this is for auditability)",
+    "No further DPR work required — all 4 are now strong 7-section, KB-anchored documents"
+  ],
+  "revision_history": [
+    {"ts": "2026-05-23T00:00:00+00:00", "score": 62.50, "gate": false, "agent": "stage2_cohort1"},
+    {"ts": "2026-05-24T00:30:00+00:00", "score": 76.67, "gate": false, "agent": "stage3_cohort2_reverify"},
+    {"ts": "2026-05-24T03:15:00+00:00", "score": 86.50, "gate": true, "agent": "stage6_reverify"}
+  ]
+}

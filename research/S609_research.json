@@ -41,6 +41,65 @@
       "entry_type": "theoretical_significance",
       "content": "NSW/NI provides the most accessible measure of the state's net fiscal impact on workers. A persistently negative ratio challenges the conventional welfare-state narrative. The post-2001 sign reversal marks a genuine structural transformation in the fiscal relationship between the state and the working class, driven by entitlement expansion outpacing revenue growth.",
       "source_ref": "ST_1994, Ch6; Shaikh_Tonak_2002"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Our adjustment procedure involves two steps. First, we estimate the social benefit expenditures directed toward wage and salary earners by the state, the taxes paid by them, and the difference between the two, which is the net transfer (a positive number when benefits exceed taxes and negative in the opposite case). The true compensation of wage and salary earners is their apparent compensation plus the net transfer. The tax, benefits, and net transfer rates are also calculated relative to the apparent employee compensation.",
+      "source_ref": "ST_1994, Ch5 Section 5.9, p.137",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Defines net transfer scaled to EC (employee compensation) — the conceptual cousin of S609 (NSW/NI). The book scales the rate to EC; S609 generalizes by scaling to NI for macro comparability.",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "However, it should be noted that, where such calculations have been made, they greatly strengthen our conclusion that the net balance is strongly against the working population; that is, U.S. workers pay a net tax to the state, rather than receiving a net subsidy from it in the form of some 'social wage' (Miller 1989).",
+      "source_ref": "ST_1994, Ch5 Section 5.9, p.141",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Headline empirical finding directly supporting S609's negative postwar values: workers pay net tax to state, not the reverse. This is the conclusion that S609/NI quantifies at the macro scale.",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Appendix N lists the detailed calculations of our social accounting of taxes and benefits. Figure 5.22 shows the resulting tax and benefit rates (relative to total employee compensation), and Figure 5.23 shows the corresponding net transfer rate for the United States from 1952 to 1985.",
+      "source_ref": "ST_1994, Ch5 Section 5.9, p.141",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Identifies Appendix N as the canonical data source for S609 inputs (1952-1985 period); Figures 5.22/5.23 present the book-period rates that S609 extends to NI denominator.",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Net effect: 0-4% of EC extracted as net tax. Workers receive 29-30% of EC back as benefits by 1980s BUT workers pay 30-32% of EC in taxes.",
+      "source_ref": "ST_1994, Appendix N significance; KB chunk_38 lines 452-455",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Net transfer rate (Ntrrate) = (B1 - T1) / EC (S & T, ratio).",
+      "source_ref": "ST_1994, Table N.2 variable definitions; KB chunk_38 line 337",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Validates Marxian state theory: State appears to provide social services - But taxes workers more than benefits received - Net effect: State facilitates transfer of surplus to capital - 'Faux frais of capitalist society' (Marx) - costs of system reproduction borne by workers.",
+      "source_ref": "ST_1994, Appendix N significance; KB chunk_38 lines 467-471",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Net transfer is negative over most of 1952-85 period -> net tax on workers. Reference: Shaikh and Tonak (1987) for detailed methodology.",
+      "source_ref": "ST_1994, Appendix N concept + reference; KB chunk_38 lines 210-212",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "1971: +0.01 (+1%) -> ONLY YEAR with positive net transfer.",
+      "source_ref": "ST_1994, Table N.2 Ntrrate 1971; KB chunk_38 line 369",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
     }
   ],
   "citations": [
@@ -59,6 +118,54 @@
     {
       "id": "Moos_2017",
       "full": "Moos, Julie. 2017. The Net Social Wage in the United States, 1952-2012. PhD dissertation."
+    }
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "Our adjustment procedure involves two steps. First, we estimate the social benefit expenditures directed toward wage and salary earners by the state, the taxes paid by them, and the difference between the two, which is the net transfer (a positive number when benefits exceed taxes and negative in the opposite case). The true compensation of wage and salary earners is their apparent compensation plus the net transfer. The tax, benefits, and net transfer rates are also calculated relative to the apparent employee compensation.",
+      "source_ref": "ST_1994, Ch5 Section 5.9, p.137",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md",
+      "entry_type": "verbatim_quote",
+      "context": "Defines net transfer scaled to EC (employee compensation) — the conceptual cousin of S609 (NSW/NI). The book scales the rate to EC; S609 generalizes by scaling to NI for macro comparability."
+    },
+    {
+      "quote": "However, it should be noted that, where such calculations have been made, they greatly strengthen our conclusion that the net balance is strongly against the working population; that is, U.S. workers pay a net tax to the state, rather than receiving a net subsidy from it in the form of some 'social wage' (Miller 1989).",
+      "source_ref": "ST_1994, Ch5 Section 5.9, p.141",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md",
+      "entry_type": "verbatim_quote",
+      "context": "Headline empirical finding directly supporting S609's negative postwar values: workers pay net tax to state, not the reverse. This is the conclusion that S609/NI quantifies at the macro scale."
+    },
+    {
+      "quote": "Appendix N lists the detailed calculations of our social accounting of taxes and benefits. Figure 5.22 shows the resulting tax and benefit rates (relative to total employee compensation), and Figure 5.23 shows the corresponding net transfer rate for the United States from 1952 to 1985.",
+      "source_ref": "ST_1994, Ch5 Section 5.9, p.141",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_16/full_transcription.md",
+      "entry_type": "verbatim_quote",
+      "context": "Identifies Appendix N as the canonical data source for S609 inputs (1952-1985 period); Figures 5.22/5.23 present the book-period rates that S609 extends to NI denominator."
+    },
+    {
+      "quote": "Net effect: 0-4% of EC extracted as net tax. Workers receive 29-30% of EC back as benefits by 1980s BUT workers pay 30-32% of EC in taxes.",
+      "source_ref": "ST_1994, Appendix N significance; KB chunk_38 lines 452-455",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Net transfer rate (Ntrrate) = (B1 - T1) / EC (S & T, ratio).",
+      "source_ref": "ST_1994, Table N.2 variable definitions; KB chunk_38 line 337",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Validates Marxian state theory: State appears to provide social services - But taxes workers more than benefits received - Net effect: State facilitates transfer of surplus to capital - 'Faux frais of capitalist society' (Marx) - costs of system reproduction borne by workers.",
+      "source_ref": "ST_1994, Appendix N significance; KB chunk_38 lines 467-471",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Net transfer is negative over most of 1952-85 period -> net tax on workers. Reference: Shaikh and Tonak (1987) for detailed methodology.",
+      "source_ref": "ST_1994, Appendix N concept + reference; KB chunk_38 lines 210-212",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "1971: +0.01 (+1%) -> ONLY YEAR with positive net transfer.",
+      "source_ref": "ST_1994, Table N.2 Ntrrate 1971; KB chunk_38 line 369",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
     }
   ],
   "methodology_summary": "Ratio of Net Social Wage to National Income (S607/NI). Macroeconomic scale measure: typically -1% to -4% during 1952-1989, turning positive post-2001, peaking at +9.23% during COVID (2020).",
@@ -92,5 +199,6 @@
     ]
   },
   "ported_from": "ST2/research/T609_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes_deprecated": true
 }

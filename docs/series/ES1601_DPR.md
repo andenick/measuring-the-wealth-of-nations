@@ -1,7 +1,6 @@
 # ES1601 — Turkey Labor Share (Karabacak & Tonak 2022)
 
-**Status**: validated_book_and_extension. Approximation: (industry_va + 0.5*services_va) / 100 from WB structural data. Refinement using OECD compensation share would be more faithful — documented as approximation.
-
+**Status**: book_period_validated
 40 rows 1980-2019. Range [47.99%, 56.77%]. Approximately matches K&T's reported labor share trajectory.
 
 ---

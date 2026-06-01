@@ -42,3 +42,41 @@ Thumbs.db
 # Generated outputs that don't belong in source control
 intermediate/
 *.pkl
+
+# --- Publication hygiene (Arcanum Publication Hygiene Standard v1.0) ---
+# Internal session/process/agent docs
+Handoffs/
+HANDOFF_*.md
+PROGRESS_LOG.md
+.claude/
+CLAUDE.md
+AGENTS.md
+.cursor/
+# Internal planning/audit docs (written for internal workflow, reference internal paths)
+docs/ROADMAP.md
+docs/IMPLEMENTATION_PLAN.md
+docs/precommit/
+# Internal one-shot generators / build scaffolding referencing internal infra
+MIGRATION/
+build.py
+# Internal coordination / state snapshots and scratch
+DIVERGENCE_REGISTER.json
+SERIES_CORRESPONDENCE_MATRIX.json
+tmp/
+scratch/
+data/scratch/
+Build/
+_stage3_patches/
+_stage5_patches/
+_v1.1_patches/
+_v1.2_patches/
+# Local HDARP extraction working trees (not part of the replication package)
+HDARP_Extractions/
+HDARP_Processing/
+# series_registry pre-change backup snapshots
+series_registry*.backup_*
+series_registry*.pre_*.json
+series_registry.pre_*.json
+# precommit tooling (internal)
+code/utils/precommit_check.py
+code/utils/install_precommit_hook.sh

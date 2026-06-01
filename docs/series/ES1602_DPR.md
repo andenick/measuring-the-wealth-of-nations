@@ -1,7 +1,6 @@
 # ES1602 — Turkey NSW/GDP (Karabacak & Tonak 2022)
 
-**Status**: validated_book_and_extension. **30 of 30 years NEGATIVE** — K&T's central finding fully reproduced.
-
+**Status**: book_period_validated
 Approximation: (govt_consumption - tax_revenue) / 100 from WB fiscal Turkey. Range [-5.43%, -0.04%]. EVERY year 1980-2019 shows NSW negative in Turkey. Workers as net subsidizers throughout — matches the paper's headline.
 
 ---

@@ -1,7 +1,6 @@
 # ES1302 — Moos NSW/EC Extended
 
-**Status**: validated_book_and_extension.
-
+**Status**: book_period_validated
 Moos NSW1 / Moos's own compensation column. 54 rows. Same period, slightly larger swings than ES1301 due to compensation < GDP. Range [-2.65%, +12.70%].
 
 ---

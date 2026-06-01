@@ -59,6 +59,69 @@
       "entry_type": "decision_log_note",
       "content": "[internal-decision-record] (2026-03-30): The 1996 Personal Responsibility and Work Opportunity Reconciliation Act (welfare reform) restructured federal benefits programs. NIPA Tables 2.1 and 3.1 provide continuous coverage across this transition, though benefits composition changed significantly. S605 shows a structural break around 1996-1997. The discontinuity is documented but not adjusted — splitting pre/post-1996 would overcomplicate for minimal analytical gain. Flagged in V03 continuity checks.",
       "source_ref": "[internal-decision-log], [internal-decision-record]"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Group I - Directly to workers (100%): Labor training and services; Housing and community services; Income support; Social security; Welfare. Exception: Military disability and military retirement (treated as costs of war, excluded).",
+      "source_ref": "ST_1994, Appendix N (Expenditure Classification, Group I); KB chunk_38 lines 218-224",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Group I (100% to labor) 1964: Income support, social security, welfare 29.9 -> 29.9; Housing and community services 2.8 -> 2.8; Labor training and services 0.7 -> 0.7 (Direct, billions of $).",
+      "source_ref": "ST_1994, Table N.1 Group I expenditures 1964; KB chunk_38 lines 281-284",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "B1 = Total benefits to labor 1964 = 68.0 (billions of $).",
+      "source_ref": "ST_1994, Table N.1 benefits subtotal; KB chunk_38 line 293",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Benefit rate (B1/EC): 1952: 0.11 (11%) -> 1989: 0.29 (29%); Increased 2.6x (workers received more benefits).",
+      "source_ref": "ST_1994, Table N.2 (Benefit rate trend 1952-89); KB chunk_38 lines 359-361",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Purpose: Measure net impact of state expenditures and taxes on standard of living of wage/salary earners.",
+      "source_ref": "ST_1994, Appendix N (Concept); KB chunk_38 line 208",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Group II (workers' share = labor income/personal income): Education; Health and hospitals; Recreational and cultural activities; Energy; Natural resources; Transportation (adjusted by gas share of passenger cars); Postal services.",
+      "source_ref": "ST_1994, Appendix N (Expenditure Classification, Group II); KB chunk_38 lines 226-233",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Table N.1 (1964) Social Welfare Expenditures - Group I (100% to labor): Income support, social security, welfare 29.9; Housing and community services 2.8; Labor training and services 0.7. Group II (labor share = 0.727): Education 27.6 -> 20.1; Health and hospitals 6.4 -> 4.7; Transportation 13.1 -> 6.7 (+ gas adjustment). B1 = Total benefits to labor = 68.0 (billions of $).",
+      "source_ref": "ST_1994, Table N.1 (full benefits breakdown 1964); KB chunk_38 lines 280-293",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Workers receive 29-30% of EC back as benefits by 1980s.",
+      "source_ref": "ST_1994, Significance of Appendix N; KB chunk_38 line 453",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Benefit rates (B/EC): 0.11 (1952) -> 0.28 (1988).",
+      "source_ref": "ST_1994 Extended Time Series Page 160; Salvaged SUMMARY_KEY_FINDINGS line 93",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "kb_path": "Inputs/Salvaged/book_text_1994/extracted_content/SUMMARY_KEY_FINDINGS.md"
     }
   ],
   "citations": [
@@ -73,6 +136,53 @@
     {
       "id": "Moos_2017",
       "full": "Moos, Julie. 2017. The Net Social Wage in the United States, 1952-2012. PhD dissertation."
+    }
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "Group I - Directly to workers (100%): Labor training and services; Housing and community services; Income support; Social security; Welfare. Exception: Military disability and military retirement (treated as costs of war, excluded).",
+      "source_ref": "ST_1994, Appendix N (Expenditure Classification, Group I); KB chunk_38 lines 218-224",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Group I (100% to labor) 1964: Income support, social security, welfare 29.9 -> 29.9; Housing and community services 2.8 -> 2.8; Labor training and services 0.7 -> 0.7 (Direct, billions of $).",
+      "source_ref": "ST_1994, Table N.1 Group I expenditures 1964; KB chunk_38 lines 281-284",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "B1 = Total benefits to labor 1964 = 68.0 (billions of $).",
+      "source_ref": "ST_1994, Table N.1 benefits subtotal; KB chunk_38 line 293",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Benefit rate (B1/EC): 1952: 0.11 (11%) -> 1989: 0.29 (29%); Increased 2.6x (workers received more benefits).",
+      "source_ref": "ST_1994, Table N.2 (Benefit rate trend 1952-89); KB chunk_38 lines 359-361",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Purpose: Measure net impact of state expenditures and taxes on standard of living of wage/salary earners.",
+      "source_ref": "ST_1994, Appendix N (Concept); KB chunk_38 line 208",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Group II (workers' share = labor income/personal income): Education; Health and hospitals; Recreational and cultural activities; Energy; Natural resources; Transportation (adjusted by gas share of passenger cars); Postal services.",
+      "source_ref": "ST_1994, Appendix N (Expenditure Classification, Group II); KB chunk_38 lines 226-233",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Table N.1 (1964) Social Welfare Expenditures - Group I (100% to labor): Income support, social security, welfare 29.9; Housing and community services 2.8; Labor training and services 0.7. Group II (labor share = 0.727): Education 27.6 -> 20.1; Health and hospitals 6.4 -> 4.7; Transportation 13.1 -> 6.7 (+ gas adjustment). B1 = Total benefits to labor = 68.0 (billions of $).",
+      "source_ref": "ST_1994, Table N.1 (full benefits breakdown 1964); KB chunk_38 lines 280-293",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Workers receive 29-30% of EC back as benefits by 1980s.",
+      "source_ref": "ST_1994, Significance of Appendix N; KB chunk_38 line 453",
+      "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_38/full_transcription.md"
+    },
+    {
+      "quote": "Benefit rates (B/EC): 0.11 (1952) -> 0.28 (1988).",
+      "source_ref": "ST_1994 Extended Time Series Page 160; Salvaged SUMMARY_KEY_FINDINGS line 93",
+      "kb_path": "Inputs/Salvaged/book_text_1994/extracted_content/SUMMARY_KEY_FINDINGS.md"
     }
   ],
   "methodology_summary": "Government benefits to workers sum Social Security, Medicare, Medicaid, UI, and other transfers allocated by worker share. B/EC ratio rose 155% from 0.11 to 0.28 over 1952-1989, with countercyclical spikes during recessions. [internal-decision-record]: 1996 welfare reform creates documented structural break handled via NIPA continuous coverage.",
@@ -104,5 +214,6 @@
     "L5_validation": []
   },
   "ported_from": "ST2/research/T605_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes_deprecated": true
 }

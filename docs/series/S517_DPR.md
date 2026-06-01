@@ -1,7 +1,6 @@
 # S517 — Productive Capital Stock (K*)
 
 **Status**: validated_book_and_extension
-
 **Chapter**: 5 supporting. **Period**: 1925-2024. **Units**: billions_usd.
 
 ## Definition
@@ -15,6 +14,10 @@ BEA Fixed Assets Table 4.1 (cached at `data/raw/bea/fixed_assets_4_1_net_stock.c
 ## Productive partition note
 
 Line 1 is TOTAL private nonresidential fixed assets — includes both productive and a small unproductive (financial-sector real estate) component. Standard first-pass K*. A refinement (per IMPLEMENTATION_PLAN.md Phase 2.A) would subtract Line 33 (Financial sector, ~5-10% of total) to get a more faithful productive K*.
+
+## Gross-vs-net disclosure (v1.1 Phase 5)
+
+> **Note**: ST 1994 prose calls K* "gross capital stock" (e.g., Table 5.8 header), but published values match BEA Fixed Assets Table 4.1 **NET** stock exactly at all 5 benchmark years (1948 = 292, 1958 = 551, 1967 = 871, 1980 = 3 800, 1989 = 6 700 $B). The book's terminology is in error; the implementation is net stock. BEA publishes no current-cost gross stock for private nonresidential fixed assets. See `Technical/DIVERGENCE_REGISTER.json` entry **DIV-008** for the full divergence record.
 
 ## Endpoints
 

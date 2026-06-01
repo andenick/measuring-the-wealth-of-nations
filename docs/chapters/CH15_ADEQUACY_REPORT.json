@@ -1,0 +1,67 @@
+{
+  "chapter": "Ch15",
+  "chapter_label": "Mohun 2013 Unproductive Labor Replication (ES1501-ES1504)",
+  "external_paper": {
+    "author": "Simon Mohun",
+    "year": 2013,
+    "year_published": 2014,
+    "title": "Unproductive Labor in the U.S. Economy 1964-2010",
+    "journal": "Review of Radical Political Economics 46(3): 355-379",
+    "doi": "10.1177/0486613413506080",
+    "kb_path": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2013_Mohun_Unproductive_1964_2010/full_transcription.md"
+  },
+  "series_count": 4,
+  "series_ids": ["ES1501", "ES1502", "ES1503", "ES1504"],
+  "report_date": "2026-05-23T23:53:59Z",
+  "reporter": "agent",
+  "skill": "anu-adequacy",
+  "skill_version": "1.2",
+  "framework": "Anu Framework v12.0",
+  "note": "Cohort spec labelled this 'Karabacak/Tonak 2022' but the registry confirms ES1501-ES1504 belong to study_06_mohun_2013 (chapter=15). External paper is Mohun 2013 (RRPE) — Karabacak/Tonak 2022 is Ch16 (ES1601/ES1602).",
+  "layers": {
+    "L1_kb_completeness": {
+      "score": 80,
+      "status": "PASS",
+      "detail": "External paper transcription present at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2013_Mohun_Unproductive_1964_2010/full_transcription.md (1287 lines). Source PDF ([2013] Mohun - Unproductive Labor in the US Economy 1964-2010.pdf) also on disk under Inputs/Shaikh Tonak/Knowledge_Base/. Coverage: Sections 1-5, Appendix, Tables 1-3 (SIC + NAICS), Figs 2/4. Construction approach (CES production worker ratio applied to NIPA FTEs, working class subdivision into productive/unproductive) is fully documented.",
+      "gaps": ["Research JSONs cite legacy path Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md (cosmetic mismatch).", "Single-file extraction — no separate tables.csv / figures.md / equations.tex splits."]
+    },
+    "L2_data_source_availability": {
+      "score": 90,
+      "status": "PASS",
+      "detail": "Inputs/ST2/Inputs/ExternalSources/Mohun/ shared with Ch14 covers Mohun's BLS CES + NIPA construction. Specific files used: mohun_unproductive_decomposition_1948_1989.csv, mohun_unproductive_decomposition_by_industry.csv, mohun_employment_by_industry_1948_1989.csv, mohun_industry_classification.csv. BLS CES + NIPA upstream APIs are public.",
+      "gaps": ["Coverage in CSVs is 1948-1989 (Mohun 2005 era); Mohun 2013 extends to 2010. Years 1990-2010 require either separate digitization from the 2013 paper Tables 2-3, or BLS CES API extension. Currently registry status=book_period_validated indicates the extension to 2010 is not yet executed."]
+    },
+    "L3_methodology_clarity": {
+      "score": 90,
+      "status": "PASS",
+      "detail": "All four research JSONs populated with verbatim_quote schema. ES1501: working class unproductive labor (Lu_wc) via CES production-worker criterion; key empirical finding documented (12.8% money-value-added absorption flat 1964-2010, contradicting Moseley/Paitaridis-Tsoulfidis burden thesis). ES1502/ES1503/ES1504 cover related decompositions. Construction formulas explicit (ES1501-COMBINED = Mohun Lu * 0.813).",
+      "gaps": ["ES1501-A construction note documents the 0.813 working-class share factor — this is a derived approximation from Mohun's stable class proportions; should be flagged as a composite construction in V03."]
+    },
+    "L4_registry_completeness": {
+      "score": 95,
+      "status": "PASS",
+      "detail": "All 4 series in series_registry.json (lines 3610-3839): name, study=study_06_mohun_2013, chapter=15, paper_table=Table 1, source_file=Inputs/ExternalSources/Mohun/, year_range, subseries with units/color/period, construction blocks, extension=null, validation block, loader/processor, wave, status, units, content_type=time_series.",
+      "gaps": []
+    },
+    "L5_validation_refs": {
+      "score": 75,
+      "status": "BELOW_GATE",
+      "detail": "validation.reference_values present in registry but sparse. Research JSONs contain rich benchmark text (unprod working class employment share 25.1% 1964 -> 30.0% 2007; wage share 18.6% 1964 -> 16.7% 1992 -> 18.1% 2010; money-value-added absorption 12.9% 1964 = 12.9% 2010). Many of these published series-level benchmarks have not been pulled into validation.reference_values yet.",
+      "gaps": ["Pull Mohun Fig 2/Fig 4 benchmark values into validation.reference_values for ES1501-ES1504 — currently relies on a single reference point per series."]
+    },
+    "L6_classification_accuracy": {
+      "score": 95,
+      "status": "PASS",
+      "detail": "content_type=time_series correct (annual 1964-2010 panel). No proxy flag needed for direct Mohun digitizations. ES1501's '0.813 working class share' multiplier is documented as a stable empirical share (sd 0.88pp across 1964-2010), which is faithful to Mohun's reported class composition — not a proxy.",
+      "gaps": ["The 0.813 multiplier is a constant — flag in registry as construction.notes='constant_share_approximation' for transparency. Not strictly a proxy, but a documented simplification."]
+    }
+  },
+  "chapter_score": 87.5,
+  "gate_passed": true,
+  "recommendations": [
+    "PROCEED to Stage 3 INGESTION. Chapter score 87.5 clears the gate.",
+    "L5 is the soft spot (75) — enrich validation.reference_values with Mohun 2013 Fig 2 / Fig 4 multi-year benchmarks (1964, 1980, 1992, 2007, 2010).",
+    "Extension to 2010: registry currently shows extension=null. Either digitize Mohun 2013 Tables 2-3 (NAICS table covers 1998-2010) OR plan a BLS CES API extension EPR in Stage 4.",
+    "Document the 0.813 working-class-share constant in the registry construction.notes field."
+  ]
+}

@@ -54,6 +54,58 @@
       "entry_type": "decision_reference",
       "content": "[internal-decision-record]: The VA*/W constant assumption (ec_u/ec_p ≈ 1.238) affects S506 extension period values. Initially used constant VA*/W = 1.238; partially resolved in Session 14 by enabling year-varying ec_u/ec_p input. Full resolution requires BLS industry-level compensation data unavailable for 1990-1997 (SIC-era gap). Extension period values carry small systematic error; see ADJ-002. [internal-decision-record] further documents the log-linear interpolation used for the 1990-1997 gap.",
       "source_ref": "[internal-decision-log] [internal-decision-record] (2025-12-05, partially resolved 2026-03-30)"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Figure 5.13 is the pièce de résistance. It compares the rate of surplus value S*/V* (which is the rate of exploitation of productive workers) with its 'naive' equivalent (P+)/EC. At midperiod, the former is almost four times as large as the latter. It also rises by over 40% during the postwar period, whereas the latter actually falls by almost 30%. Thus P+/EC grossly understates the level, and falsifies the trend, of S*/V*. The profit/wage ratio is not a good proxy for the rate of surplus value.",
+      "source_ref": "ST_1994, Ch5, p.114; chunk_14",
+      "page_reference": "114",
+      "context": "Section 5.4, Figure 5.13 (p. 114) — the central empirical finding S506 tabulates: e = S*/V* rises ~40% from 1948 to 1989 while orthodox P+/EC falls ~30%, with the Marxian rate roughly 4× the orthodox one at midperiod. Anchors S506's separation from orthodox profit/wage ratios."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The rate of exploitation is the ratio of surplus labor time to necessary labor time. This can be calculated for any capitalistically employed wage labor, be it productive or unproductive. Necessary labor time is simply the value of the labor power involved, that is, the labor value of the average annual consumption per worker in the activities in question. Surplus labor time is excess of working time over necessary labor time. In the case of productive workers, their rate of exploitation is also the rate of surplus value, since their surplus labor time results in surplus value.",
+      "source_ref": "ST_1994, Ch5, p.129; chunk_15",
+      "page_reference": "129",
+      "context": "Section 5.6, p. 129 — conceptual definition of the rate of exploitation and the explicit identification of S*/V* (S506) with the rate of exploitation of productive workers. Establishes why the money-form ratio S505/S504 is the correct operational quantity."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Because the rate of exploitation of productive workers is simply the rate of surplus value, we can directly estimate the rate of exploitation of unproductive workers. We use the money rate of surplus value S*/V* since we already know that it is quite close to the value rate, as shown in Section 4.2.",
+      "source_ref": "ST_1994, Ch5, p.130; chunk_15",
+      "page_reference": "130",
+      "context": "Section 5.6, p. 130 — explicit warrant for treating the money-form S*/V* (= S506) as a valid proxy for the labor-value rate of surplus value. Justifies using NIPA/BLS-derived money aggregates rather than requiring labor-time accounts; underwrites comparability with Mohun's labor-time estimates."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The main period is from 1948 to 1980, during which the rate of surplus value rises modestly by almost 22%, the adjusted value composition rises by over 77%, and the adjusted materialized composition rises by over 56%. Because the large rise in the value composition overwhelms the modest one in the rate of surplus value, the adjusted Marxian rate of profit falls by almost a third over this period.",
+      "source_ref": "ST_1994, Ch5, p.124; chunk_15",
+      "page_reference": "124",
+      "context": "Section 5.5, p. 124 — quantifies the trend of e = S*/V* over the 1948-1980 sub-period (+22%) and locates it within the falling-rate-of-profit decomposition. Validation benchmark for S506 trend over the first sub-period."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Figure 5.13 is the pièce de résistance. It compares the rate of surplus value S*/V* (which is the rate of exploitation of productive workers) with its 'naive' equivalent (P⁺)/EC. At midperiod, the former is almost four times as large as the latter. It also rises by over 40% during the postwar period, whereas the latter actually falls by almost 30%. Thus P⁺/EC grossly understates the level, and falsifies the trend, of S*/V*. The profit/wage ratio is not a good proxy for the rate of surplus value.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.114",
+      "context": "Section 5.4 culminating empirical result: S*/V* rises ~40% from 1948 to 1989 while the orthodox P⁺/EC falls ~30%. This is the central empirical finding S506 tabulates."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "S* = VA* − V* = surplus value (in money form); S*/V* = rate of surplus value.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.114",
+      "context": "Section 5.4 (p. 114): defines the rate of surplus value, the operational quantity of S506. Anchors the series identity e = S505 / S504."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "We use the money rate of surplus value S*/V* since we already know that it is quite close to the value rate, as shown in Section 4.2.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.130",
+      "context": "Section 5.6, p. 130: explicit warrant for treating money-form S*/V* (= S506) as a valid proxy for the labor-value rate of surplus value. Underlies the comparison with Mohun's labor-time estimates."
     }
   ],
   "citations": [
@@ -98,5 +150,29 @@
     ]
   },
   "ported_from": "ST2/research/T506_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "text": "Figure 5.13 is the pièce de résistance. It compares the rate of surplus value S*/V* (which is the rate of exploitation of productive workers) with its 'naive' equivalent (P⁺)/EC. At midperiod, the former is almost four times as large as the latter. It also rises by over 40% during the postwar period, whereas the latter actually falls by almost 30%. Thus P⁺/EC grossly understates the level, and falsifies the trend, of S*/V*. The profit/wage ratio is not a good proxy for the rate of surplus value.",
+      "page": 114,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.4 culminating empirical result: S*/V* rises ~40% from 1948 to 1989 while the orthodox P⁺/EC falls ~30%. This is the central empirical finding S506 tabulates."
+    },
+    {
+      "text": "S* = VA* − V* = surplus value (in money form); S*/V* = rate of surplus value.",
+      "page": 114,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.4 (p. 114): defines the rate of surplus value, the operational quantity of S506. Anchors the series identity e = S505 / S504."
+    },
+    {
+      "text": "We use the money rate of surplus value S*/V* since we already know that it is quite close to the value rate, as shown in Section 4.2.",
+      "page": 130,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.6, p. 130: explicit warrant for treating money-form S*/V* (= S506) as a valid proxy for the labor-value rate of surplus value. Underlies the comparison with Mohun's labor-time estimates."
+    }
+  ],
+  "verbatim_quotes_deprecated": true
 }

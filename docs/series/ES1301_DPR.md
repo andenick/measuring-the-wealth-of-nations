@@ -1,7 +1,6 @@
 # ES1301 — Moos 2017 NSW/GDP Extended
 
-**Status**: validated_book_and_extension.
-
+**Status**: book_period_validated
 Moos's NSW1 / GDP. 54 rows 1959-2012. First=-1.46%, last=+6.73%. NSW positive post-2000 in Moos's reconciliation.
 
 ## Source

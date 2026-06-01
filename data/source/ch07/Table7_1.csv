@@ -1,0 +1,17 @@
+# Table not extractable from KB - escalated to Stage 5 BLS CES sourcing per CH7_REAL_FIX_PLAN.md
+#
+# Search trail:
+#   - chunk_23 (Ch6/Ch7 boundary): tables/ contains table_6.10_wolff_comparison.csv,
+#       table_6.11_surplus_comparison.csv -- no Table 7.1
+#   - chunk_24 (Ch7 sec 7.1-7.3): no tables/ subdir extracted; body text references Table 7.1
+#       as "Annual data 1948-1989 for: b, Pn, S*, c', In*, SP*, s', s'-u, u, r*', r'n, gK, K*"
+#       but does NOT contain the numeric annual values (HDARP extraction captured caption only)
+#   - chunk_25 (Ch7 sec 7.4-7.5): no labor-value / Table 7.x table content
+#   - chunk_26 (Appendix A): table_A.1_sector_mapping.md only
+#   - chunk_33 (Appendix G): no Table 7.1 content; Appendix G covers V* methodology (BLS wages)
+#   - chunk_36 (Appendix J): Table I.1 completion + Appendix J productivity; no Table 7.x
+#
+# S701 per registry: 6 SIC benchmark years (1947, 1958, 1963, 1967, 1972, 1977) of sector-level
+# labor values lambda_j = l(I-A)^-1. Real fix requires BLS SEHE + BEA benchmark IO tables
+# (not BLS CES alone) per S701_research.json. Current S701 carries proxy:true and is the
+# mean(column_sum(Leontief inverse)) placeholder noted in project CLAUDE.md.

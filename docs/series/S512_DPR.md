@@ -19,9 +19,10 @@ Productive Wage Share (V*/W). The share of total wage bill paid to productive la
 
 | Subseries | Source | Period | Units |
 |---|---|---|---|
-| `S512-A` | S&T 1994 | 1948-1989 | share |
-| `S512-EXT` | BLS CES | 1990-2024 | share |
-| `S512-COMBINED` |  | 1948-2024 | share |
+| `S512-A` | S&T 1994 Table 5.7 (T512A) | 1948-1989 | share |
+| `S512-EXT` | BEA NIPA 6.2D, level-spliced | 1998-2024 | share |
+| `S512-INTERP` | Log-linear interp between S512-A(1989) and S512-EXT(1998) | 1990-1997 | share |
+| `S512-COMBINED` | S512-A ∪ S512-INTERP ∪ S512-EXT | 1948-2024 | share |
 
 ---
 
@@ -34,6 +35,37 @@ Productive Wage Share (V*/W). The share of total wage bill paid to productive la
 3. No further transformation — this is the canonical published value.
 
 Validator checks the loaded series against the published benchmark years from validation_config.json.
+
+### S512-INTERP (1990-1997 bridge)
+
+**1990-1997 bridge**: log-linear interpolation between the book 1989 endpoint
+(`S512-A[1989]` = 0.3600) and the BEA-derived first-EXT value
+(`S512-EXT[1998]` = 0.3195), consistent with the S501–S503 bridge per
+`Technical/Build/BUILD_NARRATIVE.md` Stage 5 cohort 3.
+
+Formula: `v(t) = exp( ln(v0) + (t - 1989)/(1998 - 1989) · (ln(v1) - ln(v0)) )`
+
+These eight values are **INTERPOLATED estimates**, not directly observed.
+The Marxian productive/unproductive partition cannot be reconstructed cleanly
+on a NAICS basis for 1990-1997 (BEA NIPA 6.2D begins 1998; pre-2002 BLS CES
+is SIC-only). Documentation script: `code/M04_manual/M04_S512_1990_1997_bridge.py`
+(also acts as a verifier). Sample values: 1991 = 0.3506, 1995 = 0.3325.
+
+### S512-EXT (1998-2024)
+
+BEA NIPA 6.2D productive-sector compensation / total compensation,
+level-spliced to the book endpoint at 1989. Begins 1998 because that is
+when NIPA 6.2D series begins.
+
+### S512-COMBINED
+
+Concatenation: 1948-1989 from S512-A, 1990-1997 from S512-INTERP (bridge),
+1998-2024 from S512-EXT.
+
+### Downstream impact
+
+S504 (Variable Capital) is derived as V* = S512 · W, so the 1990-1997
+S512-INTERP values propagate into S504-INTERP across the same years.
 
 ---
 

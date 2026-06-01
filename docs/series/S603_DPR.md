@@ -5,8 +5,7 @@
 **Units**: billions_usd
 **Period**: 1952–1989 (book; S607 extends through 2024 via Table6_3_Extended)
 **Content Type**: time_series
-**Status**: calculated
-
+**Status**: book_period_validated
 ## Definition
 
 Worker share of property and motor-vehicle taxes (apportioned by income class).

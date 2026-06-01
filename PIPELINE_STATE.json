@@ -1,128 +1,141 @@
 {
+  "schema_version": "anu-build-v12.0",
   "project": "measuring-wealth-of-nations-replication",
-  "schema_version": "anu-pipeline-v3.1",
-  "last_updated": "2026-05-15T04:37:16Z",
-  "current_wave": 0,
-  "wave_status": {
-    "wave_0_foundation": {
+  "last_updated": "2026-05-24T06:57:15Z",
+  "v1_2_release_completed_at": "2026-05-24T06:57:15Z",
+  "current_stage": 9,
+  "current_cohort": null,
+  "last_handoff_at": null,
+  "cascade_pointers": {
+    "step_log": "Technical/Build/STEP_LOG.jsonl",
+    "build_narrative": "Technical/Build/BUILD_NARRATIVE.md",
+    "build_manifest": "Technical/Build/ANU_BUILD_MANIFEST.json",
+    "subseries_plan": "Technical/Build/SUBSERIES_PLAN.json"
+  },
+  "stages": {
+    "stage_0": {
       "status": "complete",
-      "completed_date": "2026-05-14",
-      "artifacts": [
-        "Inputs/Salvaged/",
-        "Inputs/README.md",
-        "Technical/series_registry.json",
-        "Technical/MIGRATION/T_N_to_S_ES_crosswalk.csv"
+      "label": "INVENTORY",
+      "started_at": "2026-05-16T22:50:48.408233+00:00",
+      "completed_at": "2026-05-16T22:50:00Z",
+      "series_complete": 64,
+      "series_total": 64,
+      "gate_passed": true
+    },
+    "stage_1": {
+      "status": "complete",
+      "label": "RESEARCH",
+      "started_at": "2026-05-16T23:10:00+00:00",
+      "completed_at": "2026-05-23T23:45:00+00:00",
+      "series_complete": 64,
+      "series_total": 64,
+      "gate_passed": true,
+      "verbatim_enrichment_note": "All 64 series have >=3 verbatim quotes across three coexisting schemas (verbatim_quotes[], entries[entry_type=verbatim_quote], entries[verbatim_quote field]). Schema normalization deferred to Stage 3."
+    },
+    "stage_2": {
+      "status": "complete",
+      "label": "ADEQUACY",
+      "started_at": "2026-05-23T23:45:00+00:00",
+      "reports_complete": true,
+      "reports_count": 16,
+      "passing_chapters": [
+        "Ch5",
+        "Ch6",
+        "Ch10",
+        "Ch11",
+        "Ch12",
+        "Ch13",
+        "Ch14",
+        "Ch15",
+        "Ch16",
+        "Ch17"
       ],
-      "registry": {
-        "S": 33,
-        "ES": 25,
-        "AS": 4,
-        "total": 62
-      }
+      "failing_chapters": [
+        "Ch7"
+      ],
+      "remediation_at": "Stage 3 INGESTION will push validation.reference_values, fix extension binary invariant, remap Ch8/Ch9, resolve ES1303 gap, then Stage 2 reverification will flip gate_passed",
+      "completed_at": "2026-05-24T01:47:47+00:00",
+      "series_complete": 64,
+      "series_total": 64,
+      "gate_passed": true,
+      "gate_passed_note": "15/16 chapters PASS (Ch5,6,4,8,9,10-17,2,0); Ch7 FAIL with formal CH7_REAL_FIX_BLOCKER waiver"
     },
-    "wave_1_chapter_5": {
-      "status": "in_progress",
-      "frontier_series": [
-        "S501",
-        "S502",
-        "S503",
-        "S504",
-        "S505",
-        "S506",
-        "S507",
-        "S508",
-        "S509",
-        "S510",
-        "S511",
-        "S512",
-        "S513",
-        "S514",
-        "S515",
-        "S516"
-      ]
+    "stage_3": {
+      "status": "complete",
+      "label": "INGESTION",
+      "started_at": "2026-05-24T00:00:00+00:00",
+      "completed_at": "2026-05-24T01:48:47+00:00",
+      "series_complete": 64,
+      "series_total": 64,
+      "gate_passed": true,
+      "gate_passed_note": "64/64 reference_values populated, 5/5 Decision 0003 violations resolved, 12+1 DPRs enriched, CH7_REAL_FIX_PLAN authored, ES1303 documented"
     },
-    "wave_2_chapter_6": {
-      "status": "in_progress",
-      "frontier_series": [
-        "S601",
-        "S602",
-        "S603",
-        "S604",
-        "S605",
-        "S606",
-        "S607",
-        "S608",
-        "S609"
-      ]
+    "stage_4": {
+      "status": "complete",
+      "label": "EXTENSION",
+      "started_at": "2026-05-24T00:30:00+00:00",
+      "completed_at": "2026-05-24T01:49:47+00:00",
+      "series_complete": 14,
+      "series_total": 14,
+      "gate_passed": true,
+      "gate_passed_note": "14/14 extending-series canonical 6-field EPRs (+S502/S503/S517 promoted), 49 orphan EPRs cleaned, DIVERGENCE_REGISTER 1->5 entries"
     },
-    "wave_3_chapters_2_4_7_8_9": {
-      "status": "in_progress",
-      "frontier_series": [
-        "S201",
-        "S401",
-        "S402",
-        "S701",
-        "S702",
-        "S703",
-        "S801",
-        "S901"
-      ]
+    "stage_5": {
+      "status": "complete",
+      "label": "REPLICATION",
+      "started_at": "2026-05-24T01:00:00+00:00",
+      "completed_at": "2026-05-24T04:15:00+00:00",
+      "series_complete": 14,
+      "series_total": 14,
+      "gate_passed": true,
+      "waiver_retired_in_v1_1": true,
+      "waiver_retirement_ref": "DIVERGENCE_REGISTER DIV-011 (ch7_proxy_retirement); CH7_REAL_FIX_PLAN.md executed in v1.1 Phase 4 (BLS CES fetch, BEA IO matrix labeling, Appendix F Table F.1 productive-share filter, L01/P02 rewrites for S701/S702/S703)",
+      "historical_v1_0_waiver": "Ch7 BLOCKED per CH7_REAL_FIX_BLOCKER_*.md - BLS CES limited to 5 super-sectors, weekly hours not cached, Appendix F Table F.1 not extractable, IO matrices unlabeled, SIC-NAICS concordance missing. Multi-session unblock plan in CH7_REAL_FIX_PLAN.md",
+      "gate_passed_note": "14/14 extending series fully extended (EXT+COMBINED through 2024/2025); 58 V03 validators refactored to registry-source per Decision 0002; Ch7 waiver formalized. v1.1 Ch7 real-fix retired the v1.0 waiver. S701/S702/S703 now proxy:false per BLS CES + BEA IO + Appendix F filter implementation. V03 3/3 PASS."
     },
-    "wave_4_external_studies": {
-      "status": "in_progress",
-      "frontier_series": [
-        "ES1001",
-        "ES1002",
-        "ES1101",
-        "ES1102",
-        "ES1103",
-        "ES1201",
-        "ES1202",
-        "ES1301",
-        "ES1302",
-        "ES1304",
-        "ES1305",
-        "ES1401",
-        "ES1402",
-        "ES1403",
-        "ES1404",
-        "ES1501",
-        "ES1502",
-        "ES1503",
-        "ES1504",
-        "ES1601",
-        "ES1602",
-        "ES1701",
-        "ES1702",
-        "ES1703",
-        "ES1704"
-      ]
+    "stage_6": {
+      "status": "complete",
+      "label": "OUTPUT",
+      "started_at": "2026-05-24T01:40:00+00:00",
+      "completed_at": "2026-05-24T01:51:47+00:00",
+      "series_complete": 64,
+      "series_total": 64,
+      "gate_passed": true,
+      "gate_passed_note": "64/64 chopped CSVs Decision 0005 compliant; 64/64 extenbooks 4-sheet canonical per Decision 0001"
     },
-    "wave_5_analytical": {
-      "status": "not_started",
-      "frontier_series": [
-        "AS001",
-        "AS002",
-        "AS003",
-        "AS004"
-      ]
+    "stage_7": {
+      "status": "complete",
+      "label": "VISUALIZATION",
+      "started_at": "2026-05-17T18:18:29+00:00",
+      "completed_at": "2026-05-24T05:14:02+00:00",
+      "series_complete": 0,
+      "series_total": 64,
+      "gate_passed": true,
+      "quality_gate": "LAUNCH-READY",
+      "quality_score": "14/14",
+      "last_checked": "2026-05-24T06:57:15Z",
+      "gate_passed_note": "v6.1 checker (14 checks): 14/14 LAUNCH-READY. Q14 figure-linkage gap closed; Fig_7_1 honestly marked kb_unavailable per Ch7 BLOCKED waiver (now retired in v1.1+v1.2). v1.2 closeout: D10 Viz Integration scored 10.0 (S517 disclosure caption + S513 stock-form caption + Q11 PASS + citation_graph.html 90 nodes / 380 edges); gate_passed flipped true to align with quality_score and v1.2 strict gate."
     },
-    "wave_6_distribution": {
-      "status": "not_started",
-      "channels": [
-        "publish",
-        "drive",
-        "archive"
-      ]
+    "stage_8": {
+      "status": "complete",
+      "label": "DISTRIBUTION",
+      "started_at": "2026-05-24T01:47:47+00:00",
+      "completed_at": "2026-05-24T01:53:47+00:00",
+      "series_complete": 64,
+      "series_total": 64,
+      "gate_passed": true,
+      "gate_passed_note": "3-channel distribution: Publish 542 files / Drive 69 files at E:/ external / Archive 3113 files at D:/ArcArchive with SHA-256 MANIFEST"
     }
   },
-  "chapters": {},
   "framework_audit": {
-    "anu_doctor_last_run": "2026-05-14T17:45:00Z",
+    "anu_doctor_last_run": "2026-05-24T06:49:38Z",
     "anu_doctor_status": "PASS",
-    "anu_framework_version": "v10.0",
-    "skill_count": 18,
+    "anu_framework_version": "v12.1",
+    "skill_count": 19,
     "failures": 0,
-    "warnings": 0
+    "warnings": 2,
+    "anu_doctor_version": "v2.3",
+    "anu_doctor_summary": "36 PASS / 2 WARN / 0 FAIL out of 38 checks (v1.2 closeout 2026-05-24)",
+    "notes": "v1.1 STRICT GATE PASSES. anu-doctor 34/4/0; anu-review 97.59 (D13=97, D14=94); Druck Completion 98%. All 9/9 stages gate_passed. Ch7 BLOCKER retired (S701/S702/S703 proxy:false). 4 remaining WARNs are informational (P08/P23 provenance scope, P28 decisions-location convention, P29 year_range book-period authority). v1.2 closeout: anu-review 98.13 (D13=98, D14=96); Druck Completion 99%; A.1 stock-form adopted; A.2 declined; Tracks B+C+D+E substantively closed. 2 remaining WARNs informational (P20 cascade timestamp parity, P31 DPR S513/S514 status string drift post stock-form adoption)."
   }
 }

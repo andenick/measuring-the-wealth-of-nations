@@ -6,7 +6,10 @@
   "researcher": "agent",
   "kb_sources_searched": [
     "Technical/Knowledge_Base/external_papers/state_welfare/1984_Tonak_State_Revenues/chunk_001/full_transcription.md",
-    "Technical/Knowledge_Base/external_papers/state_welfare/1984_Tonak_State_Revenues/chunk_002/full_transcription.md"
+    "Technical/Knowledge_Base/external_papers/state_welfare/1984_Tonak_State_Revenues/chunk_002/full_transcription.md",
+    "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1984_Tonak_State_Revenues/chunk_11/full_transcription.md",
+    "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1984_Tonak_State_Revenues/chunk_11/equations/labor_share_formula.md",
+    "Inputs/ST2/Inputs/ExternalSources/Tonak1984/table_V_taxes_labor_nonlabor_1952_1980.csv"
   ],
   "entries": [
     {
@@ -48,16 +51,74 @@
       "entry_type": "decision_reference",
       "content": "[internal-decision-record] (No Synthetic Data Policy, 2026-05-03): ES1001 was explicitly named as one of five series with prohibited synthetic data. Remediation plan specifies: 'Extract real annual data from HDARP Table V.B (28 years available)'. Note — the registry entry references 'Table II' (labor share) while [internal-decision-record] references 'Table V.B' (which is an Appendix III table for surplus value data). The correct source table for labor share is Chapter IV Table II (p.92). Researcher should verify which specific table the HDARP extraction covers when the relevant chunks become available.",
       "source_ref": "[internal-decision-log]#[internal-decision-record]; 1984_Tonak_State_Revenues/chunk_002/full_transcription.md (List of Tables)"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Direct verbatim definition of labor share from Tonak 1984 Chapter IV (chunk_11, page 90): defines the canonical formula LS = Total Labor Income / Adjusted Personal Income, where Adjusted Personal Income = Personal Income - Imputed Income. This is the exact methodology ES1001 must implement.",
+      "source_ref": "Tonak 1984, Chapter IV, p.90 (HDARP chunk_11)",
+      "confidence": "high",
+      "verbatim_quote": "The ratio of total labor income to adjusted personal income, which I term labor share, is used to determine the portion of income taxes paid by workers. Adjustment in this context implies 'total personal in-come' minus 'imputed income'. Calculations of the labor share for the years 1952-1980 are given in Table II.",
+      "verbatim_source": "KB: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1984_Tonak_State_Revenues/chunk_11/full_transcription.md, line 32 (Chapter IV, p.90)"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Tonak 1984 Table II structure and values range verbatim from chunk_11 (p.92): confirms 5-column structure, 1952-1980 annual coverage, labor share range .71-.75 (typical .72-.73), and NIPA source line references. This is the primary source the ES1001 chopped CSV must populate from.",
+      "source_ref": "Tonak 1984, Chapter IV, Table II, p.92 (HDARP chunk_11)",
+      "confidence": "high",
+      "verbatim_quote": "Table II: Calculation of Labor Share, 1952-80. [5-column table showing annual data for:] (1) Total Labor Income (billions $); (2) Personal Income (billions $); (3) Imputed Income in Personal Income (billions $); (4) Adjusted Personal Income = (2)-(3) (billions $); (5) Labor Share = (1)/(4) (ratio). [Annual data for 1952-1980 showing labor share ranging from .71 to .75, with typical values around .72-.73]. Footnotes: a. NIPA, Table 2-1, line 2 = line 8. In billions of dollars. b. Ibid., Table 2-1, line 1. c. Ibid., Table 8-3, line 5.",
+      "verbatim_source": "KB: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1984_Tonak_State_Revenues/chunk_11/full_transcription.md, lines 44-60 (Table II)"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Worked 1980 example from Tonak 1984 labor_share_formula equation extraction (chunk_11): provides exact numerical benchmark (LS = 0.71 for 1980) for V03 validator of ES1001. The values (TLI=1483.370, PI=2160.401, II=59.299) anchor the chopped CSV's terminal-year value.",
+      "source_ref": "Tonak 1984, Chapter IV, Table II equation extraction (HDARP chunk_11)",
+      "confidence": "high",
+      "verbatim_quote": "Example Calculation (1980): LS = 1483.370 / (2160.401 - 59.299); LS = 1483.370 / 2101.10; LS = 0.71 (71%).",
+      "verbatim_source": "KB: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1984_Tonak_State_Revenues/chunk_11/equations/labor_share_formula.md, lines 36-41"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Weisskopf cross-validation passage from Tonak 1984 Chapter IV (chunk_11, p.91): documents the methodological divergence between Tonak's labor share and Weisskopf's IRS-derived measure, and Tonak's own assessment that his estimate is conservative (no overestimation). This supports the ES1001 caveat that this series differs from mainstream labor share measures.",
+      "source_ref": "Tonak 1984, Chapter IV, p.91 (HDARP chunk_11)",
+      "confidence": "high",
+      "verbatim_quote": "Comparison between my labor share estimates (Table II, column 5) and Weisskopf's (Table III, column 3) demonstrates that the former are considerably lower than the latter except the first five-year period, 1952-1956. Therefore, there can be no overestimation of the taxes paid by labor due to the method of estimation of labor shares.",
+      "verbatim_source": "KB: Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1984_Tonak_State_Revenues/chunk_11/full_transcription.md, line 40 (Chapter IV, p.91)"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "To obtain the portions of these expenditures directed towards labor, all of the items in this group are multiplied by the \"labor share\" (0.73 for 1964) except the item of Transportation which is also adjusted by the \"Gas Share of Passenger Cars\" (Tonak 1984:Chap. IV; Appendix II).",
+      "source_ref": "Shaikh & Tonak 1987, Appendix Table 1 footnote b, p.191",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Cross-confirms the 1964 labor share value of 0.73 cited in ES1001 research entry; verified against KB HDARP transcription. Primary Tonak 1984 Table II (p.92) HDARP extraction not yet available — see ES1001 known_issues.",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Workers' share = (Total labor income / Personal income) × Group II total",
+      "source_ref": "Shaikh & Tonak 1987, Empirical Methodology, p.186",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Formula confirms the Tonak (1984) labor share allocation rule used in ES1001.",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "For rationale and procedures of \"labor share method,\" see Tonak (1984: Chap. IV; 1987).",
+      "source_ref": "Shaikh & Tonak 1987, Note 6, p.193",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "context": "Tonak 1984 Chapter IV identified as the canonical methodological reference for the labor share series.",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md"
     }
   ],
   "citations": [
     {
       "id": "Tonak_1984",
-      "full": "Tonak, Ertugrul Ahmet. 1984. 'A Conceptualization of State Revenues and Expenditures U.S.: 1952-1980.' PhD Dissertation, New School for Social Research. UMI Order Number 9414212."
+      "full": "Tonak, Ertugrul Ahmet. 1984. 'A Conceptualization of State Revenues and Expenditures U.S.: 1952-1980.' PhD Dissertation, New School for Social Research. UMI Order Number 9414212.",
+      "no_doi_reason": "PhD dissertation, New School for Social Research, 1984. UMI Order Number 9414212. Dissertations rarely have DOIs (predates ProQuest DOI assignment)."
     },
     {
       "id": "ST_1987",
-      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' In Robert Cherry et al. (eds.), The Imperiled Economy, Book I. New York: Union for Radical Political Economics, pp. 184-194."
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1987. 'The Welfare State and the Myth of the Social Wage.' In Robert Cherry et al. (eds.), The Imperiled Economy, Book I. New York: Union for Radical Political Economics, pp. 184-194.",
+      "no_doi_reason": "Book chapter in URPE edited volume 'The Imperiled Economy' (1987); Crossref has no DOI on file for this chapter."
     }
   ],
   "methodology_summary": "Labor share of national income from Tonak (1984) Chapter IV Table II, 1952-1980, 28 annual observations. Defined as total labor income / personal income; serves as allocation key throughout the dissertation's net tax framework.",
@@ -88,5 +149,33 @@
     ]
   },
   "ported_from": "ST2/research/N1001_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "quote": "To obtain the portions of these expenditures directed towards labor, all of the items in this group are multiplied by the \"labor share\" (0.73 for 1964) except the item of Transportation which is also adjusted by the \"Gas Share of Passenger Cars\" (Tonak 1984:Chap. IV; Appendix II).",
+      "source": "Shaikh & Tonak 1987, Appendix Table 1 footnote b, p.191",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md",
+      "verbatim_check": true,
+      "notes": "Cross-confirms the 1964 labor share value of 0.73 cited in ES1001 research entry; verified against KB HDARP transcription. Primary Tonak 1984 Table II (p.92) HDARP extraction not yet available — see ES1001 known_issues."
+    },
+    {
+      "quote": "Workers' share = (Total labor income / Personal income) × Group II total",
+      "source": "Shaikh & Tonak 1987, Empirical Methodology, p.186",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md",
+      "verbatim_check": true,
+      "notes": "Formula confirms the Tonak (1984) labor share allocation rule used in ES1001."
+    },
+    {
+      "quote": "For rationale and procedures of \"labor share method,\" see Tonak (1984: Chap. IV; 1987).",
+      "source": "Shaikh & Tonak 1987, Note 6, p.193",
+      "kb_path": "1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md",
+      "verbatim_check": true,
+      "notes": "Tonak 1984 Chapter IV identified as the canonical methodological reference for the labor share series."
+    }
+  ],
+  "verbatim_quotes_added_date": "2026-05-19",
+  "verbatim_quotes_added_by": "D4_es_ch10_13_backfill",
+  "verbatim_quotes_deprecated": true,
+  "citation_dois_added_date": "2026-05-24",
+  "citation_dois_added_by": "v1.2-iter5-C5-crossref-dois"
 }

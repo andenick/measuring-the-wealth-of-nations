@@ -1,0 +1,55 @@
+{
+  "chapter": "Ch4",
+  "chapter_label": "National Accounts Framework — IO A-Matrix and Leontief Inverse (S401, S402)",
+  "series_count": 2,
+  "series_ids": ["S401", "S402"],
+  "report_date": "2026-05-23T00:00:00Z",
+  "reporter": "agent",
+  "skill": "anu-adequacy",
+  "framework": "Anu Framework v12.0",
+  "stage": 2,
+  "cohort": "stage3_c2_reverify",
+  "layers": {
+    "L1_kb_completeness": {
+      "score": 75,
+      "evidence": "Unchanged. KB chunks 09, 10, 11, 12 plus Appendix A (chunk_26/27) cover the A-matrix and Leontief-inverse methodology. S401/S402 DPRs (7008 and 5790 bytes, 7 H2 sections each, KB-anchored) further solidify KB linkage.",
+      "blockers": []
+    },
+    "L2_data_source_availability": {
+      "score": 100,
+      "evidence": "Unchanged. Source IO matrices fully present at Technical/data/source/io_matrices/ (19 files): A, L, Z matrices for all six SIC benchmark years (1947, 1958, 1963, 1967, 1972, 1977) plus NAICS extension matrices. Registry source_file 'ch04/Table4_1_AMatrix.csv' is a pointer; the actual matrix data is in io_matrices/ which is the operational source.",
+      "blockers": []
+    },
+    "L3_methodology_clarity": {
+      "score": 95,
+      "evidence": "Unchanged. Both research JSONs have complete methodology_summary; construction blocks explicit; DPRs add 7-section structure with KB anchoring.",
+      "blockers": []
+    },
+    "L4_registry_completeness": {
+      "score": 95,
+      "evidence": "Unchanged at ceiling. Both series have all required fields. Status now correctly 'book_period_validated' with extension:null per Decision 0003 cohort1 patch.",
+      "blockers": []
+    },
+    "L5_validation_refs": {
+      "score": 80,
+      "evidence": "+55 from baseline (was 25). S401 now has reference_values for all 6 benchmark years (1947:0.979, 1958:0.946, 1963:0.947, ...) — column-sum or diagonal-cell benchmarks. S402 similarly has 6 reference_values (1947:79.94, 1958:32.03, ...). S401 expected_range [0.0,1.0] is consistent. S402 expected_range still null (Leontief inverse values typically >=1; should be set, e.g., [1.0, 200.0]). tolerance still unspecified for both. 20-point dock retained for missing S402 expected_range and both tolerances.",
+      "blockers": ["S402 expected_range still null; tolerance unspecified for both series"]
+    },
+    "L6_classification_accuracy": {
+      "score": 95,
+      "evidence": "+25 from baseline (was 70). The binary-invariant violation flagged in cohort1 is RESOLVED: both S401 and S402 now carry status='book_period_validated' with extension:null. content_type='derived' is correct. proxy:false is correct (A and B matrices are direct BEA-IO computations, not proxies). No remaining taxonomy issues.",
+      "blockers": []
+    }
+  },
+  "chapter_score": 90.00,
+  "gate_passed": true,
+  "recommendations": [
+    "Set S402 validation.expected_range (e.g., [1.0, 200.0] reflecting Leontief-inverse diagonal/column-sum bounds)",
+    "Specify validation.tolerance (or tolerance_class) for both S401 and S402 — matrix series benefit from a per-cell absolute tolerance, e.g., tolerance_class='matrix_cell' with rel=0.01, abs=0.005",
+    "Optional Stage 4: re-populate extension blocks with NAICS-era 1997-2007+ matrices already on disk if the project decides to upgrade these to validated_book_and_extension status"
+  ],
+  "revision_history": [
+    {"ts": "2026-05-23T00:00:00+00:00", "score": 76.67, "gate": false, "agent": "stage2_cohort1"},
+    {"ts": "2026-05-24T00:30:00+00:00", "score": 90.00, "gate": true, "agent": "stage3_cohort2_reverify"}
+  ]
+}

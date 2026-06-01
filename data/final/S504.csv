@@ -41,3 +41,115 @@ S504-A,1986,998.55,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
 S504-A,1987,1060.9,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
 S504-A,1988,1146.22,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
 S504-A,1989,1206.4,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-EXT,1998,1620.2285909999994,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,1999,1710.0105974082794,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2000,1822.6223191917068,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2001,1814.1761433677773,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2002,1769.627520622427,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2003,1783.6787671807133,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2004,1866.7816844310507,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2005,1946.2590477763574,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2006,2048.399980000346,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2007,2125.1204982650024,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2008,2119.869082215981,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2009,1901.0790683444357,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2010,1895.8407066629932,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2011,1974.902703767134,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2012,2072.3167681666587,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2013,2133.789785098472,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2014,2252.0231922659027,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2015,2351.7241445132163,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2016,2393.0981824153732,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2017,2510.225528620615,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2018,2655.1622380522354,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2019,2778.973420458175,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2020,2749.059930530121,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2021,2928.411513183341,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2022,3171.7532321898375,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2023,3350.0402905049855,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-EXT,2024,3531.9256072293156,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-INTERP,1990,1246.5881410791792,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-INTERP,1991,1288.1150476452613,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-INTERP,1992,1331.0253172581445,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-INTERP,1993,1375.3650331317594,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-INTERP,1994,1421.1818136248535,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-INTERP,1995,1468.5248633804229,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-INTERP,1996,1517.4450261687316,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-INTERP,1997,1567.9948394906542,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-COMBINED,1948,88.41,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1949,85.02,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1950,93.16,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1951,105.91,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1952,111.01,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1953,117.39,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1954,111.95,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1955,120.52,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1956,128.82,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1957,133.0,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1958,127.72,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1959,139.57,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1960,144.23,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1961,146.13,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1962,155.54,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1963,162.76,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1964,172.0,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1965,188.43,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1966,207.07,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1967,216.26,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1968,236.77,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1969,261.22,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1970,270.43,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1971,287.53,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1972,324.3,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1973,370.49,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1974,398.5,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1975,410.75,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1976,459.63,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1977,515.81,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1978,589.2,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1979,664.78,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1980,706.53,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1981,772.35,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1982,786.53,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1983,839.73,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1984,928.68,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1985,967.99,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1986,998.55,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1987,1060.9,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1988,1146.22,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1989,1206.4,billions_usd,book_period,book_tableH1_1948_1989.csv:V_star
+S504-COMBINED,1990,1246.5881410791792,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-COMBINED,1991,1288.1150476452613,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-COMBINED,1992,1331.0253172581445,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-COMBINED,1993,1375.3650331317594,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-COMBINED,1994,1421.1818136248535,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-COMBINED,1995,1468.5248633804229,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-COMBINED,1996,1517.4450261687316,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-COMBINED,1997,1567.9948394906542,billions_usd,extension_bridge,Log-linear interpolation between book(1989)=1206.40 and BEA-derived EXT(1998)=1620.23; M04_S504 methodological adjustment per BUILD_NARRATIVE.md Stage 5 cohort 3 (S501-S503 precedent); INTERPOLATED VALUE — not raw data
+S504-COMBINED,1998,1620.2285909999994,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,1999,1710.0105974082794,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2000,1822.6223191917068,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2001,1814.1761433677773,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2002,1769.627520622427,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2003,1783.6787671807133,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2004,1866.7816844310507,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2005,1946.2590477763574,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2006,2048.399980000346,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2007,2125.1204982650024,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2008,2119.869082215981,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2009,1901.0790683444357,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2010,1895.8407066629932,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2011,1974.902703767134,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2012,2072.3167681666587,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2013,2133.789785098472,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2014,2252.0231922659027,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2015,2351.7241445132163,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2016,2393.0981824153732,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2017,2510.225528620615,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2018,2655.1622380522354,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2019,2778.973420458175,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2020,2749.059930530121,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2021,2928.411513183341,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2022,3171.7532321898375,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2023,3350.0402905049855,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)
+S504-COMBINED,2024,3531.9256072293156,billions_usd,extension,S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)

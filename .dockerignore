@@ -1,0 +1,55 @@
+# RMWND .dockerignore — exclude scratch, caches, backups, and test runs from build context.
+#
+# Note: Docker's default .dockerignore location is the build context root. This file
+# is also placed at Technical/.dockerignore (or symlinked) to take effect with the
+# documented `docker build -f Technical/Dockerfile Technical` invocation.
+
+# ---- python caches ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# ---- editor / OS noise ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ---- v1.1 + stage patch scratch (rebuildable artifacts) ----
+_v1.1_patches/
+_stage3_patches/
+_stage5_patches/
+data/scratch/
+tmp/
+
+# ---- registry backups (kept on host for rollback; don't ship in image) ----
+series_registry.pre_*.json
+series_registry.json.backup_*
+series_registry.*.backup_*
+
+# ---- handoffs / per-run diagnostics (large, mutable, non-reproducible) ----
+Handoffs/ANU_DOCTOR_RUN_*.json
+Handoffs/HANDOFF_*.md
+
+# ---- venv / docker bookkeeping ----
+.env
+.venv/
+venv/
+env/
+Dockerfile
+docker/
+.dockerignore
+
+# ---- git / vcs ----
+.git/
+.gitignore
+.gitattributes
+.gitmodules

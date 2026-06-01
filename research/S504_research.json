@@ -60,6 +60,58 @@
       "entry_type": "decision_reference",
       "content": "[internal-decision-record] (S504 Splice Fix Deferred — Unit Scaling Issue, 2026-04-09): The S504 splice quality is documented at CR=0.81 (WARN-04, accepted). An attempted fix using NIPA T20100 aggregate compensation worsened the splice to CR=0.11 due to a unit scaling mismatch: book-period V* (millions, from Table 5.7 ec_p × L_p pathway) differs in base unit from extension-period W × (V*/W) (derived from BEA 6.2D). The correct fix requires a comprehensive Wave 2 unit normalization. In the meantime, `Inputs/API_Data/BEA/nipa_T20100_compensation_1929_2025.csv` has been fetched and is available for that future work. The CR=0.81 splice is the accepted current state.",
       "source_ref": "[internal-decision-log]#[internal-decision-record]"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "(wp)j = unit wage of production workers in the jth production sector, j = 1,..., k (from BLS), except services, for which (wp)serv = ecserv; xj ≡ (EC/WS)j = ratio of employee compensation EC to wages and salaries W, in the jth production sector, j = 1,..., k (from NIPA); (ecp)j = (wp)j·(xj) = estimated employee compensation of production workers in the jth production sector; Vj ≡ ecj · (Lp)j ≡ (Wp)j = variable capital in the jth production sector; V* ≡ Wp = Σ(Wp)j = total variable capital; Wu ≡ W − V* = total wages of unproductive workers in all sectors; ecp ≡ Wp/Lp = average wage of productive workers; ecu ≡ Wu/Lu = average wage of unproductive workers.",
+      "source_ref": "ST_1994, Ch5, p.113; chunk_14",
+      "page_reference": "113",
+      "context": "Section 5.3 (p. 113) — canonical formula sequence defining V* as the sum across productive sectors of unit production-worker wages (BLS) scaled up by the NIPA employee-compensation/wages-and-salaries ratio, multiplied by productive employment. This is the construction identity S504 implements."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Figure 5.8 contrasts the levels of real variable capital and of the total real wage bill. Their absolute growth is greater than that of the corresponding labor totals in Figure 5.7 because the wage measures also incorporate the effects of growing real wages. But the relative movements of wage and employment measures is virtually the same, as is evident in Figure 5.9. V*/W declines by 34%, while Lp/L declines by 37%.",
+      "source_ref": "ST_1994, Ch5, p.113; chunk_14",
+      "page_reference": "113",
+      "context": "Section 5.3 empirical result (p. 113) — the warrant for S504's post-1989 extension via V* = W × (Lp/L) proxy: V*/W tracks Lp/L because unit productive and unproductive wages move similarly while their relative employments diverge."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Productive labor is the production labor employed in capitalist production sectors: agriculture, mining, construction, transportation and public utilities, manufacturing, and productive services (defined as all services except business services, legal services, and private households, as in Table E.1).",
+      "source_ref": "ST_1994, Ch5, p.108-109; chunk_13",
+      "page_reference": "108-109",
+      "context": "Section 5.3 (pp. 108-109) — operational sector classification of 'productive labor' used in computing Lp and therefore V*. This is the scope statement that distinguishes ST's V* from broader measures like Mohun (2013)."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "The theoretical difference between Marxian and orthodox economic analysis is reflected in a fundamentally different empirical picture of capitalist reality.",
+      "source_ref": "ST_1994, Ch5, p.140; extracted_content/text/page_140_productivity_analysis.md",
+      "page_reference": "140",
+      "context": "Section 5.8 / Table 5.14 conclusion (p. 140) — the framing statement justifying why V* (Marxian) must be constructed separately from EC (NIPA) rather than being approximated by total wage data."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "V_j ≡ ec_j · (Lp)_j ≡ (Wp)_j = variable capital in the jth production sector; V* ≡ Wp = ∑ (Wp)_j = total variable capital; Wu ≡ W − V* = total wages of unproductive workers in all sectors.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.113",
+      "context": "Section 5.3, p. 113: exact construction formula for V* used in S504. The series multiplies productive-worker employment (Lp) by per-worker employee compensation (ec_p)."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "(ecp)_j = (wp)_j · (x_j) = estimated employee compensation of production workers in the jth production sector, where (wp)_j is the unit wage of production workers in the jth production sector from BLS and x_j = (EC/WS)_j is the ratio of employee compensation to wages and salaries from NIPA.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.113",
+      "context": "Defines the BLS × NIPA splicing convention used in S504's extension: BLS production-worker wages adjusted upward by NIPA EC/WS ratio. Drives the use of BLS CES + NIPA Table 2.1 for the 1990+ extension."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "V*/W declines by 34%, while Lp/L declines by 37%. The unit wages of productive and unproductive workers change only slightly, whereas their relative employments change drastically. We can therefore unambiguously conclude that the relative decline in productive to total wages Wp/W (= V*/W) is almost entirely due to the relative decline in productive to total employment Lp/L.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.113",
+      "context": "Empirical regularity: V*/W tracks Lp/L. This is the warrant for S504's extension via productive-share × total-compensation when only aggregate compensation data are available post-1989."
     }
   ],
   "citations": [
@@ -109,5 +161,29 @@
     ]
   },
   "ported_from": "ST2/research/T504_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "text": "V_j ≡ ec_j · (Lp)_j ≡ (Wp)_j = variable capital in the jth production sector; V* ≡ Wp = ∑ (Wp)_j = total variable capital; Wu ≡ W − V* = total wages of unproductive workers in all sectors.",
+      "page": 113,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.3, p. 113: exact construction formula for V* used in S504. The series multiplies productive-worker employment (Lp) by per-worker employee compensation (ec_p)."
+    },
+    {
+      "text": "(ecp)_j = (wp)_j · (x_j) = estimated employee compensation of production workers in the jth production sector, where (wp)_j is the unit wage of production workers in the jth production sector from BLS and x_j = (EC/WS)_j is the ratio of employee compensation to wages and salaries from NIPA.",
+      "page": 113,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Defines the BLS × NIPA splicing convention used in S504's extension: BLS production-worker wages adjusted upward by NIPA EC/WS ratio. Drives the use of BLS CES + NIPA Table 2.1 for the 1990+ extension."
+    },
+    {
+      "text": "V*/W declines by 34%, while Lp/L declines by 37%. The unit wages of productive and unproductive workers change only slightly, whereas their relative employments change drastically. We can therefore unambiguously conclude that the relative decline in productive to total wages Wp/W (= V*/W) is almost entirely due to the relative decline in productive to total employment Lp/L.",
+      "page": 113,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Empirical regularity: V*/W tracks Lp/L. This is the warrant for S504's extension via productive-share × total-compensation when only aggregate compensation data are available post-1989."
+    }
+  ],
+  "verbatim_quotes_deprecated": true
 }

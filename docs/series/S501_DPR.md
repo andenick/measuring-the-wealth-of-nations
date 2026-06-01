@@ -1,5 +1,7 @@
 # S501 — Total Product (TP\*)
 
+**Status**: book_period_validated
+
 **Canonical Name**: Total Product, Marxian aggregate
 **Book Symbol**: TP\*
 **Chapter**: 5 — The Marxian Categories: Empirical Estimates

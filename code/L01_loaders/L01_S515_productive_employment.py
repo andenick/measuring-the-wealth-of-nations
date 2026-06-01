@@ -1,16 +1,17 @@
-"""L01_S515 — Load Productive Employment (Lp), 1948-1961 (TableE3 narrow classification).
+"""L01_S515 — Load Productive Employment (Lp).
 
-Source: Appendix E.3 (digitized as TableE3_LaborStatistics.csv), row
-`Lp_total`. TableE3 is wide-by-year (years 1948-1961 are columns, sectors
-are rows), so we transpose the row to a year-indexed series.
+Book-period source: Appendix E.3 (digitized as TableE3_LaborStatistics.csv), row
+`Lp_total`. Covers 1948-1961 in the salvaged KB digitization (NARROW
+classification, Lp/L = 0.45 at 1948).
 
-Note on classification: TableE3 uses the book's NARROW productive labor
-classification (Lp/L ratio = 0.45 at 1948). This is different from the BROAD
-classification in Table 5.7 (S511, Lp/L = 0.57). The book reports both;
-they reflect different boundary choices for which sectors count as
-productive. The DPR documents this distinction.
+Extension source: BLS CES super-sector aggregation
+(sum of mining/logging + construction + manufacturing production workers,
+in thousands), 1948-2024.
 
-Status: book_period_partial_1948_1961.
+The extension uses the 5-super-sector CES cache. The book's Appendix C uses
+85 SIC sectors and also includes transportation/public utilities and
+productive services — the super-sector cache cannot reproduce that finer
+partition. This divergence is documented in S515_EPR.md.
 """
 from __future__ import annotations
 
@@ -23,6 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from utils.paths import BOOK_TABLES  # noqa: E402
 from utils.io import read_book_table  # noqa: E402
+from utils.bls_cache import productive_employment_annual  # noqa: E402
 
 
 SERIES_ID = "S515"
@@ -53,11 +55,25 @@ def load() -> pd.DataFrame:
     return out[["series_id", "year", "value", "units"]].reset_index(drop=True)
 
 
+def load_extension_raw() -> pd.DataFrame:
+    """Load the raw (unspliced) BLS productive employment series, 1948-2024.
+
+    Returns DataFrame [year, value] in thousands. value = sum of production
+    workers across the goods-producing super-sectors (mining/logging +
+    construction + manufacturing) per the BLS CES cache.
+    """
+    return productive_employment_annual().reset_index(drop=True)
+
+
 def run():
     df = load()
-    print(f"    [L01_{SERIES_ID}] loaded {len(df)} rows; "
+    print(f"    [L01_{SERIES_ID}] book period: loaded {len(df)} rows; "
           f"period {df['year'].min()}-{df['year'].max()}; "
           f"first={df.iloc[0]['value']:.0f}, last={df.iloc[-1]['value']:.0f}")
+    ext = load_extension_raw()
+    print(f"    [L01_{SERIES_ID}] extension raw: {len(ext)} rows; "
+          f"period {ext['year'].min()}-{ext['year'].max()}; "
+          f"1989_raw={float(ext.loc[ext['year']==1989, 'value'].iloc[0]):.0f}")
     return df
 
 

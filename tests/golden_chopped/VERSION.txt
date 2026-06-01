@@ -1,0 +1,31 @@
+RMWND Golden Chopped Snapshot
+=============================
+
+Snapshot date: 2026-05-24 (UTC)
+Project state: Anu Framework v12.0, RMWND v1.1 (post-Phase 4, mid-Phase 5)
+
+Source: Technical/chopped/*.csv
+Count:  64 CSVs
+Series: 35 S-series (chapters 2-9) + 25 ES-series + 4 AS-series
+
+These files are the reference "golden" snapshot used by test_regression.py
+to detect unintended changes in the chopped output produced by the pipeline.
+
+Update procedure
+----------------
+1. Verify the new chopped CSVs are correct (deliberately changed, not regressed).
+2. Replace this entire directory's contents from Technical/chopped/.
+3. Bump this VERSION.txt with a new date and a brief changelog entry.
+4. Reference the bump in PROGRESS_LOG.md and the BUILD_NARRATIVE.
+
+Changelog
+---------
+2026-05-24 — initial snapshot, v1.1 mid-Phase-5 state (Stage 3 cohorts 1+2 applied,
+              Stage 5 patches applied, Ch7 real-fix applied).
+2026-05-24 — v1.2 Iter 3: S513 + S514 stock-form adoption — intentional regression
+              baseline update per DIV-012. P02_S513 + P02_S514 rewritten to compute
+              r* = S*/(K*+V*) (book Table 5.11 §5.5) across full 1948-2024 range;
+              v1.1 hybrid stock(1948-1989) + flow(1998-2024) splice retired. Flow-form
+              now retained as S513-FLOW + S514-FLOW secondary subseries. Golden CSVs
+              for S513 and S514 refreshed from Technical/chopped/ to prevent
+              test_regression from failing on this intentional methodology change.

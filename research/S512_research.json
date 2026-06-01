@@ -50,6 +50,46 @@
       "entry_type": "decision_reference",
       "content": "[internal-decision-record]: BLS CES production/nonsupervisory worker ratios are used as the proxy for IO-based productive/unproductive labor decomposition when extending S512. S512 extension is certified at 76% faithfulness (CERTIFIED WITH NOTES). Cross-validated against Mohun (2005) estimates.",
       "source_ref": "[internal-decision-log]#[internal-decision-record]"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "V_j ≡ ec_j · (Lp)_j ≡ (Wp)_j = variable capital in the jth production sector; V* ≡ Wp = ∑ (Wp)_j = total variable capital.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.113",
+      "context": "Section 5.3, p. 113: definition of V* whose ratio to W gives S512. Wp/W = V*/W is the operational quantity S512 reports."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Figures 5.10 and 5.11 make quite explicit that the unit wages of productive and unproductive workers change only slightly, whereas their relative employments change drastically. We can therefore unambiguously conclude that the relative decline in productive to total wages Wp/W (= V*/W) is almost entirely due to the relative decline in productive to total employment Lp/L.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.113",
+      "context": "Section 5.3, p. 113: empirical equivalence V*/W ≈ Lp/L under ec_u/ec_p ≈ 1. Direct warrant for the ec_u/ec_p ≈ 1 approximation used in S512."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "At the beginning of the postwar period the wage of unproductive workers is some 11%-12% higher than that of productive workers, but this relative advantage gradually disappears until, by the end of the period, unproductive wages are 3%-4% lower than productive wages.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.130",
+      "context": "Section 5.6, p. 130: documents the slow convergence of ec_p and ec_u over 1948-1989, supporting the approximation that V*/W tracks Lp/L within a small drift."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "V*/W, 42%, -33%",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.140",
+      "context": "Table 5.14, p. 140 (extracted_content/tables/page_140_marxian_orthodox_comparison.csv): the typical relative level of V*/W at the 1967 midperiod is 42% and the change over 1948-89 is -33%. **DRIFT FLAG**: registry currently lists 1967=0.45 — book reference is 0.42. The -33% change anchors 1948 at ~0.54 and 1989 at ~0.36, exactly matching Table 5.7 endpoints (0.54, 0.36). Also consistent with chunk_14 p.113: 'V*/W declines by 34%'. The 11%-12% wage-advantage at 1948 narrowing to -3%-4% by 1989 (p.130) explains why V*/W < Lp/L early and V*/W ≈ Lp/L late."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Figure 5.8 contrasts the levels of real variable capital and of the total real wage bill. Their absolute growth is greater than that of the corresponding labor totals in Figure 5.7 because the wage measures also incorporate the effects of growing real wages. But the relative movements of wage and employment measures is virtually the same, as is evident in Figure 5.9. V*/W declines by 34%, while Lp/L declines by 37%.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.113",
+      "context": "Section 5.3, p. 113 (HDARP chunk_14): the book's explicit numerical trend statement for V*/W: a 34% decline 1948-89 (Figure 5.9). Combined with Table 5.14's -33% change and 1967 midpoint of 42%, this gives a fully redundant anchor for S512's reference trajectory: 0.54 (1948) → 0.42 (1967) → 0.36 (1989)."
     }
   ],
   "citations": [
@@ -90,5 +130,43 @@
     ]
   },
   "ported_from": "ST2/research/T512_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "text": "V_j ≡ ec_j · (Lp)_j ≡ (Wp)_j = variable capital in the jth production sector; V* ≡ Wp = ∑ (Wp)_j = total variable capital.",
+      "page": 113,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.3, p. 113: definition of V* whose ratio to W gives S512. Wp/W = V*/W is the operational quantity S512 reports."
+    },
+    {
+      "text": "Figures 5.10 and 5.11 make quite explicit that the unit wages of productive and unproductive workers change only slightly, whereas their relative employments change drastically. We can therefore unambiguously conclude that the relative decline in productive to total wages Wp/W (= V*/W) is almost entirely due to the relative decline in productive to total employment Lp/L.",
+      "page": 113,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.3, p. 113: empirical equivalence V*/W ≈ Lp/L under ec_u/ec_p ≈ 1. Direct warrant for the ec_u/ec_p ≈ 1 approximation used in S512."
+    },
+    {
+      "text": "At the beginning of the postwar period the wage of unproductive workers is some 11%-12% higher than that of productive workers, but this relative advantage gradually disappears until, by the end of the period, unproductive wages are 3%-4% lower than productive wages.",
+      "page": 130,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.6, p. 130: documents the slow convergence of ec_p and ec_u over 1948-1989, supporting the approximation that V*/W tracks Lp/L within a small drift."
+    },
+    {
+      "text": "V*/W, 42%, -33%",
+      "page": 140,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Table 5.14, p. 140 (extracted_content/tables/page_140_marxian_orthodox_comparison.csv): the typical relative level of V*/W at the 1967 midperiod is 42% and the change over 1948-89 is -33%. **DRIFT FLAG**: registry currently lists 1967=0.45 — book reference is 0.42. The -33% change anchors 1948 at ~0.54 and 1989 at ~0.36, exactly matching Table 5.7 endpoints (0.54, 0.36). Also consistent with chunk_14 p.113: 'V*/W declines by 34%'. The 11%-12% wage-advantage at 1948 narrowing to -3%-4% by 1989 (p.130) explains why V*/W < Lp/L early and V*/W ≈ Lp/L late."
+    },
+    {
+      "text": "Figure 5.8 contrasts the levels of real variable capital and of the total real wage bill. Their absolute growth is greater than that of the corresponding labor totals in Figure 5.7 because the wage measures also incorporate the effects of growing real wages. But the relative movements of wage and employment measures is virtually the same, as is evident in Figure 5.9. V*/W declines by 34%, while Lp/L declines by 37%.",
+      "page": 113,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.3, p. 113 (HDARP chunk_14): the book's explicit numerical trend statement for V*/W: a 34% decline 1948-89 (Figure 5.9). Combined with Table 5.14's -33% change and 1967 midpoint of 42%, this gives a fully redundant anchor for S512's reference trajectory: 0.54 (1948) → 0.42 (1967) → 0.36 (1989)."
+    }
+  ],
+  "verbatim_quotes_deprecated": true
 }

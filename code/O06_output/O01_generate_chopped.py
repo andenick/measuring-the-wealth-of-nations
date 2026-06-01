@@ -25,14 +25,24 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from utils.paths import CHOPPED_DIR, DATA_FINAL, REGISTRY  # noqa: E402
 
 
-def chopped_for_series(sid: str, entry: dict) -> tuple[list[str], list[str], pd.DataFrame] | None:
-    """Build (row1_metadata, row2_ids, data) for one series, or None if no data."""
+def chopped_for_series(
+    sid: str, entry: dict, registry_extension_period: list | None = None
+) -> tuple[list[str], list[str], pd.DataFrame] | None:
+    """Build (row1_metadata, row2_ids, data) for one series, or None if no data.
+
+    Uses ``DataFrame.pivot`` (not ``pivot_table``) so that subseries / composite
+    components with all-NaN values are preserved as columns. ``pivot_table``
+    silently drops them, which previously caused S901 to lose its
+    ``r_S513`` and ``r_adj_S514`` composite component columns.
+    """
     final_csv = DATA_FINAL / f"{sid}.csv"
     if not final_csv.exists():
         return None
     df = pd.read_csv(final_csv)
-    # Pivot subseries into columns
-    pivot = df.pivot_table(index="year", columns="series_id", values="value", aggfunc="first")
+    # Drop any duplicate (year, series_id) rows so .pivot() does not raise.
+    df = df.drop_duplicates(subset=["year", "series_id"], keep="last")
+    # Use .pivot() (not pivot_table) to preserve all-NaN columns.
+    pivot = df.pivot(index="year", columns="series_id", values="value")
     pivot = pivot.reset_index().sort_values("year")
 
     subseries = entry.get("subseries", {})
@@ -47,6 +57,19 @@ def chopped_for_series(sid: str, entry: dict) -> tuple[list[str], list[str], pd.
         ss_entry = subseries.get(col, {})
         source = ss_entry.get("source", "")
         period = ss_entry.get("period", "")
+        # Cosmetic alignment: when an EXT subseries period is a strict subset
+        # of the registry-level extension_period (off only at the right edge),
+        # surface the registry-level scope so chopped metadata reflects the
+        # planned extension window rather than the current data extent.
+        if (
+            col.endswith("-EXT")
+            and registry_extension_period
+            and isinstance(period, list)
+            and len(period) == 2
+            and period[0] == registry_extension_period[0]
+            and period[1] != registry_extension_period[1]
+        ):
+            period = list(registry_extension_period)
         meta = f"{name} — {source}; {units}; period={period}; series_status={status}"
         metadata.append(meta)
 
@@ -56,11 +79,12 @@ def chopped_for_series(sid: str, entry: dict) -> tuple[list[str], list[str], pd.
 def run() -> dict:
     reg = json.loads(REGISTRY.read_text(encoding="utf-8"))
     CHOPPED_DIR.mkdir(parents=True, exist_ok=True)
+    reg_ext_period = reg.get("extension_period")
 
     written: list[str] = []
     skipped: list[str] = []
     for sid, entry in reg["series"].items():
-        result = chopped_for_series(sid, entry)
+        result = chopped_for_series(sid, entry, registry_extension_period=reg_ext_period)
         if result is None:
             skipped.append(sid)
             continue

@@ -1,4 +1,8 @@
-"""V03_S512 — Validate Productive Wage Share (V*/W) against book benchmarks."""
+"""V03_S512 — Validate Productive Wage Share (V*/W) against book benchmarks.
+
+Refactored 2026-05-24 per Decision 0002 — reads benchmarks from registry
+(`validation.reference_values`) via `utils.registry_validator.get_reference_values`.
+"""
 from __future__ import annotations
 
 import sys
@@ -7,13 +11,14 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from utils.paths import DATA_FINAL  # noqa: E402
+from utils.registry_validator import get_reference_values  # noqa: E402
 from utils.series import BenchmarkValidator  # noqa: E402
 
 
 VALIDATOR = BenchmarkValidator(
     series_id        = "S512",
     tolerance_class  = "share_series",
-    benchmarks       = {1948: 0.54, 1958: 0.49, 1967: 0.452, 1977: 0.412, 1989: 0.36},
+    benchmarks       = get_reference_values("S512"),
     subseries_filter = "S512-A",
 )
 

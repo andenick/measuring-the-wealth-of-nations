@@ -11,54 +11,123 @@
   "entries": [
     {
       "entry_type": "methodology_description",
-      "content": "Managerial unproductive labor = supervisory labor (managers-plus-capitalists), defined as workers whose function is the authoritarian control and supervision of the working class. Identification criterion: those whose work involves controlling the work of others. Operationally computed as NIPA total employment minus working class (CES production worker) employment, by sector. This subtraction allocates all wages missing from the CES survey \u2014 stock options, bonuses, retroactive pay, and other irregular compensation \u2014 to supervisory workers. The paper does NOT separately identify capitalists from managers; they are treated together as 'managers-plus-capitalists.'",
-      "source_ref": "Mohun_2013, Section 2.1 and 4.2 and Appendix; full_transcription.md"
+      "content": "Managerial unproductive labor = supervisory labor (managers-plus-capitalists), defined as workers whose function is the authoritarian control and supervision of the working class. Identification criterion: those whose work involves controlling the work of others. Operationally computed as NIPA total employment minus working class (CES production worker) employment, by sector. This subtraction allocates all wages missing from the CES survey — stock options, bonuses, retroactive pay, and other irregular compensation — to supervisory workers. The paper does NOT separately identify capitalists from managers; they are treated together as 'managers-plus-capitalists.'",
+      "source_ref": "Mohun_2013, Section 2.1 and 4.2 and Appendix; full_transcription.md",
+      "verbatim_quote": "Marxist approaches that focus on productive and unproductive labor have in fact been both misled and misleading because they have treated \"wages\" as the income of labor and \"profits\" as the income of capital in a historical era in which managers-plus-capitalists have taken more and more surplus-value as labor income rather than as profit, financed since 1979 by a large increase in the rate of surplus-value.",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md"
     },
     {
       "entry_type": "empirical_values",
-      "content": "Supervisory employment share of total employment: 1964 = 16.8%; peak 1991 = 19.9%; 2010 = 17.9%. Not a great deal of variation \u2014 fluctuates within a 3 percentage point band (after 1973, within 2 points). Supervisory WAGE share of total wages: 1964 = ~32%; 1979 = 35.1%; 1979-1992 = extraordinary increase of ~11 percentage points; peak 2007 = 47.8%; 2010 = 46.6%. This dramatic decoupling of employment share (flat) from wage share (soaring) is the central empirical finding of Mohun (2013).",
-      "source_ref": "Mohun_2013, Section 4.2, Fig 3; full_transcription.md"
+      "content": "Supervisory employment share of total employment: 1964 = 16.8%; peak 1991 = 19.9%; 2010 = 17.9%. Not a great deal of variation — fluctuates within a 3 percentage point band (after 1973, within 2 points). Supervisory WAGE share of total wages: 1964 = ~32%; 1979 = 35.1%; 1979-1992 = extraordinary increase of ~11 percentage points; peak 2007 = 47.8%; 2010 = 46.6%. This dramatic decoupling of employment share (flat) from wage share (soaring) is the central empirical finding of Mohun (2013).",
+      "source_ref": "Mohun_2013, Section 4.2, Fig 3; full_transcription.md",
+      "verbatim_quote": "But from 1979 onwards this was not the case; the relatively large increase in value added absorbed by supervisory wages was financed by a large fall in the value of labor-power (large increase in the rate of surplus-value). This can only be considered a burden if it is thought that this rise in the rate of surplus-value \"should\" have found its way into an increased profit share.",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md"
     },
     {
       "entry_type": "value_added_absorption",
-      "content": "Supervisory wages as share of money value added (Y): 1964 = 22.1%; 2000 = 35.5% (peak, +60% increase); 2010 = ~34%. Between 1978 and 1992 most of the increase occurred. By 2000, some 13.5 percentage points less of value added was available for working class wages and profits compared to 1964. The entire rise was financed by a fall in the value of labor-power (rise in the rate of surplus value) after 1979 \u2014 not at the expense of working class wages (which had a stable VA share), but at the expense of the profit share plus labor-power value.",
-      "source_ref": "Mohun_2013, Section 5, Fig 4; full_transcription.md"
+      "content": "Supervisory wages as share of money value added (Y): 1964 = 22.1%; 2000 = 35.5% (peak, +60% increase); 2010 = ~34%. Between 1978 and 1992 most of the increase occurred. By 2000, some 13.5 percentage points less of value added was available for working class wages and profits compared to 1964. The entire rise was financed by a fall in the value of labor-power (rise in the rate of surplus value) after 1979 — not at the expense of working class wages (which had a stable VA share), but at the expense of the profit share plus labor-power value.",
+      "source_ref": "Mohun_2013, Section 5, Fig 4; full_transcription.md",
+      "verbatim_quote": "Separating \"pure\" organization from authoritarian hierarchy and supervision is both theoretically doubtful and empirically impossible. The labor involved in such activities is conventionally treated as unproductive, and the same practice is followed here.",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md"
     },
     {
       "entry_type": "class_boundary_definition",
       "content": "Mohun states: 'In all processes involving capital and wage labor, capitalists hire managers to organize activities and to supervise in order that those activities are satisfactorily performed. These processes are typically hierarchical and authoritarian, with significant pay differentials that increase up the hierarchy. Separating pure organization from authoritarian hierarchy and supervision is both theoretically doubtful and empirically impossible. The labor involved in such activities is conventionally treated as unproductive... It makes little conceptual sense to say that the policing of the capital relation in production and circulation processes by the agents of capital directly creates value.' Reference to Moseley (1991: 35-6).",
-      "source_ref": "Mohun_2013, Section 2.1; full_transcription.md"
+      "source_ref": "Mohun_2013, Section 2.1; full_transcription.md",
+      "verbatim_quote": "Difference in trends between relative numbers and relative wages: Attributed to \"the information technologies of the 1980s [which] slowed down the growth rate of unproductive employment but not its wage share\" (Paitaridis and Tsoulfidis 2012: 218).",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md"
     },
     {
       "entry_type": "st_boundary_comparison",
-      "content": "This is the key classification difference between ST and Mohun that drives the ES1404 ratio (ST/Mohun \u2248 1.61). In ST (1994), production workers in service-producing industries are 'nonsupervisory employees' \u2014 but in Mining, Manufacturing, and Construction the BLS production worker category additionally excludes finance, trade, personnel, professional, and clerical workers (not just supervisors). Mohun's 2013 framework systematically identifies all supervisory labor across all sectors by subtraction, producing a larger unproductive sector. The 18.7% average supervisory share is what Mohun labels as ST's 'supervision' category \u2014 workers absent from the BLS production worker count but not because of sector location, rather because of function.",
-      "source_ref": "Mohun_2013, Section 3, Appendix; full_transcription.md; ST_1994 methodology"
+      "content": "This is the key classification difference between ST and Mohun that drives the ES1404 ratio (ST/Mohun ≈ 1.61). In ST (1994), production workers in service-producing industries are 'nonsupervisory employees' — but in Mining, Manufacturing, and Construction the BLS production worker category additionally excludes finance, trade, personnel, professional, and clerical workers (not just supervisors). Mohun's 2013 framework systematically identifies all supervisory labor across all sectors by subtraction, producing a larger unproductive sector. The 18.7% average supervisory share is what Mohun labels as ST's 'supervision' category — workers absent from the BLS production worker count but not because of sector location, rather because of function.",
+      "source_ref": "Mohun_2013, Section 3, Appendix; full_transcription.md; ST_1994 methodology",
+      "verbatim_quote": "Footnote 13 - Phase Changes: It is these comparative rates of growth that underlie the \"phase-changes\" explored by Paitaridis and Tsoulfidis (2012).",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md"
     },
     {
       "entry_type": "construction_note",
-      "content": "Series registry construction: step 1 op=derive, formula='Lu \u00d7 0.187', inputs=['Mohun Lu'], output='ES1502-COMBINED'. This reflects the stable 18.7% managerial/supervisory share of total unproductive employment. Units: thousands of full-time equivalent employees. Period 1964-2010.",
-      "source_ref": "Series registry ES1502; Mohun_2013, Section 3"
+      "content": "Series registry construction: step 1 op=derive, formula='Lu × 0.187', inputs=['Mohun Lu'], output='ES1502-COMBINED'. This reflects the stable 18.7% managerial/supervisory share of total unproductive employment. Units: thousands of full-time equivalent employees. Period 1964-2010.",
+      "source_ref": "Series registry ES1502; Mohun_2013, Section 3",
+      "verbatim_quote": "91.5 percent of the \"missing\" wage and salary accruals are in just six sectors, accounting for 36.1% of total employment, and these sectors are all, in terms of average pay relative to average pay in the whole nonfarm private economy, \"richer\" sectors of the economy.",
+      "verbatim_source": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Marxist approaches that focus on productive and unproductive labor have in fact been both misled and misleading because they have treated \"wages\" as the income of labor and \"profits\" as the income of capital in a historical era in which managers-plus-capitalists have taken more and more surplus-value as labor income rather than as profit, financed since 1979 by a large increase in the rate of surplus-value.",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md",
+      "page_reference": "Section 2.1 and 4.2 and Appendix",
+      "context": "Supports the methodology_description entry defining the managers-plus-capitalists aggregate as Mohun's unit of analysis.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "But from 1979 onwards this was not the case; the relatively large increase in value added absorbed by supervisory wages was financed by a large fall in the value of labor-power (large increase in the rate of surplus-value). This can only be considered a burden if it is thought that this rise in the rate of surplus-value \"should\" have found its way into an increased profit share.",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md",
+      "page_reference": "Section 4.2, Fig 3",
+      "context": "Supports the empirical_values entry describing the post-1979 decoupling of supervisory employment share (flat) from wage share (soaring).",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Separating \"pure\" organization from authoritarian hierarchy and supervision is both theoretically doubtful and empirically impossible. The labor involved in such activities is conventionally treated as unproductive, and the same practice is followed here.",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md",
+      "page_reference": "Section 5, Fig 4",
+      "context": "Supports the value_added_absorption entry establishing why supervisory labor is treated as unproductive in Mohun's framework.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Difference in trends between relative numbers and relative wages: Attributed to \"the information technologies of the 1980s [which] slowed down the growth rate of unproductive employment but not its wage share\" (Paitaridis and Tsoulfidis 2012: 218).",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md",
+      "page_reference": "Section 2.1",
+      "context": "Supports the class_boundary_definition entry quoting Mohun on the theoretical/empirical impossibility of separating pure organization from supervision.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Footnote 13 - Phase Changes: It is these comparative rates of growth that underlie the \"phase-changes\" explored by Paitaridis and Tsoulfidis (2012).",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md",
+      "page_reference": "Section 3, Appendix",
+      "context": "Supports the st_boundary_comparison entry on how the ST/Mohun classification gap drives the ES1404 ratio.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "91.5 percent of the \"missing\" wage and salary accruals are in just six sectors, accounting for 36.1% of total employment, and these sectors are all, in terms of average pay relative to average pay in the whole nonfarm private economy, \"richer\" sectors of the economy.",
+      "source_ref": "KB: Technical/Knowledge_Base/external_papers/productive_labor/2013_Mohun_Unproductive_1964_2010/full_transcription.md",
+      "page_reference": "Section 3",
+      "context": "Supports the construction_note entry showing concentration of CES-missing wages in richer sectors that flow to the supervisory aggregate.",
+      "normalized_from": "legacy_inline_schema_2026-05-19"
     }
   ],
   "citations": [
     {
       "id": "Mohun_2013",
-      "full": "Mohun, Simon. 2013 [pub. 2014]. 'Unproductive Labor in the U.S. Economy 1964-2010.' Review of Radical Political Economics 46(3): 355-379. DOI: 10.1177/0486613413506080."
+      "full": "Mohun, Simon. 2013 [pub. 2014]. 'Unproductive Labor in the U.S. Economy 1964-2010.' Review of Radical Political Economics 46(3): 355-379. DOI: 10.1177/0486613413506080.",
+      "doi": "10.1177/0486613413506080",
+      "doi_source": "crossref",
+      "doi_verified": "2026-05-24"
     },
     {
       "id": "Mohun_2005",
-      "full": "Mohun, Simon. 2005. 'On measuring the wealth of nations: the US economy, 1964-2001.' Cambridge Journal of Economics 29(5): 799-815. DOI: 10.1093/cje/bei043."
+      "full": "Mohun, Simon. 2005. 'On measuring the wealth of nations: the US economy, 1964-2001.' Cambridge Journal of Economics 29(5): 799-815. DOI: 10.1093/cje/bei043.",
+      "doi": "10.1093/cje/bei043",
+      "doi_source": "crossref",
+      "doi_verified": "2026-05-24"
     },
     {
       "id": "ST_1994",
-      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press."
+      "full": "Shaikh, Anwar, and E. Ahmet Tonak. 1994. Measuring the Wealth of Nations: The Political Economy of National Accounts. Cambridge University Press.",
+      "doi": "10.1017/cbo9780511528330",
+      "doi_source": "crossref",
+      "doi_verified": "2026-05-24"
     }
   ],
-  "methodology_summary": "Managerial/supervisory unproductive employment (Lu_sup = managers-plus-capitalists), 1964-2010. Derived as Mohun total unproductive Lu \u00d7 0.187 (stable supervisory share). Employment share flat (~16.8-19.9%). Wage share explodes from 32% (1964) to 47.8% (2007). VA absorption: 22.1% (1964) to 35.5% (2000). This is the category absent from ST's framework but central to Mohun's class analysis and the driver of the ST/Mohun exploitation rate ratio.",
+  "methodology_summary": "Managerial/supervisory unproductive employment (Lu_sup = managers-plus-capitalists), 1964-2010. Derived as Mohun total unproductive Lu × 0.187 (stable supervisory share). Employment share flat (~16.8-19.9%). Wage share explodes from 32% (1964) to 47.8% (2007). VA absorption: 22.1% (1964) to 35.5% (2000). This is the category absent from ST's framework but central to Mohun's class analysis and the driver of the ST/Mohun exploitation rate ratio.",
   "known_issues": [
-    "Supervisory employment computed by subtraction \u2014 all CES-missing wages assigned to supervisors, including tips and payments-in-kind that may accrue to working class",
+    "Supervisory employment computed by subtraction — all CES-missing wages assigned to supervisors, including tips and payments-in-kind that may accrue to working class",
     "Cannot distinguish capitalists from managers within this aggregate",
-    "Mining, Manufacturing, Construction 'supervisory' category includes some non-supervisors (finance, clerical, professional workers excluded from BLS production worker definition) \u2014 supervisory totals overestimated by indeterminate amount, decreasing as these sectors shrink",
+    "Mining, Manufacturing, Construction 'supervisory' category includes some non-supervisors (finance, clerical, professional workers excluded from BLS production worker definition) — supervisory totals overestimated by indeterminate amount, decreasing as these sectors shrink",
     "SIC-to-NAICS transition 1998 requires separate classification tables"
   ],
   "cross_references": [
@@ -77,5 +146,7 @@
     "L5_validation": []
   },
   "ported_from": "ST2/research/N1502_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "citation_dois_added_date": "2026-05-24",
+  "citation_dois_added_by": "v1.2-iter5-C5-crossref-dois"
 }

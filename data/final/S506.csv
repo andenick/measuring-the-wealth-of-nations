@@ -41,3 +41,99 @@ S506-A,1986,2.4,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
 S506-A,1987,2.42,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
 S506-A,1988,2.4,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
 S506-A,1989,2.44,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-EXT,1998,1.2380175366254853,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,1999,1.217296200237947,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2000,1.2031991804977078,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2001,1.2026527107681815,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2002,1.2598540955067232,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2003,1.365336224004371,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2004,1.4352070935308694,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2005,1.5005407196746545,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2006,1.5420328309118223,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2007,1.5379266749359846,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2008,1.5429872274776462,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2009,1.626140113334551,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2010,1.7585650954849221,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2011,1.7776558255433026,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2012,1.7463948019081459,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2013,1.8009319576549514,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2014,1.7626269664390781,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2015,1.6980205203078156,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2016,1.6634093188633297,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2017,1.6683658195766589,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2018,1.6683491872787837,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2019,1.6254299326105444,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2020,1.5847381212346927,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2021,1.7727318935354992,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2022,1.880615019880321,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2023,1.8535776202736316,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-EXT,2024,1.790828883774963,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,1948,1.7,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1949,1.75,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1950,1.77,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1951,1.78,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1952,1.75,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1953,1.74,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1954,1.86,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1955,1.9,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1956,1.84,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1957,1.88,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1958,2.01,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1959,1.99,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1960,1.99,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1961,2.03,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1962,2.06,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1963,2.07,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1964,2.12,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1965,2.1,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1966,2.08,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1967,2.1,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1968,2.08,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1969,2.01,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1970,2.03,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1971,2.08,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1972,1.99,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1973,1.94,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1974,1.95,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1975,2.11,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1976,2.11,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1977,2.1,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1978,2.07,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1979,2.03,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1980,2.07,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1981,2.16,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1982,2.19,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1983,2.22,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1984,2.26,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1985,2.33,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1986,2.4,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1987,2.42,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1988,2.4,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1989,2.44,ratio,book_period,book_tableH1_1948_1989.csv:S_star_V_star
+S506-COMBINED,1998,1.2380175366254853,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,1999,1.217296200237947,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2000,1.2031991804977078,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2001,1.2026527107681815,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2002,1.2598540955067232,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2003,1.365336224004371,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2004,1.4352070935308694,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2005,1.5005407196746545,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2006,1.5420328309118223,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2007,1.5379266749359846,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2008,1.5429872274776462,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2009,1.626140113334551,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2010,1.7585650954849221,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2011,1.7776558255433026,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2012,1.7463948019081459,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2013,1.8009319576549514,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2014,1.7626269664390781,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2015,1.6980205203078156,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2016,1.6634093188633297,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2017,1.6683658195766589,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2018,1.6683491872787837,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2019,1.6254299326105444,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2020,1.5847381212346927,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2021,1.7727318935354992,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2022,1.880615019880321,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2023,1.8535776202736316,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)
+S506-COMBINED,2024,1.790828883774963,ratio,extension,S505-EXT / S504-EXT (year-by-year ratio; no growth-splice)

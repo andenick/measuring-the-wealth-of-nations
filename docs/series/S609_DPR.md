@@ -5,8 +5,7 @@
 **Units**: share
 **Period**: 1952–1989 (book; S607 extends through 2024 via Table6_3_Extended)
 **Content Type**: time_series
-**Status**: calculated
-
+**Status**: book_period_validated
 ## Definition
 
 NSW as a share of National Income — Tonak's preferred normalization for public communication and cross-country comparison.

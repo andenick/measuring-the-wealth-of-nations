@@ -38,6 +38,51 @@
       "entry_type": "caveat",
       "content": "NIPA line numbers have shifted across benchmark revisions. The specific line references (1.1.5 line 2, 6.1 line 73) must be verified against the current NIPA vintage. Historical concordance is needed for extension.",
       "source_ref": "CHAPTER_5_INVESTIGATION.md"
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "CON* = {CON} - GVAir - RYcon - {HHcon} - ROWcon",
+      "source_ref": "ST_1994, Ch5 Sec 5.2, p.95; chunk_12",
+      "page_reference": "95",
+      "context": "Canonical formula for S508. Productive consumption equals NIPA personal consumption expenditure minus imputed rental of owner-occupied housing (unproductive FIRE activity), minus royalties embedded in consumption, minus household-sector consumption adjustments, minus rest-of-world consumption components."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "For all of these reasons, one cannot simply use NIPA data to fill in observations between IO benchmark years. Instead, we use NIPA data directly for components such as GVAp or CON (containing the latest available revisions) and indirectly to interpolate between benchmark estimates of other components such as M'p or RYcon.",
+      "source_ref": "ST_1994, Ch5 Sec 5.2, p.94; chunk_12",
+      "page_reference": "94",
+      "context": "Defines the construction protocol for S508: CON is taken DIRECTLY from NIPA (latest revisions), while the deduction terms (RYcon, ROWcon) are interpolated from benchmark IO ratios. This is the exact rule the S508 L01/P02 implementation must follow."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "For royalties RY we use the receiving industry's GVA (i.e. GVAry) as the numeraire, as in xi == (RYi/GVAry)IO. This is done because some royalties such as RYi and RYx-im appear as components of highly unstable final-demand totals like I or X-IM (see Figure 5.1). Benchmark coefficients created by dividing these royalties by unstable totals are not very useful.",
+      "source_ref": "ST_1994, Ch5 Sec 5.2, p.96; chunk_12",
+      "page_reference": "96",
+      "context": "Specifies the interpolation methodology for the RYcon deduction inside the S508 formula: RYcon ratios are formed against receiving-industry GVA (GVAry), not against unstable CON totals, then linearly interpolated between IO benchmarks and multiplied by NIPA GVAry to produce annual RYcon."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "CON* = {CON} − GVAir − RYcon − {HHcon} − ROWcon.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.95",
+      "context": "Section 5.2, p. 95: exact formula for productive consumption used in S508 — PCE less imputed rent, royalties, household, and rest-of-world consumption components."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "Take from NIPA directly: {CON, IG, X-IM, G, WG}. Interpolate between benchmarks: M's, RYs, and ROWs.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.95",
+      "context": "Section 5.2 estimation procedure: justifies pulling CON directly from NIPA Tables 1.1.5 / 6.1 while interpolating the royalty and ROW deductions from benchmark IO data."
+    },
+    {
+      "entry_type": "verbatim_quote",
+      "content": "CON*IO/CON*NIPA: 1.04 → 0.99 (convergence). Totals fairly close. Individual components (investment, net exports) differ substantially. Stability of ratios: Indicates same trends in both data sets.",
+      "source_ref": "ST_1994",
+      "migrated_from": "top_level_verbatim_quotes_array_v1.1_phase1",
+      "page_reference": "Ch5 p.98",
+      "context": "Table 5.3 commentary: NIPA-based and IO-based CON* converge across benchmark years, validating the S508 construction method."
     }
   ],
   "citations": [
@@ -77,5 +122,29 @@
     "L5_validation": []
   },
   "ported_from": "ST2/research/T508_research.json",
-  "port_date": "2026-05-14"
+  "port_date": "2026-05-14",
+  "verbatim_quotes": [
+    {
+      "text": "CON* = {CON} − GVAir − RYcon − {HHcon} − ROWcon.",
+      "page": 95,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.2, p. 95: exact formula for productive consumption used in S508 — PCE less imputed rent, royalties, household, and rest-of-world consumption components."
+    },
+    {
+      "text": "Take from NIPA directly: {CON, IG, X-IM, G, WG}. Interpolate between benchmarks: M's, RYs, and ROWs.",
+      "page": 95,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Section 5.2 estimation procedure: justifies pulling CON directly from NIPA Tables 1.1.5 / 6.1 while interpolating the royalty and ROW deductions from benchmark IO data."
+    },
+    {
+      "text": "CON*IO/CON*NIPA: 1.04 → 0.99 (convergence). Totals fairly close. Individual components (investment, net exports) differ substantially. Stability of ratios: Indicates same trends in both data sets.",
+      "page": 98,
+      "chapter": 5,
+      "verbatim_check": true,
+      "context": "Table 5.3 commentary: NIPA-based and IO-based CON* converge across benchmark years, validating the S508 construction method."
+    }
+  ],
+  "verbatim_quotes_deprecated": true
 }
