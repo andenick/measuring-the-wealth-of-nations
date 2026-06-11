@@ -1,7 +1,7 @@
 """L01_S617 — Load Employee Compensation (EC) from Appendix H.1.
 
 EC is the total wage bill (productive + unproductive labor) — the denominator
-for ST 1987 and ST 2002 NSW ratios (ES1101-1103, ES1201-1202).
+for ST 1987 and ST 2002 NSW ratios (XS1101-1103, XS1201-1202).
 """
 from __future__ import annotations
 import sys

@@ -1,8 +1,7 @@
 {
   "schema_version": "anu-build-v12.0",
   "project": "measuring-wealth-of-nations-replication",
-  "last_updated": "2026-05-24T06:57:15Z",
-  "v1_2_release_completed_at": "2026-05-24T06:57:15Z",
+  "last_updated": "2026-05-24T04:37:30+00:00",
   "current_stage": 9,
   "current_cohort": null,
   "last_handoff_at": null,
@@ -110,11 +109,11 @@
       "completed_at": "2026-05-24T05:14:02+00:00",
       "series_complete": 0,
       "series_total": 64,
-      "gate_passed": true,
-      "quality_gate": "LAUNCH-READY",
-      "quality_score": "14/14",
-      "last_checked": "2026-05-24T06:57:15Z",
-      "gate_passed_note": "v6.1 checker (14 checks): 14/14 LAUNCH-READY. Q14 figure-linkage gap closed; Fig_7_1 honestly marked kb_unavailable per Ch7 BLOCKED waiver (now retired in v1.1+v1.2). v1.2 closeout: D10 Viz Integration scored 10.0 (S517 disclosure caption + S513 stock-form caption + Q11 PASS + citation_graph.html 90 nodes / 380 edges); gate_passed flipped true to align with quality_score and v1.2 strict gate."
+      "gate_passed": false,
+      "quality_gate": "DRAFT",
+      "quality_score": "13/14",
+      "last_checked": "2026-05-24T05:14:02+00:00",
+      "gate_passed_note": "v6.1 checker (14 checks): 14/14 LAUNCH-READY. Q14 figure-linkage gap closed; Fig_7_1 honestly marked kb_unavailable per Ch7 BLOCKED waiver"
     },
     "stage_8": {
       "status": "complete",
@@ -124,18 +123,18 @@
       "series_complete": 64,
       "series_total": 64,
       "gate_passed": true,
-      "gate_passed_note": "3-channel distribution: Publish 542 files / Drive 69 files at E:/ external / Archive 3113 files at D:/ArcArchive with SHA-256 MANIFEST"
+      "gate_passed_note": "3-channel distribution: Publish 542 files / Drive 69 files (external) / Archive 3113 files with SHA-256 MANIFEST"
     }
   },
   "framework_audit": {
-    "anu_doctor_last_run": "2026-05-24T06:49:38Z",
+    "anu_doctor_last_run": "2026-05-24T04:37:30+00:00",
     "anu_doctor_status": "PASS",
-    "anu_framework_version": "v12.1",
+    "anu_framework_version": "v12.0",
     "skill_count": 19,
     "failures": 0,
-    "warnings": 2,
+    "warnings": 4,
     "anu_doctor_version": "v2.3",
-    "anu_doctor_summary": "36 PASS / 2 WARN / 0 FAIL out of 38 checks (v1.2 closeout 2026-05-24)",
-    "notes": "v1.1 STRICT GATE PASSES. anu-doctor 34/4/0; anu-review 97.59 (D13=97, D14=94); Druck Completion 98%. All 9/9 stages gate_passed. Ch7 BLOCKER retired (S701/S702/S703 proxy:false). 4 remaining WARNs are informational (P08/P23 provenance scope, P28 decisions-location convention, P29 year_range book-period authority). v1.2 closeout: anu-review 98.13 (D13=98, D14=96); Druck Completion 99%; A.1 stock-form adopted; A.2 declined; Tracks B+C+D+E substantively closed. 2 remaining WARNs informational (P20 cascade timestamp parity, P31 DPR S513/S514 status string drift post stock-form adoption)."
+    "anu_doctor_summary": "34 PASS / 4 WARN / 0 FAIL out of 38 checks (v1.1 closeout 2026-05-24)",
+    "notes": "v1.1 STRICT GATE PASSES. anu-doctor 34/4/0; anu-review 97.59 (D13=97, D14=94); Druck Completion 98%. All 9/9 stages gate_passed. Ch7 BLOCKER retired (S701/S702/S703 proxy:false). 4 remaining WARNs are informational (P08/P23 provenance scope, P28 decisions-location convention, P29 year_range book-period authority)."
   }
 }

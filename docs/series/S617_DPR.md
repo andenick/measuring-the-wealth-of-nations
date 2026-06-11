@@ -18,7 +18,7 @@ Pass-through from `data/source/book_tables/book_tableH1_1948_1989.csv` column `E
 
 ## Why this is a series
 
-While EC is intermediate to many downstream ratios, registering it as a first-class series (S617) means every ratio that uses it (ES1101-1103, ES1201-1202, future productivity series) has a single audited source.
+While EC is intermediate to many downstream ratios, registering it as a first-class series (S617) means every ratio that uses it (XS1101-1103, XS1201-1202, future productivity series) has a single audited source.
 
 ---
 

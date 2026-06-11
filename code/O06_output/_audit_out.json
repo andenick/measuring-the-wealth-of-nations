@@ -1,0 +1,1060 @@
+{
+  "results": [
+    {
+      "sid": "XS001",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 1,
+      "col_ids": [
+        "XS001-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS002",
+      "wide_ok": true,
+      "rows": 5,
+      "cols": 1,
+      "col_ids": [
+        "XS002-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS003",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 1,
+      "col_ids": [
+        "XS003-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS004",
+      "wide_ok": true,
+      "rows": 14,
+      "cols": 1,
+      "col_ids": [
+        "XS004-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_partial_1948_1961"
+    },
+    {
+      "sid": "XS1001",
+      "wide_ok": true,
+      "rows": 29,
+      "cols": 1,
+      "col_ids": [
+        "XS1001-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1002",
+      "wide_ok": true,
+      "rows": 29,
+      "cols": 1,
+      "col_ids": [
+        "XS1002-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1101",
+      "wide_ok": true,
+      "rows": 38,
+      "cols": 1,
+      "col_ids": [
+        "XS1101-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1102",
+      "wide_ok": true,
+      "rows": 38,
+      "cols": 1,
+      "col_ids": [
+        "XS1102-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1103",
+      "wide_ok": true,
+      "rows": 38,
+      "cols": 1,
+      "col_ids": [
+        "XS1103-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1201",
+      "wide_ok": true,
+      "rows": 74,
+      "cols": 1,
+      "col_ids": [
+        "XS1201-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1202",
+      "wide_ok": true,
+      "rows": 74,
+      "cols": 1,
+      "col_ids": [
+        "XS1202-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1301",
+      "wide_ok": true,
+      "rows": 54,
+      "cols": 1,
+      "col_ids": [
+        "XS1301-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1302",
+      "wide_ok": true,
+      "rows": 54,
+      "cols": 1,
+      "col_ids": [
+        "XS1302-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1304",
+      "wide_ok": true,
+      "rows": 54,
+      "cols": 1,
+      "col_ids": [
+        "XS1304-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1305",
+      "wide_ok": true,
+      "rows": 54,
+      "cols": 1,
+      "col_ids": [
+        "XS1305-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1401",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 1,
+      "col_ids": [
+        "XS1401-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1402",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 1,
+      "col_ids": [
+        "XS1402-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1403",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 1,
+      "col_ids": [
+        "XS1403-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1404",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 1,
+      "col_ids": [
+        "XS1404-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1501",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 1,
+      "col_ids": [
+        "XS1501-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1502",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 1,
+      "col_ids": [
+        "XS1502-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1503",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 1,
+      "col_ids": [
+        "XS1503-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1504",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 1,
+      "col_ids": [
+        "XS1504-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1601",
+      "wide_ok": true,
+      "rows": 40,
+      "cols": 1,
+      "col_ids": [
+        "XS1601-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1602",
+      "wide_ok": true,
+      "rows": 30,
+      "cols": 1,
+      "col_ids": [
+        "XS1602-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1701",
+      "wide_ok": true,
+      "rows": 24,
+      "cols": 1,
+      "col_ids": [
+        "XS1701-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1702",
+      "wide_ok": true,
+      "rows": 24,
+      "cols": 1,
+      "col_ids": [
+        "XS1702-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1703",
+      "wide_ok": true,
+      "rows": 24,
+      "cols": 1,
+      "col_ids": [
+        "XS1703-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "XS1704",
+      "wide_ok": true,
+      "rows": 24,
+      "cols": 1,
+      "col_ids": [
+        "XS1704-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S201",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 1,
+      "col_ids": [
+        "S201-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S401",
+      "wide_ok": true,
+      "rows": 6,
+      "cols": 1,
+      "col_ids": [
+        "S401-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S402",
+      "wide_ok": true,
+      "rows": 6,
+      "cols": 1,
+      "col_ids": [
+        "S402-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S501",
+      "wide_ok": true,
+      "rows": 77,
+      "cols": 3,
+      "col_ids": [
+        "S501-A",
+        "S501-COMBINED",
+        "S501-EXT"
+      ],
+      "has_a": true,
+      "has_ext": true,
+      "has_combined": true,
+      "ext_nonnull": 28,
+      "comb_nonnull": 77,
+      "ext_declared": true,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S502",
+      "wide_ok": true,
+      "rows": 77,
+      "cols": 3,
+      "col_ids": [
+        "S502-A",
+        "S502-COMBINED",
+        "S502-EXT"
+      ],
+      "has_a": true,
+      "has_ext": true,
+      "has_combined": true,
+      "ext_nonnull": 28,
+      "comb_nonnull": 77,
+      "ext_declared": true,
+      "status": "validated_book_and_extension"
+    },
+    {
+      "sid": "S503",
+      "wide_ok": true,
+      "rows": 77,
+      "cols": 3,
+      "col_ids": [
+        "S503-A",
+        "S503-COMBINED",
+        "S503-EXT"
+      ],
+      "has_a": true,
+      "has_ext": true,
+      "has_combined": true,
+      "ext_nonnull": 28,
+      "comb_nonnull": 77,
+      "ext_declared": true,
+      "status": "validated_book_and_extension"
+    },
+    {
+      "sid": "S504",
+      "wide_ok": true,
+      "rows": 69,
+      "cols": 3,
+      "col_ids": [
+        "S504-A",
+        "S504-COMBINED",
+        "S504-EXT"
+      ],
+      "has_a": true,
+      "has_ext": true,
+      "has_combined": true,
+      "ext_nonnull": 27,
+      "comb_nonnull": 69,
+      "ext_declared": true,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S505",
+      "wide_ok": true,
+      "rows": 69,
+      "cols": 3,
+      "col_ids": [
+        "S505-A",
+        "S505-COMBINED",
+        "S505-EXT"
+      ],
+      "has_a": true,
+      "has_ext": true,
+      "has_combined": true,
+      "ext_nonnull": 27,
+      "comb_nonnull": 69,
+      "ext_declared": true,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S506",
+      "wide_ok": true,
+      "rows": 69,
+      "cols": 3,
+      "col_ids": [
+        "S506-A",
+        "S506-COMBINED",
+        "S506-EXT"
+      ],
+      "has_a": true,
+      "has_ext": true,
+      "has_combined": true,
+      "ext_nonnull": 27,
+      "comb_nonnull": 69,
+      "ext_declared": true,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S507",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 1,
+      "col_ids": [
+        "S507-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S508",
+      "wide_ok": true,
+      "rows": 14,
+      "cols": 1,
+      "col_ids": [
+        "S508-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_partial_1948_1961"
+    },
+    {
+      "sid": "S509",
+      "wide_ok": true,
+      "rows": 14,
+      "cols": 1,
+      "col_ids": [
+        "S509-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_partial_1948_1961"
+    },
+    {
+      "sid": "S510",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 1,
+      "col_ids": [
+        "S510-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S511",
+      "wide_ok": true,
+      "rows": 77,
+      "cols": 3,
+      "col_ids": [
+        "S511-A",
+        "S511-COMBINED",
+        "S511-EXT"
+      ],
+      "has_a": true,
+      "has_ext": true,
+      "has_combined": true,
+      "ext_nonnull": 35,
+      "comb_nonnull": 77,
+      "ext_declared": true,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S512",
+      "wide_ok": true,
+      "rows": 69,
+      "cols": 3,
+      "col_ids": [
+        "S512-A",
+        "S512-COMBINED",
+        "S512-EXT"
+      ],
+      "has_a": true,
+      "has_ext": true,
+      "has_combined": true,
+      "ext_nonnull": 27,
+      "comb_nonnull": 69,
+      "ext_declared": true,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S513",
+      "wide_ok": true,
+      "rows": 69,
+      "cols": 3,
+      "col_ids": [
+        "S513-A",
+        "S513-COMBINED",
+        "S513-EXT"
+      ],
+      "has_a": true,
+      "has_ext": true,
+      "has_combined": true,
+      "ext_nonnull": 27,
+      "comb_nonnull": 69,
+      "ext_declared": true,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S514",
+      "wide_ok": true,
+      "rows": 50,
+      "cols": 3,
+      "col_ids": [
+        "S514-A",
+        "S514-COMBINED",
+        "S514-EXT"
+      ],
+      "has_a": true,
+      "has_ext": true,
+      "has_combined": true,
+      "ext_nonnull": 27,
+      "comb_nonnull": 50,
+      "ext_declared": true,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S515",
+      "wide_ok": true,
+      "rows": 77,
+      "cols": 3,
+      "col_ids": [
+        "S515-A",
+        "S515-COMBINED",
+        "S515-EXT"
+      ],
+      "has_a": true,
+      "has_ext": true,
+      "has_combined": true,
+      "ext_nonnull": 63,
+      "comb_nonnull": 77,
+      "ext_declared": true,
+      "status": "book_period_partial_1948_1961"
+    },
+    {
+      "sid": "S516",
+      "wide_ok": true,
+      "rows": 49,
+      "cols": 3,
+      "col_ids": [
+        "S516-A",
+        "S516-COMBINED",
+        "S516-EXT"
+      ],
+      "has_a": true,
+      "has_ext": true,
+      "has_combined": true,
+      "ext_nonnull": 35,
+      "comb_nonnull": 49,
+      "ext_declared": true,
+      "status": "book_period_partial_1948_1961"
+    },
+    {
+      "sid": "S517",
+      "wide_ok": true,
+      "rows": 77,
+      "cols": 3,
+      "col_ids": [
+        "S517-A",
+        "S517-COMBINED",
+        "S517-EXT"
+      ],
+      "has_a": true,
+      "has_ext": true,
+      "has_combined": true,
+      "ext_nonnull": 35,
+      "comb_nonnull": 77,
+      "ext_declared": true,
+      "status": "validated_book_and_extension"
+    },
+    {
+      "sid": "S601",
+      "wide_ok": true,
+      "rows": 38,
+      "cols": 1,
+      "col_ids": [
+        "S601-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S602",
+      "wide_ok": true,
+      "rows": 38,
+      "cols": 1,
+      "col_ids": [
+        "S602-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S603",
+      "wide_ok": true,
+      "rows": 38,
+      "cols": 1,
+      "col_ids": [
+        "S603-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S604",
+      "wide_ok": true,
+      "rows": 38,
+      "cols": 1,
+      "col_ids": [
+        "S604-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S605",
+      "wide_ok": true,
+      "rows": 38,
+      "cols": 1,
+      "col_ids": [
+        "S605-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S606",
+      "wide_ok": true,
+      "rows": 38,
+      "cols": 1,
+      "col_ids": [
+        "S606-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S607",
+      "wide_ok": true,
+      "rows": 74,
+      "cols": 3,
+      "col_ids": [
+        "S607-A",
+        "S607-COMBINED",
+        "S607-EXT"
+      ],
+      "has_a": true,
+      "has_ext": true,
+      "has_combined": true,
+      "ext_nonnull": 36,
+      "comb_nonnull": 74,
+      "ext_declared": true,
+      "status": "validated_book_and_extension"
+    },
+    {
+      "sid": "S608",
+      "wide_ok": true,
+      "rows": 38,
+      "cols": 1,
+      "col_ids": [
+        "S608-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S609",
+      "wide_ok": true,
+      "rows": 38,
+      "cols": 1,
+      "col_ids": [
+        "S609-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S617",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 1,
+      "col_ids": [
+        "S617-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S701",
+      "wide_ok": true,
+      "rows": 6,
+      "cols": 1,
+      "col_ids": [
+        "S701-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "benchmark_only_matrix_derived"
+    },
+    {
+      "sid": "S702",
+      "wide_ok": true,
+      "rows": 6,
+      "cols": 1,
+      "col_ids": [
+        "S702-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "benchmark_only_matrix_derived"
+    },
+    {
+      "sid": "S703",
+      "wide_ok": true,
+      "rows": 6,
+      "cols": 1,
+      "col_ids": [
+        "S703-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "benchmark_only_matrix_derived"
+    },
+    {
+      "sid": "S801",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 1,
+      "col_ids": [
+        "S801-A"
+      ],
+      "has_a": true,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    },
+    {
+      "sid": "S901",
+      "wide_ok": true,
+      "rows": 42,
+      "cols": 4,
+      "col_ids": [
+        "S901-A/LpL_S511",
+        "S901-A/NSW_V_S608",
+        "S901-A/VW_S512",
+        "S901-A/e_S506"
+      ],
+      "has_a": false,
+      "has_ext": false,
+      "has_combined": false,
+      "ext_nonnull": 0,
+      "comb_nonnull": 0,
+      "ext_declared": false,
+      "status": "book_period_validated"
+    }
+  ],
+  "anomalies": []
+}

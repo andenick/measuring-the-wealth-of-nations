@@ -96,21 +96,40 @@ class BenchmarkValidator:
     series_id:        str
     tolerance_class:  str
     benchmarks:       dict[int, float]
-    subseries_filter: str | None = None   # If set, validate only rows matching this subseries_id
+    subseries_filter: str | None = None   # If set, validate book-period rows against this subseries_id
+    # Extension-arm scoping (DIV-022): benchmark years AFTER `ext_year_after` are
+    # validated against `ext_subseries_filter` (the -COMBINED/-EXT arm) instead of
+    # `subseries_filter` (the -A book arm). This lets one registry reference_values
+    # dict carry both book-period anchors and post-book extension anchors without
+    # the extension anchors being reported MISSING by an -A-only filter.
+    ext_subseries_filter: str | None = None
+    ext_year_after:       int | None = None
 
     def run(self, final_csv: Path) -> dict:
         if not final_csv.exists():
             raise FileNotFoundError(f"{final_csv} missing — processor must run first")
-        df = pd.read_csv(final_csv)
+        full = pd.read_csv(final_csv)
         if self.subseries_filter is not None:
-            df = df[df["series_id"] == self.subseries_filter]
+            df = full[full["series_id"] == self.subseries_filter]
+        else:
+            df = full
 
         tol = TOLERANCES[self.tolerance_class]
         by_year = dict(zip(df["year"].astype(int), df["value"].astype(float)))
 
+        # Extension-arm lookup (only built when configured).
+        ext_by_year: dict[int, float] = {}
+        if self.ext_subseries_filter is not None:
+            ext_df = full[full["series_id"] == self.ext_subseries_filter]
+            ext_by_year = dict(zip(ext_df["year"].astype(int), ext_df["value"].astype(float)))
+
         checks: list[dict] = []
         for yr, expected in self.benchmarks.items():
-            actual = by_year.get(yr)
+            if (self.ext_year_after is not None and yr > self.ext_year_after
+                    and self.ext_subseries_filter is not None):
+                actual = ext_by_year.get(yr)
+            else:
+                actual = by_year.get(yr)
             if actual is None:
                 checks.append({"year": yr, "expected": expected, "actual": None, "status": "MISSING"})
                 continue

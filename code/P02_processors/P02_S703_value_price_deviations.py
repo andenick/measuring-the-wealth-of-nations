@@ -49,7 +49,7 @@ HONESTY DISCLOSURE (read before interpreting the output):
     - research/S703_research.json (verbatim quotes from Ch4 p.84 and Ch7
       p.223 anchoring the Khanjian benchmark to S/V vs S*/V* on the same
       aggregate, not unproductive-vs-productive lambda comparison)
-    - Council/Druck/docs/RMWND_HYPER_REVIEW_2026-05-19.md (S703 proxy:true
+    - the project hyper-review (2026-05-19) (S703 proxy:true
       status discussion)
 
 INPUTS (consumed -- do not refetch):

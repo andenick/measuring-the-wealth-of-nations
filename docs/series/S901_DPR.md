@@ -20,7 +20,7 @@ V03 validation is purely a round-trip: for every populated `(year, indicator)` c
 ## Sources
 
 - KB chunks: `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_24/full_transcription.md` (Ch7 §7.1 — Phase-1 1948-1980 narrative, Figure 7.1 social-burden rate, Figure 7.2 NIPA-vs-Marxian rate); `chunk_25/full_transcription.md` (Ch7 §7.3 — Lp < 0.5L, S*/V* approximately 4× P+/EC, value composition rising 90%); `Knowledge_Base/tables/page_140_marxian_orthodox_comparison.csv` (Table 5.14 comparison ratios — TP*/GP=82%, TP*/GNP=147%, S*/P=224%, S*/V*=210% of orthodox equivalents); `Knowledge_Base/SUMMARY_KEY_FINDINGS.md`; `Technical/docs/chapters/CHAPTER_9_INVESTIGATION.md`; `Knowledge_Base/text/narrative_chunk_{15,16,17}_ch5.md`; `Knowledge_Base/text/narrative_chunk_{18,20}_ch6.md`
-- Book tables: Table 5.14 (Marxian vs orthodox comparison ratios, p.140); Figures 7.1 / 7.2 (in-book equivalents of "Chapter 9 figures"); the book has no actual Table 9.1
+- Book tables: Table 5.14 (Marxian vs orthodox comparison ratios, p.151 per the book's List of Tables; the KB chunk filename says "page_140" but that is the extraction artifact's name, not the printed page); Figures 7.1 / 7.2 (in-book equivalents of "Chapter 9 figures"); the book has no actual Table 9.1
 - External sources: none — S901 is purely aggregative
 - Upstream series: S506, S511, S512, S513 (pending K*), S514 (pending K* and TCU), S608
 - Local files: each upstream's `data/final/<sid>.csv`
@@ -53,7 +53,7 @@ V03 validation is purely a round-trip: for every populated `(year, indicator)` c
 - Upstream: S506 (exploitation rate), S511 (Lp/L), S512 (V*/W), S513 (r*), S514 (r*_adj), S608 (NSW/V*)
 - Comparison data: Table 5.14 (page_140_marxian_orthodox_comparison.csv)
 - Downstream: visualization layer (Stage 7); publication summary tables
-- Related: S801 (cross-study comparison — same family of "summary view" artifacts); AS001 (social burden rate `b = t + eu` — the mechanism linking S513 to NIPA r'n)
+- Related: S801 (cross-study comparison — same family of "summary view" artifacts); XS001 (social burden rate `b = t + eu` — the mechanism linking S513 to NIPA r'n)
 
 ## Provenance trail
 

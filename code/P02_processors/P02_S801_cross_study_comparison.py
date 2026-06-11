@@ -1,7 +1,7 @@
 """P02_S801 — Cross-study comparison (Ch8): ST vs Mohun.
 
 Merges S506 (ST exploitation rate), S511 (ST productive labor share),
-ES1401 (Mohun exploitation rate), ES1402 (Mohun productive labor share)
+XS1401 (Mohun exploitation rate), XS1402 (Mohun productive labor share)
 into one wide table for side-by-side comparison.
 """
 from __future__ import annotations
@@ -29,8 +29,8 @@ def _load(sid: str, col_name: str) -> pd.DataFrame:
 def compute() -> pd.DataFrame:
     s506 = _load("S506", "ST_e")
     s511 = _load("S511", "ST_LpL")
-    es1401 = _load("ES1401", "Mohun_e")
-    es1402 = _load("ES1402", "Mohun_LpL")
+    es1401 = _load("XS1401", "Mohun_e")
+    es1402 = _load("XS1402", "Mohun_LpL")
 
     merged = s506.merge(s511, on="year").merge(es1401, on="year").merge(es1402, on="year")
     merged = merged.sort_values("year").reset_index(drop=True)
@@ -40,7 +40,7 @@ def compute() -> pd.DataFrame:
     merged["series_id"] = SUBSERIES
     merged["units"] = "ratio"
     merged["stage"] = "cross_study"
-    merged["provenance"] = "merge(S506, S511, ES1401, ES1402)"
+    merged["provenance"] = "merge(S506, S511, XS1401, XS1402)"
     return merged[["series_id", "year", "value", "units", "stage", "provenance"]]
 
 

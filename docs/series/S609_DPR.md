@@ -16,7 +16,7 @@ NSW as a share of National Income — Tonak's preferred normalization for public
 
 ## Construction
 
-Loaded directly from `nsw_ni_share` column of Table 6.3. The book pre-computes this share; the new build preserves it rather than recomputing from S607 / NI, since National Income is not yet a first-class series in the registry.
+Loaded directly from the `nsw_ni_share` column of the project-internal reconstruction file `Table6_3_NetSocialWage.csv` (an internal label — the book has no Table 6.3; the underlying book source is Chapter 5 §5.9 / Appendix N). The share is pre-computed in that reconstruction; the build preserves it rather than recomputing from S607 / NI, since National Income is not yet a first-class series in the registry.
 
 ## Reference Values (Validation Benchmarks)
 

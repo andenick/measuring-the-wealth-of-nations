@@ -34,7 +34,7 @@ The book's dimensional verification (Figure 4.3 p.83) — `lambda* = TV / GO_p` 
   - Appendix F productive-share filter, at `Technical/data/source/appendix_F/Table_F_1.csv` (85-sector categorical mask, derived from ST2 `io_85_to_nipa_13_concordance.csv` + Mohun 2013 Tables 2-3, provenance at `Technical/data/source/appendix_F/PROVENANCE.md`)
 - **KB chunks**: `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_11/full_transcription.md` (Ch4 §4.1 pp.78-83 — closed-form equations + Figure 4.3); `chunk_14/full_transcription.md` (Appendix G variable capital); `chunk_15/full_transcription.md` (sector composition); `chunk_31/full_transcription.md` (Appendix E sectoral GVAp); `chunk_33/full_transcription.md` (Appendix F + G intro)
 - **Book tables**: Ch4 §4.1 equations pp.80-83 (Figure 4.3 dimensional check); Appendix G Table G.2 (sectoral productive employment); Appendix F (productive shares — book's annual labor decomposition pp.292–301); Appendix E Tables E.1 / E.2
-- **APIs**: BLS Public API v2 (key from `D:/Arcanum/Council/Robin/API_MODULES/SOCIAL_SCIENCE/api_keys.env`); BEA API
+- **APIs**: BLS Public API v2 (free registration key, supplied via the `BLS_API_KEY` environment variable); BEA API
 - **Upstream series**: S401 (A-matrix), S402 (Leontief inverse B), S513 (Marxian profit rate, used in downstream S702/S703)
 
 ## Reference values

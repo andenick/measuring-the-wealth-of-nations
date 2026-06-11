@@ -1,0 +1,54 @@
+name: replicate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  clean-venv-replication:
+    name: Clean-venv replication + V03 validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip"
+
+      - name: Create clean virtual environment
+        run: |
+          python -m venv .venv
+          . .venv/bin/activate
+          python -m pip install --upgrade pip
+
+      - name: Install dependencies
+        run: |
+          . .venv/bin/activate
+          pip install -r requirements.txt
+
+      - name: Run replicator (full pipeline)
+        run: |
+          . .venv/bin/activate
+          python run.py
+
+      - name: Run V03 validators (must all PASS)
+        run: |
+          . .venv/bin/activate
+          python run.py --validate-only
+
+      - name: Upload validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-report
+          path: |
+            VALIDATION_REPORT.json
+            Build/STEP_LOG.jsonl
+          if-no-files-found: ignore

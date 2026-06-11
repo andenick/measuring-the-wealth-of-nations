@@ -1,7 +1,0 @@
-series_id,year,value,units,stage,provenance,n_sectors,sparsity,max_eigenvalue,condition_number,leontief_max_dev
-S401-A,1947,0.978708,matrix_summary,benchmark_only,BEA Benchmark IO matrices (SIC + NAICS) via io_matrix.a_matrix_summary,84,0.6453,0.978708,inf,4.642814
-S401-A,1958,0.945661,matrix_summary,benchmark_only,BEA Benchmark IO matrices (SIC + NAICS) via io_matrix.a_matrix_summary,84,0.6468,0.945661,inf,0.885334
-S401-A,1963,0.946938,matrix_summary,benchmark_only,BEA Benchmark IO matrices (SIC + NAICS) via io_matrix.a_matrix_summary,84,0.6404,0.946938,inf,1.50585
-S401-A,1967,0.494501,matrix_summary,benchmark_only,BEA Benchmark IO matrices (SIC + NAICS) via io_matrix.a_matrix_summary,84,0.6107,0.494501,inf,1.013374
-S401-A,1972,0.981982,matrix_summary,benchmark_only,BEA Benchmark IO matrices (SIC + NAICS) via io_matrix.a_matrix_summary,84,0.601,0.981982,inf,6.251343
-S401-A,1977,0.981816,matrix_summary,benchmark_only,BEA Benchmark IO matrices (SIC + NAICS) via io_matrix.a_matrix_summary,84,0.5779,0.981816,inf,5.289002

@@ -1780,8 +1780,8 @@
     ],
     "figures": []
   },
-  "ES1001": {
-    "series_id": "ES1001",
+  "XS1001": {
+    "series_id": "XS1001",
     "name": "Labor Share of National Income (Tonak 1984)",
     "chapter": "Study 1",
     "book_table": "Table V",
@@ -1794,7 +1794,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1001-A",
+        "id": "XS1001-A",
         "name": "Tonak (1984) Table V",
         "source": "Tonak 1984 PhD Dissertation",
         "period": [
@@ -1805,7 +1805,7 @@
         "color": "#e377c2"
       },
       {
-        "id": "ES1001-COMBINED",
+        "id": "XS1001-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -1821,15 +1821,15 @@
         "step": 1,
         "op": "load",
         "subseries": [
-          "ES1001-A"
+          "XS1001-A"
         ],
         "desc": "HDARP extraction from Table V"
       }
     ],
     "figures": []
   },
-  "ES1002": {
-    "series_id": "ES1002",
+  "XS1002": {
+    "series_id": "XS1002",
     "name": "Net Tax Rate on Workers (Tonak 1984)",
     "chapter": "Study 1",
     "book_table": "Table X",
@@ -1842,7 +1842,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1002-A",
+        "id": "XS1002-A",
         "name": "Tonak (1984) Table X",
         "source": "Tonak 1984 PhD Dissertation",
         "period": [
@@ -1853,7 +1853,7 @@
         "color": "#e377c2"
       },
       {
-        "id": "ES1002-COMBINED",
+        "id": "XS1002-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -1869,15 +1869,15 @@
         "step": 1,
         "op": "load",
         "subseries": [
-          "ES1002-A"
+          "XS1002-A"
         ],
         "desc": "HDARP extraction from Table X"
       }
     ],
     "figures": []
   },
-  "ES1101": {
-    "series_id": "ES1101",
+  "XS1101": {
+    "series_id": "XS1101",
     "name": "Net Transfer Rate (ST 1987)",
     "chapter": "Study 2",
     "book_table": "Table 1",
@@ -1890,7 +1890,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1101-A",
+        "id": "XS1101-A",
         "name": "Derived from S604/S605/BEA NIPA",
         "source": "Shaikh & Tonak 1987",
         "period": [
@@ -1901,7 +1901,7 @@
         "color": "#7f7f7f"
       },
       {
-        "id": "ES1101-COMBINED",
+        "id": "XS1101-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -1922,13 +1922,13 @@
           "S604",
           "BEA_NIPA"
         ],
-        "output": "ES1101-COMBINED"
+        "output": "XS1101-COMBINED"
       }
     ],
     "figures": []
   },
-  "ES1102": {
-    "series_id": "ES1102",
+  "XS1102": {
+    "series_id": "XS1102",
     "name": "Social Benefit Rate (ST 1987)",
     "chapter": "Study 2",
     "book_table": "Table 1",
@@ -1941,7 +1941,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1102-A",
+        "id": "XS1102-A",
         "name": "Derived from S605/BEA NIPA",
         "source": "Shaikh & Tonak 1987",
         "period": [
@@ -1952,7 +1952,7 @@
         "color": "#7f7f7f"
       },
       {
-        "id": "ES1102-COMBINED",
+        "id": "XS1102-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -1972,13 +1972,13 @@
           "S605",
           "BEA_NIPA"
         ],
-        "output": "ES1102-COMBINED"
+        "output": "XS1102-COMBINED"
       }
     ],
     "figures": []
   },
-  "ES1103": {
-    "series_id": "ES1103",
+  "XS1103": {
+    "series_id": "XS1103",
     "name": "Social Tax Rate (ST 1987)",
     "chapter": "Study 2",
     "book_table": "Table 1",
@@ -1991,7 +1991,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1103-A",
+        "id": "XS1103-A",
         "name": "Derived from S604/BEA NIPA",
         "source": "Shaikh & Tonak 1987",
         "period": [
@@ -2002,7 +2002,7 @@
         "color": "#7f7f7f"
       },
       {
-        "id": "ES1103-COMBINED",
+        "id": "XS1103-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2022,13 +2022,13 @@
           "S604",
           "BEA_NIPA"
         ],
-        "output": "ES1103-COMBINED"
+        "output": "XS1103-COMBINED"
       }
     ],
     "figures": []
   },
-  "ES1201": {
-    "series_id": "ES1201",
+  "XS1201": {
+    "series_id": "XS1201",
     "name": "NSW/GDP (ST 2002)",
     "chapter": "Study 3",
     "book_table": "Table 2",
@@ -2041,7 +2041,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1201-A",
+        "id": "XS1201-A",
         "name": "Derived from S607/BEA GDP",
         "source": "Shaikh & Tonak 2002",
         "period": [
@@ -2052,7 +2052,7 @@
         "color": "#bcbd22"
       },
       {
-        "id": "ES1201-COMBINED",
+        "id": "XS1201-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2072,13 +2072,13 @@
           "S607",
           "BEA_GDP"
         ],
-        "output": "ES1201-COMBINED"
+        "output": "XS1201-COMBINED"
       }
     ],
     "figures": []
   },
-  "ES1202": {
-    "series_id": "ES1202",
+  "XS1202": {
+    "series_id": "XS1202",
     "name": "NSW/EC (ST 2002)",
     "chapter": "Study 3",
     "book_table": "Table 2",
@@ -2091,7 +2091,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1202-A",
+        "id": "XS1202-A",
         "name": "Derived from S607/BEA NIPA compensation",
         "source": "Shaikh & Tonak 2002",
         "period": [
@@ -2102,7 +2102,7 @@
         "color": "#bcbd22"
       },
       {
-        "id": "ES1202-COMBINED",
+        "id": "XS1202-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2122,13 +2122,13 @@
           "S607",
           "BEA_NIPA"
         ],
-        "output": "ES1202-COMBINED"
+        "output": "XS1202-COMBINED"
       }
     ],
     "figures": []
   },
-  "ES1301": {
-    "series_id": "ES1301",
+  "XS1301": {
+    "series_id": "XS1301",
     "name": "NSW/GDP Extended (Moos 2017)",
     "chapter": "Study 4",
     "book_table": "Table 1",
@@ -2141,7 +2141,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1301-A",
+        "id": "XS1301-A",
         "name": "Derived from S607/BEA GDP",
         "source": "Moos 2017",
         "period": [
@@ -2152,7 +2152,7 @@
         "color": "#17becf"
       },
       {
-        "id": "ES1301-COMBINED",
+        "id": "XS1301-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2172,13 +2172,13 @@
           "S607",
           "BEA_GDP"
         ],
-        "output": "ES1301-COMBINED"
+        "output": "XS1301-COMBINED"
       }
     ],
     "figures": []
   },
-  "ES1302": {
-    "series_id": "ES1302",
+  "XS1302": {
+    "series_id": "XS1302",
     "name": "NSW/EC Extended (Moos 2017)",
     "chapter": "Study 4",
     "book_table": "Table 1",
@@ -2191,7 +2191,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1302-A",
+        "id": "XS1302-A",
         "name": "Derived from S607/BEA NIPA compensation",
         "source": "Moos 2017",
         "period": [
@@ -2202,7 +2202,7 @@
         "color": "#17becf"
       },
       {
-        "id": "ES1302-COMBINED",
+        "id": "XS1302-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2222,13 +2222,13 @@
           "S607",
           "BEA_NIPA"
         ],
-        "output": "ES1302-COMBINED"
+        "output": "XS1302-COMBINED"
       }
     ],
     "figures": []
   },
-  "ES1304": {
-    "series_id": "ES1304",
+  "XS1304": {
+    "series_id": "XS1304",
     "name": "Moos vs ST Comparison 1959-1997 (Moos 2017)",
     "chapter": "Study 4",
     "book_table": "Table 3",
@@ -2241,7 +2241,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1304-A",
+        "id": "XS1304-A",
         "name": "NSW/GDP for overlap period",
         "source": "Moos 2017 vs AS2",
         "period": [
@@ -2252,7 +2252,7 @@
         "color": "#17becf"
       },
       {
-        "id": "ES1304-COMBINED",
+        "id": "XS1304-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2268,16 +2268,16 @@
         "step": 1,
         "op": "filter",
         "inputs": [
-          "ES1301"
+          "XS1301"
         ],
         "desc": "Restrict to 1959-1997 overlap",
-        "output": "ES1304-COMBINED"
+        "output": "XS1304-COMBINED"
       }
     ],
     "figures": []
   },
-  "ES1305": {
-    "series_id": "ES1305",
+  "XS1305": {
+    "series_id": "XS1305",
     "name": "Post-2000 Structural Shift Indicator (Moos 2017)",
     "chapter": "Study 4",
     "book_table": "Table 4",
@@ -2290,7 +2290,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1305-A",
+        "id": "XS1305-A",
         "name": "NSW/GDP with post-2000 regime indicator",
         "source": "Moos 2017",
         "period": [
@@ -2301,7 +2301,7 @@
         "color": "#17becf"
       },
       {
-        "id": "ES1305-COMBINED",
+        "id": "XS1305-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2317,16 +2317,16 @@
         "step": 1,
         "op": "derive",
         "inputs": [
-          "ES1301"
+          "XS1301"
         ],
         "desc": "Add post-2000 regime dummy",
-        "output": "ES1305-COMBINED"
+        "output": "XS1305-COMBINED"
       }
     ],
     "figures": []
   },
-  "ES1401": {
-    "series_id": "ES1401",
+  "XS1401": {
+    "series_id": "XS1401",
     "name": "Exploitation Rate â€” Mohun Classification (Mohun 2005)",
     "chapter": "Study 5",
     "book_table": "Table 2",
@@ -2339,7 +2339,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1401-A",
+        "id": "XS1401-A",
         "name": "Mohun (2005) Table 2",
         "source": "Mohun 2005 CJE",
         "period": [
@@ -2350,7 +2350,7 @@
         "color": "#ff9896"
       },
       {
-        "id": "ES1401-COMBINED",
+        "id": "XS1401-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2366,15 +2366,15 @@
         "step": 1,
         "op": "load",
         "subseries": [
-          "ES1401-A"
+          "XS1401-A"
         ],
         "source": "L15 parsed CSV"
       }
     ],
     "figures": []
   },
-  "ES1402": {
-    "series_id": "ES1402",
+  "XS1402": {
+    "series_id": "XS1402",
     "name": "Productive Labor Share â€” Mohun Classification (Mohun 2005)",
     "chapter": "Study 5",
     "book_table": "Table 2",
@@ -2387,7 +2387,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1402-A",
+        "id": "XS1402-A",
         "name": "Mohun (2005) Table 2",
         "source": "Mohun 2005 CJE",
         "period": [
@@ -2398,7 +2398,7 @@
         "color": "#ff9896"
       },
       {
-        "id": "ES1402-COMBINED",
+        "id": "XS1402-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2414,15 +2414,15 @@
         "step": 1,
         "op": "load",
         "subseries": [
-          "ES1402-A"
+          "XS1402-A"
         ],
         "source": "L15 parsed CSV"
       }
     ],
     "figures": []
   },
-  "ES1403": {
-    "series_id": "ES1403",
+  "XS1403": {
+    "series_id": "XS1403",
     "name": "Variable Capital â€” Mohun Classification (Mohun 2005)",
     "chapter": "Study 5",
     "book_table": "Table 2",
@@ -2435,7 +2435,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1403-A",
+        "id": "XS1403-A",
         "name": "Mohun (2005) Table 2",
         "source": "Mohun 2005 CJE",
         "period": [
@@ -2446,7 +2446,7 @@
         "color": "#ff9896"
       },
       {
-        "id": "ES1403-COMBINED",
+        "id": "XS1403-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2462,15 +2462,15 @@
         "step": 1,
         "op": "load",
         "subseries": [
-          "ES1403-A"
+          "XS1403-A"
         ],
         "source": "L15 parsed CSV"
       }
     ],
     "figures": []
   },
-  "ES1404": {
-    "series_id": "ES1404",
+  "XS1404": {
+    "series_id": "XS1404",
     "name": "ST/Mohun Exploitation Rate Ratio (Mohun 2005)",
     "chapter": "Study 5",
     "book_table": null,
@@ -2483,8 +2483,8 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1404-A",
-        "name": "Derived S506/ES1401 ratio",
+        "id": "XS1404-A",
+        "name": "Derived S506/XS1401 ratio",
         "source": "AS2 cross-validation",
         "period": [
           1964,
@@ -2494,7 +2494,7 @@
         "color": "#ff9896"
       },
       {
-        "id": "ES1404-COMBINED",
+        "id": "XS1404-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2509,18 +2509,18 @@
       {
         "step": 1,
         "op": "derive",
-        "formula": "S506 / ES1401",
+        "formula": "S506 / XS1401",
         "inputs": [
           "S506",
-          "ES1401"
+          "XS1401"
         ],
-        "output": "ES1404-COMBINED"
+        "output": "XS1404-COMBINED"
       }
     ],
     "figures": []
   },
-  "ES1501": {
-    "series_id": "ES1501",
+  "XS1501": {
+    "series_id": "XS1501",
     "name": "Working Class Unproductive Labor (Mohun 2013)",
     "chapter": "Study 6",
     "book_table": "Table 1",
@@ -2533,7 +2533,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1501-A",
+        "id": "XS1501-A",
         "name": "Mohun (2013) â€” 81.3% of Lu",
         "source": "Mohun 2013 RRPE",
         "period": [
@@ -2544,7 +2544,7 @@
         "color": "#c5b0d5"
       },
       {
-        "id": "ES1501-COMBINED",
+        "id": "XS1501-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2563,13 +2563,13 @@
         "inputs": [
           "Mohun Lu"
         ],
-        "output": "ES1501-COMBINED"
+        "output": "XS1501-COMBINED"
       }
     ],
     "figures": []
   },
-  "ES1502": {
-    "series_id": "ES1502",
+  "XS1502": {
+    "series_id": "XS1502",
     "name": "Managerial Unproductive Labor (Mohun 2013)",
     "chapter": "Study 6",
     "book_table": "Table 1",
@@ -2582,7 +2582,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1502-A",
+        "id": "XS1502-A",
         "name": "Mohun (2013) â€” 18.7% of Lu",
         "source": "Mohun 2013 RRPE",
         "period": [
@@ -2593,7 +2593,7 @@
         "color": "#c5b0d5"
       },
       {
-        "id": "ES1502-COMBINED",
+        "id": "XS1502-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2612,13 +2612,13 @@
         "inputs": [
           "Mohun Lu"
         ],
-        "output": "ES1502-COMBINED"
+        "output": "XS1502-COMBINED"
       }
     ],
     "figures": []
   },
-  "ES1503": {
-    "series_id": "ES1503",
+  "XS1503": {
+    "series_id": "XS1503",
     "name": "Total Unproductive Labor â€” Mohun (Mohun 2013)",
     "chapter": "Study 6",
     "book_table": "Table 1",
@@ -2631,7 +2631,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1503-A",
+        "id": "XS1503-A",
         "name": "Mohun (2013) total Lu",
         "source": "Mohun 2013 RRPE",
         "period": [
@@ -2642,7 +2642,7 @@
         "color": "#c5b0d5"
       },
       {
-        "id": "ES1503-COMBINED",
+        "id": "XS1503-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2658,15 +2658,15 @@
         "step": 1,
         "op": "load",
         "subseries": [
-          "ES1503-A"
+          "XS1503-A"
         ],
         "source": "Mohun employment CSV"
       }
     ],
     "figures": []
   },
-  "ES1504": {
-    "series_id": "ES1504",
+  "XS1504": {
+    "series_id": "XS1504",
     "name": "Unproductive Burden Ratio Lu/Lp (Mohun 2013)",
     "chapter": "Study 6",
     "book_table": "Table 1",
@@ -2679,7 +2679,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1504-A",
+        "id": "XS1504-A",
         "name": "Derived Lu/Lp from Mohun data",
         "source": "Mohun 2013 RRPE",
         "period": [
@@ -2690,7 +2690,7 @@
         "color": "#c5b0d5"
       },
       {
-        "id": "ES1504-COMBINED",
+        "id": "XS1504-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2710,13 +2710,13 @@
           "Mohun Lu",
           "Mohun Lp"
         ],
-        "output": "ES1504-COMBINED"
+        "output": "XS1504-COMBINED"
       }
     ],
     "figures": []
   },
-  "ES1601": {
-    "series_id": "ES1601",
+  "XS1601": {
+    "series_id": "XS1601",
     "name": "Turkey Labor Share (Karabacak & Tonak 2022)",
     "chapter": "Study 7",
     "book_table": "Table 2",
@@ -2729,7 +2729,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1601-A",
+        "id": "XS1601-A",
         "name": "TurkStat Table 20.37",
         "source": "Karabacak & Tonak 2022 RRPE",
         "period": [
@@ -2740,7 +2740,7 @@
         "color": "#aec7e8"
       },
       {
-        "id": "ES1601-COMBINED",
+        "id": "XS1601-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2756,15 +2756,15 @@
         "step": 1,
         "op": "load",
         "subseries": [
-          "ES1601-A"
+          "XS1601-A"
         ],
         "desc": "TurkStat HDARP extraction"
       }
     ],
     "figures": []
   },
-  "ES1602": {
-    "series_id": "ES1602",
+  "XS1602": {
+    "series_id": "XS1602",
     "name": "Turkey NSW/GDP (Karabacak & Tonak 2022)",
     "chapter": "Study 7",
     "book_table": "Table 3",
@@ -2777,7 +2777,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1602-A",
+        "id": "XS1602-A",
         "name": "SBB/MoF fiscal data",
         "source": "Karabacak & Tonak 2022 RRPE",
         "period": [
@@ -2788,7 +2788,7 @@
         "color": "#aec7e8"
       },
       {
-        "id": "ES1602-COMBINED",
+        "id": "XS1602-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2804,15 +2804,15 @@
         "step": 1,
         "op": "load",
         "subseries": [
-          "ES1602-A"
+          "XS1602-A"
         ],
         "desc": "SBB/MoF fiscal data + World Bank"
       }
     ],
     "figures": []
   },
-  "ES1701": {
-    "series_id": "ES1701",
+  "XS1701": {
+    "series_id": "XS1701",
     "name": "NZ Surplus Share of Total Value (Cronin 2001)",
     "chapter": "Study 8",
     "book_table": "Table 2",
@@ -2825,7 +2825,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1701-A",
+        "id": "XS1701-A",
         "name": "Cronin (2001) Table 2 s/TV",
         "source": "Cronin 2001 RPE Table 2",
         "period": [
@@ -2836,7 +2836,7 @@
         "color": "#98df8a"
       },
       {
-        "id": "ES1701-COMBINED",
+        "id": "XS1701-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2852,15 +2852,15 @@
         "step": 1,
         "op": "load",
         "subseries": [
-          "ES1701-A"
+          "XS1701-A"
         ],
         "desc": "Direct from Cronin Table 2 s/TV column"
       }
     ],
     "figures": []
   },
-  "ES1702": {
-    "series_id": "ES1702",
+  "XS1702": {
+    "series_id": "XS1702",
     "name": "NZ Rate of Surplus Value (Cronin 2001)",
     "chapter": "Study 8",
     "book_table": "Table 2",
@@ -2873,7 +2873,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1702-A",
+        "id": "XS1702-A",
         "name": "Cronin (2001) Table 2 s/v",
         "source": "Cronin 2001 RPE Table 2",
         "period": [
@@ -2884,7 +2884,7 @@
         "color": "#98df8a"
       },
       {
-        "id": "ES1702-COMBINED",
+        "id": "XS1702-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2900,15 +2900,15 @@
         "step": 1,
         "op": "load",
         "subseries": [
-          "ES1702-A"
+          "XS1702-A"
         ],
         "desc": "Direct from Cronin Table 2 s/v column"
       }
     ],
     "figures": []
   },
-  "ES1703": {
-    "series_id": "ES1703",
+  "XS1703": {
+    "series_id": "XS1703",
     "name": "NZ Value Composition of Capital (Cronin 2001)",
     "chapter": "Study 8",
     "book_table": "Table 2",
@@ -2921,7 +2921,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1703-A",
+        "id": "XS1703-A",
         "name": "Cronin (2001) Table 2 c/v",
         "source": "Cronin 2001 RPE Table 2",
         "period": [
@@ -2932,7 +2932,7 @@
         "color": "#98df8a"
       },
       {
-        "id": "ES1703-COMBINED",
+        "id": "XS1703-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2948,15 +2948,15 @@
         "step": 1,
         "op": "load",
         "subseries": [
-          "ES1703-A"
+          "XS1703-A"
         ],
         "desc": "Direct from Cronin Table 2 c/v column"
       }
     ],
     "figures": []
   },
-  "ES1704": {
-    "series_id": "ES1704",
+  "XS1704": {
+    "series_id": "XS1704",
     "name": "NZ Total Value (Cronin 2001)",
     "chapter": "Study 8",
     "book_table": "Table 1",
@@ -2969,7 +2969,7 @@
     "content_type": "time_series",
     "subseries": [
       {
-        "id": "ES1704-A",
+        "id": "XS1704-A",
         "name": "Cronin (2001) Table 1 Total Value",
         "source": "Cronin 2001 RPE Table 1",
         "period": [
@@ -2980,7 +2980,7 @@
         "color": "#98df8a"
       },
       {
-        "id": "ES1704-COMBINED",
+        "id": "XS1704-COMBINED",
         "name": "Full series",
         "source": "",
         "period": [
@@ -2996,15 +2996,15 @@
         "step": 1,
         "op": "load",
         "subseries": [
-          "ES1704-A"
+          "XS1704-A"
         ],
         "desc": "Direct from Cronin Table 1 total_value column"
       }
     ],
     "figures": []
   },
-  "AS001": {
-    "series_id": "AS001",
+  "XS001": {
+    "series_id": "XS001",
     "name": "Social Burden Rate",
     "chapter": "",
     "book_table": "",
@@ -3019,8 +3019,8 @@
     "construction": [],
     "figures": []
   },
-  "AS002": {
-    "series_id": "AS002",
+  "XS002": {
+    "series_id": "XS002",
     "name": "Khanjian Cross-Validation",
     "chapter": "",
     "book_table": "",
@@ -3035,8 +3035,8 @@
     "construction": [],
     "figures": []
   },
-  "AS003": {
-    "series_id": "AS003",
+  "XS003": {
+    "series_id": "XS003",
     "name": "Unproductive Exploitation Rate",
     "chapter": "",
     "book_table": "",
@@ -3051,8 +3051,8 @@
     "construction": [],
     "figures": []
   },
-  "AS004": {
-    "series_id": "AS004",
+  "XS004": {
+    "series_id": "XS004",
     "name": "Marxian Productivity",
     "chapter": "",
     "book_table": "",

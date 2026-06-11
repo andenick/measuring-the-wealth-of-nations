@@ -158,7 +158,7 @@ inclusion. They might, but the evidence is absent rather than supportive.
 methodology variant with traceable provenance and a clear follow-up pathway. Defer
 Variant B coordinated adoption to a future cohort.**
 
-**ACTED-ON 2026-05-24: declined per recommendation; backlog entry written** (see `Technical/Handoffs/BACKLOG.md` → "S503 Variant B-prime adoption (NAICS 51 only, Mohun-aligned)"). VPR top-of-file closure stamp added; V1.2_OUTSTANDING_STEPS_PLAN.md Track A.2 closure stamp added. No code changes.
+**Decision 2026-05-24: declined per recommendation.** The S503 extension retains its primary methodology; the Variant B-prime (NAICS 51 only, Mohun-aligned) is recorded here for transparency but not adopted. No code changes.
 
 Confidence: **Medium-high**. The decision could legitimately go either way given
 Mohun 2013's NAICS 51 endorsement, but the implementation cost, qualitative narrative

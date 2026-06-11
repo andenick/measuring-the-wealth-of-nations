@@ -25,7 +25,7 @@ Line 1 is TOTAL private nonresidential fixed assets — includes both productive
 
 ## Unblocks
 
-S510 (K/V*), S513 (r*), S514 (r*_adj), and the activation of AS001 (Social Burden Rate).
+S510 (K/V*), S513 (r*), S514 (r*_adj), and the activation of XS001 (Social Burden Rate).
 
 ---
 

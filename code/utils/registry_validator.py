@@ -101,7 +101,7 @@ def get_derived_statistics(sid: str) -> dict:
     `get_reference_values()` for year-anchor checks.
 
     Args:
-        sid: Canonical series ID (e.g., "ES1601").
+        sid: Canonical series ID (e.g., "XS1601").
 
     Returns:
         dict mapping statistic name to value. Returns an empty dict (not an

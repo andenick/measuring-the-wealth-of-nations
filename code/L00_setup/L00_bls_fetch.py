@@ -70,14 +70,15 @@ except ImportError:
 # -----------------------------------------------------------------------------
 # Paths
 # -----------------------------------------------------------------------------
-PROJECT_ROOT = Path("D:/Arcanum/Projects/RMWND")
-OUTPUT_DIR = PROJECT_ROOT / "Inputs" / "ST2" / "Inputs" / "API_Data" / "BLS"
+PROJECT_ROOT = Path(__file__).resolve().parents[2]  # bundle root
+OUTPUT_DIR = PROJECT_ROOT / "data" / "raw" / "BLS"
 
-# Env file candidates (searched in order)
+# BLS API key: set the BLS_API_KEY environment variable, or place a
+# `api_keys.env` file (KEY=VALUE lines) at the bundle root or in
+# `data/user-inputs/`. Registration: https://data.bls.gov/registrationEngine/
 ENV_CANDIDATES: List[Path] = [
-    Path("D:/Arcanum/Council/Robin/API_MODULES/SOCIAL_SCIENCE/api_keys.env"),
-    PROJECT_ROOT / "Inputs/ST2/Technical/AnuData/data/user-inputs/api_keys.env",
-    Path("D:/Arcanum/Projects/RSCD/Technical/config/api_keys.env"),
+    PROJECT_ROOT / "api_keys.env",
+    PROJECT_ROOT / "data" / "user-inputs" / "api_keys.env",
 ]
 
 BLS_API_BASE = "https://api.bls.gov/publicAPI/v2/timeseries/data/"

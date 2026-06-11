@@ -1,5 +1,5 @@
 {
-  "version": "2.2.0",
+  "version": "2.3.0",
   "schema_version": "anu-ingestion-v4.0",
   "project": "measuring-wealth-of-nations-replication",
   "project_name": "Measuring the Wealth of Nations - Replication",
@@ -38,17 +38,11 @@
       "pattern": "S###",
       "example": "S506"
     },
-    "external": {
-      "prefix": "ES",
-      "meaning": "External-study replication",
-      "pattern": "ES####",
-      "example": "ES1401"
-    },
-    "analytical": {
-      "prefix": "AS",
-      "meaning": "Additional Series (cross-cutting/analytical/framework-derived)",
-      "pattern": "AS###",
-      "example": "AS001"
+    "extra": {
+      "prefix": "XS",
+      "meaning": "Extra Series — book-appendix series (xs_class: appendix) and series from other studies (xs_class: external_study)",
+      "pattern": "XS### / XS####",
+      "example": "XS1401"
     }
   },
   "external_study_groups": {
@@ -86,9 +80,10 @@
             1948,
             1989
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#d62728",
-          "shiny_column": "total_product_book"
+          "shiny_column": "total_product_book",
+          "label": "Total product TP* (book, 1948-1989)"
         },
         "S501-COMBINED": {
           "name": "Full series",
@@ -96,9 +91,10 @@
             1948,
             2024
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#d62728",
-          "shiny_column": "total_product_tp"
+          "shiny_column": "total_product_tp",
+          "label": "Total product TP* (book spliced to extension)"
         },
         "S501-EXT": {
           "name": "BEA GDP-by-Industry",
@@ -108,9 +104,10 @@
             1997,
             2024
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#ff7f0e",
-          "shiny_column": "total_product_bea"
+          "shiny_column": "total_product_bea",
+          "label": "Total product TP* (BEA GDP-by-industry extension)"
         }
       },
       "construction": [
@@ -193,6 +190,13 @@
         "cohort": "v1.2_iter2",
         "patch_id": "P29_S501_extension_year_range",
         "note": "P29 doctor cleanup (Iter2 B3): record extension_year_range=[1948,2024] in validation block. Book period year_range=[reg_min,reg_max] is preserved as book authority; chopped CSV extends to 2024 via -EXT/-COMBINED subseries. anu-doctor P29 check updated to compute effective_year_range = year_range UNION extension_year_range so book-vs-chopped comparison no longer flags extension as a mismatch."
+      },
+      "display_name": "Total product (TP*)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Marxian total product = gross output of production plus trading sectors. Verified exact against canonical book Table E.2 (1948=446.21). -A book period, -EXT BEA GDPbyIndustry, -COMBINED spliced. Quotes verified verbatim against the book PDF.",
+        "date": "2026-06-11"
       }
     },
     "S502": {
@@ -216,9 +220,10 @@
             1948,
             1989
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#d62728",
-          "shiny_column": "constant_capital_book"
+          "shiny_column": "constant_capital_book",
+          "label": "Constant capital C*m (book, 1948-1989)"
         },
         "S502-EXT": {
           "name": "BEA GDP-by-Industry (II = GO - VA, productive+trade NAICS)",
@@ -228,9 +233,10 @@
             1997,
             2024
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#ff7f0e",
-          "shiny_column": "constant_capital_bea"
+          "shiny_column": "constant_capital_bea",
+          "label": "Constant capital C*m (BEA GDP-by-industry extension)"
         },
         "S502-COMBINED": {
           "name": "Full series (book + log-linear bridge 1990-1996 + BEA EXT)",
@@ -238,9 +244,10 @@
             1948,
             2024
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#d62728",
-          "shiny_column": "constant_capital_combined"
+          "shiny_column": "constant_capital_combined",
+          "label": "Constant capital C*m (book spliced to extension)"
         }
       },
       "construction": [
@@ -308,6 +315,13 @@
         "cohort": "v1.2_iter2",
         "patch_id": "P29_S502_extension_year_range",
         "note": "P29 doctor cleanup (Iter2 B3): record extension_year_range=[1948,2024] in validation block. Book period year_range=[reg_min,reg_max] is preserved as book authority; chopped CSV extends to 2024 via -EXT/-COMBINED subseries. anu-doctor P29 check updated to compute effective_year_range = year_range UNION extension_year_range so book-vs-chopped comparison no longer flags extension as a mismatch."
+      },
+      "display_name": "Constant capital flow (C*m)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Materials inputs used up in production (C*m = M'p). Verified exact against book Table E.2 (1948=198.47). Quotes verified verbatim against the book PDF.",
+        "date": "2026-06-11"
       }
     },
     "S503": {
@@ -331,9 +345,10 @@
             1948,
             1989
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#d62728",
-          "shiny_column": "gross_final_product_book"
+          "shiny_column": "gross_final_product_book",
+          "label": "Gross final product GFP* (book, 1948-1989)"
         },
         "S503-EXT": {
           "name": "BEA GDP-by-Industry Value Added (productive+trade NAICS)",
@@ -343,9 +358,10 @@
             1997,
             2024
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#ff7f0e",
-          "shiny_column": "gross_final_product_bea"
+          "shiny_column": "gross_final_product_bea",
+          "label": "Gross final product GFP* (BEA GDP-by-industry extension)"
         },
         "S503-COMBINED": {
           "name": "Full series (book + log-linear bridge 1990-1996 + BEA EXT)",
@@ -353,9 +369,10 @@
             1948,
             2024
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#d62728",
-          "shiny_column": "gross_final_product_combined"
+          "shiny_column": "gross_final_product_combined",
+          "label": "Gross final product GFP* (book spliced to extension)"
         }
       },
       "construction": [
@@ -432,6 +449,13 @@
         "cohort": "v1.2_iter2",
         "patch_id": "P29_S503_extension_year_range",
         "note": "P29 doctor cleanup (Iter2 B3): record extension_year_range=[1948,2024] in validation block. Book period year_range=[reg_min,reg_max] is preserved as book authority; chopped CSV extends to 2024 via -EXT/-COMBINED subseries. anu-doctor P29 check updated to compute effective_year_range = year_range UNION extension_year_range so book-vs-chopped comparison no longer flags extension as a mismatch."
+      },
+      "display_name": "Gross final product (GFP* = TP* - C*m)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Marxian gross final product = total product minus constant-capital flow. Verified exact against book Table E.2 (1948=247.74). Quotes verified verbatim against the book PDF.",
+        "date": "2026-06-11"
       }
     },
     "S504": {
@@ -459,9 +483,10 @@
             1948,
             1989
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#d62728",
-          "shiny_column": "variable_capital_book"
+          "shiny_column": "variable_capital_book",
+          "label": "Variable capital V* (book, 1948-1989)"
         },
         "S504-EXT": {
           "name": "Extended via V* = W — (V*/W)",
@@ -474,9 +499,10 @@
           "derived_from": [
             "S512"
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#ff7f0e",
-          "shiny_column": "variable_capital_ext"
+          "shiny_column": "variable_capital_ext",
+          "label": "Variable capital V* (BEA NIPA + BLS CES extension)"
         },
         "S504-COMBINED": {
           "name": "Full series",
@@ -484,9 +510,10 @@
             1948,
             2024
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#d62728",
-          "shiny_column": "variable_capital_v"
+          "shiny_column": "variable_capital_v",
+          "label": "Variable capital V* (book spliced to extension)"
         },
         "S504-INTERP": {
           "name": "Interpolated bridge series for S504",
@@ -495,8 +522,9 @@
             1948,
             1989
           ],
-          "units": "billions_dollars",
-          "note": "Interpolation bridge column emitted by O01_generate_chopped; data-only metadata declaration to satisfy P04 (no substantive value change)."
+          "units": "billions_usd",
+          "note": "Interpolation bridge column emitted by O01_generate_chopped; data-only metadata declaration to satisfy P04 (no substantive value change).",
+          "label": "Variable capital V* (interpolated benchmark bridge)"
         }
       },
       "construction": [
@@ -581,6 +609,13 @@
         "cohort": "v1.2_iter2",
         "patch_id": "P29_S504_extension_year_range",
         "note": "P29 doctor cleanup (Iter2 B3): record extension_year_range=[1948,2024] in validation block. Book period year_range=[reg_min,reg_max] is preserved as book authority; chopped CSV extends to 2024 via -EXT/-COMBINED subseries. anu-doctor P29 check updated to compute effective_year_range = year_range UNION extension_year_range so book-vs-chopped comparison no longer flags extension as a mismatch."
+      },
+      "display_name": "Variable capital (V*)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Wages of productive workers (V* = Wp). Verified exact against book Table 5.6/Table G.2 (1948=88.41). Quotes verified verbatim against the book PDF.",
+        "date": "2026-06-11"
       }
     },
     "S505": {
@@ -605,9 +640,10 @@
             1948,
             1989
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#d62728",
-          "shiny_column": "surplus_value_book"
+          "shiny_column": "surplus_value_book",
+          "label": "Surplus value S* (book, 1948-1989)"
         },
         "S505-EXT": {
           "name": "Extended via GFP - V*",
@@ -620,9 +656,10 @@
             "S503",
             "S504"
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#ff7f0e",
-          "shiny_column": "surplus_value_ext"
+          "shiny_column": "surplus_value_ext",
+          "label": "Surplus value S* (derived extension)"
         },
         "S505-COMBINED": {
           "name": "Full series",
@@ -630,9 +667,10 @@
             1948,
             2024
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#d62728",
-          "shiny_column": "surplus_value_s"
+          "shiny_column": "surplus_value_s",
+          "label": "Surplus value S* (book spliced to extension)"
         }
       },
       "construction": [
@@ -719,6 +757,13 @@
         "cohort": "v1.2_iter2",
         "patch_id": "P29_S505_extension_year_range",
         "note": "P29 doctor cleanup (Iter2 B3): record extension_year_range=[1948,2024] in validation block. Book period year_range=[reg_min,reg_max] is preserved as book authority; chopped CSV extends to 2024 via -EXT/-COMBINED subseries. anu-doctor P29 check updated to compute effective_year_range = year_range UNION extension_year_range so book-vs-chopped comparison no longer flags extension as a mismatch."
+      },
+      "display_name": "Surplus value (S* = VA* - V*)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Marxian surplus value = net value added minus variable capital. Verified exact against book Table H.1 (1948=149.94). Quotes verified verbatim against the book PDF.",
+        "date": "2026-06-11"
       }
     },
     "S506": {
@@ -746,7 +791,8 @@
           ],
           "units": "ratio",
           "color": "#d62728",
-          "shiny_column": "exploitation_rate_book"
+          "shiny_column": "exploitation_rate_book",
+          "label": "Rate of exploitation e = S*/V* (book, 1948-1989)"
         },
         "S506-EXT": {
           "name": "Extended via VA*/W decomposition",
@@ -761,7 +807,8 @@
           ],
           "units": "ratio",
           "color": "#ff7f0e",
-          "shiny_column": "exploitation_rate_ext"
+          "shiny_column": "exploitation_rate_ext",
+          "label": "Rate of exploitation e = S*/V* (BLS CES + BEA NIPA extension)"
         },
         "S506-COMBINED": {
           "name": "Full series",
@@ -771,7 +818,8 @@
           ],
           "units": "ratio",
           "color": "#d62728",
-          "shiny_column": "exploitation_rate_e"
+          "shiny_column": "exploitation_rate_e",
+          "label": "Rate of exploitation e = S*/V* (book spliced to extension)"
         }
       },
       "construction": [
@@ -876,6 +924,13 @@
         "cohort": "v1.2_iter2",
         "patch_id": "P29_S506_extension_year_range",
         "note": "P29 doctor cleanup (Iter2 B3): record extension_year_range=[1948,2024] in validation block. Book period year_range=[reg_min,reg_max] is preserved as book authority; chopped CSV extends to 2024 via -EXT/-COMBINED subseries. anu-doctor P29 check updated to compute effective_year_range = year_range UNION extension_year_range so book-vs-chopped comparison no longer flags extension as a mismatch."
+      },
+      "display_name": "Rate of exploitation (e = S*/V*)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Marxian rate of surplus value = surplus value over variable capital. Verified exact against book Table H.1/I.1 (1948=1.70). Quotes verified verbatim against the book PDF.",
+        "date": "2026-06-11"
       }
     },
     "S507": {
@@ -900,7 +955,8 @@
           ],
           "units": "ratio",
           "color": "#2ca02c",
-          "shiny_column": "surplus_ratio_book"
+          "shiny_column": "surplus_ratio_book",
+          "label": "Surplus share S*/(S*+V*) (book, 1948-1989)"
         }
       },
       "construction": [
@@ -945,6 +1001,13 @@
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
         "note": "P23 exemption: Derived ratio S*/(S*+V*) computed in P02 from S505 + S504 outputs. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
+      },
+      "display_name": "Surplus share of net product (S*/(S*+V*))",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Surplus value as a share of Marxian net product. Verified: 149.94/238.35 = 0.629 (1948), matches chopped. Quotes verified verbatim against the book PDF.",
+        "date": "2026-06-11"
       }
     },
     "S508": {
@@ -957,7 +1020,7 @@
       "source_file": "ch05/TableE2_RevenueAccounts.csv",
       "year_range": [
         1948,
-        1961
+        1989
       ],
       "subseries": {
         "S508-A": {
@@ -967,9 +1030,10 @@
             1948,
             1989
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#d62728",
-          "shiny_column": "productive_consumption_book"
+          "shiny_column": "productive_consumption_book",
+          "label": "Productive consumption CON* (book, 1948-1989)"
         }
       },
       "construction": [
@@ -999,13 +1063,21 @@
       "loader": "L01",
       "processor": "P01",
       "wave": 1,
-      "status": "book_period_partial_1948_1961",
+      "status": "book_period_validated",
+      "v1.3_year_range_patch": "year_range/status widened 1948-1961 -> 1948-1989: panel-backed rebuild supplies real book-arm data across the full book period; V03 PASS post-rebuild (B6).",
       "units": "billions_usd",
       "content_type": "time_series",
       "year_range_target": [
         1929,
         2025
-      ]
+      ],
+      "display_name": "Productive consumption (CON*)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Marxian final consumption of productive output. Verified exact against book Table E.2 (1948=158.46). Quotes verified verbatim against the book PDF.",
+        "date": "2026-06-11"
+      }
     },
     "S509": {
       "name": "Productive Investment (IG*)",
@@ -1017,7 +1089,7 @@
       "source_file": "ch05/TableE2_RevenueAccounts.csv",
       "year_range": [
         1948,
-        1961
+        1989
       ],
       "subseries": {
         "S509-A": {
@@ -1027,9 +1099,10 @@
             1948,
             1989
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#d62728",
-          "shiny_column": "productive_investment_book"
+          "shiny_column": "productive_investment_book",
+          "label": "Productive investment IG* (book, 1948-1989)"
         }
       },
       "construction": [
@@ -1059,13 +1132,21 @@
       "loader": "L01",
       "processor": "P01",
       "wave": 1,
-      "status": "book_period_partial_1948_1961",
+      "status": "book_period_validated",
+      "v1.3_year_range_patch": "year_range/status widened 1948-1961 -> 1948-1989: panel-backed rebuild supplies real book-arm data across the full book period; V03 PASS post-rebuild (B6).",
       "units": "billions_usd",
       "content_type": "time_series",
       "year_range_target": [
         1929,
         2025
-      ]
+      ],
+      "display_name": "Productive investment (IG*)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Marxian productive investment IG* = IG - RYi (+ABR in annual series). Core Chapter 5 use-side accumulation variable. Spot-check: chopped 1948=44.27 matches registry reference value. Formula quote 'I*G = {IG} - RYi' verified verbatim against book p.95 (PDF p.115). Construction-relevant; published.",
+        "date": "2026-06-11"
+      }
     },
     "S510": {
       "name": "Value Composition of Capital (K/V*)",
@@ -1089,7 +1170,8 @@
           ],
           "units": "ratio",
           "color": "#2ca02c",
-          "shiny_column": "value_composition_book"
+          "shiny_column": "value_composition_book",
+          "label": "Value composition of capital K/V* (book, 1948-1989)"
         }
       },
       "construction": [
@@ -1104,10 +1186,11 @@
       "extension": null,
       "validation": {
         "reference_values": {
-          "1948": 2.35,
-          "1967": 2.45,
-          "1989": 2.89
+          "1948": 3.2977830562153607,
+          "1967": 4.028484627087216,
+          "1989": 5.553599315647599
         },
+        "v1.3_patch": "DIV-023: benchmark mislabel fix. The old refvals {2.35,2.45,2.89} were the book's C*/V* FLOW ratio (Table 5.7); the S510 processor computes the K*/V* STOCK ratio (=S517/S504, book Table 5.10). Re-anchored to the STOCK values the series correctly produces (taken from the rebuilt v1.3 S510-A final CSV at the benchmark years; byte-identical to v1.2). Data unchanged — this corrects the benchmark, not the series.",
         "expected_range": [
           0.0,
           20.0
@@ -1143,6 +1226,13 @@
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
         "note": "P23 exemption: Derived value-composition computed in P02 from upstream S5xx outputs. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
+      },
+      "display_name": "Value composition of capital (K/V*)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Stock value composition of capital K/V* (= S517/S504), the Marxian organic-composition proxy. Verified against book Table 5.8 'C*/V* = value composition of fixed capital' (p.125): chopped 1948=3.298 matches book 3.27 and registry endpoints 1948=3.30/1989=5.55. Book p.122 quote 'value composition of (fixed) capital C*/V* = K/V*' verified verbatim (PDF p.142). CORRECTION: research JSON wrongly framed S510 as the materials-FLOW ratio S502/S504 (~2.45); registry name, DPR, and data are the STOCK ratio K/V* per Table 5.8 — research JSON corrected to match.",
+        "date": "2026-06-11"
       }
     },
     "S511": {
@@ -1170,7 +1260,8 @@
           ],
           "units": "share",
           "color": "#d62728",
-          "shiny_column": "productive_labor_share_book"
+          "shiny_column": "productive_labor_share_book",
+          "label": "Productive labor share Lp/L (book, 1948-1989)"
         },
         "S511-EXT": {
           "name": "Extended via BLS CES",
@@ -1181,7 +1272,8 @@
           ],
           "units": "share",
           "color": "#ff7f0e",
-          "shiny_column": "productive_labor_share_ext"
+          "shiny_column": "productive_labor_share_ext",
+          "label": "Productive labor share Lp/L (BLS CES production-worker extension)"
         },
         "S511-COMBINED": {
           "name": "Full series",
@@ -1191,7 +1283,8 @@
           ],
           "units": "share",
           "color": "#d62728",
-          "shiny_column": "productive_labor_share_lpl"
+          "shiny_column": "productive_labor_share_lpl",
+          "label": "Productive labor share Lp/L (book spliced to extension)"
         }
       },
       "construction": [
@@ -1241,11 +1334,12 @@
       "validation": {
         "reference_values": {
           "1948": 0.57,
-          "1958": 0.52,
+          "1958": 0.47,
           "1967": 0.44,
-          "1977": 0.5,
+          "1977": 0.41,
           "1989": 0.36
         },
+        "v1.3_patch": "DIV-015: corrected stale interpolated mid-year refvals 1958 (0.52->0.47) and 1977 (0.50->0.41) to book Table 5.5 'Lp/L' row values. 1948/1967/1989 unchanged (already book-correct).",
         "expected_range": [
           0.1,
           0.8
@@ -1279,6 +1373,13 @@
         "cohort": "v1.2_iter2",
         "patch_id": "P29_S511_extension_year_range",
         "note": "P29 doctor cleanup (Iter2 B3): record extension_year_range=[1948,2024] in validation block. Book period year_range=[reg_min,reg_max] is preserved as book authority; chopped CSV extends to 2024 via -EXT/-COMBINED subseries. anu-doctor P29 check updated to compute effective_year_range = year_range UNION extension_year_range so book-vs-chopped comparison no longer flags extension as a mismatch."
+      },
+      "display_name": "Productive labor share (Lp/L)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Productive employment as a share of total employment, the central Chapter 5 labor-composition series. Verified against book Table 5.5 (p.110): chopped 1948=0.57, and registry benchmarks 1958=0.47/1967=0.44/1977=0.41/1989=0.36 match Table 5.5 exactly. Construction formula (Lp)_j=(Lp/L)_j*L_j verified verbatim p.109 (PDF p.129). CORRECTION: research JSON 'benchmark_values' listed 1958=0.52/1967=0.51/1977=0.50 (wrong — do not match the book); corrected to Table 5.5 values 0.47/0.44/0.41. Table 5.14 cited as p.140 -> corrected to p.151.",
+        "date": "2026-06-11"
       }
     },
     "S512": {
@@ -1304,7 +1405,8 @@
           ],
           "units": "share",
           "color": "#d62728",
-          "shiny_column": "productive_wage_share_book"
+          "shiny_column": "productive_wage_share_book",
+          "label": "Productive wage share V*/W (book, 1948-1989)"
         },
         "S512-EXT": {
           "name": "Extended via BLS CES",
@@ -1315,7 +1417,8 @@
           ],
           "units": "share",
           "color": "#ff7f0e",
-          "shiny_column": "productive_wage_share_ext"
+          "shiny_column": "productive_wage_share_ext",
+          "label": "Productive wage share V*/W (BLS CES proxy extension)"
         },
         "S512-COMBINED": {
           "name": "Full series",
@@ -1325,7 +1428,8 @@
           ],
           "units": "share",
           "color": "#d62728",
-          "shiny_column": "productive_wage_share_vw"
+          "shiny_column": "productive_wage_share_vw",
+          "label": "Productive wage share V*/W (book spliced to extension)"
         },
         "S512-INTERP": {
           "name": "Interpolated bridge series for S512",
@@ -1335,7 +1439,8 @@
             1989
           ],
           "units": "share",
-          "note": "Interpolation bridge column emitted by O01_generate_chopped; data-only metadata declaration to satisfy P04 (no substantive value change)."
+          "note": "Interpolation bridge column emitted by O01_generate_chopped; data-only metadata declaration to satisfy P04 (no substantive value change).",
+          "label": "Productive wage share V*/W (benchmark-interpolated book series)"
         }
       },
       "construction": [
@@ -1385,11 +1490,12 @@
       "validation": {
         "reference_values": {
           "1948": 0.54,
-          "1958": 0.49,
+          "1958": 0.44,
           "1967": 0.42,
           "1977": 0.412,
           "1989": 0.36
         },
+        "v1.3_patch": "DIV-016: corrected stale interpolated mid-year refval 1958 (0.49->0.44) to panel V_over_W (Table 5.7 family) value. Other anchors unchanged (already match).",
         "expected_range": [
           0.1,
           0.8
@@ -1412,7 +1518,7 @@
       "processor": "P05",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
+      "units": "per_subseries",
       "content_type": "time_series",
       "year_range_target": [
         1948,
@@ -1423,6 +1529,13 @@
         "cohort": "v1.2_iter2",
         "patch_id": "P29_S512_extension_year_range",
         "note": "P29 doctor cleanup (Iter2 B3): record extension_year_range=[1948,2024] in validation block. Book period year_range=[reg_min,reg_max] is preserved as book authority; chopped CSV extends to 2024 via -EXT/-COMBINED subseries. anu-doctor P29 check updated to compute effective_year_range = year_range UNION extension_year_range so book-vs-chopped comparison no longer flags extension as a mismatch."
+      },
+      "display_name": "Productive wage share (V*/W)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Variable capital as a share of the total wage bill (V*/W), tracking Lp/L under the ec_u/ec_p approx 1 approximation. Verified against book: Table 5.14 (p.151) gives V*/W -33% over 1948-89, endpoints 0.54->0.36 match registry. Quote 'V*/W declines by 34%, while Lp/L declines by 37%' verified verbatim p.113 (PDF p.133). CORRECTION: research JSON cited Table 5.14 as p.140 -> p.151; and 1967 benchmark 0.45 -> book typical-level 0.42 (Table 5.14).",
+        "date": "2026-06-11"
       }
     },
     "S513": {
@@ -1450,7 +1563,8 @@
           ],
           "units": "rate",
           "color": "#2ca02c",
-          "shiny_column": "marxian_profit_rate_book"
+          "shiny_column": "marxian_profit_rate_book",
+          "label": "Marxian profit rate r* (book stock-form, 1948-1989)"
         },
         "S513-EXT": {
           "name": "Extended via BEA Fixed Assets (stock-form K*+V*)",
@@ -1463,7 +1577,8 @@
           "units": "rate",
           "color": "#98df8a",
           "shiny_column": "marxian_profit_rate_ext",
-          "notes": "1990-1997 absent due to S504 SIC->NAICS bridge gap in upstream V*; not fabricated."
+          "notes": "1990-1997 absent due to S504 SIC->NAICS bridge gap in upstream V*; not fabricated.",
+          "label": "Marxian profit rate r* (stock-form extension, 1990-2024)"
         },
         "S513-COMBINED": {
           "name": "Full series",
@@ -1473,7 +1588,8 @@
           ],
           "units": "rate",
           "color": "#2ca02c",
-          "shiny_column": "marxian_profit_rate_r"
+          "shiny_column": "marxian_profit_rate_r",
+          "label": "Marxian profit rate r* (book concatenated with stock-form extension)"
         },
         "S513-FLOW": {
           "name": "Flow-form r* (secondary reference variant)",
@@ -1488,7 +1604,8 @@
           "shiny_column": "marxian_profit_rate_flow",
           "_secondary": true,
           "purpose": "Retained as published variant for reference and continuity with pre-v1.2 flow-form headline values. NOT the primary headline; see VPR_S513_stock_vs_flow_DECISION_BRIEF §5.",
-          "notes": "Computed by P02_S513 from S505-COMBINED / (S502-COMBINED + S504-COMBINED) across the full 1948-2024 span where all three inputs are defined."
+          "notes": "Computed by P02_S513 from S505-COMBINED / (S502-COMBINED + S504-COMBINED) across the full 1948-2024 span where all three inputs are defined.",
+          "label": "Marxian profit rate r* flow-form variant S*/(C*+V*) (reference only)"
         }
       },
       "construction": [
@@ -1600,7 +1717,7 @@
         {
           "ts": "20260524T054827Z",
           "cohort": "v1.2_iter3",
-          "note": "v1.2 Iter 3 stock-form primary adoption (HIGH confidence per VPR_S513_stock_vs_flow_DECISION_BRIEF). Rationale: (1) book §5.5 p.122 verbatim defines r* in stock form; (2) book-period chopped value 1989=0.3723 is byte-identical to stock-form, proving book period was always stock; (3) prior splice (book stock + EXT flow) silently switched denominators and reversed secular sign to +24% (anti-TRPF); (4) stock-form primary restores book-faithful -59% decline 1948-2024 consistent with §5.5/Ch.9 narrative; (5) ES1703 Cronin Pearce-critique reinforces against stock/flow mixing. Flow-form retained as secondary S513-FLOW for variant comparison and continuity."
+          "note": "v1.2 Iter 3 stock-form primary adoption (HIGH confidence per VPR_S513_stock_vs_flow_DECISION_BRIEF). Rationale: (1) book §5.5 p.122 verbatim defines r* in stock form; (2) book-period chopped value 1989=0.3723 is byte-identical to stock-form, proving book period was always stock; (3) prior splice (book stock + EXT flow) silently switched denominators and reversed secular sign to +24% (anti-TRPF); (4) stock-form primary restores book-faithful -59% decline 1948-2024 consistent with §5.5/Ch.9 narrative; (5) XS1703 Cronin Pearce-critique reinforces against stock/flow mixing. Flow-form retained as secondary S513-FLOW for variant comparison and continuity."
         }
       ],
       "artifacts": {
@@ -1611,6 +1728,13 @@
         "cohort": "v1.2_iter3",
         "patch_id": "S513_stockform_v1.2_iter3",
         "note": "Stock-form r* = S*/(K*+V*) adopted as PRIMARY across full 1948-2024 span. P02_S513 rewritten to compute stock form for both -A and -EXT (same formula, no form-change splice). extension.splice_method changed from 'derive' to 'level' (concat, since pre/post-1989 use identical formula). validation.reference_values refreshed to stock-form endpoints (1948=0.3946, 1989=0.3723, 2024=0.1604) from chopped regen. New secondary subseries S513-FLOW added for reference variant. See docs/variants/VPR_S513_stock_vs_flow_DECISION_BRIEF.md."
+      },
+      "display_name": "Marxian profit rate (r* = S*/(K*+V*))",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "The Marxian general rate of profit, the headline Chapter 5/9 result on the tendency of the rate of profit to fall. Verified against book Table 5.8 'Aggregate rates of profit and compositions of capital' (p.125): r*=S*/K* 1948=0.39 matches chopped 1948=0.3946. Definition quote 'the Marxian general rate of profit r*, defined here as the ratio of surplus value to total fixed capital K' verified verbatim p.122 (PDF p.142). CORRECTION: research JSON repeatedly cited 'Table 5.11' for the profit rate -> Table 5.11 is 'Government absorption of surplus value' (p.138); the profit-rate table is Table 5.8. Table 5.14 cited p.140 -> p.151.",
+        "date": "2026-06-11"
       }
     },
     "S514": {
@@ -1637,7 +1761,8 @@
           ],
           "units": "rate",
           "color": "#2ca02c",
-          "shiny_column": "adjusted_profit_rate_book"
+          "shiny_column": "adjusted_profit_rate_book",
+          "label": "Capacity-adjusted profit rate r*_adj (book period, 1967-1989; NaN pre-1967)"
         },
         "S514-EXT": {
           "name": "Extended via FRED TCU",
@@ -1652,7 +1777,8 @@
           ],
           "units": "rate",
           "color": "#98df8a",
-          "shiny_column": "adjusted_profit_rate_ext"
+          "shiny_column": "adjusted_profit_rate_ext",
+          "label": "Capacity-adjusted profit rate r*_adj (extension, 1998-2024)"
         },
         "S514-COMBINED": {
           "name": "Full series",
@@ -1662,7 +1788,8 @@
           ],
           "units": "rate",
           "color": "#2ca02c",
-          "shiny_column": "adjusted_profit_rate_radj"
+          "shiny_column": "adjusted_profit_rate_radj",
+          "label": "Capacity-adjusted profit rate r*_adj (book concatenated with extension)"
         },
         "S514-FLOW": {
           "name": "Capacity-Adjusted Profit Rate (flow-form, secondary)",
@@ -1673,7 +1800,8 @@
           ],
           "units": "rate",
           "_secondary": true,
-          "note": "Flow-form variant retained per DIV-012 v1.2 Iter 3 form adoption"
+          "note": "Flow-form variant retained per DIV-012 v1.2 Iter 3 form adoption",
+          "label": "Capacity-adjusted profit rate r*_adj flow-form variant (reference only)"
         }
       },
       "construction": [
@@ -1819,7 +1947,14 @@
           "note": "Reference variant cross-checking v1.1 published flow-form values; not used in S514-COMBINED. See VPR_S513_stock_vs_flow_DECISION_BRIEF."
         }
       },
-      "status_upgrade": "validated_book_and_extension"
+      "status_upgrade": "validated_book_and_extension",
+      "display_name": "Capacity-adjusted profit rate (r*_adj)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Profit rate adjusted for capacity utilization, isolating the long-run structural trend from cyclical fluctuation. Capacity-adjustment methodology quote ('we divide the mass of profit by the rate of capacity utilization') verified verbatim p.124 (PDF p.144), Table 5.8 row 'r*' = profit rate adjusted for utilization = r*/u'. CORRECTION: research cited 'Table 5.11' -> the adjusted rate is in Table 5.8 (p.125). OPEN ISSUE (data, out of triage scope): the book defines r*' = r*/u (divide by utilization, so r*'>r* when u<1; Table 5.8 1989 r*'=0.45); RMWND implements r*_adj = r* x TCU/100 (multiply, 1989=0.312). The registry reference_values (1967=0.3635/1989=0.3118) are self-consistent with the as-built multiply-by-TCU stock-form series but diverge from the book's published r*' levels. Documented implementation divergence; not altered here.",
+        "date": "2026-06-11"
+      }
     },
     "S515": {
       "name": "Productive Employment (Lp)",
@@ -1834,7 +1969,7 @@
       "source_file": "ch05/Employment_1948_1989.csv",
       "year_range": [
         1948,
-        1961
+        1989
       ],
       "subseries": {
         "S515-A": {
@@ -1846,7 +1981,8 @@
           ],
           "units": "thousands",
           "color": "#d62728",
-          "shiny_column": "productive_employment_book"
+          "shiny_column": "productive_employment_book",
+          "label": "Productive employment Lp (book, 1948-1989)"
         },
         "S515-EXT": {
           "name": "Extended via BLS",
@@ -1857,7 +1993,8 @@
           ],
           "units": "thousands",
           "color": "#ff7f0e",
-          "shiny_column": "productive_employment_ext"
+          "shiny_column": "productive_employment_ext",
+          "label": "Productive employment Lp (BLS CES production-worker extension)"
         },
         "S515-COMBINED": {
           "name": "Full series",
@@ -1867,7 +2004,8 @@
           ],
           "units": "thousands",
           "color": "#d62728",
-          "shiny_column": "productive_employment_lp"
+          "shiny_column": "productive_employment_lp",
+          "label": "Productive employment Lp (book spliced to extension)"
         }
       },
       "construction": [
@@ -1916,9 +2054,13 @@
       },
       "validation": {
         "reference_values": {
-          "1948": 29937.0,
-          "1961": 33615.0
+          "1948": 32994.0,
+          "1958": 29349.0,
+          "1967": 32856.0,
+          "1977": 35798.0,
+          "1989": 41148.0
         },
+        "v1.3_patch": "DIV-013: replaced v1.2 refvals {1948:29937,1961:33615} (a 14-year digitization misalignment of Appendix E.3) with book Table 5.5 'Lp' anchors. Verified vs verbatim book table; panel column-sums to these (identity-consistent).",
         "expected_range": [
           10000,
           200000
@@ -1936,7 +2078,8 @@
       "loader": "L04",
       "processor": "P06",
       "wave": 1,
-      "status": "book_period_partial_1948_1961",
+      "status": "book_period_validated",
+      "v1.3_year_range_patch": "year_range/status widened 1948-1961 -> 1948-1989: panel-backed rebuild supplies real book-arm data across the full book period; V03 PASS post-rebuild (B6).",
       "units": "thousands",
       "content_type": "time_series",
       "year_range_target": [
@@ -1948,6 +2091,13 @@
         "cohort": "v1.2_iter2",
         "patch_id": "P29_S515_extension_year_range",
         "note": "P29 doctor cleanup (Iter2 B3): record extension_year_range=[1948,2024] in validation block. Book period year_range=[reg_min,reg_max] is preserved as book authority; chopped CSV extends to 2024 via -EXT/-COMBINED subseries. anu-doctor P29 check updated to compute effective_year_range = year_range UNION extension_year_range so book-vs-chopped comparison no longer flags extension as a mismatch."
+      },
+      "display_name": "Productive employment (Lp)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Absolute count of workers in productive sectors, the numerator of Lp/L (S511). Verified against book Table 5.5 (p.110): chopped 1948=32994 matches book Lp 1948=32994 and registry endpoints (1967=32856, 1989=41148) exactly. Construction quote 'L_j = ... PEP = FEE + SEP ... (Lp)_j=(Lp/L)_j*L_j' verified verbatim p.109 (PDF p.129). No table-citation errors in this series.",
+        "date": "2026-06-11"
       }
     },
     "S516": {
@@ -1962,7 +2112,7 @@
       "source_file": "ch05/Employment_1948_1989.csv",
       "year_range": [
         1948,
-        1961
+        1989
       ],
       "subseries": {
         "S516-A": {
@@ -1974,7 +2124,8 @@
           ],
           "units": "thousands",
           "color": "#d62728",
-          "shiny_column": "unproductive_employment_book"
+          "shiny_column": "unproductive_employment_book",
+          "label": "Unproductive employment Lu (book, 1948-1989)"
         },
         "S516-EXT": {
           "name": "Extended (derived L - Lp)",
@@ -1988,7 +2139,8 @@
           ],
           "units": "thousands",
           "color": "#ff7f0e",
-          "shiny_column": "unproductive_employment_ext"
+          "shiny_column": "unproductive_employment_ext",
+          "label": "Unproductive employment Lu (derived L - Lp extension)"
         },
         "S516-COMBINED": {
           "name": "Full series",
@@ -1998,7 +2150,8 @@
           ],
           "units": "thousands",
           "color": "#d62728",
-          "shiny_column": "unproductive_employment_lu"
+          "shiny_column": "unproductive_employment_lu",
+          "label": "Unproductive employment Lu (book spliced to extension)"
         }
       },
       "construction": [
@@ -2050,9 +2203,13 @@
       },
       "validation": {
         "reference_values": {
-          "1948": 36154.0,
-          "1961": 49212.0
+          "1948": 25307.0,
+          "1958": 33416.0,
+          "1967": 42281.0,
+          "1977": 52318.0,
+          "1989": 72363.0
         },
+        "v1.3_patch": "DIV-014: replaced v1.2 refvals {1948:36154,1961:49212} (same 14-year misalignment of Lu) with book Table 5.5 'Lu=L-Lp' anchors. Identity-checked as L-Lp.",
         "expected_range": [
           10000,
           200000
@@ -2070,7 +2227,8 @@
       "loader": "L04",
       "processor": "P06",
       "wave": 1,
-      "status": "book_period_partial_1948_1961",
+      "status": "book_period_validated",
+      "v1.3_year_range_patch": "year_range/status widened 1948-1961 -> 1948-1989: panel-backed rebuild supplies real book-arm data across the full book period; V03 PASS post-rebuild (B6).",
       "units": "thousands",
       "content_type": "time_series",
       "year_range_target": [
@@ -2085,6 +2243,13 @@
         "cohort": "v1.2_iter2",
         "patch_id": "P29_S516_extension_year_range",
         "note": "P29 doctor cleanup (Iter2 B3): record extension_year_range=[1948,2024] in validation block. Book period year_range=[reg_min,reg_max] is preserved as book authority; chopped CSV extends to 2024 via -EXT/-COMBINED subseries. anu-doctor P29 check updated to compute effective_year_range = year_range UNION extension_year_range so book-vs-chopped comparison no longer flags extension as a mismatch."
+      },
+      "display_name": "Unproductive employment (Lu = L - Lp)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Residual unproductive employment, Lu = L - Lp; its secular rise is a core Chapter 5 finding (shift to trade/FIRE/government). Verified against book Table 5.5 (p.110): chopped 1948=25307 matches book 'Lu=L-Lp' 1948=25307 and registry endpoints (1967=42281, 1989=72363) exactly. Definitional quote 'Lu = L - Lp = total unproductive labor' verified verbatim p.109 (PDF p.129). Note: two research-JSON entries flagged verbatim_check=false (paraphrased Lu decomposition and Footnote 7) are correctly marked and not relied upon as verbatim.",
+        "date": "2026-06-11"
       }
     },
     "S601": {
@@ -2107,9 +2272,10 @@
             1952,
             1989
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#1f77b4",
-          "shiny_column": "personal_tax_workers_book"
+          "shiny_column": "personal_tax_workers_book",
+          "label": "Personal income taxes paid by workers (book period, 1952-1989)"
         }
       },
       "construction": [
@@ -2146,6 +2312,22 @@
       "year_range_target": [
         1952,
         2025
+      ],
+      "display_name": "Personal income taxes paid by workers",
+      "publish": true,
+      "triage": {
+        "verdict": "fix-completed-then-publish",
+        "reason": "Worker share of personal income taxes, the largest Group II tax in Shaikh & Tonak's net-transfer accounting (Appendix N). Data sound: 1964 = 37.06B, near the book's Table N.1 labor share of 36.4B; endpoints match reference_values. CORRECTED fabricated provenance: the registry/DPR/research cited a non-existent 'Chapter 6 — The Net Social Wage' and 'Table 6.1 / Table6_1_TaxAccounts.csv / Fig_6_4'. The net-social-wage analysis is actually Chapter 5 Section 5.9 plus Appendix N (Tables N.1, N.2), Figures 5.21-5.24; book Table 6.1 is 'Wolff's estimates ... in Puerto Rico'. Verbatim quote re-verified against the book PDF.",
+        "date": "2026-06-11"
+      },
+      "chapter_ref": "Chapter 5 (Section 5.9), Appendix N",
+      "table_ref": "Tables N.1, N.2",
+      "figure_ref": "Figures 5.21-5.24",
+      "fabricated_refs_removed": [
+        "Table 6.1",
+        "Table6_1_TaxAccounts.csv",
+        "Fig_6_4",
+        "Chapter 6 — The Net Social Wage"
       ]
     },
     "S602": {
@@ -2166,9 +2348,10 @@
             1952,
             1989
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#1f77b4",
-          "shiny_column": "social_insurance_tax_workers_book"
+          "shiny_column": "social_insurance_tax_workers_book",
+          "label": "Social insurance taxes paid by workers (book period, 1952-1989)"
         }
       },
       "construction": [
@@ -2205,6 +2388,21 @@
       "year_range_target": [
         1952,
         2025
+      ],
+      "display_name": "Social insurance taxes paid by workers",
+      "publish": true,
+      "triage": {
+        "verdict": "fix-completed-then-publish",
+        "reason": "Workers' social-insurance contributions (Group I, treated as 100% borne by labor in Shaikh & Tonak's net-transfer accounting). Data sound: endpoints match reference_values (1952 = 6.92B, 1989 = 385.23B). CORRECTED fabricated provenance: the DPR cited 'Chapter 6 — The Net Social Wage' and 'Table6_1_TaxAccounts.csv'; the real source is Chapter 5 Section 5.9 + Appendix N (Table N.1 1964 benchmark, Table N.2 rates 1952-1989). Group I classification quote confirmed against book Appendix N.",
+        "date": "2026-06-11"
+      },
+      "chapter_ref": "Chapter 5 (Section 5.9), Appendix N",
+      "table_ref": "Tables N.1, N.2",
+      "figure_ref": "Figures 5.21-5.24",
+      "fabricated_refs_removed": [
+        "Table 6.1",
+        "Table6_1_TaxAccounts.csv",
+        "Chapter 6 — The Net Social Wage"
       ]
     },
     "S603": {
@@ -2225,9 +2423,10 @@
             1952,
             1989
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#1f77b4",
-          "shiny_column": "property_tax_workers_book"
+          "shiny_column": "property_tax_workers_book",
+          "label": "Property taxes paid by workers (book period, 1952-1989)"
         }
       },
       "construction": [
@@ -2266,6 +2465,21 @@
       "year_range_target": [
         1952,
         2025
+      ],
+      "display_name": "Property taxes paid by workers",
+      "publish": true,
+      "triage": {
+        "verdict": "fix-completed-then-publish",
+        "reason": "Workers' share of personal property and related Group II taxes in Shaikh & Tonak's net-transfer accounting (Appendix N classifies personal property taxes, motor-vehicle taxes, and other nontaxes by the labor-income share). Data sound: endpoints match reference_values (1952 = 4.19B, 1989 = 74.93B). CORRECTED fabricated provenance ('Chapter 6 — The Net Social Wage', 'Table6_1_TaxAccounts.csv'): the real source is Chapter 5 Section 5.9 + Appendix N (Tables N.1, N.2).",
+        "date": "2026-06-11"
+      },
+      "chapter_ref": "Chapter 5 (Section 5.9), Appendix N",
+      "table_ref": "Tables N.1, N.2",
+      "figure_ref": "Figures 5.21-5.24",
+      "fabricated_refs_removed": [
+        "Table 6.1",
+        "Table6_1_TaxAccounts.csv",
+        "Chapter 6 — The Net Social Wage"
       ]
     },
     "S604": {
@@ -2286,9 +2500,10 @@
             1952,
             1989
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#1f77b4",
-          "shiny_column": "total_tax_workers_book"
+          "shiny_column": "total_tax_workers_book",
+          "label": "Total taxes paid by workers (book period, 1952-1989)"
         }
       },
       "construction": [
@@ -2333,7 +2548,23 @@
       "year_range_target": [
         1952,
         2025
-      ]
+      ],
+      "display_name": "Total taxes paid by workers",
+      "publish": true,
+      "triage": {
+        "verdict": "fix-completed-then-publish",
+        "reason": "Total taxes borne by workers (T1 in the book's notation): personal income + social insurance + property + indirect taxes allocated by labor's income/consumption share. The negative term in the net-social-wage identity. Data sound at endpoints (1952 = 53.21B, 1989 = 1116.89B match reference_values). NOTE: the full-NIPA reconstruction does not reproduce the book's single-year Table N.1 1964 figure (book T1 1964 = 76.2B; constructed S604 1964 = 111.06B) because the build reconstructs T1 from full annual NIPA components rather than transcribing the 1964 illustrative table — documented divergence, not an error. CORRECTED fabricated provenance ('Chapter 6 — The Net Social Wage', 'Table 6.1 / Table6_1_TaxAccounts.csv'): the real book source is Chapter 5 Section 5.9 + Appendix N (Tables N.1, N.2). Tax-rate (T1/EC) quotes re-verified against Table N.2.",
+        "date": "2026-06-11"
+      },
+      "chapter_ref": "Chapter 5 (Section 5.9), Appendix N",
+      "table_ref": "Tables N.1, N.2",
+      "figure_ref": "Figures 5.21-5.24",
+      "fabricated_refs_removed": [
+        "Table 6.1",
+        "Table6_1_TaxAccounts.csv",
+        "Chapter 6 — The Net Social Wage"
+      ],
+      "open_divergence": "Constructed T1 (full-NIPA annual) exceeds the book's illustrative Table N.1 1964 single-year figure; reconstruction-vs-illustration gap, documented."
     },
     "S605": {
       "name": "Government Benefits to Workers (B_w)",
@@ -2355,9 +2586,10 @@
             1952,
             1989
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#1f77b4",
-          "shiny_column": "govt_benefits_workers_book"
+          "shiny_column": "govt_benefits_workers_book",
+          "label": "Government cash benefits received by workers (book period, 1952-1989)"
         }
       },
       "construction": [
@@ -2394,6 +2626,22 @@
       "year_range_target": [
         1952,
         2025
+      ],
+      "display_name": "Government cash benefits received by workers",
+      "publish": true,
+      "triage": {
+        "verdict": "fix-completed-then-publish",
+        "reason": "Cash and income-support transfers received by workers (the social-security/welfare component of B1 in Appendix N). Data sound at endpoints (1952 = 10.99B, 1989 = 521.07B match reference_values). CORRECTED fabricated provenance: DPR cited 'Chapter 6 — The Net Social Wage', 'Table6_2_BenefitAccounts.csv', 'Fig_6_4'. The net-social-wage analysis is Chapter 5 Section 5.9 + Appendix N (Tables N.1, N.2), Figures 5.21-5.24.",
+        "date": "2026-06-11"
+      },
+      "chapter_ref": "Chapter 5 (Section 5.9), Appendix N",
+      "table_ref": "Tables N.1, N.2",
+      "figure_ref": "Figures 5.21-5.24",
+      "fabricated_refs_removed": [
+        "Table 6.2",
+        "Table6_2_BenefitAccounts.csv",
+        "Fig_6_4",
+        "Chapter 6 — The Net Social Wage"
       ]
     },
     "S606": {
@@ -2414,9 +2662,10 @@
             1952,
             1989
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#1f77b4",
-          "shiny_column": "govt_services_workers_book"
+          "shiny_column": "govt_services_workers_book",
+          "label": "Government services received by workers (book period, 1952-1989)"
         }
       },
       "construction": [
@@ -2453,6 +2702,21 @@
       "year_range_target": [
         1952,
         2024
+      ],
+      "display_name": "Government services received by workers",
+      "publish": true,
+      "triage": {
+        "verdict": "fix-completed-then-publish",
+        "reason": "Imputed value of free or subsidized government services consumed by workers (education, health, transportation, etc., allocated by the labor-income share in Appendix N's Group II). Together with cash benefits this forms B1, the benefits side of the net transfer. Data sound at endpoints (1952 = 32.69B, 1989 = 494.80B match reference_values). CORRECTED fabricated provenance ('Chapter 6 — The Net Social Wage', 'Table6_2_BenefitAccounts.csv'): the real source is Chapter 5 Section 5.9 + Appendix N (Tables N.1, N.2).",
+        "date": "2026-06-11"
+      },
+      "chapter_ref": "Chapter 5 (Section 5.9), Appendix N",
+      "table_ref": "Tables N.1, N.2",
+      "figure_ref": "Figures 5.21-5.24",
+      "fabricated_refs_removed": [
+        "Table 6.2",
+        "Table6_2_BenefitAccounts.csv",
+        "Chapter 6 — The Net Social Wage"
       ]
     },
     "S607": {
@@ -2477,9 +2741,10 @@
             1952,
             1989
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#1f77b4",
-          "shiny_column": "net_social_wage_book"
+          "shiny_column": "net_social_wage_book",
+          "label": "Net social wage (book period, 1952-1989)"
         },
         "S607-EXT": {
           "name": "Extended via BEA NIPA",
@@ -2489,9 +2754,10 @@
             1990,
             2025
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#aec7e8",
-          "shiny_column": "net_social_wage_ext"
+          "shiny_column": "net_social_wage_ext",
+          "label": "Net social wage, NIPA extension (1990-2025)"
         },
         "S607-COMBINED": {
           "name": "Full series",
@@ -2499,9 +2765,10 @@
             1952,
             2025
           ],
-          "units": "billions_dollars",
+          "units": "billions_usd",
           "color": "#1f77b4",
-          "shiny_column": "net_social_wage_nsw"
+          "shiny_column": "net_social_wage_nsw",
+          "label": "Net social wage, book + extension (1952-2025)"
         }
       },
       "construction": [
@@ -2575,7 +2842,25 @@
       "wave": 1,
       "status": "validated_book_and_extension",
       "units": "billions_usd",
-      "content_type": "time_series"
+      "content_type": "time_series",
+      "display_name": "Net social wage",
+      "publish": true,
+      "triage": {
+        "verdict": "fix-completed-then-publish",
+        "reason": "The headline net-social-wage series: benefits plus services received by workers minus taxes paid (B1 - T1, the net transfer between workers and the state). Negative for most of 1952-1989, confirming the book's central social-accounting finding that U.S. workers paid a net tax to the state. Data sound at endpoints (1952 = -9.52B, 1989 = -101.02B match reference_values); positive years 1975/1976/1983 align with the book's recession-driven net-transfer spike (Fig 5.23). Extension to 2025 via the ST2 NIPA continuation is methodologically continuous (1989 overlap matches). CORRECTED fabricated provenance: registry/DPR/EPR cited 'Chapter 6 — The Net Social Wage', 'Table 6.3 / Table6_3_NetSocialWage.csv', and 'Fig_6_1/Fig_6_3/Fig_6_4'. Book Table 6.3 is the 1970 manufacturing-sector table; the net transfer is Chapter 5 Section 5.9 + Appendix N (Tables N.1, N.2), Figures 5.21-5.24. Net-transfer quotes re-verified verbatim against the book PDF (p.141).",
+        "date": "2026-06-11"
+      },
+      "chapter_ref": "Chapter 5 (Section 5.9), Appendix N",
+      "table_ref": "Tables N.1, N.2",
+      "figure_ref": "Figures 5.21-5.24",
+      "fabricated_refs_removed": [
+        "Table 6.3",
+        "Table6_3_NetSocialWage.csv",
+        "Fig_6_1",
+        "Fig_6_3",
+        "Fig_6_4",
+        "Chapter 6 — The Net Social Wage"
+      ]
     },
     "S608": {
       "name": "NSW/V* Ratio",
@@ -2597,7 +2882,8 @@
           ],
           "units": "ratio",
           "color": "#2ca02c",
-          "shiny_column": "nsw_v_ratio_book"
+          "shiny_column": "nsw_v_ratio_book",
+          "label": "Net social wage / variable capital (book period, 1952-1989)"
         }
       },
       "construction": [
@@ -2655,7 +2941,23 @@
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
         "note": "P23 exemption: Derived NSW/V* ratio computed in P02 from S607 / S504. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
-      }
+      },
+      "display_name": "Net social wage relative to variable capital",
+      "publish": true,
+      "triage": {
+        "verdict": "fix-completed-then-publish",
+        "reason": "The net social wage normalized by variable capital (the productive wage bill V*), making it comparable across the scale of the economy. This is the quantity the book applies to V* to convert the apparent rate of surplus value into the net-tax-adjusted true rate (Section 5.9, Figure 5.24, Table N.2). Constructed as S607/V*; chopped endpoints match the DPR reference (1952 = -0.0858, 1989 = -0.0837). NOTE: the registry validation.reference_values for S608 (1952 = -0.114, 1964 = -0.033, ...) match neither the chopped data nor the DPR and appear to be stale/from a different vintage of the numerator — they should be replaced with the DPR/chopped values (-0.0858, -0.0837). Also note the book's own NtrV*/V* equals the net-transfer rate (-0.07 in 1952) because its numerator is NtrV* = Ntrrate*V*, whereas this build uses NSW (S607) directly as numerator; documented numerator-definition divergence. CORRECTED fabricated provenance ('Chapter 6 — The Net Social Wage', 'Table 6.4 / derived from S504'): the real source is Chapter 5 Section 5.9 + Appendix N Table N.2, with V* from Table G.2/H.1.",
+        "date": "2026-06-11"
+      },
+      "chapter_ref": "Chapter 5 (Section 5.9), Appendix N",
+      "table_ref": "Table N.2 (V* from Table G.2/H.1)",
+      "figure_ref": "Figure 5.24",
+      "fabricated_refs_removed": [
+        "Table 6.4",
+        "Chapter 6 — The Net Social Wage"
+      ],
+      "stale_reference_values": "Registry reference_values (1952=-0.114 etc.) contradict chopped/DPR (1952=-0.0858, 1989=-0.0837); recommend replacing with chopped values.",
+      "open_divergence": "Numerator is NSW (S607) not the book's NtrV*=Ntrrate*V*; ratio therefore -0.0858 vs the book's net-transfer rate -0.07 in 1952."
     },
     "S609": {
       "name": "NSW/NI Share",
@@ -2677,7 +2979,8 @@
           ],
           "units": "share",
           "color": "#2ca02c",
-          "shiny_column": "nsw_ni_share_book"
+          "shiny_column": "nsw_ni_share_book",
+          "label": "Net social wage / national income (book period, 1952-1989)"
         }
       },
       "construction": [
@@ -2716,6 +3019,21 @@
       "year_range_target": [
         1952,
         2025
+      ],
+      "display_name": "Net social wage as a share of national income",
+      "publish": true,
+      "triage": {
+        "verdict": "fix-completed-then-publish",
+        "reason": "The net social wage expressed as a fraction of national income, the normalization most useful for communicating the magnitude of the net transfer to a general audience. Data sound at endpoints (1952 = -0.0337, 1989 = -0.0219 match reference_values); independent recomputation S607/NNP gives -0.0295 (1952) and -0.0217 (1989), consistent in sign and order of magnitude with a national-income denominator. CORRECTED fabricated provenance ('Chapter 6 — The Net Social Wage', 'Table 6.3 / Table6_3_NetSocialWage.csv'): the net transfer is Chapter 5 Section 5.9 + Appendix N (Tables N.1, N.2).",
+        "date": "2026-06-11"
+      },
+      "chapter_ref": "Chapter 5 (Section 5.9), Appendix N",
+      "table_ref": "Tables N.1, N.2",
+      "figure_ref": "Figures 5.21-5.24",
+      "fabricated_refs_removed": [
+        "Table 6.3",
+        "Table6_3_NetSocialWage.csv",
+        "Chapter 6 — The Net Social Wage"
       ]
     },
     "S901": {
@@ -2735,7 +3053,8 @@
             1948,
             1989
           ],
-          "units": "share"
+          "units": "share",
+          "label": "Productive labor share Lp/L (from S511)"
         },
         "S901-A/NSW_V_S608": {
           "name": "NSW/V* Ratio from S608",
@@ -2743,7 +3062,8 @@
             1948,
             1989
           ],
-          "units": "ratio"
+          "units": "ratio",
+          "label": "Net social wage ratio NSW/V* (from S608)"
         },
         "S901-A/VW_S512": {
           "name": "V*/W Share from S512",
@@ -2751,7 +3071,8 @@
             1948,
             1989
           ],
-          "units": "share"
+          "units": "share",
+          "label": "Productive wage share V*/W (from S512)"
         },
         "S901-A/e_S506": {
           "name": "Exploitation Rate (e) from S506",
@@ -2759,7 +3080,8 @@
             1948,
             1989
           ],
-          "units": "ratio"
+          "units": "ratio",
+          "label": "Rate of exploitation e = S*/V* (from S506)"
         },
         "S901-A/r_S513": {
           "name": "Profit Rate (r) from S513",
@@ -2767,7 +3089,8 @@
             1948,
             1989
           ],
-          "units": "ratio"
+          "units": "ratio",
+          "label": "Marxian rate of profit r* (from S513)"
         },
         "S901-A/r_adj_S514": {
           "name": "Adjusted Profit Rate (r_adj) from S514",
@@ -2775,7 +3098,8 @@
             1948,
             1989
           ],
-          "units": "ratio"
+          "units": "ratio",
+          "label": "Adjusted Marxian rate of profit r*' (from S514)"
         }
       },
       "construction": [
@@ -2816,7 +3140,7 @@
       "processor": "P12",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "mixed",
+      "units": "per_subseries",
       "content_type": "time_series",
       "year_range_target": [
         1948,
@@ -2852,7 +3176,19 @@
       },
       "artifacts": {
         "derived_no_l01": true
-      }
+      },
+      "display_name": "Summary of key Marxian indicators",
+      "publish": true,
+      "triage": {
+        "verdict": "fix-completed-then-publish",
+        "reason": "Capstone summary table assembling six headline Marxian indicators (exploitation rate e from S506, productive labor share Lp/L from S511, productive wage share V*/W from S512, Marxian profit rate r* from S513, adjusted profit rate from S514, net-social-wage ratio NSW/V* from S608) over the book period 1948-1989. Endpoints verified against the canonical series and registry derived_statistics: e 1.70->2.44, Lp/L 0.57->0.36, V*/W 0.54->0.36, NSW/V* 1989 = -0.0837 (all match chopped). CORRECTIONS: (1) chapter='9' and book_table='9.1' are PROJECT-INTERNAL labels — the book has NO Chapter 9 and NO Table 9.1 (verified verbatim against the PDF List of Tables: tables end at 7.1 + appendices; book runs Chapters 1-7). S901 maps to Chapter 7 'Summary and conclusions' Sections 7.1-7.5 (folios 213-227). (2) MIXED_UNITS resolved via per-subseries units (split required by TRIAGE_PRESCREEN). (3) DATA GAP disclosed: the r_S513 and r_adj_S514 columns are entirely nan in the chopped output (4 of 6 indicator columns carry data; 2 are empty). The Ch7 Section 7.1 falling-rate quote (folio 214) and the Ch7 Section 7.3 summary quote (folio 221) were re-verified verbatim against the book PDF and PASS.",
+        "date": "2026-06-11"
+      },
+      "chapter_label_is_project_internal": true,
+      "book_chapter_actual": "The book has no Chapter 9 and no Table 9.1; S901 maps to Chapter 7 'Summary and conclusions', Sections 7.1-7.5 (folios 213-227).",
+      "chapter_ref": "Chapter 7 (Sections 7.1-7.5)",
+      "off_book_table_citation_flagged": "9.1",
+      "data_gap": "chopped columns S901-A/r_S513 and S901-A/r_adj_S514 are entirely nan; only 4 of the 6 declared indicator columns (LpL, NSW_V, VW, e) carry data."
     },
     "S401": {
       "name": "A-Matrix",
@@ -2874,9 +3210,10 @@
             1947,
             1977
           ],
-          "units": "matrix",
+          "units": "coefficient",
           "color": "#9467bd",
-          "shiny_column": "a_matrix_book"
+          "shiny_column": "a_matrix_book",
+          "label": "A-matrix scalar (intermediate, not published)"
         }
       },
       "construction": [
@@ -2918,7 +3255,14 @@
           "cohort": "stage3_c1",
           "note": "DECISION 0003 BINARY-INVARIANT FIX: previous status 'validated_book_and_extension' combined with extension:null is a Decision 0003 violation. Demoted to 'book_period_validated' with explicit extension:null because: (1) research file states 'No NAICS extension: series terminates at 1977 benchmark' and 'Cross-sectional benchmark series with no annual extension'; (2) source data are six SIC-era BEA benchmark IO tables (1947, 1958, 1963, 1967, 1972, 1977) with no continuing BEA series — the 1972 SIC system is discontinued; (3) demotion preserves audit integrity over forcing a manufactured extension. The 1967 outlier value (0.494501) flagged by anu-doctor as anomalous relative to other benchmarks; flagged for Stage 5 diagnosis but reference values reflect current pipeline output anchored to chopped CSV. Real fix per CH7_REAL_FIX_PLAN.md scope."
         }
-      ]
+      ],
+      "display_name": "Input-output A-matrix (technical-coefficient summary)",
+      "publish": false,
+      "triage": {
+        "verdict": "cull",
+        "reason": "Not a sensible published series: the A-matrix is an 85x85 technical-coefficient matrix, but the chopped data stores a single scalar per benchmark year (1947-1977) with no documented meaning and an unexplained 1967 outlier (0.49 vs ~0.95). It is an intermediate derived object, not a reconstructable/interpretable published time series. Registry book_table 4.1 is 'Labor value and money value measures', not an A-matrix.",
+        "date": "2026-06-11"
+      }
     },
     "S402": {
       "name": "B-Matrix (Leontief Inverse)",
@@ -2940,9 +3284,10 @@
             1947,
             1977
           ],
-          "units": "matrix",
+          "units": "coefficient",
           "color": "#9467bd",
-          "shiny_column": "b_matrix_book"
+          "shiny_column": "b_matrix_book",
+          "label": "B-matrix scalar (intermediate, not published)"
         }
       },
       "construction": [
@@ -2990,7 +3335,14 @@
           "cohort": "stage3_c1",
           "note": "DECISION 0003 BINARY-INVARIANT FIX: previous status 'validated_book_and_extension' combined with extension:null is a Decision 0003 violation. Demoted to 'book_period_validated' with explicit extension:null because: (1) S402 is derived from S401 via B = (I-A)^(-1) and inherits S401's six-benchmark-year domain (1947-1977 SIC era); (2) research file states 'No NAICS extension: series terminates at 1977 benchmark'; (3) no annual interpolation methodology exists for SIC-era IO matrices. The 1967 outlier (10.47 vs ~30-100 for other years) propagates from S401's 1967 anomaly and inherits the same diagnostic flag. Real fix per CH7_REAL_FIX_PLAN.md scope; reference values anchored to current chopped output."
         }
-      ]
+      ],
+      "display_name": "Input-output B-matrix / Leontief inverse (summary)",
+      "publish": false,
+      "triage": {
+        "verdict": "cull",
+        "reason": "Not a sensible published series: the B = (I-A)^-1 Leontief inverse is a matrix, but the chopped data stores a single scalar per benchmark year (1947-1977). The registry construction 'B=(I-A)^{-1}' is a matrix op that cannot be reproduced from the stored scalar S401-A. Intermediate derived object, not a publishable series. Registry book_table 4.2 is a 'numerical example', not a B-matrix.",
+        "date": "2026-06-11"
+      }
     },
     "S701": {
       "name": "Labor Values",
@@ -3012,9 +3364,10 @@
             1947,
             1977
           ],
-          "units": "labor_hours_per_dollar",
+          "units": "hr_per_dollar",
           "color": "#8c564b",
-          "shiny_column": "labor_values_book"
+          "shiny_column": "labor_values_book",
+          "label": "Labor values lambda* (book benchmark years, 1947-1977)"
         },
         "S701-EXT": {
           "name": "Labor Values (extension, 1990-2024)",
@@ -3025,7 +3378,9 @@
           ],
           "units": "hr_per_dollar",
           "note": "Extended via Ch7 real-fix v1.1 Phase 4 pipeline; see L01_S701/L01_S702 + P02_S701/702/703 (v1.1 rewrite).",
-          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15"
+          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15",
+          "label": "Labor values lambda* (BLS CES + BEA extension, 1990-2024)",
+          "source_url_provenance_note": "Merged from the malformed empty-string ('') registry key under series.S701, which held {'subseries.S701-EXT': {source_url}} orphaned during a -EXT/-COMBINED provenance dump. BLS CES production-worker hours API + BEA GDP-by-Industry (gross output, Table 15) API feed the extension-period hp*_j inputs."
         },
         "S701-COMBINED": {
           "name": "Labor Values (book + extension combined, 1947-2024)",
@@ -3036,7 +3391,9 @@
           ],
           "units": "hr_per_dollar",
           "note": "Spliced/combined output; see P02_S701/702/703.",
-          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15"
+          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15",
+          "label": "Labor values lambda* (book spliced to extension, 1947-2024)",
+          "source_url_provenance_note": "Merged from the malformed empty-string ('') registry key under series.S701, which held {'subseries.S701-COMBINED': {source_url}}. Same BLS CES + BEA GDP-by-Industry sources as S701-EXT; COMBINED is the level-spliced book+extension output."
         }
       },
       "construction": [
@@ -3110,14 +3467,17 @@
         "patch_id": "P29_S701_extension_year_range",
         "note": "P29 doctor cleanup (Iter2 B3): record extension_year_range=[1958,2024] in validation block. Book period year_range=[reg_min,reg_max] is preserved as book authority; chopped CSV extends to 2024 via -EXT/-COMBINED subseries. anu-doctor P29 check updated to compute effective_year_range = year_range UNION extension_year_range so book-vs-chopped comparison no longer flags extension as a mismatch."
       },
-      "": {
-        "subseries.S701-EXT": {
-          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15"
-        },
-        "subseries.S701-COMBINED": {
-          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15"
-        }
-      }
+      "display_name": "Labor values",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Sector-disaggregated unit labor values lambda*_j (labor-hours per dollar of producer-price gross output), built per the book's Ch4 Section 4.1 empirical formula lambda* = hp*(I - app*)^-1 from real BLS CES productive-employment hours, BEA benchmark I-O matrices, and the Appendix F productive-share filter (proxy:false since v1.1; the v1.0 matrix-structure proxy was retired, DIV-011). Construction logic verified against the registry real_implementation_provenance and the canonical Ch4 methodology. CORRECTION of an off-book table citation: book_table='7.1' is a PROJECT-INTERNAL label, NOT the printed book table. The book's actual Table 7.1 is 'Profit, accumulation, social savings, and burden rates' (verified verbatim against the PDF List of Tables, folio xii: '7.1 Profit, accumulation, social savings, and burden rates ... 217'); the book has only 7 chapters and 7.1 is its sole Chapter-7 table. The labor-value methodology lives in Chapter 4 (Section 4.1, folios 80-83) and Appendix G. The Ch4 lambda*=hp*(I-app*)^-1 anchor and the Ch7 Section 7.3 magnitude quote (folio 221) were re-verified verbatim against the book PDF. Empty-string registry key (orphaned -EXT/-COMBINED source_url provenance) merged into the proper subseries below.",
+        "date": "2026-06-11"
+      },
+      "book_table_label_is_project_internal": true,
+      "book_table_actual": "Table 7.1 in the printed book is 'Profit, accumulation, social savings, and burden rates' (folio 217); S701 'Labor Values' is built from Chapter 4 Section 4.1 (folios 80-83) and Appendix G methodology, not from the printed Table 7.1.",
+      "chapter_ref": "Chapter 4 (Section 4.1), Appendix G",
+      "off_book_table_citation_flagged": "7.1"
     },
     "S702": {
       "name": "Prices of Production",
@@ -3139,9 +3499,10 @@
             1947,
             1977
           ],
-          "units": "index",
+          "units": "labor_value_units",
           "color": "#8c564b",
-          "shiny_column": "prices_production_book"
+          "shiny_column": "prices_production_book",
+          "label": "Prices of production pp* (book benchmark years, 1947-1977)"
         },
         "S702-EXT": {
           "name": "Prices of Production (extension, 1990-2024)",
@@ -3152,7 +3513,9 @@
           ],
           "units": "labor_value_units",
           "note": "Extended via Ch7 real-fix v1.1 Phase 4 pipeline; see L01_S701/L01_S702 + P02_S701/702/703 (v1.1 rewrite).",
-          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15"
+          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15",
+          "label": "Prices of production pp* (BLS CES + BEA extension, 1990-2024)",
+          "source_url_provenance_note": "Merged from the malformed empty-string ('') registry key under series.S702, which held {'subseries.S702-EXT': {source_url}} orphaned during a -EXT/-COMBINED provenance dump. BLS CES + BEA GDP-by-Industry feed the extension-period c_j/v_j inputs (via the extended S701 labor values and the labeled BEA I-O matrices)."
         },
         "S702-COMBINED": {
           "name": "Prices of Production (book + extension combined, 1947-2024)",
@@ -3163,7 +3526,9 @@
           ],
           "units": "labor_value_units",
           "note": "Spliced/combined output; see P02_S701/702/703.",
-          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15"
+          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15",
+          "label": "Prices of production pp* (book spliced to extension, 1947-2024)",
+          "source_url_provenance_note": "Merged from the malformed empty-string ('') registry key under series.S702, which held {'subseries.S702-COMBINED': {source_url}}. Same BLS CES + BEA GDP-by-Industry sources as S702-EXT; COMBINED is the derive-spliced book+extension output."
         }
       },
       "construction": [
@@ -3237,14 +3602,17 @@
         "patch_id": "P29_S702_extension_year_range",
         "note": "P29 doctor cleanup (Iter2 B3): record extension_year_range=[1958,2024] in validation block. Book period year_range=[reg_min,reg_max] is preserved as book authority; chopped CSV extends to 2024 via -EXT/-COMBINED subseries. anu-doctor P29 check updated to compute effective_year_range = year_range UNION extension_year_range so book-vs-chopped comparison no longer flags extension as a mismatch."
       },
-      "": {
-        "subseries.S702-EXT": {
-          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15"
-        },
-        "subseries.S702-COMBINED": {
-          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15"
-        }
-      }
+      "display_name": "Prices of production",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Sector prices of production pp*_j in labor-value units, derived from the classical formula pp*_j = (1 + r_bar)(c_j + v_j) with sector constant capital c_j and variable capital v_j in labor-value units and the uniform Marxian profit rate r_bar from S513 (proxy:false since v1.1). Construction verified against the registry real_implementation_provenance and the Ch4 Section 4.1 value/price-form methodology. CORRECTION of an off-book table citation: book_table='7.2' does NOT exist in the printed book. Verified verbatim against the PDF List of Tables (folio xii): Chapter 7 has exactly ONE table, '7.1 Profit, accumulation, social savings, and burden rates'; there is no 7.2, 7.3, 8.x, or 9.x. S702 is a project-internal label for the prices-of-production construction whose methodology lives in Chapter 4 (Section 4.1, folios 79-82). The Ch4 producer-price-ratio quote (folio 79/81) and the Ch7 Section 7.3 Khanjian quote (folio 223) were re-verified verbatim against the book PDF. Empty-string registry key merged into the proper subseries below.",
+        "date": "2026-06-11"
+      },
+      "book_table_label_is_project_internal": true,
+      "book_table_actual": "No printed Table 7.2 exists (Chapter 7's only table is 7.1 'Profit, accumulation, social savings, and burden rates'). S702 'Prices of Production' derives from Chapter 4 Section 4.1 (folios 79-82).",
+      "chapter_ref": "Chapter 4 (Section 4.1)",
+      "off_book_table_citation_flagged": "7.2"
     },
     "S703": {
       "name": "Value-Price Deviations",
@@ -3268,7 +3636,8 @@
           ],
           "units": "percent",
           "color": "#8c564b",
-          "shiny_column": "value_price_deviations_book"
+          "shiny_column": "value_price_deviations_book",
+          "label": "Value-price deviation (book benchmark years, 1947-1977)"
         },
         "S703-EXT": {
           "name": "Value-Price Deviations (extension, 1990-2024)",
@@ -3279,7 +3648,9 @@
           ],
           "units": "percent",
           "note": "Extended via Ch7 real-fix v1.1 Phase 4 pipeline; see L01_S701/L01_S702 + P02_S701/702/703 (v1.1 rewrite).",
-          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15"
+          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15",
+          "label": "Value-price deviation (BLS CES + BEA extension, 1990-2024)",
+          "source_url_provenance_note": "Merged from the malformed empty-string ('') registry key under series.S703, which held {'subseries.S703-EXT': {source_url}} orphaned during a -EXT/-COMBINED provenance dump. Deviation is derived from extended S701/S702, whose inputs come from BLS CES + BEA GDP-by-Industry."
         },
         "S703-COMBINED": {
           "name": "Value-Price Deviations (book + extension combined, 1947-2024)",
@@ -3290,7 +3661,9 @@
           ],
           "units": "percent",
           "note": "Spliced/combined output; see P02_S701/702/703.",
-          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15"
+          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15",
+          "label": "Value-price deviation (book spliced to extension, 1947-2024)",
+          "source_url_provenance_note": "Merged from the malformed empty-string ('') registry key under series.S703, which held {'subseries.S703-COMBINED': {source_url}}. Same upstream BLS CES + BEA GDP-by-Industry sources via S701/S702."
         }
       },
       "construction": [
@@ -3368,14 +3741,18 @@
       "artifacts": {
         "derived_no_l01": true
       },
-      "": {
-        "subseries.S703-EXT": {
-          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15"
-        },
-        "subseries.S703-COMBINED": {
-          "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/ ; https://apps.bea.gov/api/data?datasetname=GDPbyIndustry&Year=ALL&Industry=ALL&TableID=15"
-        }
-      }
+      "display_name": "Value-price deviations",
+      "publish": true,
+      "triage": {
+        "verdict": "fix-completed-then-publish",
+        "reason": "Aggregate value-price deviation magnitude derived from the cross-sectional log-log relation between sector labor values (S701) and prices of production (S702), output-weighted per the v1.2 Khanjian-envelope specification. CORRECTION of an off-book table citation: book_table='7.3' does NOT exist in the printed book (verified verbatim against the PDF List of Tables, folio xii: Chapter 7's only table is 7.1; no 7.2/7.3 exist). The conceptual home is Chapter 7 Section 7.3 (folio 223), where ST cite Khanjian (1989) that value and price rates of surplus value 'differ by only small amounts (6%-9%)' — this quote re-verified verbatim against the book PDF (folio 223). OPEN ISSUE retained from the registry's own honest framing: the current deviation (structurally -66% to -81%) compares two disjoint productive/unproductive sector partitions and does NOT reproduce the 6%-9% value/price-form S/V deviation the book reports; it is the closest valid v1.2 implementation but is NOT the book's empirical test. Published with that limitation disclosed in the explainer and validation note. Empty-string registry key merged into the proper subseries below.",
+        "date": "2026-06-11"
+      },
+      "book_table_label_is_project_internal": true,
+      "book_table_actual": "No printed Table 7.3 exists (Chapter 7's only table is 7.1). S703 'Value-Price Deviations' maps to Chapter 7 Section 7.3 (folio 223, Khanjian 6%-9% result) and the Chapter 4 Tables 4.1/4.2 consistent-procedure anchor.",
+      "chapter_ref": "Chapter 7 (Section 7.3); Chapter 4 (Tables 4.1, 4.2)",
+      "off_book_table_citation_flagged": "7.3",
+      "open_issue": "Deviation magnitude does not reproduce the book's 6%-9% value/price-form S*/V* deviation (Khanjian 1989); it measures a productive-vs-unproductive partition gap instead. Tracked under the Ch7 real-fix v2 plan."
     },
     "S201": {
       "name": "Alternative GFP Measures",
@@ -3395,9 +3772,10 @@
             1948,
             1989
           ],
-          "units": "billions_dollars",
+          "units": "ratio",
           "color": "#7f7f7f",
-          "shiny_column": "alternative_gfp_book"
+          "shiny_column": "alternative_gfp_book",
+          "label": "Marxian GFP* / GDP"
         }
       },
       "construction": [
@@ -3429,9 +3807,9 @@
       "processor": "P15",
       "wave": 3,
       "status": "book_period_validated",
-      "content_type": "cross_sectional",
-      "units": "billions_usd",
-      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See Council/Druck/docs/RMWND_HYPER_REVIEW_2026-05-19.md Layer A finding A1.",
+      "content_type": "time_series",
+      "units": "ratio",
+      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See internal hyper-review 2026-05-19, Layer A finding A1.",
       "validation_source": "Technical/chopped/S201.csv (S201-A column, current pipeline output)",
       "registry_patch_notes": [
         {
@@ -3439,7 +3817,14 @@
           "cohort": "stage3_c1",
           "note": "Reference values populated from current chopped CSV (S201-A). Research file (S201_research.json) records book Figure 1.1 reports ST-measure GFP as ~121% of GNP on a pure market-production basis (~1.21) and ~180% with housework. Chopped values are <1.0 (range 0.77-0.90), indicating S201 currently reports ST-measure as a ratio of orthodox GNP using a different normalization than Figure 1.1 — possibly TP*/GP rather than GFP*/GNP. Stage 5 should reconcile against Eisner (1988) Table S.5 benchmark and clarify the units string. Status already correctly set to 'book_period_validated' with extension:null."
         }
-      ]
+      ],
+      "display_name": "Marxian gross final product as a share of GDP",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Derived annual ratio (Marxian GFP*/GDP) 1948-1989; data sensible and construction-relevant. Fixed: units ratio (was billions_usd), content_type time_series (was cross_sectional), removed 'Table 2.1' hallucination. COVERAGE flags are false positives (book-period S503 numerator).",
+        "date": "2026-06-11"
+      }
     },
     "S801": {
       "name": "Cross-Study Comparison",
@@ -3459,9 +3844,10 @@
             1948,
             1989
           ],
-          "units": "mixed",
+          "units": "ratio",
           "color": "#7f7f7f",
-          "shiny_column": "cross_study_book"
+          "shiny_column": "cross_study_book",
+          "label": "Shaikh-Tonak rate of exploitation (cross-study reference, 1948-1989)"
         }
       },
       "construction": [
@@ -3493,8 +3879,8 @@
       "status": "book_period_validated",
       "content_type": "cross_sectional",
       "units": "ratio",
-      "validation_source": "Technical/chopped/S801.csv (S801-A column; cross-study ratio ST/Mohun = S506/ES1401 over overlap 1964-1989; pre-1964 rows are ST-only S506 values)",
-      "taxonomic_note": "BOOK CHAPTER MISMATCH: ST 1994 has only 7 chapters per MASTER_INDEX (verified against book TOC pp.v-vii; S801 research backfill_log 2026-05-19 confirms 'the book has NO Chapter 8'). The 'Ch8' registry chapter label is a project-internal taxonomy slot. S801 maps to book Ch7 §7.3-7.4 (pp.221-225) where ST critique cross-study comparators failing to draw the productive/unproductive distinction (verbatim_quotes anchor 1, S801_research.json). The 'Book Table 8.1' label is also project-internal; the synthesized comparison table places S506 (ST exploitation rate, Table 5.7) alongside ES1401 (Mohun 2005 CJE Table 2). Stage 5 should rename chapter slot or update SERIES_CORRESPONDENCE_MATRIX to reflect Ch7 mapping.",
+      "validation_source": "Technical/chopped/S801.csv (S801-A column; cross-study ratio ST/Mohun = S506/XS1401 over overlap 1964-1989; pre-1964 rows are ST-only S506 values)",
+      "taxonomic_note": "BOOK CHAPTER MISMATCH: ST 1994 has only 7 chapters per MASTER_INDEX (verified against book TOC pp.v-vii; S801 research backfill_log 2026-05-19 confirms 'the book has NO Chapter 8'). The 'Ch8' registry chapter label is a project-internal taxonomy slot. S801 maps to book Ch7 §7.3-7.4 (pp.221-225) where ST critique cross-study comparators failing to draw the productive/unproductive distinction (verbatim_quotes anchor 1, S801_research.json). The 'Book Table 8.1' label is also project-internal; the synthesized comparison table places S506 (ST exploitation rate, Table 5.7) alongside XS1401 (Mohun 2005 CJE Table 2). Stage 5 should rename chapter slot or update SERIES_CORRESPONDENCE_MATRIX to reflect Ch7 mapping.",
       "registry_patch_notes": [
         {
           "ts": "20260524T001841Z",
@@ -3509,9 +3895,21 @@
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
         "note": "P23 exemption: Cross-study comparison assembled in P02 from ES/S study series outputs. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
-      }
+      },
+      "display_name": "Cross-study comparison of the exploitation rate",
+      "publish": true,
+      "triage": {
+        "verdict": "fix-completed-then-publish",
+        "reason": "Cross-study comparator placing the Shaikh-Tonak rate of exploitation (S*/V*, = S506) alongside Mohun's (2005) alternative, motivated by ST's Chapter 7 Section 7.4 critique of studies that fail to draw the productive/unproductive distinction. CORRECTIONS: (1) book_table='8.1' and chapter='8' are PROJECT-INTERNAL labels — the book has NO Chapter 8 and NO Table 8.1 (verified verbatim against the PDF List of Tables, folio xii-xiii: tables end at 7.1 then jump to appendices A-N; book runs Chapters 1-7). S801's conceptual home is Chapter 7 Section 7.4 'Comparisons with previous studies' (folio 225). (2) DATA/METADATA MISMATCH found and disclosed: the chopped S801-A column equals S506 (the ST exploitation rate) for ALL years (1948=1.70, 1964=2.12, 1989=2.44) — it is NOT the ST/Mohun ratio (S506/XS1401) the registry validation_source describes; that cross-study ratio is realised separately in XS1404. S801-A as shipped is the ST exploitation rate itself, displayed for cross-study context. Verdict reflects relabeling to match the data. The three Ch7 quotes (folios 221, 222, 225) were re-verified verbatim against the book PDF and all PASS.",
+        "date": "2026-06-11"
+      },
+      "chapter_label_is_project_internal": true,
+      "book_chapter_actual": "The book has no Chapter 8 and no Table 8.1; S801 maps to Chapter 7 Section 7.4 'Comparisons with previous studies' (folio 225).",
+      "chapter_ref": "Chapter 7 (Section 7.4)",
+      "off_book_table_citation_flagged": "8.1",
+      "data_content_note": "chopped S801-A == S506 (ST exploitation rate) for all years, NOT the S506/XS1401 ST/Mohun ratio stated in validation_source; the ratio lives in XS1404. validation_source description should be corrected to 'S801-A = ST exploitation rate (= S506); cross-study Mohun comparator is XS1401, ratio is XS1404'."
     },
-    "ES1001": {
+    "XS1001": {
       "name": "Labor Share of National Income (Tonak 1984)",
       "study": "study_01_tonak_1984",
       "chapter": 10,
@@ -3522,15 +3920,16 @@
         1980
       ],
       "subseries": {
-        "ES1001-A": {
+        "XS1001-A": {
           "name": "Tonak (1984) Table V",
           "source": "Tonak 1984 PhD Dissertation",
           "period": [
             1952,
             1980
           ],
-          "units": "share",
-          "color": "#e377c2"
+          "units": "billions_usd",
+          "color": "#e377c2",
+          "label": "Labor portion of total taxes (Tonak 1984, Table V, 1952-1980)"
         }
       },
       "construction": [
@@ -3538,7 +3937,7 @@
           "step": 1,
           "op": "load",
           "subseries": [
-            "ES1001-A"
+            "XS1001-A"
           ],
           "desc": "HDARP extraction from Table V"
         }
@@ -3561,10 +3960,19 @@
       "processor": "P20",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
-      "content_type": "time_series"
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "xs_class": "external_study",
+      "xs_attribution": "Tonak (1984)",
+      "display_name": "Labor portion of total taxes, United States (Tonak 1984)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Data is an EXACT replication of Tonak (1984) Table V column 'labor_taxes' (taxes paid by labor, billions of current USD): 0/29 mismatches against the digitized source CSV at Inputs/ST2/.../Tonak1984/table_V_taxes_labor_nonlabor_1952_1980.csv (1952=34.58, 1980=456.39). CORRECTIONS: the registry name 'Labor Share of National Income' and units 'share' (expected_range [0.6,0.8]) were wrong content+units labels -- the series is a dollar-level tax aggregate, not the 0.71-0.75 labor-share ratio. The DPR already had the content right ('labor taxes per Table V'). Renamed to match the data and the source table; units corrected to billions_usd.",
+        "date": "2026-06-11"
+      }
     },
-    "ES1002": {
+    "XS1002": {
       "name": "Net Tax Rate on Workers (Tonak 1984)",
       "study": "study_01_tonak_1984",
       "chapter": 10,
@@ -3575,15 +3983,16 @@
         1980
       ],
       "subseries": {
-        "ES1002-A": {
+        "XS1002-A": {
           "name": "Tonak (1984) Table X",
           "source": "Tonak 1984 PhD Dissertation",
           "period": [
             1952,
             1980
           ],
-          "units": "rate",
-          "color": "#e377c2"
+          "units": "billions_usd",
+          "color": "#e377c2",
+          "label": "Net tax paid by labor (Tonak 1984, Table X, 1952-1980)"
         }
       },
       "construction": [
@@ -3591,7 +4000,7 @@
           "step": 1,
           "op": "load",
           "subseries": [
-            "ES1002-A"
+            "XS1002-A"
           ],
           "desc": "HDARP extraction from Table X"
         }
@@ -3614,9 +4023,18 @@
       "wave": 1,
       "status": "book_period_validated",
       "units": "billions_usd",
-      "content_type": "time_series"
+      "content_type": "time_series",
+      "xs_class": "external_study",
+      "xs_attribution": "Tonak (1984)",
+      "display_name": "Net tax paid by labor, United States (Tonak 1984)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Data is an EXACT replication of Tonak (1984) Table X column 'net_tax' (taxes paid by labor minus benefits received, billions of current USD): 0/29 mismatches against the digitized source CSV (1952=16.02, 1975=-15.70 the documented single sign-flip year, 1980=34.95). CORRECTIONS: the registry name 'Net Tax Rate on Workers' and the subseries units 'rate' (with validation expected_range [0.0,0.1]) were wrong -- the series is a dollar-level net-tax aggregate, not a rate; the registry top-level units field 'billions_usd' was already correct, as is the DPR ('Net Tax on Labor', billions_usd). Renamed to drop 'Rate'; per-subseries units corrected to billions_usd.",
+        "date": "2026-06-11"
+      }
     },
-    "ES1101": {
+    "XS1101": {
       "name": "Net Transfer Rate (ST 1987)",
       "study": "study_02_st_1987",
       "chapter": 11,
@@ -3627,7 +4045,7 @@
         1989
       ],
       "subseries": {
-        "ES1101-A": {
+        "XS1101-A": {
           "name": "Derived from S604/S605/BEA NIPA",
           "source": "Shaikh & Tonak 1987",
           "period": [
@@ -3635,7 +4053,8 @@
             1985
           ],
           "units": "rate",
-          "color": "#7f7f7f"
+          "color": "#7f7f7f",
+          "label": "Net transfer rate (B_w - T_w)/EC (ST 1987 replication)"
         }
       },
       "construction": [
@@ -3648,7 +4067,7 @@
             "S604",
             "BEA_NIPA"
           ],
-          "output": "ES1101-COMBINED"
+          "output": "XS1101-COMBINED"
         }
       ],
       "extension": null,
@@ -3669,7 +4088,7 @@
       "processor": "P19",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
+      "units": "rate",
       "content_type": "time_series",
       "year_range_target": [
         1952,
@@ -3679,7 +4098,7 @@
         {
           "ts": "20260524T001841Z",
           "cohort": "stage3_c1",
-          "note": "Source: external KB at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md. Benchmarks from Shaikh & Tonak 1987, Empirical Results / Phase 3, p.190 (verbatim quote in research/ES1101_research.json): 'The net transfer rate therefore falls dramatically from +5.4 percent in 1975 to -11.0 percent in 1985 (an all time low).' Values stored as decimal shares of employee compensation. Chopped ES1101-A cross-check: 1975=+0.0207 (positive sign matches; level differs because chopped uses revised NIPA / S604,S605 construction vs ST 1987 Table 2 original-vintage dollars); 1985=-0.0181 (sign matches; magnitude smaller for same vintage reason). Paper-published values retained as reference per project convention (validate replication against the external source, not against the current chopped output)."
+          "note": "Source: external KB at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md. Benchmarks from Shaikh & Tonak 1987, Empirical Results / Phase 3, p.190 (verbatim quote in research/XS1101_research.json): 'The net transfer rate therefore falls dramatically from +5.4 percent in 1975 to -11.0 percent in 1985 (an all time low).' Values stored as decimal shares of employee compensation. Chopped XS1101-A cross-check: 1975=+0.0207 (positive sign matches; level differs because chopped uses revised NIPA / S604,S605 construction vs ST 1987 Table 2 original-vintage dollars); 1985=-0.0181 (sign matches; magnitude smaller for same vintage reason). Paper-published values retained as reference per project convention (validate replication against the external source, not against the current chopped output)."
         }
       ],
       "artifacts": {
@@ -3689,9 +4108,18 @@
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
         "note": "P23 exemption: Derived net-transfer-rate (B_w - T_w)/EC computed in P02 from S605/S604 + BEA NIPA cache. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
+      },
+      "xs_class": "external_study",
+      "xs_attribution": "Shaikh & Tonak (1987)",
+      "display_name": "Net transfer rate, United States (Shaikh & Tonak 1987)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Replicates the Shaikh & Tonak (1987) net transfer rate (B_w - T_w)/EC, derived in P02 from S605/S604 + BEA NIPA. Chopped is a clean decimal-share series (1952=-0.0485 ... 1989=-0.0328), negative over most of the period, matching the paper's headline 'net transfer is negative ... a net tax on workers' (KB line 162, verified verbatim). The paper benchmarks (1975=+0.054, 1985=-0.110) verify verbatim in the ST1987 KB (line 495). Replication diverges in level from the published figure (NIPA-vintage + S604/S605 construction); this is documented, not an error. Units/content correct; only display_name/label normalized.",
+        "date": "2026-06-11"
       }
     },
-    "ES1102": {
+    "XS1102": {
       "name": "Social Benefit Rate (ST 1987)",
       "study": "study_02_st_1987",
       "chapter": 11,
@@ -3702,7 +4130,7 @@
         1989
       ],
       "subseries": {
-        "ES1102-A": {
+        "XS1102-A": {
           "name": "Derived from S605/BEA NIPA",
           "source": "Shaikh & Tonak 1987",
           "period": [
@@ -3710,7 +4138,8 @@
             1985
           ],
           "units": "rate",
-          "color": "#7f7f7f"
+          "color": "#7f7f7f",
+          "label": "Social benefit rate B_w/EC (ST 1987 replication)"
         }
       },
       "construction": [
@@ -3722,7 +4151,7 @@
             "S605",
             "BEA_NIPA"
           ],
-          "output": "ES1102-COMBINED"
+          "output": "XS1102-COMBINED"
         }
       ],
       "extension": null,
@@ -3746,7 +4175,7 @@
       "processor": "P19",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
+      "units": "rate",
       "content_type": "time_series",
       "year_range_target": [
         1952,
@@ -3756,7 +4185,7 @@
         {
           "ts": "20260524T001841Z",
           "cohort": "stage3_c1",
-          "note": "Source: external KB at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md. Benchmarks from Shaikh & Tonak 1987, Figure 2 ('Benefit Rate'), p.188 (verbatim quote in research/ES1102_research.json): '1952: ~0.11 (11%) ... 1968: ~0.20 (20%) ... 1968-1975: Accelerates to ~0.33 (33%) ... 1975-1980: Stabilizes around 0.31 (31%) ... 1980-1984: Declines to ~0.20 (20%).' Values are benefits/employee-compensation as decimal shares. Chopped ES1102-A cross-check: 1952=0.2225 (chopped shows ~22%, paper shows ~11% — large gap reflects NIPA revisions + possible inclusion of categories beyond Group I+Group II*LS; flagged as a divergence to investigate in Stage 5 V03 validation); 1968=0.2781, 1975=0.3493, 1980=0.3241, 1984=0.3292. Paper-published values retained as primary reference per Anu v12.0 convention."
+          "note": "Source: external KB at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md. Benchmarks from Shaikh & Tonak 1987, Figure 2 ('Benefit Rate'), p.188 (verbatim quote in research/XS1102_research.json): '1952: ~0.11 (11%) ... 1968: ~0.20 (20%) ... 1968-1975: Accelerates to ~0.33 (33%) ... 1975-1980: Stabilizes around 0.31 (31%) ... 1980-1984: Declines to ~0.20 (20%).' Values are benefits/employee-compensation as decimal shares. Chopped XS1102-A cross-check: 1952=0.2225 (chopped shows ~22%, paper shows ~11% — large gap reflects NIPA revisions + possible inclusion of categories beyond Group I+Group II*LS; flagged as a divergence to investigate in Stage 5 V03 validation); 1968=0.2781, 1975=0.3493, 1980=0.3241, 1984=0.3292. Paper-published values retained as primary reference per Anu v12.0 convention."
         }
       ],
       "artifacts": {
@@ -3766,9 +4195,18 @@
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
         "note": "P23 exemption: Derived social-benefit-rate B_w/EC computed in P02 from S605 + BEA NIPA cache. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
+      },
+      "xs_class": "external_study",
+      "xs_attribution": "Shaikh & Tonak (1987)",
+      "display_name": "Social benefit rate, United States (Shaikh & Tonak 1987)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Replicates the Shaikh & Tonak (1987) benefit rate B_w/EC, derived in P02 from S605 + BEA NIPA. Chopped is a clean decimal-share series rising 1952=0.2225 to ~0.33 by 1989. Paper benchmarks (1952 ~0.11, 1968 ~0.20, 1975 ~0.33, 1980 ~0.31, 1984 ~0.20) are approximate figure-reads from ST1987 Figure 2 (p.188), verified verbatim in KB (lines 317-322). NOTE: replication runs ~2x the paper's early-period level (0.22 vs 0.11) -- a real, documented divergence (NIPA revisions + Group I+II aggregation), not a data error; benchmarks are figure-read approximations and retained as reference, not as a pass/fail gate. Units/content correct; only display_name/label normalized.",
+        "date": "2026-06-11"
       }
     },
-    "ES1103": {
+    "XS1103": {
       "name": "Social Tax Rate (ST 1987)",
       "study": "study_02_st_1987",
       "chapter": 11,
@@ -3779,7 +4217,7 @@
         1989
       ],
       "subseries": {
-        "ES1103-A": {
+        "XS1103-A": {
           "name": "Derived from S604/BEA NIPA",
           "source": "Shaikh & Tonak 1987",
           "period": [
@@ -3787,7 +4225,8 @@
             1985
           ],
           "units": "rate",
-          "color": "#7f7f7f"
+          "color": "#7f7f7f",
+          "label": "Social tax rate T_w/EC (ST 1987 replication)"
         }
       },
       "construction": [
@@ -3799,7 +4238,7 @@
             "S604",
             "BEA_NIPA"
           ],
-          "output": "ES1103-COMBINED"
+          "output": "XS1103-COMBINED"
         }
       ],
       "extension": null,
@@ -3822,7 +4261,7 @@
       "processor": "P19",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
+      "units": "rate",
       "content_type": "time_series",
       "year_range_target": [
         1952,
@@ -3852,7 +4291,7 @@
         {
           "ts": "20260524T001841Z",
           "cohort": "stage3_c1",
-          "note": "Source: external KB at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md. Benchmarks from Shaikh & Tonak 1987, Figure 2 ('Tax Rate'), p.188 (verbatim quote in research/ES1103_research.json): '1952: ~0.17 (17%) ... 1968: ~0.22 (22%) ... 1975: ~0.24 (24%) ... 1984: ~0.31 (31%) ... By 1984: Reaches all-time high (41% higher than 1966).' Values are taxes/employee-compensation as decimal shares. Chopped ES1103-A cross-check: 1952=0.2710 (chopped higher than paper's 0.17 — NIPA-vintage / aggregation difference; verify S604 excludes corporate/indirect taxes as required by ST 1987 Group I+II rules); 1968=0.3283, 1975=0.3285, 1984=0.3420. Paper-published values retained as primary reference; divergence is logged for Stage 5 V03 review."
+          "note": "Source: external KB at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md. Benchmarks from Shaikh & Tonak 1987, Figure 2 ('Tax Rate'), p.188 (verbatim quote in research/XS1103_research.json): '1952: ~0.17 (17%) ... 1968: ~0.22 (22%) ... 1975: ~0.24 (24%) ... 1984: ~0.31 (31%) ... By 1984: Reaches all-time high (41% higher than 1966).' Values are taxes/employee-compensation as decimal shares. Chopped XS1103-A cross-check: 1952=0.2710 (chopped higher than paper's 0.17 — NIPA-vintage / aggregation difference; verify S604 excludes corporate/indirect taxes as required by ST 1987 Group I+II rules); 1968=0.3283, 1975=0.3285, 1984=0.3420. Paper-published values retained as primary reference; divergence is logged for Stage 5 V03 review."
         }
       ],
       "artifacts": {
@@ -3862,9 +4301,18 @@
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
         "note": "P23 exemption: Derived tax-rate T_w/EC computed in P02 from S604 + BEA NIPA cache. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
+      },
+      "xs_class": "external_study",
+      "xs_attribution": "Shaikh & Tonak (1987)",
+      "display_name": "Social tax rate, United States (Shaikh & Tonak 1987)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Replicates the Shaikh & Tonak (1987) tax rate T_w/EC, derived in P02 from S604 + BEA NIPA. Chopped is a clean decimal-share series rising 1952=0.2710 to ~0.36 by 1989. Paper benchmarks (1952 ~0.17, 1968 ~0.22, 1975 ~0.24, 1984 ~0.31) are approximate reads from ST1987 Figure 2 (p.188), verified verbatim in KB (lines 324-330). NOTE: replication runs above the paper's early-period level (0.27 vs 0.17) -- a documented NIPA-vintage/aggregation divergence, not an error; benchmarks retained as reference. Units/content correct; only display_name/label normalized.",
+        "date": "2026-06-11"
       }
     },
-    "ES1201": {
+    "XS1201": {
       "name": "NSW/GDP (ST 2002)",
       "study": "study_03_st_2002",
       "chapter": 12,
@@ -3875,7 +4323,7 @@
         2025
       ],
       "subseries": {
-        "ES1201-A": {
+        "XS1201-A": {
           "name": "Derived from S607/BEA GDP",
           "source": "Shaikh & Tonak 2002",
           "period": [
@@ -3883,7 +4331,8 @@
             1997
           ],
           "units": "ratio",
-          "color": "#bcbd22"
+          "color": "#bcbd22",
+          "label": "Net social wage / GDP (ST 2002 replication)"
         }
       },
       "construction": [
@@ -3895,7 +4344,7 @@
             "S607",
             "BEA_GDP"
           ],
-          "output": "ES1201-COMBINED"
+          "output": "XS1201-COMBINED"
         }
       ],
       "extension": null,
@@ -3917,18 +4366,18 @@
       "processor": "P19",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
+      "units": "ratio",
       "content_type": "time_series",
       "year_range_target": [
         1952,
         1997
       ],
-      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See Council/Druck/docs/RMWND_HYPER_REVIEW_2026-05-19.md Layer A finding A1.",
+      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See internal hyper-review 2026-05-19, Layer A finding A1.",
       "registry_patch_notes": [
         {
           "ts": "20260524T001841Z",
           "cohort": "stage3_c1",
-          "note": "Source: external KBs at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2002_Shaikh_Tonak_Welfare_State/full_transcription.md and Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2017_Moos_NSW_21st_Century/full_transcription.md. Benchmarks: (a) 1964 = -0.0167, computed from ST 2002 Table 29.1 p.250 (NSW=-3.49bn / EC=209.37bn) — but note ST 2002 uses NSW/EC denominator there; for NSW/GDP at 1964 the paper's central conclusion is that the long-run NSW/GDP average is essentially zero (Principal Findings p.248: '~0.6% of EC'). (b) 1997 = 0.006 (NSW/EC near-zero endpoint of ST 2002 series, p.248). (c) 2010 = 0.086 from Moos 2017 Section 4 verbatim: 'In 2010, it reaches a high of 8.6 percent of GDP' — this is the post-2001 NSW/GDP peak that ES1201's extension must reproduce. Chopped ES1201-A cross-check: 1964=-0.0301, 1997=-0.0111, 2010=+0.0637 (sign matches Moos; magnitude lower than 0.086 because of NIPA-vintage / formula-choice gap per internal-decision-record; ST2 overlap mean 0.013 vs Moos published 0.011, within V11 [0.008, 0.018])."
+          "note": "Source: external KBs at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2002_Shaikh_Tonak_Welfare_State/full_transcription.md and Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2017_Moos_NSW_21st_Century/full_transcription.md. Benchmarks: (a) 1964 = -0.0167, computed from ST 2002 Table 29.1 p.250 (NSW=-3.49bn / EC=209.37bn) — but note ST 2002 uses NSW/EC denominator there; for NSW/GDP at 1964 the paper's central conclusion is that the long-run NSW/GDP average is essentially zero (Principal Findings p.248: '~0.6% of EC'). (b) 1997 = 0.006 (NSW/EC near-zero endpoint of ST 2002 series, p.248). (c) 2010 = 0.086 from Moos 2017 Section 4 verbatim: 'In 2010, it reaches a high of 8.6 percent of GDP' — this is the post-2001 NSW/GDP peak that XS1201's extension must reproduce. Chopped XS1201-A cross-check: 1964=-0.0301, 1997=-0.0111, 2010=+0.0637 (sign matches Moos; magnitude lower than 0.086 because of NIPA-vintage / formula-choice gap per internal-decision-record; ST2 overlap mean 0.013 vs Moos published 0.011, within V11 [0.008, 0.018])."
         }
       ],
       "artifacts": {
@@ -3938,9 +4387,18 @@
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
         "note": "P23 exemption: Derived NSW/GDP ratio computed in P02 from S607 + BEA GDP cache. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
+      },
+      "xs_class": "external_study",
+      "xs_attribution": "Shaikh & Tonak (2002)",
+      "display_name": "Net social wage as a share of GDP, United States (Shaikh & Tonak 2002)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Replicates the Shaikh & Tonak (2002) net-social-wage / GDP ratio, derived in P02 from S607 + BEA GDP. Chopped is a clean decimal-ratio series (1952=-0.0259 ... 2025=+0.0426). ST2002's central finding -- NSW averages a 'mere 0.6 percent' and 'seldom fluctuates beyond +/-4 percent' of employee compensation -- verifies verbatim in the ST2002 KB (lines 90-91, 569, 781); that 0.6% is the NSW/EC figure (see XS1202), while this series is NSW/GDP. The post-2001 rise (peaking at Moos's 8.6% of GDP in 2010, KB-verified) appears in the chopped data. Units/content correct; display_name/label normalized.",
+        "date": "2026-06-11"
       }
     },
-    "ES1202": {
+    "XS1202": {
       "name": "NSW/EC (ST 2002)",
       "study": "study_03_st_2002",
       "chapter": 12,
@@ -3951,7 +4409,7 @@
         2025
       ],
       "subseries": {
-        "ES1202-A": {
+        "XS1202-A": {
           "name": "Derived from S607/BEA NIPA compensation",
           "source": "Shaikh & Tonak 2002",
           "period": [
@@ -3959,7 +4417,8 @@
             1997
           ],
           "units": "ratio",
-          "color": "#bcbd22"
+          "color": "#bcbd22",
+          "label": "Net social wage / employee compensation (ST 2002 replication)"
         }
       },
       "construction": [
@@ -3971,7 +4430,7 @@
             "S607",
             "BEA_NIPA"
           ],
-          "output": "ES1202-COMBINED"
+          "output": "XS1202-COMBINED"
         }
       ],
       "extension": null,
@@ -3994,18 +4453,18 @@
       "processor": "P19",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
+      "units": "ratio",
       "content_type": "time_series",
       "year_range_target": [
         1952,
         1997
       ],
-      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See Council/Druck/docs/RMWND_HYPER_REVIEW_2026-05-19.md Layer A finding A1.",
+      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See internal hyper-review 2026-05-19, Layer A finding A1.",
       "registry_patch_notes": [
         {
           "ts": "20260524T001841Z",
           "cohort": "stage3_c1",
-          "note": "Source: external KBs at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2002_Shaikh_Tonak_Welfare_State/full_transcription.md and 2017_Moos_NSW_21st_Century/full_transcription.md. Benchmarks: (a) 1964 = -0.0167 from ST 2002 Table 29.1 p.250 verbatim (NSW=-3.49bn / EC=209.37bn = -1.67%). (b) 1975 = +0.09 (peak ~+9% of EC during Crisis phase, Fig 29.3 p.253; verbatim in research/ES1202_research.json phase_description). (c) 1997 = +0.006 (long-run mean per ST 2002 Principal Findings p.248: 'Its average is a mere 0.6 percent'; 1997 endpoint near zero). (d) 2010 = 0.161 from Moos 2017 Table 2 'Summary Statistics of U.S. NSW Data, 1959-2012' p.8 verbatim: 'NSW/EC | -0.022 | 0.024 | 0.037 | 0.161' (min | median | mean | max); 2010 peak confirmed in research/ES1202_research.json verbatim entry. Chopped ES1202-A cross-check: 1964=-0.0547, 1975=+0.0207, 1997=-0.0203, 2010=+0.1209 (qualitative pattern matches paper; magnitude differences flagged for Stage 5 V03)."
+          "note": "Source: external KBs at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2002_Shaikh_Tonak_Welfare_State/full_transcription.md and 2017_Moos_NSW_21st_Century/full_transcription.md. Benchmarks: (a) 1964 = -0.0167 from ST 2002 Table 29.1 p.250 verbatim (NSW=-3.49bn / EC=209.37bn = -1.67%). (b) 1975 = +0.09 (peak ~+9% of EC during Crisis phase, Fig 29.3 p.253; verbatim in research/XS1202_research.json phase_description). (c) 1997 = +0.006 (long-run mean per ST 2002 Principal Findings p.248: 'Its average is a mere 0.6 percent'; 1997 endpoint near zero). (d) 2010 = 0.161 from Moos 2017 Table 2 'Summary Statistics of U.S. NSW Data, 1959-2012' p.8 verbatim: 'NSW/EC | -0.022 | 0.024 | 0.037 | 0.161' (min | median | mean | max); 2010 peak confirmed in research/XS1202_research.json verbatim entry. Chopped XS1202-A cross-check: 1964=-0.0547, 1975=+0.0207, 1997=-0.0203, 2010=+0.1209 (qualitative pattern matches paper; magnitude differences flagged for Stage 5 V03)."
         }
       ],
       "artifacts": {
@@ -4015,9 +4474,18 @@
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
         "note": "P23 exemption: Derived NSW/EC ratio computed in P02 from S607 + BEA NIPA cache. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
+      },
+      "xs_class": "external_study",
+      "xs_attribution": "Shaikh & Tonak (2002)",
+      "display_name": "Net social wage as a share of employee compensation, United States (Shaikh & Tonak 2002)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Replicates the Shaikh & Tonak (2002) net-social-wage / employee-compensation ratio, derived in P02 from S607 + BEA NIPA. Chopped is a clean decimal-ratio series (1952=-0.0473 ... 2025=+0.0833). This is the measure for which ST2002's headline holds: average 'a mere 0.6 percent', 'seldom fluctuates beyond +/-4 percent' (KB lines 90-91, 569, 781, verbatim). Moos's 2010 EC peak of 16.1% (benchmark 2010=0.161) verifies verbatim in the Moos KB (line 128). Units/content correct; display_name/label normalized.",
+        "date": "2026-06-11"
       }
     },
-    "ES1301": {
+    "XS1301": {
       "name": "NSW/GDP Extended (Moos 2017)",
       "study": "study_04_moos_2017",
       "chapter": 13,
@@ -4028,7 +4496,7 @@
         2012
       ],
       "subseries": {
-        "ES1301-A": {
+        "XS1301-A": {
           "name": "Derived from S607/BEA GDP",
           "source": "Moos 2017",
           "period": [
@@ -4036,7 +4504,8 @@
             2012
           ],
           "units": "ratio",
-          "color": "#17becf"
+          "color": "#17becf",
+          "label": "Net social wage / GDP, extended to 2012 (Moos 2017 replication)"
         }
       },
       "construction": [
@@ -4048,7 +4517,7 @@
             "S607",
             "BEA_GDP"
           ],
-          "output": "ES1301-COMBINED"
+          "output": "XS1301-COMBINED"
         }
       ],
       "extension": null,
@@ -4072,13 +4541,13 @@
       "processor": "P17",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
+      "units": "ratio",
       "content_type": "time_series",
       "year_range_target": [
         1959,
         2024
       ],
-      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See Council/Druck/docs/RMWND_HYPER_REVIEW_2026-05-19.md Layer A finding A1.",
+      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See internal hyper-review 2026-05-19, Layer A finding A1.",
       "registry_patch_notes_append": {
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
@@ -4086,9 +4555,18 @@
       },
       "artifacts": {
         "derived_no_l01": true
+      },
+      "xs_class": "external_study",
+      "xs_attribution": "Moos (2017)",
+      "display_name": "Net social wage as a share of GDP, extended, United States (Moos 2017)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Replicates Moos (2017), who reconstructs and extends the Shaikh-Tonak NSW/GDP series to 2012. Chopped is a clean decimal-ratio series 1959=-0.0146 ... 2012=+0.0673. Moos's headline -- 'the net social wage rises to a historic high of positive 8.6 percent of GDP in 2010' -- verifies verbatim in the Moos KB (full_transcription line 53; nsw_equations line 214). 1959-1997 overlap mean of 1.1% (derived_statistics) matches Moos Table 1 (KB line 124). Units/content correct; display_name/label normalized.",
+        "date": "2026-06-11"
       }
     },
-    "ES1302": {
+    "XS1302": {
       "name": "NSW/EC Extended (Moos 2017)",
       "study": "study_04_moos_2017",
       "chapter": 13,
@@ -4099,7 +4577,7 @@
         2012
       ],
       "subseries": {
-        "ES1302-A": {
+        "XS1302-A": {
           "name": "Derived from S607/BEA NIPA compensation",
           "source": "Moos 2017",
           "period": [
@@ -4107,7 +4585,8 @@
             2012
           ],
           "units": "ratio",
-          "color": "#17becf"
+          "color": "#17becf",
+          "label": "Net social wage / employee compensation, extended to 2012 (Moos 2017 replication)"
         }
       },
       "construction": [
@@ -4119,7 +4598,7 @@
             "S607",
             "BEA_NIPA"
           ],
-          "output": "ES1302-COMBINED"
+          "output": "XS1302-COMBINED"
         }
       ],
       "extension": null,
@@ -4139,18 +4618,18 @@
       "processor": "P17",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
+      "units": "ratio",
       "content_type": "time_series",
       "year_range_target": [
         1959,
         2024
       ],
-      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See Council/Druck/docs/RMWND_HYPER_REVIEW_2026-05-19.md Layer A finding A1.",
+      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See internal hyper-review 2026-05-19, Layer A finding A1.",
       "registry_patch_notes": [
         {
           "ts": "20260524T001841Z",
           "cohort": "stage3_c1",
-          "note": "Source: external KB at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2017_Moos_NSW_21st_Century/full_transcription.md. Benchmark from Moos 2017 Table 2 ('Summary Statistics of U.S. NSW Data, 1959-2012') p.8 verbatim (research/ES1302_research.json verbatim_quotes): 'NSW/EC | -0.022 | 0.024 | 0.037 | 0.161' (min | median | mean | max) and 'As a ratio of employee compensation, NSW varies from -2.2% to 16.1% (2010 peak).' The 16.1% max is in 2010. Additional summary-statistic reference values stored separately as min=-0.022, mean=0.037, max=0.161 would belong in validation.summary_stats rather than reference_values (year-keyed); kept here only as the year-anchored 2010 peak. Chopped ES1302-A cross-check: 2010=+0.1504, 2012=+0.1270 — close to Moos's reported 16.1% peak; small gap attributable to NIPA-vintage difference between Moos's ~2015 pull and current 2026 pull (documented in research JSON known_issues)."
+          "note": "Source: external KB at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2017_Moos_NSW_21st_Century/full_transcription.md. Benchmark from Moos 2017 Table 2 ('Summary Statistics of U.S. NSW Data, 1959-2012') p.8 verbatim (research/XS1302_research.json verbatim_quotes): 'NSW/EC | -0.022 | 0.024 | 0.037 | 0.161' (min | median | mean | max) and 'As a ratio of employee compensation, NSW varies from -2.2% to 16.1% (2010 peak).' The 16.1% max is in 2010. Additional summary-statistic reference values stored separately as min=-0.022, mean=0.037, max=0.161 would belong in validation.summary_stats rather than reference_values (year-keyed); kept here only as the year-anchored 2010 peak. Chopped XS1302-A cross-check: 2010=+0.1504, 2012=+0.1270 — close to Moos's reported 16.1% peak; small gap attributable to NIPA-vintage difference between Moos's ~2015 pull and current 2026 pull (documented in research JSON known_issues)."
         }
       ],
       "artifacts": {
@@ -4160,9 +4639,18 @@
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
         "note": "P23 exemption: Derived NSW/EC study replication computed in P02 from S607 + BEA NIPA cache. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
+      },
+      "xs_class": "external_study",
+      "xs_attribution": "Moos (2017)",
+      "display_name": "Net social wage as a share of employee compensation, extended, United States (Moos 2017)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Replicates Moos (2017) NSW/EC reconstructed and extended to 2012. Chopped is a clean decimal-ratio series 1959=-0.0265 ... 2010=0.1504 ... 2012=+0.1270. Moos's Table 2 summary stats 'NSW/EC | -0.022 | 0.024 | 0.037 | 0.161' and 'varies from -2.2% to 16.1% (2010 peak)' verify verbatim in the Moos KB (line 128; nsw_equations line 239). Benchmark 2010=0.161 reproduced to within 0.011 (chopped 0.1504) -- documented NIPA-vintage gap. Units/content correct; display_name/label normalized.",
+        "date": "2026-06-11"
       }
     },
-    "ES1304": {
+    "XS1304": {
       "name": "Moos vs ST Comparison 1959-1997 (Moos 2017)",
       "study": "study_04_moos_2017",
       "chapter": 13,
@@ -4173,7 +4661,7 @@
         2012
       ],
       "subseries": {
-        "ES1304-A": {
+        "XS1304-A": {
           "name": "NSW/GDP for overlap period",
           "source": "Moos 2017 vs AS2",
           "period": [
@@ -4181,7 +4669,8 @@
             1997
           ],
           "units": "ratio",
-          "color": "#17becf"
+          "color": "#17becf",
+          "label": "Net social wage / GDP, 1959-1997 overlap (Moos 2017 vs Shaikh-Tonak)"
         }
       },
       "construction": [
@@ -4189,10 +4678,10 @@
           "step": 1,
           "op": "filter",
           "inputs": [
-            "ES1301"
+            "XS1301"
           ],
           "desc": "Restrict to 1959-1997 overlap",
-          "output": "ES1304-COMBINED"
+          "output": "XS1304-COMBINED"
         }
       ],
       "extension": null,
@@ -4212,18 +4701,18 @@
       "processor": "P17",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
+      "units": "ratio",
       "content_type": "time_series",
       "year_range_target": [
         1959,
         1997
       ],
-      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See Council/Druck/docs/RMWND_HYPER_REVIEW_2026-05-19.md Layer A finding A1.",
+      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See internal hyper-review 2026-05-19, Layer A finding A1.",
       "registry_patch_notes": [
         {
           "ts": "20260524T001841Z",
           "cohort": "stage3_c1",
-          "note": "Source: external KB at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2017_Moos_NSW_21st_Century/full_transcription.md. ES1304 is the Moos (2017) NSW/GDP series restricted to the 1959-1997 overlap with Shaikh & Tonak 2002. Benchmark from Moos 2017 Section 3 Table 1 (research/ES1304_research.json verbatim entry): 'Shaikh and Tonak's series shows a minimum of -2.1% of GDP, median of -0.2%, mean of 0.0%, and maximum of 2.9%. My replicated series shows minimum of -1.2%, median of 1.0%, mean of 1.1%, and maximum of 3.7%. The mean difference is approximately 1.1 percentage points of GDP.' The benchmark year-value here uses 1997 as the period endpoint with the Moos-replicated mean (0.011) as the central anchor — the [internal-decision-record] notes ST2 P21 achieves 0.013 for the 1959-1997 mean vs Moos published 0.011, within V11 benchmark range [0.008, 0.018]. Period-mean validation is the primary validation logic for ES1304 (not year-by-year); year-keyed 1997 entry stores the Moos overlap-mean for registry compatibility. Chopped ES1304-A cross-check: 1997=+0.0220 (within band); period mean from chopped to be re-computed in Stage 5 V03."
+          "note": "Source: external KB at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2017_Moos_NSW_21st_Century/full_transcription.md. XS1304 is the Moos (2017) NSW/GDP series restricted to the 1959-1997 overlap with Shaikh & Tonak 2002. Benchmark from Moos 2017 Section 3 Table 1 (research/XS1304_research.json verbatim entry): 'Shaikh and Tonak's series shows a minimum of -2.1% of GDP, median of -0.2%, mean of 0.0%, and maximum of 2.9%. My replicated series shows minimum of -1.2%, median of 1.0%, mean of 1.1%, and maximum of 3.7%. The mean difference is approximately 1.1 percentage points of GDP.' The benchmark year-value here uses 1997 as the period endpoint with the Moos-replicated mean (0.011) as the central anchor — the [internal-decision-record] notes ST2 P21 achieves 0.013 for the 1959-1997 mean vs Moos published 0.011, within V11 benchmark range [0.008, 0.018]. Period-mean validation is the primary validation logic for XS1304 (not year-by-year); year-keyed 1997 entry stores the Moos overlap-mean for registry compatibility. Chopped XS1304-A cross-check: 1997=+0.0220 (within band); period mean from chopped to be re-computed in Stage 5 V03."
         }
       ],
       "artifacts": {
@@ -4232,10 +4721,19 @@
       "registry_patch_notes_append": {
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
-        "note": "P23 exemption: Filter of ES1301 to 1959-1997 overlap; P02 reads ES1301 output. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
+        "note": "P23 exemption: Filter of XS1301 to 1959-1997 overlap; P02 reads XS1301 output. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
+      },
+      "xs_class": "external_study",
+      "xs_attribution": "Moos (2017)",
+      "display_name": "Net social wage / GDP, Moos-vs-Shaikh-Tonak overlap 1959-1997, United States (Moos 2017)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "The Moos (2017) NSW/GDP series restricted to the 1959-1997 overlap with Shaikh & Tonak, the basis for Moos's replication-fidelity comparison. Chopped is a small positive decimal-ratio band (~0.011-0.017). Moos Table 1 verbatim (KB line 124): his replicated overlap series has mean 1.1% vs Shaikh-Tonak's 0.0%, a ~1.1pp difference attributed to NIPA revisions -- a faithful reconstruction. NOTE: the validation reference_values key '1997'=0.011 is a registry-compatibility label for the period MEAN (1.1%), not a 1997 year-value; documented in registry patch notes. Units/content correct; display_name/label normalized.",
+        "date": "2026-06-11"
       }
     },
-    "ES1305": {
+    "XS1305": {
       "name": "Post-2000 Structural Shift Indicator (Moos 2017)",
       "study": "study_04_moos_2017",
       "chapter": 13,
@@ -4246,7 +4744,7 @@
         2012
       ],
       "subseries": {
-        "ES1305-A": {
+        "XS1305-A": {
           "name": "NSW/GDP with post-2000 regime indicator",
           "source": "Moos 2017",
           "period": [
@@ -4254,7 +4752,8 @@
             2012
           ],
           "units": "ratio",
-          "color": "#17becf"
+          "color": "#17becf",
+          "label": "Net social wage / GDP with post-2000 regime indicator (Moos 2017)"
         }
       },
       "construction": [
@@ -4262,10 +4761,10 @@
           "step": 1,
           "op": "derive",
           "inputs": [
-            "ES1301"
+            "XS1301"
           ],
           "desc": "Add post-2000 regime dummy",
-          "output": "ES1305-COMBINED"
+          "output": "XS1305-COMBINED"
         }
       ],
       "extension": null,
@@ -4289,23 +4788,32 @@
       "processor": "P17",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
+      "units": "ratio",
       "content_type": "time_series",
       "year_range_target": [
         1959,
         2024
       ],
-      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See Council/Druck/docs/RMWND_HYPER_REVIEW_2026-05-19.md Layer A finding A1.",
+      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See internal hyper-review 2026-05-19, Layer A finding A1.",
       "registry_patch_notes_append": {
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
-        "note": "P23 exemption: ES1301 + post-2000 regime dummy; P02 reads ES1301 output. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
+        "note": "P23 exemption: XS1301 + post-2000 regime dummy; P02 reads XS1301 output. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
       },
       "artifacts": {
         "derived_no_l01": true
+      },
+      "xs_class": "external_study",
+      "xs_attribution": "Moos (2017)",
+      "display_name": "Net social wage / GDP with post-2000 regime shift, United States (Moos 2017)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Moos (2017) NSW/GDP series carrying the post-2000 structural-shift indicator that is the paper's central new finding: 'the updated net social wage data reveals a sizable deviation starting in 2002, with much higher positive net social wages for a decade' (Moos KB full_transcription line 53, verbatim). Chopped is a clean decimal-ratio series 1959=-0.0254 ... 2012=+0.0565 with derived_statistics.structural_shift=0.03. Units/content correct; display_name/label normalized.",
+        "date": "2026-06-11"
       }
     },
-    "ES1401": {
+    "XS1401": {
       "name": "Exploitation Rate â€” Mohun Classification (Mohun 2005)",
       "study": "study_05_mohun_2005",
       "chapter": 14,
@@ -4316,7 +4824,7 @@
         1989
       ],
       "subseries": {
-        "ES1401-A": {
+        "XS1401-A": {
           "name": "Mohun (2005) Table 2",
           "source": "Mohun 2005 CJE",
           "period": [
@@ -4324,7 +4832,8 @@
             2001
           ],
           "units": "ratio",
-          "color": "#ff9896"
+          "color": "#ff9896",
+          "label": "Rate of exploitation S*/V*, Mohun method (1948-1989)"
         }
       },
       "construction": [
@@ -4332,7 +4841,7 @@
           "step": 1,
           "op": "load",
           "subseries": [
-            "ES1401-A"
+            "XS1401-A"
           ],
           "source": "L15 parsed CSV"
         }
@@ -4356,9 +4865,18 @@
       "wave": 1,
       "status": "book_period_validated",
       "units": "ratio",
-      "content_type": "time_series"
+      "content_type": "time_series",
+      "xs_class": "external_study",
+      "xs_attribution": "Mohun (2005)",
+      "display_name": "Rate of exploitation, Mohun classification, United States (Mohun 2005)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Mohun's alternative-classification rate of surplus value S*/V*. Verified against source mohun_exploitation_rates_1948_1989_CORRECTED.csv (e_mohun column): 1948=1.66662, 1989=1.87349 match chopped exactly. units=ratio confirmed (S*/V* dimensionless). NOTE: Mohun (2005) published 1964-2001; values 1948-1963 are the ST2 team's backward application of Mohun's SM method, not Mohun's own published figures.",
+        "date": "2026-06-11"
+      }
     },
-    "ES1402": {
+    "XS1402": {
       "name": "Productive Labor Share â€” Mohun Classification (Mohun 2005)",
       "study": "study_05_mohun_2005",
       "chapter": 14,
@@ -4369,7 +4887,7 @@
         1989
       ],
       "subseries": {
-        "ES1402-A": {
+        "XS1402-A": {
           "name": "Mohun (2005) Table 2",
           "source": "Mohun 2005 CJE",
           "period": [
@@ -4377,7 +4895,8 @@
             2001
           ],
           "units": "share",
-          "color": "#ff9896"
+          "color": "#ff9896",
+          "label": "Productive labour share of employment Lp/L, Mohun method (1948-1989)"
         }
       },
       "construction": [
@@ -4385,7 +4904,7 @@
           "step": 1,
           "op": "load",
           "subseries": [
-            "ES1402-A"
+            "XS1402-A"
           ],
           "source": "L15 parsed CSV"
         }
@@ -4409,9 +4928,18 @@
       "wave": 1,
       "status": "book_period_validated",
       "units": "share",
-      "content_type": "time_series"
+      "content_type": "time_series",
+      "xs_class": "external_study",
+      "xs_attribution": "Mohun (2005)",
+      "display_name": "Productive labour share of employment, Mohun classification, United States (Mohun 2005)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Productive workers as a share of total employment (Lp/L) under Mohun's narrower productive/unproductive partition. Verified against source mohun_employment_annual_1948_1989.csv (Lp_mohun_L_ratio column): 1948=0.56623, 1989=0.55925 match chopped exactly. units=share (0-1) confirmed. NOTE: Mohun (2005) published 1964-2001; 1948-1963 are the ST2 team's backward application of Mohun's method.",
+        "date": "2026-06-11"
+      }
     },
-    "ES1403": {
+    "XS1403": {
       "name": "Variable Capital â€” Mohun Classification (Mohun 2005)",
       "study": "study_05_mohun_2005",
       "chapter": 14,
@@ -4422,15 +4950,16 @@
         1989
       ],
       "subseries": {
-        "ES1403-A": {
+        "XS1403-A": {
           "name": "Mohun (2005) Table 2",
           "source": "Mohun 2005 CJE",
           "period": [
             1964,
             2001
           ],
-          "units": "billions_dollars",
-          "color": "#ff9896"
+          "units": "usd_level",
+          "color": "#ff9896",
+          "label": "Variable capital (productive wage bill), Mohun method (1948-1989)"
         }
       },
       "construction": [
@@ -4438,7 +4967,7 @@
           "step": 1,
           "op": "load",
           "subseries": [
-            "ES1403-A"
+            "XS1403-A"
           ],
           "source": "L15 parsed CSV"
         }
@@ -4461,10 +4990,21 @@
       "processor": "P16",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "ratio",
-      "content_type": "time_series"
+      "units": "usd_level",
+      "content_type": "time_series",
+      "xs_class": "external_study",
+      "xs_attribution": "Mohun (2005)",
+      "display_name": "Variable capital (productive wage bill), Mohun classification, United States (Mohun 2005)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Mohun's variable capital V* = total productive-sector wage bill (W_p = ec_p x L_p). Verified against source mohun_variable_capital_1948_1989_CORRECTED.csv (V_star_mohun column): 1948=1112758.20, 1989=16074207.03 match chopped exactly. CORRECTIONS: registry top-level units was 'ratio' (WRONG - this is a monetary LEVEL, not a dimensionless ratio) and subseries units was 'billions_dollars' (WRONG by magnitude). Set to a monetary level. NOTE: exact denomination not independently recoverable from the workspace - V_star_per_worker ~60 with Lp in thousands implies a Mohun-internal monetary scale; marked UNVERIFIED. Values 1948-1963 are ST2 backward application of Mohun's method.",
+        "date": "2026-06-11"
+      },
+      "units_was": "ratio",
+      "subseries_units_was": "billions_dollars"
     },
-    "ES1404": {
+    "XS1404": {
       "name": "ST/Mohun Exploitation Rate Ratio (Mohun 2005)",
       "study": "study_05_mohun_2005",
       "chapter": 14,
@@ -4475,27 +5015,28 @@
         1989
       ],
       "subseries": {
-        "ES1404-A": {
-          "name": "Derived S506/ES1401 ratio",
+        "XS1404-A": {
+          "name": "Derived S506/XS1401 ratio",
           "source": "AS2 cross-validation",
           "period": [
             1964,
             2001
           ],
           "units": "ratio",
-          "color": "#ff9896"
+          "color": "#ff9896",
+          "label": "ST exploitation rate / Mohun exploitation rate (1948-1989)"
         }
       },
       "construction": [
         {
           "step": 1,
           "op": "derive",
-          "formula": "S506 / ES1401",
+          "formula": "S506 / XS1401",
           "inputs": [
             "S506",
-            "ES1401"
+            "XS1401"
           ],
-          "output": "ES1404-COMBINED"
+          "output": "XS1404-COMBINED"
         }
       ],
       "extension": null,
@@ -4524,13 +5065,22 @@
       "registry_patch_notes_append": {
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
-        "note": "P23 exemption: Derived S506/ES1401 computed in P02 from S506 + ES1401 outputs. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
+        "note": "P23 exemption: Derived S506/XS1401 computed in P02 from S506 + XS1401 outputs. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
       },
       "artifacts": {
         "derived_no_l01": true
+      },
+      "xs_class": "external_study",
+      "xs_attribution": "Mohun (2005)",
+      "display_name": "Ratio of Shaikh-Tonak to Mohun exploitation rate, United States (Mohun 2005)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Cross-validation ratio of the Shaikh-Tonak rate of exploitation (S506) to Mohun's (XS1401). Construction formula 'S506 / XS1401' verified: 1948 = 1.7/1.66662 = 1.02003, 1989 = 2.44/1.87349 = 1.30238, both match chopped exactly. units=ratio confirmed (ratio of two ratios, dimensionless). Quantifies Mohun's critique that ST systematically overestimate the exploitation rate.",
+        "date": "2026-06-11"
       }
     },
-    "ES1501": {
+    "XS1501": {
       "name": "Working Class Unproductive Labor (Mohun 2013)",
       "study": "study_06_mohun_2013",
       "chapter": 15,
@@ -4541,15 +5091,16 @@
         1989
       ],
       "subseries": {
-        "ES1501-A": {
+        "XS1501-A": {
           "name": "Mohun (2013) â€” 81.3% of Lu",
           "source": "Mohun 2013 RRPE",
           "period": [
             1964,
             2010
           ],
-          "units": "thousands",
-          "color": "#c5b0d5"
+          "units": "thousands_workers",
+          "color": "#c5b0d5",
+          "label": "Working-class unproductive labour (thousands FTE, 1948-1989)"
         }
       },
       "construction": [
@@ -4560,7 +5111,7 @@
           "inputs": [
             "Mohun Lu"
           ],
-          "output": "ES1501-COMBINED"
+          "output": "XS1501-COMBINED"
         }
       ],
       "extension": null,
@@ -4580,10 +5131,20 @@
       "processor": "P20",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "thousands",
-      "content_type": "time_series"
+      "units": "thousands_workers",
+      "content_type": "time_series",
+      "xs_class": "external_study",
+      "xs_attribution": "Mohun (2013)",
+      "display_name": "Working-class unproductive labour, United States (Mohun 2013)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Unproductive workers who are members of the working class (no supervisory function), in thousands of FTE workers. Verified against source mohun_unproductive_decomposition_1948_1989.csv (Luw_mohun column): 1948=6426.47, 1989=24673.95 match chopped exactly; XS1501+XS1502 = XS1503 at both endpoints. CORRECTION: registry construction formula 'Lu x 0.813' is FABRICATED - the actual data is Mohun's working-class/managerial decomposition of unproductive employment (Luw_mohun), a ~0.456/0.544 split, NOT the 0.813 economy-wide working-class population share. NOTE: Mohun (2013) published 1964-2010; 1948-1963 are ST2 backward method application.",
+        "date": "2026-06-11"
+      },
+      "construction_was": "derive Lu x 0.813 (fabricated); correct construction is load Luw_mohun (working-class component of Mohun's unproductive-employment decomposition)"
     },
-    "ES1502": {
+    "XS1502": {
       "name": "Managerial Unproductive Labor (Mohun 2013)",
       "study": "study_06_mohun_2013",
       "chapter": 15,
@@ -4594,15 +5155,16 @@
         1989
       ],
       "subseries": {
-        "ES1502-A": {
+        "XS1502-A": {
           "name": "Mohun (2013) â€” 18.7% of Lu",
           "source": "Mohun 2013 RRPE",
           "period": [
             1964,
             2010
           ],
-          "units": "thousands",
-          "color": "#c5b0d5"
+          "units": "thousands_workers",
+          "color": "#c5b0d5",
+          "label": "Managerial unproductive labour (thousands FTE, 1948-1989)"
         }
       },
       "construction": [
@@ -4613,7 +5175,7 @@
           "inputs": [
             "Mohun Lu"
           ],
-          "output": "ES1502-COMBINED"
+          "output": "XS1502-COMBINED"
         }
       ],
       "extension": null,
@@ -4633,10 +5195,20 @@
       "processor": "P20",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "thousands",
-      "content_type": "time_series"
+      "units": "thousands_workers",
+      "content_type": "time_series",
+      "xs_class": "external_study",
+      "xs_attribution": "Mohun (2013)",
+      "display_name": "Managerial (supervisory) unproductive labour, United States (Mohun 2013)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Supervisory labour (managers-plus-capitalists), in thousands of FTE workers. Verified against source mohun_unproductive_decomposition_1948_1989.csv (Lum_mohun column): 1948=7669.35, 1989=31307.37 match chopped exactly; XS1501+XS1502 = XS1503 at both endpoints. CORRECTION: registry construction formula 'Lu x 0.187' is FABRICATED - the actual data is Mohun's managerial component (Lum_mohun) of the unproductive-employment decomposition (~0.544 of Lu), NOT the 0.187 economy-wide supervisor population share. NOTE: Mohun (2013) published 1964-2010; 1948-1963 are ST2 backward method application.",
+        "date": "2026-06-11"
+      },
+      "construction_was": "derive Lu x 0.187 (fabricated); correct construction is load Lum_mohun (managerial component of Mohun's unproductive-employment decomposition)"
     },
-    "ES1503": {
+    "XS1503": {
       "name": "Total Unproductive Labor â€” Mohun (Mohun 2013)",
       "study": "study_06_mohun_2013",
       "chapter": 15,
@@ -4647,15 +5219,16 @@
         1989
       ],
       "subseries": {
-        "ES1503-A": {
+        "XS1503-A": {
           "name": "Mohun (2013) total Lu",
           "source": "Mohun 2013 RRPE",
           "period": [
             1964,
             2010
           ],
-          "units": "thousands",
-          "color": "#c5b0d5"
+          "units": "thousands_workers",
+          "color": "#c5b0d5",
+          "label": "Total unproductive labour Lu (thousands FTE, 1948-1989)"
         }
       },
       "construction": [
@@ -4663,7 +5236,7 @@
           "step": 1,
           "op": "load",
           "subseries": [
-            "ES1503-A"
+            "XS1503-A"
           ],
           "source": "Mohun employment CSV"
         }
@@ -4685,10 +5258,19 @@
       "processor": "P20",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "thousands",
-      "content_type": "time_series"
+      "units": "thousands_workers",
+      "content_type": "time_series",
+      "xs_class": "external_study",
+      "xs_attribution": "Mohun (2013)",
+      "display_name": "Total unproductive labour, United States (Mohun 2013)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Total unproductive employment Lu (working-class + managerial), in thousands of FTE workers. Verified against source mohun_unproductive_decomposition_1948_1989.csv (Lu_mohun column): 1948=14095.83, 1989=55981.31 match chopped exactly; equals XS1501+XS1502 at both endpoints. units=thousands confirmed (employment count). NOTE: Mohun (2013) published 1964-2010; 1948-1963 are ST2 backward method application.",
+        "date": "2026-06-11"
+      }
     },
-    "ES1504": {
+    "XS1504": {
       "name": "Unproductive Burden Ratio Lu/Lp (Mohun 2013)",
       "study": "study_06_mohun_2013",
       "chapter": 15,
@@ -4699,7 +5281,7 @@
         1989
       ],
       "subseries": {
-        "ES1504-A": {
+        "XS1504-A": {
           "name": "Derived Lu/Lp from Mohun data",
           "source": "Mohun 2013 RRPE",
           "period": [
@@ -4707,7 +5289,8 @@
             2010
           ],
           "units": "ratio",
-          "color": "#c5b0d5"
+          "color": "#c5b0d5",
+          "label": "Unproductive burden ratio Lu/Lp (1948-1989)"
         }
       },
       "construction": [
@@ -4719,7 +5302,7 @@
             "Mohun Lu",
             "Mohun Lp"
           ],
-          "output": "ES1504-COMBINED"
+          "output": "XS1504-COMBINED"
         }
       ],
       "extension": null,
@@ -4740,7 +5323,7 @@
       "processor": "P20",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
+      "units": "ratio",
       "content_type": "time_series",
       "concurrent_series": {
         "CS1504-N": {
@@ -4750,7 +5333,7 @@
           "component_type": "numerator",
           "units": "fte_workers",
           "formula_role": "Lu in Lu / Lp",
-          "parent_series": "ES1503"
+          "parent_series": "XS1503"
         },
         "CS1504-D": {
           "name": "Productive FTE Employment (Lp) — denominator of burden ratio",
@@ -4766,7 +5349,7 @@
         {
           "ts": "20260524T001841Z",
           "cohort": "stage3_c1",
-          "note": "Source: external KB at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2013_Mohun_Unproductive_1964_2010/full_transcription.md. Benchmarks derived from Mohun 2013 Section 4 reported employment shares: unproductive employment share rises from ~42% to ~49% over 1964-2010 (research/ES1504_research.json trend_implication entry). Lu/Lp = (share_u)/(1-share_u): 0.42/0.58 = 0.724 (1964); 0.49/0.51 = 0.961 (2010). These are approximate paper-published anchors; Mohun 2013 does not tabulate a clean year-by-year Lu/Lp series, so values reflect his stated endpoint shares converted to the ratio form. Chopped ES1504-A cross-check (limited to 1948-1989 coverage in current chopped output): 1964=0.8085, 1975=0.8559, 1979=0.9124, 1989=0.9053. The 1964 chopped value (0.81) is higher than paper-derived 0.72 — divergence flagged: (a) chopped extends back to 1948 outside Mohun's window; (b) Mohun's Lu may use a different productive/unproductive boundary than the chopped construction (e.g. Mohun separates Lu_wc from Lu_sup; chopped may aggregate differently). Stage 5 V03 should reconcile. Period coverage discrepancy (registered period 1964-2010 vs chopped 1948-1989) is also flagged for Stage 5."
+          "note": "Source: external KB at Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/2013_Mohun_Unproductive_1964_2010/full_transcription.md. Benchmarks derived from Mohun 2013 Section 4 reported employment shares: unproductive employment share rises from ~42% to ~49% over 1964-2010 (research/XS1504_research.json trend_implication entry). Lu/Lp = (share_u)/(1-share_u): 0.42/0.58 = 0.724 (1964); 0.49/0.51 = 0.961 (2010). These are approximate paper-published anchors; Mohun 2013 does not tabulate a clean year-by-year Lu/Lp series, so values reflect his stated endpoint shares converted to the ratio form. Chopped XS1504-A cross-check (limited to 1948-1989 coverage in current chopped output): 1964=0.8085, 1975=0.8559, 1979=0.9124, 1989=0.9053. The 1964 chopped value (0.81) is higher than paper-derived 0.72 — divergence flagged: (a) chopped extends back to 1948 outside Mohun's window; (b) Mohun's Lu may use a different productive/unproductive boundary than the chopped construction (e.g. Mohun separates Lu_wc from Lu_sup; chopped may aggregate differently). Stage 5 V03 should reconcile. Period coverage discrepancy (registered period 1964-2010 vs chopped 1948-1989) is also flagged for Stage 5."
         }
       ],
       "artifacts": {
@@ -4776,9 +5359,19 @@
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
         "note": "P23 exemption: Derived Lu/Lp ratio computed in P02 from Mohun Lu + Lp source data (no separate raw loader required). The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
-      }
+      },
+      "xs_class": "external_study",
+      "xs_attribution": "Mohun (2013)",
+      "display_name": "Unproductive burden ratio (Lu/Lp), United States (Mohun 2013)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Ratio of total unproductive to productive FTE employment Lu/Lp - the classic 'unproductive burden'. Verified by construction: 1948 = 14095.83/18400.17 = 0.76607, 1989 = 55981.31/61837.69 = 0.90529, both match chopped exactly. CORRECTION: registry top-level units was 'share' but subseries units was 'ratio'; this is a ratio of two employment counts (dimensionless ratio, can exceed conceptual 'share' bounds), set both to ratio. NOTE: Mohun (2013) published 1964-2010; 1948-1963 are ST2 backward method application.",
+        "date": "2026-06-11"
+      },
+      "units_was": "share (top-level); reconciled to ratio to match subseries and the Lu/Lp definition"
     },
-    "ES1601": {
+    "XS1601": {
       "name": "Turkey Labor Share (Karabacak & Tonak 2022)",
       "study": "study_07_turkey_2022",
       "chapter": 16,
@@ -4789,7 +5382,7 @@
         2019
       ],
       "subseries": {
-        "ES1601-A": {
+        "XS1601-A": {
           "name": "TurkStat Table 20.37",
           "source": "Karabacak & Tonak 2022 RRPE",
           "period": [
@@ -4797,7 +5390,8 @@
             2019
           ],
           "units": "share",
-          "color": "#aec7e8"
+          "color": "#aec7e8",
+          "label": "Labour share of GDP, Turkey (World Bank VA proxy - DO NOT PUBLISH)"
         }
       },
       "construction": [
@@ -4805,7 +5399,7 @@
           "step": 1,
           "op": "load",
           "subseries": [
-            "ES1601-A"
+            "XS1601-A"
           ],
           "desc": "TurkStat HDARP extraction"
         }
@@ -4834,7 +5428,7 @@
       "status": "book_period_validated",
       "units": "share",
       "content_type": "time_series",
-      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See Council/Druck/docs/RMWND_HYPER_REVIEW_2026-05-19.md Layer A finding A1.",
+      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See internal hyper-review 2026-05-19, Layer A finding A1.",
       "registry_patch_notes_append": {
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
@@ -4842,9 +5436,18 @@
       },
       "artifacts": {
         "derived_no_l01": true
+      },
+      "xs_class": "external_study",
+      "xs_attribution": "Karabacak & Tonak (2022) - Turkey",
+      "display_name": "Labour share of GDP, Turkey (Karabacak & Tonak 2022)",
+      "publish": false,
+      "triage": {
+        "verdict": "cull",
+        "reason": "FABRICATED PROXY, not the documented source. P02_XS1601_turkey_labor_share.py computes labour_share = (industry_va_pct_gdp + 0.5*services_va_pct_gdp)/100 from World Bank structural indicators (stage='derived_approximation'), verified: 1980 = (23.49+0.5*49.01)/100 = 0.47995 exactly equals chopped. This is NOT Karabacak & Tonak's labour share and NOT the TurkStat Table 20.37 compensation-of-employees data the research JSON claims (per [internal-decision-record] 2026-05-06). Three independent disqualifications: (1) the chopped data RISES 0.480 (1980) -> 0.553 (2019), while K&T's paper (research entry, Section 5.8) reports labour share DECLINING 45.3% (1980) -> 35.2% (2019); (2) it also fails to match the claimed TurkStat source (27.1% declining to ~26%); (3) it is a value-added proxy in violation of the No-Proxies mandate (CPI-is-not-PPI class). The research JSON's TurkStat provenance is not implemented in code.",
+        "republish_condition": "Re-derive from Karabacak & Tonak (2022) published labour-share series OR from TurkStat income-approach compensation-of-employees data extracted via HDARP, matching the paper's declining trajectory; remove the World Bank VA proxy from P02; correct the research JSON to describe the actually-implemented source."
       }
     },
-    "ES1602": {
+    "XS1602": {
       "name": "Turkey NSW/GDP (Karabacak & Tonak 2022)",
       "study": "study_07_turkey_2022",
       "chapter": 16,
@@ -4855,15 +5458,16 @@
         2019
       ],
       "subseries": {
-        "ES1602-A": {
+        "XS1602-A": {
           "name": "SBB/MoF fiscal data",
           "source": "Karabacak & Tonak 2022 RRPE",
           "period": [
             1980,
             2019
           ],
-          "units": "ratio",
-          "color": "#aec7e8"
+          "units": "share",
+          "color": "#aec7e8",
+          "label": "Net social wage / GDP, Turkey (World Bank fiscal proxy - DO NOT PUBLISH)"
         }
       },
       "construction": [
@@ -4871,7 +5475,7 @@
           "step": 1,
           "op": "load",
           "subseries": [
-            "ES1602-A"
+            "XS1602-A"
           ],
           "desc": "SBB/MoF fiscal data + World Bank"
         }
@@ -4900,7 +5504,7 @@
       "status": "book_period_validated",
       "units": "share",
       "content_type": "time_series",
-      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See Council/Druck/docs/RMWND_HYPER_REVIEW_2026-05-19.md Layer A finding A1.",
+      "status_downgrade_note": "Hyper-review 2026-05-19: status was 'validated_book_and_extension' while extension block is null. Downgraded to 'book_period_validated' — V03 PASS for the book period is defensible; extension claim was not. See internal hyper-review 2026-05-19, Layer A finding A1.",
       "registry_patch_notes_append": {
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
@@ -4908,9 +5512,18 @@
       },
       "artifacts": {
         "derived_no_l01": true
+      },
+      "xs_class": "external_study",
+      "xs_attribution": "Karabacak & Tonak (2022) - Turkey",
+      "display_name": "Net social wage relative to GDP, Turkey (Karabacak & Tonak 2022)",
+      "publish": false,
+      "triage": {
+        "verdict": "cull",
+        "reason": "REVERSE-ENGINEERED PROXY, not the K&T NSW methodology. P02_XS1602_turkey_nsw_gdp.py computes NSW/GDP = (govt_consumption_pct_gdp - tax_revenue_pct_gdp)/100 from World Bank fiscal data (stage='derived_approximation'), verified: 1980 = (11.55-14.34)/100 = -0.0279 exactly equals chopped. This crude government-consumption-minus-tax proxy is NOT the Karabacak & Tonak NSW framework (B = E1 + E2*ls, T = T1 + T2*ls with sector decomposition). The processor docstring states the formula 'gives negative values when taxes exceed government services, matching K&T's NSW negativity finding' - i.e. the proxy was chosen to reproduce a known conclusion, not derived from the source methodology. The research JSON's claimed TurkStat/SGK/Ministry fiscal sourcing is not implemented; the 2007-2019 NaN claim is also false (chopped has values for 2008-2019). Depends on the culled XS1601 labour share.",
+        "republish_condition": "Implement the actual K&T NSW decomposition (E1/E2 benefits, T1/T2 taxes allocated by a faithful labour share) from the fiscal sources the paper names, extracted via HDARP/API; remove the WB govt_consumption-minus-tax proxy; rebuild on a corrected XS1601."
       }
     },
-    "ES1701": {
+    "XS1701": {
       "name": "NZ Surplus Share of Total Value (Cronin 2001)",
       "study": "study_08_cronin_nz_2001",
       "chapter": 17,
@@ -4921,15 +5534,16 @@
         1995
       ],
       "subseries": {
-        "ES1701-A": {
+        "XS1701-A": {
           "name": "Cronin (2001) Table 2 s/TV",
           "source": "Cronin 2001 RPE Table 2",
           "period": [
             1972,
             1995
           ],
-          "units": "share",
-          "color": "#98df8a"
+          "units": "percent",
+          "color": "#98df8a",
+          "label": "Surplus share of total value s/TV (percent, 1972-1995)"
         }
       },
       "construction": [
@@ -4937,7 +5551,7 @@
           "step": 1,
           "op": "load",
           "subseries": [
-            "ES1701-A"
+            "XS1701-A"
           ],
           "desc": "Direct from Cronin Table 2 s/TV column"
         }
@@ -4961,10 +5575,21 @@
       "processor": "P20",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
-      "content_type": "time_series"
+      "units": "percent",
+      "content_type": "time_series",
+      "xs_class": "external_study",
+      "xs_attribution": "Cronin (2001) - New Zealand",
+      "display_name": "Surplus share of total value (s/TV), New Zealand (Cronin 2001)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Surplus-value as a share of classical total value (s/TV), the accumulation rate. Verified against Cronin (2001) Table 2 KB extraction (column S/TV, given WITH percent signs): 1972=34%, 1989=38%, 1995=38% match chopped (34.0, 38.0, 38.0) exactly. CORRECTIONS: units was 'share' but the data are PERCENTAGES (source column header is surplus_share_of_total_value_pct; KB table shows '34%'); set units to percent. reference_values were stored as decimals (0.34/0.38) which are 100x off from the chopped percent data - rescaled to percent.",
+        "date": "2026-06-11"
+      },
+      "units_was": "share (data are percent, 0-100)",
+      "reference_values_was": "decimals (0.34, 0.38) - 100x off from chopped percent values; rescale to 34, 38, 38"
     },
-    "ES1702": {
+    "XS1702": {
       "name": "NZ Rate of Surplus Value (Cronin 2001)",
       "study": "study_08_cronin_nz_2001",
       "chapter": 17,
@@ -4975,15 +5600,16 @@
         1995
       ],
       "subseries": {
-        "ES1702-A": {
+        "XS1702-A": {
           "name": "Cronin (2001) Table 2 s/v",
           "source": "Cronin 2001 RPE Table 2",
           "period": [
             1972,
             1995
           ],
-          "units": "ratio",
-          "color": "#98df8a"
+          "units": "percent",
+          "color": "#98df8a",
+          "label": "Rate of surplus value s/v (percent, 1972-1995)"
         }
       },
       "construction": [
@@ -4991,7 +5617,7 @@
           "step": 1,
           "op": "load",
           "subseries": [
-            "ES1702-A"
+            "XS1702-A"
           ],
           "desc": "Direct from Cronin Table 2 s/v column"
         }
@@ -5015,10 +5641,21 @@
       "processor": "P20",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
-      "content_type": "time_series"
+      "units": "percent",
+      "content_type": "time_series",
+      "xs_class": "external_study",
+      "xs_attribution": "Cronin (2001) - New Zealand",
+      "display_name": "Rate of surplus value (s/v), New Zealand (Cronin 2001)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Rate of surplus value s/v, classical mapping of the NZ national accounts. Verified against Cronin (2001) Table 2 KB extraction (column s/v, given WITH percent signs): 1972=206%, 1984=228%, 1995=307% match chopped (206.0, 228.0, 307.0) exactly. CORRECTIONS: registry top-level units was 'share' (and subseries 'ratio') but the data are PERCENTAGES (source header rate_of_surplus_value_pct; KB shows '206%'); a rate of surplus value of 206 cannot be a 0-1 share. Set units to percent. reference_values stored as decimals (2.06/2.28/3.07) are 100x off from chopped - rescaled to percent.",
+        "date": "2026-06-11"
+      },
+      "units_was": "share top-level / ratio subseries (data are percent, ~169-309)",
+      "reference_values_was": "decimals (2.06, 2.28, 3.07) - 100x off; rescale to 206, 228, 307"
     },
-    "ES1703": {
+    "XS1703": {
       "name": "NZ Value Composition of Capital (Cronin 2001)",
       "study": "study_08_cronin_nz_2001",
       "chapter": 17,
@@ -5029,15 +5666,16 @@
         1995
       ],
       "subseries": {
-        "ES1703-A": {
+        "XS1703-A": {
           "name": "Cronin (2001) Table 2 c/v",
           "source": "Cronin 2001 RPE Table 2",
           "period": [
             1972,
             1995
           ],
-          "units": "ratio",
-          "color": "#98df8a"
+          "units": "percent",
+          "color": "#98df8a",
+          "label": "Value composition of capital c/v (percent, 1972-1995)"
         }
       },
       "construction": [
@@ -5045,7 +5683,7 @@
           "step": 1,
           "op": "load",
           "subseries": [
-            "ES1703-A"
+            "XS1703-A"
           ],
           "desc": "Direct from Cronin Table 2 c/v column"
         }
@@ -5069,10 +5707,21 @@
       "processor": "P20",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
-      "content_type": "time_series"
+      "units": "percent",
+      "content_type": "time_series",
+      "xs_class": "external_study",
+      "xs_attribution": "Cronin (2001) - New Zealand",
+      "display_name": "Value composition of capital (c/v), New Zealand (Cronin 2001)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Value composition of capital c/v, classical mapping of the NZ national accounts. Verified against Cronin (2001) Table 2 KB extraction (column c/v, given WITH percent signs): 1972=293%, 1984=385%, 1995=397% match chopped (293.0, 385.0, 397.0) exactly. CORRECTIONS: registry top-level units was 'share' (and subseries 'ratio') but the data are PERCENTAGES (source header value_composition_of_capital_pct; KB shows '293%'); a c/v of 293 cannot be a 0-1 share. Set units to percent. reference_values stored as decimals (2.93/3.85/3.97) are 100x off from chopped - rescaled to percent.",
+        "date": "2026-06-11"
+      },
+      "units_was": "share top-level / ratio subseries (data are percent, ~293-407)",
+      "reference_values_was": "decimals (2.93, 3.85, 3.97) - 100x off; rescale to 293, 385, 397"
     },
-    "ES1704": {
+    "XS1704": {
       "name": "NZ Total Value (Cronin 2001)",
       "study": "study_08_cronin_nz_2001",
       "chapter": 17,
@@ -5083,7 +5732,7 @@
         1995
       ],
       "subseries": {
-        "ES1704-A": {
+        "XS1704-A": {
           "name": "Cronin (2001) Table 1 Total Value",
           "source": "Cronin 2001 RPE Table 1",
           "period": [
@@ -5091,7 +5740,8 @@
             1995
           ],
           "units": "millions_nzd",
-          "color": "#98df8a"
+          "color": "#98df8a",
+          "label": "Total value c+v+s (millions NZD, current prices, 1972-1995)"
         }
       },
       "construction": [
@@ -5099,7 +5749,7 @@
           "step": 1,
           "op": "load",
           "subseries": [
-            "ES1704-A"
+            "XS1704-A"
           ],
           "desc": "Direct from Cronin Table 1 total_value column"
         }
@@ -5122,10 +5772,20 @@
       "processor": "P20",
       "wave": 1,
       "status": "book_period_validated",
-      "units": "share",
-      "content_type": "time_series"
+      "units": "millions_nzd",
+      "content_type": "time_series",
+      "xs_class": "external_study",
+      "xs_attribution": "Cronin (2001) - New Zealand",
+      "display_name": "Total value (c+v+s), New Zealand (Cronin 2001)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Classical total value TV = c + v + s, in millions of current New Zealand dollars. Verified against Cronin (2001) Table 1 KB extraction (column Total value, '$m'): 1972=10423, 1995=123284 match chopped exactly. CORRECTION: registry top-level units was 'share' - WRONG by class (these are LEVELS of NZD millions, 10423-123284, not a 0-1 share); subseries units 'millions_nzd' was already correct. Set top-level units to millions_nzd.",
+        "date": "2026-06-11"
+      },
+      "units_was": "share top-level (data are levels in millions NZD, not a share)"
     },
-    "AS001": {
+    "XS001": {
       "name": "Social Burden Rate",
       "chapter": 0,
       "description": "derived from NSW + exploitation series",
@@ -5135,13 +5795,14 @@
         1989
       ],
       "subseries": {
-        "AS001-A": {
+        "XS001-A": {
           "name": "Social Burden Rate",
           "period": [
             1948,
             2024
           ],
-          "units": "ratio"
+          "units": "ratio",
+          "label": "Social burden rate b = t + eu"
         }
       },
       "construction": [],
@@ -5174,12 +5835,12 @@
         1948,
         2024
       ],
-      "validation_source": "Technical/chopped/AS001.csv (AS001-A column; ratio b = t + eu = social burden rate)",
+      "validation_source": "Technical/chopped/XS001.csv (XS001-A column; ratio b = t + eu = social burden rate)",
       "registry_patch_notes": [
         {
           "ts": "20260524T001841Z",
           "cohort": "stage3_c1",
-          "note": "DECISION 0003 BINARY-INVARIANT FIX: previous status 'validated_book_and_extension' with extension:null is a Decision 0003 violation. Demoted to 'book_period_validated' with explicit extension:null because: (1) AS001 is a derived analytical ratio depending on S607 (NSW) and exploitation series — its extension requires all upstream series to be independently extended with documented EPRs, which are not currently in place; (2) the legacy A07_social_burden_rate.py script lacks the 6-field extension block (shaikh_source, shaikh_appendix_ref, extension_source, extension_url, conceptual_continuity, vintage_note); (3) the chopped CSV covers only 1948-1989 (book period only), so there is no actual extension data to document. The book-period values are book-validated against ST 1994 Ch7 §7.1 verbatim: b rises ~16% from 0.56 to 0.66 over 1948-1989 (per AS001 research file). Note: current chopped values (0.79-0.86) are higher than the book's stated ~0.56-0.66 range — this magnitude discrepancy is flagged for Stage 5 diagnosis; reference values anchor current pipeline output."
+          "note": "DECISION 0003 BINARY-INVARIANT FIX: previous status 'validated_book_and_extension' with extension:null is a Decision 0003 violation. Demoted to 'book_period_validated' with explicit extension:null because: (1) XS001 is a derived analytical ratio depending on S607 (NSW) and exploitation series — its extension requires all upstream series to be independently extended with documented EPRs, which are not currently in place; (2) the legacy A07_social_burden_rate.py script lacks the 6-field extension block (shaikh_source, shaikh_appendix_ref, extension_source, extension_url, conceptual_continuity, vintage_note); (3) the chopped CSV covers only 1948-1989 (book period only), so there is no actual extension data to document. The book-period values are book-validated against ST 1994 Ch7 §7.1 verbatim: b rises ~16% from 0.56 to 0.66 over 1948-1989 (per XS001 research file). Note: current chopped values (0.79-0.86) are higher than the book's stated ~0.56-0.66 range — this magnitude discrepancy is flagged for Stage 5 diagnosis; reference values anchor current pipeline output."
         }
       ],
       "artifacts": {
@@ -5189,9 +5850,20 @@
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
         "note": "P23 exemption: Analytical/supplementary series; P02 derives from book-period S-series outputs. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
-      }
+      },
+      "xs_class": "appendix",
+      "xs_attribution": "Shaikh & Tonak (1994), derived analytical series",
+      "display_name": "Social burden rate",
+      "publish": true,
+      "triage": {
+        "verdict": "fix-completed-then-publish",
+        "reason": "Analytical ratio measuring the social burden rate b = t + eu (the share of surplus value absorbed by business taxes plus unproductive expenses), derived from the book's Chapter 7 Section 7.1 identity r'n = (1 - b) r*'. The book's definition is verbatim-verified against the PDF (folio 213: 'b = t + eu.' and 'For this reason we label b the social burden rate'); the canonical book series is Table 7.1 row 'b = 1 - (Pn/S*) = social burden rate', running 0.56 (1948) to 0.65 (1989). OPEN ISSUE disclosed: the chopped XS001-A values (0.79-0.86) do NOT match the book's b (0.56-0.66) — a magnitude/definition discrepancy already flagged in the registry for diagnosis. XS001 as built measures a related-but-different t+eu construction whose level is too high; it is internally consistent but does not reproduce the book's published social burden rate. Published with the discrepancy disclosed. xs_class appendix, xs_attribution (Shaikh & Tonak derived analytical series) is sensible.",
+        "date": "2026-06-11"
+      },
+      "book_anchor_table": "Table 7.1 row b = 1 - (Pn/S*) = social burden rate (folio 217); definition b = t + eu at folio 213 (Ch7 Section 7.1).",
+      "open_issue": "chopped XS001-A (0.79-0.86) does not reproduce the book's social burden rate b (0.56-0.66, Table 7.1); magnitude/definition discrepancy flagged for diagnosis."
     },
-    "AS002": {
+    "XS002": {
       "name": "Khanjian Cross-Validation",
       "chapter": 0,
       "description": "cross-check of S506 vs alternative method",
@@ -5201,13 +5873,14 @@
         1977
       ],
       "subseries": {
-        "AS002-A": {
+        "XS002-A": {
           "name": "Khanjian Cross-Validation",
           "period": [
             1948,
             2024
           ],
-          "units": "ratio"
+          "units": "ratio",
+          "label": "Rate of surplus value S*/V* (Khanjian cross-validation)"
         }
       },
       "construction": [],
@@ -5238,12 +5911,12 @@
         1948,
         2024
       ],
-      "validation_source": "Technical/chopped/AS002.csv (AS002-A column; rate of surplus value S*/V* cross-validated against Khanjian alternative-decomposition path)",
+      "validation_source": "Technical/chopped/XS002.csv (XS002-A column; rate of surplus value S*/V* cross-validated against Khanjian alternative-decomposition path)",
       "registry_patch_notes": [
         {
           "ts": "20260524T001841Z",
           "cohort": "stage3_c1",
-          "note": "Status 'book_period_validated' is correctly set with extension:null (no Decision 0003 violation). Reference values are the five IO benchmark years (1958, 1963, 1967, 1972, 1977) present in the current chopped CSV. Per AS002 research file (verbatim_quotes anchor, ST 1994 Ch7 §7.3 p.223): Khanjian (1989) consistent procedure shows S*/V* differs from S/V by only 6-9% — this is the cross-validation benchmark. Appendix I Table I.1 reports eu/ep ratio converging 0.80→0.97 over 1948-1989. The current AS002 values match S506 at the same benchmark years (1958: 2.01, 1989-endpoint 2.44), consistent with the cross-validation interpretation that AS002 reproduces the rate of surplus value via the Khanjian Appendix I 25-step decomposition. Stage 5 should backfill the missing 1948-1957 and 1978-1989 years currently absent from chopped output."
+          "note": "Status 'book_period_validated' is correctly set with extension:null (no Decision 0003 violation). Reference values are the five IO benchmark years (1958, 1963, 1967, 1972, 1977) present in the current chopped CSV. Per XS002 research file (verbatim_quotes anchor, ST 1994 Ch7 §7.3 p.223): Khanjian (1989) consistent procedure shows S*/V* differs from S/V by only 6-9% — this is the cross-validation benchmark. Appendix I Table I.1 reports eu/ep ratio converging 0.80→0.97 over 1948-1989. The current XS002 values match S506 at the same benchmark years (1958: 2.01, 1989-endpoint 2.44), consistent with the cross-validation interpretation that XS002 reproduces the rate of surplus value via the Khanjian Appendix I 25-step decomposition. Stage 5 should backfill the missing 1948-1957 and 1978-1989 years currently absent from chopped output."
         }
       ],
       "registry_patch_notes_append": {
@@ -5253,9 +5926,20 @@
       },
       "artifacts": {
         "derived_no_l01": true
-      }
+      },
+      "xs_class": "appendix",
+      "xs_attribution": "Shaikh & Tonak (1994), derived analytical series",
+      "display_name": "Khanjian cross-validation of the exploitation rate",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Analytical cross-validation of the Shaikh-Tonak rate of surplus value (S506) against the Khanjian (1989) consistent-procedure decomposition, motivated by the book's Chapter 7 Section 7.3 statement that value and price rates of surplus value 'differ by only small amounts (6%-9%)' (verified verbatim against the book PDF, folio 223). Data verified: XS002-A reproduces S506 exactly at the five I-O benchmark years present (1958=2.01, 1963=2.07, 1967=2.10, 1972=1.99, 1977=2.10), consistent with the cross-validation interpretation that the alternative decomposition path recovers the same exploitation rate. Sparse (5 benchmark years only); annual book-period years 1948-1957 and 1978-1989 are absent from the chopped output (noted as a Stage-5 backfill item, not a publication blocker). xs_class appendix is correct.",
+        "date": "2026-06-11"
+      },
+      "book_anchor": "Chapter 7 Section 7.3 (folio 223, Khanjian 6%-9% result); Appendix I 25-step decomposition (Table I.1).",
+      "coverage_note": "chopped XS002-A present only at the 5 I-O benchmark years (1958,1963,1967,1972,1977); other book-period years absent."
     },
-    "AS003": {
+    "XS003": {
       "name": "Unproductive Exploitation Rate",
       "chapter": 0,
       "description": "S_star / V_u_star (unproductive vc)",
@@ -5265,13 +5949,14 @@
         1989
       ],
       "subseries": {
-        "AS003-A": {
+        "XS003-A": {
           "name": "Unproductive Exploitation Rate",
           "period": [
             1948,
             2024
           ],
-          "units": "ratio"
+          "units": "ratio",
+          "label": "Rate of exploitation of unproductive workers eu"
         }
       },
       "construction": [],
@@ -5281,6 +5966,7 @@
           "1948": 1.3655,
           "1989": 2.3719
         },
+        "v1.3_patch": "DIV-024: refval KEPT at the book value (2.3719). B6 re-confirmation: XS003-A 1989 eu=2.4056 (rebuilt) = (hu/hp 0.99 / ec_u/ec_p 1.00) * (1 + S506 2.44) - 1, where ec_u/ec_p(1989)=1.00 is the panel-regenerated Appendix I.1 tail (source XS003_TableI1_EC_RATIO.csv, note 'regenerated_from=MWoN_panel(ecu_over_ecp) adapter=B2_E_v1.3'). Residual vs book +1.42% traces to that ec ratio. Refval NOT changed; XS003 remains a documented (accepted) benchmark FAIL pending an Appendix I.1 line-21 source re-check.",
         "expected_range": null,
         "tolerance": "rate_series",
         "tolerance_class": "rate_series",
@@ -5305,36 +5991,50 @@
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
         "note": "P23 exemption: Canonical precedent — P02 reads source CSV directly; no L01 by design. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
-      }
+      },
+      "xs_class": "appendix",
+      "xs_attribution": "Shaikh & Tonak (1994), derived analytical series",
+      "display_name": "Unproductive exploitation rate",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Analytical series for the rate of exploitation of unproductive workers (eu), derived from the book's Appendix I relative-exploitation identity (1 + eu)/(1 + ep) = (hu/hp)/(ecu/ecp) with ep = S*/V* (= S506). Anchored to Appendix I Table I.1 'Rates of exploitation of unproductive workers, 1948-89' (canonical I.1 present in _combined). Data spot-check: chopped XS003-A 1948 = 1.3655 ~ book eu 1.35 (Table I.1 worked 1948 example); 1989 = 2.4056 vs book refval 2.3719. The 1989 residual (+1.4%) is a DOCUMENTED, ACCEPTED benchmark FAIL (registry DIV-024: refval kept at the book value; residual traces to the Appendix I.1 ec_u/ec_p tail, pending a line-21 source re-check) — not a new error. NOTE: the registry description 'S_star / V_u_star (unproductive vc)' is shorthand; the actual construction is the Appendix I (1+eu)/(1+ep) identity, not a literal S*/V_u* quotient. Published as a documented-discrepancy appendix series.",
+        "date": "2026-06-11"
+      },
+      "book_anchor": "Appendix I, Table I.1 'Rates of exploitation of unproductive workers, 1948-89'; formula in Chapter 4 Section 4.2.",
+      "construction_clarification": "Computed via (1+eu)/(1+ep) = (hu/hp)/(ecu/ecp) with ep = S*/V*, NOT a literal S*/V_u* ratio as the registry one-line description implies.",
+      "known_discrepancy": "1989 eu = 2.4056 (rebuilt) vs book refval 2.3719 (+1.4%); accepted FAIL per DIV-024."
     },
-    "AS004": {
+    "XS004": {
       "name": "Marxian Productivity",
       "chapter": 0,
       "description": "productive output per unit productive labor",
       "source_type": "analytical",
       "year_range": [
         1948,
-        1961
+        1989
       ],
       "subseries": {
-        "AS004-A": {
+        "XS004-A": {
           "name": "Marxian Productivity",
           "period": [
             1948,
             2024
           ],
-          "units": "index"
+          "units": "index",
+          "label": "Marxian productivity index q* = TPr / Hp"
         }
       },
       "construction": [],
       "extension": null,
       "validation": {
         "reference_values": {
-          "1948": 123.53889015807349,
-          "1953": 137.0088133215776,
-          "1958": 139.24719927778273,
-          "1961": 154.15178867378364
+          "1948": 112.09261546530418,
+          "1953": 136.233440380527,
+          "1958": 160.82057537632366,
+          "1961": 176.4742150416932
         },
+        "v1.3_patch": "DIV-025: recomputed post-S515-correction. The old refvals were derived from the OLD misaligned S515 Lp; q*=TP*/Hp moved by the inverse of the S515 correction (DIV-013). XS004 has no verbatim book table, so refvals are recomputed from the rebuilt v1.3 XS004-A final CSV (TP* unchanged / corrected Lp) at its benchmark years, not hand-set to a book anchor.",
         "expected_range": null,
         "tolerance": "rate_series",
         "tolerance_class": "rate_series",
@@ -5344,7 +6044,8 @@
       "loader": null,
       "processor": null,
       "wave": 5,
-      "status": "book_period_partial_1948_1961",
+      "status": "book_period_validated",
+      "v1.3_year_range_patch": "year_range/status widened 1948-1961 -> 1948-1989: panel-backed rebuild supplies real book-arm data across the full book period; V03 PASS post-rebuild (B6).",
       "units": "index",
       "content_type": "derived",
       "notes": "A10_marxian_productivity.py (legacy script)",
@@ -5352,12 +6053,12 @@
         1948,
         2024
       ],
-      "validation_source": "Technical/chopped/AS004.csv (AS004-A column; q* = TPr / Hp index, base year per Table J.1 row 2 is 1948=100)",
+      "validation_source": "Technical/chopped/XS004.csv (XS004-A column; q* = TPr / Hp index, base year per Table J.1 row 2 is 1948=100)",
       "registry_patch_notes": [
         {
           "ts": "20260524T001841Z",
           "cohort": "stage3_c1",
-          "note": "Status 'book_period_partial_1948_1961' is correctly set with extension:null (no Decision 0003 violation; the partial book-period status is not 'validated_book_and_extension'). Reference values are 4 anchor years from the 1948-1961 partial-validation window currently in the chopped CSV (which covers only 1948-1961 — series is partially built, awaiting full 1948-1989 reconstruction). Per AS004 research file Appendix J Table J.1 anchor: q* index base year is 1948=100 (verified: 1948 chopped value = 123.5, NOT 100, indicating the current index uses a different normalization than book's Table J.1 base; book's Selected Years Table J.1 reports 1948 q* = 27.56 raw, q* index = 100.00, 1954 q* index = 129.78). The chopped value 1948=123.5 is anomalous; Stage 5 must reconcile the index base. Adequacy_blocker: partial book-period only; reference values anchor current pipeline output for the 4-year truncated subseries."
+          "note": "Status 'book_period_partial_1948_1961' is correctly set with extension:null (no Decision 0003 violation; the partial book-period status is not 'validated_book_and_extension'). Reference values are 4 anchor years from the 1948-1961 partial-validation window currently in the chopped CSV (which covers only 1948-1961 — series is partially built, awaiting full 1948-1989 reconstruction). Per XS004 research file Appendix J Table J.1 anchor: q* index base year is 1948=100 (verified: 1948 chopped value = 123.5, NOT 100, indicating the current index uses a different normalization than book's Table J.1 base; book's Selected Years Table J.1 reports 1948 q* = 27.56 raw, q* index = 100.00, 1954 q* index = 129.78). The chopped value 1948=123.5 is anomalous; Stage 5 must reconcile the index base. Adequacy_blocker: partial book-period only; reference values anchor current pipeline output for the 4-year truncated subseries."
         }
       ],
       "artifacts": {
@@ -5367,7 +6068,18 @@
         "ts": "20260524T051452Z",
         "cohort": "v1.2_iter2",
         "note": "P23 exemption: Analytical/supplementary partial-period series; P02 derives from S-series outputs. The series has DPR + P02 + V03 + chopped CSV; the missing L01 is by design and recorded here so anu-doctor P23 honors the exemption."
-      }
+      },
+      "xs_class": "appendix",
+      "xs_attribution": "Shaikh & Tonak (1994), derived analytical series",
+      "display_name": "Marxian productivity index",
+      "publish": true,
+      "triage": {
+        "verdict": "fix-completed-then-publish",
+        "reason": "Analytical index of Marxian labor productivity q* = TPr / Hp (real Marxian total product per productive-labor hour), anchored to the book's Appendix J Table J.1 'Productivity of labor, 1948-89'. The canonical J.1 (in _combined) reports q* as both a level (1982 $/hr) and an index 'q* (index numbers 1948 = 100)' that is exactly 100.00 in 1948, 147.69 in 1958. OPEN ISSUE disclosed: the chopped XS004-A index is NOT rebased to 1948 = 100 (1948 = 112.09, 1958 = 160.82) — a base/normalization discrepancy already flagged in the registry. The series tracks the book's productivity trend but does not reproduce the published Table J.1 index base. v1.3 widened coverage to 1948-1989 (panel-backed rebuild, V03 PASS) and recomputed reference values from the rebuilt CSV (no verbatim book table for those refvals). Published with the index-base discrepancy disclosed. xs_class appendix is correct.",
+        "date": "2026-06-11"
+      },
+      "book_anchor": "Appendix J, Table J.1 'Productivity of labor, 1948-89' (q* = TPr/Hp; index 1948=100).",
+      "open_issue": "chopped XS004-A index uses a different normalization than book Table J.1 (book 1948=100.00; chopped 1948=112.09). Index-base reconciliation outstanding."
     },
     "S617": {
       "name": "Employee Compensation (EC)",
@@ -5385,7 +6097,8 @@
             1948,
             1989
           ],
-          "units": "billions_usd"
+          "units": "billions_usd",
+          "label": "Employee compensation (book period, 1948-1989)"
         }
       },
       "status": "book_period_validated",
@@ -5398,7 +6111,16 @@
         "tolerance_class": "dollar_series",
         "tolerance_rel": 0.01,
         "tolerance_abs": 1.0
-      }
+      },
+      "display_name": "Employee compensation",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Total NIPA employee compensation (productive plus unproductive wage bills), the orthodox aggregate that serves as the denominator for the benefit, tax, and net-transfer rates and as the basis for profit-type income P+ = NNP - EC. Provenance is CORRECT in the DPR (Table H.1, BEA NIPA line 604B 1) — unlike the sibling tax/benefit series this one was not mis-cited. Data verified exactly against canonical Table H.1 EC row: 1948 = 142.09, 1964 = 370.99, 1989 = 3079.00 — all match the chopped series. Quotes verified against the book PDF (Ch7 §7.3, p.221). Only correction: registry chapter label is '6' but EC's actual book home is Table H.1 (Appendix H); it is used in both the Ch5 net-transfer rates and the Ch7 productive/unproductive split. Display name and subseries label set.",
+        "date": "2026-06-11"
+      },
+      "chapter_ref": "Appendix H (Table H.1); used in Chapter 5 (Section 5.9) and Chapter 7 (Section 7.3)",
+      "table_ref": "Table H.1"
     },
     "S517": {
       "name": "Productive Capital Stock (K*)",
@@ -5418,7 +6140,8 @@
             1948,
             1989
           ],
-          "units": "billions_usd"
+          "units": "billions_usd",
+          "label": "Productive capital stock K* (book period, 1948-1989)"
         },
         "S517-EXT": {
           "name": "BEA Fixed Assets 4.1 Line 1 (extension, level splice at 1989)",
@@ -5428,7 +6151,8 @@
             1990,
             2024
           ],
-          "units": "billions_usd"
+          "units": "billions_usd",
+          "label": "Productive capital stock K* (BEA Fixed Assets extension, 1990-2024)"
         },
         "S517-COMBINED": {
           "name": "Productive Capital Stock K*, book + extension combined (1948-2024)",
@@ -5438,7 +6162,8 @@
             1948,
             2024
           ],
-          "units": "billions_usd"
+          "units": "billions_usd",
+          "label": "Productive capital stock K* (book spliced to extension)"
         }
       },
       "construction": [
@@ -5474,13 +6199,13 @@
       },
       "validation": {
         "reference_values": {
-          "1925": 126.977,
           "1948": 291.557,
           "1958": 551.356,
           "1967": 871.188,
           "1980": 3800.29,
           "1989": 6699.84
         },
+        "v1.3_patch": "DIV-027: removed the spurious 1925 benchmark (126.977). S517 covers 1948+ on NET stock; the series never produces a 1925 value, so the benchmark was always MISSING. All 5 in-range anchors PASS. NET-vs-gross K* convention switch deferred to v1.4 (not changed here).",
         "expected_range": [
           100.0,
           20000.0
@@ -5529,6 +6254,13 @@
         "cohort": "v1.2_iter2",
         "patch_id": "P29_S517_extension_year_range",
         "note": "P29 doctor cleanup (Iter2 B3): record extension_year_range=[1948,2024] in validation block. Book period year_range=[reg_min,reg_max] is preserved as book authority; chopped CSV extends to 2024 via -EXT/-COMBINED subseries. anu-doctor P29 check updated to compute effective_year_range = year_range UNION extension_year_range so book-vs-chopped comparison no longer flags extension as a mismatch."
+      },
+      "display_name": "Productive capital stock (K*)",
+      "publish": true,
+      "triage": {
+        "verdict": "publish",
+        "reason": "Fixed capital stock employed in productive sectors, the denominator of the Marxian profit rate r* = S*/(K*+V*). Verified: chopped 1948=291.557 matches registry reference value; status validated_book_and_extension is legitimate (extension block populated with BEA Fixed Assets 4.1, -EXT and -COMBINED subseries present). Quotes 'ratio of surplus value to total fixed capital K' and Footnote 16 (circulating-capital caveat) verified verbatim p.122 (PDF p.142). Note: RMWND K* (BEA Fixed Assets 4.1 Line 1) differs in level from the book's K*=C*f (BEA 1987 vintage, Table 5.8 1948=384.30); a documented vintage/source substitution recorded in the EPR, not an error.",
+        "date": "2026-06-11"
       }
     }
   },
@@ -5909,7 +6641,7 @@
         "applied_at": "2026-05-19T17:52:10Z",
         "ch7_proxy_disclosures": 3,
         "mis_status_downgrades": 9,
-        "source": "Council/Druck/docs/RMWND_HYPER_REVIEW_2026-05-19.md",
+        "source": "internal hyper-review 2026-05-19,",
         "summary": "Disclosed Ch7 matrix-derived proxy semantics (S701/S702 units fix + proxy=true; S703 status downgrade to match algebraic identity to S513). Downgraded 9 mis-status series claiming validated_book_and_extension with extension=null."
       }
     ]

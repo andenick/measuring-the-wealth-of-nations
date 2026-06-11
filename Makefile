@@ -11,7 +11,7 @@ PYTHON      ?= python
 PIP         ?= pip
 PYTEST      ?= $(PYTHON) -m pytest
 BUILD       := $(PYTHON) build.py
-DOCTOR      := $(PYTHON) D:/Arcanum/Council/Druck/anu/check_project.py
+# project doctor runs in the maintainer workspace, not in this repo
 DOCKER      ?= docker
 IMAGE       ?= rmwnd:v1.1
 PROJECT_DIR := .
@@ -29,13 +29,13 @@ help:
 	@echo "  ledger         regenerate ANU_LEDGER.json only"
 	@echo "  status         print PIPELINE_STATE stage table"
 	@echo "  test           run pytest under $(TESTS_DIR)/"
-	@echo "  doctor         run anu-doctor (project mode) with JSON output"
-	@echo "  review         summarise latest Handoffs/ANU_REVIEW_*.md"
+	@echo "  doctor         (maintainer-only; anu-doctor is not shipped in this repo)"
+	@echo "  review         summarise the latest build review output"
 	@echo "  viz            run viz quality checker"
 	@echo "  clean          remove scratch and v1.1 patch artifacts (destructive!)"
 	@echo "  docker-build   build the rmwnd:v1.1 image"
 	@echo "  docker-run     run the rmwnd:v1.1 image (default cmd: status)"
-	@echo "  all            install + build + test + doctor"
+	@echo "  all            install + build + test"
 
 install:
 	$(PIP) install -r requirements.txt
@@ -58,7 +58,7 @@ test:
 	$(PYTEST) $(TESTS_DIR)/
 
 doctor:
-	$(DOCTOR) --project $(PROJECT_DIR) --json
+	@echo "anu-doctor (project mode) runs in the maintainer workspace, not in this repo"
 
 review:
 	$(BUILD) review
@@ -82,4 +82,4 @@ docker-build:
 docker-run:
 	$(DOCKER) run --rm $(IMAGE) status
 
-all: install build test doctor
+all: install build test

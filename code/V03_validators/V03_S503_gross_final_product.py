@@ -19,10 +19,14 @@ from utils.io import write_validation_result  # noqa: E402
 
 
 VALIDATOR = BenchmarkValidator(
-    series_id        = "S503",
-    tolerance_class  = "dollar_series",
-    benchmarks       = get_reference_values("S503"),
-    subseries_filter = "S503-A",
+    series_id            = "S503",
+    tolerance_class      = "dollar_series",
+    benchmarks           = get_reference_values("S503"),
+    subseries_filter     = "S503-A",
+    # DIV-022: 1997/2010/2024 refvals belong to the extension arm; validate them
+    # against S503-COMBINED (the book-year anchors 1948/1989 stay on S503-A).
+    ext_subseries_filter = "S503-COMBINED",
+    ext_year_after       = 1989,
 )
 
 

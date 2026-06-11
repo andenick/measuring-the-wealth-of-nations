@@ -104,7 +104,7 @@ data/source/book_tables/book_tableH1_1948_1989.csv         (digitized book, salv
 - `S502` (Constant Capital M'_p / C*_m): subtrahend in the identity GFP = TP\* − C*_m.
 - `S503` (Gross Final Product, GFP): TP\* − S502.
 - `S504`, `S505`, `S506`: variable capital, surplus value, exploitation rate — downstream of S503.
-- `ES1401` (Mohun 2005 productive output): independent reconstruction using a different productive/unproductive boundary.
+- `XS1401` (Mohun 2005 productive output): independent reconstruction using a different productive/unproductive boundary.
 
 ---
 

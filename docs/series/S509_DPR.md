@@ -5,7 +5,9 @@
 **Units**: billions current $
 **Period**: 1948-1961
 **Content Type**: time_series
-**Status**: book_period_partial_1948_1961
+**Status**: book_period_validated
+
+> **v1.3 note:** Status widened from `book_period_partial_1948_1961` to `book_period_validated`. The panel-backed rebuild (B6) supplies real book-arm data across the full book period 1948-1989 (previously partial 1948-1961); V03 PASS post-rebuild.
 
 ## Definition
 

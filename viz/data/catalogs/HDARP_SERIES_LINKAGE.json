@@ -1,0 +1,206 @@
+{
+  "_metadata": {
+    "schema_version": "anu-visualize-v6.0",
+    "generated_at": "2026-05-23T00:00:00Z",
+    "project": "measuring-wealth-of-nations-replication"
+  },
+  "Fig_4_1": {
+    "figure_id": "Fig_4_1",
+    "chapter": 4,
+    "linked_series": [
+      "S401",
+      "S402"
+    ],
+    "data_columns": {},
+    "kb_source": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_10/figures/figure_4.1_condensed_form.md",
+    "kb_available": true,
+    "description": "IO Accounts and Marxian Categories - Condensed Form (book p.79)"
+  },
+  "Fig_5_2": {
+    "figure_id": "Fig_5_2",
+    "chapter": 5,
+    "linked_series": [
+      "S511",
+      "S515",
+      "S516"
+    ],
+    "data_columns": {}
+  },
+  "Fig_5_3": {
+    "figure_id": "Fig_5_3",
+    "chapter": 5,
+    "linked_series": [
+      "S506"
+    ],
+    "data_columns": {}
+  },
+  "Fig_5_4": {
+    "figure_id": "Fig_5_4",
+    "chapter": 5,
+    "linked_series": [
+      "S501",
+      "S502",
+      "S503",
+      "S504",
+      "S505"
+    ],
+    "data_columns": {}
+  },
+  "Fig_5_5": {
+    "figure_id": "Fig_5_5",
+    "chapter": 5,
+    "linked_series": [
+      "S513",
+      "S514"
+    ],
+    "data_columns": {},
+    "caption_note": "Stock-form r* per book Table 5.11 (§5.5); flow-form available as S513-FLOW / S514-FLOW secondary subseries (see DIV-012).",
+    "form_provenance": "v1.2 Iter 3: S513 + S514 adopted stock-form primary (r* = S*/(K*+V*)) across full 1948-2024 range per DIV-012. v1.1 published a 1948-1989 stock + 1998-2024 flow splice which produced an artificial trend reversal; v1.2 restores book-canonical stock form."
+  },
+  "Fig_5_6": {
+    "figure_id": "Fig_5_6",
+    "chapter": 5,
+    "linked_series": [
+      "S501",
+      "S515"
+    ],
+    "data_columns": {}
+  },
+  "Fig_5_7": {
+    "figure_id": "Fig_5_7",
+    "chapter": 5,
+    "linked_series": [
+      "S511",
+      "S515",
+      "S516"
+    ],
+    "data_columns": {}
+  },
+  "Fig_5_8": {
+    "figure_id": "Fig_5_8",
+    "chapter": 5,
+    "linked_series": [
+      "S501",
+      "S502",
+      "S503",
+      "S504",
+      "S505",
+      "S506",
+      "S507",
+      "S508",
+      "S509",
+      "S510",
+      "S511",
+      "S512",
+      "S513",
+      "S514",
+      "S515",
+      "S516",
+      "S517"
+    ],
+    "data_columns": {},
+    "kb_source": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/figures/figures_5.8_to_5.15_summary.md",
+    "kb_available": true,
+    "description": "Total Real Wage and Variable Capital (book pp.118-121); summary covers Figures 5.8-5.15",
+    "caption_note": "S513 / S514 rendered in stock form (r* = S*/(K*+V*)) per book Table 5.11 (§5.5); flow-form available as S513-FLOW / S514-FLOW secondary subseries (see DIV-012)."
+  },
+  "Fig_7_1": {
+    "figure_id": "Fig_7_1",
+    "chapter": 7,
+    "linked_series": [
+      "S701",
+      "S702",
+      "S703"
+    ],
+    "data_columns": {},
+    "kb_source": null,
+    "kb_available": false,
+    "kb_unavailable": true,
+    "kb_unavailable_reason": "Figure 7.1 is referenced in chunk_24 (Ch7) full_transcription.md text but was not extracted as a standalone figure file during HDARP. Chapter 7 KB coverage is sparse (per RMWND CLAUDE.md). Ch7 series (S701/S702/S703) carry proxy:true status, so figure rendering is conceptual rather than literal book replication.",
+    "description": "Labor Values vs Prices of Production (Ch7) - text reference only in KB"
+  },
+  "Fig_6_1": {
+    "figure_id": "Fig_6_1",
+    "chapter": 6,
+    "linked_series": [
+      "S504",
+      "S607"
+    ],
+    "data_columns": {}
+  },
+  "Fig_6_2": {
+    "figure_id": "Fig_6_2",
+    "chapter": 6,
+    "linked_series": [
+      "S504"
+    ],
+    "data_columns": {}
+  },
+  "Fig_6_3": {
+    "figure_id": "Fig_6_3",
+    "chapter": 6,
+    "linked_series": [
+      "S504",
+      "S607"
+    ],
+    "data_columns": {}
+  },
+  "Fig_6_4": {
+    "figure_id": "Fig_6_4",
+    "chapter": 6,
+    "linked_series": [
+      "S601",
+      "S605",
+      "S607"
+    ],
+    "data_columns": {}
+  },
+  "Fig_9_1": {
+    "figure_id": "Fig_9_1",
+    "chapter": 9,
+    "linked_series": [
+      "S501",
+      "S504",
+      "S505"
+    ],
+    "data_columns": {}
+  },
+  "Fig_9_2": {
+    "figure_id": "Fig_9_2",
+    "chapter": 9,
+    "linked_series": [
+      "S501",
+      "S513"
+    ],
+    "data_columns": {},
+    "caption_note": "S513 rendered in stock form (r* = S*/(K*+V*)) per book Table 5.11 (§5.5); flow-form available as S513-FLOW secondary subseries (see DIV-012)."
+  },
+  "Fig_9_3": {
+    "figure_id": "Fig_9_3",
+    "chapter": 9,
+    "linked_series": [
+      "S506",
+      "S511",
+      "S512"
+    ],
+    "data_columns": {}
+  },
+  "Fig_9_4": {
+    "figure_id": "Fig_9_4",
+    "chapter": 9,
+    "linked_series": [
+      "S513",
+      "S514"
+    ],
+    "data_columns": {},
+    "caption_note": "S513 / S514 rendered in stock form (r* = S*/(K*+V*)) per book Table 5.11 (§5.5); flow-form available as S513-FLOW / S514-FLOW secondary subseries (see DIV-012)."
+  },
+  "Fig_9_5": {
+    "figure_id": "Fig_9_5",
+    "chapter": 9,
+    "linked_series": [
+      "S506"
+    ],
+    "data_columns": {}
+  }
+}

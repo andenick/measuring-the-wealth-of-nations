@@ -6,16 +6,19 @@ authors:
   - family-names: Anderson
     given-names: Nick
     email: protonnicky@gmail.com
-repository-code: "https://github.com/andenick/measuring-wealth-of-nations-replication"
+repository-code: "https://github.com/andenick/measuring-the-wealth-of-nations"
 abstract: >-
   Complete replication and extension of every empirical claim in Shaikh & Tonak's
   Measuring the Wealth of Nations (1994), plus 8 follow-up studies (Tonak 1984,
   Shaikh & Tonak 1987 and 2002, Moos 2017, Mohun 2005 and 2013, Karabacak & Tonak
   2022 Turkey, Cronin 2001 New Zealand), with 64 data series covering 1925-2025.
-  Built on the Anu Framework v10.0 with strict no-fabrication and full-provenance
+  Built on the Anu Framework v12.0 with strict no-fabrication and full-provenance
   discipline; every value traces to a published source, cached API response, or
   documented derivation. 100% validation pass rate against book benchmarks and
-  identity/cross-source consistency checks.
+  identity/cross-source consistency checks. v1.2 retires Chapter 7
+  labor-coefficient proxies (3 series), adopts S513/S514 in stock form per
+  Decision 0008, and enforces 8 framework decisions across DIVERGENCE_REGISTER
+  (12 entries) and V03 validators (90/90 tests pass).
 keywords:
   - marxian-economics
   - replication
@@ -25,8 +28,8 @@ keywords:
   - input-output
   - heterodox-economics
 license: MIT
-version: "1.0.0"
-date-released: "2026-05-15"
+version: "1.2.0"
+date-released: "2026-05-24"
 references:
   - type: book
     authors:
