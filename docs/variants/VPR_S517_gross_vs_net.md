@@ -118,8 +118,8 @@ methodology document mentioning K\*:
 
 - `code/E08_exploration/E_S517_gross_vs_net.py` — comparison script
 - `data/scratch/S517_gross_vs_net.csv` — year-by-year side-by-side, 1925-2024
-- `Inputs/ST2/Inputs/API_Data/BEA/fixed_assets_4_2_gross_stock.csv` — Table 4.2 fetch (Fisher quantity index)
-- `Inputs/ST2/Inputs/API_Data/BEA/provenance_fixed_assets_4_2.json` — fetch provenance
+- `data/raw/bea/fixed_assets_4_2_gross_stock.csv` — Table 4.2 fetch (Fisher quantity index)
+- `data/raw/bea/provenance_fixed_assets_4_2.json` — fetch provenance
 - `code/E08_exploration/fetch_bea_table_4_2.py` — fetch script
 - `series_registry.json` — S517 entry (status: validated_book_and_extension)
 - Shaikh & Tonak (1994), *Measuring the Wealth of Nations*, Chapter 5, Appendix H

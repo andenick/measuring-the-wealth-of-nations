@@ -86,8 +86,8 @@ only staged change.
 
 1. Read the FAIL line; each one names the file and the specific contract
    violation.
-2. Per the project rules (`<workspace>/.claude/rules/anu-framework.md` —
-   *No Synthetic Data*), do **not** "fix" a FAIL by inventing values to
+2. Per the project's *No Synthetic Data* rule, do **not** "fix" a FAIL by
+   inventing values to
    satisfy a contract. Either supply real data or downgrade the series'
    status and remove the offending field.
 3. The script is read-only by design; it will never auto-rewrite the
@@ -113,5 +113,4 @@ all framework + project-scoped decisions).
 
 - Decision 0007 (verbatim quote schema) — `Docs/decisions/0007_verbatim_quote_schema.md`
 - Decision 0008 (year-keyed reference values) — `Docs/decisions/0008_reference_values_year_keyed_scalars.md`
-- `<workspace>/.claude/rules/anu-framework.md`
-- `<project_root>/CLAUDE.md` (project-specific anti-patterns)
+- The project's No-Synthetic-Data rule and per-project anti-patterns

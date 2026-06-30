@@ -44,7 +44,7 @@ Coordinator backfills from `Technical/chopped/S703.csv` after agents 1-3 commit 
 - **Wolff comparator**: 12–15% upper envelope (sum of Wolff 4–8% inconsistent-procedure bias + Khanjian 6–9% baseline)
 - v1.1 `expected_range` tightened to `[0.0, 15.0]` (vs v1.0 proxy's `[0.0, 100.0]` that had to accept matrix-artifact range)
 - Book does NOT literally claim R² > 0.95 (prior research-file attribution flagged for re-verification); R² treated as secondary diagnostic only
-- Note: v0 ST2-era implementation R² 0.70–0.98 was driven by scalar-λ_m + GO−V* surplus error in the proxy, not by a real failure of LTV; v1.1 sector-disaggregated procedure should produce R² consistent with the consistent-procedure framework
+- Note: v0 predecessor-build-era implementation R² 0.70–0.98 was driven by scalar-λ_m + GO−V* surplus error in the proxy, not by a real failure of LTV; v1.1 sector-disaggregated procedure should produce R² consistent with the consistent-procedure framework
 
 ## Known issues
 
@@ -64,7 +64,7 @@ Coordinator backfills from `Technical/chopped/S703.csv` after agents 1-3 commit 
 
 ## Provenance trail
 
-- **Original research**: `Technical/research/S703_research.json`, researcher `agent`, 2026-05-06; ported from `ST2/research/T703_research.json` on 2026-05-14; verbatim quotes backfilled 2026-05-19 and 2026-05-23
+- **Original research**: `Technical/research/S703_research.json`, researcher `agent`, 2026-05-06; ported from `predecessor-build/research/T703_research.json` on 2026-05-14; verbatim quotes backfilled 2026-05-19 and 2026-05-23
 - **DPR v1.0**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (proxy disclosure version)
 - **DPR v1.1 (this version)**: 2026-05-24, v1.1 Phase 4 iteration 5 Ch7 real-fix agent 4. Real implementation replaces proxy disclosure. See DIV-011.
 - **Anu Framework stage**: Stage 5 EXECUTION (Ch7 real-fix sub-stage); doctor gate IDs P13/P31/P36

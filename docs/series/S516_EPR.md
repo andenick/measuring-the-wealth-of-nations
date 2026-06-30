@@ -18,7 +18,7 @@ DERIVED identity series (NOT a direct fetch). Extension is computed each year as
 
     Lu = L_total − S515
 
-where S515 is extended productive employment (see `S515_EPR.md`) and L_total is total nonfarm payroll employment from BLS CES (CES series `CEU0000000001` / `CES0000000001` for total nonfarm, seasonally adjusted, all employees). Cached BLS data: `Inputs/ST2/Inputs/API_Data/BLS/bls_ces_production_workers.csv` (the same BLS pull that supplies S515 also supplies the total-employment denominator; the L_total series may also be sourced from BEA NIPA 6.4D/6.5D full- and part-time employees if a NIPA-consistent total is preferred over the CES total).
+where S515 is extended productive employment (see `S515_EPR.md`) and L_total is total nonfarm payroll employment from BLS CES (CES series `CEU0000000001` / `CES0000000001` for total nonfarm, seasonally adjusted, all employees). Cached BLS data: `data/raw/bls/bls_ces_production_workers.csv` (the same BLS pull that supplies S515 also supplies the total-employment denominator; the L_total series may also be sourced from BEA NIPA 6.4D/6.5D full- and part-time employees if a NIPA-consistent total is preferred over the CES total).
 
 ## 4. extension_url
 
@@ -35,4 +35,4 @@ Shaikh & Tonak define Lu as the residual of the productive/unproductive partitio
 
 ## 6. vintage_note
 
-Book vintage: SIC-basis BLS employment with Shaikh–Tonak's then-current Appendix C concordance, supplying both Lp and L for the 1948–1961 KB-digitized window. Modern vintage: NAICS-basis BLS CES from 2003 forward; the 2003 SIC→NAICS overhaul affects both L and Lp simultaneously and cancels somewhat in the difference, but does not cancel completely because the partition itself changes. Vintage divergences in Lu are inherited from S515 (Appendix C update for NAICS; BLS CES 2003 overhaul; KB coverage gap 1962–1989). Last cached fetch: see `Inputs/ST2/Inputs/API_Data/BLS/provenance.json`. Splice method is `derive` — the splice is induced by S515 + L_total and there is no independent splice parameter for Lu.
+Book vintage: SIC-basis BLS employment with Shaikh–Tonak's then-current Appendix C concordance, supplying both Lp and L for the 1948–1961 KB-digitized window. Modern vintage: NAICS-basis BLS CES from 2003 forward; the 2003 SIC→NAICS overhaul affects both L and Lp simultaneously and cancels somewhat in the difference, but does not cancel completely because the partition itself changes. Vintage divergences in Lu are inherited from S515 (Appendix C update for NAICS; BLS CES 2003 overhaul; KB coverage gap 1962–1989). Last cached fetch: see `data/raw/bls/provenance.json`. Splice method is `derive` — the splice is induced by S515 + L_total and there is no independent splice parameter for Lu.

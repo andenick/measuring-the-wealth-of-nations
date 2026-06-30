@@ -20,7 +20,7 @@ Figures: 5.4, 5.6, 9.1, 9.2 (M'_p plotted as a component of the Marxian total-pr
 
 ## 3. extension_source
 
-**BEA GDP-by-Industry Accounts** — Intermediate Inputs (II) for the productive-sector NAICS industries (S502-EXT subseries). II is computed via the BEA-published identity II = Gross Output − Value Added at the industry level (productive/unproductive concordance documented in `Technical/docs/methodology/productive_classification_NAICS.md`, same partition as S501/S503). The pull caches the BEA Industry value-added components (`gdp_by_industry_value_added.csv`, `gdp_by_industry_gross_output.csv`) at `Inputs/ST2/Inputs/API_Data/BEA/`, pulled 2026-02-24 by `pull_bea_nipa_ch05.py` and mirrored at `Technical/data/raw/bea/`.
+**BEA GDP-by-Industry Accounts** — Intermediate Inputs (II) for the productive-sector NAICS industries (S502-EXT subseries). II is computed via the BEA-published identity II = Gross Output − Value Added at the industry level (productive/unproductive concordance documented in `Technical/docs/methodology/productive_classification_NAICS.md`, same partition as S501/S503). The pull caches the BEA Industry value-added components (`gdp_by_industry_value_added.csv`, `gdp_by_industry_gross_output.csv`) at `data/raw/bea/`, pulled 2026-02-24 by `pull_bea_nipa_ch05.py` and mirrored at `Technical/data/raw/bea/`.
 
 ## 4. extension_url
 
@@ -43,7 +43,7 @@ Growth-rate splice at 1997 is admissible under the Anu Extension Standard becaus
 
 ## 6. vintage_note
 
-Book values 1948–1989 are frozen at the book's vintage: SIC-based BEA NIPA + IO tables as published by 1993. The modern extension uses BEA GDP-by-Industry NAICS data from 1997 forward, pulled 2026-02-24 (provenance `Inputs/ST2/Inputs/API_Data/BEA/provenance.json`), approximately the September 2025 NIPA vintage.
+Book values 1948–1989 are frozen at the book's vintage: SIC-based BEA NIPA + IO tables as published by 1993. The modern extension uses BEA GDP-by-Industry NAICS data from 1997 forward, pulled 2026-02-24 (provenance `data/raw/bea/provenance.json`), approximately the September 2025 NIPA vintage.
 
 The 1990–1996 gap is bridged log-linearly between the 1989 book endpoint (M'_p = 3278.25) and the 1997 BEA endpoint (II_productive = 3945.10), documented as methodological adjustment **M04_S502** in `DIVERGENCE_REGISTER.json`. The BEA endpoint exceeds the book endpoint by ~20%, consistent with normal nominal trend growth over 8 years (~2.3%/yr compound) plus modest comprehensive-revision level effects. BEA comprehensive revisions (1999, 2003, 2009, 2013, 2018) alter post-1997 values relative to the book; pre-1997 book values remain frozen.
 

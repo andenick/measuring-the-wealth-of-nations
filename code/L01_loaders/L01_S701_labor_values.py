@@ -55,7 +55,7 @@ SUBSERIES = "S701-A"
 APPENDIX_F        = DATA_SOURCE / "appendix_F" / "Table_F_1.csv"
 SIC_NAICS_BRIDGE  = DATA_SOURCE / "concordances" / "sic_naics_bridge.csv"
 IO_LABELED_DIR    = DATA_INTERMEDIATE / "io_matrices_labeled"
-BLS_CACHE_DIR     = ROOT.parent / "Inputs" / "ST2" / "Inputs" / "API_Data" / "BLS"
+BLS_CACHE_DIR     = ROOT / "data" / "raw" / "bls"
 
 OUTPUT_DIR = DATA_RAW / "ch07"
 OUTPUT_CSV = OUTPUT_DIR / "L01_S701_output.csv"

@@ -48,6 +48,6 @@ S402's published summary scalars are `n_sectors`, `max_b_element`, `b_column_sum
 
 ## Provenance trail
 
-- **Original research**: `Technical/research/S402_research.json`, researcher `agent`, 2026-05-06; ported from `ST2/research/T402_research.json` on 2026-05-14
+- **Original research**: `Technical/research/S402_research.json`, researcher `agent`, 2026-05-06; ported from `predecessor-build/research/T402_research.json` on 2026-05-14
 - **DPR enriched**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (cohort agent 4); sources read = research JSON + KB chunks 10/27 cited via research JSON + registry entry
 - **Anu Framework stage**: Stage 3 INGESTION (cohort 1, failing chapters); ingestion gate IDs P31/P32

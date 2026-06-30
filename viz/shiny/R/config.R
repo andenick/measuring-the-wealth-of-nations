@@ -10,7 +10,7 @@ RMWND_PATHS <- list(
   chopped_dir        = normalizePath(file.path(VIZ_DIR, "..", "chopped"), mustWork = FALSE),
   catalog            = file.path(VIZ_DIR, "data", "catalogs", "DEFINITIVE_SERIES_CATALOG.json"),
   subsource_metadata = file.path(VIZ_DIR, "data", "catalogs", "SUBSOURCE_METADATA.json"),
-  series_linkage     = file.path(VIZ_DIR, "data", "catalogs", "HDARP_SERIES_LINKAGE.json"),
+  series_linkage     = file.path(VIZ_DIR, "data", "catalogs", "SERIES_SOURCE_LINKAGE.json"),
   quotes             = file.path(VIZ_DIR, "data", "catalogs", "RMWND_QUOTES_MASTER.json"),
   manifest           = file.path(VIZ_DIR, "data", "DATA_MANIFEST.json"),
   pipeline_state     = normalizePath(file.path(VIZ_DIR, "..", "PIPELINE_STATE.json"), mustWork = FALSE),

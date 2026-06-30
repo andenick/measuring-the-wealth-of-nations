@@ -1,6 +1,6 @@
 """L01_S517 — Load K* (Productive Constant Capital Stock).
 
-Source: BEA Fixed Assets Table 4.1 (ported from ST2 cache), Line 1
+Source: BEA Fixed Assets Table 4.1 (ported from predecessor-build cache), Line 1
 "Private nonresidential fixed assets". Period 1925-2024.
 
 **Productive partition note**: Line 1 is total private nonresidential fixed

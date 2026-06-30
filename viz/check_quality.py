@@ -25,7 +25,7 @@ SHINY_DIR = VIZ_DIR / "shiny"
 CONFIG_PATH = VIZ_DIR / "config" / "app_config.json"
 CATALOG_PATH = VIZ_DIR / "data" / "catalogs" / "DEFINITIVE_SERIES_CATALOG.json"
 SUBSOURCE_PATH = VIZ_DIR / "data" / "catalogs" / "SUBSOURCE_METADATA.json"
-LINKAGE_PATH = VIZ_DIR / "data" / "catalogs" / "HDARP_SERIES_LINKAGE.json"
+LINKAGE_PATH = VIZ_DIR / "data" / "catalogs" / "SERIES_SOURCE_LINKAGE.json"
 REGISTRY_PATH = (VIZ_DIR / ".." / "series_registry.json").resolve()
 MANIFEST_PATH = VIZ_DIR / "data" / "DATA_MANIFEST.json"
 

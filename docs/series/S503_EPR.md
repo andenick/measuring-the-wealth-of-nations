@@ -20,7 +20,7 @@ Figures: 5.4, 5.6, 9.1 (GFP* plotted as the Marxian productive net product aggre
 
 ## 3. extension_source
 
-**BEA GDP-by-Industry Accounts** — Value Added (VA) series for the productive-sector NAICS industries (S503-EXT subseries; productive/unproductive concordance per `Technical/docs/methodology/productive_classification_NAICS.md`, same partition as S501/S502). The pull caches `gdp_by_industry_value_added.csv` at `Inputs/ST2/Inputs/API_Data/BEA/`, pulled 2026-02-24 by `pull_bea_nipa_ch05.py` and mirrored at `Technical/data/raw/bea/`.
+**BEA GDP-by-Industry Accounts** — Value Added (VA) series for the productive-sector NAICS industries (S503-EXT subseries; productive/unproductive concordance per `Technical/docs/methodology/productive_classification_NAICS.md`, same partition as S501/S502). The pull caches `gdp_by_industry_value_added.csv` at `data/raw/bea/`, pulled 2026-02-24 by `pull_bea_nipa_ch05.py` and mirrored at `Technical/data/raw/bea/`.
 
 ## 4. extension_url
 

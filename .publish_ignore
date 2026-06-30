@@ -57,13 +57,11 @@ BACKLOG.md
 *_OUTSTANDING_STEPS_PLAN.md
 *_SURVEY_*.md
 
-# Stale Stage-2 adequacy report - dated 2026-05-23, predates the v1.2 Ch7
-# proxy retirement and now states proxy:true / gate_passed:false, which
-# contradicts the published registry (proxy:false). Excluded to avoid
-# shipping a doc that falsely describes the release.
-Docs/chapters/CH7_ADEQUACY_REPORT.json
-
-# Internal QA review reports (per-wave / per-chapter anu-review process
-# artifacts). These describe the build/scrub process and contain coordination
-# notes (e.g. GitHub-push task lists), not scientific replication content.
-Docs/chapters/*_REVIEW_REPORT.json
+# Internal QA review + adequacy reports (per-wave / per-chapter anu-review and
+# anu-adequacy process artifacts). These describe the internal build/scrub
+# process and contain coordination notes (e.g. GitHub-push task lists) and
+# stale/self-contradicting status, not scientific replication content. Lowercase
+# `docs/` so the globs actually match the on-disk tree (a prior capital-`Docs/`
+# typo defeated the scrub and shipped these reports publicly).
+docs/chapters/*_REVIEW_REPORT.json
+docs/chapters/*_ADEQUACY_REPORT.json

@@ -11,7 +11,7 @@ Cronin Table 1, NZ total value in millions of NZD.
 
 ## Source
 
-`data/source/external_studies/Cronin2001_cronin_table1_nzsna_classical_1972_1995.csv` (copied from ST2's ExternalSources). Loader: `code/L01_loaders/L01_XS1704_nz_total_value_cronin2001.py`. Processor: pass-through (P02). Validator: `code/V03_validators/V03_XS1704_nz_total_value_cronin2001.py`.
+`data/source/external_studies/Cronin2001_cronin_table1_nzsna_classical_1972_1995.csv` (copied from predecessor-build's ExternalSources). Loader: `code/L01_loaders/L01_XS1704_nz_total_value_cronin2001.py`. Processor: pass-through (P02). Validator: `code/V03_validators/V03_XS1704_nz_total_value_cronin2001.py`.
 
 ## Validation
 

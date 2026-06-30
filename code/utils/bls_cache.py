@@ -1,7 +1,7 @@
 """Read BLS CES cached CSV responses.
 
 The BLS CES cache lives at:
-  Inputs/ST2/Inputs/API_Data/BLS/bls_ces_production_workers.csv
+  data/raw/bls/bls_ces_production_workers.csv
 
 Format: wide-by-series with first column `year`, then one column per BLS CES
 series ID. Each cell is `production workers (thousands)` or `all employees
@@ -33,7 +33,7 @@ import pandas as pd
 from .paths import ROOT
 
 
-BLS_CES_CACHE = ROOT.parent / "Inputs" / "ST2" / "Inputs" / "API_Data" / "BLS" / "bls_ces_production_workers.csv"
+BLS_CES_CACHE = ROOT / "data" / "raw" / "bls" / "bls_ces_production_workers.csv"
 
 
 def load_bls_ces() -> pd.DataFrame:

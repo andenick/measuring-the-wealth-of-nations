@@ -22,7 +22,7 @@ The summary diagnostics emitted per benchmark year are: `n_sectors` (matrix dime
 - KB chunks: `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_10/full_transcription.md` (Ch4 §4.1, pp.78-83 — IO framework, labor-value equations, A* / B* derivation); `chunk_27/full_transcription.md` (Appendix A §§A.3.1-A.3.5, pp.243-260 — Juillard tables, aggregation pipeline, FAC reversal, real-estate adjustment)
 - Book tables: ST 1994 Table 4.1 (A-Matrix) at the 85×85 level; Figure 5.1 (8×11 summary structure)
 - External sources: BEA Benchmark Input-Output Accounts (1947, 1958, 1963, 1967, 1972, 1977); Juillard (1988) dissertation tables; BEA (1980) for force-account construction definition
-- Local files: `data/source/io_matrices/<year>_A_matrix.csv` (6 files copied from BEA Benchmark IO via ST2 IO_Matrices); printed-book digitization at `data/source/book_tables/ch04/Table4_1_AMatrix.csv`
+- Local files: `data/source/io_matrices/<year>_A_matrix.csv` (6 files copied from BEA Benchmark IO via predecessor-build IO_Matrices); printed-book digitization at `data/source/book_tables/ch04/Table4_1_AMatrix.csv`
 - Code: `code/utils/io_matrix.py` (loaders + summary diagnostics)
 
 ## Reference values
@@ -50,6 +50,6 @@ The summary diagnostics emitted per benchmark year are: `n_sectors` (matrix dime
 
 ## Provenance trail
 
-- **Original research**: `Technical/research/S401_research.json`, researcher `agent`, 2026-05-06; ported from `ST2/research/T401_research.json` on 2026-05-14
+- **Original research**: `Technical/research/S401_research.json`, researcher `agent`, 2026-05-06; ported from `predecessor-build/research/T401_research.json` on 2026-05-14
 - **DPR enriched**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (cohort agent 4); sources read = research JSON + KB chunks 10/27 cited via research JSON + registry entry
 - **Anu Framework stage**: Stage 3 INGESTION (cohort 1, failing chapters); ingestion gate IDs P31/P32

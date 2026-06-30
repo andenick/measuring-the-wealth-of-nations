@@ -5,8 +5,8 @@ methodologies, per book Table 5.8 ambiguity (book text says "gross", current
 S517 implementation uses BEA Fixed Assets Table 4.1 net stock).
 
 Inputs:
-  - Inputs/ST2/Inputs/API_Data/BEA/fixed_assets_4_1_net_stock.csv (Line 1, current $)
-  - Inputs/ST2/Inputs/API_Data/BEA/fixed_assets_4_2_gross_stock.csv (Line 1, Fisher Quantity Index)
+  - data/raw/bea/fixed_assets_4_1_net_stock.csv (Line 1, current $)
+  - data/raw/bea/fixed_assets_4_2_gross_stock.csv (Line 1, Fisher Quantity Index)
 
 Notes on BEA data availability:
   BEA Fixed Assets does NOT publish a current-cost GROSS stock series for
@@ -24,8 +24,8 @@ import csv
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]  # bundle root
-NET_CSV = PROJECT_ROOT / "Inputs/ST2/Inputs/API_Data/BEA/fixed_assets_4_1_net_stock.csv"
-GROSS_CSV = PROJECT_ROOT / "Inputs/ST2/Inputs/API_Data/BEA/fixed_assets_4_2_gross_stock.csv"
+NET_CSV = PROJECT_ROOT / "data/raw/bea/fixed_assets_4_1_net_stock.csv"
+GROSS_CSV = PROJECT_ROOT / "data/raw/bea/fixed_assets_4_2_gross_stock.csv"
 OUT_CSV = PROJECT_ROOT / "Technical/data/scratch/S517_gross_vs_net.csv"
 
 # Book reference values (BEA Table 4.1 Line 1 net stock, current dollars, billions)

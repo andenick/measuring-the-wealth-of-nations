@@ -21,8 +21,8 @@ Construction: V* (productive worker compensation, via the formula `V_j = (wp)_j 
 ## 3. extension_source
 
 **BLS CES + BEA NIPA composite** — production-worker wages by industry from BLS CES aggregated through the productive/unproductive concordance to compute V*; total wage bill W from BEA NIPA Table 6.2:
-- **BLS CES production-worker series** (10 series) cached at `Inputs/ST2/Inputs/API_Data/BLS/bls_ces_production_workers.csv`, pulled 2026-02-24.
-- **BEA NIPA Table 6.2D** (Compensation of Employees by Industry, 2,673 rows) cached at `Inputs/ST2/Inputs/API_Data/BEA/nipa_6_2D_compensation_by_industry.csv`, pulled 2026-02-24.
+- **BLS CES production-worker series** (10 series) cached at `data/raw/bls/bls_ces_production_workers.csv`, pulled 2026-02-24.
+- **BEA NIPA Table 6.2D** (Compensation of Employees by Industry, 2,673 rows) cached at `data/raw/bea/nipa_6_2D_compensation_by_industry.csv`, pulled 2026-02-24.
 - **BEA NIPA Table 6.10D** (Employer Contributions for Government Social Insurance, 540 rows) at `nipa_6_10D_employer_contributions.csv` — provenance file lists `purpose: "Employee compensation detail for ec_p/ec_u ratio"`, directly supporting the V*/W decomposition.
 - **BEA NIPA Table T20100** (Compensation 1929–2025) at `nipa_T20100_compensation_1929_2025.csv` for the W denominator.
 

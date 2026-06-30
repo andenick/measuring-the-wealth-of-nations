@@ -30,9 +30,9 @@ Registry `book_table='7.2'` is a project-internal label, not a literal book tabl
 
 1. **Real S701 lambda* vector** — sector-disaggregated labor-value/producer-price ratios (hr/$), output of `Technical/code/P02_processors/P02_S701_labor_values.py` (v1.1 rewrite). This is the load-bearing input both `c_j = lambda_i* * (M_p)_p,ij` and `v_j = lambda* * (CONW_p)_p,j` depend on.
 
-2. **BLS CES production-worker compensation** — for `(CONW_p)_j` (consumption basket / wage bill of production workers per sector). Average hourly earnings + employment + weekly hours from `Inputs/ST2/Inputs/API_Data/BLS/`, pulled 2026-05-24.
+2. **BLS CES production-worker compensation** — for `(CONW_p)_j` (consumption basket / wage bill of production workers per sector). Average hourly earnings + employment + weekly hours from `data/raw/bls/`, pulled 2026-05-24.
 
-3. **BEA NIPA employee compensation tables** — for the EC/WS ratio `x_j` (compensation per wage-and-salary worker) used to scale BLS production-wage to total compensation per ST 1994 Appendix G methodology. Cached at `Inputs/ST2/Inputs/API_Data/BEA/`, pulled 2026-02-24.
+3. **BEA NIPA employee compensation tables** — for the EC/WS ratio `x_j` (compensation per wage-and-salary worker) used to scale BLS production-wage to total compensation per ST 1994 Appendix G methodology. Cached at `data/raw/bea/`, pulled 2026-02-24.
 
 4. **Labeled BEA IO matrices** — for `(M_p)_p,ij` (producer-price component of input flows from sector i to sector j). Cached at `Technical/data/intermediate/io_matrices_labeled/`. Appendix F productive-share filter `Technical/data/source/appendix_F/Table_F_1.csv` masks unproductive sectors before the matrix products.
 

@@ -11,7 +11,7 @@ Total taxes paid by labor, per Tonak's PhD dissertation Table V ('Labor and Non-
 
 ## Source
 
-`data/source/external_studies/Tonak1984_table_V_taxes_labor_nonlabor_1952_1980.csv` (copied from ST2's ExternalSources). Loader: `code/L01_loaders/L01_XS1001_labor_share_tonak1984.py`. Processor: pass-through (P02). Validator: `code/V03_validators/V03_XS1001_labor_share_tonak1984.py`.
+`data/source/external_studies/Tonak1984_table_V_taxes_labor_nonlabor_1952_1980.csv` (copied from predecessor-build's ExternalSources). Loader: `code/L01_loaders/L01_XS1001_labor_share_tonak1984.py`. Processor: pass-through (P02). Validator: `code/V03_validators/V03_XS1001_labor_share_tonak1984.py`.
 
 ## Validation
 

@@ -8,7 +8,7 @@ that aggregate to the 85 SIC sectors in Shaikh & Tonak (1994) Appendix C.
 Background
 ----------
 The v1.0 Ch7 BLOCKER was that the existing BLS cache at
-Inputs/ST2/Inputs/API_Data/BLS/bls_ces_production_workers.csv covers only
+data/raw/bls/bls_ces_production_workers.csv covers only
 5 super-sectors (total private, goods, mining, construction, manufacturing)
 and contains no weekly-hours data. The Ch7 real-fix requires per-sector
 hp*_j = (Lp_j * weekly_hours_j) / X_j   [hr/$, producer prices]
@@ -24,15 +24,15 @@ bridge is handled internally by BLS).
 
 API key
 -------
-Uses the registered BLS_API_KEY from Council/Robin (centralized) or the
-ST2 AnuData env file. With a registered key the BLS public API v2 allows
-500 queries/day and 50 series per request - far more than this script needs.
+Reads BLS_API_KEY from the environment or a local `api_keys.env` file. With a
+registered key the BLS public API v2 allows 500 queries/day and 50 series per
+request - far more than this script needs.
 
 Outputs
 -------
-  Inputs/ST2/Inputs/API_Data/BLS/bls_ces_<supersector>_employment.csv
-  Inputs/ST2/Inputs/API_Data/BLS/bls_ces_<supersector>_hours.csv
-  Inputs/ST2/Inputs/API_Data/BLS/bls_ces_fetch_provenance.json
+  data/raw/bls/bls_ces_<supersector>_employment.csv
+  data/raw/bls/bls_ces_<supersector>_hours.csv
+  data/raw/bls/bls_ces_fetch_provenance.json
 
 CONSTRAINTS
 -----------

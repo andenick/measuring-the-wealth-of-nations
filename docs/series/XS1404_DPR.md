@@ -11,7 +11,7 @@ S506 / XS1401. Quantifies how much classification choice changes the headline ex
 
 ## Source
 
-`data/source/external_studies/(derived from S506 and XS1401)` (copied from ST2's ExternalSources). Loader: `code/L01_loaders/L01_XS1404_st_mohun_ratio.py`. Processor: pass-through (P02). Validator: `code/V03_validators/V03_XS1404_st_mohun_ratio.py`.
+`data/source/external_studies/(derived from S506 and XS1401)` (copied from predecessor-build's ExternalSources). Loader: `code/L01_loaders/L01_XS1404_st_mohun_ratio.py`. Processor: pass-through (P02). Validator: `code/V03_validators/V03_XS1404_st_mohun_ratio.py`.
 
 ## Validation
 

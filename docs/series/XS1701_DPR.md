@@ -11,7 +11,7 @@ From Cronin's RPE Table 2; New Zealand classical national accounts surplus share
 
 ## Source
 
-`data/source/external_studies/Cronin2001_cronin_table2_ratios_1972_1995.csv` (copied from ST2's ExternalSources). Loader: `code/L01_loaders/L01_XS1701_nz_surplus_share_cronin2001.py`. Processor: pass-through (P02). Validator: `code/V03_validators/V03_XS1701_nz_surplus_share_cronin2001.py`.
+`data/source/external_studies/Cronin2001_cronin_table2_ratios_1972_1995.csv` (copied from predecessor-build's ExternalSources). Loader: `code/L01_loaders/L01_XS1701_nz_surplus_share_cronin2001.py`. Processor: pass-through (P02). Validator: `code/V03_validators/V03_XS1701_nz_surplus_share_cronin2001.py`.
 
 ## Validation
 

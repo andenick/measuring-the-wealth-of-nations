@@ -28,10 +28,10 @@ The book's dimensional verification (Figure 4.3 p.83) — `lambda* = TV / GO_p` 
 
 - **L01 + P02 (real implementation)**: `Technical/code/L01_loaders/L01_S701.py` (v1.1, loads BLS CES + BEA gross output + labeled IO matrices + Appendix F filter); `Technical/code/P02_processors/P02_S701_labor_values.py` (v1.1 rewrite, applies hp* formula then Leontief inverse on productive sub-matrix)
 - **External data — real fetches**:
-  - BLS CES production workers + weekly hours, cached at `Inputs/ST2/Inputs/API_Data/BLS/bls_ces_<supersector>_employment.csv` and `_hours.csv` / `_hours_alt.csv` (pulled 2026-05-24 via `Technical/code/L00_setup/L00_bls_fetch.py`; provenance at `bls_ces_fetch_provenance.json`)
-  - BEA gross output, cached at `Inputs/ST2/Inputs/API_Data/BEA/nipa_1_7_5_gross_output_by_industry.csv` + `gdp_by_industry_gross_output.csv` (pulled 2026-02-24; provenance at `Inputs/ST2/Inputs/API_Data/BEA/provenance.json`)
-  - Labeled BEA IO matrices, cached at `Technical/data/intermediate/io_matrices_labeled/` (from `Inputs/ST2/Inputs/IO_Matrices/`)
-  - Appendix F productive-share filter, at `Technical/data/source/appendix_F/Table_F_1.csv` (85-sector categorical mask, derived from ST2 `io_85_to_nipa_13_concordance.csv` + Mohun 2013 Tables 2-3, provenance at `Technical/data/source/appendix_F/PROVENANCE.md`)
+  - BLS CES production workers + weekly hours, cached at `data/raw/bls/bls_ces_<supersector>_employment.csv` and `_hours.csv` / `_hours_alt.csv` (pulled 2026-05-24 via `Technical/code/L00_setup/L00_bls_fetch.py`; provenance at `bls_ces_fetch_provenance.json`)
+  - BEA gross output, cached at `data/raw/bea/nipa_1_7_5_gross_output_by_industry.csv` + `gdp_by_industry_gross_output.csv` (pulled 2026-02-24; provenance at `data/raw/bea/provenance.json`)
+  - Labeled BEA IO matrices, cached at `Technical/data/intermediate/io_matrices_labeled/` (from `data/raw/io_matrices/`)
+  - Appendix F productive-share filter, at `Technical/data/source/appendix_F/Table_F_1.csv` (85-sector categorical mask, derived from predecessor-build `io_85_to_nipa_13_concordance.csv` + Mohun 2013 Tables 2-3, provenance at `Technical/data/source/appendix_F/PROVENANCE.md`)
 - **KB chunks**: `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_11/full_transcription.md` (Ch4 §4.1 pp.78-83 — closed-form equations + Figure 4.3); `chunk_14/full_transcription.md` (Appendix G variable capital); `chunk_15/full_transcription.md` (sector composition); `chunk_31/full_transcription.md` (Appendix E sectoral GVAp); `chunk_33/full_transcription.md` (Appendix F + G intro)
 - **Book tables**: Ch4 §4.1 equations pp.80-83 (Figure 4.3 dimensional check); Appendix G Table G.2 (sectoral productive employment); Appendix F (productive shares — book's annual labor decomposition pp.292–301); Appendix E Tables E.1 / E.2
 - **APIs**: BLS Public API v2 (free registration key, supplied via the `BLS_API_KEY` environment variable); BEA API
@@ -65,7 +65,7 @@ Coordinator backfills from `Technical/chopped/S701.csv` after agents 1-3 commit 
 
 ## Provenance trail
 
-- **Original research**: `Technical/research/S701_research.json`, researcher `agent`, 2026-05-06; ported from `ST2/research/T701_research.json` on 2026-05-14; verbatim quotes backfilled 2026-05-19 and 2026-05-23 (Stage 1 cohort 3 enrichment specifically anchored Ch4 §4.1 equations + Figure 4.3 dimensional check)
+- **Original research**: `Technical/research/S701_research.json`, researcher `agent`, 2026-05-06; ported from `predecessor-build/research/T701_research.json` on 2026-05-14; verbatim quotes backfilled 2026-05-19 and 2026-05-23 (Stage 1 cohort 3 enrichment specifically anchored Ch4 §4.1 equations + Figure 4.3 dimensional check)
 - **DPR v1.0**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (proxy disclosure version)
 - **DPR v1.1 (this version)**: 2026-05-24, v1.1 Phase 4 iteration 5 Ch7 real-fix agent 4 (registry/DPR/EPR cohort, parallel to agents 1-3 doing L01/P02 rewrites). Real implementation replaces proxy disclosure. See DIV-011.
 - **Anu Framework stage**: Stage 5 EXECUTION (Ch7 real-fix sub-stage); doctor gate IDs P13/P31/P36

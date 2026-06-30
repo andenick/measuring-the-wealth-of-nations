@@ -25,7 +25,7 @@ Source recipe: `V* = Σ_j (wp)_j × x_j × (Lp)_j` summed over productive sector
 - **BEA NIPA Table T20100** — Aggregate compensation 1929–2025 (`nipa_T20100_compensation_1929_2025.csv`) for the total wage bill W.
 - **BLS CES production-worker series** — `bls_ces_production_workers.csv`, 10 industry series (CES0500000006, CES0600000006, CES1000000006, CES2000000006, CES3000000006 and their all-employee counterparts) for the production-worker share.
 
-Cached at `Inputs/ST2/Inputs/API_Data/BEA/` and `Inputs/ST2/Inputs/API_Data/BLS/`, pulled 2026-02-24. Construction is a derive operation that depends on S512 (productive wage share V*/W).
+Cached at `data/raw/bea/` and `data/raw/bls/`, pulled 2026-02-24. Construction is a derive operation that depends on S512 (productive wage share V*/W).
 
 ## 4. extension_url
 

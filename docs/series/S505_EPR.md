@@ -21,7 +21,7 @@ Identity: S* = GFP − V* = S503 − S504 in this project's series IDs.
 ## 3. extension_source
 
 **Derived series**: S505-EXT = S503-COMBINED − S504-COMBINED (Gross Final Product minus Variable Capital). S505 itself has no standalone modern data pull — it inherits its source matrix from its inputs:
-- **S503** (Gross Final Product, GFP) — derived from S501 (TP*) and S502 (C*_m), both ultimately from BEA NIPA + GDP-by-Industry (`Inputs/ST2/Inputs/API_Data/BEA/` cache).
+- **S503** (Gross Final Product, GFP) — derived from S501 (TP*) and S502 (C*_m), both ultimately from BEA NIPA + GDP-by-Industry (`data/raw/bea/` cache).
 - **S504** (Variable Capital, V*) — BEA NIPA Table 6.2D compensation + BLS CES production-worker shares.
 
 No new API pull is performed for S505; the extension is fully derived from S503 and S504 via the identity.

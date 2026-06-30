@@ -7,7 +7,7 @@
 
 RMWND uses a project-specific prefix scheme rather than the canonical `D`/`AD` scheme because:
 
-1. The project predates the canonical scheme (began as ST2 with T### / N### IDs)
+1. The project predates the canonical scheme (began as predecessor-build with T### / N### IDs)
 2. The three-prefix system (`S` for primary book series, `ES` for external studies, `AS` for analytical/supplementary) provides clearer semantic grouping for a project with 64 series spanning 8 follow-up studies
 3. The scheme was established during Wave 0 and is now frozen across 64 series, 100+ code files, and 64 chopped CSVs
 

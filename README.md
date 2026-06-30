@@ -26,10 +26,15 @@ Reconstruct, verify, and extend the empirical core of Shaikh & Tonak
 | Prefix | Meaning                                  | Count |
 | ------ | ---------------------------------------- | :---: |
 | `S`    | Primary book series (Ch. 2, 4, 5, 6, 7, 8, 9) | 35 |
-| `ES`   | External follow-up study series          |  25   |
-| `AS`   | Analytical / auxiliary aggregates        |   4   |
+| `XS`   | Extra series — analytical aggregates + external follow-up studies | 29 |
 
-Follow-up studies covered (ES-prefix):
+The `XS` prefix supersedes the retired `AS` (analytical) and `ES` (external
+follow-up) prefixes; `xs_class` distinguishes the former analytical aggregates
+(`appendix`) from the follow-up-study series. Readers who referenced the legacy
+`AS####` / `ES####` IDs can map them to current `XS####` IDs via
+`MIGRATION/crosswalk.csv` (see `MIGRATION/PREFIX_SCHEME.md`).
+
+Follow-up studies covered (`XS` series):
 
 - Tonak (1984) - labor share, net tax
 - Shaikh & Tonak (1987, 2002) - productive labor refinements
@@ -69,7 +74,7 @@ configuration for fresh data fetches.
 ```
 Publish/
 |-- README.md                  # this file
-|-- VERSION.txt                # bundle version string (v1.2)
+|-- VERSION.txt                # bundle version string (v1.3)
 |-- LICENSE                    # MIT (Code) + CC-BY-4.0 (Data)
 |-- CITATION.cff               # machine-readable citation
 |-- INSTALL.md                 # setup details
@@ -84,8 +89,7 @@ Publish/
 |-- Extenbooks/                # 64 Excel workbooks (4 sheets per series)
 |-- Docs/
 |   |-- series/                # 149 DPR / EPR markdown docs
-|   |-- chapters/              # 24 chapter adequacy/review reports
-|   |-- decisions/             # framework decisions 0007, 0008 (v1.2)
+|   |-- decisions/             # framework decisions 0007, 0008
 |   |-- methodology/           # methodology.md (replicator-facing narrative)
 |   `-- precommit/             # pre-commit hook policy
 |-- code/                      # L01 loaders, P02 processors, V03 validators, M04, A05, O06
@@ -102,8 +106,6 @@ Publish/
   Construction).
 - **149 per-series docs** (`Docs/`) - DPRs for every series, EPRs
   where extension applies, decomposition notes for compound series.
-- **17 chapter adequacy reports** (`Docs/chapters/`) - Stage 2 anu-adequacy
-  six-layer readiness scoring.
 - **185 pipeline scripts** (`code/`) - L01/P02/V03/M04/A05/O06 phase
   scripts plus shared `lib/` helpers.
 - **Visualization app** (`viz/`) - Dash + Shiny apps for interactive
@@ -142,8 +144,7 @@ identities.
 
 See `methodology/methodology.md` for the conceptual narrative.
 Per-series details live in `Docs/` (one DPR and, where applicable,
-one EPR per series). Chapter-level readiness assessments live in
-`Docs/chapters/`.
+one EPR per series).
 
 ## Known Limitations
 
@@ -177,9 +178,12 @@ one EPR per series). Chapter-level readiness assessments live in
 
 ## Version
 
-**Current: v1.2** (see `VERSION.txt`). This is the definitive
-release. Highlights of the current package:
+**Current: v1.3** (see `VERSION.txt` and `CHANGELOG.md`). This is the
+definitive release. Highlights of the current package:
 
+- **Series-ID migration (`AS`/`ES` → `XS`)**: the 4 analytical and 25
+  follow-up-study series adopt the canonical `XS` prefix (`xs_class`
+  sectioning); legacy IDs map via `MIGRATION/crosswalk.csv`.
 - **Chapter 7 proxy retired**: S701/S702/S703 are now first-class
   labor-value series (`proxy: false`), built from BLS CES, BEA
   Benchmark I-O, and the Appendix F productive-share filter

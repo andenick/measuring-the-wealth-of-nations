@@ -26,7 +26,7 @@ Identity: e = S* / V* = S505 / S504 in this project's series IDs.
 - **S505** (Surplus Value) — itself derived from S503 − S504.
 - **S504** (Variable Capital) — BEA NIPA Table 6.2D + BLS CES production-worker shares, partitioned by the productive/unproductive concordance.
 
-Underlying upstream caches: `Inputs/ST2/Inputs/API_Data/BEA/` (NIPA 6.2D, NIPA 1.7.5, GDP-by-Industry) and `Inputs/ST2/Inputs/API_Data/BLS/` (CES production-worker series), pulled 2026-02-24.
+Underlying upstream caches: `data/raw/bea/` (NIPA 6.2D, NIPA 1.7.5, GDP-by-Industry) and `data/raw/bls/` (CES production-worker series), pulled 2026-02-24.
 
 ## 4. extension_url
 

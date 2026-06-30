@@ -3,7 +3,7 @@
 Refactored 2026-05-24 per Decision 0002 — reads benchmarks from registry
 (`validation.reference_values`) via `utils.registry_validator.get_reference_values`.
 
-Note: ST2's validation_config T515 benchmark of 17331.95 was in DOLLARS (wage bill
+Note: predecessor-build's validation_config T515 benchmark of 17331.95 was in DOLLARS (wage bill
 Lp*w). Our S515 is COUNT in thousands; the registry stores the TableE3 Lp_total
 counts (1948 = 29937, 1961 = 33615), which is the correct unit for this series.
 """

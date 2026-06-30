@@ -51,6 +51,6 @@ The construction departs from S&T's Figure 1.1 in scope only: rather than the se
 
 ## Provenance trail
 
-- **Original research**: `Technical/research/S201_research.json`, researcher `opus_agent`, 2026-05-06; ported from `ST2/research/T201_research.json` on 2026-05-14; verbatim quotes backfilled 2026-05-19 (task `D3_RMWND_quotes_ch7_etc`)
+- **Original research**: `Technical/research/S201_research.json`, researcher `opus_agent`, 2026-05-06; ported from `predecessor-build/research/T201_research.json` on 2026-05-14; verbatim quotes backfilled 2026-05-19 (task `D3_RMWND_quotes_ch7_etc`)
 - **DPR enriched**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (cohort agent 4); sources read = research JSON + registry entry + KB chunks 03/04/05/26 cited via the research JSON
 - **Anu Framework stage**: Stage 3 INGESTION (cohort 1, failing chapters); ingestion gate IDs P31/P32

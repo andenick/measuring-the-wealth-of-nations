@@ -1,4 +1,4 @@
-"""Read BEA cached CSV responses (ported from ST2 API_Data).
+"""Read BEA cached CSV responses (ported from predecessor-build API_Data).
 
 BEA's NIPA-style CSVs have columns:
   TableName, SeriesCode, LineNumber, LineDescription, TimePeriod (year),

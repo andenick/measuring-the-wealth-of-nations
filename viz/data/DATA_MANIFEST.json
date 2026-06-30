@@ -15,7 +15,7 @@
       "sha256": "pending"
     },
     {
-      "path": "catalogs/HDARP_SERIES_LINKAGE.json",
+      "path": "catalogs/SERIES_SOURCE_LINKAGE.json",
       "role": "series_linkage",
       "sha256": "pending"
     }

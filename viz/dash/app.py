@@ -40,7 +40,7 @@ log.info("[RMWND Dash] Catalog: %d series, %d with data", TOTAL_COUNT, LOADED_CO
 _viz_dir = VIZ_DIR.resolve()
 _registry_path = (_viz_dir / CONFIG["registry_path"]).resolve()
 _subsource_path = _viz_dir / "data" / "catalogs" / "SUBSOURCE_METADATA.json"
-_linkage_path = _viz_dir / "data" / "catalogs" / "HDARP_SERIES_LINKAGE.json"
+_linkage_path = _viz_dir / "data" / "catalogs" / "SERIES_SOURCE_LINKAGE.json"
 _catalog_path = _viz_dir / "data" / "catalogs" / "DEFINITIVE_SERIES_CATALOG.json"
 _manifest_path = _viz_dir / "data" / "DATA_MANIFEST.json"
 

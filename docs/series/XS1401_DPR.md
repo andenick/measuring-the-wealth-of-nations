@@ -11,7 +11,7 @@ Mohun's alternative-classification exploitation rate, applying a narrower produc
 
 ## Source
 
-`data/source/external_studies/Mohun_mohun_exploitation_rates_1948_1989_CORRECTED.csv` (copied from ST2's ExternalSources). Loader: `code/L01_loaders/L01_XS1401_exploitation_rate_mohun2005.py`. Processor: pass-through (P02). Validator: `code/V03_validators/V03_XS1401_exploitation_rate_mohun2005.py`.
+`data/source/external_studies/Mohun_mohun_exploitation_rates_1948_1989_CORRECTED.csv` (copied from predecessor-build's ExternalSources). Loader: `code/L01_loaders/L01_XS1401_exploitation_rate_mohun2005.py`. Processor: pass-through (P02). Validator: `code/V03_validators/V03_XS1401_exploitation_rate_mohun2005.py`.
 
 ## Validation
 

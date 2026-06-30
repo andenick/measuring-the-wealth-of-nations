@@ -2,13 +2,13 @@
   "schema_version": "anu-divergence-register-v1.0",
   "project": "measuring-wealth-of-nations-replication",
   "generated_at": "2026-05-19T19:28:13+00:00",
-  "source_document": "Projects/RMWND/Technical/MIGRATION/divergences_from_ST2.md",
+  "source_document": "MIGRATION/divergences_from_ST2.md",
   "divergences": [
     {
       "divergence_id": "DIV-001-S507",
       "series_id": "S507",
       "series_name": "Surplus Ratio S*/Y",
-      "source": "ST2_predecessor",
+      "source": "predecessor_build",
       "current_value": {
         "1948": 0.6296,
         "1989": 0.7093,
@@ -22,7 +22,7 @@
         "source_column": "T509_surplus_ratio",
         "method": "nipa_reconstruction_different_denominator"
       },
-      "rationale": "ST2 loaded T507 from a NIPA-derived exploitation/composition CSV whose values are inconsistent with the book's published rate of exploitation e=1.70 in 1948 (book Table H.1). The algebraic identity S*/Y = e/(1+e) requires S/Y = 0.6296 at e=1.70, not 0.57. The new build re-authors S507 to compute S*/(S*+V*) directly from S505 and S504 (book H.1 inputs), preserving algebraic self-consistency with S506. The NIPA-proxy alternative may be retained as an external sensitivity check but is not the canonical S507.",
+      "rationale": "The predecessor build loaded T507 from a NIPA-derived exploitation/composition CSV whose values are inconsistent with the book's published rate of exploitation e=1.70 in 1948 (book Table H.1). The algebraic identity S*/Y = e/(1+e) requires S/Y = 0.6296 at e=1.70, not 0.57. The new build re-authors S507 to compute S*/(S*+V*) directly from S505 and S504 (book H.1 inputs), preserving algebraic self-consistency with S506. The NIPA-proxy alternative may be retained as an external sensitivity check but is not the canonical S507.",
       "anu_rule_invoked": "no-proxies; no-lazy-splices",
       "where": {
         "processor": "code/P02_processors/P02_S507_surplus_ratio.py",
@@ -44,7 +44,7 @@
       "divergence_type": "extension_demotion",
       "source": "stage3_cohort1_honesty_pass",
       "description": "Five series previously carrying status `validated_book_and_extension` were demoted to `book_period_validated` because their `extension` blocks lacked the canonical 6-field provenance metadata required by Decision 0003's binary-invariant rule. Per Decision 0003, a series either has a fully-populated extension block (6 required provenance fields + EXT/COMBINED subseries) or has `extension: null`; partial/manufactured extension metadata is not permitted. EPR files for these series were rewritten as `EXTENSION NOT APPLICABLE` stubs.",
-      "justification": "Honest demotion preserved over manufactured extension. The legacy ST2/B-suffix predecessor and some intermediate hyper-review passes left these five series in a state that claimed extension validation without the canonical metadata to support that claim. Rather than fabricate provenance to upgrade them, the demotion records the actual book-period-only scope of the existing replication. Future cohorts may re-upgrade by sourcing the required API extensions (BEA / BLS / FRED) and re-populating the extension block with all six fields.",
+      "justification": "Honest demotion preserved over manufactured extension. The legacy predecessor-build/B-suffix predecessor and some intermediate hyper-review passes left these five series in a state that claimed extension validation without the canonical metadata to support that claim. Rather than fabricate provenance to upgrade them, the demotion records the actual book-period-only scope of the existing replication. Future cohorts may re-upgrade by sourcing the required API extensions (BEA / BLS / FRED) and re-populating the extension block with all six fields.",
       "references": [
         "project Decision 0003",
         "Technical/Handoffs/HONESTY_PASS_20260519.md",
@@ -99,7 +99,7 @@
       ],
       "divergence_type": "deprecation_closure",
       "source": "stage3_cohort2_ES_numbering_gap_investigation",
-      "description": "ES1303 (Moos 2017 study, slot 03) is absent from `series_registry.json` and has no research/EPR/DPR artifacts. The numbering gap was inherited from a predecessor project where ES1303 was provisionally allocated, then deprecated before any data was sourced. Stage 3 cohort 2 investigation confirmed that no chopped CSV, no KB extraction, and no methodology stub exists for ES1303 in either the current Technical/ tree or the ST2 predecessor archive. The gap is closed as an inherited deprecation; no replacement series planned.",
+      "description": "ES1303 (Moos 2017 study, slot 03) is absent from `series_registry.json` and has no research/EPR/DPR artifacts. The numbering gap was inherited from a predecessor project where ES1303 was provisionally allocated, then deprecated before any data was sourced. Stage 3 cohort 2 investigation confirmed that no chopped CSV, no KB extraction, and no methodology stub exists for ES1303 in either the current Technical/ tree or the predecessor-build predecessor archive. The gap is closed as an inherited deprecation; no replacement series planned.",
       "justification": "Documenting the gap closure prevents future agents from re-investigating the numbering hole. The Moos 2017 study (study group 13) is represented by ES1301, ES1302, ES1304, ES1305 with the 03 slot intentionally left vacant. Per the Anu Framework, deprecations are first-class citizens of the divergence register.",
       "references": [
         "Technical/Handoffs/ES1303_GAP_INVESTIGATION_20260524T002329Z.md",
@@ -194,8 +194,8 @@
         "code/E08_exploration/E_S517_gross_vs_net.py",
         "code/E08_exploration/fetch_bea_table_4_2.py",
         "data/scratch/S517_gross_vs_net.csv",
-        "Inputs/ST2/Inputs/API_Data/BEA/fixed_assets_4_2_gross_stock.csv",
-        "Inputs/ST2/Inputs/API_Data/BEA/provenance_fixed_assets_4_2.json"
+        "data/raw/bea/fixed_assets_4_2_gross_stock.csv",
+        "data/raw/bea/provenance_fixed_assets_4_2.json"
       ]
     },
     {
@@ -253,25 +253,25 @@
         "CES3000000006": -2.5,
         "CES3000000001": -2.02
       },
-      "justification": "Per Anu anti-lazy-splice rule, the 2003 BLS CES methodology break must be addressed explicitly per affected series rather than left as silent drift in extension-period trends. The cached BLS API series at Inputs/ST2/Inputs/API_Data/BLS/bls_ces_production_workers.csv (pulled 2026-02-24) is the BLS current-vintage retrospective time series, in which all pre-June-2003 values have been back-revised by ~22 years of annual benchmark revision into approximate consistency with the post-overhaul methodology. Deriving bridge factors directly from this cached data would conflate the 2001-2003 jobless-recovery cyclical employment trough with the methodology break (the diagnostic residuals above are dominated by the cyclical signal). The honest v1.1 choice is to (i) install the bridge mechanism with explicit factor=1.0 stubs so the wiring is visible and auditable, (ii) document the v1.2 sourcing plan (BLS Employment Situation news release archive, May 2003 vs June 2003 originally-published per-super-sector levels) needed to compute non-null factors. The RMWND extension arms for the affected series all splice to book at 1989, so the 2003 boundary is internal to the extension; the level reconciliation that matters most is already enforced at the 1989 anchor, and any v1.2 factor revision affects only intra-extension trend shape from 2003 onward.",
+      "justification": "Per Anu anti-lazy-splice rule, the 2003 BLS CES methodology break must be addressed explicitly per affected series rather than left as silent drift in extension-period trends. The cached BLS API series at data/raw/bls/bls_ces_production_workers.csv (pulled 2026-02-24) is the BLS current-vintage retrospective time series, in which all pre-June-2003 values have been back-revised by ~22 years of annual benchmark revision into approximate consistency with the post-overhaul methodology. Deriving bridge factors directly from this cached data would conflate the 2001-2003 jobless-recovery cyclical employment trough with the methodology break (the diagnostic residuals above are dominated by the cyclical signal). The honest v1.1 choice is to (i) install the bridge mechanism with explicit factor=1.0 stubs so the wiring is visible and auditable, (ii) document the v1.2 sourcing plan (BLS Employment Situation news release archive, May 2003 vs June 2003 originally-published per-super-sector levels) needed to compute non-null factors. The RMWND extension arms for the affected series all splice to book at 1989, so the 2003 boundary is internal to the extension; the level reconciliation that matters most is already enforced at the 1989 anchor, and any v1.2 factor revision affects only intra-extension trend shape from 2003 onward.",
       "references": [
         "code/M04_manual/M04_bls_ces_2003_bridge.py",
         "code/M04_manual/M04_S504_2003_bridge.py",
         "code/M04_manual/M04_S511_2003_bridge.py",
         "code/M04_manual/M04_S515_2003_bridge.py",
         "data/adjusted-final-data/bls_ces_2003_bridge_factors.json",
-        "Inputs/ST2/Inputs/API_Data/BLS/bls_ces_production_workers.csv",
-        "Inputs/ST2/Inputs/API_Data/BLS/provenance.json"
+        "data/raw/bls/bls_ces_production_workers.csv",
+        "data/raw/bls/provenance.json"
       ],
       "v1_2_followup": "Source pre-overhaul (May 2003 Employment Situation) and post-overhaul (June 2003 Employment Situation) per-super-sector employment levels from the BLS news release archive; compute per-sector factor = post_published_value / pre_published_value at the seam; replace the v1.1 null factors in bls_ces_2003_bridge_factors.json; re-run the affected P02 processors (S504, S511, S515) and the planned Ch7 real-fix (S701, S702) to propagate the non-null factors. Also revisit S701/S702 once Ch7 real-fix lands so the bridge wiring is consumed there from day one.",
       "v1_2_resolution": {
         "date": "2026-05-24",
         "action": "vintage_data_fetched_semantics_clarified",
         "data_fetched": [
-          "Inputs/ST2/Inputs/API_Data/BLS/vintage_2003/empsit_05022003.pdf (USDL 03-203, last pre-overhaul SIC vintage)",
-          "Inputs/ST2/Inputs/API_Data/BLS/vintage_2003/empsit_06062003.pdf (USDL 03-281, first post-overhaul NAICS vintage)",
-          "Inputs/ST2/Inputs/API_Data/BLS/vintage_2003/empsit_07032003.pdf (USDL 03-253, second post-overhaul vintage)",
-          "Inputs/ST2/Inputs/API_Data/BLS/vintage_2003/mlr_200306_ces_naics.pdf (Monthly Labor Review June 2003 CES NAICS conversion article)"
+          "data/raw/bls/vintage_2003/empsit_05022003.pdf (USDL 03-203, last pre-overhaul SIC vintage)",
+          "data/raw/bls/vintage_2003/empsit_06062003.pdf (USDL 03-281, first post-overhaul NAICS vintage)",
+          "data/raw/bls/vintage_2003/empsit_07032003.pdf (USDL 03-253, second post-overhaul vintage)",
+          "data/raw/bls/vintage_2003/mlr_200306_ces_naics.pdf (Monthly Labor Review June 2003 CES NAICS conversion article)"
         ],
         "finding": "The 2003 BLS overhaul has two logically distinct effects: (A) the methodology shift at the vintage seam (probability sample, QCEW benchmark, concurrent SA) and (B) the SIC->NAICS reclassification at the same seam. Effect (A) was absorbed by ~22 years of annual back-revisions; direct empirical inspection of the cached annual-average BLS API series shows NO level break at 2003 (smooth 2001-2006 trajectory). Effect (B) was also absorbed by the back-revisions: the cached API series is NAICS all the way back to 1939, while the Shaikh & Tonak 1994 book-period values (1948-1989) are SIC-original.",
         "consequence_for_2003_boundary": "The 2003-boundary bridge factor for the cached series is empirically validated at 1.0 (not null/uncomputed; observed). Basis upgraded from 'null_bridge_v1.1' to 'empirically_validated_no_break_v1.2'.",
@@ -335,8 +335,8 @@
         "S703"
       ],
       "divergence_type": "ch7_proxy_retirement",
-      "description": "Ch7 series proxy:true retired via v1.1 Phase 4 real-fix (iteration 5). Labor coefficients now computed per book formula hp*_j = (Lp_j * weekly_hours_j * 52) / X_j with units hr/$ (ST 1994 Ch4 §4.1 p.81, Figure 4.3 p.83). Sector lambda*_j = hp*_j * (I - A*)^{-1} via the labeled BEA IO matrices. Sector prices of production pp*_j = (1 + r_bar)(c_j + v_j) constructed with sector-disaggregated c_j = lambda_i* * (M_p)_p_ij and v_j = lambda* * (CONW_p)_p,j. S703 implements the book's consistent-procedure cross-sectional log-log regression of sector lambda* against sector pp*. Data sourced from BLS CES production workers + average weekly hours (cached at Inputs/ST2/Inputs/API_Data/BLS/, pulled 2026-05-24), BEA gross output via NIPA Table 1.7.5 / GDP-by-Industry (cached 2026-02-24), book Appendix F productive-share filter (Technical/data/source/appendix_F/Table_F_1.csv — 85-sector categorical from ST2 io_85_to_nipa_13 concordance + Mohun 2013 Tables 2-3), and labeled BEA IO matrices (Technical/data/intermediate/io_matrices_labeled/).",
-      "justification": "v1.0 BLOCKER (BLS API key apparently missing) was actually a discoverability issue — key existed in a centralized API-key store outside the standard env-discovery path. With prerequisites met in v1.1 iteration 4 (BLS fetch, IO labeling, Appendix F filter), real-fix executed in iteration 5. The v1.0 hyper-review judgment that Ch7 was 'multi-session BLS sourcing project' was correct under the assumption that no API key was available; that assumption was false. Recommendation: mirror Robin API keys to Anu Framework projects' standard env discovery path so this rediscovery cost is not paid again.",
+      "description": "Ch7 series proxy:true retired via v1.1 Phase 4 real-fix (iteration 5). Labor coefficients now computed per book formula hp*_j = (Lp_j * weekly_hours_j * 52) / X_j with units hr/$ (ST 1994 Ch4 §4.1 p.81, Figure 4.3 p.83). Sector lambda*_j = hp*_j * (I - A*)^{-1} via the labeled BEA IO matrices. Sector prices of production pp*_j = (1 + r_bar)(c_j + v_j) constructed with sector-disaggregated c_j = lambda_i* * (M_p)_p_ij and v_j = lambda* * (CONW_p)_p,j. S703 implements the book's consistent-procedure cross-sectional log-log regression of sector lambda* against sector pp*. Data sourced from BLS CES production workers + average weekly hours (cached at data/raw/bls/, pulled 2026-05-24), BEA gross output via NIPA Table 1.7.5 / GDP-by-Industry (cached 2026-02-24), book Appendix F productive-share filter (Technical/data/source/appendix_F/Table_F_1.csv — 85-sector categorical from predecessor-build io_85_to_nipa_13 concordance + Mohun 2013 Tables 2-3), and labeled BEA IO matrices (Technical/data/intermediate/io_matrices_labeled/).",
+      "justification": "v1.0 BLOCKER (BLS API key apparently missing) was actually a discoverability issue — key existed in a centralized API-key store outside the standard env-discovery path. With prerequisites met in v1.1 iteration 4 (BLS fetch, IO labeling, Appendix F filter), real-fix executed in iteration 5. The v1.0 hyper-review judgment that Ch7 was 'multi-session BLS sourcing project' was correct under the assumption that no API key was available; that assumption was false. Recommendation: expose API keys on the standard environment-variable discovery path so this rediscovery cost is not paid again.",
       "v1_0_blocker_status": "superseded",
       "v1_1_implementation_artifacts": [
         "Technical/code/L01_loaders/L01_S701.py",

@@ -30,8 +30,8 @@ The book's verbatim methodological constraint (p.81) — that lambda*_j must be 
 - **L01 + P02 (real implementation)**: `Technical/code/L01_loaders/L01_S702.py` (v1.1, loads real S701 lambda*, BLS CES wages, BEA NIPA EC tables, labeled IO matrices); `Technical/code/P02_processors/P02_S702_prices_of_production.py` (v1.1 rewrite, sector-disaggregated c/v construction and pp* aggregation)
 - **External data — real fetches**:
   - Real S701 lambda*_j vector (upstream, v1.1)
-  - BLS CES production-worker wages + employment + weekly hours, cached at `Inputs/ST2/Inputs/API_Data/BLS/` (pulled 2026-05-24)
-  - BEA NIPA employee compensation tables (T10604 wages & salaries by industry), cached at `Inputs/ST2/Inputs/API_Data/BEA/` (pulled 2026-02-24)
+  - BLS CES production-worker wages + employment + weekly hours, cached at `data/raw/bls/` (pulled 2026-05-24)
+  - BEA NIPA employee compensation tables (T10604 wages & salaries by industry), cached at `data/raw/bea/` (pulled 2026-02-24)
   - Labeled BEA IO matrices supplying (M_p)_p,ij producer-price input flows, at `Technical/data/intermediate/io_matrices_labeled/`
   - Appendix F productive-share filter, at `Technical/data/source/appendix_F/Table_F_1.csv`
 - **KB chunks**: `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_11/full_transcription.md` (Ch4 §4.1 — disaggregated c, v construction); `chunk_14/full_transcription.md` (Ch5 §5.3 + Appendix G — variable capital, ec and wp); `chunk_15/full_transcription.md` (Section 5.5 profit-rate measures); `chunk_31/full_transcription.md` (Appendix E Tables E.1 / E.2); `chunk_33/full_transcription.md` (Appendix G Tables G.1 / G.2)
@@ -68,7 +68,7 @@ Coordinator backfills from `Technical/chopped/S702.csv` after agents 1-3 commit 
 
 ## Provenance trail
 
-- **Original research**: `Technical/research/S702_research.json`, researcher `agent`, 2026-05-06; ported from `ST2/research/T702_research.json` on 2026-05-14; verbatim quotes backfilled 2026-05-19 and 2026-05-23
+- **Original research**: `Technical/research/S702_research.json`, researcher `agent`, 2026-05-06; ported from `predecessor-build/research/T702_research.json` on 2026-05-14; verbatim quotes backfilled 2026-05-19 and 2026-05-23
 - **DPR v1.0**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (proxy disclosure version)
 - **DPR v1.1 (this version)**: 2026-05-24, v1.1 Phase 4 iteration 5 Ch7 real-fix agent 4. Real implementation replaces proxy disclosure. See DIV-011.
 - **Anu Framework stage**: Stage 5 EXECUTION (Ch7 real-fix sub-stage); doctor gate IDs P13/P31/P36

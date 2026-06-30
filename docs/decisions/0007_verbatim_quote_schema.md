@@ -148,4 +148,3 @@ still contains a top-level `verbatim_quotes[]` array that has not been marked
 - v1.1 Phase 1, agent 3 task brief (2026-05-23)
 - Migration script: `<project>/MIGRATION/_migrate_verbatim_schemas.py`
 - Cohort 2 backup registry: `series_registry.pre_stage3_cohort2.20260524T002948Z.json`
-- anu-doctor project-mode check definitions: `.claude/skills/anu-doctor/`

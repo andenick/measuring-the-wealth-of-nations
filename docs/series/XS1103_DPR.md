@@ -57,6 +57,6 @@ The transformation produces a monotonically rising rate over 1952-1985 (~17% →
 
 ## Provenance trail
 
-- **Original research**: `Technical/research/XS1103_research.json`, researcher `agent`, 2026-05-06; ported from `ST2/research/N1103_research.json` on 2026-05-14; verbatim quotes added 2026-05-19 by `D4_es_ch10_13_backfill`
+- **Original research**: `Technical/research/XS1103_research.json`, researcher `agent`, 2026-05-06; ported from `predecessor-build/research/N1103_research.json` on 2026-05-14; verbatim quotes added 2026-05-19 by `D4_es_ch10_13_backfill`
 - **DPR enriched**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (cohort agent 4); prior version of this DPR (pre-cohort-1) was a short stub with one methodology paragraph; this enrichment adds full 7-section structure with sources, reference values, known issues, cross-references; sources read = research JSON + ST 1987 full transcription + registry entry
 - **Anu Framework stage**: Stage 3 INGESTION (cohort 1, failing chapters); ingestion gate IDs P31/P32

@@ -14,7 +14,7 @@ Appendix E.3 (productive employment Lp series, 1948–1961 in the salvaged KB di
 
 ## 3. extension_source
 
-DIRECT-fetch composite. Extension uses BLS CES (Current Employment Statistics) industry-level production-worker employment, aggregated through the Shaikh–Tonak Appendix C productive/unproductive concordance updated to NAICS industries. Cached input: `Inputs/ST2/Inputs/API_Data/BLS/bls_ces_production_workers.csv` (provenance in `provenance.json`). Concretely: for each NAICS industry mapped to a "productive" sector under the updated Appendix C, the CES production-worker series (CES code ending in `08` for production/nonsupervisory workers within the AE Employment, All Employees super-table family) is pulled; sums across productive sectors give Lp.
+DIRECT-fetch composite. Extension uses BLS CES (Current Employment Statistics) industry-level production-worker employment, aggregated through the Shaikh–Tonak Appendix C productive/unproductive concordance updated to NAICS industries. Cached input: `data/raw/bls/bls_ces_production_workers.csv` (provenance in `provenance.json`). Concretely: for each NAICS industry mapped to a "productive" sector under the updated Appendix C, the CES production-worker series (CES code ending in `08` for production/nonsupervisory workers within the AE Employment, All Employees super-table family) is pulled; sums across productive sectors give Lp.
 
 ## 4. extension_url
 
@@ -22,7 +22,7 @@ DIRECT-fetch composite. Extension uses BLS CES (Current Employment Statistics) i
 - BLS CES production / nonsupervisory workers data: https://www.bls.gov/webapps/legacy/cesbtab2.htm
 - BLS Public Data API (v2) endpoint used: https://api.bls.gov/publicAPI/v2/timeseries/data/
 
-See `Inputs/ST2/Inputs/API_Data/BLS/provenance.json` for the exact series IDs cached.
+See `data/raw/bls/provenance.json` for the exact series IDs cached.
 
 ## 5. conceptual_continuity
 
@@ -30,7 +30,7 @@ Shaikh & Tonak define Lp as the count of workers employed in productive sectors 
 
 ## 6. vintage_note
 
-Book vintage: BLS CES SIC-basis 1948–1989 production-worker series, with Shaikh–Tonak's then-current Appendix C concordance. Modern vintage: BLS CES NAICS basis from 2003 forward (the 2003 SIC→NAICS overhaul is the single largest series-break); pre-2003 SIC-basis values are not directly comparable level-by-level to post-2003 NAICS-basis values without crosswalk adjustment. Last cached fetch: see `Inputs/ST2/Inputs/API_Data/BLS/provenance.json`. Extension splice method is `level` (the count series is rebased at the latest available book endpoint and carried forward), appropriate because the construct is directly observable in both eras. Book-period registry `year_range` is honestly recorded as [1948, 1961] reflecting the current KB digitization extent.
+Book vintage: BLS CES SIC-basis 1948–1989 production-worker series, with Shaikh–Tonak's then-current Appendix C concordance. Modern vintage: BLS CES NAICS basis from 2003 forward (the 2003 SIC→NAICS overhaul is the single largest series-break); pre-2003 SIC-basis values are not directly comparable level-by-level to post-2003 NAICS-basis values without crosswalk adjustment. Last cached fetch: see `data/raw/bls/provenance.json`. Extension splice method is `level` (the count series is rebased at the latest available book endpoint and carried forward), appropriate because the construct is directly observable in both eras. Book-period registry `year_range` is honestly recorded as [1948, 1961] reflecting the current KB digitization extent.
 
 ## 7. Super-sector aggregation caveat (Stage 5 execution note, 2026-05-23)
 

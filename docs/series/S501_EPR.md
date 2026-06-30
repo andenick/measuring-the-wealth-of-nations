@@ -20,7 +20,7 @@ Figures: 5.4, 5.6, 9.1, 9.2 (TP* plotted as Marxian total product aggregate).
 
 ## 3. extension_source
 
-**BEA GDP-by-Industry Accounts** — value-added series for the productive-sector NAICS industries (S501-EXT subseries; productive/unproductive concordance documented in `Technical/docs/methodology/productive_classification_NAICS.md`). The pull caches the BEA Industry value-added components (`gdp_by_industry_value_added.csv`, `gdp_by_industry_va_components.csv`, `gdp_by_industry_gross_output.csv`) and NIPA Gross Output by Industry Table 1.7.5 (`nipa_1_7_5_gross_output_by_industry.csv`) at `Inputs/ST2/Inputs/API_Data/BEA/`, pulled 2026-02-24 by `pull_bea_nipa_ch05.py`.
+**BEA GDP-by-Industry Accounts** — value-added series for the productive-sector NAICS industries (S501-EXT subseries; productive/unproductive concordance documented in `Technical/docs/methodology/productive_classification_NAICS.md`). The pull caches the BEA Industry value-added components (`gdp_by_industry_value_added.csv`, `gdp_by_industry_va_components.csv`, `gdp_by_industry_gross_output.csv`) and NIPA Gross Output by Industry Table 1.7.5 (`nipa_1_7_5_gross_output_by_industry.csv`) at `data/raw/bea/`, pulled 2026-02-24 by `pull_bea_nipa_ch05.py`.
 
 ## 4. extension_url
 
@@ -34,4 +34,4 @@ Total Product TP* is the Marxian measure of total value produced in the producti
 
 ## 6. vintage_note
 
-Book values 1948–1989 are frozen at the book's vintage: SIC-based BEA NIPA + IO tables as published by 1993. Modern extension uses BEA GDP-by-Industry NAICS data from 1997 forward, pulled 2026-02-24 (provenance file `Inputs/ST2/Inputs/API_Data/BEA/provenance.json`), representing approximately the September 2025 NIPA vintage. The 1990–1996 gap is bridged log-linearly between the 1989 book endpoint and the 1997 BEA NAICS endpoint, documented as methodological adjustment M04_S501 in `DIVERGENCE_REGISTER.json`. BEA comprehensive revisions (1999, 2003, 2009, 2013, 2018) alter post-1997 values relative to the book; pre-1997 book values remain frozen.
+Book values 1948–1989 are frozen at the book's vintage: SIC-based BEA NIPA + IO tables as published by 1993. Modern extension uses BEA GDP-by-Industry NAICS data from 1997 forward, pulled 2026-02-24 (provenance file `data/raw/bea/provenance.json`), representing approximately the September 2025 NIPA vintage. The 1990–1996 gap is bridged log-linearly between the 1989 book endpoint and the 1997 BEA NAICS endpoint, documented as methodological adjustment M04_S501 in `DIVERGENCE_REGISTER.json`. BEA comprehensive revisions (1999, 2003, 2009, 2013, 2018) alter post-1997 values relative to the book; pre-1997 book values remain frozen.

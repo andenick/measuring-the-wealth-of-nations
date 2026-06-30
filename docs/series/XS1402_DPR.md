@@ -11,7 +11,7 @@ Lp/L under Mohun's classification. Lower than S511 because Mohun's productive bo
 
 ## Source
 
-`data/source/external_studies/Mohun_mohun_employment_annual_1948_1989.csv` (copied from ST2's ExternalSources). Loader: `code/L01_loaders/L01_XS1402_productive_labor_share_mohun2005.py`. Processor: pass-through (P02). Validator: `code/V03_validators/V03_XS1402_productive_labor_share_mohun2005.py`.
+`data/source/external_studies/Mohun_mohun_employment_annual_1948_1989.csv` (copied from predecessor-build's ExternalSources). Loader: `code/L01_loaders/L01_XS1402_productive_labor_share_mohun2005.py`. Processor: pass-through (P02). Validator: `code/V03_validators/V03_XS1402_productive_labor_share_mohun2005.py`.
 
 ## Validation
 

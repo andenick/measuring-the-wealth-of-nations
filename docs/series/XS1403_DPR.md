@@ -19,7 +19,7 @@ reproduce the `V_star_mohun` column of the CORRECTED source.
 
 ## Source
 
-`data/source/external_studies/Mohun_mohun_variable_capital_1948_1989_CORRECTED.csv` (copied from ST2's ExternalSources). Loader: `code/L01_loaders/L01_XS1403_variable_capital_mohun2005.py`. Processor: pass-through (P02). Validator: `code/V03_validators/V03_XS1403_variable_capital_mohun2005.py`.
+`data/source/external_studies/Mohun_mohun_variable_capital_1948_1989_CORRECTED.csv` (copied from predecessor-build's ExternalSources). Loader: `code/L01_loaders/L01_XS1403_variable_capital_mohun2005.py`. Processor: pass-through (P02). Validator: `code/V03_validators/V03_XS1403_variable_capital_mohun2005.py`.
 
 ## Validation
 

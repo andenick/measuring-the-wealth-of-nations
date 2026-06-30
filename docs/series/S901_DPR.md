@@ -57,6 +57,6 @@ V03 validation is purely a round-trip: for every populated `(year, indicator)` c
 
 ## Provenance trail
 
-- **Original research**: `Technical/research/S901_research.json`, researcher `agent`, 2026-03-21; ported from `ST2/research/T901_research.json` on 2026-05-14; verbatim quotes backfilled 2026-05-19 (`D3_RMWND_quotes_ch7_etc`) and 2026-05-23 (`stage1_cohort3_enrich`, `stage1_cohort3_S901AS001AS002`)
+- **Original research**: `Technical/research/S901_research.json`, researcher `agent`, 2026-03-21; ported from `predecessor-build/research/T901_research.json` on 2026-05-14; verbatim quotes backfilled 2026-05-19 (`D3_RMWND_quotes_ch7_etc`) and 2026-05-23 (`stage1_cohort3_enrich`, `stage1_cohort3_S901AS001AS002`)
 - **DPR enriched**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (cohort agent 4); sources read = research JSON + KB chunks 24/25 + Knowledge_Base/tables/page_140 + Knowledge_Base/SUMMARY_KEY_FINDINGS + Technical/docs/chapters/CHAPTER_9_INVESTIGATION + registry entry + project CLAUDE.md (which mandates disclosure that S901 is a project artifact beyond the book's 7 chapters)
 - **Anu Framework stage**: Stage 3 INGESTION (cohort 1, failing chapters); ingestion gate IDs P31/P32

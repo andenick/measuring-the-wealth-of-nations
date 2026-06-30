@@ -21,7 +21,7 @@ from utils.series import BenchmarkValidator  # noqa: E402
 #   1948: e=1.70 -> S/Y = 1.70/2.70 = 0.6296
 #   1989: e=2.44 -> S/Y = 2.44/3.44 = 0.7093
 #
-# ST2's validation_config benchmark of 0.57/0.60 came from a NIPA-proxy
+# predecessor-build's validation_config benchmark of 0.57/0.60 came from a NIPA-proxy
 # source (`T509_surplus_ratio` in ExploitationComposition_1948_1989.csv),
 # which is NOT the book's surplus ratio. Documented in
 # Technical/MIGRATION/divergences_from_ST2.md.

@@ -19,7 +19,7 @@ DERIVED formula series. Extension is computed each year as:
 
     r*_adj = S513 x TCU / 100
 
-where S513 is the (derived, extended) Marxian profit rate and TCU is total capacity utilization from FRED. Specifically, the cached FRED series at `data/raw/fred/fred_tcu_capacity_utilization.csv` (mirrored from `Inputs/ST2/Inputs/API_Data/FRED/fred_tcu_capacity_utilization.csv`; provenance in `Inputs/ST2/Inputs/API_Data/FRED/provenance.json`) supplies the TCU multiplier. Primary FRED identifier: `TCU` (Total Capacity Utilization, all industries); the manufacturing alternative `CAPUTLB00004S` is retained as a variant for the Shaikh (1987, 1992a) manufacturing-centric construction.
+where S513 is the (derived, extended) Marxian profit rate and TCU is total capacity utilization from FRED. Specifically, the cached FRED series at `data/raw/fred/fred_tcu_capacity_utilization.csv` (mirrored from `data/raw/fred/fred_tcu_capacity_utilization.csv`; provenance in `data/raw/fred/provenance.json`) supplies the TCU multiplier. Primary FRED identifier: `TCU` (Total Capacity Utilization, all industries); the manufacturing alternative `CAPUTLB00004S` is retained as a variant for the Shaikh (1987, 1992a) manufacturing-centric construction.
 
 ### Form choice (v1.2 Iter 3 stock-form lockstep with S513)
 
@@ -46,7 +46,7 @@ Shaikh & Tonak define the capacity-adjusted Marxian profit rate as r*_adj = r* x
 
 ## 6. vintage_note
 
-Book vintage: Federal Reserve G.17 capacity-utilization series as of the late 1980s, applied to a 1989-vintage stock-form r*. Modern vintage: FRED TCU was substantively revised in 2002 (G.17 Industrial Production redesign), so pre-2002 TCU values are not strictly comparable level-by-level to post-2002 values; FRED's published series carries the revised methodology back through the entire history, so the revision shows up as a level shift in the historical reconstruction rather than as a break in the published series. Vintage divergence of r*_adj is dominated by S513's own vintage issues (notably the BEA 2013 R&D/IPP capitalization through S517 in the stock-form denominator). Last cached fetch of TCU: see `Inputs/ST2/Inputs/API_Data/FRED/provenance.json`.
+Book vintage: Federal Reserve G.17 capacity-utilization series as of the late 1980s, applied to a 1989-vintage stock-form r*. Modern vintage: FRED TCU was substantively revised in 2002 (G.17 Industrial Production redesign), so pre-2002 TCU values are not strictly comparable level-by-level to post-2002 values; FRED's published series carries the revised methodology back through the entire history, so the revision shows up as a level shift in the historical reconstruction rather than as a break in the published series. Vintage divergence of r*_adj is dominated by S513's own vintage issues (notably the BEA 2013 R&D/IPP capitalization through S517 in the stock-form denominator). Last cached fetch of TCU: see `data/raw/fred/provenance.json`.
 
 ## 7. v1.2 Iter 3 form-switch references
 

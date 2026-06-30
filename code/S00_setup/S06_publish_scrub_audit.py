@@ -45,7 +45,7 @@ SCRUB_PATTERNS = [
     # `Robin` matched only when used as a tool/dir name (followed by /), not as
     # a person's first name.
     re.compile(r"\bRobin/|\bRobin\\"),
-    # ST2 internal decision codes
+    # predecessor-build internal decision codes
     re.compile(r"DEC-[A-Z0-9]+"),
 ]
 

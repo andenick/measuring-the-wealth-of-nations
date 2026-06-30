@@ -23,7 +23,7 @@ DERIVED formula series (NOT a direct fetch). Extension is computed each year usi
 
     r* = S505 / (S517 + S504)
 
-where S505 is extended surplus value (BEA NIPA-based), S517 is extended capital stock K* (BEA Fixed Assets Table 4.1 Line 1, Private nonresidential fixed assets, current-cost net stock), and S504 is extended variable capital (BEA NIPA wages + BLS CES production-worker share). The denominator uses the capital STOCK (K* + V*), matching the book canonical §5.5 definition. Cached API inputs feeding the components live under `Inputs/ST2/Inputs/API_Data/BEA/` (Fixed Assets 4.1, NIPA 6.2D compensation, T20100 compensation, 6.4D/6.5D FTE) and `Inputs/ST2/Inputs/API_Data/BLS/bls_ces_production_workers.csv`.
+where S505 is extended surplus value (BEA NIPA-based), S517 is extended capital stock K* (BEA Fixed Assets Table 4.1 Line 1, Private nonresidential fixed assets, current-cost net stock), and S504 is extended variable capital (BEA NIPA wages + BLS CES production-worker share). The denominator uses the capital STOCK (K* + V*), matching the book canonical §5.5 definition. Cached API inputs feeding the components live under `data/raw/bea/` (Fixed Assets 4.1, NIPA 6.2D compensation, T20100 compensation, 6.4D/6.5D FTE) and `data/raw/bls/bls_ces_production_workers.csv`.
 
 The previously-published flow-form r* = S505/(S502+S504) is retained as a secondary reference variant `S513-FLOW` subseries (marked `_secondary: true` in the registry), provided for continuity with pre-v1.2 headline values. It is not the headline series in v1.2+ because it contradicts the book §5.5 canonical definition.
 
@@ -43,7 +43,7 @@ Shaikh & Tonak define r* in stock form (§5.5 p.122 + footnote 16) and treat it 
 
 ## 6. vintage_note
 
-Book vintage: Shaikh & Tonak (1994) used NIPA / Fixed Assets vintages current through 1989 plus pre-NAICS SIC-based BLS data, with the Fixed Assets capital-stock concept matching what is now BEA Fixed Assets Table 4.1 Line 1. Modern vintage (this extension): post-comprehensive-revision BEA NIPA and Fixed Assets (notably the 2013 R&D / IPP capitalization, which raises K* levels), and NAICS-basis BLS CES from 2003 forward. Largest single vintage divergence is the BEA 2013 R&D / IPP capitalization through S517 K*. Last cached fetch of feeding components: see `Inputs/ST2/Inputs/API_Data/BEA/provenance.json` and `Inputs/ST2/Inputs/API_Data/BLS/provenance.json` for timestamps. S513 itself inherits the vintage of whichever component was fetched most recently. Anti-lazy-splice safeguard: the V03 validator rejects any direct level/growth splice of r* and requires formula recomputation per year.
+Book vintage: Shaikh & Tonak (1994) used NIPA / Fixed Assets vintages current through 1989 plus pre-NAICS SIC-based BLS data, with the Fixed Assets capital-stock concept matching what is now BEA Fixed Assets Table 4.1 Line 1. Modern vintage (this extension): post-comprehensive-revision BEA NIPA and Fixed Assets (notably the 2013 R&D / IPP capitalization, which raises K* levels), and NAICS-basis BLS CES from 2003 forward. Largest single vintage divergence is the BEA 2013 R&D / IPP capitalization through S517 K*. Last cached fetch of feeding components: see `data/raw/bea/provenance.json` and `data/raw/bls/provenance.json` for timestamps. S513 itself inherits the vintage of whichever component was fetched most recently. Anti-lazy-splice safeguard: the V03 validator rejects any direct level/growth splice of r* and requires formula recomputation per year.
 
 ## 7. v1.2 Iter 3 stock-form adoption note
 

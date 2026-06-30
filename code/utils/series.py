@@ -18,7 +18,7 @@ import pandas as pd
 from .io import read_book_table, write_series_csv, write_validation_result
 
 
-# ----- Tolerance classes (mirrors ST2 validation_config.json) -----
+# ----- Tolerance classes (mirrors predecessor-build validation_config.json) -----
 
 TOLERANCES = {
     "dollar_series": {"rel": 0.01,  "abs": 1.0},
