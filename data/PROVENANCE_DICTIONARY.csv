@@ -1,0 +1,857 @@
+series,subseries,year,source_type,source_table,source_line_or_column,citation,provenance_class_raw,workpackage,note
+S201,S201-A,1958,identity,S503-A / NIPA-1.7.5 GDP (recomputed),component_identity,S503-A / NIPA-1.7.5 GDP (recomputed),component_identity,WP-D,PASS; abs_err=0.0; anchor_value=0.838831408747187
+S201,S201-A,1989,identity,S503-A / NIPA-1.7.5 GDP (recomputed),component_identity,S503-A / NIPA-1.7.5 GDP (recomputed),component_identity,WP-D,PASS; abs_err=0.0; anchor_value=0.7734659439376912
+S201,S503-A(num),1958,book,KB v2 benchmark_reconciled.csv GFP_star (Table 5.3),book_anchor,KB v2 benchmark_reconciled.csv GFP_star (Table 5.3),book_anchor,WP-D,PASS; abs_err=0.0; anchor_value=403.67
+S201,S503-A(num),1963,book,KB v2 benchmark_reconciled.csv GFP_star (Table 5.3),book_anchor,KB v2 benchmark_reconciled.csv GFP_star (Table 5.3),book_anchor,WP-D,PASS; abs_err=0.0; anchor_value=523.74
+S201,S503-A(num),1967,book,KB v2 benchmark_reconciled.csv GFP_star (Table 5.3),book_anchor,KB v2 benchmark_reconciled.csv GFP_star (Table 5.3),book_anchor,WP-D,PASS; abs_err=0.0; anchor_value=699.15
+S201,S503-A(num),1972,book,KB v2 benchmark_reconciled.csv GFP_star (Table 5.3),book_anchor,KB v2 benchmark_reconciled.csv GFP_star (Table 5.3),book_anchor,WP-D,PASS; abs_err=0.0; anchor_value=1014.08
+S201,S503-A(num),1977,book,KB v2 benchmark_reconciled.csv GFP_star (Table 5.3),book_anchor,KB v2 benchmark_reconciled.csv GFP_star (Table 5.3),book_anchor,WP-D,PASS; abs_err=0.0; anchor_value=1690.83
+S401,spectral radius rebuilt A,1947,BEA,io_matrices_rebuilt 1947_A_rebuilt.csv,,io_matrices_rebuilt 1947_A_rebuilt.csv,matrix_internal,WP-C,old value 0.978708 (column-share artifact)
+S401,spectral radius rebuilt A,1967,pipeline,rebuilt (1967 was the only correct year in the old cache: old 0.4945),,rebuilt (1967 was the only correct year in the old cache: old 0.4945),matrix_internal,WP-C,
+S401,spectral radius rebuilt A,2017,BEA,rebuilt from BEA Total Requirements (A = I - L^-1),,rebuilt from BEA Total Requirements (A = I - L^-1),matrix_internal_official,WP-C,
+S402,mean TR column multiplier,1947,pipeline,rebuilt L colsums (live columns),,rebuilt L colsums (live columns),matrix_internal,WP-C,old Frobenius-norm value 79.94
+S402,mean TR column multiplier,1977,pipeline,rebuilt L,,rebuilt L,matrix_internal,WP-C,old 98.94; defective-cache multipliers ~70x
+S402,mean TR column multiplier,2017,BEA,BEA published Total Requirements IxI Summary 2017 (official),,BEA published Total Requirements IxI Summary 2017 (official),official_bea,WP-C,
+S503,S503-A,1948,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1949,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1950,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1951,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1952,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1953,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1954,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1955,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1956,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1957,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1958,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1959,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1960,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1961,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1962,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1963,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1964,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1965,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1966,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1967,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1968,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1969,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1970,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1971,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1972,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1973,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1974,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1975,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1976,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1977,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1978,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1979,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1980,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1981,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1982,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1983,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1984,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1985,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1986,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1987,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1988,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-A,1989,book,Book Table H.1 col GFP_star,GFP = TP* - C*_m (gross VA of productive+trade industries),Book Table H.1 col GFP_star,book,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-COMBINED,1989,book,KB v2 _combined/H.1.csv,GFP_star (=TP*-Mp),book Gross Final Product concept,book,WP-A,book Gross Final Product concept
+S503,S503-COMBINED,1990,pipeline,derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,GFP = TP* - C*_m (gross VA of productive+trade industries),derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,interpolated,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-COMBINED,1990,BEA,data/source/bea_sic/...,VA_partA (real SIC),real SIC fill (R3); exposes DIV-007 book-GFP-vs-BEA-VA concept break at 1989/90,SIC,WP-A,real SIC fill (R3); exposes DIV-007 book-GFP-vs-BEA-VA concept break at 1989/90
+S503,S503-COMBINED,1991,pipeline,derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,GFP = TP* - C*_m (gross VA of productive+trade industries),derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,interpolated,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-COMBINED,1992,pipeline,derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,GFP = TP* - C*_m (gross VA of productive+trade industries),derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,interpolated,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-COMBINED,1993,pipeline,derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,GFP = TP* - C*_m (gross VA of productive+trade industries),derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,interpolated,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-COMBINED,1994,pipeline,derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,GFP = TP* - C*_m (gross VA of productive+trade industries),derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,interpolated,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-COMBINED,1995,pipeline,derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,GFP = TP* - C*_m (gross VA of productive+trade industries),derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,interpolated,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-COMBINED,1996,pipeline,derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,GFP = TP* - C*_m (gross VA of productive+trade industries),derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,interpolated,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,1997,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,1997,BEA,BEA GDP-by-Industry value_added,"sum NAICS [11,21,22,23,31G,42,44RT,48TW]",raw pass-through (provenance label corrected from false 'growth_rate splice'),NAICS,WP-A,raw pass-through (provenance label corrected from false 'growth_rate splice')
+S503,S503-EXT,1998,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,1999,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2000,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2001,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2002,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2003,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2004,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2005,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2006,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2007,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2008,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2009,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2010,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2011,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2012,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2013,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2014,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2015,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2016,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2017,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2018,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2019,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2020,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2021,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2022,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2023,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S503,S503-EXT,2024,BEA,"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",GFP = TP* - C*_m (gross VA of productive+trade industries),"BEA GDP-by-Industry Value Added, sum NAICS[11,21,22,23,31G,42,44RT,48TW]",raw-source,S506_STEP_TABLE,Gross Final Product GFP
+S504,S504-A,1948,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1949,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1950,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1951,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1952,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1953,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1954,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1955,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1956,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1957,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1958,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1959,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1960,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1961,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1962,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1963,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1964,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1965,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1966,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1967,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1968,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1969,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1970,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1971,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1972,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1973,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1974,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1975,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1976,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1977,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1978,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1979,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1980,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1981,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1982,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1983,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1984,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1985,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1986,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1987,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1988,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-A,1989,book,Book Table H.1 col V_star,V* = (V*/W) x W,Book Table H.1 col V_star,book,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,1998,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,1998,BEA,S512-EXT(de-spliced) x BEA NIPA T20100,0.2692 x total compensation,V*; was 1597.4 when spliced,NAICS,WP-A,V*; was 1597.4 when spliced
+S504,S504-EXT,1999,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2000,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2001,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2002,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2003,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2004,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2005,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2006,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2007,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2008,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2009,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2010,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2011,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2012,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2013,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2014,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2015,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2016,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2017,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2018,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2019,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2020,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2021,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2022,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2023,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2024,BEA,S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,S512-EXT x BEA NIPA T20100 line1 (total compensation),computed,S506_STEP_TABLE,Variable Capital V*
+S504,S504-EXT,2024,pipeline,S512-EXT x T20100,0.198 x total compensation,V*,NAICS,WP-A,V*
+S504,S504-INTERP,1990,BEA,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),interpolated,S506_STEP_TABLE,Variable Capital V*
+S504,S504-INTERP,1991,BEA,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),interpolated,S506_STEP_TABLE,Variable Capital V*
+S504,S504-INTERP,1992,BEA,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),interpolated,S506_STEP_TABLE,Variable Capital V*
+S504,S504-INTERP,1993,BEA,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),interpolated,S506_STEP_TABLE,Variable Capital V*
+S504,S504-INTERP,1994,BEA,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),interpolated,S506_STEP_TABLE,Variable Capital V*
+S504,S504-INTERP,1995,BEA,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),interpolated,S506_STEP_TABLE,Variable Capital V*
+S504,S504-INTERP,1996,BEA,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),interpolated,S506_STEP_TABLE,Variable Capital V*
+S504,S504-INTERP,1997,BEA,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),V* = (V*/W) x W,log-linear bridge book(1989)->EXT(1998); S512-EXT x BEA NIPA T20100 line1 (total compensation),interpolated,S506_STEP_TABLE,Variable Capital V*
+S505,S505-A,1948,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1949,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1950,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1951,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1952,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1953,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1954,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1955,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1956,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1957,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1958,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1959,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1960,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1961,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1962,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1963,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1964,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1965,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1966,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1967,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1968,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1969,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1970,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1971,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1972,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1973,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1974,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1975,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1976,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1977,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1978,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1979,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1980,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1981,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1982,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1983,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1984,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1985,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1986,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1987,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1988,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-A,1989,book,Book Table H.1 col S_star,S* = GFP - V* (identity),Book Table H.1 col S_star,book,S506_STEP_TABLE,Surplus Value S*
+S505,S505-COMBINED,1990,pipeline,derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,S* = GFP - V* (identity),derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,interpolated,S506_STEP_TABLE,Surplus Value S*
+S505,S505-COMBINED,1991,pipeline,derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,S* = GFP - V* (identity),derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,interpolated,S506_STEP_TABLE,Surplus Value S*
+S505,S505-COMBINED,1992,pipeline,derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,S* = GFP - V* (identity),derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,interpolated,S506_STEP_TABLE,Surplus Value S*
+S505,S505-COMBINED,1993,pipeline,derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,S* = GFP - V* (identity),derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,interpolated,S506_STEP_TABLE,Surplus Value S*
+S505,S505-COMBINED,1994,pipeline,derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,S* = GFP - V* (identity),derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,interpolated,S506_STEP_TABLE,Surplus Value S*
+S505,S505-COMBINED,1995,pipeline,derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,S* = GFP - V* (identity),derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,interpolated,S506_STEP_TABLE,Surplus Value S*
+S505,S505-COMBINED,1996,pipeline,derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,S* = GFP - V* (identity),derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,interpolated,S506_STEP_TABLE,Surplus Value S*
+S505,S505-COMBINED,1997,pipeline,derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,S* = GFP - V* (identity),derived from bridged components (S503/S504-COMBINED); no native 1990-97 source,interpolated,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,1998,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,1999,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2000,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2001,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2002,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2003,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2004,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2005,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2006,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2007,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2008,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2009,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2010,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2011,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2012,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2013,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2014,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2015,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2016,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2017,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2018,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2019,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2020,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2021,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2022,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2023,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S505,S505-EXT,2024,pipeline,computed: S503-COMBINED - S504-COMBINED,S* = GFP - V* (identity),computed: S503-COMBINED - S504-COMBINED,computed,S506_STEP_TABLE,Surplus Value S*
+S506,S506-A,1948,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1949,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1950,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1951,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1952,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1953,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1954,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1955,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1956,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1957,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1958,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1958,book,KB v2 _combined/H.1.csv,S_star_V_star row 1958,corrected from research-note 1.83 transcription error (DIV-A14),book,WP-A,corrected from research-note 1.83 transcription error (DIV-A14)
+S506,S506-A,1959,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1960,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1961,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1962,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1963,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1964,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1965,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1966,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1967,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1968,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1969,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1970,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1971,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1972,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1973,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1974,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1975,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1976,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1977,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1978,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1979,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1980,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1981,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1982,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1983,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1984,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1985,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1986,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1987,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1988,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1989,book,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),e = S* / V*,Book Table H.1 col S_star_V_star (=Table 5.7 T506A),book,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-A,1989,book,KB v2 _combined/H.1.csv (Appendix H.1) / Table 5.7,S_star_V_star / T506A,book Marxian rate e=S*/V*,book,WP-A,book Marxian rate e=S*/V*
+S506,S506-EXT,1997,BEA,data/source/bea_sic/GDPbyInd_partitionA_SIC_1987_1997.csv (BEA Hist Ind Accts),(VA_partA-comp_partA)/comp_partA,"consistent BEA operating-surplus rate, real SIC",SIC,WP-A,"consistent BEA operating-surplus rate, real SIC"
+S506,S506-EXT,1998,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,1998,BEA,BEA GDP-by-Industry va_components (TableID 6),"partition A [11,21,22,23,31G,42,44RT,48TW] VA & Comp",seam smooth with SIC 1997 (0.802),NAICS,WP-A,seam smooth with SIC 1997 (0.802)
+S506,S506-EXT,1999,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2000,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2001,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2002,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2003,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2004,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2005,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2006,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2007,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2008,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2009,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2010,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2011,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2012,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2013,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2014,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2015,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2016,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2017,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2018,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2019,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2020,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2021,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2022,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2023,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2024,pipeline,computed: S505-EXT/S504-EXT,e = S* / V*,computed: S505-EXT/S504-EXT,computed,S506_STEP_TABLE,Rate of Exploitation e=S*/V*
+S506,S506-EXT,2024,BEA,BEA GDP-by-Industry va_components (TableID 6),partition A VA & Comp,rises; no spurious drop,NAICS,WP-A,rises; no spurious drop
+S506,S506-EXT-MARX,1990,pipeline,kIO*VA_partA*(1-dp)/(s512*W)-1,SIC VA_partA + T20100 W + book-terminal V*/W,faithful-concept; kIO=1.5714 held (DIV-A10),SIC,WP-A,faithful-concept; kIO=1.5714 held (DIV-A10)
+S506,S506-EXT-MARX,1998,book,kIO*VA_partA*(1-dp)/(s512_raw*W)-1,NAICS VA_partA + NIPA 6.2D V*/W + T20100 W,"brackets book 2.44, rises",NAICS,WP-A,"brackets book 2.44, rises"
+S506,S506-EXT-MARX,2024,pipeline,kIO*VA_partA*(1-dp)/(s512_raw*W)-1,NAICS partition A + 6.2D + T20100,faithful-concept continuation,NAICS,WP-A,faithful-concept continuation
+S506,S506-EXT-OLD-DEPRECATED,1998,book,data/source/_pre_review_frozen/S506_EXT_pre_review_1_27_hybrid.csv,frozen pre-review S505-EXT/S504-EXT,the spurious 1.27 that manufactured Tonak's cliff; retained,NAICS,WP-A,the spurious 1.27 that manufactured Tonak's cliff; retained
+S511,S511-A,1948,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1949,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1950,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1951,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1952,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1953,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1954,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1955,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1956,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1957,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1958,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1959,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1960,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1961,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1962,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1963,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1964,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1965,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1966,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1967,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1968,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1969,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1970,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1971,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1972,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1973,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1974,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1975,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1976,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1977,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1978,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1979,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1980,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1981,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1982,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1983,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1984,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1985,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1986,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1987,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1988,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-A,1989,book,Book Table 5.7 col T511A,Lp/L,Book Table 5.7 col T511A,book,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,1990,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,1991,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,1992,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,1993,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,1994,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,1995,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,1996,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,1997,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,1998,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,1999,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2000,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2001,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2002,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2003,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2004,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2005,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2006,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2007,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2008,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2009,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2010,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2011,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2012,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2013,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2014,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2015,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2016,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2017,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2018,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2019,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2020,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2021,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2022,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2023,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S511,S511-EXT,2024,BLS,BLS CES productive-employment share,Lp/L,BLS CES productive-employment share,raw-source,S506_STEP_TABLE,Productive Labor Share Lp/L
+S512,S512-A,1948,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1949,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1950,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1951,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1952,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1953,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1954,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1955,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1956,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1957,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1958,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1959,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1960,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1961,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1962,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1963,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1964,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1965,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1966,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1967,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1968,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1969,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1970,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1971,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1972,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1973,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1974,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1975,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1976,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1977,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1978,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1979,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1980,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1981,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1982,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1983,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1984,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1985,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1986,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1987,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1988,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-A,1989,book,Book Table 5.7 col T512A,V*/W,Book Table 5.7 col T512A,book,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,1990,BEA,data/source/bea_sic/GDPbyInd_partitionA_SIC_1987_1997.csv,comp_prod / NIPA T20100 total comp,"real SIC fill (R3), de-spliced (R1)",SIC,WP-A,"real SIC fill (R3), de-spliced (R1)"
+S512,S512-EXT,1997,BEA,data/source/bea_sic/...,comp_prod / T20100,real SIC,SIC,WP-A,real SIC
+S512,S512-EXT,1998,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,1998,BEA,BEA NIPA 6.2D,"lines [5,7,11,12,13,43] / line 1",de-spliced raw (was 0.315 spliced); SIC->NAICS break flagged (DIV-010),NAICS,WP-A,de-spliced raw (was 0.315 spliced); SIC->NAICS break flagged (DIV-010)
+S512,S512-EXT,1999,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2000,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2001,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2002,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2003,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2004,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2005,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2006,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2007,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2008,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2009,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2010,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2011,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2012,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2013,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2014,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2015,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2016,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2017,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2018,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2019,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2020,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2021,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2022,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2023,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2024,BEA,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",raw-source,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-EXT,2024,BEA,BEA NIPA 6.2D,"lines [5,7,11,12,13,43] / line 1",honest declining productive wage share,NAICS,WP-A,honest declining productive wage share
+S512,S512-EXT-SPLICED-DEPRECATED,1998,BEA,BEA NIPA 6.2D x splice-scale 1.17,raw share x proj_1998/nipa_1998,old curve-fit; retained per DIV-A11,NAICS,WP-A,old curve-fit; retained per DIV-A11
+S512,S512-INTERP,1990,BEA,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",interpolated,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-INTERP,1991,BEA,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",interpolated,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-INTERP,1992,BEA,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",interpolated,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-INTERP,1993,BEA,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",interpolated,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-INTERP,1994,BEA,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",interpolated,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-INTERP,1995,BEA,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",interpolated,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-INTERP,1996,BEA,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",interpolated,S506_STEP_TABLE,Productive Wage Share V*/W
+S512,S512-INTERP,1997,BEA,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",V*/W,"log-linear bridge book(1989)->EXT(1998); BEA NIPA 6.2D lines[5,7,11,12,13,43]/line1, level-spliced",interpolated,S506_STEP_TABLE,Productive Wage Share V*/W
+S513,S513-EXT,2024,pipeline,S505-COMBINED/(S517-COMBINED+S504-COMBINED),stock-form r* with de-spliced V*,changed from 0.1604 (pre-review) via honest de-splice cascade; old refval was tautological,NAICS,WP-A,changed from 0.1604 (pre-review) via honest de-splice cascade; old refval was tautological
+S515,S515-A,1948,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1949,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1950,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1951,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1952,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1953,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1954,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1955,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1956,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1957,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1958,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1959,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1960,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1961,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1962,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1963,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1964,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1965,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1966,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1967,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1968,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1969,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1970,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1971,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1972,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1973,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1974,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1975,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1976,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1977,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1978,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1979,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1980,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1981,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1982,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1983,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1984,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1985,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1986,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1987,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1988,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-A,1989,book,Book Table 5.7/H.1 productive employment,Lp,Book Table 5.7/H.1 productive employment,book,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,1990,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,1991,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,1992,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,1993,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,1994,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,1995,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,1996,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,1997,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,1998,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,1999,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2000,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2001,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2002,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2003,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2004,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2005,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2006,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2007,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2008,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2009,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2010,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2011,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2012,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2013,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2014,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2015,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2016,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2017,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2018,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2019,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2020,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2021,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2022,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2023,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S515,S515-EXT,2024,BLS,BLS CES productive employment,Lp,BLS CES productive employment,raw-source,S506_STEP_TABLE,Productive Employment Lp
+S516,S516-A,1948,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1949,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1950,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1951,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1952,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1953,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1954,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1955,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1956,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1957,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1958,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1959,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1960,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1961,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1962,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1963,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1964,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1965,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1966,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1967,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1968,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1969,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1970,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1971,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1972,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1973,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1974,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1975,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1976,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1977,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1978,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1979,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1980,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1981,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1982,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1983,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1984,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1985,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1986,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1987,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1988,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-A,1989,book,Book Table H.1 unproductive employment,Lu = L - Lp,Book Table H.1 unproductive employment,book,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,1990,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,raw-source,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,1991,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,raw-source,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,1992,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,raw-source,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,1993,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,raw-source,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,1994,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,raw-source,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,1995,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,raw-source,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,1996,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,raw-source,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,1997,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,raw-source,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,1998,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,1999,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2000,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2001,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2002,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2003,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2004,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2005,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2006,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2007,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2008,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2009,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2010,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2011,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2012,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2013,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2014,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2015,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2016,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2017,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2018,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2019,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2020,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2021,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2022,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2023,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S516,S516-EXT,2024,pipeline,computed: L - Lp,Lu = L - Lp,computed: L - Lp,computed,S506_STEP_TABLE,Unproductive Employment Lu
+S601,personal income tax (workers) 1964,1964,book,Table N.1 (labor column),p.358 / CSV_Tables/table_037_038_14.csv,"Shaikh & Tonak 1994, Appendix N",book,WP-B,our S601(1964)=37.06 ~ book labor-share 36.4 (near-faithful)
+S602,social insurance (workers) 1964,1964,book,Table N.1 (labor column),p.358 / table_037_038_14.csv,S&T 1994 App.N,book,WP-B,our S602(1964)=22.39 is 7.71 BELOW book 30.1 (narrower basis)
+S603,property+motor+other taxes (workers) 1964,1964,book,Table N.1 (labor column),p.358 / table_037_038_14.csv,S&T 1994 App.N,book,WP-B,book = 6.1 property + 0.8 motor vehicle + 2.8 other nontaxes; our S603=10.84 (+1.14)
+S604,total taxes T1 (workers) 1964,1964,book,Table N.1 (labor column T1),p.358 / table_037_038_14.csv,S&T 1994 App.N,book,WP-B,our S604(1964)=111.06; +34.86 excess = +40.76 indirect (excluded by App.N)
+S605,cash benefits (part of B1),1964,book,Table N.1 Group I (labor),p.358 / table_037_038_14.csv,S&T 1994 App.N,book,WP-B,benefit side aggregate over-counts; see S606
+S606,govt services (Group II,labor share),book,,Table N.1 Group II (labor),p.358 / table_037_038_14.csv,S&T 1994 App.N,WP-B,book
+S607,net transfer / NSW 1964,1964,book,Table N.1 net transfer,p.358 / table_037_038_14.csv,S&T 1994 App.N,book,WP-B,our NSW(1964)=-20.58 (2.5x more negative than book -8.1)
+S608,net transfer rate Ntrrate 1952,1952,book,Table N.2 'Net transfer rate (Ntrrate)',p.359 / table_037_038_15.csv,S&T 1994 App.N,book,WP-B,rebuilt S608=NtrV*/V*=Ntrrate; our 1952=-0.0485 (doc divergence)
+S608,net transfer rate Ntrrate 1964,1964,book,Table N.2,p.359 / table_037_038_15.csv,S&T 1994 App.N,book,WP-B,our -0.0555 (doc divergence)
+S608,net transfer rate Ntrrate 1971,1971,book,Table N.2,p.359 / table_037_038_16.csv,S&T 1994 App.N,book,WP-B,our -0.0176 (doc divergence; sign flip)
+S608,net transfer rate Ntrrate 1980,1980,book,Table N.2,p.359 / table_037_038_17.csv,S&T 1994 App.N,book,WP-B,our -0.0113 (PASS abs<=0.01)
+S608,net transfer rate Ntrrate 1989,1989,book,Table N.2,p.359 / table_037_038_17.csv,S&T 1994 App.N,book,WP-B,our -0.0328 (PASS abs<=0.01)
+S617,employee compensation EC,1964,book,Table H.1 (EC row),Appendix H / book_tableH1_1948_1989.csv,S&T 1994 App.H,book,WP-B,faithful; 1948=142.09 1989=3079.0 match
+S701,frozen-1977 variant endpoints,1990,pipeline,S701-VAR-FROZEN77 (A+X frozen at rebuilt 1977),,S701-VAR-FROZEN77 (A+X frozen at rebuilt 1977),variant,WP-C,rises to 0.108682 by 2024: ~14.7x wedge vs moving benchmark = P2 Channel-1 bias confirmed
+S701,lambda_p benchmark (rebuilt),1958,BLS,BLS CES hours (corrected 07-datatype mfg series + supersector split) / rebuilt 1958 X_j; (I-A)^-1 from io_matrices_rebuilt,,BLS CES hours (corrected 07-datatype mfg series + supersector split) / rebuilt 1958 X_j; (I-A)^-1 from io_matrices_rebuilt,pipeline_snapshot_no_book_anchor,WP-C,book prints no lambda table (v2 KB verified); old chopped 1958 = 0.0050 (unit chaos)
+S701,lambda_p benchmark (rebuilt),1963,book,same machinery at 1963,,same machinery at 1963,pipeline_snapshot_no_book_anchor,WP-C,
+S701,lambda_p benchmark (rebuilt),1967,book,same; 1967 X_j exact (genuine labeled A); services supersectors enter coverage (n 60->68),,same; 1967 X_j exact (genuine labeled A); services supersectors enter coverage (n 60->68),pipeline_snapshot_no_book_anchor,WP-C,"coverage break documented, not smoothed"
+S701,lambda_p benchmark (rebuilt),1972,book,same machinery at 1972,,same machinery at 1972,pipeline_snapshot_no_book_anchor,WP-C,old chopped 1972 = 18.457 (near-singular inverse + duplicated hours + earnings-as-hours)
+S701,lambda_p benchmark (rebuilt),1977,book,same machinery at 1977,,same machinery at 1977,pipeline_snapshot_no_book_anchor,WP-C,
+S701,lambda_p extension 1997 (spliced level),1997,book,1997 both-ways: SIC path 0.019983 / NAICS path 0.017029; splice factor 1.173491,,1997 both-ways: SIC path 0.019983 / NAICS path 0.017029; splice factor 1.173491,pipeline_snapshot_no_book_anchor,WP-C,1997 SIC->NAICS break = documented method change (DIV-C11)
+S701,lambda_p extension end,2024,BEA,"NAICS path: BEA 2017 Total Requirements + 2024 BEA gross output, x splice",,"NAICS path: BEA 2017 Total Requirements + 2024 BEA gross output, x splice",pipeline_snapshot_no_book_anchor,WP-C,
+S701,lambda_p extension start,1990,book,SIC path: rebuilt 1977 A + annual X (bucket VA growth chain),,SIC path: rebuilt 1977 A + annual X (bucket VA growth chain),pipeline_snapshot_no_book_anchor,WP-C,
+S702,lambda_u benchmark (rebuilt),1967,book,"3 covered unproductive sectors (71,72,74)",,"3 covered unproductive sectors (71,72,74)",pipeline_snapshot_no_book_anchor,WP-C,previously NaN at 1967
+S702,lambda_u benchmark (rebuilt),1972,book,"5 covered sectors (69,70,71,72,74)",,"5 covered sectors (69,70,71,72,74)",pipeline_snapshot_no_book_anchor,WP-C,old chopped 1972 = 5.347
+S702,lambda_u benchmark (rebuilt),1977,book,same,,same,pipeline_snapshot_no_book_anchor,WP-C,old chopped 1977 = 2.810
+S702,lambda_u extension 1997 (spliced level),1997,book,SIC path 0.016091 / NAICS path 0.018750; splice factor 0.858186,,SIC path 0.016091 / NAICS path 0.018750; splice factor 0.858186,pipeline_snapshot_no_book_anchor,WP-C,
+S702,lambda_u extension end,2024,book,NAICS path x splice,,NAICS path x splice,pipeline_snapshot_no_book_anchor,WP-C,
+S703,book concept anchor (revenue side dev),1958,book,Table 5.12 p.144 (KB table_017_017_01.csv): (e-e*)/e percent,,Table 5.12 p.144 (KB table_017_017_01.csv): (e-e*)/e percent,book,WP-C,anchor for the FUTURE faithful S703; never compared to the partition gap
+S703,book concept anchor (revenue side dev),1977,book,same,,same,book,WP-C,
+S703,partition gap 1997 overlap,1997,book,"NAICS path (SIC path same year: -21.8243); unspliced (scale-free), both recorded",,"NAICS path (SIC path same year: -21.8243); unspliced (scale-free), both recorded",pipeline_snapshot_book_concept_divergent,WP-C,
+S703,partition gap benchmark,1967,book,output-weighted (Lambda_u-Lambda_p)/Lambda_p on rebuilt matrices,,output-weighted (Lambda_u-Lambda_p)/Lambda_p on rebuilt matrices,pipeline_snapshot_book_concept_divergent,WP-C,NOT the Khanjian 6-9% concept (DIV-C10)
+S703,partition gap benchmark,1972,book,same,,same,pipeline_snapshot_book_concept_divergent,WP-C,old chopped 1972 = -70.22
+S703,partition gap benchmark,1977,book,same,,same,pipeline_snapshot_book_concept_divergent,WP-C,old chopped 1977 = -73.05
+S703,partition gap extension end,2024,book,NAICS path,,NAICS path,pipeline_snapshot_book_concept_divergent,WP-C,old chopped 2024 = -80.61
+S801,S801-A,1948,identity,S506-A (ST exploitation rate),component_identity,S506-A (ST exploitation rate),component_identity,WP-D,PASS; abs_err=0.0; anchor_value=1.7
+S801,S801-A,1948,book,ST 1994 Table 5.7 exploitation rate e=S*/V*,book_anchor,ST 1994 Table 5.7 exploitation rate e=S*/V*,book_anchor,WP-D,PASS; abs_err=0.0; anchor_value=1.7
+S801,S801-A,1989,identity,S506-A (ST exploitation rate),component_identity,S506-A (ST exploitation rate),component_identity,WP-D,PASS; abs_err=0.0; anchor_value=2.44
+S801,S801-A,1989,book,ST 1994 Table 5.7 / Appendix N (verbatim),book_anchor,ST 1994 Table 5.7 / Appendix N (verbatim),book_anchor,WP-D,PASS; abs_err=0.0; anchor_value=2.44
+S901,S901-A/LpL_S511,1948,identity,S511-A,component_identity,S511-A,component_identity,WP-D,PASS; abs_err=0.0; anchor_value=0.57
+S901,S901-A/LpL_S511,1989,identity,S511-A,component_identity,S511-A,component_identity,WP-D,PASS; abs_err=0.0; anchor_value=0.36
+S901,S901-A/NSW_V_S608,1952,identity,S608-A (corrected; was stale -0.08575),component_identity,S608-A (corrected; was stale -0.08575),component_identity,WP-D,PASS; abs_err=0.0; anchor_value=-0.0484817927170868
+S901,S901-A/NSW_V_S608,1989,identity,S608-A (corrected; was stale -0.08373),component_identity,S608-A (corrected; was stale -0.08373),component_identity,WP-D,PASS; abs_err=0.0; anchor_value=-0.03280815
+S901,S901-A/VW_S512,1948,identity,S512-A,component_identity,S512-A,component_identity,WP-D,PASS; abs_err=0.0; anchor_value=0.54
+S901,S901-A/VW_S512,1989,identity,S512-A,component_identity,S512-A,component_identity,WP-D,PASS; abs_err=0.0; anchor_value=0.36
+S901,S901-A/e_S506,1948,identity,S506-A,component_identity,S506-A,component_identity,WP-D,PASS; abs_err=0.0; anchor_value=1.7
+S901,S901-A/e_S506,1989,identity,S506-A,component_identity,S506-A,component_identity,WP-D,PASS; abs_err=0.0; anchor_value=2.44
+S901,S901-A/r_S513,1948,identity,S513-A (r*,component_identity,S513-A (r*,component_identity,WP-D,0.0; abs_err=0.3946132164108988; anchor_value= Book Table 5.11/§5.5; was NaN)
+S901,S901-A/r_S513,1989,identity,S513-A (r*; was NaN),component_identity,S513-A (r*; was NaN),component_identity,WP-D,PASS; abs_err=0.0; anchor_value=0.37228208
+S901,S901-A/r_adj_S514,1948,pipeline,S514-A has no 1948 value (legit NaN),upstream_coverage_gap,S514-A has no 1948 value (legit NaN),upstream_coverage_gap,WP-D,NA; abs_err=; anchor_value=
+S901,S901-A/r_adj_S514,1989,identity,S514-A (r*'; was NaN),component_identity,S514-A (r*'; was NaN),component_identity,WP-D,PASS; abs_err=0.0; anchor_value=0.31176279
+W,W,1948,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1949,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1950,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1951,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1952,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1953,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1954,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1955,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1956,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1957,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1958,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1959,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1960,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1961,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1962,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1963,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1964,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1965,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1966,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1967,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1968,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1969,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1970,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1971,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1972,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1973,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1974,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1975,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1976,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1977,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1978,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1979,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1980,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1981,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1982,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1983,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1984,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1985,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1986,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1987,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1988,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1989,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1990,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1991,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1992,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1993,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1994,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1995,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1996,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1997,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1998,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,1999,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2000,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2001,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2002,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2003,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2004,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2005,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2006,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2007,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2008,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2009,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2010,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2011,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2012,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2013,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2014,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2015,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2016,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2017,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2018,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2019,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2020,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2021,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2022,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2023,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+W,W,2024,BEA,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,W = total compensation of employees,BEA NIPA Table 2.1 (T20100) line 2 / total; billions USD,raw-source,S506_STEP_TABLE,Total Employee Compensation (NIPA T2.1)
+XS001,,1948,book,Table 7.1 (b=1-(Pn/S*)),Ch7 p.~200,ST 1994,1 - (Table7.1 Pn / S505-A),WP-E,S505-A reproduces book S* exactly; residual 0.0036
+XS001,,1958,book,Table 7.1,Ch7 p.~200,ST 1994,1 - (Table7.1 Pn / S505-A),WP-E,residual 0.0031
+XS001,,1970,book,Table 7.1,Ch7 p.~200,ST 1994,1 - (Table7.1 Pn / S505-A),WP-E,residual 0.0020
+XS001,,1980,book,Table 7.1,Ch7 p.~200,ST 1994,1 - (Table7.1 Pn / S505-A),WP-E,residual 0.0029
+XS001,,1989,book,Table 7.1,Ch7 p.~200,ST 1994,1 - (Table7.1 Pn / S505-A),WP-E,residual 0.0030
+XS002,,1958,book,Table I.1 Line 23 (S*/V* from Table H.1),App.I p.~326,ST 1994,S506-A passthrough,WP-E,exact reproduction (abs err 0.0000)
+XS002,,1963,book,Table I.1 Line 23,App.I p.~326,ST 1994,S506-A passthrough,WP-E,exact reproduction
+XS002,,1967,book,Table I.1 Line 23,App.I p.~326,ST 1994,S506-A passthrough,WP-E,exact reproduction
+XS002,,1972,book,Table I.1 Line 23,App.I p.~326,ST 1994,S506-A passthrough,WP-E,exact reproduction
+XS002,,1977,book,Table I.1 Line 23,App.I p.~326,ST 1994,S506-A passthrough,WP-E,exact reproduction
+XS002,S*/V* at benchmark,1958,book,BOOK Appendix H Table H.1 (KB table_035_036_02_part1.csv); our value identical,,BOOK Appendix H Table H.1 (KB table_035_036_02_part1.csv); our value identical,book,WP-C,de-tautologized: anchor moved from own chopped to the book table
+XS002,S*/V* at benchmark,1963,book,book Table H.1,,book Table H.1,book,WP-C,
+XS002,S*/V* at benchmark,1967,book,book Table H.1,,book Table H.1,book,WP-C,
+XS002,S*/V* at benchmark,1972,book,book Table H.1,,book Table H.1,book,WP-C,
+XS002,S*/V* at benchmark,1977,book,book Table H.1,,book Table H.1,book,WP-C,
+XS003,,1948,book,Table I.1 Line 24 (eu),App.I p.~326,ST 1994,(hu/hp L18 / ecu/ecp L21)*(1+S506)-1,WP-E,per-year hu/hp; residual +0.0084 (+0.62%)
+XS003,,1989,book,Table I.1 Line 24 (eu),App.I p.~326,ST 1994,(hu/hp L18 / ecu/ecp L21)*(1+S506)-1,WP-E,residual +0.0256 (+1.08%); book 2-dp rounding
+XS003,eu endpoint,1948,identity,BOOK Table I.1 Line 24 printed (KB table_035_036_04_part1.csv); ours 1.3416 (identity on printed L18/L21 inputs),,BOOK Table I.1 Line 24 printed (KB table_035_036_04_part1.csv); ours 1.3416 (identity on printed L18/L21 inputs),book,WP-C,0.6% wedge = input print rounding
+XS003,eu endpoint,1989,book,BOOK Table I.1 Line 24 printed; ours 2.4056 = (0.99/1.00)x(1+2.44)-1 EXACTLY,,BOOK Table I.1 Line 24 printed; ours 2.4056 = (0.99/1.00)x(1+2.44)-1 EXACTLY,book,WP-C,+1.1% wedge = book's unrounded internal Line 22 (~0.98); DIV-024 closed (DIV-C13)
+XS003,identity reproduction max error,all_42_years,identity,V03_XS003 identity check vs printed Line 18/21 inputs + S506,,V03_XS003 identity check vs printed Line 18/21 inputs + S506,identity_exact,WP-C,<1e-9
+XS004,,1948,book,Table J.1 Line 2 (q* index 1948=100),App.J p.~334,ST 1994,index(1948=100) of real TP*/Lp,WP-E,rebased base; exact
+XS004,,1953,book,Table J.1 Line 2,App.J p.~334,ST 1994,index(1948=100) of real TP*/Lp,WP-E,per-worker vs per-hour; residual -2.60 (-2.10%)
+XS004,,1958,book,Table J.1 Line 2,App.J p.~334,ST 1994,index(1948=100) of real TP*/Lp,WP-E,residual -4.22 (-2.86%)
+XS004,,1961,book,Table J.1 Line 2,App.J p.~334,ST 1994,index(1948=100) of real TP*/Lp,WP-E,residual -1.58 (-1.00%)
+XS1001,,1952,book,Table V (Labor and Non-Labor Portions of Total Taxes),p.98 (Labor col),Tonak 1984,verbatim digitization; corroborated vs independent HDARP chunk_12,WP-E,billions USD; source CSV matches Table V 0/29
+XS1001,,1960,book,Table V,p.98 (Labor col),Tonak 1984,verbatim digitization; corroborated vs HDARP chunk_12,WP-E,added anchor
+XS1001,,1970,book,Table V,p.98 (Labor col),Tonak 1984,verbatim digitization; corroborated vs HDARP chunk_12,WP-E,1970 labor==non-labor crossover year
+XS1001,,1980,book,Table V,p.98 (Labor col),Tonak 1984,verbatim digitization; corroborated vs HDARP chunk_12,WP-E,terminal year
+XS1002,,1952,book,Table X (Net Tax Paid by Labor),p.113 (Net Tax col 3),Tonak 1984,verbatim digitization; corroborated vs independent HDARP chunk_13,WP-E,billions USD; source CSV matches Table X 0/29
+XS1002,,1975,book,Table X,p.113 (Net Tax col 3),Tonak 1984,verbatim digitization; corroborated vs HDARP chunk_13,WP-E,single negative year (sign-flip anchor)
+XS1002,,1980,book,Table X,p.113 (Net Tax col 3),Tonak 1984,verbatim digitization; corroborated vs HDARP chunk_13,WP-E,terminal year
+XS1101,net transfer rate 1975,1975,book,text (verbatim),p.190,"Shaikh & Tonak 1987, Imperiled Economy",external,WP-B,author text-stated (+5.4% 1975); our +0.0207
+XS1101,net transfer rate 1985,1985,book,text (verbatim),p.190,Shaikh & Tonak 1987,external,WP-B,author text-stated (-11.0% 1985); our -0.0181; Tonak flagged 1987 table errors
+XS1102,benefit rate B1/EC 1952,1952,book,Table N.2 'Benefit rate (B1/EC)',p.359 / table_037_038_15.csv,S&T 1994 App.N,book,WP-B,was ST1987 Fig-2 read; our 0.223 (doc divergence)
+XS1102,benefit rate B1/EC 1964,1964,book,Table N.2,p.359 / table_037_038_15.csv,S&T 1994 App.N,book,WP-B,our 0.244; ST2002 appendix corroborates 0.19
+XS1102,benefit rate B1/EC 1989,1989,book,Table N.2,p.359 / table_037_038_17.csv,S&T 1994 App.N,book,WP-B,our 0.330
+XS1103,tax rate T1/EC 1952,1952,book,Table N.2 'Tax rate (T1/EC)',p.359 / table_037_038_15.csv,S&T 1994 App.N,book,WP-B,was ST1987 Fig-2 read; our 0.271 (doc divergence)
+XS1103,tax rate T1/EC 1964,1964,book,Table N.2,p.359 / table_037_038_15.csv,S&T 1994 App.N,book,WP-B,our 0.299; ST2002 appendix T/EC 0.20 corroborates
+XS1103,tax rate T1/EC 1989,1989,book,Table N.2,p.359 / table_037_038_17.csv,S&T 1994 App.N,book,WP-B,our 0.363
+XS1201,NSW/GDP 1964,1964,BEA,reconstruction: NSW$ (App.) / BEA GDP,pp.258-265 (NSW$) / BEA,"Shaikh & Tonak 2002/2000, PECC Ch.29",external_reconstruction,WP-B,NO published NSW/GDP table exists; -3.49/685; prior -0.0167 was wrong (NSW/EC w/ 1954 EC)
+XS1201,NSW/GDP 1975,1975,book,reconstruction NSW$/GDP,pp.258-265 / BEA,S&T 2002 Ch.29,external_reconstruction,WP-B,47.83/1688=+2.8% matches digitized red line (FromTonak image1.png); our +0.0117
+XS1201,NSW/GDP 2010,2010,paper,Table 2 / text,p.8 / WP453,Moos 2017 (=2019 RRPE),external,WP-B,Moos 2010 peak 8.6% of GDP
+XS1202,NSW/EC 1964,1964,book,appendix 'Net Social Wage Ratio' row,pp.258-265,Shaikh & Tonak 2002 Ch.29,external,WP-B,table-grade; prior -0.0167 used 1954 EC 209.37 (mislabel); real EC 370.99; our -0.0547
+XS1202,NSW/EC 1975,1975,book,appendix NSW/EC row,pp.258-265,S&T 2002 Ch.29,external,WP-B,prior +0.09 was Fig-29.3 over-read; our +0.0207
+XS1202,NSW/EC 1997,1997,book,appendix NSW/EC row,pp.258-265,S&T 2002 Ch.29,external,WP-B,our -0.0203; appendix mean 1952-97 = -0.60% ('a mere 0.6 percent')
+XS1301,NSW/GDP summary stats,,paper,Table 2 (max),p.8 / WP453,Moos 2017 == 2019 RRPE 51(4):581-605 DOI 10.1177/0486613419848097,external_summary_stat,WP-B,Moos publishes NO annual table; annual refvals are project reconstruction (tautological)
+XS1302,NSW/EC summary stats,,paper,Table 2 (max 2010),p.8 / WP453,Moos 2017 == 2019 RRPE,external_summary_stat,WP-B,min -0.022 median 0.024 mean 0.037 max 0.161
+XS1304,overlap mean 1959-1997,,paper,Table 1 (Moos mean),p.? / WP453,Moos 2017 == 2019 RRPE,external_summary_stat,WP-B,Moos overlap mean 0.011 vs ST 0.000
+XS1305,structural shift stat,,paper,Table 3 / text,WP453,Moos 2017 == 2019 RRPE,external_summary_stat,WP-B,pre-2000 ~0% vs post-2001 ~5% of GDP
+XS1401,,1948,paper,col e_mohun (=S_star/V_star_hours),n/a,Mohun_mohun_exploitation_rates_1948_1989_CORRECTED.csv (reconstruction),load pass-through,WP-E,tautological refval; concept anchor Mohun 2005 Fig 4 (not year-matched)
+XS1402,,1948,paper,col Lp_mohun_L_ratio,n/a,Mohun_mohun_employment_annual_1948_1989.csv (reconstruction),load pass-through,WP-E,tautological refval; concept anchor Mohun 2005 Fig 2 / Table 2 (not year-matched)
+XS1403,,1948,paper,col V_star_mohun ($thousands),n/a,Mohun_mohun_variable_capital_1948_1989_CORRECTED.csv (reconstruction),load pass-through,WP-E,tautological refval; concept anchor Mohun 2005 Table 3 + eqs 5-7 (NOT Table 2); not year-matched
+XS1404,,1948,identity,Table 5.7 (numerator),S506 book anchor 1948=1.7,ST 1994 (S506 book refval) / XS1401 reconstruction,identity S506-A/XS1401-A; numerator book-anchored,WP-E,re-baselined; was tautological copy of own output
+XS1404,,1989,identity,Table 5.7 (numerator),S506 book anchor 1989=2.44,ST 1994 (S506 book refval) / XS1401 reconstruction,identity S506-A/XS1401-A; numerator book-anchored,WP-E,re-baselined; was tautological copy of own output
+XS1404,,mean_1948_1989,pipeline,n/a,n/a,computed series statistic,arithmetic mean of XS1404-A,WP-E,registry mean=1.61 fabricated -> removed
+XS1501,,1948,identity,Luw_mohun column,n/a (predecessor-build CSV),Mohun_unproductive_decomposition_1948_1989.csv,load_source_column,WP-E,OLD refval 6426.4746 is TAUTOLOGICAL (== source == output). Mohun 2013 has NO level table; only Fig 2 shares. Replace with identity check.
+XS1501,,1964,paper,Fig 2 (shares),"Fig 2, Sec 4.1 (pp.355-379)",Mohun 2013 Figure 2,share_vs_level_mismatch,WP-E,Shipped Luw/L(1964)=0.203 does NOT reproduce Mohun's published 25.1% unprod-WC employment share.
+XS1502,,1948,identity,Lum_mohun column,n/a (predecessor-build CSV),Mohun_unproductive_decomposition_1948_1989.csv,load_source_column,WP-E,OLD refval 7669.3547 is TAUTOLOGICAL. Mohun 2013 has NO level table; only Fig 3 shares. Replace with identity check.
+XS1502,,1964,paper,Fig 3 (shares),"Fig 3, Sec 4.2 (pp.355-379)",Mohun 2013 Figure 3,share_vs_level_mismatch,WP-E,Shipped Lum/L(1964)=0.244 does NOT reproduce Mohun's published 16.8% supervisory employment share (shipped puts far more of Lu into managerial).
+XS1503,,1948,identity,Lu_mohun column,n/a (predecessor-build CSV),Mohun_unproductive_decomposition_1948_1989.csv,load_source_column,WP-E,OLD refval 14095.8293 is TAUTOLOGICAL. Independent check = identity XS1501+XS1502=XS1503 (max|diff|=7.28e-12 over 1948-1989).
+XS1503,,1964,paper,Fig 1 (shares),"Fig 1, Sec 3 (pp.355-379)",Mohun 2013 Figure 1,share_vs_level_mismatch,WP-E,"Shipped Lu/L(1964)=0.447 roughly consistent with Mohun's ~42%, but series is 1948-1989 not Mohun's 1964-2010."
+XS1504,,1964,paper,Fig 1 (shares),"Fig 1, Sec 3 (pp.355-379)",Mohun 2013 Figure 1 -> Lu/Lp,ratio_from_share_anchor,WP-E,Paper anchor Lu/Lp(1964)=0.42/0.58=0.724; shipped data=0.8085 -> +12.3% divergence (different unproductive boundary). NOT a PASS -> DIV-C02.
+XS1504,,2010,paper,Fig 1 (shares),"Fig 1, Sec 3 (pp.355-379)",Mohun 2013 Figure 1 -> Lu/Lp,ratio_from_share_anchor,WP-E,Actual 2010 share 47.5% -> 0.905. OLD refval 0.96 was mis-derived from 2003 PEAK share (49% -> 0.961). Data ends 1989 so 2010 is UNREACHABLE -> remove refval.
+XS1601,,1980,paper,none (no annual ls table published),Figures 7-11 underlie,K&T 2022 (RRPE 54(4):479-500),tautological_proxy_output,WP-E,reference_value = P02 WB-VA proxy output (industry_va+0.5*services_va)/100; NOT an independent anchor. K&T print no annual labour-share table.
+XS1601,,2019,paper,none (no annual ls table published),Figures 7-11 underlie,K&T 2022 (RRPE 54(4):479-500),tautological_proxy_output,WP-E,reference_value = P02 WB-VA proxy output; rises vs K&T's declining ls.
+XS1601,,aggregate,paper,table_descriptions.md Statistical Summary,RRPE 54(4):479-500,K&T 2022 Statistical Summary,max 45.3%),WP-E,independent_aggregate_anchor
+XS1602,,1980,paper,none (Figure 9 only; not tabulated),Figure 9,K&T 2022 (RRPE 54(4):479-500),tautological_proxy_output,WP-E,reference_value = P02 WB (govt_consumption-tax_revenue)/100 proxy output; NOT independent. Figure 9 reads ~-1% for 1980.
+XS1602,,2019,paper,none (Figure 9 only; not tabulated),Figure 9,K&T 2022 (RRPE 54(4):479-500),tautological_proxy_output,WP-E,reference_value = proxy output; far milder than K&T worst-period ~-0.02/-0.025 (2014-2019).
+XS1602,,aggregate,paper,full_transcription.md L37,RRPE 54(4):479-500,K&T 2022 Abstract/Section 5.1,independent_aggregate_anchor,WP-E,"Verbatim independent anchor. Proxy mean -0.0299 over 30/40 yrs (10 NaN: 1982,1999-2007). BLOCKED-G2 for year-level rebuild."
+XS1701,,1972,paper,Table 2 (Rate of surplus-value and value composition of capital),p.15 S/TV col,Cronin 2001,verbatim digitization (percent); corroborated vs HDARP tables.csv,WP-E,units fixed decimal->percent
+XS1701,,1984,paper,Table 2,p.15 S/TV col,Cronin 2001,verbatim digitization (percent),WP-E,added anchor
+XS1701,,1989,paper,Table 2,p.15 S/TV col,Cronin 2001,verbatim digitization (percent),WP-E,
+XS1701,,1995,paper,Table 2,p.15 S/TV col,Cronin 2001,verbatim digitization (percent),WP-E,terminal year
+XS1702,,1972,paper,Table 2,p.15 s/v col,Cronin 2001,verbatim digitization (percent); corroborated vs HDARP tables.csv,WP-E,units fixed decimal->percent
+XS1702,,1984,paper,Table 2,p.15 s/v col,Cronin 2001,verbatim digitization (percent),WP-E,Rogernomics structural break
+XS1702,,1989,paper,Table 2,p.15 s/v col,Cronin 2001,verbatim digitization (percent),WP-E,added anchor
+XS1702,,1995,paper,Table 2,p.15 s/v col,Cronin 2001,verbatim digitization (percent),WP-E,terminal year
+XS1703,,1972,paper,Table 2,p.15 c/v col,Cronin 2001,verbatim digitization (percent); corroborated vs HDARP tables.csv,WP-E,units fixed decimal->percent
+XS1703,,1984,paper,Table 2,p.15 c/v col,Cronin 2001,verbatim digitization (percent),WP-E,
+XS1703,,1989,paper,Table 2,p.15 c/v col,Cronin 2001,verbatim digitization (percent),WP-E,post write-off trough (added anchor)
+XS1703,,1995,paper,Table 2,p.15 c/v col,Cronin 2001,verbatim digitization (percent),WP-E,terminal year
+XS1704,,1972,paper,Table 1 (NZSNA in classical categories $m),p.11 Total value col,Cronin 2001,verbatim digitization; corroborated vs HDARP tables.csv,WP-E,millions NZD; source CSV matches Table 1 0/24
+XS1704,,1984,paper,Table 1,p.11 Total value col,Cronin 2001,verbatim digitization,WP-E,added anchor
+XS1704,,1989,paper,Table 1,p.11 Total value col,Cronin 2001,verbatim digitization,WP-E,added anchor
+XS1704,,1995,paper,Table 1,p.11 Total value col,Cronin 2001,verbatim digitization,WP-E,terminal year
+matrix_cache,1958 L identity max err,1958,pipeline,REBUILD_VALIDATION.json,,REBUILD_VALIDATION.json,matrix_internal,WP-C,all 11 vintages < 2e-15
+matrix_cache,1977 mean multiplier,1977,pipeline,REBUILD_VALIDATION.json,,REBUILD_VALIDATION.json,matrix_internal,WP-C,defective cache: ~70.8 (P2)
+matrix_cache,X-recovery method error (median per-sector),1967,pipeline,cross-validation vs exact 1967 X (log-corr 0.909),,cross-validation vs exact 1967 X (log-corr 0.909),measured_bound,WP-C,DIV-C14

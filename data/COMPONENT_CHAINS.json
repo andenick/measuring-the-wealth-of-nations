@@ -1,0 +1,2504 @@
+{
+  "artifact": "COMPONENT_CHAINS",
+  "project": "measuring-wealth-of-nations-replication",
+  "generated": "2026-07-02T04:09:57.069227+00:00",
+  "description": "Full upstream component chain for every series, derived from the registry construction/depends_on fields. Per-edge formulas included. direct_upstream = series referenced in this series' own construction; full_upstream_chain = transitive closure. external_leaf_sources names raw agency/table tokens (NIPA/BEA/BLS/I-O) at chain leaves.",
+  "series_count": 64,
+  "series": {
+    "S201": {
+      "display_name": "Marxian gross final product as a share of GDP",
+      "units": "ratio",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": false,
+      "chapter": 2,
+      "publish": true,
+      "direct_upstream": [
+        "S503"
+      ],
+      "registry_upstream": [],
+      "code_upstream": [
+        "S503"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S512"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S201-A"
+        }
+      ],
+      "note": ""
+    },
+    "S401": {
+      "display_name": "Input-output A-matrix (technical-coefficient summary)",
+      "units": "matrix",
+      "content_type": "derived",
+      "is_ratio": false,
+      "is_derived": true,
+      "chapter": 4,
+      "publish": false,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S401-A"
+        }
+      ],
+      "note": ""
+    },
+    "S402": {
+      "display_name": "Input-output B-matrix / Leontief inverse (summary)",
+      "units": "matrix",
+      "content_type": "derived",
+      "is_ratio": false,
+      "is_derived": true,
+      "chapter": 4,
+      "publish": false,
+      "direct_upstream": [
+        "S401"
+      ],
+      "registry_upstream": [
+        "S401"
+      ],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S401"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [
+            "S401"
+          ],
+          "external_refs": [],
+          "output": "S401-A"
+        },
+        {
+          "step": 2,
+          "op": "derive",
+          "formula": "B = (I - A)^{-1}",
+          "inputs": [
+            "S401"
+          ],
+          "external_refs": [],
+          "output": "S402-A"
+        }
+      ],
+      "note": ""
+    },
+    "S501": {
+      "display_name": "Total product (TP*)",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": true,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S501-A"
+        },
+        {
+          "step": 2,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S501-B"
+        },
+        {
+          "step": 3,
+          "op": "splice",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S501-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "S502": {
+      "display_name": "Constant capital flow (C*m)",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [
+        "S501"
+      ],
+      "registry_upstream": [],
+      "code_upstream": [
+        "S501"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S501"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S502-A"
+        }
+      ],
+      "note": ""
+    },
+    "S503": {
+      "display_name": "Gross final product (GFP* = TP* - C*m)",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": true,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [
+        "S501",
+        "S502",
+        "S506"
+      ],
+      "registry_upstream": [
+        "S501",
+        "S502"
+      ],
+      "code_upstream": [
+        "S501",
+        "S502",
+        "S506"
+      ],
+      "chain_discrepancy": [
+        "S506"
+      ],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S512"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S503-A"
+        },
+        {
+          "step": 2,
+          "op": "derive",
+          "formula": "GFP = TP* - C*_m",
+          "inputs": [
+            "S501",
+            "S502"
+          ],
+          "external_refs": [],
+          "output": "S503-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "S504": {
+      "display_name": "Variable capital (V*)",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": true,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [
+        "S501",
+        "S502",
+        "S503",
+        "S512"
+      ],
+      "registry_upstream": [
+        "S512"
+      ],
+      "code_upstream": [
+        "S501",
+        "S502",
+        "S503",
+        "S512"
+      ],
+      "chain_discrepancy": [
+        "S501",
+        "S502",
+        "S503"
+      ],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S512"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S504-A"
+        },
+        {
+          "step": 2,
+          "op": "derive",
+          "formula": "V* = W x (V*/W)",
+          "inputs": [
+            "S512"
+          ],
+          "external_refs": [],
+          "output": "S504-EXT"
+        },
+        {
+          "step": 3,
+          "op": "splice",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S504-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "S505": {
+      "display_name": "Surplus value (S* = VA* - V*)",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": true,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [
+        "S503",
+        "S504"
+      ],
+      "registry_upstream": [
+        "S503",
+        "S504"
+      ],
+      "code_upstream": [
+        "S503",
+        "S504"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S512"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S505-A"
+        },
+        {
+          "step": 2,
+          "op": "derive",
+          "formula": "S* = GFP - V*",
+          "inputs": [
+            "S503",
+            "S504"
+          ],
+          "external_refs": [],
+          "output": "S505-EXT"
+        },
+        {
+          "step": 3,
+          "op": "splice",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S505-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "S506": {
+      "display_name": "Rate of exploitation (e = S*/V*)",
+      "units": "ratio",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [
+        "S504",
+        "S505",
+        "S512"
+      ],
+      "registry_upstream": [
+        "S504",
+        "S505"
+      ],
+      "code_upstream": [
+        "S504",
+        "S505",
+        "S512"
+      ],
+      "chain_discrepancy": [
+        "S512"
+      ],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S512"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S506-A"
+        },
+        {
+          "step": 2,
+          "op": "derive",
+          "formula": "e = S505-EXT / S504-EXT (year-by-year identity; = GFP/V* - 1); two-arm rebuild per P02_S506 (DIV-028)",
+          "inputs": [
+            "S504",
+            "S505"
+          ],
+          "external_refs": [],
+          "output": "S506-EXT"
+        },
+        {
+          "step": 3,
+          "op": "splice",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S506-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "S507": {
+      "display_name": "Surplus share of net product (S*/(S*+V*))",
+      "units": "ratio",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": false,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [
+        "S504",
+        "S505"
+      ],
+      "registry_upstream": [],
+      "code_upstream": [
+        "S504",
+        "S505"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S512"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S507-A"
+        }
+      ],
+      "note": ""
+    },
+    "S508": {
+      "display_name": "Productive consumption (CON*)",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S508-A"
+        }
+      ],
+      "note": ""
+    },
+    "S509": {
+      "display_name": "Productive investment (IG*)",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S509-A"
+        }
+      ],
+      "note": ""
+    },
+    "S510": {
+      "display_name": "Value composition of capital (K/V*)",
+      "units": "ratio",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": false,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [
+        "S502",
+        "S504",
+        "S517"
+      ],
+      "registry_upstream": [],
+      "code_upstream": [
+        "S502",
+        "S504",
+        "S517"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S512",
+        "S517"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S510-A"
+        }
+      ],
+      "note": ""
+    },
+    "S511": {
+      "display_name": "Productive labor share (Lp/L)",
+      "units": "share",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S511-A"
+        },
+        {
+          "step": 2,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S511-EXT"
+        },
+        {
+          "step": 3,
+          "op": "splice",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S511-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "S512": {
+      "display_name": "Productive wage share (V*/W)",
+      "units": "per_subseries",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": true,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [
+        "S501",
+        "S502",
+        "S503",
+        "S506"
+      ],
+      "registry_upstream": [],
+      "code_upstream": [
+        "S501",
+        "S502",
+        "S503",
+        "S506"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S512"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S512-A"
+        },
+        {
+          "step": 2,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S512-EXT"
+        },
+        {
+          "step": 3,
+          "op": "splice",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S512-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "S513": {
+      "display_name": "Marxian profit rate (r* = S*/(K*+V*))",
+      "units": "rate",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [
+        "S502",
+        "S504",
+        "S505",
+        "S517"
+      ],
+      "registry_upstream": [
+        "S502",
+        "S504",
+        "S505",
+        "S517"
+      ],
+      "code_upstream": [
+        "S502",
+        "S504",
+        "S505",
+        "S517"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S512",
+        "S517"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "Book period stock-form, loaded from upstream S505-A/S517-A/S504-A",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S513-A"
+        },
+        {
+          "step": 2,
+          "op": "derive",
+          "formula": "r* = S* / (K* + V*)",
+          "inputs": [
+            "S504",
+            "S505",
+            "S517"
+          ],
+          "external_refs": [],
+          "output": "S513-EXT"
+        },
+        {
+          "step": 3,
+          "op": "concat",
+          "formula": "Level concatenation (not growth splice); identical formula on both arms",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S513-COMBINED"
+        },
+        {
+          "step": 4,
+          "op": "derive",
+          "formula": "r*_flow = S* / (C* + V*)",
+          "inputs": [
+            "S502",
+            "S504",
+            "S505"
+          ],
+          "external_refs": [],
+          "output": "S513-FLOW"
+        }
+      ],
+      "note": ""
+    },
+    "S514": {
+      "display_name": "Capacity-adjusted profit rate (r*_adj)",
+      "units": "rate",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [
+        "S513"
+      ],
+      "registry_upstream": [
+        "S513"
+      ],
+      "code_upstream": [
+        "S513"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S512",
+        "S513",
+        "S517"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "derive",
+          "formula": "r*_adj = S513-A (stock) x TCU/100",
+          "inputs": [
+            "S513"
+          ],
+          "external_refs": [],
+          "output": "S514-A"
+        },
+        {
+          "step": 2,
+          "op": "derive",
+          "formula": "r*_adj = S513-EXT (stock) x TCU/100",
+          "inputs": [
+            "S513"
+          ],
+          "external_refs": [],
+          "output": "S514-EXT"
+        },
+        {
+          "step": 3,
+          "op": "concat",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S514-COMBINED"
+        },
+        {
+          "step": 4,
+          "op": "derive_secondary",
+          "formula": "r*_adj = S513-FLOW (flow) x TCU/100",
+          "inputs": [
+            "S513"
+          ],
+          "external_refs": [],
+          "output": "S514-FLOW"
+        }
+      ],
+      "note": ""
+    },
+    "S515": {
+      "display_name": "Productive employment (Lp)",
+      "units": "thousands",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": true,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S515-A"
+        },
+        {
+          "step": 2,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S515-EXT"
+        },
+        {
+          "step": 3,
+          "op": "splice",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S515-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "S516": {
+      "display_name": "Unproductive employment (Lu = L - Lp)",
+      "units": "thousands",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": true,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [
+        "S515"
+      ],
+      "registry_upstream": [
+        "S515"
+      ],
+      "code_upstream": [
+        "S515"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S515"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S516-A"
+        },
+        {
+          "step": 2,
+          "op": "derive",
+          "formula": "Lu = L - Lp",
+          "inputs": [
+            "S515"
+          ],
+          "external_refs": [],
+          "output": "S516-EXT"
+        },
+        {
+          "step": 3,
+          "op": "splice",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S516-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "S517": {
+      "display_name": "Productive capital stock (K*)",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 5,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S517-A"
+        }
+      ],
+      "note": ""
+    },
+    "S601": {
+      "display_name": "Personal income taxes paid by workers",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 6,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S601-A"
+        }
+      ],
+      "note": ""
+    },
+    "S602": {
+      "display_name": "Social insurance taxes paid by workers",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 6,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S602-A"
+        }
+      ],
+      "note": ""
+    },
+    "S603": {
+      "display_name": "Property taxes paid by workers",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 6,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S603-A"
+        }
+      ],
+      "note": ""
+    },
+    "S604": {
+      "display_name": "Total taxes paid by workers",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": true,
+      "chapter": 6,
+      "publish": true,
+      "direct_upstream": [
+        "S601",
+        "S602",
+        "S603"
+      ],
+      "registry_upstream": [
+        "S601",
+        "S602",
+        "S603"
+      ],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S601",
+        "S602",
+        "S603"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [
+            "S601",
+            "S602",
+            "S603"
+          ],
+          "external_refs": [],
+          "output": "S601-A"
+        },
+        {
+          "step": 2,
+          "op": "derive",
+          "formula": "T_w = S601 + S602 + S603 + indirect",
+          "inputs": [
+            "S601",
+            "S602",
+            "S603"
+          ],
+          "external_refs": [],
+          "output": "S604-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "S605": {
+      "display_name": "Government cash benefits received by workers",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 6,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S605-A"
+        }
+      ],
+      "note": ""
+    },
+    "S606": {
+      "display_name": "Government services received by workers",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 6,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S606-A"
+        }
+      ],
+      "note": ""
+    },
+    "S607": {
+      "display_name": "Net social wage",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": true,
+      "chapter": 6,
+      "publish": true,
+      "direct_upstream": [
+        "S604",
+        "S605",
+        "S606"
+      ],
+      "registry_upstream": [
+        "S604",
+        "S605",
+        "S606"
+      ],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S601",
+        "S602",
+        "S603",
+        "S604",
+        "S605",
+        "S606"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S607-A"
+        },
+        {
+          "step": 2,
+          "op": "derive",
+          "formula": "NSW = B_w + G_w - T_w",
+          "inputs": [
+            "S604",
+            "S605",
+            "S606"
+          ],
+          "external_refs": [],
+          "output": "S607-EXT"
+        },
+        {
+          "step": 3,
+          "op": "splice",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S607-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "S608": {
+      "display_name": "Net transfer normalized to variable capital (book Table N.2, NtrV*/V* = net transfer rate)",
+      "units": "ratio",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 6,
+      "publish": true,
+      "direct_upstream": [
+        "S504",
+        "S607",
+        "S617"
+      ],
+      "registry_upstream": [
+        "S504",
+        "S607"
+      ],
+      "code_upstream": [
+        "S504",
+        "S607",
+        "S617"
+      ],
+      "chain_discrepancy": [
+        "S617"
+      ],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S512",
+        "S601",
+        "S602",
+        "S603",
+        "S604",
+        "S605",
+        "S606",
+        "S607",
+        "S617"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "derive",
+          "formula": "NSW/V* = S607/S504",
+          "inputs": [
+            "S504",
+            "S607"
+          ],
+          "external_refs": [],
+          "output": "S608-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "S609": {
+      "display_name": "Net social wage as a share of national income",
+      "units": "share",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 6,
+      "publish": true,
+      "direct_upstream": [
+        "S607"
+      ],
+      "registry_upstream": [
+        "S607"
+      ],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S601",
+        "S602",
+        "S603",
+        "S604",
+        "S605",
+        "S606",
+        "S607"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "derive",
+          "formula": "NSW/NI",
+          "inputs": [
+            "S607"
+          ],
+          "external_refs": [],
+          "output": "S609-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "S617": {
+      "display_name": "Employee compensation",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 6,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [],
+      "note": "registry construction empty; formula/source in triage + PROVENANCE_DICTIONARY"
+    },
+    "S701": {
+      "display_name": "Labor values",
+      "units": "hr_per_dollar",
+      "content_type": "derived",
+      "is_ratio": false,
+      "is_derived": true,
+      "chapter": 7,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S701-A"
+        }
+      ],
+      "note": ""
+    },
+    "S702": {
+      "display_name": "Prices of production",
+      "units": "labor_value_units",
+      "content_type": "derived",
+      "is_ratio": false,
+      "is_derived": true,
+      "chapter": 7,
+      "publish": true,
+      "direct_upstream": [
+        "S701",
+        "S703"
+      ],
+      "registry_upstream": [],
+      "code_upstream": [
+        "S701",
+        "S703"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S701",
+        "S702",
+        "S703"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S702-A"
+        }
+      ],
+      "note": ""
+    },
+    "S703": {
+      "display_name": "Labor-coefficient partition gap (unproductive vs productive)",
+      "units": "percent",
+      "content_type": "derived",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 7,
+      "publish": true,
+      "direct_upstream": [
+        "S701",
+        "S702"
+      ],
+      "registry_upstream": [],
+      "code_upstream": [
+        "S701",
+        "S702"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S701",
+        "S702",
+        "S703"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S703-A"
+        }
+      ],
+      "note": ""
+    },
+    "S801": {
+      "display_name": "Cross-study comparison of the exploitation rate",
+      "units": "ratio",
+      "content_type": "cross_sectional",
+      "is_ratio": true,
+      "is_derived": false,
+      "chapter": 8,
+      "publish": true,
+      "direct_upstream": [
+        "S506",
+        "S511",
+        "XS1401",
+        "XS1402"
+      ],
+      "registry_upstream": [],
+      "code_upstream": [
+        "S506",
+        "S511",
+        "XS1401",
+        "XS1402"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S511",
+        "S512",
+        "XS1401",
+        "XS1402"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "S801-A"
+        }
+      ],
+      "note": ""
+    },
+    "S901": {
+      "display_name": "Summary of key Marxian indicators",
+      "units": "per_subseries",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 9,
+      "publish": true,
+      "direct_upstream": [
+        "S506",
+        "S511",
+        "S512",
+        "S513",
+        "S514",
+        "S608"
+      ],
+      "registry_upstream": [
+        "S506",
+        "S511",
+        "S512",
+        "S513",
+        "S514",
+        "S608"
+      ],
+      "code_upstream": [
+        "S506",
+        "S511",
+        "S512",
+        "S513",
+        "S514",
+        "S608"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S511",
+        "S512",
+        "S513",
+        "S514",
+        "S517",
+        "S601",
+        "S602",
+        "S603",
+        "S604",
+        "S605",
+        "S606",
+        "S607",
+        "S608",
+        "S617"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "assemble",
+          "formula": "",
+          "inputs": [
+            "S506",
+            "S511",
+            "S512",
+            "S513",
+            "S514",
+            "S608"
+          ],
+          "external_refs": [],
+          "output": "S901-A"
+        }
+      ],
+      "note": ""
+    },
+    "XS001": {
+      "display_name": "Social burden rate",
+      "units": "ratio",
+      "content_type": "derived",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 0,
+      "publish": true,
+      "direct_upstream": [
+        "S505"
+      ],
+      "registry_upstream": [],
+      "code_upstream": [
+        "S505"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S512"
+      ],
+      "external_leaf_sources": [],
+      "steps": [],
+      "note": "registry construction empty; formula/source in triage + PROVENANCE_DICTIONARY"
+    },
+    "XS002": {
+      "display_name": "Rate of surplus value S*/V* at I-O benchmark years (Khanjian deviation-analysis basis)",
+      "units": "ratio",
+      "content_type": "derived",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 0,
+      "publish": true,
+      "direct_upstream": [
+        "S506"
+      ],
+      "registry_upstream": [],
+      "code_upstream": [
+        "S506"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S512"
+      ],
+      "external_leaf_sources": [],
+      "steps": [],
+      "note": "registry construction empty; formula/source in triage + PROVENANCE_DICTIONARY"
+    },
+    "XS003": {
+      "display_name": "Unproductive exploitation rate",
+      "units": "ratio",
+      "content_type": "derived",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 0,
+      "publish": true,
+      "direct_upstream": [
+        "S506"
+      ],
+      "registry_upstream": [],
+      "code_upstream": [
+        "S506"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S512"
+      ],
+      "external_leaf_sources": [],
+      "steps": [],
+      "note": "registry construction empty; formula/source in triage + PROVENANCE_DICTIONARY"
+    },
+    "XS004": {
+      "display_name": "Marxian productivity index",
+      "units": "index",
+      "content_type": "derived",
+      "is_ratio": false,
+      "is_derived": true,
+      "chapter": 0,
+      "publish": true,
+      "direct_upstream": [
+        "S501",
+        "S515"
+      ],
+      "registry_upstream": [],
+      "code_upstream": [
+        "S501",
+        "S515"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S501",
+        "S515"
+      ],
+      "external_leaf_sources": [],
+      "steps": [],
+      "note": "registry construction empty; formula/source in triage + PROVENANCE_DICTIONARY"
+    },
+    "XS1001": {
+      "display_name": "Labor portion of total taxes, United States (Tonak 1984)",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 10,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "XS1001-A"
+        }
+      ],
+      "note": ""
+    },
+    "XS1002": {
+      "display_name": "Net tax paid by labor, United States (Tonak 1984)",
+      "units": "billions_usd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 10,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "XS1002-A"
+        }
+      ],
+      "note": ""
+    },
+    "XS1101": {
+      "display_name": "Net transfer rate, United States (Shaikh & Tonak 1987)",
+      "units": "rate",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 11,
+      "publish": true,
+      "direct_upstream": [
+        "S604",
+        "S605",
+        "S606",
+        "S617"
+      ],
+      "registry_upstream": [
+        "S604",
+        "S605"
+      ],
+      "code_upstream": [
+        "S604",
+        "S605",
+        "S606",
+        "S617"
+      ],
+      "chain_discrepancy": [
+        "S606",
+        "S617"
+      ],
+      "full_upstream_chain": [
+        "S601",
+        "S602",
+        "S603",
+        "S604",
+        "S605",
+        "S606",
+        "S617"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "derive",
+          "formula": "(B_w - T_w) / EC",
+          "inputs": [
+            "S604",
+            "S605"
+          ],
+          "external_refs": [],
+          "output": "XS1101-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "XS1102": {
+      "display_name": "Social benefit rate, United States (Shaikh & Tonak 1987)",
+      "units": "rate",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 11,
+      "publish": true,
+      "direct_upstream": [
+        "S604",
+        "S605",
+        "S606",
+        "S617"
+      ],
+      "registry_upstream": [
+        "S605"
+      ],
+      "code_upstream": [
+        "S604",
+        "S605",
+        "S606",
+        "S617"
+      ],
+      "chain_discrepancy": [
+        "S604",
+        "S606",
+        "S617"
+      ],
+      "full_upstream_chain": [
+        "S601",
+        "S602",
+        "S603",
+        "S604",
+        "S605",
+        "S606",
+        "S617"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "derive",
+          "formula": "B_w / EC",
+          "inputs": [
+            "S605"
+          ],
+          "external_refs": [],
+          "output": "XS1102-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "XS1103": {
+      "display_name": "Social tax rate, United States (Shaikh & Tonak 1987)",
+      "units": "rate",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 11,
+      "publish": true,
+      "direct_upstream": [
+        "S604",
+        "S605",
+        "S606",
+        "S617"
+      ],
+      "registry_upstream": [
+        "S604"
+      ],
+      "code_upstream": [
+        "S604",
+        "S605",
+        "S606",
+        "S617"
+      ],
+      "chain_discrepancy": [
+        "S605",
+        "S606",
+        "S617"
+      ],
+      "full_upstream_chain": [
+        "S601",
+        "S602",
+        "S603",
+        "S604",
+        "S605",
+        "S606",
+        "S617"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "derive",
+          "formula": "T_w / EC",
+          "inputs": [
+            "S604"
+          ],
+          "external_refs": [],
+          "output": "XS1103-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "XS1201": {
+      "display_name": "Net social wage as a share of GDP, United States (Shaikh & Tonak 2002)",
+      "units": "ratio",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 12,
+      "publish": true,
+      "direct_upstream": [
+        "S607"
+      ],
+      "registry_upstream": [
+        "S607"
+      ],
+      "code_upstream": [
+        "S607"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S601",
+        "S602",
+        "S603",
+        "S604",
+        "S605",
+        "S606",
+        "S607"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "derive",
+          "formula": "NSW / GDP",
+          "inputs": [
+            "S607"
+          ],
+          "external_refs": [],
+          "output": "XS1201-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "XS1202": {
+      "display_name": "Net social wage as a share of employee compensation, United States (Shaikh & Tonak 2002)",
+      "units": "ratio",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 12,
+      "publish": true,
+      "direct_upstream": [
+        "S607"
+      ],
+      "registry_upstream": [
+        "S607"
+      ],
+      "code_upstream": [
+        "S607"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S601",
+        "S602",
+        "S603",
+        "S604",
+        "S605",
+        "S606",
+        "S607"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "derive",
+          "formula": "NSW / EC",
+          "inputs": [
+            "S607"
+          ],
+          "external_refs": [],
+          "output": "XS1202-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "XS1301": {
+      "display_name": "Net social wage as a share of GDP, extended, United States (Moos 2017)",
+      "units": "ratio",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 13,
+      "publish": true,
+      "direct_upstream": [
+        "S607"
+      ],
+      "registry_upstream": [
+        "S607"
+      ],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S601",
+        "S602",
+        "S603",
+        "S604",
+        "S605",
+        "S606",
+        "S607"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "derive",
+          "formula": "NSW / GDP",
+          "inputs": [
+            "S607"
+          ],
+          "external_refs": [],
+          "output": "XS1301-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "XS1302": {
+      "display_name": "Net social wage as a share of employee compensation, extended, United States (Moos 2017)",
+      "units": "ratio",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 13,
+      "publish": true,
+      "direct_upstream": [
+        "S607"
+      ],
+      "registry_upstream": [
+        "S607"
+      ],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S601",
+        "S602",
+        "S603",
+        "S604",
+        "S605",
+        "S606",
+        "S607"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "derive",
+          "formula": "NSW / EC",
+          "inputs": [
+            "S607"
+          ],
+          "external_refs": [],
+          "output": "XS1302-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "XS1304": {
+      "display_name": "Net social wage / GDP, Moos-vs-Shaikh-Tonak overlap 1959-1997, United States (Moos 2017)",
+      "units": "ratio",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": false,
+      "chapter": 13,
+      "publish": true,
+      "direct_upstream": [
+        "XS1201",
+        "XS1301"
+      ],
+      "registry_upstream": [
+        "XS1301"
+      ],
+      "code_upstream": [
+        "XS1201",
+        "XS1301"
+      ],
+      "chain_discrepancy": [
+        "XS1201"
+      ],
+      "full_upstream_chain": [
+        "S601",
+        "S602",
+        "S603",
+        "S604",
+        "S605",
+        "S606",
+        "S607",
+        "XS1201",
+        "XS1301"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "filter",
+          "formula": "",
+          "inputs": [
+            "XS1301"
+          ],
+          "external_refs": [],
+          "output": "XS1304-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "XS1305": {
+      "display_name": "Net social wage / GDP with post-2000 regime shift, United States (Moos 2017)",
+      "units": "ratio",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 13,
+      "publish": true,
+      "direct_upstream": [
+        "XS1301"
+      ],
+      "registry_upstream": [
+        "XS1301"
+      ],
+      "code_upstream": [
+        "XS1301"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S601",
+        "S602",
+        "S603",
+        "S604",
+        "S605",
+        "S606",
+        "S607",
+        "XS1301"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "derive",
+          "formula": "",
+          "inputs": [
+            "XS1301"
+          ],
+          "external_refs": [],
+          "output": "XS1305-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "XS1401": {
+      "display_name": "Rate of exploitation, Mohun classification, United States (Mohun 2005)",
+      "units": "ratio",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": false,
+      "chapter": 14,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "XS1401-A"
+        }
+      ],
+      "note": ""
+    },
+    "XS1402": {
+      "display_name": "Productive labour share of employment, Mohun classification, United States (Mohun 2005)",
+      "units": "share",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": false,
+      "chapter": 14,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "XS1402-A"
+        }
+      ],
+      "note": ""
+    },
+    "XS1403": {
+      "display_name": "Variable capital (productive wage bill), Mohun classification, United States (Mohun 2005)",
+      "units": "usd_level",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 14,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "XS1403-A"
+        }
+      ],
+      "note": ""
+    },
+    "XS1404": {
+      "display_name": "Ratio of Shaikh-Tonak to Mohun exploitation rate, United States (Mohun 2005)",
+      "units": "ratio",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 14,
+      "publish": true,
+      "direct_upstream": [
+        "S506",
+        "XS1401"
+      ],
+      "registry_upstream": [
+        "S506",
+        "XS1401"
+      ],
+      "code_upstream": [
+        "S506",
+        "XS1401"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "S501",
+        "S502",
+        "S503",
+        "S504",
+        "S505",
+        "S506",
+        "S512",
+        "XS1401"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "derive",
+          "formula": "S506 / XS1401",
+          "inputs": [
+            "S506",
+            "XS1401"
+          ],
+          "external_refs": [],
+          "output": "XS1404-A"
+        }
+      ],
+      "note": ""
+    },
+    "XS1501": {
+      "display_name": "Working-class unproductive labour, United States (Mohun 2013)",
+      "units": "thousands_workers",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 15,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "load the working-class component of the predecessor-build unproductive-employment decomposition; the prior 'Lu x 0.813' formula was FABRICATED and never executed (P02/L01 load Luw_mohun directly).",
+          "inputs": [],
+          "external_refs": [],
+          "output": "XS1501-A"
+        }
+      ],
+      "note": ""
+    },
+    "XS1502": {
+      "display_name": "Managerial (supervisory) unproductive labour, United States (Mohun 2013)",
+      "units": "thousands_workers",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 15,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "load the managerial component of the predecessor-build unproductive-employment decomposition; the prior 'Lu x 0.187' formula was FABRICATED and never executed. Verified: Lu(1964) x 0.187 = 5245 vs shipped Lum = 15322 (no match).",
+          "inputs": [],
+          "external_refs": [],
+          "output": "XS1502-A"
+        }
+      ],
+      "note": ""
+    },
+    "XS1503": {
+      "display_name": "Total unproductive labour, United States (Mohun 2013)",
+      "units": "thousands_workers",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 15,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "XS1503-A"
+        }
+      ],
+      "note": ""
+    },
+    "XS1504": {
+      "display_name": "Unproductive burden ratio (Lu/Lp), United States (Mohun 2013)",
+      "units": "ratio",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": true,
+      "chapter": 15,
+      "publish": true,
+      "direct_upstream": [
+        "XS1503"
+      ],
+      "registry_upstream": [],
+      "code_upstream": [
+        "XS1503"
+      ],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [
+        "XS1503"
+      ],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "derive",
+          "formula": "Lu / Lp",
+          "inputs": [],
+          "external_refs": [],
+          "output": "XS1504-COMBINED"
+        }
+      ],
+      "note": ""
+    },
+    "XS1601": {
+      "display_name": "Labour share of GDP, Turkey (Karabacak & Tonak 2022)",
+      "units": "share",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": false,
+      "chapter": 16,
+      "publish": false,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "XS1601-A"
+        }
+      ],
+      "note": ""
+    },
+    "XS1602": {
+      "display_name": "Net social wage relative to GDP, Turkey (Karabacak & Tonak 2022)",
+      "units": "share",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": false,
+      "chapter": 16,
+      "publish": false,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "XS1602-A"
+        }
+      ],
+      "note": ""
+    },
+    "XS1701": {
+      "display_name": "Surplus share of total value (s/TV), New Zealand (Cronin 2001)",
+      "units": "percent",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": false,
+      "chapter": 17,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "XS1701-A"
+        }
+      ],
+      "note": ""
+    },
+    "XS1702": {
+      "display_name": "Rate of surplus value (s/v), New Zealand (Cronin 2001)",
+      "units": "percent",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": false,
+      "chapter": 17,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "XS1702-A"
+        }
+      ],
+      "note": ""
+    },
+    "XS1703": {
+      "display_name": "Value composition of capital (c/v), New Zealand (Cronin 2001)",
+      "units": "percent",
+      "content_type": "time_series",
+      "is_ratio": true,
+      "is_derived": false,
+      "chapter": 17,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "XS1703-A"
+        }
+      ],
+      "note": ""
+    },
+    "XS1704": {
+      "display_name": "Total value (c+v+s), New Zealand (Cronin 2001)",
+      "units": "millions_nzd",
+      "content_type": "time_series",
+      "is_ratio": false,
+      "is_derived": false,
+      "chapter": 17,
+      "publish": true,
+      "direct_upstream": [],
+      "registry_upstream": [],
+      "code_upstream": [],
+      "chain_discrepancy": [],
+      "full_upstream_chain": [],
+      "external_leaf_sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "op": "load",
+          "formula": "",
+          "inputs": [],
+          "external_refs": [],
+          "output": "XS1704-A"
+        }
+      ],
+      "note": ""
+    }
+  }
+}

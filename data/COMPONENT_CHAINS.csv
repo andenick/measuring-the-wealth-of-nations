@@ -1,0 +1,90 @@
+series,step,op,output,upstream,formula
+S201,code,load(P02),,S503,referenced in P02 code; not encoded in registry construction
+S402,1,load,,S401,
+S402,2,derive,S402-A,S401,B = (I - A)^{-1}
+S502,code,load(P02),,S501,referenced in P02 code; not encoded in registry construction
+S503,2,derive,S503-COMBINED,S501,GFP = TP* - C*_m
+S503,2,derive,S503-COMBINED,S502,GFP = TP* - C*_m
+S503,code,load(P02),,S506,referenced in P02 code; not encoded in registry construction
+S504,2,derive,S504-EXT,S512,V* = W x (V*/W)
+S504,code,load(P02),,S501,referenced in P02 code; not encoded in registry construction
+S504,code,load(P02),,S502,referenced in P02 code; not encoded in registry construction
+S504,code,load(P02),,S503,referenced in P02 code; not encoded in registry construction
+S505,2,derive,S505-EXT,S503,S* = GFP - V*
+S505,2,derive,S505-EXT,S504,S* = GFP - V*
+S506,2,derive,S506-EXT,S504,e = S505-EXT / S504-EXT (year-by-year identity; = GFP/V* - 1); two-arm rebuild per P02_S506 (DIV-028)
+S506,2,derive,S506-EXT,S505,e = S505-EXT / S504-EXT (year-by-year identity; = GFP/V* - 1); two-arm rebuild per P02_S506 (DIV-028)
+S506,code,load(P02),,S512,referenced in P02 code; not encoded in registry construction
+S507,code,load(P02),,S504,referenced in P02 code; not encoded in registry construction
+S507,code,load(P02),,S505,referenced in P02 code; not encoded in registry construction
+S510,code,load(P02),,S502,referenced in P02 code; not encoded in registry construction
+S510,code,load(P02),,S504,referenced in P02 code; not encoded in registry construction
+S510,code,load(P02),,S517,referenced in P02 code; not encoded in registry construction
+S512,code,load(P02),,S501,referenced in P02 code; not encoded in registry construction
+S512,code,load(P02),,S502,referenced in P02 code; not encoded in registry construction
+S512,code,load(P02),,S503,referenced in P02 code; not encoded in registry construction
+S512,code,load(P02),,S506,referenced in P02 code; not encoded in registry construction
+S513,2,derive,S513-EXT,S504,r* = S* / (K* + V*)
+S513,2,derive,S513-EXT,S505,r* = S* / (K* + V*)
+S513,2,derive,S513-EXT,S517,r* = S* / (K* + V*)
+S513,4,derive,S513-FLOW,S502,r*_flow = S* / (C* + V*)
+S513,4,derive,S513-FLOW,S504,r*_flow = S* / (C* + V*)
+S513,4,derive,S513-FLOW,S505,r*_flow = S* / (C* + V*)
+S514,1,derive,S514-A,S513,r*_adj = S513-A (stock) x TCU/100
+S514,2,derive,S514-EXT,S513,r*_adj = S513-EXT (stock) x TCU/100
+S514,4,derive_secondary,S514-FLOW,S513,r*_adj = S513-FLOW (flow) x TCU/100
+S516,2,derive,S516-EXT,S515,Lu = L - Lp
+S604,1,load,,S601,
+S604,1,load,,S602,
+S604,1,load,,S603,
+S604,2,derive,S604-COMBINED,S601,T_w = S601 + S602 + S603 + indirect
+S604,2,derive,S604-COMBINED,S602,T_w = S601 + S602 + S603 + indirect
+S604,2,derive,S604-COMBINED,S603,T_w = S601 + S602 + S603 + indirect
+S607,2,derive,S607-EXT,S604,NSW = B_w + G_w - T_w
+S607,2,derive,S607-EXT,S605,NSW = B_w + G_w - T_w
+S607,2,derive,S607-EXT,S606,NSW = B_w + G_w - T_w
+S608,1,derive,S608-COMBINED,S504,NSW/V* = S607/S504
+S608,1,derive,S608-COMBINED,S607,NSW/V* = S607/S504
+S608,code,load(P02),,S617,referenced in P02 code; not encoded in registry construction
+S609,1,derive,S609-COMBINED,S607,NSW/NI
+S702,code,load(P02),,S701,referenced in P02 code; not encoded in registry construction
+S702,code,load(P02),,S703,referenced in P02 code; not encoded in registry construction
+S703,code,load(P02),,S701,referenced in P02 code; not encoded in registry construction
+S703,code,load(P02),,S702,referenced in P02 code; not encoded in registry construction
+S801,code,load(P02),,S506,referenced in P02 code; not encoded in registry construction
+S801,code,load(P02),,S511,referenced in P02 code; not encoded in registry construction
+S801,code,load(P02),,XS1401,referenced in P02 code; not encoded in registry construction
+S801,code,load(P02),,XS1402,referenced in P02 code; not encoded in registry construction
+S901,1,assemble,S901-A,S506,
+S901,1,assemble,S901-A,S511,
+S901,1,assemble,S901-A,S512,
+S901,1,assemble,S901-A,S513,
+S901,1,assemble,S901-A,S514,
+S901,1,assemble,S901-A,S608,
+XS001,code,load(P02),,S505,referenced in P02 code; not encoded in registry construction
+XS002,code,load(P02),,S506,referenced in P02 code; not encoded in registry construction
+XS003,code,load(P02),,S506,referenced in P02 code; not encoded in registry construction
+XS004,code,load(P02),,S501,referenced in P02 code; not encoded in registry construction
+XS004,code,load(P02),,S515,referenced in P02 code; not encoded in registry construction
+XS1101,1,derive,XS1101-COMBINED,S604,(B_w - T_w) / EC
+XS1101,1,derive,XS1101-COMBINED,S605,(B_w - T_w) / EC
+XS1101,code,load(P02),,S606,referenced in P02 code; not encoded in registry construction
+XS1101,code,load(P02),,S617,referenced in P02 code; not encoded in registry construction
+XS1102,1,derive,XS1102-COMBINED,S605,B_w / EC
+XS1102,code,load(P02),,S604,referenced in P02 code; not encoded in registry construction
+XS1102,code,load(P02),,S606,referenced in P02 code; not encoded in registry construction
+XS1102,code,load(P02),,S617,referenced in P02 code; not encoded in registry construction
+XS1103,1,derive,XS1103-COMBINED,S604,T_w / EC
+XS1103,code,load(P02),,S605,referenced in P02 code; not encoded in registry construction
+XS1103,code,load(P02),,S606,referenced in P02 code; not encoded in registry construction
+XS1103,code,load(P02),,S617,referenced in P02 code; not encoded in registry construction
+XS1201,1,derive,XS1201-COMBINED,S607,NSW / GDP
+XS1202,1,derive,XS1202-COMBINED,S607,NSW / EC
+XS1301,1,derive,XS1301-COMBINED,S607,NSW / GDP
+XS1302,1,derive,XS1302-COMBINED,S607,NSW / EC
+XS1304,1,filter,XS1304-COMBINED,XS1301,
+XS1304,code,load(P02),,XS1201,referenced in P02 code; not encoded in registry construction
+XS1305,1,derive,XS1305-COMBINED,XS1301,
+XS1404,1,derive,XS1404-A,S506,S506 / XS1401
+XS1404,1,derive,XS1404-A,XS1401,S506 / XS1401
+XS1504,code,load(P02),,XS1503,referenced in P02 code; not encoded in registry construction

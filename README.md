@@ -58,7 +58,7 @@ pip install -r requirements.txt
 #    are also provided; see INSTALL.md)
 python build.py status
 
-# 4. Run the test suite (90/90 PASS expected)
+# 4. Run the test suite (93 passed / 2 skipped / 2 xfail expected)
 pytest tests/
 ```
 
@@ -74,7 +74,7 @@ configuration for fresh data fetches.
 ```
 Publish/
 |-- README.md                  # this file
-|-- VERSION.txt                # bundle version string (v1.3)
+|-- VERSION.txt                # bundle version string (v2.0)
 |-- LICENSE                    # MIT (Code) + CC-BY-4.0 (Data)
 |-- CITATION.cff               # machine-readable citation
 |-- INSTALL.md                 # setup details
@@ -84,7 +84,7 @@ Publish/
 |-- Dockerfile                 # reproducible build container
 |-- build.py                   # build orchestrator + status reporter
 |-- series_registry.json       # single source of truth (64 series)
-|-- DIVERGENCE_REGISTER.json   # intentional methodology divergences (12 entries)
+|-- DIVERGENCE_REGISTER.json   # intentional methodology divergences (69 entries)
 |-- Data/                      # 64 chopped CSVs (one per series, wide format)
 |-- Extenbooks/                # 64 Excel workbooks (4 sheets per series)
 |-- Docs/
@@ -94,7 +94,7 @@ Publish/
 |   `-- precommit/             # pre-commit hook policy
 |-- code/                      # L01 loaders, P02 processors, V03 validators, M04, A05, O06
 |-- viz/                       # Plotly Dash / Shiny visualization apps
-`-- tests/                     # 90/90 PASS regression + identity test suite
+`-- tests/                     # 93 pass / 2 skip / 2 xfail regression + identity suite
 ```
 
 ## What's in This Release
@@ -178,25 +178,35 @@ one EPR per series).
 
 ## Version
 
-**Current: v1.3** (see `VERSION.txt` and `CHANGELOG.md`). This is the
-definitive release. Highlights of the current package:
+**Current: v2.0** (see `VERSION.txt` and `CHANGELOG.md`). This is the
+definitive release, following a comprehensive series-by-series review
+(~50 series re-examined) and the D-batch of book-fidelity decisions.
+Highlights of the current package:
 
+- **Comprehensive review corrections** across ~50 series (provenance,
+  units, content labels, and reference-value fixes), with the full audit
+  trail recorded in `series_registry.json` and `DIVERGENCE_REGISTER.json`.
+- **D-batch decisions** encoded: S514 rebuilt on the book's own
+  division into `r*`/`u` components; the Chapter-7 `K*` series carry a
+  replication-first primary column plus labelled variant columns;
+  S515/S516 adopt the seam candidate (d); the net-social-wage extension
+  uses the book-faithful **Candidate A** for 1952–1989; and
+  XS1501–XS1504 are rebuilt on Mohun (2014) published shares.
 - **Series-ID migration (`AS`/`ES` → `XS`)**: the 4 analytical and 25
   follow-up-study series adopt the canonical `XS` prefix (`xs_class`
   sectioning); legacy IDs map via `MIGRATION/crosswalk.csv`.
-- **Chapter 7 proxy retired**: S701/S702/S703 are now first-class
+- **Chapter 7 proxy retired**: S701/S702/S703 are first-class
   labor-value series (`proxy: false`), built from BLS CES, BEA
-  Benchmark I-O, and the Appendix F productive-share filter
-  (`DIVERGENCE_REGISTER.json` DIV-011).
-- **S513 / S514 adopted in stock form** (prior dual-form treatment
-  retired; `Docs/decisions/0008_reference_values_year_keyed_scalars.md`).
-- **8 framework decisions enforced** end-to-end, including
-  Decision 0007 (verbatim quote schema) and Decision 0008
-  (year-keyed `reference_values` for stock series).
-- **DIVERGENCE_REGISTER.json: 12 entries** capturing every
+  Benchmark I-O, and the Appendix F productive-share filter.
+- **Provenance deliverables shipped**: per-observation
+  `data/PROVENANCE_DICTIONARY.csv` (+ README and `PROVENANCE_COVERAGE.csv`),
+  `data/COMPONENT_CHAINS.{csv,json}`, `data/S506_STEP_TABLE.csv`, and the
+  master I-O concordance (`data/concordances/`).
+- **DIVERGENCE_REGISTER.json: 69 entries** capturing every
   intentional deviation from upstream methodology.
-- **90/90 test suite** (`tests/`) plus V03 validators driven off
-  year-keyed `reference_values`.
+- **93 passed / 2 skipped / 2 justified xfail** test suite (`tests/`)
+  plus V03 validators driven off year-keyed `reference_values`;
+  `anu-doctor` reports 0 errors / 0 warnings.
 - **Reproducibility infrastructure**: `Dockerfile`, `Makefile`,
   `tests/`, CI, and `Docs/precommit/` ship with the bundle so a
   clean replicator can `docker build` or `make` the entire pipeline.
