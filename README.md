@@ -58,9 +58,14 @@ pip install -r requirements.txt
 #    are also provided; see INSTALL.md)
 python build.py status
 
-# 4. Run the test suite (93 passed / 2 skipped / 2 xfail expected)
-pytest tests/
+# 4. Package-integrity check (registry + every shipped data CSV load)
+python tests/ci_smoke.py
 ```
+
+> The `tests/` directory carries the development regression + identity
+> suite (93 pass / 2 skip / 2 xfail) as run against the internal build
+> tree; `tests/ci_smoke.py` is the self-contained check that validates
+> this published bundle on its own.
 
 The orchestrator discovers and runs scripts in canonical phase order:
 **S -> L -> P -> V -> M -> A -> O -> E** (Setup -> Load -> Process ->
@@ -134,11 +139,19 @@ A machine-readable citation is available in `CITATION.cff`.
 
 ## Reproducibility
 
-Continuous Integration runs the full replicator in a clean Python
-3.13 virtual environment on every push to `main` and on every pull
-request; see `.github/workflows/replicate.yml`. A green build means:
-all V03 validators PASS against book benchmarks and cross-source
-identities.
+Continuous Integration installs this bundle into a clean Python 3.12
+virtual environment on every push to `main` and on every pull request
+(see `.github/workflows/replicate.yml`) and runs a package-integrity
+check: the dependencies install, `series_registry.json` and the
+pipeline state load, and every shipped `data/*.csv` parses and is
+non-empty (`tests/ci_smoke.py`). A green build means the published
+package installs cleanly and its data layer is intact.
+
+The full V03 validation against book benchmarks and cross-source
+identities (93 pass / 2 skip / 2 justified xfail; `anu-doctor` 0/0) is
+run in the canonical build tree, where the intermediate build inputs
+live — see `DIVERGENCE_REGISTER.json`, `PIPELINE_STATE.json`, and the
+per-series `Docs/`.
 
 ## Methodology
 
