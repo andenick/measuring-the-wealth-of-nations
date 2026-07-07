@@ -13,7 +13,7 @@ PYTEST      ?= $(PYTHON) -m pytest
 BUILD       := $(PYTHON) build.py
 # project doctor runs in the maintainer workspace, not in this repo
 DOCKER      ?= docker
-IMAGE       ?= rmwnd:v1.1
+IMAGE       ?= rmwnd:2.0.0
 PROJECT_DIR := .
 TESTS_DIR   ?= tests
 
@@ -32,9 +32,9 @@ help:
 	@echo "  doctor         (maintainer-only; anu-doctor is not shipped in this repo)"
 	@echo "  review         summarise the latest build review output"
 	@echo "  viz            run viz quality checker"
-	@echo "  clean          remove scratch and v1.1 patch artifacts (destructive!)"
-	@echo "  docker-build   build the rmwnd:v1.1 image"
-	@echo "  docker-run     run the rmwnd:v1.1 image (default cmd: status)"
+	@echo "  clean          remove scratch and stage patch artifacts (destructive!)"
+	@echo "  docker-build   build the rmwnd:2.0.0 image"
+	@echo "  docker-run     run the rmwnd:2.0.0 image (default cmd: status)"
 	@echo "  all            install + build + test"
 
 install:

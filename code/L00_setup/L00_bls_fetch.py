@@ -1,5 +1,5 @@
 """
-L00_bls_fetch.py - Anu Framework v12.0 / RMWND v1.1 Phase 4
+L00_bls_fetch.py - RMWND replication pipeline (Chapter-7 BLS CES fetch)
 
 BLS CES fetch for Ch7 real-fix: production-worker employment AND
 production-worker average weekly hours for the SIC/NAICS supersectors
@@ -39,8 +39,7 @@ CONSTRAINTS
 - Foreground only
 - Idempotent: existing files skipped unless --force
 - Honest about coverage gaps (some weekly-hours series only start 1964 or 1972)
-- Does NOT touch series_registry.json, PIPELINE_STATE.json, ANU_LEDGER.json,
-  PROVENANCE_INDEX.json, or SUBSERIES_PLAN
+- Does NOT touch series_registry.json or PIPELINE_STATE.json
 """
 
 from __future__ import annotations
@@ -379,9 +378,9 @@ def write_provenance(
             }
     fetched_count = sum(1 for c in coverage.values() if c["fetched"])
     prov = {
-        "script": "Technical/code/L00_setup/L00_bls_fetch.py",
+        "script": "code/L00_setup/L00_bls_fetch.py",
         "project": "RMWND",
-        "version": "v1.1 Phase 4 (Ch7 real-fix Stage 5 sub-stage)",
+        "version": "Ch7 real-fix",
         "api": "BLS Public API v2",
         "base_url": BLS_API_BASE,
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
@@ -409,9 +408,9 @@ def write_provenance(
             "Datatype 06 (production workers) and datatype 33 (their weekly hours) "
             "are not published for some service-only supersectors. Empty CSVs are "
             "written for those to make the gap explicit.",
-            "Supports Ch7 real-fix per Technical/Handoffs/CH7_REAL_FIX_PLAN.md: "
+            "Supports the Chapter-7 labor-coefficient real-fix: "
             "hp*_j = (Lp_j * weekly_hours_j) / X_j, feeding lambda* = hp* (I-app*)^{-1}.",
-            "Does not modify series_registry.json, PIPELINE_STATE.json, ANU_LEDGER.json.",
+            "Does not modify series_registry.json or PIPELINE_STATE.json.",
         ],
     }
     prov_path = output_dir / "bls_ces_fetch_provenance.json"

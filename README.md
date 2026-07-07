@@ -5,7 +5,7 @@
 Complete replication and extension of every empirical claim in
 Shaikh & Tonak (1994), *Measuring the Wealth of Nations: The Political
 Economy of National Accounts*, plus eight follow-up studies. All 64 data
-series cover 1925-2025 (book period plus extension where applicable)
+series span 1947-2025 (book-period replication 1948-1989 plus extension where applicable)
 and are reproducible from the included loaders, processors, and
 validators.
 
@@ -90,9 +90,9 @@ Publish/
 |-- build.py                   # build orchestrator + status reporter
 |-- series_registry.json       # single source of truth (64 series)
 |-- DIVERGENCE_REGISTER.json   # intentional methodology divergences (69 entries)
-|-- Data/                      # 64 chopped CSVs (one per series, wide format)
-|-- Extenbooks/                # 64 Excel workbooks (4 sheets per series)
-|-- Docs/
+|-- data/                      # 64 chopped CSVs (one per series, wide format)
+|-- extenbooks/                # 64 Excel workbooks (4 sheets per series)
+|-- docs/
 |   |-- series/                # 149 DPR / EPR markdown docs
 |   |-- decisions/             # framework decisions 0007, 0008
 |   |-- methodology/           # methodology.md (replicator-facing narrative)
@@ -104,24 +104,24 @@ Publish/
 
 ## What's in This Release
 
-- **64 chopped CSVs** (`Data/`) - canonical wide format (Row 1
+- **64 chopped CSVs** (`data/`) - canonical wide format (Row 1
   metadata, Row 2 column IDs, Row 3+ data).
-- **64 extenbooks** (`Extenbooks/`) - human-readable Excel workbooks
+- **64 extenbooks** (`extenbooks/`) - human-readable Excel workbooks
   with 4 sheets per series (Data / Provenance / Research /
   Construction).
-- **149 per-series docs** (`Docs/`) - DPRs for every series, EPRs
+- **149 per-series docs** (`docs/`) - DPRs for every series, EPRs
   where extension applies, decomposition notes for compound series.
 - **185 pipeline scripts** (`code/`) - L01/P02/V03/M04/A05/O06 phase
   scripts plus shared `lib/` helpers.
 - **Visualization app** (`viz/`) - Dash + Shiny apps for interactive
   exploration.
 - **DIVERGENCE_REGISTER.json** - every intentional deviation from
-  upstream sources and predecessor methodology (12 entries).
+  upstream sources and predecessor methodology (69 entries).
 
 ## Data License
 
 Code is released under the **MIT License** (see `LICENSE`). Data
-outputs in `Data/` and `Extenbooks/` are released under **Creative
+outputs in `data/` and `extenbooks/` are released under **Creative
 Commons Attribution 4.0 International (CC BY 4.0)** - the data file
 itself, not the upstream sources, which retain their own terms (BEA,
 BLS, FRED, etc.).
@@ -151,12 +151,46 @@ The full V03 validation against book benchmarks and cross-source
 identities (93 pass / 2 skip / 2 justified xfail; `anu-doctor` 0/0) is
 run in the canonical build tree, where the intermediate build inputs
 live — see `DIVERGENCE_REGISTER.json`, `PIPELINE_STATE.json`, and the
-per-series `Docs/`.
+per-series `docs/`.
+
+## What this bundle can and cannot reproduce
+
+This package is a **published-outputs + provenance bundle**, not a from-raw
+build tree. Concretely:
+
+**You can, offline, with only `pip install -r requirements.txt`:**
+
+- Install cleanly into a fresh Python 3.11+ venv (CI does this on every push).
+- `python build.py status` — inspect the 9-stage pipeline state and gate marks.
+- `python tests/ci_smoke.py` — verify the registry loads and every shipped
+  `data/*.csv` parses and is non-empty. **A green run means the package installs
+  cleanly and its published data layer is intact.**
+- Read every value's lineage: `series_registry.json` (single source of truth),
+  `data/PROVENANCE_DICTIONARY.csv` (per-observation),
+  `data/COMPONENT_CHAINS.{csv,json}`, the 149 per-series `docs/series/*_DPR.md`
+  / `*_EPR.md`, and `DIVERGENCE_REGISTER.json` (69 intentional divergences).
+
+**You cannot, from this bundle alone, regenerate the numbers from raw sources.**
+The intermediate build inputs (`data/final/`, cached agency responses, the
+project checker) live in the maintainer build tree and are not shipped.
+Therefore:
+
+- `build.py chopped` / `build.py extenbooks` and `make build` **skip all series**
+  when `data/final/` is absent — they are maintainer-side regenerators, not
+  clean-room builders.
+- The full V03 validation against book benchmarks (93 pass / 2 skip / 2 xfail;
+  `anu-doctor` 0/0) is run in the maintainer tree, not here.
+- Fresh BEA/BLS/FRED fetches require your own free API keys and network access
+  (see `INSTALL.md`).
+
+In short: **this bundle lets you audit and trust the published data and its
+provenance; it does not let you rebuild the data from scratch.** That is an
+intentional scope, and it is what a green CI badge attests to.
 
 ## Methodology
 
 See `methodology/methodology.md` for the conceptual narrative.
-Per-series details live in `Docs/` (one DPR and, where applicable,
+Per-series details live in `docs/` (one DPR and, where applicable,
 one EPR per series).
 
 ## Known Limitations
@@ -186,7 +220,7 @@ one EPR per series).
   uses net stock. BEA publishes no current-cost gross stock for
   private nonresidential fixed assets, so a gross-stock variant is
   not constructible from BEA sources. See `DIVERGENCE_REGISTER.json`
-  entry **DIV-008** and `Docs/S517_EPR.md` Section 5 for the full
+  entry **DIV-008** and `docs/series/S517_EPR.md` Section 5 for the full
   divergence record.
 
 ## Version
@@ -221,5 +255,5 @@ Highlights of the current package:
   plus V03 validators driven off year-keyed `reference_values`;
   `anu-doctor` reports 0 errors / 0 warnings.
 - **Reproducibility infrastructure**: `Dockerfile`, `Makefile`,
-  `tests/`, CI, and `Docs/precommit/` ship with the bundle so a
+  `tests/`, CI, and `docs/precommit/` ship with the bundle so a
   clean replicator can `docker build` or `make` the entire pipeline.

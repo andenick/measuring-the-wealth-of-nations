@@ -1,9 +1,9 @@
 # RMWND — Measuring the Wealth of Nations Replication
 # Reproducible build environment for the Anu Framework v12.0 pipeline.
 #
-# Build:  docker build -t rmwnd:v1.1 -f Technical/Dockerfile Technical
-# Run:    docker run --rm rmwnd:v1.1 status
-# Shell:  docker run --rm -it --entrypoint /bin/bash rmwnd:v1.1
+# Build:  docker build -t rmwnd:2.0.0 -f Dockerfile .
+# Run:    docker run --rm rmwnd:2.0.0 status
+# Shell:  docker run --rm -it --entrypoint /bin/bash rmwnd:2.0.0
 #
 # Python target: 3.13 (slim); see requirements.txt for pinned deps.
 
@@ -11,7 +11,7 @@ FROM python:3.13-slim AS base
 
 LABEL org.opencontainers.image.title="RMWND"
 LABEL org.opencontainers.image.description="Measuring the Wealth of Nations (Shaikh & Tonak 1994) replication — Anu v12.0"
-LABEL org.opencontainers.image.version="1.1"
+LABEL org.opencontainers.image.version="2.0.0"
 LABEL org.opencontainers.image.licenses="MIT"
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -36,20 +36,18 @@ RUN pip install --upgrade pip \
     && pip install -r /app/requirements.txt
 
 # ---- project artifacts (read-only at build time) ----
+# Only the shipped, tracked bundle paths are copied (see .publish_ignore / the
+# repository tree). build.py reads series_registry.json + PIPELINE_STATE.json;
+# the numbered pipeline, data, docs, viz, extenbooks, and tests round out the tree.
 COPY build.py            /app/build.py
 COPY series_registry.json /app/series_registry.json
 COPY PIPELINE_STATE.json  /app/PIPELINE_STATE.json
-COPY ANU_LEDGER.json      /app/ANU_LEDGER.json
 COPY code/                /app/code/
 COPY data/                /app/data/
 COPY viz/                 /app/viz/
-COPY tools/               /app/tools/
-COPY scripts/             /app/scripts/
 COPY docs/                /app/docs/
-COPY research/            /app/research/
-COPY chopped/             /app/chopped/
 COPY extenbooks/          /app/extenbooks/
-COPY Build/               /app/Build/
+COPY tests/               /app/tests/
 
 # Make build.py the default callable; subcommands are positional args.
 ENTRYPOINT ["python", "/app/build.py"]
