@@ -24,8 +24,37 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from utils.io import write_validation_result  # noqa: E402
 from utils.paths import DATA_FINAL  # noqa: E402
-from utils.registry_validator import get_reference_values  # noqa: E402
+from utils.registry_validator import get_reference_values, get_variant_reference_values  # noqa: E402
 from utils.series import TOLERANCES  # noqa: E402
+
+
+def _variant_book_checks(sid: str, subseries: str, tol_class: str) -> list[dict]:
+    """Book-anchored check of a GROSS variant subseries vs the book's printed cells.
+
+    K-plan WP-K3: S513-GROSS-A is the book's OWN published r* (S*/K*_gross); this
+    gives the S517 profit-rate family its first INDEPENDENT (non-tautological) book
+    anchor. Returns [] when absent so older builds never spuriously fail.
+    """
+    refs = get_variant_reference_values(sid, subseries)
+    if not refs:
+        return []
+    full = pd.read_csv(DATA_FINAL / f"{sid}.csv")
+    v = full[full["series_id"] == subseries]
+    by_year = dict(zip(v["year"].astype(int), v["value"].astype(float)))
+    tol = TOLERANCES[tol_class]
+    checks = []
+    for yr, expected in sorted(refs.items()):
+        actual = by_year.get(yr)
+        if actual is None:
+            checks.append({"year": yr, "expected": expected, "status": "MISSING"})
+            continue
+        abs_err = abs(actual - expected)
+        rel_err = abs_err / max(abs(expected), 1e-12)
+        ok = (abs_err <= tol["abs"]) or (rel_err <= tol["rel"])
+        checks.append({"year": yr, "expected": expected, "actual": round(actual, 6),
+                       "abs_err": round(abs_err, 6), "rel_err": round(rel_err, 6),
+                       "status": "PASS" if ok else "FAIL"})
+    return checks
 
 
 def run():
@@ -65,7 +94,12 @@ def run():
     n_bench_fail = sum(1 for c in bench_checks if c["status"] == "FAIL")
     n_bench_miss = sum(1 for c in bench_checks if c["status"] == "MISSING")
 
-    status = "PASS" if (in_range and len(df) > 0 and n_bench_fail == 0 and n_bench_miss == 0) else "FAIL"
+    # Book-anchored GROSS variant check (K-plan WP-K3; independent book anchor)
+    variant_checks = _variant_book_checks("S513", "S513-GROSS-A", "rate_series")
+    n_var_pass = sum(1 for c in variant_checks if c["status"] == "PASS")
+    n_var_fail = sum(1 for c in variant_checks if c["status"] == "FAIL")
+
+    status = "PASS" if (in_range and len(df) > 0 and n_bench_fail == 0 and n_bench_miss == 0 and n_var_fail == 0) else "FAIL"
     result = {
         "series_id": "S513",
         "run_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -85,13 +119,19 @@ def run():
             "secular_decline_1948_to_2024": trend_1948_2024,
         },
         "benchmarks": {"checks": bench_checks},
+        "variant_book_anchor": {
+            "subseries": "S513-GROSS-A",
+            "source": "book Table 5.8 published r* (S*/K*_gross); independent (non-tautological) anchor",
+            "n_pass": n_var_pass, "n_fail": n_var_fail, "checks": variant_checks,
+        },
     }
     write_validation_result("S513", result)
     print(
         f"    [V03_S513] status={status} stock-form r*: "
         f"1948={v_1948:.4f}, 1989={v_1989:.4f}, 2024={v_2024:.4f}; "
         f"decline_to_2024={trend_1948_2024}; bench_pass={n_bench_pass}/"
-        f"{n_bench_pass + n_bench_fail + n_bench_miss}"
+        f"{n_bench_pass + n_bench_fail + n_bench_miss}; "
+        f"gross_book_anchor={n_var_pass}/{n_var_pass + n_var_fail}"
     )
     return result
 

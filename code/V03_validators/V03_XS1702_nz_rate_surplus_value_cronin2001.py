@@ -1,8 +1,12 @@
 """V03_XS1702 — Validate NZ Rate of Surplus Value (Cronin 2001).
 
 Refactored 2026-05-24 per Decision 0002 — benchmarks sourced from registry.
-Unit note: registry stores decimal-ratio (2.06); final CSV reports percent (206).
-Benchmarks scaled by 100 here; registry units field needs reconciliation.
+Units reconciled 2026-07-01 (workpackage E review, Group D): registry
+`validation.reference_values` now store PERCENT (206, 228, 307), matching the
+final CSV (percent), `units:"percent"`, and Cronin (2001) Table 2 ("206%",
+"307%"). The former decimal-ratio refvals (2.06) and the *100 compensation hack
+are RETIRED; benchmarks are read from the registry unchanged. NOTE: paired with
+D_REGISTRY_PATCHES.json (decimal->percent for XS1702) — apply both together.
 """
 from __future__ import annotations
 
@@ -16,13 +20,10 @@ from utils.registry_validator import get_reference_values, get_tolerance_class  
 from utils.series import BenchmarkValidator  # noqa: E402
 
 
-_RAW = get_reference_values("XS1702")
-_BENCH = {y: v * 100 for y, v in _RAW.items()}
-
 VALIDATOR = BenchmarkValidator(
     series_id        = "XS1702",
     tolerance_class  = get_tolerance_class("XS1702", default="rate_series"),
-    benchmarks       = _BENCH,
+    benchmarks       = get_reference_values("XS1702"),
     subseries_filter = "XS1702-A",
 )
 

@@ -30,7 +30,7 @@ The Khanjian (1989) 6–9% S*/V* envelope (ST 1994 Ch7 §7.3 p.223) is the load-
 - **L01 + P02 (real implementation)**: real S701 + S702 upstream (v1.1); `Technical/code/P02_processors/P02_S703_value_price_deviations.py` (v1.1 rewrite, runs cross-sectional regression and computes Khanjian-style aggregate deviation)
 - **No new external data fetches required** — S703 is a pure regression on real upstream sector vectors
 - **External comparator**: Khanjian (1989) "The Empirical Evidence Relating to the Existence of Prices of Production: A Critique of Wolff," *Review of Radical Political Economics*; serves as V03_S703 anchor
-- **KB chunks**: `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_11/full_transcription.md` (Ch4 §4.1 Tables 4.1-4.3 — consistent/inconsistent procedure); `chunk_25/full_transcription.md` (Ch7 §7.3–§7.4 — Khanjian 6–9%, Wolff 12–15% bias); `chunk_33/full_transcription.md` (Appendix G V* methodology); `chunk_34/full_transcription.md` (Appendix G Table G.2 V* formulas); `chunk_36/full_transcription.md` (Appendix J C*/TP* stability)
+- **KB chunks**: `data/raw/kb/book_digitization/chunk_11/full_transcription.md` (Ch4 §4.1 Tables 4.1-4.3 — consistent/inconsistent procedure); `chunk_25/full_transcription.md` (Ch7 §7.3–§7.4 — Khanjian 6–9%, Wolff 12–15% bias); `chunk_33/full_transcription.md` (Appendix G V* methodology); `chunk_34/full_transcription.md` (Appendix G Table G.2 V* formulas); `chunk_36/full_transcription.md` (Appendix J C*/TP* stability)
 - **Book tables**: Ch4 §4.1 Tables 4.1, 4.2 (consistent procedure worked examples); Table 4.3 (inconsistent symmetric-treatment diagnosis); §5.10 Table 5.12, Figure 5.25 (Khanjian comparison)
 - **Upstream series**: **S701 (real lambda* — v1.1)**, **S702 (real pp* — v1.1)**, S513 (Marxian profit rate r_bar, used in S702)
 
@@ -60,7 +60,7 @@ Coordinator backfills from `Technical/chopped/S703.csv` after agents 1-3 commit 
 - Upstream: **S701 (real labor values — v1.1)**, **S702 (real prices of production — v1.1)**, S513 (Marxian profit rate)
 - Downstream: none (S703 is the empirical test endpoint of the Ch7 framework)
 - Related external: Khanjian (1988, 1989), Wolff (1977a/b, 1979, 1987), Sharpe (1982); ST 1994 Ch7 §7.4 cross-study critique
-- Project artifacts: `Technical/Handoffs/CH7_REAL_FIX_PLAN.md`; `Technical/_v1.1_patches/S703_ch7_realfix_patch.json`; `Technical/_v1.1_patches/DIVERGENCE_REGISTER_DIV011_patch.json`; WARN-03 1963 diagnosis (pending)
+- Project artifacts: `internal-notes/CH7_REAL_FIX_PLAN.md`; `Technical/_v1.1_patches/S703_ch7_realfix_patch.json`; `Technical/_v1.1_patches/DIVERGENCE_REGISTER_DIV011_patch.json`; WARN-03 1963 diagnosis (pending)
 
 ## Provenance trail
 

@@ -8,7 +8,7 @@
       "divergence_id": "DIV-001-S507",
       "series_id": "S507",
       "series_name": "Surplus Ratio S*/Y",
-      "source": "predecessor_build",
+      "source": "predecessor-build",
       "current_value": {
         "1948": 0.6296,
         "1989": 0.7093,
@@ -18,7 +18,7 @@
       "predecessor_value": {
         "1948": 0.5698,
         "1989": 0.5991,
-        "source_path": "internal predecessor build (ch05 exploitation/composition reconstruction, 1948-1989)",
+        "source_path": "data/raw/ch05/ExploitationComposition_1948_1989.csv",
         "source_column": "T509_surplus_ratio",
         "method": "nipa_reconstruction_different_denominator"
       },
@@ -46,9 +46,9 @@
       "description": "Five series previously carrying status `validated_book_and_extension` were demoted to `book_period_validated` because their `extension` blocks lacked the canonical 6-field provenance metadata required by Decision 0003's binary-invariant rule. Per Decision 0003, a series either has a fully-populated extension block (6 required provenance fields + EXT/COMBINED subseries) or has `extension: null`; partial/manufactured extension metadata is not permitted. EPR files for these series were rewritten as `EXTENSION NOT APPLICABLE` stubs.",
       "justification": "Honest demotion preserved over manufactured extension. The legacy predecessor-build/B-suffix predecessor and some intermediate hyper-review passes left these five series in a state that claimed extension validation without the canonical metadata to support that claim. Rather than fabricate provenance to upgrade them, the demotion records the actual book-period-only scope of the existing replication. Future cohorts may re-upgrade by sourcing the required API extensions (BEA / BLS / FRED) and re-populating the extension block with all six fields.",
       "references": [
-        "decision 0003 (internal spec)",
-        "internal honesty-pass note (2026-05-19)",
-        "internal build step log (stage3-cohort1 entries)",
+        "(internal)",
+        "Handoffs/HONESTY_PASS_20260519.md",
+        "Build/STEP_LOG.jsonl (stage3-cohort1 entries)",
         "docs/series/{S510,S401,S402,S801,AS001}_EPR.md"
       ],
       "noted_at": "2026-05-24",
@@ -63,12 +63,12 @@
       ],
       "divergence_type": "proxy_disclosure",
       "source": "stage3_cohort2_documentation",
-      "description": "Chapter 7 series S701/S702/S703 (labor coefficients) carry `proxy: true` flags because the current implementation derives them as the mean of column sums of the Leontief inverse from BEA IO tables, rather than as the book's actual labor-coefficient vector (sectoral employment / sectoral output, per S&T 1994 Ch. 7). The proxy preserves the qualitative shape and chapter-level argument but is not the book's construct. Real fix is a multi-session BLS Industry Productivity + BEA IO sourcing project documented in `internal Ch.7 real-fix plan`.",
+      "description": "Chapter 7 series S701/S702/S703 (labor coefficients) carry `proxy: true` flags because the current implementation derives them as the mean of column sums of the Leontief inverse from BEA IO tables, rather than as the book's actual labor-coefficient vector (sectoral employment / sectoral output, per S&T 1994 Ch. 7). The proxy preserves the qualitative shape and chapter-level argument but is not the book's construct. Real fix is a multi-session BLS Industry Productivity + BEA IO sourcing project documented in `Handoffs/CH7_REAL_FIX_PLAN.md`.",
       "justification": "Disclosing the proxy in the divergence register (rather than silently treating mean(column_sum(Leontief inverse)) as the labor coefficient) preserves audit-grade transparency. The real fix requires sustained data-sourcing work outside the current cohort scope. Until the BLS employment-by-industry vectors are sourced and concorded to BEA IO sector definitions, the proxy is the best available stand-in and must be flagged as such.",
       "references": [
-        "internal Ch.7 real-fix plan",
-        "internal build step log (step_id stage3-cohort2-CH7planESgap)",
-        "internal hyper-review (Ch7 section)"
+        "Handoffs/CH7_REAL_FIX_PLAN.md",
+        "Build/STEP_LOG.jsonl (step_id stage3-cohort2-CH7planESgap)",
+        "(internal) (Ch7 section)"
       ],
       "noted_at": "2026-05-24",
       "status": "superseded_by_DIV011",
@@ -87,10 +87,10 @@
       "description": "Chapter 8 series S801 and Chapter 9 series S901 had their `status` taxonomy aligned with the canonical anu-ingestion v4.0 series-status vocabulary during Stage 3 cohort 1. Prior status labels were either non-canonical strings or implied an extension claim not backed by registry data. Both series were remapped to `book_period_validated` with `extension: null`, matching the actual scope of the available CSV outputs and the absence of a populated extension block in the registry.",
       "justification": "The series-status taxonomy is a controlled vocabulary (book_period_validated, book_period_partial_*, validated_book_and_extension, data_unavailable, deprecated). Pre-existing labels outside this vocabulary were a registry-internal blocker flagged by Stage 2 re-verification. Remapping to canonical values restores doctor-check pass without altering the underlying chopped data. S801 was simultaneously included in the DIV-002 extension demotion bucket because it claimed extension validation in legacy state; S901 was only a label normalization.",
       "references": [
-        "internal build step log (step_id stage3-cohort2-stage2reverify)",
+        "Build/STEP_LOG.jsonl (step_id stage3-cohort2-stage2reverify)",
         "docs/chapters/CH8_ADEQUACY_REPORT.json",
         "docs/chapters/CH9_ADEQUACY_REPORT.json",
-        "decision 0003 (internal spec)"
+        "(internal)"
       ],
       "noted_at": "2026-05-24",
       "status": "active"
@@ -102,11 +102,11 @@
       ],
       "divergence_type": "deprecation_closure",
       "source": "stage3_cohort2_ES_numbering_gap_investigation",
-      "description": "ES1303 (Moos 2017 study, slot 03) is absent from `series_registry.json` and has no research/EPR/DPR artifacts. The numbering gap was inherited from a predecessor project where ES1303 was provisionally allocated, then deprecated before any data was sourced. Stage 3 cohort 2 investigation confirmed that no chopped CSV, no KB extraction, and no methodology stub exists for ES1303 in either the current source tree or the predecessor-build predecessor archive. The gap is closed as an inherited deprecation; no replacement series planned.",
+      "description": "ES1303 (Moos 2017 study, slot 03) is absent from `series_registry.json` and has no research/EPR/DPR artifacts. The numbering gap was inherited from a predecessor project where ES1303 was provisionally allocated, then deprecated before any data was sourced. Stage 3 cohort 2 investigation confirmed that no chopped CSV, no KB extraction, and no methodology stub exists for ES1303 in either the current  tree or the predecessor-build predecessor archive. The gap is closed as an inherited deprecation; no replacement series planned.",
       "justification": "Documenting the gap closure prevents future agents from re-investigating the numbering hole. The Moos 2017 study (study group 13) is represented by ES1301, ES1302, ES1304, ES1305 with the 03 slot intentionally left vacant. Per the Anu Framework, deprecations are first-class citizens of the divergence register.",
       "references": [
-        "internal ES1303 gap-investigation note",
-        "internal build step log (step_id stage3-cohort2-CH7planESgap)"
+        "Handoffs/ES1303_GAP_INVESTIGATION_20260524T002329Z.md",
+        "Build/STEP_LOG.jsonl (step_id stage3-cohort2-CH7planESgap)"
       ],
       "noted_at": "2026-05-24",
       "status": "closed"
@@ -159,10 +159,10 @@
       "references": [
         "research/S511_research.json",
         "research/S512_research.json",
-        "book digitization (Shaikh & Tonak 1994, Ch.5 transcription, chunk 14)",
-        "book digitization (Shaikh & Tonak 1994, Ch.5 transcription, chunk 17)",
-        "internal v1.1 patch (S511 drift)",
-        "internal v1.1 patch (S512 drift)"
+        "data/raw/book_digitization/1994_Measuring_Wealth/chunk_14/full_transcription.md",
+        "data/raw/book_digitization/1994_Measuring_Wealth/chunk_17/full_transcription.md",
+        "_v1.1_patches/S511_drift_patch.json",
+        "_v1.1_patches/S512_drift_patch.json"
       ]
     },
     {
@@ -197,8 +197,8 @@
         "code/E08_exploration/E_S517_gross_vs_net.py",
         "code/E08_exploration/fetch_bea_table_4_2.py",
         "data/scratch/S517_gross_vs_net.csv",
-        "data/raw/bea/fixed_assets_4_2_gross_stock.csv",
-        "data/raw/bea/provenance_fixed_assets_4_2.json"
+        "data/raw/api_data/BEA/fixed_assets_4_2_gross_stock.csv",
+        "data/raw/api_data/BEA/provenance_fixed_assets_4_2.json"
       ]
     },
     {
@@ -257,25 +257,25 @@
         "CES3000000006": -2.5,
         "CES3000000001": -2.02
       },
-      "justification": "Per Anu anti-lazy-splice rule, the 2003 BLS CES methodology break must be addressed explicitly per affected series rather than left as silent drift in extension-period trends. The cached BLS API series at data/raw/bls/bls_ces_production_workers.csv (pulled 2026-02-24) is the BLS current-vintage retrospective time series, in which all pre-June-2003 values have been back-revised by ~22 years of annual benchmark revision into approximate consistency with the post-overhaul methodology. Deriving bridge factors directly from this cached data would conflate the 2001-2003 jobless-recovery cyclical employment trough with the methodology break (the diagnostic residuals above are dominated by the cyclical signal). The honest v1.1 choice is to (i) install the bridge mechanism with explicit factor=1.0 stubs so the wiring is visible and auditable, (ii) document the v1.2 sourcing plan (BLS Employment Situation news release archive, May 2003 vs June 2003 originally-published per-super-sector levels) needed to compute non-null factors. The RMWND extension arms for the affected series all splice to book at 1989, so the 2003 boundary is internal to the extension; the level reconciliation that matters most is already enforced at the 1989 anchor, and any v1.2 factor revision affects only intra-extension trend shape from 2003 onward.",
+      "justification": "Per Anu anti-lazy-splice rule, the 2003 BLS CES methodology break must be addressed explicitly per affected series rather than left as silent drift in extension-period trends. The cached BLS API series at data/raw/api_data/BLS/bls_ces_production_workers.csv (pulled 2026-02-24) is the BLS current-vintage retrospective time series, in which all pre-June-2003 values have been back-revised by ~22 years of annual benchmark revision into approximate consistency with the post-overhaul methodology. Deriving bridge factors directly from this cached data would conflate the 2001-2003 jobless-recovery cyclical employment trough with the methodology break (the diagnostic residuals above are dominated by the cyclical signal). The honest v1.1 choice is to (i) install the bridge mechanism with explicit factor=1.0 stubs so the wiring is visible and auditable, (ii) document the v1.2 sourcing plan (BLS Employment Situation news release archive, May 2003 vs June 2003 originally-published per-super-sector levels) needed to compute non-null factors. The RMWND extension arms for the affected series all splice to book at 1989, so the 2003 boundary is internal to the extension; the level reconciliation that matters most is already enforced at the 1989 anchor, and any v1.2 factor revision affects only intra-extension trend shape from 2003 onward.",
       "references": [
         "code/M04_manual/M04_bls_ces_2003_bridge.py",
         "code/M04_manual/M04_S504_2003_bridge.py",
         "code/M04_manual/M04_S511_2003_bridge.py",
         "code/M04_manual/M04_S515_2003_bridge.py",
         "data/adjusted-final-data/bls_ces_2003_bridge_factors.json",
-        "data/raw/bls/bls_ces_production_workers.csv",
-        "data/raw/bls/provenance.json"
+        "data/raw/api_data/BLS/bls_ces_production_workers.csv",
+        "data/raw/api_data/BLS/provenance.json"
       ],
       "v1_2_followup": "Source pre-overhaul (May 2003 Employment Situation) and post-overhaul (June 2003 Employment Situation) per-super-sector employment levels from the BLS news release archive; compute per-sector factor = post_published_value / pre_published_value at the seam; replace the v1.1 null factors in bls_ces_2003_bridge_factors.json; re-run the affected P02 processors (S504, S511, S515) and the planned Ch7 real-fix (S701, S702) to propagate the non-null factors. Also revisit S701/S702 once Ch7 real-fix lands so the bridge wiring is consumed there from day one.",
       "v1_2_resolution": {
         "date": "2026-05-24",
         "action": "vintage_data_fetched_semantics_clarified",
         "data_fetched": [
-          "data/raw/bls/vintage_2003/empsit_05022003.pdf (USDL 03-203, last pre-overhaul SIC vintage)",
-          "data/raw/bls/vintage_2003/empsit_06062003.pdf (USDL 03-281, first post-overhaul NAICS vintage)",
-          "data/raw/bls/vintage_2003/empsit_07032003.pdf (USDL 03-253, second post-overhaul vintage)",
-          "data/raw/bls/vintage_2003/mlr_200306_ces_naics.pdf (Monthly Labor Review June 2003 CES NAICS conversion article)"
+          "data/raw/api_data/BLS/vintage_2003/empsit_05022003.pdf (USDL 03-203, last pre-overhaul SIC vintage)",
+          "data/raw/api_data/BLS/vintage_2003/empsit_06062003.pdf (USDL 03-281, first post-overhaul NAICS vintage)",
+          "data/raw/api_data/BLS/vintage_2003/empsit_07032003.pdf (USDL 03-253, second post-overhaul vintage)",
+          "data/raw/api_data/BLS/vintage_2003/mlr_200306_ces_naics.pdf (Monthly Labor Review June 2003 CES NAICS conversion article)"
         ],
         "finding": "The 2003 BLS overhaul has two logically distinct effects: (A) the methodology shift at the vintage seam (probability sample, QCEW benchmark, concurrent SA) and (B) the SIC->NAICS reclassification at the same seam. Effect (A) was absorbed by ~22 years of annual back-revisions; direct empirical inspection of the cached annual-average BLS API series shows NO level break at 2003 (smooth 2001-2006 trajectory). Effect (B) was also absorbed by the back-revisions: the cached API series is NAICS all the way back to 1939, while the Shaikh & Tonak 1994 book-period values (1948-1989) are SIC-original.",
         "consequence_for_2003_boundary": "The 2003-boundary bridge factor for the cached series is empirically validated at 1.0 (not null/uncomputed; observed). Basis upgraded from 'null_bridge_v1.1' to 'empirically_validated_no_break_v1.2'.",
@@ -339,8 +339,8 @@
         "S703"
       ],
       "divergence_type": "ch7_proxy_retirement",
-      "description": "Ch7 series proxy:true retired via v1.1 Phase 4 real-fix (iteration 5). Labor coefficients now computed per book formula hp*_j = (Lp_j * weekly_hours_j * 52) / X_j with units hr/$ (ST 1994 Ch4 §4.1 p.81, Figure 4.3 p.83). Sector lambda*_j = hp*_j * (I - A*)^{-1} via the labeled BEA IO matrices. Sector prices of production pp*_j = (1 + r_bar)(c_j + v_j) constructed with sector-disaggregated c_j = lambda_i* * (M_p)_p_ij and v_j = lambda* * (CONW_p)_p,j. S703 implements the book's consistent-procedure cross-sectional log-log regression of sector lambda* against sector pp*. Data sourced from BLS CES production workers + average weekly hours (cached at data/raw/bls/, pulled 2026-05-24), BEA gross output via NIPA Table 1.7.5 / GDP-by-Industry (cached 2026-02-24), book Appendix F productive-share filter (data/source/appendix_F/Table_F_1.csv — 85-sector categorical from predecessor-build io_85_to_nipa_13 concordance + Mohun 2013 Tables 2-3), and labeled BEA IO matrices (data/intermediate/io_matrices_labeled/).",
-      "justification": "v1.0 BLOCKER (BLS API key apparently missing) was actually a discoverability issue — key existed at a centralized API-key store. With prerequisites met in v1.1 iteration 4 (BLS fetch, IO labeling, Appendix F filter), real-fix executed in iteration 5. The v1.0 hyper-review judgment that Ch7 was 'multi-session BLS sourcing project' was correct under the assumption that no API key was available; that assumption was false. Recommendation: mirror API keys to the project's standard env discovery path so this rediscovery cost is not paid again.",
+      "description": "Ch7 series proxy:true retired via v1.1 Phase 4 real-fix (iteration 5). Labor coefficients now computed per book formula hp*_j = (Lp_j * weekly_hours_j * 52) / X_j with units hr/$ (ST 1994 Ch4 §4.1 p.81, Figure 4.3 p.83). Sector lambda*_j = hp*_j * (I - A*)^{-1} via the labeled BEA IO matrices. Sector prices of production pp*_j = (1 + r_bar)(c_j + v_j) constructed with sector-disaggregated c_j = lambda_i* * (M_p)_p_ij and v_j = lambda* * (CONW_p)_p,j. S703 implements the book's consistent-procedure cross-sectional log-log regression of sector lambda* against sector pp*. Data sourced from BLS CES production workers + average weekly hours (cached at data/raw/api_data/BLS/, pulled 2026-05-24), BEA gross output via NIPA Table 1.7.5 / GDP-by-Industry (cached 2026-02-24), book Appendix F productive-share filter (data/source/appendix_F/Table_F_1.csv — 85-sector categorical from predecessor-build io_85_to_nipa_13 concordance + Mohun 2013 Tables 2-3), and labeled BEA IO matrices (data/intermediate/io_matrices_labeled/).",
+      "justification": "v1.0 BLOCKER (BLS API key apparently missing) was actually a discoverability issue — key existed at (internal) centralized store ((local path)(internal)). With prerequisites met in v1.1 iteration 4 (BLS fetch, IO labeling, Appendix F filter), real-fix executed in iteration 5. The v1.0 hyper-review judgment that Ch7 was 'multi-session BLS sourcing project' was correct under the assumption that no API key was available; that assumption was false. Recommendation: mirror Robin API keys to Anu Framework projects' standard env discovery path so this rediscovery cost is not paid again.",
       "v1_0_blocker_status": "superseded",
       "v1_1_implementation_artifacts": [
         "code/L01_loaders/L01_S701.py",
@@ -348,9 +348,9 @@
         "code/P02_processors/P02_S701_labor_values.py",
         "code/P02_processors/P02_S702_prices_of_production.py",
         "code/P02_processors/P02_S703_value_price_deviations.py",
-        "internal v1.1 patch (S701 Ch.7 real-fix)",
-        "internal v1.1 patch (S702 Ch.7 real-fix)",
-        "internal v1.1 patch (S703 Ch.7 real-fix)",
+        "_v1.1_patches/S701_ch7_realfix_patch.json",
+        "_v1.1_patches/S702_ch7_realfix_patch.json",
+        "_v1.1_patches/S703_ch7_realfix_patch.json",
         "docs/series/S701_DPR.md",
         "docs/series/S702_DPR.md",
         "docs/series/S703_DPR.md",
@@ -366,9 +366,9 @@
         "SIC-NAICS coarse concordance (DIV-008 reference) applies to S701/S702 extension arms"
       ],
       "references": [
-        "internal Ch.7 real-fix plan",
-        "internal Ch.7 real-fix blocker note (now superseded)",
-        "internal Ch.7 BLS-fetch status note",
+        "Handoffs/CH7_REAL_FIX_PLAN.md",
+        "Handoffs/CH7_REAL_FIX_BLOCKER_20260524T004742Z.md (now superseded)",
+        "Handoffs/CH7_BLS_FETCH_STATUS_20260524T033814Z.md",
         "code/L01_loaders/L01_S701",
         "code/L01_loaders/L01_S702",
         "code/P02_processors/P02_S701",
@@ -412,9 +412,9 @@
       "reference_values_update": "YES -- replaced {1948:29937, 1961:33615} with book Table 5.5 anchors {1948:32994, 1958:29349, 1967:32856, 1977:35798, 1989:41148}.",
       "resolution": "B6 refval patch applied (series_registry.json S515.validation, v1.3_patch note). V03_S515 PASS 5/0/0.",
       "references": [
-        "internal divergence-register working notes (DIV-013 section)",
-        "internal validation report",
-        "internal v1.3 reference-value patch",
+        "Handoffs/DIVERGENCE_REGISTER.md (B5 register, DIV-013 section)",
+        "Handoffs/B6_VALIDATION_REPORT.md",
+        "_v1.3_refvalue_patch.json",
         "series_registry.json (series.S515.validation.v1.3_patch)",
         "data/integrated/MWoN_panel/combined_tables/5.5.csv",
         "data/integrated/MWoN_panel/combined_tables/F.1.csv"
@@ -436,9 +436,9 @@
       "reference_values_update": "YES -- replaced {1948:36154, 1961:49212} with book Table 5.5 anchors {1948:25307, 1958:33416, 1967:42281, 1977:52318, 1989:72363}.",
       "resolution": "B6 refval patch applied (S516.validation.v1.3_patch). V03_S516 PASS 5/0/0.",
       "references": [
-        "internal divergence-register working notes (DIV-014 section)",
-        "internal validation report",
-        "internal v1.3 reference-value patch",
+        "Handoffs/DIVERGENCE_REGISTER.md (B5 register, DIV-014 section)",
+        "Handoffs/B6_VALIDATION_REPORT.md",
+        "_v1.3_refvalue_patch.json",
         "series_registry.json (series.S516.validation.v1.3_patch)",
         "data/integrated/MWoN_panel/combined_tables/5.5.csv"
       ],
@@ -459,9 +459,9 @@
       "reference_values_update": "YES -- 1958: 0.52 -> 0.47 and 1977: 0.50 -> 0.41 (1948/1967/1989 unchanged, already book-correct).",
       "resolution": "B6 refval patch applied (S511.validation.v1.3_patch). V03_S511 PASS 5/0/0.",
       "references": [
-        "internal divergence-register working notes (DIV-015 section)",
-        "internal validation report",
-        "internal v1.3 reference-value patch",
+        "Handoffs/DIVERGENCE_REGISTER.md (B5 register, DIV-015 section)",
+        "Handoffs/B6_VALIDATION_REPORT.md",
+        "_v1.3_refvalue_patch.json",
         "series_registry.json (series.S511.validation.v1.3_patch)",
         "data/integrated/MWoN_panel/combined_tables/5.5.csv"
       ],
@@ -482,9 +482,9 @@
       "reference_values_update": "YES -- 1958: 0.49 -> 0.44 (others already match).",
       "resolution": "B6 refval patch applied (S512.validation.v1.3_patch). V03_S512 PASS 5/0/0.",
       "references": [
-        "internal divergence-register working notes (DIV-016 section)",
-        "internal validation report",
-        "internal v1.3 reference-value patch",
+        "Handoffs/DIVERGENCE_REGISTER.md (B5 register, DIV-016 section)",
+        "Handoffs/B6_VALIDATION_REPORT.md",
+        "_v1.3_refvalue_patch.json",
         "series_registry.json (series.S512.validation.v1.3_patch)",
         "data/integrated/MWoN_panel/combined_tables/5.7.csv"
       ],
@@ -505,8 +505,8 @@
       "reference_values_update": "NO.",
       "resolution": "No patch required; V03_S506 PASS (anchors unchanged).",
       "references": [
-        "internal divergence-register working notes (DIV-017 section)",
-        "internal validation report",
+        "Handoffs/DIVERGENCE_REGISTER.md (B5 register, DIV-017 section)",
+        "Handoffs/B6_VALIDATION_REPORT.md",
         "data/integrated/MWoN_panel/combined_tables/5.7.csv"
       ],
       "status": "accepted_no_change"
@@ -527,8 +527,8 @@
       "reference_values_update": "NO (anchors unchanged; objective met).",
       "resolution": "No refval patch; V03_S508 and V03_S509 PASS.",
       "references": [
-        "internal divergence-register working notes (DIV-018 section)",
-        "internal validation report",
+        "Handoffs/DIVERGENCE_REGISTER.md (B5 register, DIV-018 section)",
+        "Handoffs/B6_VALIDATION_REPORT.md",
         "data/integrated/MWoN_panel/combined_tables/E.2.csv"
       ],
       "status": "accepted_no_change"
@@ -549,8 +549,8 @@
       "reference_values_update": "NO (book-period anchors unchanged). Note: S502/S503 EXT benchmarks are MISSING for the validator-scope reason in DIV-022, not a value error.",
       "resolution": "No refval patch; book-period V03 unaffected.",
       "references": [
-        "internal divergence-register working notes (DIV-019 section)",
-        "internal validation report",
+        "Handoffs/DIVERGENCE_REGISTER.md (B5 register, DIV-019 section)",
+        "Handoffs/B6_VALIDATION_REPORT.md",
         "DIVERGENCE_REGISTER.json (entry DIV-022 — related EXT-arm validator scoping)"
       ],
       "status": "accepted_no_change"
@@ -571,8 +571,8 @@
       "reference_values_update": "NO.",
       "resolution": "No refval patch; V03_S513 and V03_S514 PASS 3/3.",
       "references": [
-        "internal divergence-register working notes (DIV-020 section)",
-        "internal validation report",
+        "Handoffs/DIVERGENCE_REGISTER.md (B5 register, DIV-020 section)",
+        "Handoffs/B6_VALIDATION_REPORT.md",
         "DIVERGENCE_REGISTER.json (entry DIV-019, DIV-027)"
       ],
       "status": "accepted_no_change"
@@ -592,8 +592,8 @@
       "reference_values_update": "NO.",
       "resolution": "No refval patch; V03_S901 PASS 9/9.",
       "references": [
-        "internal divergence-register working notes (DIV-021 section)",
-        "internal validation report",
+        "Handoffs/DIVERGENCE_REGISTER.md (B5 register, DIV-021 section)",
+        "Handoffs/B6_VALIDATION_REPORT.md",
         "DIVERGENCE_REGISTER.json (entries DIV-015, DIV-016)"
       ],
       "status": "accepted_no_change"
@@ -617,13 +617,13 @@
       "reference_values_update": "NO value change (1954 fix within tolerance of the 1948/1989 anchors). Validator wiring changed instead (ext_subseries_filter='S50x-COMBINED', ext_year_after=1989 on V03_S502/V03_S503). OUTSTANDING: replace the tautological 1997/2010/2024 extension anchors with independent BEA anchors, or tag them explicitly as self-derived non-validating placeholders.",
       "review_flag": "Authored/opened during the P0.3 register unification (2026-07-01). This tautological-anchor issue is queued for remediation in the current RMWND comprehensive review.",
       "references": [
-        "internal divergence-register working notes (DIV-022 section)",
-        "internal validation report (section 4)",
+        "Handoffs/DIVERGENCE_REGISTER.md (B5 register, DIV-022 section)",
+        "Handoffs/B6_VALIDATION_REPORT.md (section 4)",
         "code/utils/series.py (BenchmarkValidator ext_subseries_filter/ext_year_after, ~line 100)",
         "code/V03_validators/V03_S502_constant_capital.py",
         "code/V03_validators/V03_S503_gross_final_product.py",
         "PIPELINE_STATE.json",
-        "series_registry.json",
+        "Outputs/Publish/series_registry.json",
         "data/integrated/MWoN_panel/combined_tables/H.1.csv"
       ],
       "status": "open — tautological anchors, independent BEA anchors required"
@@ -643,8 +643,8 @@
       "reference_values_update": "YES (registry correction, not panel) -- re-anchored to the STOCK values from the rebuilt v1.3 S510-A final CSV (byte-identical to v1.2): {1948: 3.2977830562153607, 1967: 4.028484627087216, 1989: 5.553599315647599}.",
       "resolution": "B6 applied the stock re-anchor (series_registry.json S510.validation.v1.3_patch). V03_S510 PASS 3/0/0. NOT a B4 regression.",
       "references": [
-        "internal divergence-register working notes (DIV-023 section)",
-        "internal validation report (section 2)",
+        "Handoffs/DIVERGENCE_REGISTER.md (B5 register, DIV-023 section)",
+        "Handoffs/B6_VALIDATION_REPORT.md (section 2)",
         "series_registry.json (series.S510.validation.v1.3_patch)",
         "data/integrated/MWoN_panel/combined_tables/5.7.csv"
       ],
@@ -668,8 +668,8 @@
       "reference_values_update": "NO (book value 2.3719 retained; source re-check flagged). A v1.3_patch note records the residual on the S503/XS003 registry entry (known_discrepancy).",
       "resolution": "B6 kept the refval; V03 remains FAIL 1/1/0 -- documented and accepted, out-of-panel-scope. Source re-check (Appendix I.1 line 21) queued for follow-up.",
       "references": [
-        "internal divergence-register working notes (DIV-024 section)",
-        "internal validation report (section 6)",
+        "Handoffs/DIVERGENCE_REGISTER.md (B5 register, DIV-024 section)",
+        "Handoffs/B6_VALIDATION_REPORT.md (section 6)",
         "series_registry.json (XS003 known_discrepancy note)",
         "PIPELINE_STATE.json",
         "data/source/book_tables/AS003_TableI1_EC_RATIO.csv"
@@ -696,8 +696,8 @@
       "reference_values_update": "YES (recomputed, not a book anchor) -- from the rebuilt v1.3 AS004-A final CSV: {1948: 112.09261546530418, 1953: 136.233440380527, 1958: 160.82057537632366, 1961: 176.4742150416932} (old: 123.539/137.009/139.247/154.152).",
       "resolution": "B6 recomputed and applied (series_registry.json XS004.validation.v1.3_patch). V03 PASS 5/0/0.",
       "references": [
-        "internal divergence-register working notes (DIV-025 section)",
-        "internal validation report (section 5)",
+        "Handoffs/DIVERGENCE_REGISTER.md (B5 register, DIV-025 section)",
+        "Handoffs/B6_VALIDATION_REPORT.md (section 5)",
         "series_registry.json (series.XS004.validation.v1.3_patch)",
         "DIVERGENCE_REGISTER.json (entry DIV-013)"
       ],
@@ -737,8 +737,8 @@
       "reference_values_update": "NO (panel) for all. Flagged for out-of-scope re-baselining against each study's own source.",
       "resolution": "B6 left all unchanged; V03 remains FAIL for all (documented, accepted, out-of-panel-scope). Re-baselining queued as separate registry-hygiene work.",
       "references": [
-        "internal divergence-register working notes (DIV-026 section)",
-        "internal validation report (still-failing table)",
+        "Handoffs/DIVERGENCE_REGISTER.md (B5 register, DIV-026 section)",
+        "Handoffs/B6_VALIDATION_REPORT.md (still-failing table)",
         "PIPELINE_STATE.json (v03_result)"
       ],
       "status": "accepted_fail_pending_out_of_scope_rebaseline",
@@ -759,8 +759,8 @@
       "reference_values_update": "PARTIAL -- removed the spurious 1925 benchmark (126.977); 5 in-range anchors retained (all PASS). NO gross switch in v1.3. If gross is adopted in v1.4, a coordinated S517/S513/S514/S510 re-baseline is required.",
       "resolution": "B6 dropped the 1925 benchmark (series_registry.json S517.validation.v1.3_patch); V03_S517 PASS 5/0/0 (was 5/0/1 MISSING). NET->gross convention switch DEFERRED to v1.4.",
       "references": [
-        "internal divergence-register working notes (DIV-027 section)",
-        "internal validation report (section 3)",
+        "Handoffs/DIVERGENCE_REGISTER.md (B5 register, DIV-027 section)",
+        "Handoffs/B6_VALIDATION_REPORT.md (section 3)",
         "series_registry.json (series.S517.validation.v1.3_patch)",
         "docs/variants/VPR_S517_gross_vs_net.md",
         "DIVERGENCE_REGISTER.json (entries DIV-008, DIV-020, DIV-023)"
@@ -776,7 +776,7 @@
       ],
       "book_intent": "e = S*/V* = (VA* - V*)/V*, where VA* = GFP* - Dp is the Shaikh-Tonak net Marxian value added and GFP* = TP* - Mp is the GROSS FINAL PRODUCT (an I-O final-demand transform mapping the productive sphere per Table 6.4). Book VA*_1989 = 4149.75, GFP*_1989 = 4363.57.",
       "modern_construction": "BEA GDP-by-Industry value added over partition A (goods+transport+trade) is 2776.8 (SIC 1989) / 3462.2 (NAICS 1997) - a factor 1.571x BELOW the book GFP*. The gap is the ST I-O reallocation of trade/finance surplus into productive final demand; it lives in the I-O structure, not in any value-added-by-industry sum. P2 found the post-1994 I-O matrix cache invalid and the extension does not use I-O tables. Therefore the book Marxian e cannot be recovered from BEA VA aggregates.",
-      "resolution": "The extension holds the book-terminal I-O uplift factor kIO = GFP*_1989/VA_partA_1989(SIC) = 1.5714 as an explicit, registered divergence in the S506-EXT-MARX faithful-concept variant (e = kIO*VA_partA*(1-dp)/V* - 1, ~2.5->3.9, brackets book 2.44 and rises). The fully-constructible S506-EXT (consistent BEA operating-surplus rate 0.73->1.15) is offered as a DISTINCT MEASURE with a methodological-break flag. Corroborated by Mohun's faithful replication (1.87@1989) also differing from the book by definitional latitude.",
+      "resolution": "The extension holds the book-terminal I-O uplift factor kIO = GFP*_1989/VA_partA_1989(SIC) = 1.5714 as an explicit, registered divergence in the S506-EXT-MARX faithful-concept variant (e = kIO*VA_partA*(1-dp)/V* - 1, ~2.5->3.9, brackets book 2.44 and rises). The fully-constructible S506-EXT (consistent BEA operating-surplus rate 0.73->1.15) is offered as a DISTINCT MEASURE with a methodological-break flag. Corroborated by Mohun's faithful replication (1.87@1989) also differing from the book by definitional latitude. UPGRADED 2026-07-07 (workpackage C/workpackage D1): the book-terminal kIO is no longer frozen at 1.5714. A time-varying benchmark-anchored bias-corrected kIO(t) (native 1992 SIC level anchor + NAICS 71-order annual trend, workpackage B1/B2/C splice) is integrated as arm S506-EXT-MARX-KIO, and the S506-COMBINED 1990-2024 tail is repointed to it. The frozen S506-EXT-MARX (kIO=1.5714) is retained UNCHANGED as the published conservative lower bound. See DIV-071.",
       "evidence": "P1_FORENSIC_REPORT.md; wpa_e_candidates.csv; wpa_e_final_series.csv; KB v2 _combined/6.4.csv (Table 6.4 mapping)",
       "vs_v1_3": "v1.3 hid this via a log-linear bridge (S503) + a level-splice (S512) that manufactured a spurious e=1.27@1998 (Tonak's 'strange drop'). Now exposed and registered.",
       "id": "DIV-028",
@@ -784,7 +784,11 @@
         "DIV-A10"
       ],
       "canonical_assigned": "REVIEW_2026-07 (2026-07-01)",
-      "source_work_package": "workpackage A"
+      "source_work_package": "workpackage A",
+      "upgrade_2026_07_07": "Resolution addendum (workpackage C §4.4): the book-terminal I-O uplift kIO is no longer held frozen at 1.5714. workpackage B1 re-ran the book's 85-order apparatus on the native 1992 SIC benchmark (machinery validated backward: denominator exact to 0.001%, transform +0.94%) -> kIO_1992 ~ 1.53-1.61 (mid 1.570), bracketing 1.5714. workpackage B2 built a benchmark-anchored NAICS 71-order annual kIO(t) 1997-2024 (margin mass exact to the dollar at 2017). workpackage C decomposed the NAICS-era level gap as ~72% omitted royalties, ~23% classification, ~7% aggregation, ~0% genuine change, and spliced a level-from-1992-benchmark / trend-from-annual series (S506-EXT-MARX-KIO): kIO rises 1.556 (1990) -> 1.5714 (~1996) -> 1.731 (2024). The frozen 1.5714 is corroborated for ~1990-96 and shown to understate the uplift thereafter. The non-constructibility of the modern aggregate numerator remains true; it is now bounded by an officially-sourced, backward-validated benchmark series rather than a single frozen constant. See new DIV-071.",
+      "related": [
+        "DIV-071"
+      ]
     },
     {
       "severity": "high",
@@ -897,7 +901,7 @@
       ],
       "book_intent": "Stock-form r* = S*/(K*+V*) and capacity-adjusted r*_adj continued on consistent components.",
       "modern_construction": "Pre-review S513-EXT had a 1990-1997 gap and S514-EXT was computed against a stale S513-EXT vintage (implied TCU multiplier 1.415 at 1990 - impossible for x TCU/100). After the workpackage A de-splice + real-SIC fill, S513-EXT covers 1990-2024 with real components (2024: 0.1604 -> 0.1770) and S514-EXT was recomputed in sync (multipliers now 0.76-0.83, sane TCU range).",
-      "resolution": "P02_S514 re-run against current S513 (code unchanged; data refresh). S513's 2024 registry refval (0.1604) was tautological+stale and is retired via internal registry-patch set (workpackage A). NOTE (open, user-gated): the S514 capacity adjustment is r* x TCU/100 while the book publishes r*' = r*/u (inverted operation) - flagged as a registry patch proposal requiring a method decision, not silently changed.",
+      "resolution": "P02_S514 re-run against current S513 (code unchanged; data refresh). S513's 2024 registry refval (0.1604) was tautological+stale and is retired via workpackage A_REGISTRY_PATCHES.json. NOTE (open, user-gated): the S514 capacity adjustment is r* x TCU/100 while the book publishes r*' = r*/u (inverted operation) - flagged as a registry patch proposal requiring a method decision, not silently changed.",
       "evidence": "wpa_v03_after.json; S514/S513 multiplier check (1990=0.824, 1998=0.829, 2024=0.761); T4 audit (S510-S516)",
       "vs_v1_3": "S513-EXT 1990-97 now populated (was NaN); S513-EXT 2024 0.1604->0.1770; S514-EXT 1990+ re-synced.",
       "id": "DIV-034",
@@ -933,13 +937,13 @@
         "excess": 34.86,
         "indirect_term": 40.76
       },
-      "remediation": "Excluding indirect gives Tw(1964)=70.29, but this alone flips NSW to +20.19 (book -8.1) because the benefit side also over-counts (see internal-NSW-basket-overcount-finding). A book-faithful S604 requires the Appendix-N Group I/II/III social-expenditure classification + annual labor shares (BEA SED tables, not in source tree) => G2-GATED data acquisition.",
+      "remediation": "Excluding indirect gives Tw(1964)=70.29, but this alone flips NSW to +20.19 (book -8.1) because the benefit side also over-counts (see workpackage B-DIV-NSW-BASKET). A book-faithful S604 requires the Appendix-N Group I/II/III social-expenditure classification + annual labor shares (BEA SED tables, not in source tree) => G2-GATED data acquisition.",
       "anu_rule_invoked": "anu-framework: no synthetic data; faithful-to-book; document divergences with arithmetic.",
       "where": "code/L01_loaders/L01_S604_total_tax_workers.py + data/source/book_tables/Table6_1_TaxAccounts.csv (sales_excise column)",
       "status": "PRIMARY_RESOLVED__RECON_ARM_ONLY",
       "id": "DIV-035",
       "aliases": [
-        "internal-NSW-indirect-tax-finding"
+        "workpackage B-DIV-S604-INDIRECT"
       ],
       "canonical_assigned": "REVIEW_2026-07 (2026-07-01)",
       "source_work_package": "workpackage B",
@@ -974,18 +978,26 @@
       "divergence_type": "systematic_basket_over_count_vs_appendix_N",
       "title": "The NSW family systematically over-states BOTH the benefit rate and the tax rate relative to Appendix N Table N.2 (BEA-API reconstruction uses broader baskets)",
       "classification": "(ii) METHOD DIVERGENCE (systematic, both sides)",
-      "description": "The Ch6 source CSVs are BEA-API reconstructions, not transcriptions of Appendix N. Compared to book Table N.2 (verbatim): benefit rate B1/EC ours 0.22/0.24/0.31/0.32/0.33 vs book 0.11/0.19/0.25/0.29/0.29 (1952/64/71/80/89); tax rate T1/EC ours 0.27/0.30/0.33/0.34/0.36 vs book 0.18/0.21/0.25/0.30/0.32; net transfer rate ours -0.049/-0.055/-0.018/-0.011/-0.033 vs book -0.07/-0.02/+0.01/-0.01/-0.04. Both sides run high; the net transfer (their difference) is closer but still diverges and even flips sign in 1971 (book +0.01 vs ours -0.018). The headline S607 NSW(1964)=-20.58 vs book Appendix N net transfer -8.1. Root cause: the reconstruction includes indirect taxes (tax side, see internal-NSW-indirect-tax-finding) and a fuller government-services allocation (benefit side, S606) than Appendix N's Group I/II labor-share classification with Group III exclusions.",
-      "remediation": "Book-faithful rebuild requires reconstructing the Appendix-N Group I/II/III social-expenditure classification + annual labor shares (labor share 0.727 for 1964 per N.1) from BEA social-welfare-expenditure and tax tables (BEA 1981 pp.121-159 cited in N.1). Data not in source tree => G2-GATED. Interim: reference values re-anchored to book Table N.2 / ST2002 published tables with divergence documented (internal registry-patch set (workpackage B)).",
+      "description": "The Ch6 source CSVs are BEA-API reconstructions, not transcriptions of Appendix N. Compared to book Table N.2 (verbatim): benefit rate B1/EC ours 0.22/0.24/0.31/0.32/0.33 vs book 0.11/0.19/0.25/0.29/0.29 (1952/64/71/80/89); tax rate T1/EC ours 0.27/0.30/0.33/0.34/0.36 vs book 0.18/0.21/0.25/0.30/0.32; net transfer rate ours -0.049/-0.055/-0.018/-0.011/-0.033 vs book -0.07/-0.02/+0.01/-0.01/-0.04. Both sides run high; the net transfer (their difference) is closer but still diverges and even flips sign in 1971 (book +0.01 vs ours -0.018). The headline S607 NSW(1964)=-20.58 vs book Appendix N net transfer -8.1. Root cause: the reconstruction includes indirect taxes (tax side, see workpackage B-DIV-S604-INDIRECT) and a fuller government-services allocation (benefit side, S606) than Appendix N's Group I/II labor-share classification with Group III exclusions.",
+      "remediation": "Book-faithful rebuild requires reconstructing the Appendix-N Group I/II/III social-expenditure classification + annual labor shares (labor share 0.727 for 1964 per N.1) from BEA social-welfare-expenditure and tax tables (BEA 1981 pp.121-159 cited in N.1). Data not in source tree => G2-GATED. Interim: reference values re-anchored to book Table N.2 / ST2002 published tables with divergence documented (workpackage B_REGISTRY_PATCHES.json).",
       "cross_publication_note": "S&T's own net-transfer-rate estimates vary widely across vintages (1985: ST1987 -11%, book N.2 1994 -3%, ST2002 -1.1%; our reconstruction -1.8%). Our reconstruction aligns better with the later (1994/2002) vintages than the 1987 essay (whose 1985 row Tonak flagged as containing errors).",
       "where": "code/P02_processors/P02_S60x + P02_XS11xx/12xx; data/source/book_tables/Table6_1_TaxAccounts.csv, Table6_2_BenefitAccounts.csv",
       "status": "OPEN_DOCUMENTED_G2_GATED",
       "id": "DIV-036",
       "aliases": [
-        "internal-NSW-basket-overcount-finding"
+        "workpackage B-DIV-NSW-BASKET"
       ],
       "canonical_assigned": "REVIEW_2026-07 (2026-07-01)",
       "source_work_package": "workpackage B",
-      "d3_note": "Per D3/DIV-064: the benefit+tax basket over-count is now confined to the labeled -RECON comparison arms; the book-period primaries are the book's own published Table N.2 rates. Divergence remains DOCUMENTED between arms; XS1101/XS1201/XS1202 cross-vintage FAILs unchanged."
+      "d3_note": "Per D3/DIV-064: the benefit+tax basket over-count is now confined to the labeled -RECON comparison arms; the book-period primaries are the book's own published Table N.2 rates. Divergence remains DOCUMENTED between arms; XS1101/XS1201/XS1202 cross-vintage FAILs unchanged.",
+      "annotations": [
+        {
+          "date": "2026-07-08",
+          "source_work_package": "TIER_A_W2 (applying W1c TIERA_W1C_PATCH)",
+          "action": "note_only",
+          "text": "XS1202 stays an honest FAIL after the 1964 refval provenance fix: the failing check is 1997 (refval +0.005 near-zero endpoint per ST2002 p.248/256; chopped actual -0.0203; abs_err 0.0253 > 0.02 share-tol). This is the systematic NSW-basket over-count already registered here (G2-gated on the Appendix-N Group I/II/III rebuild), NOT a refval error. No 1997 refval change proposed. XS1102/XS1103 published primaries reproduce the book Table N.2 rates exactly; the basket over-count is confined to the labeled -RECON comparison arms."
+        }
+      ]
     },
     {
       "date": "2026-07-01",
@@ -1008,17 +1020,25 @@
       "divergence_type": "benchmark_reference_correction",
       "title": "Resolution of DIV-026 for the NSW-family subset: reference values corrected to table-grade book/paper sources; validators reclassified honestly",
       "classification": "(v) VALIDATOR-SCOPE — refval correction (partial resolution of DIV-026)",
-      "description": "DIV-026 flagged S608 + XS11xx/12xx as pre-existing benchmark FAILs. workpackage B resolves the reference-value provenance: S608 rebuilt to book N.2 NtrV*/V* (was a non-book NSW/V*); XS1102/1103 re-anchored from ST1987 figure-reads to book N.2 B1/EC & T1/EC (table-grade); XS1202 corrected from a mislabeled-EC error (prior 1964:-0.0167 used 1954's EC 209.37) to the ST2002 appendix NSW/EC table (1964:-0.009); XS1201 corrected (no published NSW/GDP table exists; reference is an NSW$/GDP reconstruction). Residual benchmark FAILs are now genuine, book/paper-anchored, and documented under internal-NSW-basket-overcount-finding (the reconstruction diverges from the book), NOT artifacts of wrong reference values.",
-      "v03_before_after": "see internal workpackage-B report (captured before/after against proposed refvals).",
+      "description": "DIV-026 flagged S608 + XS11xx/12xx as pre-existing benchmark FAILs. workpackage B resolves the reference-value provenance: S608 rebuilt to book N.2 NtrV*/V* (was a non-book NSW/V*); XS1102/1103 re-anchored from ST1987 figure-reads to book N.2 B1/EC & T1/EC (table-grade); XS1202 corrected from a mislabeled-EC error (prior 1964:-0.0167 used 1954's EC 209.37) to the ST2002 appendix NSW/EC table (1964:-0.009); XS1201 corrected (no published NSW/GDP table exists; reference is an NSW$/GDP reconstruction). Residual benchmark FAILs are now genuine, book/paper-anchored, and documented under workpackage B-DIV-NSW-BASKET (the reconstruction diverges from the book), NOT artifacts of wrong reference values.",
+      "v03_before_after": "see workpackage B_REPORT.md (captured before/after against proposed refvals).",
       "supersedes_note": "Refines DIV-026 for these 6 series; the 3 non-NSW ES/XS in DIV-026 (XS1404/1504/1602) are out of workpackage B scope.",
-      "where": "series_registry.json validation.reference_values (via internal registry-patch set (workpackage B))",
+      "where": "series_registry.json validation.reference_values (via workpackage B_REGISTRY_PATCHES.json)",
       "status": "RESOLVED_REFVALS__DIVERGENCE_DOCUMENTED",
       "id": "DIV-037",
       "aliases": [
-        "internal-NSW-benchmark-resolution"
+        "workpackage B-DIV-026-RESOLVE"
       ],
       "canonical_assigned": "REVIEW_2026-07 (2026-07-01)",
-      "source_work_package": "workpackage B"
+      "source_work_package": "workpackage B",
+      "annotations": [
+        {
+          "date": "2026-07-08",
+          "source_work_package": "TIER_A_W2 (applying W1c TIERA_W1C_PATCH)",
+          "action": "amend",
+          "text": "CORRECTION: DIV-037's rationale for setting XS1202.1964 = -0.009 ('the prior -0.0167 used 1954's EC 209.37') rests on a factual error. 209.37 is the 1964 EC column of the ST2002 appendix labor-share table (p.258; columns 1952/1963/1964 = 196.35/210.42/209.37), NOT a 1954 column (there is no 1954 column). The value -0.0167 = Table 29.1 net social wage -3.49 / EC 209.37 is correct and 1964-consistent; the substituted -0.009 has no local corroboration and lies outside the paper's own boom-era band. Tier-A W2 REVERTS XS1202.1964 to -0.0167 (registry validation.reference_values). V03 effect: 1964 stays PASS, abs_err 0.0125 -> 0.0048 (accuracy/provenance improvement, no pass/fail flip). The residual XS1202 FAIL is unchanged and remains the genuine 1997 basket divergence under DIV-036. -0.0436 (from the appendix 'key data points' table) is REJECTED as a garbled extraction (rows fail NSW1+NSW2=Net)."
+        }
+      ]
     },
     {
       "date": "2026-07-01",
@@ -1039,7 +1059,7 @@
       ],
       "canonical_assigned": "REVIEW_2026-07 (2026-07-01)",
       "source_work_package": "workpackage C",
-      "feasibility_2026_07_02": "NOT implementable this pass. The value-form rate is e = S/V with V = lambda*.(CONWp)p and S = Hp - V (Table 4.1 revenue side). THREE of the four operands are now available: lambda* (rebuilt per-io-85-sector labor-value vector), Hp (total productive hours, directly from the rebuilt BLS panel), and Wp (production-worker wage bill, from the Ch5 wage series). The ONE missing operand is (CONWp)p -- the production-worker consumption basket decomposed to an io-85 COMMODITY vector at PRODUCER prices. Its source is the benchmark-year BEA PCE (personal-consumption) bridge table (producer value stripped of trade/transport margins), scaled to Wp. That operand is not present in the repo for the BOOK benchmark years 1958-1977 that Table 5.12 anchors (the in-repo archived BEA benchmark disks start at 1982; a 1982 PCE-Commodity bridge exists in-archive but 1982 is not a book benchmark year). See internal S703 concept-feasibility note.",
+      "feasibility_2026_07_02": "NOT implementable this pass. The value-form rate is e = S/V with V = lambda*.(CONWp)p and S = Hp - V (Table 4.1 revenue side). THREE of the four operands are now available: lambda* (rebuilt per-io-85-sector labor-value vector), Hp (total productive hours, directly from the rebuilt BLS panel), and Wp (production-worker wage bill, from the Ch5 wage series). The ONE missing operand is (CONWp)p -- the production-worker consumption basket decomposed to an io-85 COMMODITY vector at PRODUCER prices. Its source is the benchmark-year BEA PCE (personal-consumption) bridge table (producer value stripped of trade/transport margins), scaled to Wp. That operand is not present in the repo for the BOOK benchmark years 1958-1977 that Table 5.12 anchors (the in-repo archived BEA benchmark disks start at 1982; a 1982 PCE-Commodity bridge exists in-archive but 1982 is not a book benchmark year). See REVIEW_2026-07/S703_TRUE_CONCEPT_FEASIBILITY.md.",
       "gap_narrowed_from": "vague 'Ch4 Table 4.1/4.2 sector NIPA flow decomposition' -> the single operand (CONWp)p (PCE-commodity bridge, producer prices, book benchmark years).",
       "update_log": [
         {
@@ -1142,14 +1162,22 @@
       "title": "SIC-era per-sector gross output X_j is recovered (X = II_IO + bucket-VA), median per-sector error ~11.5%; aggregate-level results robust, single-sector lambda_j carries this bound",
       "classification": "(iv) DOCUMENTED APPROXIMATION with measured error bars",
       "description": "The BEA archive workbook publishes SIC gross output only from 1977; for 1947-1972 X_j is recovered via the accounting identity X = II + VA with IO-basis intermediate purchases (Z column sums, exact) and NIPA-bucket value added distributed within buckets in proportion to intermediate purchases. Cross-validated against the EXACT 1967 X (recoverable because the 1967 labeled A was genuinely coefficient-form): log-correlation 0.909, median per-sector deviation 11.5%. A GO-anchored alternative was tested and REJECTED (imports the NIPA-vs-IO intermediates-basis wedge; durables +44%, construction -52%). 1990-96 annual X uses bucket VA growth chained at 1987 across the 72SIC/87SIC workbook vintages. Consequence: benchmark-level aggregates (the published scalars) inherit bucket-level accuracy; any future SECTOR-level use of the lambda vectors must carry the ~±12% median X error.",
-      "where": "data/intermediate/io_matrices_rebuilt/MATRIX_REBUILD.md sec 4; internal matrix-rebuild script",
+      "where": "data/intermediate/io_matrices_rebuilt/workpackage C_MATRIX_REBUILD.md sec 4; (internal)/wpc_t1_rebuild.py",
       "status": "CLOSED_DOCUMENTED_BOUNDS",
       "id": "DIV-042",
       "aliases": [
         "DIV-C14"
       ],
       "canonical_assigned": "REVIEW_2026-07 (2026-07-01)",
-      "source_work_package": "workpackage C"
+      "source_work_package": "workpackage C",
+      "annotations": [
+        {
+          "date": "2026-07-08",
+          "source_work_package": "TIER_A_W1d",
+          "title": "Published lambda precision made honest: 3 significant figures + LAMBDA_BAND sidecars",
+          "text": "F3 (REVIEW_2026-07-07) propagated this entry's ~+/-11.5% recovered-X_j bound through the published lambda computation: the S701 aggregate is honest to +/-2.7-4.3% (independent-error MC) up to +/-11.65% (worst-case common-mode); S702 to +/-6.4-9.4% (MC, only 2-5 covered sectors); sector-level lambda_j +/-7-11%. The 15-17 significant figures previously printed in data/final + chopped were false precision. Remediation (W1d, 2026-07-08): published S701/S702 values (data/final, chopped, extenbook) now rounded to 3 significant figures at the P02 final-emit stage ONLY (data/intermediate retains full float64; S703 consumes full-precision L01 panels, so no flow-through); explicit uncertainty sidecars emitted at data/final/S701_LAMBDA_BAND.csv and S702_LAMBDA_BAND.csv (year, central, lo, hi; lo=central/1.115, hi=central/0.885, pattern per S506_KIO_BAND.csv; generator code/O06_output/O04_generate_lambda_bands.py); DPR/EPR precision sections added; goldens re-baselined for exactly S701/S702. Status stays CLOSED_DOCUMENTED_BOUNDS (remediation annotation, not a re-opening). Evidence: internal-review-notes/TIERA_W1D_LAMBDA.md + F3_CH7_CONSUME_PATH.md sec 3 + F3_lambda_sensitivity_{aggregate,sector}.csv."
+        }
+      ]
     },
     {
       "date": "2026-07-01",
@@ -1160,7 +1188,7 @@
       "title": "S901 summary table was stale relative to the corrected S608 (net social wage / Appendix N)",
       "classification": "resolved-on-detection (rebuild)",
       "description": "S901's stored NSW/V* column (S901-A/NSW_V_S608) was carried from an OLD S608 build (e.g. 1952 = -0.08575, 1989 = -0.08373). The canonical S608 (net social wage, book Appendix N) had since been corrected (1952 = -0.04848, 1989 = -0.03281). V03_S901 round-trip therefore FAILED for all 1952-1989 NSW_V rows (max_abs_err 0.079). The registry's frozen derived_statistic 1989_NSW_V (-0.0837) was likewise stale.",
-      "resolution": "Re-ran P02_S901 to pull the current canonical upstreams; NSW_V now matches S608 exactly (round-trip clean). Registry derived_statistic 1989_NSW_V refresh proposed in internal registry-patch set (workpackage D) (-> -0.03280815). V03_S901 de-tautologised to take endpoint expectations from live upstream (not the frozen scalar), so future upstream corrections auto-propagate.",
+      "resolution": "Re-ran P02_S901 to pull the current canonical upstreams; NSW_V now matches S608 exactly (round-trip clean). Registry derived_statistic 1989_NSW_V refresh proposed in workpackage D_REGISTRY_PATCHES.json (-> -0.03280815). V03_S901 de-tautologised to take endpoint expectations from live upstream (not the frozen scalar), so future upstream corrections auto-propagate.",
       "impact": "S901 chopped + final regenerated; golden snapshot updated. No other series affected (S901 is terminal/aggregative). Depends on the S608/Appendix N groundtruth owned by workpackage B.",
       "id": "DIV-043",
       "aliases": [
@@ -1253,7 +1281,7 @@
       "title": "Study-05 'Mohun 2005' series are 1948-1989 book-period reconstructions, not transcriptions of Mohun's published 1964-2001 tables (an internal review task)",
       "kind": "reconstruction_provenance",
       "description": "All four study_05_mohun_2005 series are built (pass-through) from project reconstruction CSVs Mohun_mohun_*_1948_1989(_CORRECTED).csv that apply Mohun-style SM classification to ST BOOK-PERIOD data (1948-1989). They are attributed to 'Mohun 2005 (CJE 1964-2001)' and their chopped headers/period labels read [1964,2001] (an internal review task), but actual data years are 1948-1989. Their values do NOT reproduce Mohun's published figures: XS1401 e (1.72->1.87 over 1964-89) vs Mohun SM e (1.97->3.00, 1964-2001); XS1402 L_p/L (~0.55->0.52) vs Mohun ~0.45->0.40; XS1403 whole-economy V* ($thousands) vs Mohun services-only 1988 Table 3. Each series' single 1948 refval equals its own output (tautological); no year-matched external Mohun anchor exists. XS1403's prior 'Mohun 2005 Table 2, p.807' citation was WRONG (Table 2 = productive-labour headcounts; the wage/variable-capital anchor is Table 3).",
-      "resolution": "T1 study anchors (Mohun Fig 4 / Fig 2 / Table 2 / Table 3, verbatim numbers) added to all four research JSONs with honest 'reconstruction, not year-matched' notes; dangling KB paths repointed to book/paper digitization (Mohun 2005, US 1964-2001); XS1403 citation corrected to Table 3. Validator class documented as 'none/load-fidelity' (no external anchor) via validation_source patches; tautology registered here per non-negotiable #4. Period label [1964,2001]->[1948,1989] patch emitted (an internal review task). Note: merge agent may optionally null the tautological refvals and validate load-fidelity directly against the source reconstruction CSV.",
+      "resolution": "T1 study anchors (Mohun Fig 4 / Fig 2 / Table 2 / Table 3, verbatim numbers) added to all four research JSONs with honest 'reconstruction, not year-matched' notes; dangling KB paths repointed to data/raw/book_digitization/2005_Mohun_US_1964_2001/; XS1403 citation corrected to Table 3. Validator class documented as 'none/load-fidelity' (no external anchor) via validation_source patches; tautology registered here per non-negotiable #4. Period label [1964,2001]->[1948,1989] patch emitted (an internal review task). Note: merge agent may optionally null the tautological refvals and validate load-fidelity directly against the source reconstruction CSV.",
       "_group": "B",
       "id": "DIV-049",
       "aliases": [
@@ -1276,9 +1304,9 @@
       "title": "\"Mohun 2013\" unproductive-labour level series are a mislabeled 1948-1989 predecessor-build-backward decomposition, not Mohun 2013 data; refvals were tautological",
       "kind": "provenance_mislabel + tautological_refval + fabricated_construction_formula",
       "description": "XS1501/1502/1503 are attributed to Mohun (2013) 'Unproductive Labor in the U.S. Economy 1964-2010' (RRPE 46(3):355-379) and registered with year_range 1948-1989. Findings of the 2026-07-01 review: (1) Mohun 2013 covers 1964-2010 and publishes NO year-by-year employment-LEVEL table -- its quantitative content is Figures 1-6 (shares/percentages) plus Table 1 (sector % of CES-missing wages) and Tables 2-3 (industry classification lists). No table gives Lp/Lu/Luw/Lum in thousands for any year. (2) The shipped source (Mohun_unproductive_decomposition_1948_1989.csv, columns Luw_mohun/Lum_mohun/Lu_mohun) is a separate ST-method (predecessor-build project) backward decomposition covering 1948-1989; its numbers do not appear in Mohun 2013. (3) The registry single-year (1948) reference_values are exactly equal to the source CSV and to the final output (verified identical) -> TAUTOLOGICAL, forbidden. (4) The registry construction formulas 'Lu x 0.813' (XS1501) and 'Lu x 0.187' (XS1502) are FABRICATED and were never executed: the P02/L01 code loads Luw_mohun/Lum_mohun directly (a ~0.454/0.546 year-varying split), and Lu(1964) x 0.813 = 22802 vs shipped Luw = 12725 (no match). (5) The shipped ~0.454/0.546 class split ALSO fails to reproduce Mohun's OWN published class shares: shipped 1964 Luw/L=20.3% vs Mohun Fig2 25.1%; shipped Lum/L=24.4% vs Mohun Fig3 16.8%.",
-      "resolution": "D4 executed the recommended real fix. XS1501/1502/1503 have been REBUILT from Mohun's ACTUAL published estimates (Mohun 2014, RRPE 46(3):355-379, Figures 1-3): they are now SHARES of total employment over 1964-2010, anchored to Mohun's own text-reported benchmark values (external, non-tautological): XS1501 {1964:0.251, 2007:0.300}; XS1502 {1964:0.168, 1991:0.199, 2010:0.179}; XS1503 {1964:0.420, 2003:0.490, 2010:0.475}. The fabricated 'Lu x 0.813/0.187' construction and the tautological 1948 level refvals are retired. The mislabeled 1948-1989 predecessor-build decomposition is preserved as a labeled variant arm (chopped/_variants_predecessor-build/, VARIANT_PROVENANCE.md) and is NOT published as a primary series. Attribution corrected to Mohun (2014). V03 PASS: XS1501 2/2, XS1502 3/3, XS1503 3/3 + decomposition identity at 1964 (0.419 vs 0.420, absdiff 0.001).",
+      "resolution": "D4 executed the recommended real fix. XS1501/1502/1503 have been REBUILT from Mohun's ACTUAL published estimates (Mohun 2014, RRPE 46(3):355-379, Figures 1-3): they are now SHARES of total employment over 1964-2010, anchored to Mohun's own text-reported benchmark values (external, non-tautological): XS1501 {1964:0.251, 2007:0.300}; XS1502 {1964:0.168, 1991:0.199, 2010:0.179}; XS1503 {1964:0.420, 2003:0.490, 2010:0.475}. The fabricated 'Lu x 0.813/0.187' construction and the tautological 1948 level refvals are retired. The mislabeled 1948-1989 predecessor-build decomposition is preserved as a labeled variant arm (chopped/_variants_predecessor/, VARIANT_PROVENANCE.md) and is NOT published as a primary series. Attribution corrected to Mohun (2014). V03 PASS: XS1501 2/2, XS1502 3/3, XS1503 3/3 + decomposition identity at 1964 (0.419 vs 0.420, absdiff 0.001).",
       "task": "T1/T3",
-      "evidence": "internal registry-patch set (workpackage D); D4_V03_CAPTURE.json; data/source/external_studies/mohun_2013_published_shares.csv; research/XS150{1,2,3}_research.json d4_rebuild block.",
+      "evidence": "internal-review-notes/D4_REGISTRY_PATCHES.json; D4_V03_CAPTURE.json; data/source/external_studies/mohun_2013_published_shares.csv; research/XS150{1,2,3}_research.json d4_rebuild block.",
       "_group": "C",
       "id": "DIV-050",
       "aliases": [
@@ -1397,7 +1425,7 @@
       "divergence_type": "input_approximation__held_1977_structure_1990_1996",
       "classification": "(iv) DOCUMENTED APPROXIMATION (real replacement now available, not yet wired)",
       "title": "Ch7 extension holds the 1977 I-O technical structure for 1990-1996; the real BEA 1987 & 1992 SIC benchmark matrices are now acquired + validated in-repo (wiring pending an io-85 concordance)",
-      "description": "internal workpackage-C report stated the SIC 1982/1987/1992 benchmarks are 'not in the repo in any form' and held the rebuilt-1977 structure (with annual X) for the 1990-1996 extension window. That claim is FALSE: the full BEA historical-benchmark distribution disks are archived in-repo at the BEA historical-benchmark input-output distribution disks {1982hb,1987hb,1992hb}/, and are also live-downloadable from apps.bea.gov (web-verified 2026-07-02). N1 built and validated Commodity-by-Commodity Total-Requirements Leontief inverses for 1987 (ndn0019 TBL4-87.DAT) and 1992 (ndn0180 CXCTR.TXT), both 97-order BEA summary, into io_matrices_rebuilt/{1987,1992}_L_bea_summary.csv + _A_bea_summary.csv (A = I - L^-1). Validation: L*(I-A)=I to ~1e-15, L diag>=1, mean total-requirements multiplier 1.95 (1987) / 1.99 (1992) -- matching the workpackage C NAICS band. These two vintages exactly bracket the extension's only SIC window (1990-91 -> nearest benchmark 1987; 1992-96 -> 1992). Held-1977 io-85 mean multiplier is 2.23 vs real ~1.97 => the held structure overstates Leontief amplification by ~13% in 1990-1996 (biases lambda_p UP), which the real-vintage wiring would remove.",
+      "description": "workpackage C_REPORT stated the SIC 1982/1987/1992 benchmarks are 'not in the repo in any form' and held the rebuilt-1977 structure (with annual X) for the 1990-1996 extension window. That claim is FALSE: the full BEA historical-benchmark distribution disks are archived in-repo at data/raw/Outputs/Archive/Historical/.../bea-historicalBenchmarkInputOutput/{1982hb,1987hb,1992hb}/, and are also live-downloadable from apps.bea.gov (web-verified 2026-07-02). N1 built and validated Commodity-by-Commodity Total-Requirements Leontief inverses for 1987 (ndn0019 TBL4-87.DAT) and 1992 (ndn0180 CXCTR.TXT), both 97-order BEA summary, into io_matrices_rebuilt/{1987,1992}_L_bea_summary.csv + _A_bea_summary.csv (A = I - L^-1). Validation: L*(I-A)=I to ~1e-15, L diag>=1, mean total-requirements multiplier 1.95 (1987) / 1.99 (1992) -- matching the workpackage C NAICS band. These two vintages exactly bracket the extension's only SIC window (1990-91 -> nearest benchmark 1987; 1992-96 -> 1992). Held-1977 io-85 mean multiplier is 2.23 vs real ~1.97 => the held structure overstates Leontief amplification by ~13% in 1990-1996 (biases lambda_p UP), which the real-vintage wiring would remove.",
       "status": "OPEN_MATRICES_BUILT__EXTENSION_WIRING_PENDING",
       "remediation": "Remaining step (bounded, no fabrication): build an io-85 (BLS-panel industry) -> BEA-87/92-summary (97 commodity) concordance for the hours vector, analogous to sic_naics_bridge.csv. The schemes are CROSS-CUTTING (io-85 splits agriculture into Dairy/Poultry/Meat where the 1987-SIC summary aggregates to Livestock/Other-ag; 1987-SIC also merges 05+06, 09+10, 20+21, 22+23), so it is a genuine mapping, not identity, and must be built faithfully before re-running P02 on the real vintages and diffing. 1982 is OBTAINED but not built (clean published TR is 6-digit/498-order only; a 2-digit make/use derivation did not validate) and is NOT needed by any current series (no book or extension year falls nearest to 1982).",
       "artifacts": [
@@ -1439,7 +1467,7 @@
         "ST_own_appendix_data": "OBTAINABLE-FREE — Shaikh 1987/2000 welfare-state PDFs (anwarshaikhecon.org, academia.edu) + Bard DigitalCommons Archives of Anwar Shaikh items 934 ('Social Wage US Paper', 22.9MB working folder) and 91 ('Shaikh Tonak 1994 IO Data'); likely contain the annual appendix / working spreadsheets = the answer key."
       },
       "remediation": "Candidate B (from-primitives rebuild enabling faithful extension) is unblocked in principle but requires an acquisition+extraction job, not executable in this review session. Interim: Candidate A (N3-DIV-NSW-CANDIDATE-A) provides a book-faithful arm for 1952-1989 now. Full acquisition spec: N3_NSW_REPORT.md T4.",
-      "supersedes_note": "Refines internal-NSW-indirect-tax-finding + internal-NSW-basket-overcount-finding status from 'G2-gated, source not in tree' to 'source identified & mostly public; extraction + one paywalled item remain'.",
+      "supersedes_note": "Refines workpackage B-DIV-S604-INDIRECT + workpackage B-DIV-NSW-BASKET status from 'G2-gated, source not in tree' to 'source identified & mostly public; extraction + one paywalled item remain'.",
       "status": "ACQUISITION_SPEC_WRITTEN__EXTRACTION_PENDING",
       "id": "DIV-056",
       "aliases": [
@@ -1457,7 +1485,7 @@
       "divergence_type": "candidate_arm_available__book_faithful",
       "title": "A book-period-faithful NSW candidate arm (1952-1989) now exists, built from verbatim Tables N.1/N.2 + Table H.1 EC; adoption user-gated",
       "classification": "(vii) CANDIDATE ARM — does not alter primaries",
-      "description": "data/candidate/nsw/P02_NSW_bookfaithful_CANDIDATE.py (relocated by N4 out of the validated triad) emits data/candidate/nsw/nsw_bookfaithful_CANDIDATE_1952_1989.csv: benefit_rate (B1/EC), tax_rate (T1/EC), ntr_rate (Ntrrate) = Table N.2 verbatim (fit EXACT vs the book), plus dollar levels = rate*EC (rounding-band; exact 1964 = B1 68.0 / T1 76.2 / net -8.1 from Table N.1). This is strictly more faithful to Appendix N than the live BEA-API reconstruction (which over-states both baskets, internal-NSW-basket-overcount-finding). It is a TRANSCRIPTION of the finished book series, valid only for 1952-1989 and validating nothing new about the method.",
+      "description": "data/candidate/nsw/P02_NSW_bookfaithful_CANDIDATE.py (relocated by N4 out of the validated triad) emits data/candidate/nsw/nsw_bookfaithful_CANDIDATE_1952_1989.csv: benefit_rate (B1/EC), tax_rate (T1/EC), ntr_rate (Ntrrate) = Table N.2 verbatim (fit EXACT vs the book), plus dollar levels = rate*EC (rounding-band; exact 1964 = B1 68.0 / T1 76.2 / net -8.1 from Table N.1). This is strictly more faithful to Appendix N than the live BEA-API reconstruction (which over-states both baskets, workpackage B-DIV-NSW-BASKET). It is a TRANSCRIPTION of the finished book series, valid only for 1952-1989 and validating nothing new about the method.",
       "fit_report": {
         "rate_columns": "EXACT (candidate == Table N.2) for all 38 years, all 3 rate rows.",
         "dollar_rounding_1964": {
@@ -1491,8 +1519,8 @@
       ],
       "book_intent": "MWoN Table 5.8 row 'K* = C*_f = fixed nonresidential GROSS private capital' (source tag 'BEA 1987', gross reproducible tangible wealth at current replacement cost): 384.30 (1948), 710.90 (1958), 1093.00 (1967), 4225.20 (1979), 4844.40 (1980), 8387.49 (1989). r* = S*/K* uses this gross K* directly (no V* in denominator). Verbatim: 'the capital stock measured at current replacement costs' (KB v2 chunk 015).",
       "modern_construction": "S517-A/EXT/COMBINED = BEA Fixed Assets Table 4.1 Line 1 (private nonresidential), current-cost NET stock: 291.56 (1948) .. 6699.84 (1989) .. 35899.94 (2024). Runs 20.1%-24.1% below the book at benchmark years (mean abs dev 21.8% over 1948-1989).",
-      "adjudication_D2": "G3 resolved 'focus on Shaikh-Tonak replication'. Empirical test vs book Table 5.8 (levels AND trend): as-published NET is the BEST-fitting CONSTRUCTIBLE variant (MAD 21.8%) - every productive-boundary scrub moves FURTHER from the book because the book is gross (ABOVE net) while scrubs cut net lower: ex-fin 24.5%, ex-ipp 26.2%, ex-both 28.9%. The gross concept that WOULD fit best is NOT cleanly constructible: BEA publishes no current-$ gross stock for private nonresidential fixed assets (VPR_S517_gross_vs_net BEA-API query 2026-05-24); FA Table 4.2 is a dimensionless chain quantity index and is NOT cached; the implied book_gross/net ratio is non-constant (1.25-1.32) and vintage-confounded (1987-vintage gross vs modern net that ALSO carries backcast IPP). A net x (gross/net) rescale would freeze a non-constant ratio and mix vintages -> fails the no-synthetic smell test as a PRIMARY. VERDICT: keep as-published net PRIMARY (best constructible book match); this residual is the headline registered divergence; document the gross concept, do not synthesize it.",
-      "resolution": "PRIMARY K* = S517-COMBINED (net) UNCHANGED. r* path therefore UNCHANGED by D2. Productive-boundary concepts retained as clearly-labelled VARIANT subseries S517-EXFIN / S517-EXIPP / S517-EXBOTH (P02_S517._variant_frames). Book gross K* remains documented at data/source/book_tables/_panel_Kstar_gross_1948_1989.csv (book-period only; not wired as primary; no constructible current-$ gross extension). Consolidates DIV-A15 and DIV-027; corrects the stale 'S513 does NOT depend on S517' claim in VPR_S517_gross_vs_net (false since v1.2 stock-form r*).",
+      "adjudication_D2": "G3 resolved 'focus on Shaikh-Tonak replication'. Empirical test vs book Table 5.8 (levels AND trend): as-published NET is the BEST-fitting CONSTRUCTIBLE variant (MAD 21.8%) - every productive-boundary scrub moves FURTHER from the book because the book is gross (ABOVE net) while scrubs cut net lower: ex-fin 24.5%, ex-ipp 26.2%, ex-both 28.9%. The gross concept that WOULD fit best is NOT cleanly constructible: BEA publishes no current-$ gross stock for private nonresidential fixed assets (VPR_S517_gross_vs_net BEA-API query 2026-05-24); FA Table 4.2 is a dimensionless chain quantity index and is NOT cached; the implied book_gross/net ratio is non-constant (1.25-1.32) and vintage-confounded (1987-vintage gross vs modern net that ALSO carries backcast IPP). A net x (gross/net) rescale would freeze a non-constant ratio and mix vintages -> fails the no-synthetic smell test as a PRIMARY. VERDICT: keep as-published net PRIMARY (best constructible book match); this residual is the headline registered divergence; document the gross concept, do not synthesize it. [SUPERSEDED IN PART 2026-07-07: the non-constructibility claim applies to the EXTENSION arm (1990+) only - the book-period 1948-89 current-USD gross K* IS in-tree and now ships as S517/S513/S514-GROSS-A book-anchored variants; see DIV-070 and the 2026-07-07 scope-narrowing note.]",
+      "resolution": "PRIMARY K* = S517-COMBINED (net) UNCHANGED. r* path therefore UNCHANGED by D2. Productive-boundary concepts retained as clearly-labelled VARIANT subseries S517-EXFIN / S517-EXIPP / S517-EXBOTH (P02_S517._variant_frames). Book gross K* remains documented at data/source/book_tables/_panel_Kstar_gross_1948_1989.csv (book-period only; not wired as primary; no constructible current-$ gross extension). Consolidates DIV-A15 and DIV-027; corrects the stale 'S513 does NOT depend on S517' claim in VPR_S517_gross_vs_net (false since v1.2 stock-form r*). | 2026-07-07 (K-plan): book-period gross K* is now MATERIALIZED as variant subseries S517-GROSS-A (VPR_S517_gross_book), feeding S513-GROSS-A / S514-GROSS-A (the book's published r*/r*'). Primary net path UNCHANGED. See DIV-070 + K_GROSS_IMPLEMENTATION.md.",
       "quantified": {
         "r_star_as_published_pct": {
           "1948": 39.46,
@@ -1511,9 +1539,16 @@
           "1989": -20.1
         }
       },
-      "evidence": "internal analysis script; P3_CAPITAL_VARIANTS.csv; CAPITAL_SCRUB_MEMO.md; internal workpackage-A report (DIV-A15); KB v2 _combined/5.8.csv",
+      "evidence": "(internal)/d1_analysis.py; P3_CAPITAL_VARIANTS.csv; CAPITAL_SCRUB_MEMO.md; workpackage A_REPORT.md (DIV-A15); KB v2 _combined/5.8.csv",
       "aliases": [
         "DIV-D01"
+      ],
+      "constructibility_refinement_2026_07_07": "NARROWED (K-plan WP-K4; basis F2_KSTAR_FIDELITY.md §4). DIV-058's blanket non-constructibility claim over-reached: it is TRUE only for the EXTENSION arm (1990-2025). Split by arm: (a) BOOK PERIOD 1948-1989 — GROSS K* IS fully constructible and was already in the tree (data/source/book_tables/_panel_Kstar_gross_1948_1989.csv = book Table 5.8 gross); it is NOW materialized as the book-faithful variant S517-GROSS-A, and S*/K*_gross reproduces the book's OWN published r*/r*' to MAE 0.0025/0.0023 (F2). (b) EXTENSION 1990-2025 — current-$ gross is GENUINELY non-constructible (BEA discontinued current-cost gross at the 1997 revision; FA 4.2 is a dimensionless Fisher quantity index, not current-$; a net x (gross/net) rescale freezes a non-constant 1.24-1.35 ratio and mixes vintages -> synthetic). So the primary stays NET (best constructible FULL-period match); the gross concept is now an ADDITIVE book-period variant, not just a documented residual.",
+      "lucky_cancellation_note_2026_07_07": "The shipped headline r* (S513, net K* + V* in the denominator) lands only -0.3% to -8.4% (mean -3.7%) from the book's own r*=S*/K*_gross NOT because the capital axis is right, but because two off-book choices offset: net K* is ~22% too small (pushes r* up) while the extra +V* in the denominator pushes it back down, and K_net+V* ~= K_gross by numeric near-coincidence (1948: 379.97 vs 384.30, 1.1% apart; the cancellation decays to ~8% by the 1980s). On the PURE capital axis (same S*/K* formula, gross vs net) the swap is worth ~22%. The S513-GROSS-A / S514-GROSS-A variants expose this transparently. See F2_KSTAR_FIDELITY.md §2-3 + DIV-070.",
+      "variants_added_2026_07_07": [
+        "S517-GROSS-A",
+        "S513-GROSS-A",
+        "S514-GROSS-A"
       ]
     },
     {
@@ -1583,7 +1618,7 @@
       "title": "Extension total-employment L (BLS establishment total nonfarm incl. govt) vs the book's total labor L (incl. self-employed and agriculture), held equal at the 1989 anchor",
       "classification": "(v) UNIVERSE/CONCEPT GAP — corrected at overlap, residual growth-basis gap disclosed",
       "book_intent": "Book L (Shaikh-Tonak 1994 Table 5.5 / Appendix F Table F.1; FULL_TEXT.md L449/L295) is TOTAL labor over ALL sectors — Lj = PEP = FEE (full-time-equivalent employees) + SEP (self-employed persons) — explicitly including the government 'dummy' and trade/finance. Book L_1989 = 113511 thousand.",
-      "modern_construction": "The extension L is BLS CES total nonfarm ALL EMPLOYEES incl. government (CES0000000001; fetched to data/raw/bls/bls_ces_total_nonfarm_all_employees.csv), an ESTABLISHMENT count that includes government but EXCLUDES self-employed persons (SEP) and agriculture. Raw CES0000000001_1989 = 108046.83 thousand vs book 113511 (~4.8% below, the SEP+agriculture wedge). P02_S515/P02_S516 multiplicatively RE-ANCHOR CES0000000001 to book L at 1989 (Lscale = 113511/108046.83 = 1.0506), so the LEVEL matches the book exactly at the anchor; the residual is a growth-basis concept gap (establishment vs household/self-employed universe) carried forward on the CES growth trajectory.",
+      "modern_construction": "The extension L is BLS CES total nonfarm ALL EMPLOYEES incl. government (CES0000000001; fetched to data/raw/api_data/BLS/bls_ces_total_nonfarm_all_employees.csv), an ESTABLISHMENT count that includes government but EXCLUDES self-employed persons (SEP) and agriculture. Raw CES0000000001_1989 = 108046.83 thousand vs book 113511 (~4.8% below, the SEP+agriculture wedge). P02_S515/P02_S516 multiplicatively RE-ANCHOR CES0000000001 to book L at 1989 (Lscale = 113511/108046.83 = 1.0506), so the LEVEL matches the book exactly at the anchor; the residual is a growth-basis concept gap (establishment vs household/self-employed universe) carried forward on the CES growth trajectory.",
       "materiality": "This gap replaces the pre-review dominant defect: the old extension L was total PRIVATE employees (CES0500000001, 90120 @1989), dropping ~18M government workers and driving the -19.7% L break / -22% Lu break at the seam. With CES0000000001 re-anchored, the L seam break is +1.4% and the Lu seam break is +2.6% (both continuous, within the 5% guard).",
       "resolution": "Book-anchored multiplicative level-splice @1989; residual SEP/agriculture growth-basis gap DISCLOSED here. Fully faithful L would require a household-survey self-employment add-on (BLS CPS SEP) unified to the establishment total — deferred as an optional quality upgrade.",
       "description": "L-universe divergence for the S515/S516 employment extension. Book total labor L includes self-employed and agriculture; the BLS CES total-nonfarm-incl-govt establishment series does not. Held equal at the 1989 anchor via multiplicative level-splice; residual growth-basis gap disclosed. Supersedes the retired total-private-L construction (the pre-review -19.7% L / -22% Lu break).",
@@ -1651,9 +1686,9 @@
       "classification": "(vii) PRIMARY ADOPTION — user-ratified arm swap; reconstruction preserved",
       "description": "Per the user-ratified D3 decision, the book-period primary -A for S607/S608/S609/XS1102/XS1103 is now book-faithful (Candidate A = Shaikh & Tonak 1994 Table N.2 rates verbatim + Table N.1 1964 dollar trio + Table H.1 EC). XS1102-A=B1/EC, XS1103-A=T1/EC, S608-A=Ntrrate are book-verbatim (V03 5/5). S607-A=Ntrrate*EC (dollar rounding-band; 1964=-8.1 exact). S609-A=book-faithful NSW / NIPA NI (no book NSW/NI table exists -> hybrid). The prior BEA-API reconstruction is PRESERVED byte-for-byte as -RECON-A (and S607-RECON-COMBINED); nothing is deleted (.pre_d3 backups + -RECON subseries).",
       "resolves": {
-        "DIV-035 (= internal-NSW-indirect-tax-finding; series S604, XS1103)": "PRIMARY-SIDE RESOLVED. The +40.76 (1964) indirect-tax contamination and the +34.86 T1 excess now live ONLY in the S604 reconstruction feeding XS1103-RECON-A; the book-faithful primary XS1103-A excludes indirect taxes by construction (Table N.2 T1/EC). Advisory: update DIV-035 status from OPEN_DOCUMENTED_G2_GATED to PRIMARY_RESOLVED__RECON_ARM_ONLY (still G2-gated for the from-primitives Candidate-B extension).",
+        "DIV-035 (= workpackage B-DIV-S604-INDIRECT; series S604, XS1103)": "PRIMARY-SIDE RESOLVED. The +40.76 (1964) indirect-tax contamination and the +34.86 T1 excess now live ONLY in the S604 reconstruction feeding XS1103-RECON-A; the book-faithful primary XS1103-A excludes indirect taxes by construction (Table N.2 T1/EC). Advisory: update DIV-035 status from OPEN_DOCUMENTED_G2_GATED to PRIMARY_RESOLVED__RECON_ARM_ONLY (still G2-gated for the from-primitives Candidate-B extension).",
         "DIV-026 (S608 + ES benchmark FAILs)": "PARTIALLY RESOLVED for the NSW subset. S608 book-benchmark FAIL (2/5) -> PASS 5/5; XS1102/1103 0/5 -> 5/5. Advisory: update DIV-026 status for S608/XS1102/XS1103 from accepted_fail to RESOLVED__book_faithful_primary (the ES1404/1504/1602 non-NSW members remain out of scope).",
-        "internal-NSW-basket-overcount-finding (= register basket-over-count)": "The systematic benefit+tax basket over-count (both rates high, 1964 NSW -20.58 vs book -8.1) is now confined to the -RECON comparison arms; the book-period primary is the book's own published rates. Divergence remains DOCUMENTED between the two arms, no longer in the headline primary."
+        "workpackage B-DIV-NSW-BASKET (= register basket-over-count)": "The systematic benefit+tax basket over-count (both rates high, 1964 NSW -20.58 vs book -8.1) is now confined to the -RECON comparison arms; the book-period primary is the book's own published rates. Divergence remains DOCUMENTED between the two arms, no longer in the headline primary."
       },
       "v03_before_after": {
         "S608": "FAIL 2/5 -> PASS 5/5 (exact)",
@@ -1676,7 +1711,7 @@
           "NSW_dollars": -20.58
         }
       },
-      "where": "code/P02_processors/_D3_nsw_adopt_bookfaithful.py; data/final/{S607,S608,S609,XS1102,XS1103}.csv; chopped/ likewise; V03 capture internal V03 capture (D3)",
+      "where": "code/P02_processors/_D3_nsw_adopt_bookfaithful.py; data/final/{S607,S608,S609,XS1102,XS1103}.csv; chopped/ likewise; V03 capture internal-review-notes/D3_v03_capture/",
       "reconstruction_preserved": true,
       "status": "ADOPTED__RECONSTRUCTION_PRESERVED_AS_RECON_ARMS",
       "aliases": [
@@ -1784,7 +1819,7 @@
       "classification": "(v) COVERAGE LIMITATION - honestly disclosed, G2-gated",
       "title": "Mohun (2014) publishes these series only as figures + sparse text benchmarks; rebuilt primaries carry table/text-grade benchmark years only, full-annual coverage awaits documented figure digitization",
       "description": "Mohun 2014 contains NO year-by-year data table for the unproductive-labour shares. Quantitative content = Figures 1-6 (line charts) plus benchmark values embedded in the text (start/peak/end years). The D4 rebuild therefore populates the primaries ONLY at Mohun's text-reported benchmark years (XS1501: 1964, 2007; XS1502: 1964, 1991, 2010; XS1503: 1964, 2003, 2010; XS1504 derived). These points are table/text-grade (verbatim from the paper). The intervening annual values exist only in Figures 1-3 and were NOT fabricated. Filling them requires figure digitization with a documented method + error band (per the no-fabrication rule).",
-      "resolution": "Deferred to G2. Full spec (figure raster source, axis calibration, WebPlotDigitizer procedure, +/- error band, re-validation against the text benchmarks) is in internal G2 acquisition spec. Alternative acquisition path: request Mohun's original spreadsheet (s.mohun@qmul.ac.uk) or the shared Paitaridis & Tsoulfidis 2012 dataset.",
+      "resolution": "Deferred to G2. Full spec (figure raster source, axis calibration, WebPlotDigitizer procedure, +/- error band, re-validation against the text benchmarks) is in internal-review-notes/D4_G2_ACQUISITION_SPEC.md. Alternative acquisition path: request Mohun's original spreadsheet (s.mohun@qmul.ac.uk) or the shared Paitaridis & Tsoulfidis 2012 dataset.",
       "task": "D4 T2 (figure-grade flagged)",
       "evidence": "MOHUN_2013_EXTRACTION_COMPLETE.md ('DOES NOT contain published data tables'); figure_001-006 extraction markdown; D4_G2_ACQUISITION_SPEC.md.",
       "id": "DIV-068",
@@ -1806,14 +1841,146 @@
       "classification": "(vii) VARIANT ARM - does not alter primaries",
       "title": "The pre-D4 1948-1989 predecessor-build unproductive-labour decomposition is retained as a labeled variant arm (thousands FTE), distinct from the Mohun (2014) primaries",
       "description": "The retired XS150x thousands-FTE series (source Mohun_unproductive_decomposition_1948_1989.csv) is a legitimate Shaikh-Tonak-method backward decomposition of the project's own 1948-1989 employment data (identity Luw+Lum=Lu holds to 7e-12). It is simply NOT Mohun 2013 data. Preserved for transparency/reproducibility and to supply the ST side of DIV-067.",
-      "location": "chopped/_variants_predecessor-build/{XS1501..XS1504}_predecessor-build_1948_1989.csv; data/variants_predecessor-build/*_final.csv; chopped/_variants_predecessor-build/VARIANT_PROVENANCE.md",
+      "location": "chopped/_variants_predecessor/{XS1501..XS1504}_predecessor-build_1948_1989.csv; data/variants_predecessor-build/*_final.csv; chopped/_variants_predecessor/VARIANT_PROVENANCE.md",
       "remediation": "Expose as an ST-method comparison arm alongside the Mohun primaries in viz/docs, or leave as a documented appendix arm. publish=false.",
       "task": "D4 T3",
-      "evidence": "chopped/_variants_predecessor-build/VARIANT_PROVENANCE.md; registry variant_arm patches (D4_REGISTRY_PATCHES.json).",
+      "evidence": "chopped/_variants_predecessor/VARIANT_PROVENANCE.md; registry variant_arm patches (D4_REGISTRY_PATCHES.json).",
       "id": "DIV-069",
       "aliases": [
         "DIV-060"
       ]
+    },
+    {
+      "id": "DIV-070",
+      "date": "2026-07-07",
+      "severity": "documented",
+      "title": "Book-faithful GROSS-K* profit-rate variant added (S517/S513/S514-GROSS-A, 1948-1989); shipped net r*'s near-coincidence with the book is a lucky cancellation, not a correct capital axis",
+      "series": [
+        "S517",
+        "S513",
+        "S514"
+      ],
+      "divergence_type": "book_faithful_variant_added__transparency",
+      "book_intent": "Book Table 5.8 r* = S*/K* uses GROSS fixed capital K* = C*_f (no V* in the denominator); r*' = r*/u. Published book benchmarks: r* 0.39 (1948) -> 0.35 (1989); r*' 0.52 (1948) -> 0.39 (1989).",
+      "modern_construction": "Added additive variant columns (book period 1948-1989 only, nan beyond): S517-GROSS-A = book Table 5.8 gross K* (in-tree panel, loaded via L01); S513-GROSS-A = S505-A / S517-GROSS-A (book form S*/K*, NO V*) = the book's published r* (MAE 0.0025, max 0.0045; 42/42 years exact at printed 2dp); S514-GROSS-A = S513-GROSS-A / u_book = the book's published r*' (MAE 0.0023; 40/42 exact at 2dp). Primary net series (S517-A/-COMBINED, S513-A/-COMBINED, S514-A/-COMBINED) are UNCHANGED.",
+      "diagnosis_lucky_cancellation": "The shipped net headline r* (S*/(K_net+V*)) sits only mean -3.7% from the book's r*=S*/K*_gross because net K* being ~22% too small is offset by the extra +V* in the denominator (K_net+V* ~= K_gross by numeric near-coincidence, 1.1% apart in 1948 decaying to ~8% by the 1980s) — NOT because the capital axis is book-correct. On the pure capital axis the net->gross swap is worth ~22%. The book-faithful gross r* also shows a STRONGER secular fall (-10.1% vs the net build's -5.7% over 1948-1989); same 1982 trough, same turning points.",
+      "de_tautologization": "De-tautologizes the S517 family (A1): the primary S517-A refvals are loader-output tautological, but S513-GROSS-A / S514-GROSS-A are anchored to the book's OWN published r*/r*' (V03 validation.variant_reference_values, full 42-year column) — the family's first INDEPENDENT book anchor.",
+      "resolution": "ADD book-period gross variant (done); narrow DIV-058 to the extension arm (done); keep net primary for the combined 1948-2024 headline (extension arm cannot carry a non-synthetic gross). No new data acquisition, no synthetic extension.",
+      "evidence": "internal-review-notes/F2_KSTAR_FIDELITY.md + F2_KSTAR_GAP.csv; F1/ch5/CH5_REPORT.md; data/source/book_tables/_panel_Kstar_gross_1948_1989.csv; internal-review-notes/K_GROSS_IMPLEMENTATION.md",
+      "related": [
+        "DIV-058",
+        "DIV-059",
+        "DIV-060"
+      ]
+    },
+    {
+      "id": "DIV-071",
+      "date": "2026-07-07",
+      "severity": "high",
+      "title": "Time-varying benchmark-anchored I-O uplift kIO(t) for the Marxian rate of exploitation",
+      "series": [
+        "S506",
+        "S503"
+      ],
+      "divergence_type": "reconstruction_method__time_varying_benchmark_anchor",
+      "renumbering_note": "workpackage C §4.5 drafted this as 'DIV-045', but DIV-045 was already assigned in the register (which runs to DIV-070). Assigned the next FREE canonical id, DIV-071; C's text is preserved verbatim in substance.",
+      "book_intent": "GFP*/VA* Table-6.4 I-O uplift, ~1.57 at the 1989 book terminus.",
+      "modern_construction": "Native 1992 SIC benchmark (B1) + NAICS 71-order annual margin/royalty transform (B2), spliced level-from-benchmark / trend-from-annual (workpackage C). Two-route NAICS perimeter band x native denominator-vintage band. Royalties restored via B1's native 10%-of-GFP* share (the one non-constructible 71-order term).",
+      "resolution": "S506-EXT-MARX-KIO arm (loaded from data/source/kio_reconstruction/kio_final_1990_2024.csv); band sidecar data/final/S506_KIO_BAND.csv; S506-COMBINED tail repointed to it; V03 anchors 1989 exact / 1992 native / benchmark-year checks / e-rescale identity. Frozen S506-EXT-MARX retained as conservative bound.",
+      "evidence": "internal-build/kio/{B1,B2,B3,C}/*; c_analysis.py; kio_final_1990_2024.csv; e_comparison.csv; data/source/kio_reconstruction/PROVENANCE.md; internal-review-notes/KIO_INTEGRATION.md",
+      "caveats": "Royalty share held at the 1992 native 10% (not natively read at 71-order); band steps wider at the 1996/97 SIC->NAICS seam (perimeter uncertainty is NAICS-era only); 2024 e band [3.64, 4.89].",
+      "related": [
+        "DIV-028"
+      ]
+    },
+    {
+      "date": "2026-07-08",
+      "series_ids": [
+        "S601"
+      ],
+      "series_ids_current_scheme": [
+        "S601"
+      ],
+      "divergence_type": "reconstruction_vintage_and_labor_share_vs_appendix_N",
+      "title": "S601 personal income taxes paid by labor: BEA-API modern-vintage total x uniform worker_share (37.06) vs book Appendix N.1 BEA-1981 total 50.0 x labor share 0.727 (printed 36.4), +1.82% in 1964",
+      "classification": "(ii) METHOD DIVERGENCE from the book (DIV-035/036 BEA-API reconstruction family; vintage + share, same tax concept)",
+      "description": "S601 is a verified pass-through of `personal_income_tax_workers` from data/source/book_tables/Table6_1_TaxAccounts.csv (header: 'Source: NIPA Tables 3.1,3.2,3.3,2.1 via BEA API'): 37063.4 millions / 1000 = 37.0634 exactly (L01 unit_scale=1000). The P02 chain is bug-free; the divergence originates in the source reconstruction's method vs Appendix N. Book Table N.1 (KB canonical v2, table_037_038_14.csv): 'Personal income taxes (federal and state)' Total 50.0, Labor 36.4, i.e. 50.0 x labor share 0.727 = 36.35 -> printed 36.4 (BEA 1981 pp.121-134 vintage; labor share 0.727 per N.1 footnote). Reconstruction: modern BEA-API NIPA personal-income-tax total (implied 37.0634/0.7118 = 52.07 for 1964) x the project's worker_share 0.7118. Same tax concept and basket as the book line (this is NOT the DIV-035 indirect-tax contamination — S601 contains no indirect taxes); the +0.66 gap decomposes into data vintage (+2.07 on the total: 52.07 vs 50.0) partially offset by the lower allocation share (0.7118 vs 0.727). Cross-check: 50.0 x 0.7118 = 35.59 (-0.81); 52.07 x 0.727 = 37.86 (+1.46); actual 52.07 x 0.7118 = 37.06 (+0.66).",
+      "arithmetic": {
+        "our_S601_1964": 37.0634,
+        "source_cell_millions": 37063.4,
+        "implied_recon_total_1964": 52.07,
+        "recon_worker_share_1964": 0.7118,
+        "book_N1_total_1964": 50.0,
+        "book_labor_share_1964": 0.727,
+        "book_N1_labor_1964": 36.4,
+        "book_check_50.0_x_0.727": 36.35,
+        "delta": 0.6634,
+        "delta_pct": 1.82
+      },
+      "remediation": "Book-exact S601 requires the BEA-1981-vintage tax tables (pp.121,123,129,134 cited in N.1) + the book's annual labor-share series (0.727 for 1964) — same G2-GATED data acquisition already recorded under DIV-035/DIV-036. Accepted as a documented method divergence of the reconstruction arm; the 1964 printed cell 36.4 is preserved in the F1c ledger as the book anchor.",
+      "anu_rule_invoked": "anu-framework: no synthetic data; faithful-to-book; document divergences with arithmetic.",
+      "where": "data/source/book_tables/Table6_1_TaxAccounts.csv (personal_income_tax_workers, worker_share) via L01_S601/P02_S601 pass-through; book anchor book_digitization_v2/CSV_Tables/table_037_038_14.csv",
+      "status": "OPEN_DOCUMENTED_G2_GATED",
+      "id": "DIV-072",
+      "aliases": [
+        "TIERA-W1B-S601-1964"
+      ],
+      "canonical_assigned": "TIER_A_INTERNAL (2026-07-08)",
+      "source_work_package": "W1b (F1c/F1-merge follow-up)",
+      "related": [
+        "DIV-035",
+        "DIV-036"
+      ],
+      "f1_evidence": "internal-review-notes/F1/ch6/F1c_ch6_cells.csv row AppN.1/Personal income tax (labor)/1964 — div_ref updated NONE -> DIV-072 post hoc by W1b."
+    },
+    {
+      "date": "2026-07-08",
+      "series_ids": [
+        "S603"
+      ],
+      "series_ids_current_scheme": [
+        "S603"
+      ],
+      "divergence_type": "broader_property_nontax_basket_vs_appendix_N_homeowner_part",
+      "title": "S603 property+nontax taxes paid by labor: BEA-API reconstruction basket (10.84) vs book Appendix N.1 three-line labor allocation with homeowner-part property filter (printed 9.7 = 2.8+0.8+6.1), +11.79% in 1964",
+      "classification": "(ii) METHOD DIVERGENCE from the book (DIV-035/036 BEA-API reconstruction family; broader basket + no homeowner-part filter + vintage/share)",
+      "description": "S603 is a verified pass-through of `property_tax_workers` from data/source/book_tables/Table6_1_TaxAccounts.csv (BEA-API reconstruction): 10843.5 millions / 1000 = 10.8435 exactly (L01 unit_scale=1000). The P02 chain is bug-free; the divergence originates in the source reconstruction's method vs Appendix N. Book Table N.1 (KB canonical v2, table_037_038_14.csv) builds the 9.7 from THREE Group-II lines: Other taxes and nontaxes 3.8->2.8, Motor vehicle taxes and licenses 1.1->0.8, Personal property taxes 8.4->6.1 (totals 13.3 -> labor 9.7, aggregate share 0.7293); per the N.1 footnote, property taxes take only the HOMEOWNER part x labor share (Tonak 1984 chap.IV). The reconstruction instead applies the uniform worker_share 0.7118 to a broader modern-vintage property/nontax total (implied 10.8435/0.7118 = 15.23 vs the book's 13.3, +1.93 on the total) with no homeowner-part restriction. Gap +1.14 (=10.8435-9.7) is dominated by the broader total (15.23 x 0.7118 = 10.84 vs 13.3 x 0.7118 = 9.47); the share difference (0.7118 vs 0.7293 effective) works in the opposite direction and is small.",
+      "arithmetic": {
+        "our_S603_1964": 10.8435,
+        "source_cell_millions": 10843.5,
+        "implied_recon_total_1964": 15.234,
+        "recon_worker_share_1964": 0.7118,
+        "book_N1_lines_total": {
+          "other_taxes_nontaxes": 3.8,
+          "motor_vehicle": 1.1,
+          "personal_property": 8.4,
+          "sum": 13.3
+        },
+        "book_N1_lines_labor": {
+          "other_taxes_nontaxes": 2.8,
+          "motor_vehicle": 0.8,
+          "personal_property": 6.1,
+          "sum": 9.7
+        },
+        "book_effective_share": 0.7293,
+        "delta": 1.1435,
+        "delta_pct": 11.79
+      },
+      "remediation": "Book-exact S603 requires the BEA-1981-vintage line items + the homeowner-part property-tax split (Tonak 1984 chap.IV) + the book labor-share series — same G2-GATED acquisition as DIV-035/DIV-036. Accepted as a documented method divergence of the reconstruction arm; the 1964 printed cell 9.7 is preserved in the F1c ledger as the book anchor.",
+      "anu_rule_invoked": "anu-framework: no synthetic data; faithful-to-book; document divergences with arithmetic.",
+      "where": "data/source/book_tables/Table6_1_TaxAccounts.csv (property_tax_workers, worker_share) via L01_S603/P02_S603 pass-through; book anchor book_digitization_v2/CSV_Tables/table_037_038_14.csv",
+      "status": "OPEN_DOCUMENTED_G2_GATED",
+      "id": "DIV-073",
+      "aliases": [
+        "TIERA-W1B-S603-1964"
+      ],
+      "canonical_assigned": "TIER_A_INTERNAL (2026-07-08)",
+      "source_work_package": "W1b (F1c/F1-merge follow-up)",
+      "related": [
+        "DIV-035",
+        "DIV-036"
+      ],
+      "f1_evidence": "internal-review-notes/F1/ch6/F1c_ch6_cells.csv row AppN.1/Property+nontax (labor)/1964 — div_ref updated NONE -> DIV-073 post hoc by W1b."
     }
   ],
   "entries": []

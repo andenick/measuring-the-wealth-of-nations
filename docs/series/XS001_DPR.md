@@ -8,6 +8,22 @@
 - **Status**: book_period_validated
 - **Units**: ratio
 
+## REVIEW 2026-07 (workpackage E Group A) — methodology correction (SUPERSEDES the "Pn approximation / magnitude offset" narrative below)
+
+The prior implementation computed `b = 1 - Pn/S*` with **Pn = NIPA Table 1.7.5 Line 17
+(corporate profits)**. That is the **WRONG quantity**: the book's Pn (Table 7.1, Sources =
+Table 5.8) is **"profit-type income net of ALL taxes"** (1948 = $66.51B), roughly double NIPA
+corporate profits (~$31B). This — not a "concordance approximation" — is why the old output was
+0.79-0.86 instead of the book's printed 0.56-0.68.
+
+**Fix:** Pn is now sourced directly from ST 1994 **Table 7.1** (`data/source/book_tables/
+XS001_Table71_Pn.csv`); `S*` remains **S505-A**, which reproduces the book's Table 7.1 S* column
+**exactly** (verified abs err 0.00 at all anchor years). `b = 1 - Pn/S505` now reproduces the
+printed book `b` to **<= 0.005** (1948 0.5564 vs 0.56 … 1989 0.6530 vs 0.65). Refvals re-anchored
+to the printed Table 7.1 `b`; validator_class = **book**; `open_issue` resolved. See **DIV-025**.
+The paragraphs below describing the NIPA-Line-17 Pn and a "~25pp magnitude offset" are retained for
+history but are **superseded**.
+
 ## Methodology
 
 XS001 operationalizes the social burden rate from Shaikh & Tonak's Ch7 §7.1 decomposition of surplus value. The book defines the relation `r'n = [1 − T/S* − Eu/S*][S*/(K*.u)] = (1 − t − eu) r*' = (1 − b) r*'`, where `r*' = S*/(K*.u)` is the capacity-utilization-adjusted Marxian rate of profit, `r'n = Pn/(K*.u)` is the similarly adjusted NIPA-based net rate of profit, `t = T/S*` is the tax share of surplus value, `eu = Eu/S*` is the unproductive-expenses share of surplus value, and `b = t + eu` is the social burden rate. The verbatim foundation is **"Divide equation (1) by utilized capital K*.u: r'n = [1 − T/S* − Eu/S*][S*/(K*.u)] = (1−t−eu)r*' = (1−b)r*'. Where r*' = S*/(K*.u) = capacity utilization-adjusted Marxian rate of profit; r'n = Pn/(K*.u) = similarly adjusted NIPA-based net rate of profit; t = T/S* = tax share of surplus value; eu = Eu/S* = unproductive expenses share of surplus value; b = t + eu = social burden rate."** (ST 1994 Ch7 §7.1, p.213). The interpretive anchor is **"Observed net rate of profit r'n will fall relative to Marxian general rate r*' when greater proportion of surplus value absorbed in business taxes or unproductive expenses. Hence: b = social burden rate."** (ST 1994 Ch7 §7.1, p.213).
@@ -18,7 +34,7 @@ The magnitude gap traces to two known approximations. First, our Pn (NIPA Line 1
 
 ## Sources
 
-- KB chunks: `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_24/full_transcription.md` (Ch7 §7.1 p.213-214 — formal definition `b = t + eu`, Figure 7.1 numeric finding, Figure 7.2 NIPA-Marxian gap); `chunk_35/full_transcription.md` (Appendix I Table I.1 — rates of exploitation of productive/unproductive workers, related decomposition); `chunk_38/full_transcription.md` (Appendix N — net transfer methodology, negative throughout postwar)
+- KB chunks: `data/raw/kb/book_digitization/chunk_24/full_transcription.md` (Ch7 §7.1 p.213-214 — formal definition `b = t + eu`, Figure 7.1 numeric finding, Figure 7.2 NIPA-Marxian gap); `chunk_35/full_transcription.md` (Appendix I Table I.1 — rates of exploitation of productive/unproductive workers, related decomposition); `chunk_38/full_transcription.md` (Appendix N — net transfer methodology, negative throughout postwar)
 - Book tables: Ch7 §7.1 equations p.213; Figure 7.1 (social burden rate trajectory); Figure 7.2 (Marxian vs NIPA rate of profit); Appendix N Table N.2 (net transfer)
 - External sources: BEA NIPA Table 1.7.5 Line 17 (Corporate profits with IVA and CCAdj) — cached locally 1929-2024
 - Upstream series: S505 (Marxian surplus value S*), S607 (Net Social Wage, conceptual cross-link)
@@ -26,8 +42,8 @@ The magnitude gap traces to two known approximations. First, our Pn (NIPA Line 1
 
 ## Reference values
 
-- **Book period (validator-enforced)**: `b` rising 0.56 → 0.66 over 1948-1989 (book's Figure 7.1 finding; ~16% increase)
-- **Our implementation**: `b = 0.7906` (1948), `b = 0.8577` (1989), +8.5pp rise — magnitude offset ~25pp, direction matches
+- **Book period (validator-enforced, REVIEW 2026-07)**: anchored to book Table 7.1 printed `b` — {1948:0.56, 1958:0.62, 1970:0.67, 1980:0.66, 1989:0.65} (share_series tolerance); the series rises 0.56→0.65 (Figure 7.1's ~16% postwar increase)
+- **Our implementation (post-fix)**: `b = 0.5564` (1948), `b = 0.6530` (1989); reproduces the printed book `b` to <=0.005 at every anchor year. (Pre-fix, with NIPA-Line-17 Pn, it was 0.7906/0.8577 — retired, see DIV-025)
 - **Validator `expected_range`**: `[0.3, 0.95]` (registry; share_series tolerance class)
 - **Direction**: monotonic rise 1948→1989 (PASS)
 - **Mechanism check**: r'n / r*' = (1 − b); with rising b, this ratio falls — and the book reports r'n falling 39% vs r*' falling 25%, consistent with b rising ~16%
@@ -35,8 +51,8 @@ The magnitude gap traces to two known approximations. First, our Pn (NIPA Line 1
 
 ## Known issues
 
-- **Pn approximation**: our Pn = NIPA Line 17 (Corporate profits with IVA and CCAdj) is TOTAL corporate profits; a faithful Pn would apply the productive/unproductive concordance from Appendix F to remove financial-sector profits
-- **Magnitude offset**: implementation reports b ~0.79-0.86 vs book's 0.56-0.66 — direction matches (rising) but levels are ~25pp higher; resolution awaits IMPLEMENTATION_PLAN.md Phase 2.A (concordance work), at which point Line 17 can be re-apportioned to strictly productive Pn
+- **~~Pn approximation~~ (RESOLVED 2026-07)**: the NIPA-Line-17 Pn was the wrong quantity, not an approximation; Pn now sourced from book Table 7.1 (profit-type income net of all taxes). See DIV-025.
+- **~~Magnitude offset~~ (RESOLVED 2026-07)**: output now reproduces book b (0.56-0.65) to <=0.005; the ~25pp offset is gone.
 - **S505 dependency**: any drift in the upstream Marxian surplus value series propagates here
 - **Legacy script not yet migrated** to the standard L01_XS001 / P02_XS001 / V03_XS001 triad; the construction array in the registry is empty for this reason
 - **Construction array empty in registry**: signals "handled by legacy analytical script" rather than the standard pipeline

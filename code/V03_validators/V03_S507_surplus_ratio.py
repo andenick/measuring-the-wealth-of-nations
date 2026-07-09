@@ -24,7 +24,7 @@ from utils.series import BenchmarkValidator  # noqa: E402
 # predecessor-build's validation_config benchmark of 0.57/0.60 came from a NIPA-proxy
 # source (`T509_surplus_ratio` in ExploitationComposition_1948_1989.csv),
 # which is NOT the book's surplus ratio. Documented in
-# Technical/MIGRATION/divergences_from_ST2.md.
+# Technical/MIGRATION/divergences_from_predecessor-build.md.
 VALIDATOR = BenchmarkValidator(
     series_id        = "S507",
     tolerance_class  = "share_series",

@@ -64,20 +64,34 @@ def run():
     ext["units"] = "billions_usd"
     ext["stage"] = "extension"
     ext["provenance"] = (
-        "BEA GDP-by-Industry Value Added; sum of productive+trade top-level NAICS "
-        "industries [11,21,22,23,31G,42,44RT,48TW]; growth_rate splice at 1997"
+        "BEA GDP-by-Industry Value Added; RAW SUM of productive+trade top-level NAICS "
+        "industries [11,21,22,23,31G,42,44RT,48TW], 1997-2024 (no scaling applied). "
+        "NOTE (workpackage A 2026-07-01): the pre-review 'growth_rate splice at 1997' label was FALSE "
+        "provenance - the code is a raw pass-through. This is the BEA-VA concept, ~1/1.571 of "
+        "the book GFP* concept (DIV-007 junction -20.7% at 1997; the book/BEA concept gap is "
+        "the I-O reallocation, DIV-A10)."
     )
     ext_out = ext[["series_id", "year", "value", "units", "stage", "provenance"]]
 
-    # ---- S503-COMBINED ----
-    bridge = _log_linear_bridge(book_1989, bea_1997,
-                                y0=BOOK_LAST_YEAR, y1=EXT_FIRST_YEAR)
+    # ---- S503-COMBINED 1990-1996: REAL SIC-basis partition-A VA (R3) ----
+    # workpackage A: retire the log-linear bridge; fill with real SIC-basis GDPbyInd partition-A VA.
+    # NOTE: the book arm (S503-A) is Shaikh-Tonak GROSS FINAL PRODUCT (GFP*_1989=4363.57), an
+    # I-O final-demand transform ~1.571x the BEA partition-A industry VA (SIC 1989=2776.8).
+    # Real SIC VA (2861@1990 .. 3972@1997) therefore sits on the BEA-VA concept, NOT the book
+    # GFP concept: the 1989/1990 seam exposes the DIV-007 concept break (previously hidden by
+    # the smooth bridge). This is honest; the held-kIO GFP-concept reconstruction lives in the
+    # S506-EXT-MARX variant (DIV-A10), not here.
+    sic_path = Path(__file__).resolve().parents[2] / "data" / "source" / "bea_sic" / "GDPbyInd_partitionA_SIC_1987_1997.csv"
+    sic = pd.read_csv(sic_path)
+    sic = sic[(sic["year"] >= 1990) & (sic["year"] <= 1996)][["year", "VA_partA"]].rename(columns={"VA_partA": "value"})
+    bridge = sic.copy()
     bridge["series_id"] = "S503-COMBINED"
     bridge["units"] = "billions_usd"
-    bridge["stage"] = "extension_bridge"
+    bridge["stage"] = "extension_real_sic"
     bridge["provenance"] = (
-        f"Log-linear interpolation between book(1989)={book_1989:.2f} and "
-        f"BEA(1997)={bea_1997:.2f}; M04_S503 methodological adjustment"
+        "Real SIC-basis BEA GDP-by-Industry partition-A value added (goods+transp+trade), "
+        "1990-1996 (data/source/bea_sic); replaces retired log-linear bridge (R3). BEA-VA "
+        "concept — DIV-007 book-GFP-vs-BEA-VA break at 1989/1990 seam is now visible, not hidden."
     )
 
     combined_book = book.copy()

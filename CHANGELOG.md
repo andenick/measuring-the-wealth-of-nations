@@ -6,6 +6,77 @@ the project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.1.0] — 2026-07-09 — Book-faithful gross-K\* profit rate, reconstructed kIO exploitation, Tier-A truth fixes
+
+Four post-v2.0 campaigns (2026-07-07 → 09), all additive: every pre-existing published cell is
+byte-identical to v2.0 — new content appends as new columns, new series arms, and new sidecars.
+No headline value silently changed.
+
+### Added
+- **Book-faithful gross-capital profit-rate variants** — `S517-GROSS-A` (book Table 5.8 gross K\*),
+  `S513-GROSS-A` (book r\* = S\*/K\*_gross), `S514-GROSS-A` (book r\*' = r\*_gross/u), book period
+  1948–1989 only (`nan` beyond — a current-cost gross stock is genuinely non-constructible after the
+  mid-1990s BEA discontinuation, DIV-058 extension arm). These give the profit-rate family its first
+  **non-tautological book anchor**: `S513-GROSS` reproduces the printed r\* at **MAE 0.0025 (42/42
+  years exact at 2 dp)**. The v2.0 net-capital headline series is retained unchanged; the review showed
+  its near-match to the book was a *lucky cancellation* of net-K\*+V\* ≈ gross-K\*, so the gross arm was
+  added rather than pretended.
+- **Reconstructed time-varying I-O uplift (kIO) rate-of-exploitation arm** — `S506-EXT-MARX-KIO`, and the
+  `S506-COMBINED` extension tail (1990–2024) now continues on it. DIV-028's frozen kIO = 1.5714 is
+  replaced by an officially-sourced, backward-validated, uncertainty-banded annual series:
+  the native 1992 SIC benchmark (the last one) gives **kIO₁₉₉₂ ≈ 1.5696** (corroborating the frozen
+  constant); the wedge is then computed annually from the NAICS-era 71-order supply-use margin detail,
+  with a real-data 1990–96 bridge. kIO(t) passes through 1.571 in the mid-1990s and **rises to 1.731 by
+  2024**. The rate of exploitation runs **e ≈ 2.43 (1990) → 4.46 (2024)** vs the frozen arm's 3.95;
+  the frozen arm stays published as the conservative lower bound. Bias decomposition: royalties are 72%
+  of the naive level gap, the SIC→NAICS classification jump only +3.7%.
+- **Uncertainty-band sidecars** — `S506_KIO_BAND.csv` (two-route kIO band, honestly wider after the
+  1996/97 SIC→NAICS seam) and `S701_LAMBDA_BAND.csv` / `S702_LAMBDA_BAND.csv` (labor-value precision
+  bands, DIV-042 worst-case common-mode, −10.3%/+13.0%). Shipped under `data/bands/`.
+- **Restored per-series author quotes** — 34 published series whose verbatim Shaikh–Tonak quotes were
+  loader-invisible under the prior quote schema are now surfaced (36 research JSONs normalized
+  additively; loader-visible quotes 110 → 348; zero invented or dropped, proven against archived
+  originals). A new hard test (`test_published_quotes.py`) guards the schema.
+
+### Changed
+- **λ / p\* labor-value series (`S701`, `S702`) publish at 3 significant figures** (inside the tightest
+  F3 sensitivity bound) instead of the former 15–17 digits of false precision; rounding at final-emit
+  only (intermediate precision retained). `S703` proven unaffected.
+- **`S506-COMBINED` post-1989 tail** now rides the reconstructed-kIO arm (primary continuation); the
+  frozen-kIO arm remains published alongside as the lower bound.
+- **`XS1202` 1964 reference value corrected to −0.0167** (was −0.009, uncorroborated); DIV-037's rationale
+  corrected. Provenance-honesty gain; the honest FAIL set is unchanged.
+- **Structural rename**: the misnamed `appendix_F/` filter directory → `ch7_productive_filter/`
+  (`io85_pu_classification.csv`), with all 7 consumers updated — byte-identical S70x outputs.
+
+### Fixed
+- **Zero unexplained book cells** — the two previously-unexplained 1964 tax cells (S601/S603 vs Appendix
+  N.1) were adjudicated as *chosen* divergences (S601: BEA vintage + labor-share; S603: basket breadth
+  without the homeowner property filter) and registered as **DIV-072 / DIV-073**. The book-fidelity
+  ledger is now 153 divergent rows, **0 uncovered**.
+- **Validator honesty** — the 5 residual tautological (echo-the-output) validators plus one A1-missed
+  case (S510/S517/XS1301/XS1305/XS1602/S609) were re-anchored to independent sources (tautological
+  5 → 0); 3 UNCLEAR validators resolved to book-anchored (XS1102/XS1103 to Table N.2, XS1601 qualified).
+- **`XS002`** de-hardcoded — its inlined book Table 5.12 moved to `book_tables/` (byte-identical output).
+- Golden fixtures truth-aligned to the registry (metadata-only regen, data cells byte-identical);
+  latent `NameError` in `L01_S701` fixed as part of the filter rename.
+
+### Registers & QA
+- **`DIVERGENCE_REGISTER.json` grown from 69 to 73 entries** (DIV-070 gross-K\* variant, DIV-071 kIO
+  reconstruction, DIV-072/073 the S601/S603 1964 adjudications; DIV-028 upgraded frozen → reconstructed,
+  DIV-058 narrowed to the extension arm).
+- Gates: **anu-doctor 0 FAIL / 0 WARN**; **pytest 95 passed / 2 skipped / 2 justified xfail**
+  (baseline moved 93 → 95 with the new quote test); **per-series validators 60 PASS / 4 honest
+  registered FAIL** (XS1101, XS1201, XS1202, XS1602).
+- Independently verified end-to-end from the raw government files (kIO₁₉₈₉ reproduced to 1.57141;
+  the 2017 margin numerator matches BEA's detail files to the dollar).
+
+### New public artifacts
+- `ANSWERS.md` — a leak-scrubbed, answers-first brief (the seven best answers, each with basis and
+  pointer) at the repository root.
+
+---
+
 ## [2.0.0] — 2026-07-03 — Comprehensive review + D-batch book-fidelity decisions
 
 A full series-by-series review (~50 series re-examined) plus the D-batch of

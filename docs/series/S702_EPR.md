@@ -30,11 +30,11 @@ Registry `book_table='7.2'` is a project-internal label, not a literal book tabl
 
 1. **Real S701 lambda* vector** — sector-disaggregated labor-value/producer-price ratios (hr/$), output of `Technical/code/P02_processors/P02_S701_labor_values.py` (v1.1 rewrite). This is the load-bearing input both `c_j = lambda_i* * (M_p)_p,ij` and `v_j = lambda* * (CONW_p)_p,j` depend on.
 
-2. **BLS CES production-worker compensation** — for `(CONW_p)_j` (consumption basket / wage bill of production workers per sector). Average hourly earnings + employment + weekly hours from `data/raw/bls/`, pulled 2026-05-24.
+2. **BLS CES production-worker compensation** — for `(CONW_p)_j` (consumption basket / wage bill of production workers per sector). Average hourly earnings + employment + weekly hours from `data/raw/Inputs/API_Data/BLS/`, pulled 2026-05-24.
 
-3. **BEA NIPA employee compensation tables** — for the EC/WS ratio `x_j` (compensation per wage-and-salary worker) used to scale BLS production-wage to total compensation per ST 1994 Appendix G methodology. Cached at `data/raw/bea/`, pulled 2026-02-24.
+3. **BEA NIPA employee compensation tables** — for the EC/WS ratio `x_j` (compensation per wage-and-salary worker) used to scale BLS production-wage to total compensation per ST 1994 Appendix G methodology. Cached at `data/raw/Inputs/API_Data/BEA/`, pulled 2026-02-24.
 
-4. **Labeled BEA IO matrices** — for `(M_p)_p,ij` (producer-price component of input flows from sector i to sector j). Cached at `Technical/data/intermediate/io_matrices_labeled/`. Appendix F productive-share filter `Technical/data/source/appendix_F/Table_F_1.csv` masks unproductive sectors before the matrix products.
+4. **BEA IO matrices** — for the producer-price input-flow / Leontief structure. **[SUPERSEDED — workpackage C v2.0 / F3 2026-07-07]** the published v2.0 engine reads the REBUILT cache `Technical/data/intermediate/io_matrices_rebuilt/` (via `utils.io_rebuilt`); the old defective labeled cache was retired to `Technical/MIGRATION/retired_io_20260707/io_matrices_labeled/`. Appendix F productive-share filter `Technical/data/source/appendix_F/Table_F_1.csv` masks unproductive sectors before the matrix products.
 
 Profit rate `r_bar` from S513 Marxian profit rate (already real, no proxy). Construction per `Technical/code/P02_processors/P02_S702_prices_of_production.py` (v1.1 rewrite): per benchmark year, compute `c_j_labor` and `v_j_labor` via the Ch4 §4.1 matrix products on the productive sub-matrix, then `pp*_j = (1 + r_bar) * (c_j_labor + v_j_labor)`.
 
@@ -52,6 +52,10 @@ BEA IO benchmark archive: https://www.bea.gov/industry/input-output-accounts-dat
 ## 5. conceptual_continuity
 
 `pp*_j = (1 + r_bar)(c_j_labor + v_j_labor)` is a derived (formula-type) quantity — sector constant and variable capital in labor-value units, times one plus the uniform rate of profit. The book period and the extension period compute the same formula on extended sector-disaggregated data; the SIC → NAICS junction is the only methodological change, handled by re-mapping the productive-share filter and the (M_p)_p matrix to NAICS sectors per the BEA IO benchmark concordance. Because the construction is formula-type (per Anu rule "No Lazy Splices on Derived Quantities"), an extension growth-rate splice would be invalid; instead, the extension recomputes the formula from extended BLS + BEA + IO components. Methodological consistency book ↔ extension: identical (same Ch4 §4.1 c_j and v_j matrix products, same profit-rate equalization, same Khanjian (1989) empirical anchor in S703).
+
+## 5a. precision_and_uncertainty (DIV-042, Tier-A W1d 2026-07-08)
+
+Published S702 values (final/chopped/extenbook) are reported to **3 significant figures**, with the DIV-042 uncertainty band in `data/final/S702_LAMBDA_BAND.csv` (lo = central/1.115, hi = central/0.885 — worst-case common-mode propagation of the ~±11.5% recovered-X_j bound; F3 sensitivity CSVs, `internal-review-notes_2026-07-07/`, 2026-07-07). Monte-Carlo (independent per-sector errors) half-widths for the S702 aggregate are ±6.4–9.4% — wider than S701 because only 2–5 unproductive sectors are covered, so per-sector errors barely average down. The former 15–17 displayed digits were false precision. Full float64 precision is preserved in `data/intermediate/S702.csv`; the rounding is display-stage only (P02 final emit) and does not enter any downstream computation (S703 reads the full-precision L01 panels).
 
 ## 6. vintage_note
 

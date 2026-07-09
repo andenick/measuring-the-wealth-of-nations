@@ -1,14 +1,12 @@
-"""V03_XS002 - Khanjian cross-validation against registry year anchors.
+"""V03_XS002 -- S*/V* at I-O benchmark years vs BOOK Table H.1 (workpackage C v2.0).
 
-Refactored 2026-05-23 per Decision 0008:
-  - The legacy V03 read a derived diagnostic column
-    (`our_gap_to_khanjian_pct`) that does not appear in chopped output, so
-    the validator was effectively skipped at cohort-1 refactor time.
-  - XS002's `validation.reference_values` is already year-keyed (the five IO
-    benchmark years 1958, 1963, 1967, 1972, 1977 from book Ch7 §7.3 / App. I
-    Table I.1). We now compare those anchors directly against the chopped
-    XS002-A column (rate of surplus value via Khanjian decomposition).
-  - `validation.derived_statistics` is currently empty for XS002.
+DE-TAUTOLOGIZED: previously the reference values were the series' own chopped
+output. XS002-A reproduces ST's own money rate of surplus value S*/V* at the
+I-O benchmark years, and the book PRINTS those values (Appendix H Table H.1,
+= Appendix I Table I.1 Line 23). The anchor now comes from
+data/source/book_tables/XS002_TableH1_SV_BENCHMARKS.csv (verbatim v2 KB
+extraction). Tolerance: printed 2 dp -> abs 0.01.
+validator_class: book
 """
 from __future__ import annotations
 
@@ -19,70 +17,38 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-
 from utils.io import write_validation_result  # noqa: E402
-from utils.paths import DATA_FINAL  # noqa: E402
-from utils.registry_validator import (  # noqa: E402
-    get_derived_statistics,
-    get_reference_values,
-)
+from utils.paths import DATA_FINAL, ROOT  # noqa: E402
 
-
-SERIES_ID = "XS002"
-ANCHOR_TOL_ABS = 0.01  # tight - these are Khanjian's reported benchmark values
+BOOK_CSV = ROOT / "data" / "source" / "book_tables" / "XS002_TableH1_SV_BENCHMARKS.csv"
 
 
 def run():
-    df = pd.read_csv(DATA_FINAL / f"{SERIES_ID}.csv")
-    df = df[df["series_id"] == f"{SERIES_ID}-A"]
-
-    anchors = get_reference_values(SERIES_ID)
-    anchor_checks = []
-    for year, expected in anchors.items():
-        row = df[df["year"] == year]
-        if row.empty:
-            anchor_checks.append({"year": year, "expected": expected,
-                                  "status": "MISSING"})
+    df = pd.read_csv(DATA_FINAL / "XS002.csv").dropna(subset=["value"])
+    by_year = dict(zip(df["year"].astype(int), df["value"].astype(float)))
+    book = pd.read_csv(BOOK_CSV, comment="#")
+    checks = []
+    for r in book.itertuples():
+        actual = by_year.get(int(r.year))
+        if actual is None:
+            # XS002 carries only the five benchmark years 1958-1977; the
+            # 1948/1989 book rows are context, not misses.
             continue
-        actual = float(row["value"].iloc[0])
-        abs_err = abs(actual - float(expected))
-        anchor_checks.append({
-            "year": year, "expected": expected, "actual": round(actual, 6),
-            "abs_err": round(abs_err, 6),
-            "status": "PASS" if abs_err <= ANCHOR_TOL_ABS else "FAIL",
-        })
-    n_anchor_pass = sum(1 for c in anchor_checks if c["status"] == "PASS")
-    n_anchor_fail = sum(1 for c in anchor_checks if c["status"] == "FAIL")
-    n_anchor_miss = sum(1 for c in anchor_checks if c["status"] == "MISSING")
-
-    # Derived statistics block currently empty per Decision 0008 patch; loop
-    # is kept so a future addition (e.g., overall mean gap to Khanjian) lands
-    # without further refactoring.
-    stats = get_derived_statistics(SERIES_ID)
-    stat_checks = []  # no statistics defined yet
-
-    ok = (len(df) > 0 and n_anchor_fail == 0 and n_anchor_miss == 0
-          and len(anchor_checks) > 0)
-    status = "PASS" if ok else "FAIL"
+        ok = abs(actual - r.sv_star_book) <= 0.01 + 1e-9
+        checks.append({"year": int(r.year), "book": r.sv_star_book,
+                       "actual": round(actual, 4), "status": "PASS" if ok else "FAIL"})
+    n_fail = sum(1 for c in checks if c["status"] == "FAIL")
+    status = "PASS" if (checks and n_fail == 0) else "FAIL"
     result = {
-        "series_id": SERIES_ID,
+        "series_id": "XS002",
         "run_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "tolerance_class": "rate_series",
+        "validator_class": "book",
+        "anchor": "S&T 1994 Appendix H Table H.1 S*/V* row (= Table I.1 Line 23), v2 KB verbatim",
         "status": status,
-        "n_pass": n_anchor_pass,
-        "n_fail": n_anchor_fail,
-        "n_missing": n_anchor_miss,
-        "anchors": {
-            "checks": anchor_checks,
-            "rule": ("XS002-A column (rate of surplus value via Khanjian "
-                     "Appendix I 25-step decomposition) compared to the five "
-                     "IO benchmark years recorded in registry."),
-        },
-        "derived_statistics": {"checks": stat_checks,
-                               "available": list(stats.keys())},
+        "benchmarks": {"checks": checks, "n_fail": n_fail},
     }
-    write_validation_result(SERIES_ID, result)
-    print(f"    [V03_{SERIES_ID}] status={status} anchors={n_anchor_pass}/{len(anchor_checks)}")
+    write_validation_result("XS002", result)
+    print(f"    [V03_XS002] status={status} book_anchors={len(checks)-n_fail}/{len(checks)}")
     return result
 
 

@@ -181,6 +181,37 @@ def _flow_frame_secondary() -> tuple[pd.DataFrame, dict]:
     return out, diag
 
 
+def _gross_book_frame() -> pd.DataFrame:
+    """S513-GROSS-A: book-faithful r* = S*/K*_gross (book formula, NO V*), 1948-1989.
+
+    F2 (2026-07-07) book-period GROSS variant. Uses the book's own r* = S*/K*
+    (fixed capital alone, no V* in the denominator, per Table 5.8) with the
+    book-period gross K* (S517-GROSS-A) instead of the primary net K*. This IS
+    the book's published r*: reproduces Table 5.8 r* to MAE ~0.0025 (F2). Book
+    period ONLY (1948-1989); no extension (gross K* non-constructible 1990->).
+    NOT the primary headline (S513-A/-COMBINED, stock-form net, are unchanged).
+    """
+    s505 = _load_subseries("S505", "S505-A").rename(columns={"value": "S_star"})
+    kg = _load_subseries("S517", "S517-GROSS-A").rename(columns={"value": "K_gross"})
+    merged = (
+        s505.merge(kg, on="year")
+            .sort_values("year")
+            .reset_index(drop=True)
+    )
+    merged = merged[(merged["year"] >= 1948) & (merged["year"] <= 1989)].copy()
+    merged["value"]      = merged["S_star"] / merged["K_gross"]
+    merged["series_id"]  = "S513-GROSS-A"
+    merged["units"]      = "rate"
+    merged["stage"]      = "variant_book_gross"
+    merged["provenance"] = (
+        "VARIANT book-faithful r* = S505-A / S517-GROSS-A (book form S*/K*, NO V*, "
+        "Table 5.8) with book-period GROSS K*; = the book's published r* "
+        "(reproduces Table 5.8 to MAE ~0.0025, F2 2026-07-07). Book period ONLY, "
+        "no extension. NOT primary (S513-COMBINED stock-form net is unchanged)."
+    )
+    return merged[["series_id", "year", "value", "units", "stage", "provenance"]]
+
+
 def _combined_frame(book_df: pd.DataFrame, ext_df: pd.DataFrame) -> pd.DataFrame:
     """S513-COMBINED = S513-A (1948-1989) concatenated with S513-EXT (post-1989).
 
@@ -218,6 +249,14 @@ def run():
         print(f"    [P02_S513] flow-form (secondary) diag: {flow_diag}")
     except Exception as exc:
         print(f"    [P02_S513] FLOW SECONDARY DEFERRED: {exc!r}")
+
+    try:
+        gross = _gross_book_frame()
+        frames.append(gross)
+        print(f"    [P02_S513] gross-book variant: {len(gross)} rows "
+              f"({int(gross['year'].min())}-{int(gross['year'].max())})")
+    except Exception as exc:
+        print(f"    [P02_S513] GROSS-BOOK VARIANT DEFERRED: {exc!r}")
 
     df = pd.concat(frames, ignore_index=True, sort=False)
     write_series_csv(df, SERIES_ID, stage="intermediate")

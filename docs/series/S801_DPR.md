@@ -18,7 +18,7 @@ The headline finding is captured in XS1404 (ST_e / Mohun_e ratio): the ratio exc
 
 ## Sources
 
-- KB chunks: `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_24/full_transcription.md` (Ch7 §§7.1-7.3 pp.212-221 — Lp < 0.5L, S*/V* approximately 4× P+/EC, social burden rate); `chunk_25/full_transcription.md` (Ch7 §7.4 — cross-study critique); `chunk_38/full_transcription.md` (pp.352-361 — Appendix M Mage comparison, Appendix N net transfer)
+- KB chunks: `data/raw/kb/book_digitization/chunk_24/full_transcription.md` (Ch7 §§7.1-7.3 pp.212-221 — Lp < 0.5L, S*/V* approximately 4× P+/EC, social burden rate); `chunk_25/full_transcription.md` (Ch7 §7.4 — cross-study critique); `chunk_38/full_transcription.md` (pp.352-361 — Appendix M Mage comparison, Appendix N net transfer)
 - Book tables: ST 1994 Table 5.7 (S506 source); Table 5.5 (Lp/L over time); Figures 5.7, 5.9, 5.11; Appendix M Tables M.1-M.5; Appendix N Table N.2
 - External sources: Mohun (2005) CJE Table 2 (exploitation rate 1964-2001); Mohun (2013) for the longer 1964-2010 update used in ES13xx series; raw Mohun CSV at `Inputs/ExternalSources/Mohun/mohun_exploitation_rates_1948_1989.csv`
 - Upstream series: S506 (ST exploitation rate, wave 1, calculated), S511 (ST productive labor share, wave 1), XS1401 (Mohun exploitation rate), XS1402 (Mohun productive labor share), XS1403 (Mohun variable capital), XS1404 (ST/Mohun exploitation ratio, mean 1.61)

@@ -2,7 +2,7 @@
 
 **Series**: S516
 **Generated**: 2026-05-23T00:00:00Z
-**Status**: book_period_validated (extension block populated; derived identity; extension execution pending in L01/P02)
+**Status**: validated_book_and_extension (book arm 1948-1989 from TableE3; extension 1990-2024 = L − Lp on one book-anchored L basis — REVIEW_2026-07 item D2)
 
 ## 1. shaikh_source
 
@@ -16,9 +16,9 @@ Derived identity from S515 (Lp) and total employment L. The book reports Lu dire
 
 DERIVED identity series (NOT a direct fetch). Extension is computed each year as:
 
-    Lu = L_total − S515
+    Lu = L_reanchored − S515-EXT
 
-where S515 is extended productive employment (see `S515_EPR.md`) and L_total is total nonfarm payroll employment from BLS CES (CES series `CEU0000000001` / `CES0000000001` for total nonfarm, seasonally adjusted, all employees). Cached BLS data: `data/raw/bls/bls_ces_production_workers.csv` (the same BLS pull that supplies S515 also supplies the total-employment denominator; the L_total series may also be sourced from BEA NIPA 6.4D/6.5D full- and part-time employees if a NIPA-consistent total is preferred over the CES total).
+where `S515-EXT` is the published productive employment Lp (S511 share × L; see `S515_EPR.md`) and `L_reanchored` is total nonfarm employment **including government** — BLS CES series `CES0000000001` (all employees, total nonfarm), cached at `data/raw/Inputs/API_Data/BLS/bls_ces_total_nonfarm_all_employees.csv` — multiplicatively re-anchored to the book L (113,511) at 1989. This is the **same** single L basis and anchor year that P02_S515 uses, so `L = Lp + Lu` holds at every year including the seam. (The pre-review build subtracted from total *private* employment CES0500000001, dropping government and driving the −22% Lu break; that bug is retired.)
 
 ## 4. extension_url
 
@@ -35,4 +35,4 @@ Shaikh & Tonak define Lu as the residual of the productive/unproductive partitio
 
 ## 6. vintage_note
 
-Book vintage: SIC-basis BLS employment with Shaikh–Tonak's then-current Appendix C concordance, supplying both Lp and L for the 1948–1961 KB-digitized window. Modern vintage: NAICS-basis BLS CES from 2003 forward; the 2003 SIC→NAICS overhaul affects both L and Lp simultaneously and cancels somewhat in the difference, but does not cancel completely because the partition itself changes. Vintage divergences in Lu are inherited from S515 (Appendix C update for NAICS; BLS CES 2003 overhaul; KB coverage gap 1962–1989). Last cached fetch: see `data/raw/bls/provenance.json`. Splice method is `derive` — the splice is induced by S515 + L_total and there is no independent splice parameter for Lu.
+Book vintage: SIC-basis BLS employment with Shaikh–Tonak's then-current Appendix C concordance, supplying both Lp and L across the **full book period 1948–1989** (digitized in `TableE3_LaborStatistics.csv`; there is no 1962–1989 book gap). Modern vintage: NAICS-basis BLS CES from 2003 forward; the 2003 SIC→NAICS overhaul (DIV-010 family) affects both L and Lp simultaneously and cancels somewhat in the difference, but does not cancel completely because the partition itself changes. Vintage divergences in Lu are inherited from S515 (Appendix C update for NAICS; BLS CES 2003 overhaul). Last cached fetch: see `data/raw/Inputs/API_Data/BLS/provenance.json`. Splice method is `derive` — the splice is induced by S515-EXT + the shared book-anchored L (both anchored at 1989), and there is no independent splice parameter for Lu.

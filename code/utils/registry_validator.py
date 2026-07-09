@@ -87,6 +87,30 @@ def get_reference_values(sid: str, *, year_keys_only: bool = True) -> dict[int, 
     return merged  # type: ignore[return-value]
 
 
+def get_variant_reference_values(sid: str, subseries: str) -> dict[int, float]:
+    """Return book-anchored reference values for a named variant subseries.
+
+    Reads ``series[<SID>].validation.variant_reference_values[<subseries>]``
+    (K-plan WP-K3, 2026-07-07). These are the book's OWN printed cells (Table
+    5.8 / 5.7 / 5.11), used to independently anchor the book-faithful GROSS
+    variants (S*-GROSS-A) — distinct from ``reference_values`` (which for the
+    S517 family is tautological loader output). Returns an empty dict (not an
+    error) when absent, so validators can treat absence as "no variant check".
+    """
+    block = _series_block(sid)
+    validation = block.get("validation") or {}
+    raw = (validation.get("variant_reference_values") or {}).get(subseries)
+    if not raw:
+        return {}
+    out: dict[int, float] = {}
+    for k, v in raw.items():
+        try:
+            out[int(k)] = float(v)
+        except (ValueError, TypeError):
+            continue
+    return out
+
+
 def get_derived_statistics(sid: str) -> dict:
     """Return `validation.derived_statistics` for a series per Decision 0008.
 

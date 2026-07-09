@@ -24,19 +24,35 @@ SERIES_ID = "S608"
 
 
 def run():
+    # REVIEW 2026-07 (workpackage B): S608 rebuilt to the book Table N.2 measure
+    # NtrV*/V* = Ntrrate = NSW/EC = S607/S617 (V* cancels). Identity check updated.
     s607 = pd.read_csv(DATA_FINAL / "S607.csv")
-    s504 = pd.read_csv(DATA_FINAL / "S504.csv")
+    s617 = pd.read_csv(DATA_FINAL / "S617.csv")
     s608 = pd.read_csv(DATA_FINAL / "S608.csv")
     s607 = s607[s607["series_id"] == "S607-A"][["year", "value"]].rename(columns={"value": "NSW"})
-    s504 = s504[s504["series_id"] == "S504-A"][["year", "value"]].rename(columns={"value": "V_star"})
+    s617 = s617[s617["series_id"] == "S617-A"][["year", "value"]].rename(columns={"value": "EC"})
     s608_a = s608[s608["series_id"] == "S608-A"][["year", "value"]].rename(columns={"value": "ratio"})
 
-    overlap = s607.merge(s504, on="year").merge(s608_a, on="year")
-    overlap["implied"] = overlap["NSW"] / overlap["V_star"]
+    overlap = s607.merge(s617, on="year").merge(s608_a, on="year")
+    overlap["implied"] = overlap["NSW"] / overlap["EC"]
     overlap["abs_err"] = (overlap["implied"] - overlap["ratio"]).abs()
 
-    max_err = float(overlap["abs_err"].max()) if len(overlap) else None
-    identity_pass = (max_err is None or max_err < 1e-6)
+    # D3 (2026-07-02) book-faithful adoption: S608-A is now the book Table N.2
+    # Ntrrate (verbatim, 2-decimal) and S607-A is book NSW dollars = Ntrrate*EC
+    # (full precision) EXCEPT 1964, whose value is the Table N.1 exact -8.1 (the
+    # only fully-worked dollar illustration in the book). Because -8.1 differs
+    # from the rate-derived -7.42 by the documented 2-decimal rate-rounding band,
+    # the NSW/EC identity holds to ~1e-6 for every year EXCEPT 1964, where it
+    # holds only within that band (~0.0018). We therefore exempt the single
+    # book-anchored year and keep the strict 1e-6 identity for all others.
+    BOOK_ANCHOR_YEARS = {1964}          # Table N.1 exact dollar trio
+    BAND_TOL = 0.005                     # 2-decimal rate-rounding band
+    strict = overlap[~overlap["year"].isin(BOOK_ANCHOR_YEARS)]
+    anchor = overlap[overlap["year"].isin(BOOK_ANCHOR_YEARS)]
+    max_err = float(strict["abs_err"].max()) if len(strict) else None
+    anchor_max = float(anchor["abs_err"].max()) if len(anchor) else 0.0
+    identity_pass = ((max_err is None or max_err < 1e-6)
+                     and anchor_max <= BAND_TOL)
 
     # Registry benchmark check (per Decision 0002)
     benchmarks = get_reference_values(SERIES_ID)
@@ -72,9 +88,14 @@ def run():
         "n_fail": n_bench_fail,
         "n_missing": n_bench_miss,
         "identity_check": {
-            "identity": "S608 = S607 / S504 (NSW / V*)",
+            "identity": "S608 = NtrV*/V* = Ntrrate = NSW/EC = S607 / S617 (book Table N.2)",
             "compared_years": len(overlap),
-            "max_abs_err": max_err,
+            "max_abs_err_strict": max_err,
+            "book_anchor_years": sorted(BOOK_ANCHOR_YEARS),
+            "book_anchor_max_abs_err": anchor_max,
+            "book_anchor_band_tol": BAND_TOL,
+            "note": ("1964 is the Table N.1 exact-dollar anchor (-8.1); its NSW/EC "
+                     "identity holds within the 2-decimal rate-rounding band, not to 1e-6."),
             "status": "PASS" if identity_pass else "FAIL",
         },
         "benchmarks": {"checks": bench_checks},

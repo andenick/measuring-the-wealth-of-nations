@@ -66,6 +66,7 @@ def run() -> dict:
     n = len(series)
     ledger = {
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "schema_version": "anu-build-v12.0",
         "registry_version": reg.get("version"),
         "series_count": n,
         "coverage_counts": coverage,

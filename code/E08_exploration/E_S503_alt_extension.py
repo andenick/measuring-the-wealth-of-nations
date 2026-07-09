@@ -19,7 +19,7 @@ and reports the level discontinuity vs the book 1989 endpoint for each.
 Inputs
 ------
 - BEA GDP-by-Industry Value Added cache:
-    data/raw/bea/gdp_by_industry_value_added.csv
+    data/raw/Inputs/API_Data/BEA/gdp_by_industry_value_added.csv
 - Book Table H.1 (column GFP_star):
     Technical/data/source/book_tables/book_tableH1_1948_1989.csv
 
@@ -47,7 +47,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]  # .../RMWND
 TECH_ROOT = PROJECT_ROOT / "Technical"
 
 BEA_VA_CSV = (
-    PROJECT_ROOT / "data" / "raw" / "bea"
+    PROJECT_ROOT / "Inputs" / "predecessor-build" / "Inputs" / "API_Data" / "BEA"
     / "gdp_by_industry_value_added.csv"
 )
 BOOK_H1_CSV = TECH_ROOT / "data" / "source" / "book_tables" / "book_tableH1_1948_1989.csv"

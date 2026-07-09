@@ -21,8 +21,8 @@ Construction: V* (productive worker compensation, via the formula `V_j = (wp)_j 
 ## 3. extension_source
 
 **BLS CES + BEA NIPA composite** — production-worker wages by industry from BLS CES aggregated through the productive/unproductive concordance to compute V*; total wage bill W from BEA NIPA Table 6.2:
-- **BLS CES production-worker series** (10 series) cached at `data/raw/bls/bls_ces_production_workers.csv`, pulled 2026-02-24.
-- **BEA NIPA Table 6.2D** (Compensation of Employees by Industry, 2,673 rows) cached at `data/raw/bea/nipa_6_2D_compensation_by_industry.csv`, pulled 2026-02-24.
+- **BLS CES production-worker series** (10 series) cached at `data/raw/Inputs/API_Data/BLS/bls_ces_production_workers.csv`, pulled 2026-02-24.
+- **BEA NIPA Table 6.2D** (Compensation of Employees by Industry, 2,673 rows) cached at `data/raw/Inputs/API_Data/BEA/nipa_6_2D_compensation_by_industry.csv`, pulled 2026-02-24.
 - **BEA NIPA Table 6.10D** (Employer Contributions for Government Social Insurance, 540 rows) at `nipa_6_10D_employer_contributions.csv` — provenance file lists `purpose: "Employee compensation detail for ec_p/ec_u ratio"`, directly supporting the V*/W decomposition.
 - **BEA NIPA Table T20100** (Compensation 1929–2025) at `nipa_T20100_compensation_1929_2025.csv` for the W denominator.
 
@@ -47,7 +47,7 @@ The book's V*/W uses BLS CES production-worker wages and BEA NIPA compensation a
 (S512-A[1989] = 0.3600) and BEA-derived first-EXT value
 (S512-EXT[1998] = 0.3195), populating S512-COMBINED for years 1990-1997
 via a dedicated S512-INTERP subseries. Consistent with the S501–S503 bridge
-per `Technical/Build/BUILD_NARRATIVE.md` Stage 5 cohort 3.
+per `internal-build/BUILD_NARRATIVE.md` Stage 5 cohort 3.
 
 **Formula**: `v(t) = exp( ln(v0) + (t - 1989)/(1998 - 1989) · (ln(v1) - ln(v0)) )`
 
@@ -68,3 +68,12 @@ propagates into S504-INTERP across the same years (transparently flagged).
 
 **Documentation script**: `code/M04_manual/M04_S512_1990_1997_bridge.py`
 (also acts as a verifier).
+
+---
+
+## workpackage A SUPERSESSION NOTICE (2026-07-01)
+
+The extension methodology described above was revised by the workpackage A comprehensive-review rebuild
+(headline ROE remediation). Level-splices and log-linear 1990-97 bridges described in this EPR
+are RETIRED; see the workpackage A REBUILD ADDENDUM in `S512_DPR.md`, the as-built provenance strings
+in `data/final/S512.csv`, and DIV-A10..A16 in `internal-review-notes_2026-07/WP-A_DIV_PATCHES.json`.

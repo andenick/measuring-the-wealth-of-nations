@@ -3,8 +3,15 @@
 Refactored 2026-05-24 per Decision 0002 — reads benchmarks from registry
 (`validation.reference_values`) via `utils.registry_validator.get_reference_values`.
 
-Reference values (registry): 1948: 36154, 1961: 49212 — derived as L - Lp from
-TableE3 (1948: L_total=66091, Lp_total=29937; 1961: L_total=82827, Lp_total=33615).
+Reference values (registry, class=book): derived as L - Lp from TableE3
+(= Table 5.5 = Appendix F Table F.1) over the full book period 1948-1989:
+    1948 = 25307  (L 58301 - Lp 32994)
+    1958 = 33416, 1967 = 42281, 1977 = 52318
+    1989 = 72363  (L 113511 - Lp 41148)
+Only the book arm S516-A is benchmark-validated (subseries_filter='S516-A'); the
+extension S516-EXT = L - Lp (single book-anchored total-employment L incl. govt,
+shared with S515; D2 rebuild) is validated by the independent-L identity + seam-
+continuity tests in tests/test_identities.py, not by book benchmarks.
 """
 from __future__ import annotations
 

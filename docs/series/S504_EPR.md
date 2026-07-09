@@ -25,7 +25,7 @@ Source recipe: `V* = Σ_j (wp)_j × x_j × (Lp)_j` summed over productive sector
 - **BEA NIPA Table T20100** — Aggregate compensation 1929–2025 (`nipa_T20100_compensation_1929_2025.csv`) for the total wage bill W.
 - **BLS CES production-worker series** — `bls_ces_production_workers.csv`, 10 industry series (CES0500000006, CES0600000006, CES1000000006, CES2000000006, CES3000000006 and their all-employee counterparts) for the production-worker share.
 
-Cached at `data/raw/bea/` and `data/raw/bls/`, pulled 2026-02-24. Construction is a derive operation that depends on S512 (productive wage share V*/W).
+Cached at `data/raw/Inputs/API_Data/BEA/` and `data/raw/Inputs/API_Data/BLS/`, pulled 2026-02-24. Construction is a derive operation that depends on S512 (productive wage share V*/W).
 
 ## 4. extension_url
 
@@ -48,7 +48,7 @@ Book V* (1948–1989) uses pre-NAICS SIC industry classifications and BLS CES pr
 (S504-A[1989] = 1206.40 $B) and BEA-derived first-EXT value
 (S504-EXT[1998] = 1620.23 $B), populating S504-COMBINED for years 1990-1997
 via a dedicated S504-INTERP subseries. Consistent with the S501–S503 bridge
-per `Technical/Build/BUILD_NARRATIVE.md` Stage 5 cohort 3.
+per `internal-build/BUILD_NARRATIVE.md` Stage 5 cohort 3.
 
 **Formula**: `v(t) = exp( ln(v0) + (t - 1989)/(1998 - 1989) · (ln(v1) - ln(v0)) )`
 
@@ -66,3 +66,12 @@ values: 1991 = 1288.12 $B, 1995 = 1468.52 $B.
 
 **Documentation script**: `code/M04_manual/M04_S504_1990_1997_bridge.py`
 (also acts as a verifier).
+
+---
+
+## workpackage A SUPERSESSION NOTICE (2026-07-01)
+
+The extension methodology described above was revised by the workpackage A comprehensive-review rebuild
+(headline ROE remediation). Level-splices and log-linear 1990-97 bridges described in this EPR
+are RETIRED; see the workpackage A REBUILD ADDENDUM in `S504_DPR.md`, the as-built provenance strings
+in `data/final/S504.csv`, and DIV-A10..A16 in `internal-review-notes_2026-07/WP-A_DIV_PATCHES.json`.

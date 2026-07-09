@@ -85,7 +85,10 @@ def _extension_frame() -> tuple[pd.DataFrame, dict]:
     merged["series_id"]  = "S504-EXT"
     merged["units"]      = "billions_usd"
     merged["stage"]      = "extension"
-    merged["provenance"] = "S512-EXT × BEA NIPA T20100 (compensation_millions / 1000)"
+    # workpackage A: S512-EXT is now de-spliced (R1) and covers 1990-2024 with REAL SIC data 1990-97
+    # (R3), so S504-EXT inherits real values across the full extension span (no log-linear bridge).
+    merged["provenance"] = ("S512-EXT (de-spliced honest V*/W; SIC 1990-97 + NIPA 6.2D 1998+) "
+                            "× BEA NIPA T20100 total compensation (millions/1000)")
     out = merged[["series_id", "year", "value", "units", "stage", "provenance"]]
     diag = {
         "n_rows":    len(out),
@@ -132,22 +135,17 @@ def _interp_frame(book_df: pd.DataFrame, ext_df: pd.DataFrame) -> tuple[pd.DataF
     return bridge, diag
 
 
-def _combined_frame(book_df: pd.DataFrame, ext_df: pd.DataFrame,
-                    interp_df: pd.DataFrame) -> pd.DataFrame:
+def _combined_frame(book_df: pd.DataFrame, ext_df: pd.DataFrame) -> pd.DataFrame:
     a = book_df[book_df["series_id"] == "S504-A"][["year", "value", "provenance"]].copy()
     a["series_id"] = "S504-COMBINED"
     a["stage"]     = "book_period"
 
-    b = interp_df[["year", "value", "provenance"]].copy()
-    b["series_id"] = "S504-COMBINED"
-    b["stage"]     = "extension_bridge"
-
     e = ext_df[ext_df["series_id"] == "S504-EXT"][["year", "value", "provenance"]].copy()
-    e = e[e["year"] >= EXT_FIRST_YEAR].copy()
+    e = e[e["year"] > BOOK_LAST_YEAR].copy()
     e["series_id"] = "S504-COMBINED"
     e["stage"]     = "extension"
 
-    out = pd.concat([a, b, e], ignore_index=True, sort=False).sort_values("year")
+    out = pd.concat([a, e], ignore_index=True, sort=False).sort_values("year")
     out["units"] = "billions_usd"
     return out[["series_id", "year", "value", "units", "stage", "provenance"]].reset_index(drop=True)
 
@@ -156,13 +154,13 @@ def run():
     book = _book_period_frame()
     try:
         ext, diag = _extension_frame()
-        interp, idiag = _interp_frame(book, ext)
-        combined = _combined_frame(book, ext, interp)
-        df = pd.concat([book, ext, interp, combined], ignore_index=True, sort=False)
-        print(f"    [P02_S504] extension diag: {diag}")
-        print(f"    [P02_S504] interp    diag: {idiag}")
+        combined = _combined_frame(book, ext)
+        # workpackage A: log-linear INTERP retired — S504-EXT now covers 1990-2024 with real data.
+        df = pd.concat([book, ext, combined], ignore_index=True, sort=False)
+        print(f"    [P02_S504] extension diag (real 1990-2024, no bridge): {diag}")
     except Exception as exc:
         print(f"    [P02_S504] EXTENSION FAILED: {exc!r} — writing book-only")
+        import traceback; traceback.print_exc()
         df = book
     write_series_csv(df, "S504", stage="intermediate")
     final_path = write_series_csv(df, "S504", stage="final")

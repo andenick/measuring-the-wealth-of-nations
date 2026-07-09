@@ -56,7 +56,7 @@ from typing import Iterable
 # ---------------------------------------------------------------------------
 # This file: Technical/code/utils/precommit_check.py
 SCRIPT_PATH = Path(__file__).resolve()
-PROJECT_ROOT = SCRIPT_PATH.parents[3]  # bundle/project root
+PROJECT_ROOT = SCRIPT_PATH.parents[3]  # (local path)
 TECHNICAL_ROOT = PROJECT_ROOT / "Technical"
 REGISTRY_PATH = TECHNICAL_ROOT / "series_registry.json"
 
@@ -397,12 +397,24 @@ def _is_canonical_vq(entry: dict) -> tuple[bool, str]:
     return True, ""
 
 
+def _loader_visible_quotes(data: dict) -> int:
+    """Count quotes the viz loader will surface (schema A: verbatim_quotes[]
+    entries carrying a non-empty ``text`` — mirrors
+    Technical/viz/data_loader._load_verbatim_quote)."""
+    quotes = data.get("verbatim_quotes") or []
+    if not isinstance(quotes, list):
+        return 0
+    return sum(1 for q in quotes if isinstance(q, dict) and q.get("text"))
+
+
 def check_decision_0007(files: Iterable[Path], rpt: Report) -> None:
     json_files = [p for p in files
                   if p.suffix == ".json" and p.name.endswith("_research.json")
                   and "research" in p.parts]
     if not json_files:
         return
+    reg = load_registry()
+    reg_series = (reg or {}).get("series", {})
     for p in json_files:
         try:
             with p.open("r", encoding="utf-8") as f:
@@ -420,6 +432,24 @@ def check_decision_0007(files: Iterable[Path], rpt: Report) -> None:
             rpt.add("Decision-0007", "FAIL", _rel(p),
                     f"only {len(canonical)} canonical verbatim_quote entries "
                     f"(need >=3 per Decision 0007)")
+        # HARD loader-visibility check (Tier-A W1a, 2026-07-08): every
+        # publish:true series must ALSO carry schema-A verbatim_quotes[] with
+        # a non-empty `text`, or the website author quote renders empty. The
+        # schema-B-only tolerance above let 14 published series ship without
+        # a visible quote (A4 audit, 2026-07-07).
+        sid = p.name[:-len("_research.json")]
+        meta = reg_series.get(sid)
+        if meta is not None and meta.get("publish") is True:
+            n_visible = _loader_visible_quotes(data)
+            if n_visible == 0:
+                rpt.add("Decision-0007", "FAIL", _rel(p),
+                        "publish:true series has NO loader-visible quote "
+                        "(schema-A verbatim_quotes[] with non-empty 'text'); "
+                        "website author quote would render empty")
+            else:
+                rpt.add("Decision-0007", "PASS", _rel(p),
+                        f"{n_visible} loader-visible schema-A quotes "
+                        f"(published-series hard check)")
 
 
 # ---------------------------------------------------------------------------

@@ -24,7 +24,7 @@ def run():
 
     bench = BenchmarkValidator(
         series_id="XS004",
-        tolerance_class=get_tolerance_class("XS004", default="rate_series"),
+        tolerance_class=get_tolerance_class("XS004", default="share_series"),
         benchmarks=get_reference_values("XS004"),
         subseries_filter="XS004-A",
     ).run(DATA_FINAL / "XS004.csv")
@@ -34,7 +34,7 @@ def run():
     result = {
         "series_id": "XS004",
         "run_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "tolerance_class": get_tolerance_class("XS004", default="rate_series"),
+        "tolerance_class": get_tolerance_class("XS004", default="share_series"),
         "status": status,
         "n_pass": bench["n_pass"] + (1 if rule_pass else 0),
         "n_fail": bench["n_fail"] + (0 if rule_pass else 1),

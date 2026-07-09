@@ -20,7 +20,7 @@ Figures: 5.4, 5.6, 9.1 (GFP* plotted as the Marxian productive net product aggre
 
 ## 3. extension_source
 
-**BEA GDP-by-Industry Accounts** — Value Added (VA) series for the productive-sector NAICS industries (S503-EXT subseries; productive/unproductive concordance per `Technical/docs/methodology/productive_classification_NAICS.md`, same partition as S501/S502). The pull caches `gdp_by_industry_value_added.csv` at `data/raw/bea/`, pulled 2026-02-24 by `pull_bea_nipa_ch05.py` and mirrored at `Technical/data/raw/bea/`.
+**BEA GDP-by-Industry Accounts** — Value Added (VA) series for the productive-sector NAICS industries (S503-EXT subseries; productive/unproductive concordance per `Technical/docs/methodology/productive_classification_NAICS.md`, same partition as S501/S502). The pull caches `gdp_by_industry_value_added.csv` at `data/raw/Inputs/API_Data/BEA/`, pulled 2026-02-24 by `pull_bea_nipa_ch05.py` and mirrored at `Technical/data/raw/bea/`.
 
 ## 4. extension_url
 
@@ -49,3 +49,12 @@ The 1989 book endpoint **exceeds** the 1997 BEA endpoint by ~26%, a downward dis
 The 1990–1996 gap is bridged log-linearly between book(1989)=4363.57 and BEA(1997)=3462.40, documented as methodological adjustment **M04_S503** in `DIVERGENCE_REGISTER.json` with severity = `moderate`. The growth-rate splice preserves the BEA post-1997 growth profile, and the COMBINED series will show a declining bridge segment 1990→1996 which users should treat as a vintage-discontinuity zone rather than a true economic contraction.
 
 A future variant (VPR_S503_alt_extension) should explore a level-rescale splice that re-anchors BEA(1997) to the forward projection of the book series, or alternatively a broader-NAICS productive partition that includes parts of NAICS 51 (information) to better match the book's SIC productive boundary. The current growth-rate splice is the Anu-default choice; the variant comparison is left as Stage 7 / Wave D follow-up.
+
+---
+
+## workpackage A SUPERSESSION NOTICE (2026-07-01)
+
+The extension methodology described above was revised by the workpackage A comprehensive-review rebuild
+(headline ROE remediation). Level-splices and log-linear 1990-97 bridges described in this EPR
+are RETIRED; see the workpackage A REBUILD ADDENDUM in `S503_DPR.md`, the as-built provenance strings
+in `data/final/S503.csv`, and DIV-A10..A16 in `internal-review-notes_2026-07/WP-A_DIV_PATCHES.json`.

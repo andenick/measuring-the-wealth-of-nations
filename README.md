@@ -63,7 +63,7 @@ python tests/ci_smoke.py
 ```
 
 > The `tests/` directory carries the development regression + identity
-> suite (93 pass / 2 skip / 2 xfail) as run against the internal build
+> suite (95 pass / 2 skip / 2 xfail) as run against the internal build
 > tree; `tests/ci_smoke.py` is the self-contained check that validates
 > this published bundle on its own.
 
@@ -79,7 +79,7 @@ configuration for fresh data fetches.
 ```
 Publish/
 |-- README.md                  # this file
-|-- VERSION.txt                # bundle version string (v2.0)
+|-- VERSION.txt                # bundle version string (v2.1)
 |-- LICENSE                    # MIT (Code) + CC-BY-4.0 (Data)
 |-- CITATION.cff               # machine-readable citation
 |-- INSTALL.md                 # setup details
@@ -89,7 +89,7 @@ Publish/
 |-- Dockerfile                 # reproducible build container
 |-- build.py                   # build orchestrator + status reporter
 |-- series_registry.json       # single source of truth (64 series)
-|-- DIVERGENCE_REGISTER.json   # intentional methodology divergences (69 entries)
+|-- DIVERGENCE_REGISTER.json   # intentional methodology divergences (73 entries)
 |-- data/                      # 64 chopped CSVs (one per series, wide format)
 |-- extenbooks/                # 64 Excel workbooks (4 sheets per series)
 |-- docs/
@@ -99,7 +99,7 @@ Publish/
 |   `-- precommit/             # pre-commit hook policy
 |-- code/                      # L01 loaders, P02 processors, V03 validators, M04, A05, O06
 |-- viz/                       # Plotly Dash / Shiny visualization apps
-`-- tests/                     # 93 pass / 2 skip / 2 xfail regression + identity suite
+`-- tests/                     # 95 pass / 2 skip / 2 xfail regression + identity suite
 ```
 
 ## What's in This Release
@@ -116,7 +116,7 @@ Publish/
 - **Visualization app** (`viz/`) - Dash + Shiny apps for interactive
   exploration.
 - **DIVERGENCE_REGISTER.json** - every intentional deviation from
-  upstream sources and predecessor methodology (69 entries).
+  upstream sources and predecessor methodology (73 entries).
 
 ## Data License
 
@@ -148,7 +148,7 @@ non-empty (`tests/ci_smoke.py`). A green build means the published
 package installs cleanly and its data layer is intact.
 
 The full V03 validation against book benchmarks and cross-source
-identities (93 pass / 2 skip / 2 justified xfail; `anu-doctor` 0/0) is
+identities (95 pass / 2 skip / 2 justified xfail; `anu-doctor` 0/0) is
 run in the canonical build tree, where the intermediate build inputs
 live — see `DIVERGENCE_REGISTER.json`, `PIPELINE_STATE.json`, and the
 per-series `docs/`.
@@ -168,7 +168,7 @@ build tree. Concretely:
 - Read every value's lineage: `series_registry.json` (single source of truth),
   `data/PROVENANCE_DICTIONARY.csv` (per-observation),
   `data/COMPONENT_CHAINS.{csv,json}`, the 149 per-series `docs/series/*_DPR.md`
-  / `*_EPR.md`, and `DIVERGENCE_REGISTER.json` (69 intentional divergences).
+  / `*_EPR.md`, and `DIVERGENCE_REGISTER.json` (73 intentional divergences).
 
 **You cannot, from this bundle alone, regenerate the numbers from raw sources.**
 The intermediate build inputs (`data/final/`, cached agency responses, the
@@ -178,7 +178,7 @@ Therefore:
 - `build.py chopped` / `build.py extenbooks` and `make build` **skip all series**
   when `data/final/` is absent — they are maintainer-side regenerators, not
   clean-room builders.
-- The full V03 validation against book benchmarks (93 pass / 2 skip / 2 xfail;
+- The full V03 validation against book benchmarks (95 pass / 2 skip / 2 xfail;
   `anu-doctor` 0/0) is run in the maintainer tree, not here.
 - Fresh BEA/BLS/FRED fetches require your own free API keys and network access
   (see `INSTALL.md`).
@@ -216,19 +216,52 @@ one EPR per series).
   nonresidential capital stock, but the published book values match
   BEA Fixed Assets Table 4.1 **Net** Stock exactly at all 5 benchmark
   years (1948 = 292, 1958 = 551, 1967 = 871, 1980 = 3 800, 1989 =
-  6 700 $B). The book's terminology is in error; the implementation
-  uses net stock. BEA publishes no current-cost gross stock for
-  private nonresidential fixed assets, so a gross-stock variant is
-  not constructible from BEA sources. See `DIVERGENCE_REGISTER.json`
-  entry **DIV-008** and `docs/series/S517_EPR.md` Section 5 for the full
-  divergence record.
+  6 700 $B). The net-capital column is retained as the headline series.
+  **New in v2.1:** a book-faithful gross-capital variant `S517-GROSS-A`
+  (with `S513-GROSS-A` / `S514-GROSS-A`) is now shipped for the **book
+  period 1948–1989 only** — it reproduces the book's printed gross K\* /
+  r\* directly (r\* at MAE 0.0025) and gives the profit-rate family its first
+  non-tautological book anchor. Beyond the mid-1990s BEA discontinued the
+  current-cost gross stock for private nonresidential fixed assets, so the
+  gross variant is `nan` after the book period (not synthetically extended).
+  See `DIVERGENCE_REGISTER.json` entries **DIV-008 / DIV-070 / DIV-058** and
+  `docs/series/S517_EPR.md` Section 5 for the full divergence record.
 
 ## Version
 
-**Current: v2.0** (see `VERSION.txt` and `CHANGELOG.md`). This is the
-definitive release, following a comprehensive series-by-series review
-(~50 series re-examined) and the D-batch of book-fidelity decisions.
-Highlights of the current package:
+**Current: v2.1** (see `VERSION.txt` and `CHANGELOG.md`). An additive
+release on top of v2.0 — every pre-existing published cell is byte-identical;
+new content appends as new columns, new series arms, and new sidecars.
+
+**New in v2.1 — book-faithful profit rate, reconstructed exploitation, truth fixes:**
+
+- **Book-faithful gross-capital profit-rate variants** (`S513-GROSS-A`,
+  `S514-GROSS-A`, `S517-GROSS-A`, book period 1948–1989): the profit-rate
+  family's first *non-tautological* book anchor — the printed book `r*` is
+  reproduced at **MAE 0.0025 (42/42 years exact at 2 dp)**. The v2.0 net-capital
+  headline series are retained unchanged (see `DIVERGENCE_REGISTER.json` DIV-070,
+  DIV-058).
+- **Reconstructed time-varying I-O-uplift (kIO) rate-of-exploitation arm**
+  (`S506-EXT-MARX-KIO`): the frozen kIO = 1.5714 is replaced by an
+  officially-sourced, backward-validated, uncertainty-banded annual series
+  (kIO₁₉₉₂ ≈ 1.5696 → 1.731 by 2024; e ≈ 2.43 → 4.46). The frozen arm stays
+  published as the conservative lower bound (DIV-071, DIV-028).
+- **Uncertainty-band sidecars** under `data/bands/`: `S506_KIO_BAND.csv`,
+  `S701_LAMBDA_BAND.csv`, `S702_LAMBDA_BAND.csv`.
+- **λ / p\* labor-value series (`S701`, `S702`) publish at 3 significant figures**
+  (inside the tightest F3 sensitivity bound) instead of false 15–17-digit precision.
+- **Restored per-series author quotes** for 34 published series (loader-visible
+  quotes 110 → 348; zero invented or dropped), guarded by a new hard test.
+- **Truth fixes**: zero unexplained book cells (S601/S603 1964 → DIV-072/073);
+  validator honesty (5 tautological anchors re-anchored to independent sources → 0);
+  `XS002` de-hardcoded; the `appendix_F/` filter dir renamed `ch7_productive_filter/`.
+- **`DIVERGENCE_REGISTER.json`: 73 entries** (was 69); gates **anu-doctor 0/0**,
+  **pytest 95 pass / 2 skip / 2 xfail**, **per-series validators 60 PASS / 4 honest
+  registered FAIL**.
+- **New public artifact** `ANSWERS.md` — an answers-first brief at the repo root.
+
+**Carried from v2.0** — a comprehensive series-by-series review
+(~50 series re-examined) and the D-batch of book-fidelity decisions:
 
 - **Comprehensive review corrections** across ~50 series (provenance,
   units, content labels, and reference-value fixes), with the full audit
@@ -249,9 +282,9 @@ Highlights of the current package:
   `data/PROVENANCE_DICTIONARY.csv` (+ README and `PROVENANCE_COVERAGE.csv`),
   `data/COMPONENT_CHAINS.{csv,json}`, `data/S506_STEP_TABLE.csv`, and the
   master I-O concordance (`data/concordances/`).
-- **DIVERGENCE_REGISTER.json: 69 entries** capturing every
+- **DIVERGENCE_REGISTER.json: 73 entries** capturing every
   intentional deviation from upstream methodology.
-- **93 passed / 2 skipped / 2 justified xfail** test suite (`tests/`)
+- **95 passed / 2 skipped / 2 justified xfail** test suite (`tests/`)
   plus V03 validators driven off year-keyed `reference_values`;
   `anu-doctor` reports 0 errors / 0 warnings.
 - **Reproducibility infrastructure**: `Dockerfile`, `Makefile`,

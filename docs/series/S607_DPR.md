@@ -52,3 +52,12 @@ S607 now spans **1952-2025** (74 years) via concat of:
 **Headline regime change**: NSW first POSITIVE in 1975 (a brief 1970s positive episode), but the *persistent* sign change is in the 1990s as transfer programs (Medicare expansion, EITC) outpaced worker tax burden. 2024 NSW = $1,234B (positive).
 
 Validator V03_S607 includes a regime_change_check that flags the first positive year.
+
+
+---
+
+## D3 book-faithful adoption (2026-07-02)
+
+**S607-A is now book-faithful** (NSW = Ntrrate(Table N.2)*EC; 1964 = Table N.1 exact -8.1; dollar levels carry a 2-decimal rate-rounding band). The prior BEA-API reconstruction is preserved as **S607-RECON-A** / **S607-RECON-COMBINED** (comparison arm). S607-COMBINED splices book-faithful S607-A (1952-1989) with the reconstruction extension S607-EXT (1990-2025) across a documented **method seam** at 1989/1990 (D3-DIV-NSW-SPLICE-SEAM; jump +48.46 bn; NOT re-scaled). Book-faithful NSW is positive (countercyclical) in 1971/1975/1976/1977.
+
+> Decision: ADOPT NSW Candidate A (Appendix N Tables N.1/N.2 verbatim, 1952-1989) as book-period primary; BEA-API reconstruction becomes the labeled comparison/extension arm. Nothing deleted (.pre_d3 backups + -RECON subseries). See internal-review-notes_2026-07/D3_REGISTRY_PATCHES.json + D3_DIV_PATCHES.json.

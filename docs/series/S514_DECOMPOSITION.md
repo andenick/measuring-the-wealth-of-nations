@@ -1,6 +1,6 @@
 # S514 — Decomposition
 
-**Series**: Capacity-Adjusted Profit Rate (r*_adj = r*Ã—TCU)
+**Series**: Capacity-Adjusted Profit Rate (r*' = r*/u, DIVIDE — D1 2026-07-02)
 
 ## Construction Flow
 
@@ -9,7 +9,7 @@ flowchart TD
     S514_A["S514-A<br/>S&T 1994"]
     S514_EXT["S514-EXT<br/>FRED TCU"]
     S514_COMBINED["S514-COMBINED<br/>"]
-    S514_EXT["S514-EXT<br/>derive: r*_adj = r* Ã— TCU"]
+    S514_EXT["S514-EXT<br/>derive: r*' = r* / (TCU/100)"]
     S513_COMBINED --> S514_EXT
     S514_COMBINED["S514-COMBINED<br/>splice"]
     S514_A --> S514_COMBINED
@@ -24,7 +24,7 @@ flowchart TD
 **Step 2** — derive
   - Inputs: S513-COMBINED
   - Output: `S514-EXT`
-  - Formula: `r*_adj = r* Ã— TCU`
+  - Formula: `r*' = r* / (TCU/100)` (book period S514-A: `r*' = r* / u_book`)
 
 **Step 3** — splice
   - Inputs: S514-A, S514-EXT

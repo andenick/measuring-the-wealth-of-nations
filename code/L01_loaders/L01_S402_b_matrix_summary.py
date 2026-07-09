@@ -19,7 +19,11 @@ def load() -> pd.DataFrame:
         except Exception as e:
             print(f"      [L01_S402] WARN year {yr}: {e}")
     df = pd.DataFrame(rows).sort_values("year").reset_index(drop=True)
-    df["value"] = df["b_frobenius_norm"]
+    # workpackage C: canonical scalar = mean total-requirements column multiplier of the
+    # REBUILT Leontief inverse (interpretable, ~1.8-2.7 for the US; for NAICS
+    # years it summarizes BEA's own published Total Requirements table).
+    # Replaces the Frobenius norm of the defective-cache inverse (~30-100).
+    df["value"] = df["b_colsum_mean"]
     df["series_id"] = "S402-A"
     df["units"] = "matrix_summary"
     return df
@@ -28,7 +32,7 @@ def load() -> pd.DataFrame:
 def run():
     df = load()
     print(f"    [L01_S402] {len(df)} benchmark years; "
-          f"B Frobenius norm: {df['b_frobenius_norm'].min():.2f}-{df['b_frobenius_norm'].max():.2f}")
+          f"B mean column multiplier: {df['b_colsum_mean'].min():.3f}-{df['b_colsum_mean'].max():.3f}")
     return df
 
 

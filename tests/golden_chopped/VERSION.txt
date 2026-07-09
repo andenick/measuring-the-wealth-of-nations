@@ -1,31 +1,38 @@
 RMWND Golden Chopped Snapshot
 =============================
 
-Snapshot date: 2026-05-24 (UTC)
-Project state: Anu Framework v12.0, RMWND v1.1 (post-Phase 4, mid-Phase 5)
+Snapshot date: 2026-07-09 (UTC)
+Project state: Anu Framework v12.0; series_registry.json v2.3.0
+               (schema anu-ingestion-v4.0). DATA RELEASE v2.1.
+               V03 60 PASS / 4 honest registered-FAIL.
 
-Source: Technical/chopped/*.csv
+Source: chopped/*.csv
 Count:  64 CSVs
-Series: 35 S-series (chapters 2-9) + 25 ES-series + 4 AS-series
+Series: 35 S-series (chapters 2-9) + 29 XS-series ("Extra Series": the former
+        25 ES + 4 AS, migrated to the canonical XS prefix per Series ID Spec
+        v2.2). The registry is authoritative.
 
-These files are the reference "golden" snapshot used by test_regression.py
+These files are the reference "golden" snapshot used by the regression test
 to detect unintended changes in the chopped output produced by the pipeline.
 
 Update procedure
 ----------------
-1. Verify the new chopped CSVs are correct (deliberately changed, not regressed).
-2. Replace this entire directory's contents from Technical/chopped/.
+1. Verify the new chopped CSVs are correct (deliberately changed, not regressed):
+   EVERY changed series must trace to a registered DIVERGENCE_REGISTER.json entry.
+2. Replace this directory's contents from chopped/.
 3. Bump this VERSION.txt with a new date and a brief changelog entry.
-4. Reference the bump in PROGRESS_LOG.md and the BUILD_NARRATIVE.
 
 Changelog
 ---------
-2026-05-24 — initial snapshot, v1.1 mid-Phase-5 state (Stage 3 cohorts 1+2 applied,
-              Stage 5 patches applied, Ch7 real-fix applied).
-2026-05-24 — v1.2 Iter 3: S513 + S514 stock-form adoption — intentional regression
-              baseline update per DIV-012. P02_S513 + P02_S514 rewritten to compute
-              r* = S*/(K*+V*) (book Table 5.11 §5.5) across full 1948-2024 range;
-              v1.1 hybrid stock(1948-1989) + flow(1998-2024) splice retired. Flow-form
-              now retained as S513-FLOW + S514-FLOW secondary subseries. Golden CSVs
-              for S513 and S514 refreshed from Technical/chopped/ to prevent
-              test_regression from failing on this intentional methodology change.
+2026-05-24 - initial snapshot, v1.1 mid-Phase-5 state.
+2026-05-24 - v1.2: S513 + S514 stock-form adoption (DIV-012).
+2026-07-02 - v2.0 re-baseline (comprehensive review + D-batch book-fidelity
+             decisions; DIV-058..069). Every refreshed series traces to a
+             registered divergence.
+2026-07-09 - v2.1 re-baseline (additive). S513/S514/S517 gain one book-faithful
+             GROSS-A column each (book period 1948-1989, nan beyond; DIV-070);
+             S506 gains the reconstructed-kIO exploitation arm (DIV-071); S701/S702
+             lambda values published at 3 significant figures (DIV-042). Every
+             pre-existing column's DATA cells are byte-identical; the metadata-only
+             row-1 refresh (S501/S504/S505/S511/S512/S515/S516/XS1501) changed zero
+             data cells. Every change traces to a registered divergence.

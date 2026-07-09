@@ -2,12 +2,14 @@
 
 Symmetric counterpart of L01_S701. The book's Ch7 unproductive labor
 coefficient `lambda_u = hu (I - app*)^{-1}` requires the unproductive
-sector partition of Appendix F (productive_share < 0.5: wholesale trade,
-retail trade, finance/insurance/RE, business services, plus the two
-"special" intermediate-use entries).
+sector partition of the io85 productive filter (productive_share < 0.5:
+wholesale trade, retail trade, finance/insurance/RE, business services,
+plus the two "special" intermediate-use entries).
 
-Same input pattern as S701: BLS CES employment + weekly hours, Appendix F
-filter, BEA IO matrices (year list for P02), SIC↔NAICS bridge.
+Same input pattern as S701: BLS CES employment + weekly hours, io85
+productive/unproductive filter, BEA IO matrices (year list for P02),
+SIC↔NAICS bridge. (The filter is the predecessor-build io85→nipa13 categorical map, NOT
+the book's Appendix F; renamed from appendix_F/Table_F_1.csv 2026-07-08.)
 
 The mapping logic and helpers are shared with L01_S701 via direct import
 (per Decision 0004: small per-series scripts that delegate mechanics to
@@ -26,7 +28,7 @@ Coverage caveats:
   - Financial / prof_business / information / leisure / education_health /
     other_services: 1964+
   - Special "n/a" sectors (81 imports, 84 scrap) excluded — they are not
-    labor-bearing per Table_F_1 notes.
+    labor-bearing per io85_pu_classification notes.
   - Sectors 82/83 (business travel, office supplies) are unproductive but
     are special intermediate-use categories with NIPA industry 13
     (Government) — no CES coverage, NaN preserved.
@@ -42,11 +44,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 # Reuse the sister loader's helpers — single source of truth for the
 # NIPA→BLS slug map and hours-datatype priority logic.
-from L01_loaders.L01_S701_labor_coefficient_productive import (  # noqa: E402
-    APPENDIX_F,
+from L01_loaders.L01_S701_labor_values import (  # noqa: E402
+    IO85_PU_FILTER,
     BLS_CACHE_DIR,
     DATA_RAW,
-    IO_LABELED_DIR,
+    REBUILT_DIR,
     SIC_NAICS_BRIDGE,
     _list_io_matrix_years,
     build_long_panel,
@@ -76,11 +78,11 @@ def load() -> dict:
             "subseries":         SUBSERIES,
             "productive_filter": "productive_share < 0.5 (excludes n/a sectors 81/84)",
             "bls_cache_dir":     str(BLS_CACHE_DIR),
-            "appendix_f_path":   str(APPENDIX_F),
+            "appendix_f_path":   str(IO85_PU_FILTER),
             "sic_naics_bridge":  str(SIC_NAICS_BRIDGE),
-            "io_labeled_dir":    str(IO_LABELED_DIR),
+            "io_rebuilt_dir":    str(REBUILT_DIR),
             "hours_datatype_priority": "33_goods -> 07_services",
-            "shared_with":       "L01_S701_labor_coefficient_productive",
+            "shared_with":       "L01_S701_labor_values",
         },
     }
 

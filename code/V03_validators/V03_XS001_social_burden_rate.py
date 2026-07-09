@@ -55,7 +55,7 @@ def run():
             "actual_range": [float(df["value"].min()), float(df["value"].max())],
             "v_1948": v_1948, "v_1989": v_1989,
             "rising_1948_to_1989": rising,
-            "note": "Book reports b rises 0.56->0.66 (16% increase). Our Pn approximation uses NIPA total corporate profits (slight over-count vs productive Pn).",
+            "note": "Book Table 7.1 b = 1-(Pn/S*), rises ~0.56->0.66. REVIEW 2026-07: Pn now sourced from ST1994 Table 7.1 (was NIPA corporate profits, a wrong/narrower quantity that yielded b=0.79-0.86); S*=S505-A reproduces book Table 7.1 S* exactly. FIDELITY: |Db| <= 0.005 ABSOLUTE (= 2-decimal print rounding) — all 42 book-period cells round EXACT to the printed b; the relative bound is NOT literally met (max 0.79% at 1967, per F1d), so the fidelity is stated as an absolute half-percentage-point bound, not relative. Refvals re-anchored to book Table 7.1 b (registry patch).",
         },
         "benchmarks": bench.get("benchmarks", {}),
     }

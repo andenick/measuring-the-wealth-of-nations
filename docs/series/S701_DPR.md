@@ -28,11 +28,11 @@ The book's dimensional verification (Figure 4.3 p.83) — `lambda* = TV / GO_p` 
 
 - **L01 + P02 (real implementation)**: `Technical/code/L01_loaders/L01_S701.py` (v1.1, loads BLS CES + BEA gross output + labeled IO matrices + Appendix F filter); `Technical/code/P02_processors/P02_S701_labor_values.py` (v1.1 rewrite, applies hp* formula then Leontief inverse on productive sub-matrix)
 - **External data — real fetches**:
-  - BLS CES production workers + weekly hours, cached at `data/raw/bls/bls_ces_<supersector>_employment.csv` and `_hours.csv` / `_hours_alt.csv` (pulled 2026-05-24 via `Technical/code/L00_setup/L00_bls_fetch.py`; provenance at `bls_ces_fetch_provenance.json`)
-  - BEA gross output, cached at `data/raw/bea/nipa_1_7_5_gross_output_by_industry.csv` + `gdp_by_industry_gross_output.csv` (pulled 2026-02-24; provenance at `data/raw/bea/provenance.json`)
-  - Labeled BEA IO matrices, cached at `Technical/data/intermediate/io_matrices_labeled/` (from `data/raw/io_matrices/`)
+  - BLS CES production workers + weekly hours, cached at `data/raw/Inputs/API_Data/BLS/bls_ces_<supersector>_employment.csv` and `_hours.csv` / `_hours_alt.csv` (pulled 2026-05-24 via `Technical/code/L00_setup/L00_bls_fetch.py`; provenance at `bls_ces_fetch_provenance.json`)
+  - BEA gross output, cached at `data/raw/Inputs/API_Data/BEA/nipa_1_7_5_gross_output_by_industry.csv` + `gdp_by_industry_gross_output.csv` (pulled 2026-02-24; provenance at `data/raw/Inputs/API_Data/BEA/provenance.json`)
+  - BEA IO matrices. **[SUPERSEDED — workpackage C v2.0 / F3 2026-07-07]** the published v2.0 engine reads the REBUILT cache `Technical/data/intermediate/io_matrices_rebuilt/` (via `utils.io_rebuilt`); the old defective labeled cache was retired to `Technical/MIGRATION/retired_io_20260707/io_matrices_labeled/` (see its RETIRE_NOTE.md). Historical original: labeled cache from `data/raw/Inputs/IO_Matrices/`.
   - Appendix F productive-share filter, at `Technical/data/source/appendix_F/Table_F_1.csv` (85-sector categorical mask, derived from predecessor-build `io_85_to_nipa_13_concordance.csv` + Mohun 2013 Tables 2-3, provenance at `Technical/data/source/appendix_F/PROVENANCE.md`)
-- **KB chunks**: `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_11/full_transcription.md` (Ch4 §4.1 pp.78-83 — closed-form equations + Figure 4.3); `chunk_14/full_transcription.md` (Appendix G variable capital); `chunk_15/full_transcription.md` (sector composition); `chunk_31/full_transcription.md` (Appendix E sectoral GVAp); `chunk_33/full_transcription.md` (Appendix F + G intro)
+- **KB chunks**: `data/raw/kb/book_digitization/chunk_11/full_transcription.md` (Ch4 §4.1 pp.78-83 — closed-form equations + Figure 4.3); `chunk_14/full_transcription.md` (Appendix G variable capital); `chunk_15/full_transcription.md` (sector composition); `chunk_31/full_transcription.md` (Appendix E sectoral GVAp); `chunk_33/full_transcription.md` (Appendix F + G intro)
 - **Book tables**: Ch4 §4.1 equations pp.80-83 (Figure 4.3 dimensional check); Appendix G Table G.2 (sectoral productive employment); Appendix F (productive shares — book's annual labor decomposition pp.292–301); Appendix E Tables E.1 / E.2
 - **APIs**: BLS Public API v2 (free registration key, supplied via the `BLS_API_KEY` environment variable); BEA API
 - **Upstream series**: S401 (A-matrix), S402 (Leontief inverse B), S513 (Marxian profit rate, used in downstream S702/S703)
@@ -45,6 +45,10 @@ Coordinator backfills from `Technical/chopped/S701.csv` after agents 1-3 commit 
 - Extension years (NAICS basis): 1997, 2002, 2007, 2012 (per BEA benchmark IO availability)
 - Book's qualitative magnitude framework (Ch7 §7.3 p.221): **"Marxian total product TP* is roughly 82% of the IO measure of gross product GP, but about 1.5 times larger than the conventional measure of GNP."** S701 lambda* aggregates feed this framework via downstream Ch7 series.
 - Dimensional verification (Figure 4.3 p.83): `lambda* = TV / GO_p` in hr/$ — satisfied by construction in v1.1, was unsatisfiable in v1.0 proxy.
+
+## Precision & uncertainty (DIV-042) — Tier-A W1d, 2026-07-08
+
+Published S701 values (`data/final/S701.csv`, `chopped/S701.csv`, extenbook Data sheet) are reported to **3 significant figures** with an explicit uncertainty-band sidecar at `data/final/S701_LAMBDA_BAND.csv` (year, central, lo, hi, basis). Basis: **DIV-042** — the SIC-era per-sector gross output X_j entering both the hours-allocation weights and the coefficient denominator `hp*_j = hp_j/X_j` is *recovered* (X = II_IO + bucket-VA) with a measured median per-sector error of ~±11.5%. The F3 sensitivity propagation (`internal-review-notes_2026-07-07/F3_lambda_sensitivity_{aggregate,sector}.csv`, 2026-07-07) shows the published aggregate is honest only to ±2.7–4.3% (independent-error Monte Carlo) up to ±11.65% (worst-case common-mode); sector-level λ_j carries ±7–11%. The previous 15–17 displayed digits were false precision. The band uses the worst-case common-mode bound: `lo = central/1.115`, `hi = central/0.885` (λ ∝ 1/X, hence asymmetric). Rounding is applied ONLY at the P02 final-emit stage (`P02_S701_labor_values._round_sig`); `data/intermediate/S701.csv` retains full float64 precision for regression/reproducibility, and downstream S703 consumes the full-precision L01 panels, not the rounded published values.
 
 ## Known issues
 
@@ -61,7 +65,7 @@ Coordinator backfills from `Technical/chopped/S701.csv` after agents 1-3 commit 
 - Upstream: S401 (A-matrix), S402 (Leontief inverse B), Appendix F productive-share filter, Appendix G Table G.2 (sectoral productive employment), BLS CES, BEA NIPA 1.7.5 / GDP-by-Industry
 - Downstream: S702 (prices of production, now also real and sector-disaggregated), S703 (consistent-procedure regression)
 - Related external: Wolff (1977b) symmetric-treatment biases S*/V* upward 4–8%; Khanjian (1989) consistent procedure 6–9% S*/V* deviation; ST 1994 Ch7 §7.4 cross-study critique
-- Project artifacts: `Technical/Handoffs/CH7_REAL_FIX_PLAN.md`; `Technical/_v1.1_patches/S701_ch7_realfix_patch.json`; `Technical/_v1.1_patches/DIVERGENCE_REGISTER_DIV011_patch.json`
+- Project artifacts: `internal-notes/CH7_REAL_FIX_PLAN.md`; `Technical/_v1.1_patches/S701_ch7_realfix_patch.json`; `Technical/_v1.1_patches/DIVERGENCE_REGISTER_DIV011_patch.json`
 
 ## Provenance trail
 

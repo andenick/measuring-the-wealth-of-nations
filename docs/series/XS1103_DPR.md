@@ -20,7 +20,7 @@ The transformation produces a monotonically rising rate over 1952-1985 (~17% →
 
 ## Sources
 
-- KB chunks: `Technical/Knowledge_Base/external_papers/productive_labor/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md` (full ST 1987 paper extraction)
+- KB chunks: `Technical/knowledge_base/external_papers/productive_labor/1987_Shaikh_Tonak_Social_Wage_Myth/full_transcription.md` (full ST 1987 paper extraction)
 - Book tables: ST 1987 Appendix Table 1 (1964 illustration, p.191); ST 1987 Table 2 (taxes column, 1952-1985 annual, p.192); ST 1987 Figure 2 (tax rate trajectory, p.188); ST 1987 Figure 1 (broader social-wage decomposition)
 - External sources: BEA Survey of Current Business 1981, tables at pp.121, 123, 129, 134 (tax data); BEA SCB 1981 p.170 (lotteries/parimutuels)
 - Upstream series: S604 (taxes paid by workers T_w), S617 (employee compensation EC)
@@ -60,3 +60,12 @@ The transformation produces a monotonically rising rate over 1952-1985 (~17% →
 - **Original research**: `Technical/research/XS1103_research.json`, researcher `agent`, 2026-05-06; ported from `predecessor-build/research/N1103_research.json` on 2026-05-14; verbatim quotes added 2026-05-19 by `D4_es_ch10_13_backfill`
 - **DPR enriched**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (cohort agent 4); prior version of this DPR (pre-cohort-1) was a short stub with one methodology paragraph; this enrichment adds full 7-section structure with sources, reference values, known issues, cross-references; sources read = research JSON + ST 1987 full transcription + registry entry
 - **Anu Framework stage**: Stage 3 INGESTION (cohort 1, failing chapters); ingestion gate IDs P31/P32
+
+
+---
+
+## D3 book-faithful adoption (2026-07-02)
+
+**XS1103-A is now book Table N.2 T1/EC verbatim** (V03 5/5; was reconstruction 0/5). The excluded indirect/sales-excise tax term now lives ONLY in the **XS1103-RECON-A** / S604 comparison arm (resolves workpackage B-DIV-S604-INDIRECT on the primary).
+
+> Decision: ADOPT NSW Candidate A (Appendix N Tables N.1/N.2 verbatim, 1952-1989) as book-period primary; BEA-API reconstruction becomes the labeled comparison/extension arm. Nothing deleted (.pre_d3 backups + -RECON subseries). See internal-review-notes_2026-07/D3_REGISTRY_PATCHES.json + D3_DIV_PATCHES.json.

@@ -1,6 +1,9 @@
-"""V03_XS1501 — Validate Working Class Unproductive Labor (Mohun 2013).
+"""V03_XS1501 — Validate Mohun (2013) unproductive working-class employment share.
 
 Refactored 2026-05-24 per Decision 0002 — benchmarks sourced from registry.
+D4 REBUILD (2026-07-02): series is now a SHARE of total employment (Mohun Fig 2);
+benchmarks 1964=0.251, 2007=0.300 are EXTERNAL Mohun anchors (non-tautological).
+Default tolerance class -> share_series.
 """
 from __future__ import annotations
 import sys
@@ -13,7 +16,7 @@ from utils.series import BenchmarkValidator
 
 VALIDATOR = BenchmarkValidator(
     series_id="XS1501",
-    tolerance_class=get_tolerance_class("XS1501", default="level_series"),
+    tolerance_class=get_tolerance_class("XS1501", default="share_series"),
     benchmarks=get_reference_values("XS1501"),
     subseries_filter="XS1501-A",
 )

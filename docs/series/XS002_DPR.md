@@ -8,6 +8,21 @@
 - **Status**: book_period_validated
 - **Units**: ratio
 
+## REVIEW 2026-07 (workpackage E Group A) — anchor clarification + Khanjian-dict caveat
+
+The **validated column XS002-A is S506-A** (the rate of surplus value S\*/V\*), NOT the Khanjian
+gap. XS002-A reproduces book **Table I.1 Line 23** (S\*/V\*, Sources = Table H.1) **EXACTLY** at all
+five benchmark years (1958 2.01, 1963 2.07, 1967 2.10, 1972 1.99, 1977 2.10; abs err 0.0000 across
+the whole 1948-1989 line). Re-anchored: `validation_source` → book Table I.1 Line 23;
+validator_class → **book**; refvals unchanged (they already equal the book). No divergence needed.
+
+**Caveat (flagged, not fixed):** the P02's `KHANJIAN` dict (`e_star_rev` = 2.445, 2.467, … labelled
+"Table 5.12") runs ~20% ABOVE S506, which **contradicts the book text** (§7.3, p.223: Khanjian's
+S\*/V\* is **6-9% LOWER** than S/V; it is Wolff's procedure that biases +12-15% upward). Those
+higher `e_star_rev` values look like a mis-transcription of Table 5.12 (or Wolff-form figures) and
+are a **diagnostic side-column, not the validated quantity**. The "gap 19-31%" narrative below rests
+on that suspect column; a future pass should re-extract Table 5.12 to confirm/replace it.
+
 ## Methodology
 
 XS002 cross-validates the project's primary exploitation rate series S506 (`e = S*/V*`) against Khanjian's (1988, 1989) alternative computation. Khanjian re-estimated S*/V* using a different treatment of unincorporated income (treating it ALL as profit), yielding estimates ~20% higher than Shaikh & Tonak's primary measure. The cross-validation stores 5 benchmark-year comparisons (1958, 1963, 1967, 1972, 1977 — matching the BEA IO benchmark years used elsewhere in the project) with columns: S506 value, Khanjian's `e_star_rev` (revised money form), Khanjian's `e_rev` (revised labor-value form), and the percent gap between S506 and Khanjian's estimates. The legacy script is `code/A##_analytical/A08_khanjian_crossvalidation.py`. Khanjian's values are hardcoded from book Table 5.12 (5 benchmark years); S506 values come from `data/final/S506.csv`. This is a pure analytical composition with no new external source file beyond the book digitization.
@@ -18,7 +33,7 @@ The implementation finds: our S506 vs Khanjian's `e_star_rev` shows gaps of 19-3
 
 ## Sources
 
-- KB chunks: `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_25/full_transcription.md` (Ch7 §7.3 p.223 — Khanjian 6-9% benchmark, Wolff 12-15% bias); `chunk_35/full_transcription.md` (Appendix I, Table I.1 — formal derivation of `eu` and benchmark numeric values)
+- KB chunks: `data/raw/kb/book_digitization/chunk_25/full_transcription.md` (Ch7 §7.3 p.223 — Khanjian 6-9% benchmark, Wolff 12-15% bias); `chunk_35/full_transcription.md` (Appendix I, Table I.1 — formal derivation of `eu` and benchmark numeric values)
 - Book tables: Table 5.12 (Khanjian comparison values, p.~123); Figure 5.25 (Section 5.10 visual); Appendix I Table I.1 (Rates of Exploitation of Unproductive Workers, 1948-89 — 25-step annual calculation methodology); the project's hardcoded benchmark values for 1958/1963/1967/1972/1977
 - External sources: Khanjian (1988, p.109 table 19 — the 6-9% deviation envelope); Khanjian (1989) — consistent procedure; Wolff (1977b, p.103 table 3, lines 1 and 3 — the symmetric/inconsistent comparator)
 - Upstream series: S506 (rate of surplus value)

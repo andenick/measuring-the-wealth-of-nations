@@ -17,7 +17,7 @@ from utils.series import BenchmarkValidator  # noqa: E402
 
 VALIDATOR = BenchmarkValidator(
     series_id        = "XS1001",
-    tolerance_class  = get_tolerance_class("XS1001", default="share_series"),
+    tolerance_class  = get_tolerance_class("XS1001", default="dollar_series"),
     benchmarks       = get_reference_values("XS1001"),
     subseries_filter = "XS1001-A",
 )

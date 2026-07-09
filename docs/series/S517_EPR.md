@@ -8,7 +8,7 @@
 
 > "We are interested in the productive part of the capital stock K*, which corresponds to the capital tied up in productive industries. … The relevant measure for the rate of profit is capital stock that is measured at current replacement costs." (Shaikh & Tonak 1994, Ch. 5, p. 122)
 
-> "K* = C*f: Fixed nonresidential gross private capital ($ billions)" (Shaikh & Tonak 1994, Ch. 5, Tables 5.8 and 5.9 column gloss, per `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/tables/tables_5.8_and_5.9_summary.md` line 26)
+> "K* = C*f: Fixed nonresidential gross private capital ($ billions)" (Shaikh & Tonak 1994, Ch. 5, Tables 5.8 and 5.9 column gloss, per `data/raw/kb/book_digitization/chunk_15/tables/tables_5.8_and_5.9_summary.md` line 26)
 
 Source: Shaikh, A., & Tonak, E. A. (1994). *Measuring the Wealth of Nations: The Political Economy of National Accounts*. Cambridge University Press. Chapter 5 (The Marxian Categories: Empirical Estimates); Tables 5.8–5.9 (K* in r* construction); Figures 5.5 and 5.8 (K* time-series plots); Appendix H (K* net stock of fixed capital — text-only in the published volume and not yet extracted in the current KB build).
 
@@ -20,7 +20,7 @@ Operational book reference (because Appendix H endpoints are unextracted): BEA F
 
 ## 3. extension_source
 
-**BEA Fixed Assets Table 4.1, Line 1 — Private nonresidential fixed assets, Current-Cost Net Stock.** Pre-cached at `data/raw/bea/fixed_assets_4_1_net_stock.csv` (7600 rows; coverage 1925–2024; BEA API pull dated 2026-02-24; provenance: `data/raw/bea/provenance_fixed_assets.json` with `purpose='Capital stock K for profit rate r* = S*/(C*+V*)'`). The extension uses the same underlying BEA series that supplies the book-period operational reference; the splice is therefore trivial (`splice_method=level`, `rescale_factor=1.0`, `splice_year=1989`).
+**BEA Fixed Assets Table 4.1, Line 1 — Private nonresidential fixed assets, Current-Cost Net Stock.** Pre-cached at `data/raw/Inputs/API_Data/BEA/fixed_assets_4_1_net_stock.csv` (7600 rows; coverage 1925–2024; BEA API pull dated 2026-02-24; provenance: `data/raw/Inputs/API_Data/BEA/provenance_fixed_assets.json` with `purpose='Capital stock K for profit rate r* = S*/(C*+V*)'`). The extension uses the same underlying BEA series that supplies the book-period operational reference; the splice is therefore trivial (`splice_method=level`, `rescale_factor=1.0`, `splice_year=1989`).
 
 ## 4. extension_url
 
@@ -37,4 +37,8 @@ A second caveat: book Table 5.8 specifies K* = **gross** stock (`C*f` = "Fixed n
 
 ## 6. vintage_note
 
-BEA API pull dated 2026-02-24 (per `data/raw/bea/provenance_fixed_assets.json`); represents approximately the late-2025 / early-2026 BEA Fixed Assets vintage. Because the book's Appendix H K* values are text-only and not yet extracted, the operational book reference for S517 uses the same modern BEA Table 4.1 series as the extension — i.e., book values are *not* frozen at the 1993 publication vintage as they are for series with successfully extracted Appendix data (e.g., S501 TP*). Once Appendix H is extracted via a follow-on KB pass, S517-A can be re-anchored to the book-vintage values and the splice re-derived (likely shifting to a non-trivial rescale factor). BEA Fixed Assets is subject to periodic comprehensive revisions (1999, 2003, 2009, 2013, 2018, 2023); these revise back to the start of the series, so both pre- and post-1989 values reflect the 2026-02-24 vintage rather than separate book / extension vintages.
+BEA API pull dated 2026-02-24 (per `data/raw/Inputs/API_Data/BEA/provenance_fixed_assets.json`); represents approximately the late-2025 / early-2026 BEA Fixed Assets vintage. Because the book's Appendix H K* values are text-only and not yet extracted, the operational book reference for S517 uses the same modern BEA Table 4.1 series as the extension — i.e., book values are *not* frozen at the 1993 publication vintage as they are for series with successfully extracted Appendix data (e.g., S501 TP*). Once Appendix H is extracted via a follow-on KB pass, S517-A can be re-anchored to the book-vintage values and the splice re-derived (likely shifting to a non-trivial rescale factor). BEA Fixed Assets is subject to periodic comprehensive revisions (1999, 2003, 2009, 2013, 2018, 2023); these revise back to the start of the series, so both pre- and post-1989 values reflect the 2026-02-24 vintage rather than separate book / extension vintages.
+
+## Book-period Gross-K* variant (2026-07-07, K-plan)
+
+The book (Table 5.8) tabulated a GROSS K* (C*_f). This variant materializes that book-faithful gross axis for the checkable book period; the primary net S517-A runs ~21.8% below it (DIV-058, narrowed here to the extension arm). Book period 1948-1989 only; **no extension** — current-dollar gross stock is genuinely non-constructible from 1990 onward (BEA discontinued current-cost gross-stock reporting at the 1997 comprehensive revision; FA Table 4.2 is a dimensionless Fisher quantity index, not a current-$ series). Materialized as `S517-GROSS-A`, validated against the book's own printed Table 5.8 cells (`validation.variant_reference_values`, full 42-year column). Not primary; the shipped net series is unchanged. See F2_KSTAR_FIDELITY.md + DIV-070.

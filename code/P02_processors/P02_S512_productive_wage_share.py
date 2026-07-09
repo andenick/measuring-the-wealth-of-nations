@@ -67,45 +67,81 @@ def _book_period_frame() -> pd.DataFrame:
     return df[["series_id", "year", "value", "units", "stage", "provenance"]]
 
 
-def _extension_frame(book_df: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
-    """Build S512-EXT, returning (frame, diagnostics)."""
+def _sic_partA():
+    """Real SIC-basis partition VA/comp 1987-1997 (data/source/bea_sic). Materialized from
+    BEA Historical Industry Accounts GDPbyInd_VA_SIC.xls (workpackage A 2026-07-01)."""
+    p = Path(__file__).resolve().parents[2] / "data" / "source" / "bea_sic" / "GDPbyInd_partitionA_SIC_1987_1997.csv"
+    return pd.read_csv(p)
+
+
+def _total_comp_map():
+    p = Path(__file__).resolve().parents[2] / "data" / "raw" / "bea" / "nipa_T20100_compensation_1929_2025.csv"
+    w = pd.read_csv(p)
+    return {int(r.year): r.compensation_millions / 1000.0 for r in w.itertuples()}
+
+
+def _extension_frame(book_df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, dict]:
+    """Build S512-EXT (R1 de-spliced, honest raw share) + S512-EXT-SPLICED-DEPRECATED
+    (old curve-fit, retained). workpackage A rebuild:
+
+      R1  retire the projected-1998/nipa level-splice (it manufactured V* < true productive
+          compensation and inflated S506 to the spurious 1.27 - see P1_FORENSIC_REPORT).
+      R3  fill 1990-1997 with REAL SIC-basis data (productive-sector comp / total compensation),
+          replacing the log-linear bridge.
+
+    Honest V*/W = productive-sector compensation / total employee compensation, on a consistent
+    concept across the seam: SIC (comp_prod_SIC / T20100) 1990-1997, NIPA 6.2D lines / line1
+    1998-2024. The SIC->NAICS vintage break at 1997/98 (0.314 -> 0.269) is REAL and flagged,
+    not spliced away (DIV-A11, DIV-010).
+    """
     ext = load_extension_components()
     total      = ext["compensation_total"].rename(columns={"value": "W_nipa"})
     productive = ext["compensation_productive"].rename(columns={"value": "Vstar_nipa"})
-    merged = total.merge(productive, on="year").sort_values("year").reset_index(drop=True)
-    merged["share_raw"] = merged["Vstar_nipa"] / merged["W_nipa"]
+    naics = total.merge(productive, on="year").sort_values("year").reset_index(drop=True)
+    naics["share_raw"] = naics["Vstar_nipa"] / naics["W_nipa"]
+    naics = naics[naics["year"] >= 1998]
 
-    # Level-splice: book(1989) anchor. BEA 6.2D starts 1998, so we project the
-    # book's last segment to estimate 1998 and rebase NIPA values accordingly.
-    book_a = book_df[book_df["series_id"] == "S512-A"][["year", "value"]].set_index("year")["value"]
-    book_1989 = float(book_a.loc[1989])
+    # --- SIC-basis real fill 1990-1997 ---
+    sic = _sic_partA(); W = _total_comp_map()
+    sic = sic[(sic["year"] >= 1990) & (sic["year"] <= 1997)].copy()
+    sic["value"] = sic.apply(lambda r: r["comp_prod"] / W[int(r["year"])], axis=1)
+    sic_rows = sic[["year", "value"]].copy()
+    sic_rows["provenance"] = ("Real SIC-basis V*/W = productive-sector compensation "
+                              "(comp_prod, GDPbyInd SIC) / total compensation (NIPA T20100); "
+                              "REAL DATA replacing the retired log-linear bridge (R3)")
 
-    # Use book's 1985-1989 mean annual change to project a notional 1998 value.
-    seg = book_a.loc[1985:1989]
-    slope = (seg.iloc[-1] - seg.iloc[0]) / (seg.index[-1] - seg.index[0])
-    proj_1998 = book_1989 + slope * (1998 - 1989)
-    nipa_1998 = float(merged.loc[merged["year"] == 1998, "share_raw"].iloc[0])
-    scale = proj_1998 / nipa_1998 if nipa_1998 else 1.0
+    naics_rows = naics[["year"]].copy()
+    naics_rows["value"] = naics["share_raw"].values
+    naics_rows["provenance"] = ("BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1 (de-spliced, "
+                                "raw honest share - R1)")
 
-    merged["value"] = merged["share_raw"] * scale
+    merged = pd.concat([sic_rows, naics_rows], ignore_index=True).sort_values("year").reset_index(drop=True)
     merged["series_id"] = "S512-EXT"
     merged["units"]     = "share"
     merged["stage"]     = "extension"
-    merged["provenance"] = (
-        "BEA NIPA 6.2D lines [5,7,11,12,13,43] / line 1; "
-        f"level-spliced (scale={scale:.4f} anchored at projected 1998 = {proj_1998:.4f})"
-    )
+    ext_out = merged[["series_id", "year", "value", "units", "stage", "provenance"]]
+
+    # --- retained deprecated spliced arm (transparency; nothing silently deleted) ---
+    book_a = book_df[book_df["series_id"] == "S512-A"][["year", "value"]].set_index("year")["value"]
+    book_1989 = float(book_a.loc[1989]); seg = book_a.loc[1985:1989]
+    slope = (seg.iloc[-1] - seg.iloc[0]) / (seg.index[-1] - seg.index[0])
+    proj_1998 = book_1989 + slope * (1998 - 1989)
+    nipa_1998 = float(naics.loc[naics["year"] == 1998, "share_raw"].iloc[0])
+    scale = proj_1998 / nipa_1998 if nipa_1998 else 1.0
+    dep = naics[["year"]].copy()
+    dep["value"] = naics["share_raw"].values * scale
+    dep["series_id"] = "S512-EXT-SPLICED-DEPRECATED"; dep["units"] = "share"; dep["stage"] = "extension_deprecated"
+    dep["provenance"] = (f"DEPRECATED old level-splice (scale={scale:.4f}, proj_1998={proj_1998:.4f}); "
+                         "curve-fit toward book that inflated S506-EXT to the spurious 1.27. Retained per DIV-A11.")
+    dep_out = dep[["series_id", "year", "value", "units", "stage", "provenance"]]
+
     diag = {
-        "book_1989":   book_1989,
-        "proj_1998":   proj_1998,
-        "nipa_1998_raw": nipa_1998,
-        "scale":       scale,
-        "n_ext_rows":  len(merged),
-        "ext_period":  (int(merged["year"].min()), int(merged["year"].max())),
-        "ext_1998":    float(merged.loc[merged["year"]==1998, "value"].iloc[0]),
-        "ext_last":    float(merged.iloc[-1]["value"]),
+        "book_1989": book_1989, "sic_1997": round(float(sic_rows.loc[sic_rows.year==1997,"value"].iloc[0]),4),
+        "raw_1998": round(nipa_1998,4), "deprecated_spliced_1998": round(nipa_1998*scale,4),
+        "ext_period": (int(ext_out["year"].min()), int(ext_out["year"].max())),
+        "ext_last": round(float(ext_out.iloc[-1]["value"]),4),
     }
-    return merged[["series_id", "year", "value", "units", "stage", "provenance"]], diag
+    return ext_out, dep_out, diag
 
 
 def _interp_frame(book_df: pd.DataFrame, ext_df: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
@@ -143,23 +179,18 @@ def _interp_frame(book_df: pd.DataFrame, ext_df: pd.DataFrame) -> tuple[pd.DataF
     return bridge, diag
 
 
-def _combined_frame(book_df: pd.DataFrame, ext_df: pd.DataFrame,
-                    interp_df: pd.DataFrame) -> pd.DataFrame:
+def _combined_frame(book_df: pd.DataFrame, ext_df: pd.DataFrame) -> pd.DataFrame:
     a = book_df[book_df["series_id"] == "S512-A"][["year", "value"]].copy()
     a["series_id"] = "S512-COMBINED"
     a["stage"]     = "book_period"
     a["provenance"] = "Table5_7_KeyRatios.csv:T512A"
 
-    b = interp_df[["year", "value", "provenance"]].copy()
-    b["series_id"] = "S512-COMBINED"
-    b["stage"]     = "extension_bridge"
-
     e = ext_df[ext_df["series_id"] == "S512-EXT"][["year", "value", "provenance"]].copy()
-    e = e[e["year"] >= EXT_FIRST_YEAR].copy()
+    e = e[e["year"] > BOOK_LAST_YEAR].copy()
     e["series_id"] = "S512-COMBINED"
     e["stage"]     = "extension"
 
-    out = pd.concat([a, b, e], ignore_index=True, sort=False).sort_values("year")
+    out = pd.concat([a, e], ignore_index=True, sort=False).sort_values("year")
     out["units"] = "share"
     return out[["series_id", "year", "value", "units", "stage", "provenance"]].reset_index(drop=True)
 
@@ -167,14 +198,13 @@ def _combined_frame(book_df: pd.DataFrame, ext_df: pd.DataFrame,
 def run():
     book = _book_period_frame()
     try:
-        ext, diag = _extension_frame(book)
-        interp, idiag = _interp_frame(book, ext)
-        combined = _combined_frame(book, ext, interp)
-        df = pd.concat([book, ext, interp, combined], ignore_index=True, sort=False)
-        print(f"    [P02_S512] extension diag: {diag}")
-        print(f"    [P02_S512] interp    diag: {idiag}")
+        ext, dep, diag = _extension_frame(book)
+        combined = _combined_frame(book, ext)
+        df = pd.concat([book, ext, dep, combined], ignore_index=True, sort=False)
+        print(f"    [P02_S512] extension diag (R1 de-spliced + R3 real SIC 1990-97): {diag}")
     except Exception as exc:
         print(f"    [P02_S512] EXTENSION FAILED: {exc!r} — writing book-only")
+        import traceback; traceback.print_exc()
         df = book
     write_series_csv(df, "S512", stage="intermediate")
     final_path = write_series_csv(df, "S512", stage="final")

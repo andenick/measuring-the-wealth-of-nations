@@ -1,53 +1,55 @@
-"""V03_S703 — value-price deviation diagnostic (v1.1 Phase 5 polish).
+"""V03_S703 -- productive/unproductive labor-coefficient partition gap (workpackage C v2.0).
 
-Refactored 2026-05-24 per Decision 0002 — reads benchmarks from the registry
-(`validation.reference_values`) via `utils.registry_validator.get_reference_values`.
+DE-TAUTOLOGIZED + DE-CONFLATED. What S703 computes is the output-weighted gap
+between the unproductive and productive partitions' embodied-labor-per-dollar
+coefficients -- NOT the book's Khanjian value-price deviation. The book's actual
+concept (Table 5.12, p.144: e = S/V vs e* = S*/V* on the SAME aggregate,
+deviations 5.7-9.3%) is stored at
+data/source/book_tables/S703_Table512_khanjian_deviations.csv as the anchor a
+FUTURE faithful implementation must hit; it is NEVER compared against the
+partition-gap series here (registered divergence DIV-C10).
 
-v1.1 Phase 5 update: now reads both -A and -EXT subseries via -COMBINED so the
-2024 EXT endpoint anchor (added per Decision 0008) is checked. The v1.1
-iter6 magnitudes are in [-90%, 0%]: lambda_u (unproductive coefficient,
-mean over 5 sectors) is structurally smaller than lambda_p (productive
-coefficient, mean over 69 sectors) in the consistent per-sector procedure,
-so the deviation is negative. Book Khanjian 6-9% target is preserved as the
-v1.2 milestone (requires per-sector pp*_j construction) and is documented
-in the S703 EPR. The validator checks the consistent-procedure deviation
-against the registry's recorded magnitudes.
+Checks: (1) structural range [-100, 50] percent; (2) rebuilt-matrix-cache
+validity (same as V03_S701); (3) regression snapshot vs registry
+reference_values (pipeline snapshot, not book).
+validator_class: structural_regression__book_concept_divergent
 """
 from __future__ import annotations
+
+import json
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+
 import pandas as pd
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils.io import write_validation_result
-from utils.paths import DATA_FINAL
-from utils.registry_validator import get_reference_values
-from utils.series import TOLERANCES
+from utils.io import write_validation_result  # noqa: E402
+from utils.paths import DATA_FINAL, ROOT  # noqa: E402
+from utils.registry_validator import get_reference_values  # noqa: E402
+from utils.series import TOLERANCES  # noqa: E402
 
-
-def _load_combined(sid: str) -> dict[int, float]:
-    """Load year -> value lookup across -A, -EXT, -COMBINED subseries."""
-    df = pd.read_csv(DATA_FINAL / f"{sid}.csv")
-    combined_id = f"{sid}-COMBINED"
-    if (df["series_id"] == combined_id).any():
-        sub = df[df["series_id"] == combined_id]
-    else:
-        sub = df[df["series_id"].isin([f"{sid}-A", f"{sid}-EXT"])]
-    sub = sub.dropna(subset=["value"])
-    return dict(zip(sub["year"].astype(int), sub["value"].astype(float)))
+SID = "S703"
+REBUILD_VALIDATION = ROOT / "data" / "intermediate" / "io_matrices_rebuilt" / "REBUILD_VALIDATION.json"
+RANGE = (-100.0, 50.0)
 
 
 def run():
-    by_year = _load_combined("S703")
-    values = pd.Series(by_year)
-    # Deviation in percent: consistent-procedure range is roughly [-100%, +100%];
-    # widen to [-200%, +200%] to admit any future re-balancing without code change.
-    in_range = bool(values.between(-200, 200).all()) if len(values) else False
+    df = pd.read_csv(DATA_FINAL / f"{SID}.csv").dropna(subset=["value"])
+    allv = df[df["series_id"].isin([f"{SID}-A", f"{SID}-EXT"])]["value"]
+    in_range = bool(allv.between(*RANGE).all())
 
-    benchmarks = get_reference_values("S703")
-    tol = TOLERANCES["share_series"]
+    v = json.loads(REBUILD_VALIDATION.read_text(encoding="utf-8"))
+    cache_ok = all(
+        m["L_identity_max_abs_err"] < 1e-9 and 1.5 <= m["L_colsum_mean_multiplier"] <= 3.5
+        for era in ("sic", "naics") for m in v[era].values()
+    )
+
+    tol = TOLERANCES["rate_series"]
+    sub = df[df["series_id"].isin([f"{SID}-A", f"{SID}-EXT", f"{SID}-COMBINED"])]
+    by_year = dict(zip(sub["year"].astype(int), sub["value"].astype(float)))
     bench_checks = []
-    for yr, expected in benchmarks.items():
+    for yr, expected in get_reference_values(SID).items():
         actual = by_year.get(int(yr))
         if actual is None:
             bench_checks.append({"year": yr, "expected": expected, "status": "MISSING"})
@@ -55,35 +57,25 @@ def run():
         abs_err = abs(actual - expected)
         rel_err = abs_err / max(abs(expected), 1e-12)
         ok = (abs_err <= tol["abs"]) or (rel_err <= tol["rel"])
-        bench_checks.append({
-            "year": yr, "expected": expected, "actual": round(actual, 6),
-            "abs_err": round(abs_err, 6), "rel_err": round(rel_err, 6),
-            "status": "PASS" if ok else "FAIL",
-        })
-    n_bench_pass = sum(1 for c in bench_checks if c["status"] == "PASS")
-    n_bench_fail = sum(1 for c in bench_checks if c["status"] == "FAIL")
-    n_bench_miss = sum(1 for c in bench_checks if c["status"] == "MISSING")
+        bench_checks.append({"year": yr, "expected": expected, "actual": round(actual, 6),
+                             "rel_err": round(rel_err, 6), "status": "PASS" if ok else "FAIL"})
+    n_fail = sum(1 for c in bench_checks if c["status"] != "PASS")
 
-    status = "PASS" if (in_range and len(by_year) > 0 and n_bench_fail == 0 and n_bench_miss == 0) else "FAIL"
+    status = "PASS" if (in_range and cache_ok and n_fail == 0) else "FAIL"
     result = {
-        "series_id": "S703",
+        "series_id": SID,
         "run_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "tolerance_class": "share_series",
-        "rel_tol": tol["rel"], "abs_tol": tol["abs"],
+        "validator_class": "structural_regression__book_concept_divergent",
+        "book_concept_note": ("Khanjian 6-9% (Table 5.12) compares S/V vs S*/V* on the same aggregate "
+                              "and is NOT comparable to this partition-gap series (DIV-C10). Anchor file: "
+                              "data/source/book_tables/S703_Table512_khanjian_deviations.csv"),
         "status": status,
-        "n_pass": n_bench_pass, "n_fail": n_bench_fail, "n_missing": n_bench_miss,
-        "range_check": {
-            "expected": [-200, 200],
-            "actual": [float(values.min()), float(values.max())] if len(values) else [None, None],
-            "in_range": in_range,
-        },
-        "benchmarks": {"checks": bench_checks},
+        "structural": {"in_range": in_range, "range": list(RANGE)},
+        "matrix_cache_ok": cache_ok,
+        "benchmarks": {"checks": bench_checks, "n_fail": n_fail},
     }
-    write_validation_result("S703", result)
-    rng_lo = f"{values.min():.2f}%" if len(values) else "NA"
-    rng_hi = f"{values.max():.2f}%" if len(values) else "NA"
-    n_total = n_bench_pass + n_bench_fail + n_bench_miss
-    print(f"    [V03_S703] status={status} deviation range=[{rng_lo}, {rng_hi}] bench_pass={n_bench_pass}/{n_total}")
+    write_validation_result(SID, result)
+    print(f"    [V03_{SID}] status={status} in_range={in_range} cache={cache_ok} snapshot_fail={n_fail}")
     return result
 
 

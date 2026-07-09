@@ -19,7 +19,7 @@ The construction departs from S&T's Figure 1.1 in scope only: rather than the se
 
 ## Sources
 
-- KB chunks: `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_03/full_transcription.md` (Ch1 §1.1, pp.2-5 — classical vs neoclassical boundary); `chunk_04/full_transcription.md` (Ch1 §1.4, pp.15-19 — Figure 1.1 comparison of seven estimates); `chunk_05/full_transcription.md` (Ch2 §2.1, pp.21-30 — production boundary); `chunk_26/full_transcription.md` (Appendix A pp.232-241 — BEA benchmark IO database)
+- KB chunks: `data/raw/kb/book_digitization/chunk_03/full_transcription.md` (Ch1 §1.1, pp.2-5 — classical vs neoclassical boundary); `chunk_04/full_transcription.md` (Ch1 §1.4, pp.15-19 — Figure 1.1 comparison of seven estimates); `chunk_05/full_transcription.md` (Ch2 §2.1, pp.21-30 — production boundary); `chunk_26/full_transcription.md` (Appendix A pp.232-241 — BEA benchmark IO database)
 - Book tables/figures: ST 1994 Table 5.4 (Primary Marxian and NIPA measures, 1948-89, folio 100, row GFP*/GNP); Figure 5.4 (Ratios of real product measures, folio 106); Figure 1.1 (seven-author "Alternate measures of GFP" comparison, folio 16). (There is NO book Table 2.1; the prior citation was a hallucination, removed 2026-06-11.)
 - External sources: Eisner (1988, JEL, table S.5, p.1673 — comparative GFP estimates); Eisner (1985, p.36 — housework imputation $267.9B in 1966)
 - APIs: BEA NIPA Table 1.7.5 (lines 1, 4, 5, 14, 16); Table 1.14 — cached locally for 1929-2024

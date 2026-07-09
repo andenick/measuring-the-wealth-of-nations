@@ -41,7 +41,7 @@ series do).
 INVESTIGATION OF AVAILABLE DATA
 -------------------------------
 The cached CSV at
-``data/raw/bls/bls_ces_production_workers.csv`` was
+``data/raw/Inputs/API_Data/BLS/bls_ces_production_workers.csv`` was
 pulled from the BLS Public Data API (timestamp 2026-02-24) for the AS2
 predecessor project. The BLS API serves the **current published vintage**
 of each CES series, which means values prior to June 2003 have been
@@ -104,7 +104,7 @@ Vintage source documents fetched from BLS news release archive:
   * empsit_07032003.pdf (USDL 03-253, July 3, 2003 release) — second
     post-overhaul vintage (June 2003 reference month).
 
-Cached at: data/raw/bls/vintage_2003/
+Cached at: data/raw/Inputs/API_Data/BLS/vintage_2003/
 
 CRITICAL FINDING — bridge semantics reconsidered:
 
@@ -172,7 +172,7 @@ from utils.paths import ROOT  # noqa: E402
 # utils.paths.ROOT resolves to Technical/. Inputs/ tree lives one level up at RMWND/.
 PROJECT_ROOT = ROOT.parent
 BLS_CACHE = (
-    PROJECT_ROOT / "data" / "raw" / "bls"
+    PROJECT_ROOT / "Inputs" / "predecessor-build" / "Inputs" / "API_Data" / "BLS"
     / "bls_ces_production_workers.csv"
 )
 
@@ -228,8 +228,8 @@ def _diagnose_2003_residual(df: pd.DataFrame) -> dict:
 # values are NAICS-back-revised (a v1.3 P02-rework task).
 #
 # Sources:
-#   pre: data/raw/bls/vintage_2003/empsit_05022003.pdf (USDL 03-203, Table B-1, p.17-18)
-#   post: data/raw/bls/vintage_2003/empsit_06062003.pdf (USDL 03-281, Table B-1, p.19-20)
+#   pre: data/raw/Inputs/API_Data/BLS/vintage_2003/empsit_05022003.pdf (USDL 03-203, Table B-1, p.17-18)
+#   post: data/raw/Inputs/API_Data/BLS/vintage_2003/empsit_06062003.pdf (USDL 03-281, Table B-1, p.19-20)
 SIC_NAICS_RECLASSIFICATION_APR2003_SA = {
     # sector_key: (pre_SIC_thousands, post_NAICS_thousands, ratio, pct_change, note)
     "total_nonfarm": (130_348.0, 130_084.0, 0.997975, -0.20,
@@ -319,21 +319,21 @@ def build_bridge_factors() -> dict:
         "source_cache": str(BLS_CACHE.relative_to(PROJECT_ROOT)).replace("\\", "/"),
         "vintage_sources": {
             "pre_overhaul": {
-                "path": "data/raw/bls/vintage_2003/empsit_05022003.pdf",
+                "path": "data/raw/Inputs/API_Data/BLS/vintage_2003/empsit_05022003.pdf",
                 "publication": "BLS USDL 03-203, Employment Situation, May 2, 2003 release",
                 "classification": "SIC (last pre-overhaul vintage)",
                 "reference_month_used": "April 2003 (seasonally adjusted)",
                 "table": "Table B-1, pages 17-18",
             },
             "post_overhaul": {
-                "path": "data/raw/bls/vintage_2003/empsit_06062003.pdf",
+                "path": "data/raw/Inputs/API_Data/BLS/vintage_2003/empsit_06062003.pdf",
                 "publication": "BLS USDL 03-281, Employment Situation, June 6, 2003 release",
                 "classification": "NAICS (first post-overhaul vintage; probability sample; QCEW benchmark; concurrent SA)",
                 "reference_month_used": "April 2003 (seasonally adjusted) for direct overlap with pre-overhaul",
                 "table": "Table B-1, pages 19-20",
             },
             "second_post_overhaul_reference": {
-                "path": "data/raw/bls/vintage_2003/empsit_07032003.pdf",
+                "path": "data/raw/Inputs/API_Data/BLS/vintage_2003/empsit_07032003.pdf",
                 "publication": "BLS USDL 03-253, Employment Situation, July 3, 2003 release",
                 "purpose": "Cross-check of post-overhaul stability (not used for factor derivation).",
             },

@@ -1,6 +1,6 @@
 # Decision Brief: S503 Broader-NAICS Coordinated Adoption (Track A.2)
 
-**Series in scope**: S501, S502, S503, S505, S506, S507, S513, AS001, AS002
+**Series in scope**: S501, S502, S503, S505, S506, S507, S513, XS001, XS002
 **Variant under examination**: Variant B (productive partition = `[11, 21, 22, 23, 31G, 42, 44RT, 48TW, 51, 54]`)
 **Date**: 2026-05-24
 **Author**: v1.2 Iteration 1, Track A.2 examiner
@@ -68,8 +68,8 @@ Current chopped (Variant A) and projected (Variant B from `data/scratch/S503_alt
 | S506-EXT | e = S505 / S504                  | 1.791          | ~2.908                | +62.4%    |
 | S507-EXT | S/(S+V) = S505 / (S505 + S504)   | 0.642          | 0.744                 | +0.10 abs |
 | S513-EXT | r\* = S505 / (S502 + S504)        | 0.490          | ~0.620                | +26.5%    |
-| AS001-EXT | 1 − (NIPA L17 / S505)            | partial        | shifts: ~−10pp        | partial   |
-| AS002-EXT | (similar S505 denominator)       | partial        | partial               | partial   |
+| XS001-EXT | 1 − (NIPA L17 / S505)            | partial        | shifts: ~−10pp        | partial   |
+| XS002-EXT | (similar S505 denominator)       | partial        | partial               | partial   |
 
 S504 (variable capital) is independent of the GO/II/VA partition — it draws from
 BLS productive-worker compensation under its own concordance and is unchanged by
@@ -87,7 +87,7 @@ Variant B.
 - **No cascade**: S701/S702 (Ch7 labor coefficients) use Appendix F's 13-NIPA
   partition with `productive_share > 0.5` filter (`L01_S701` lines 65–86), entirely
   independent of the S501–S503 NAICS partition. Ch6 series, ES1xxx, ES2xxx untouched.
-- **Partial cascade** (AS001, AS002): use S505 in their numerator/denominator, so
+- **Partial cascade** (XS001, XS002): use S505 in their numerator/denominator, so
   the S505 level shift propagates, but the AS series' qualitative content (social
   burden, social wage relations) re-anchors to a different baseline.
 
@@ -98,16 +98,16 @@ Variant B.
 | Study                          | Productive partition | NAICS 51 (Info)? | NAICS 54 (Prof/Tech)? | Vote |
 |--------------------------------|----------------------|------------------|------------------------|------|
 | Shaikh & Tonak 1994 (book)     | SIC, narrow         | n/a (pre-NAICS) | n/a (pre-NAICS)        | A    |
-| Mohun 2005 (ES1301/1302)       | ST's SIC, accepted  | n/a              | n/a                    | A    |
-| Mohun 2013 (ES1401–1404)       | Modified            | **Yes — entirely productive** | Not explicitly stated  | **B-leaning** |
-| Cronin 2001 (ES1701–1704)      | NZSNA 25-group, ST procedure | n/a (NZ classification) | n/a              | neutral |
-| Moos 2017 (ES1201–1202)        | NSW, ST procedure   | n/a (AU classification) | n/a              | neutral |
+| Mohun 2005 (XS1301/1302)       | ST's SIC, accepted  | n/a              | n/a                    | A    |
+| Mohun 2013 (XS1401–1404)       | Modified            | **Yes — entirely productive** | Not explicitly stated  | **B-leaning** |
+| Cronin 2001 (XS1701–1704)      | NZSNA 25-group, ST procedure | n/a (NZ classification) | n/a              | neutral |
+| Moos 2017 (XS1201–1202)        | NSW, ST procedure   | n/a (AU classification) | n/a              | neutral |
 | Tsoulfidis/Paitaridis 2019     | Narrow ST           | No               | No                     | A    |
-| Karabacak/Tonak 2022 (ES1601-2)| ST framework (TR)   | n/a              | n/a                    | A    |
+| Karabacak/Tonak 2022 (XS1601-2)| ST framework (TR)   | n/a              | n/a                    | A    |
 
 **Key finding**: Only Mohun 2013 in the RMWND ES corpus has explicitly broadened the
 productive boundary, and his broadening directly endorses including **NAICS 51
-Information as entirely productive** (ES1401 research line on classification
+Information as entirely productive** (XS1401 research line on classification
 differences: "his Information sector is treated as entirely productive, and retail
 eating/drinking places are also classified productive"). This is a non-trivial
 modern endorsement of the NAICS-51 half of Variant B.
@@ -143,7 +143,7 @@ The book's Appendix B documents that the SIC-era "Business Services" (SIC 73) wa
 partially included via the building/equipment rentals two-step procedure but explicitly
 excluded "distributive transport" as a noted limitation (chunk_11 lines 323–330).
 This suggests ST were case-by-case rather than dogmatic about boundary inclusions and
-were willing to acknowledge their own omissions. Karabacak & Tonak 2022 (ES1601–1602,
+were willing to acknowledge their own omissions. Karabacak & Tonak 2022 (XS1601–1602,
 applied to Turkey) uses an ST-style narrow partition, so the most recent ST coauthor
 work continues with Variant A logic.
 
@@ -158,7 +158,7 @@ inclusion. They might, but the evidence is absent rather than supportive.
 methodology variant with traceable provenance and a clear follow-up pathway. Defer
 Variant B coordinated adoption to a future cohort.**
 
-**Decision 2026-05-24: declined per recommendation.** The S503 extension retains its primary methodology; the Variant B-prime (NAICS 51 only, Mohun-aligned) is recorded here for transparency but not adopted. No code changes.
+**ACTED-ON 2026-05-24: declined per recommendation; backlog entry written** (see `internal-notes/BACKLOG.md` → "S503 Variant B-prime adoption (NAICS 51 only, Mohun-aligned)"). VPR top-of-file closure stamp added; V1.2_OUTSTANDING_STEPS_PLAN.md Track A.2 closure stamp added. No code changes.
 
 Confidence: **Medium-high**. The decision could legitimately go either way given
 Mohun 2013's NAICS 51 endorsement, but the implementation cost, qualitative narrative
@@ -212,7 +212,7 @@ If a future cohort decides to adopt Variant B, the following changes are require
 - `code/V03_validators/V03_S501.py`, `V03_S502.py`, `V03_S503.py` —
   update `reference_values` in series_registry to new 1997 endpoint
 - `code/P02_processors/P02_S505.py`, `P02_S506.py`, `P02_S507.py`, `P02_S513.py`,
-  `P02_AS001.py`, `P02_AS002.py` — no code change, but outputs shift
+  `P02_XS001.py`, `P02_XS002.py` — no code change, but outputs shift
 
 ### Documentation
 - `docs/series/S501_EPR.md` Appendix C — new concordance section explaining
@@ -226,7 +226,7 @@ If a future cohort decides to adopt Variant B, the following changes are require
 ### Registry / pipeline
 - `series_registry.json` — update `extension.reference_values` for S501, S502,
   S503, S505, S506, S507, S513
-- Re-run S501/S502/S503/S504/S505/S506/S507/S513/AS001/AS002 chopped/extenbook
+- Re-run S501/S502/S503/S504/S505/S506/S507/S513/XS001/XS002 chopped/extenbook
   builds
 - Re-run all validators (V03)
 - Update visualizations (viz/) for affected series — narrative panel text changes
@@ -237,13 +237,13 @@ If a future cohort decides to adopt Variant B, the following changes are require
   (wedge is partition-invariant)
 - `tests/test_regression.py` — golden_chopped fixtures for affected series need
   regeneration
-- Verify ES1401–1404 (Mohun 2013) divergence narrative still holds under new
+- Verify XS1401–1404 (Mohun 2013) divergence narrative still holds under new
   partition (since RMWND would now partially align with Mohun's classification)
 
 ### Estimated effort
 - 1 dedicated cohort (3–5 iterations) for coordinated S501/S502/S503 change with
   full concordance documentation
-- Half-iteration for downstream propagation through S505/S506/S507/S513/AS001/AS002
+- Half-iteration for downstream propagation through S505/S506/S507/S513/XS001/XS002
 - Quarter-iteration for viz regeneration and ES alignment audit
 
 **Total: ~1.5–2 release cohorts of focused work**, justifying deferral to a future
@@ -254,7 +254,7 @@ release rather than absorption into v1.2.
 ## 7. STEP_LOG Entry
 
 ```
-{"ts": "2026-05-24T<UTC>", "step_id": "v1.2-iter1-A2-examine-S503", "mode": "execute", "stage": 9, "cohort": "v1.2_iter1", "series": "S501,S502,S503,S505,S506,S507,S513,AS001,AS002", "action": "examine_S503_broader_NAICS_decision_brief", "inputs": ["docs/variants/VPR_S503_alt_extension.md", "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/", "research/ES*"], "outputs": ["docs/variants/VPR_S503_alt_extension_DECISION_BRIEF.md"], "doctor_check_ids": [], "outcome": "pass", "artifacts_emitted": ["S503_decision_brief"], "notes": "Track A.2 examination complete; recommendation: variant_A (retain) with Variant B-prime (NAICS 51 only) added to future-cohort backlog"}
+{"ts": "2026-05-24T<UTC>", "step_id": "v1.2-iter1-A2-examine-S503", "mode": "execute", "stage": 9, "cohort": "v1.2_iter1", "series": "S501,S502,S503,S505,S506,S507,S513,XS001,XS002", "action": "examine_S503_broader_NAICS_decision_brief", "inputs": ["docs/variants/VPR_S503_alt_extension.md", "data/raw/kb/book_digitization/", "research/ES*"], "outputs": ["docs/variants/VPR_S503_alt_extension_DECISION_BRIEF.md"], "doctor_check_ids": [], "outcome": "pass", "artifacts_emitted": ["S503_decision_brief"], "notes": "Track A.2 examination complete; recommendation: variant_A (retain) with Variant B-prime (NAICS 51 only) added to future-cohort backlog"}
 ```
 
 ---
@@ -262,13 +262,13 @@ release rather than absorption into v1.2.
 ## References
 
 - `docs/variants/VPR_S503_alt_extension.md` — predecessor exploratory VPR
-- `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_10/full_transcription.md` — Ch3 §3.6 TV\*=TP\* identity proof
-- `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_12/full_transcription.md` — Ch5 §5.2 GVA\* = TV\* − C\*m
-- `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15/full_transcription.md` — §5.7 GFPr in quasi-Marxian productivity
+- `data/raw/kb/book_digitization/chunk_10/full_transcription.md` — Ch3 §3.6 TV\*=TP\* identity proof
+- `data/raw/kb/book_digitization/chunk_12/full_transcription.md` — Ch5 §5.2 GVA\* = TV\* − C\*m
+- `data/raw/kb/book_digitization/chunk_15/full_transcription.md` — §5.7 GFPr in quasi-Marxian productivity
 - `Technical/tests/test_identities.py` lines 77–104 — S505 wedge XFAIL documentation
 - `Technical/code/L01_loaders/L01_S501_total_product.py`, `L01_S502_constant_capital.py`, `L01_S503_gross_final_product.py` — current PRODUCTIVE_TRADE_INDUSTRIES (Variant A)
 - `Technical/code/L01_loaders/L01_S701_labor_values.py` lines 65–86 — Appendix F 13-NIPA partition (Ch7, independent)
-- `Technical/research/ES1401_research.json` — Mohun 2013 classification differences
+- `Technical/research/XS1401_research.json` — Mohun 2013 classification differences
 - `Technical/research/S503_research.json` — verbatim ST 1994 quotes on GVA\* = TV\* − C\*m
 - `Technical/data/scratch/S503_alt_extension.csv` — Variant A/B/C levels 1948–2024
 - `Technical/chopped/S503.csv`, `S505.csv`, `S504.csv` — current 2024 endpoints

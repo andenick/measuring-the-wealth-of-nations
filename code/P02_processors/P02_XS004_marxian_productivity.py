@@ -1,15 +1,25 @@
-"""P02_XS004 — Marxian Productivity (q* = TPr / Hp).
+"""P02_XS004 — Marxian Productivity index (1948 = 100).
 
-Real productive output per productive worker, in 2017 dollars per worker.
+Real productive output per productive WORKER, indexed to 1948 = 100 to match
+the book's Table J.1 row 2 base ("q* index numbers 1948 = 100").
 
 Components:
-- TPr = TP* (S501-COMBINED) deflated by GDPDEF (real total productive product)
-- Hp ≈ productive worker count from S515 (TableE3 narrow) for 1948-1961;
-       book-period only. Modern extension via BLS sectoral production workers
-       requires sectoral concordance — left for refinement.
+- TPr = TP* (S501-A) deflated by GDPDEF (real total productive product)
+- Lp  = productive worker count from S515-A (Appendix E.3 / Table G.2),
+        1948-1989.
 
-For Hp coverage gaps (1962-2024), emit explicit NaN per the no-synthetic
-rule. The book's central q* trajectory (1948-1961) is still captured.
+REVIEW 2026-07 (workpackage E, Group A):
+  1. Rebased so 1948 = 100 (was 112.09, an arbitrary un-normalized level) to
+     match book Table J.1 row 2. Rebase = value / value[1948] * 100.
+  2. NOTE ON QUANTITY: the book's q* = TPr / Hp is per productive-worker-HOUR
+     (Hp = hp x Lp, total hours; Table J.1 line 23). XS004 divides by Lp
+     (worker COUNT), so it is a per-productive-WORKER index — a close cousin,
+     NOT identical. Because hours-per-worker declined over 1948-1989, the
+     rebased XS004 tracks the book's per-hour q* index within ~4.4% (deltas
+     rise to +2.4% by 1989). Validated against book J.1 (class `book`,
+     share_series tolerance); the per-worker-vs-per-hour gap is DIV-026.
+
+For Lp coverage gaps outside 1948-1989, values are absent (no synthetic fill).
 """
 from __future__ import annotations
 
@@ -39,13 +49,21 @@ def compute() -> pd.DataFrame:
 
     # Merge on year; result limited to overlap (S515 has 14 years 1948-1961; deflator has 1947+)
     merged = s501.merge(s515, on="year").merge(gdpdef, on="year").sort_values("year").reset_index(drop=True)
-    # q* = real TP / Hp (Hp in thousands → real $ per thousand workers → divide for $/worker)
+    # Real productive output per productive worker (pre-index level).
     merged["TPr"] = merged["TP_star"] / (merged["deflator"] / 100)  # real in 2017 $
-    merged["value"] = merged["TPr"] / (merged["Lp_thousands"] / 1000.0)  # $B / millions of workers = $thousands per worker
+    merged["level"] = merged["TPr"] / (merged["Lp_thousands"] / 1000.0)  # $B / millions of workers
+
+    # Rebase to 1948 = 100 (book Table J.1 row 2 base). No 1948 -> fail loudly.
+    base_rows = merged.loc[merged["year"] == 1948, "level"]
+    if base_rows.empty:
+        raise ValueError("XS004 rebasing requires a 1948 base value; none found.")
+    base = float(base_rows.iloc[0])
+    merged["value"] = merged["level"] / base * 100.0
+
     merged["series_id"] = SUBSERIES
-    merged["units"] = "index"  # productivity index, real $ per productive worker (in thousands)
-    merged["stage"] = "book_period_partial_1948_1961"
-    merged["provenance"] = "S501 / GDPDEF / S515 (book-period coverage only)"
+    merged["units"] = "index"  # productivity index, 1948 = 100 (per productive worker)
+    merged["stage"] = "book_period_indexed_1948_base"
+    merged["provenance"] = "index(1948=100) of real TP*(S501)/GDPDEF / Lp(S515-A)"
     return merged[["series_id", "year", "value", "units", "stage", "provenance"]]
 
 

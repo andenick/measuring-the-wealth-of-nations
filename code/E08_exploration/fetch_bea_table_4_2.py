@@ -1,7 +1,7 @@
 """Fetch BEA Fixed Assets Table 4.2 (Current-Cost Gross Stock of Private Fixed Assets).
 
 Used by VPR_S517_gross_vs_net to compare gross vs net capital stock K*.
-Caches CSV to data/raw/bea/fixed_assets_4_2_gross_stock.csv.
+Caches CSV to data/raw/Inputs/API_Data/BEA/fixed_assets_4_2_gross_stock.csv.
 """
 from __future__ import annotations
 import csv
@@ -13,10 +13,10 @@ from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import urlopen
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]  # bundle root
-OUT_CSV = PROJECT_ROOT / "data/raw/bea/fixed_assets_4_2_gross_stock.csv"
-PROV_JSON = PROJECT_ROOT / "data/raw/bea/provenance_fixed_assets_4_2.json"
-ENV_FILE = PROJECT_ROOT / "data/user-inputs/api_keys.env"
+PROJECT_ROOT = Path("(local path)")
+OUT_CSV = PROJECT_ROOT / "data/raw/Inputs/API_Data/BEA/fixed_assets_4_2_gross_stock.csv"
+PROV_JSON = PROJECT_ROOT / "data/raw/Inputs/API_Data/BEA/provenance_fixed_assets_4_2.json"
+ENV_FILE = PROJECT_ROOT / "data/raw/Technical/AnuData/data/user-inputs/api_keys.env"
 
 
 def load_bea_key() -> str:

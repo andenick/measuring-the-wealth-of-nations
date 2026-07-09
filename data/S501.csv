@@ -1,4 +1,4 @@
-,"Total Product (TP*) — S&T 1994; billions_usd; period=[1948, 1989]; series_status=book_period_validated","Total Product (TP*) — ; billions_usd; period=[1948, 2024]; series_status=book_period_validated","Total Product (TP*) — BEA GDPbyIndustry; billions_usd; period=[1997, 2024]; series_status=book_period_validated"
+,"Total Product (TP*) — S&T 1994; billions_usd; period=[1948, 1989]; series_status=validated_book_and_extension","Total Product (TP*) — ; billions_usd; period=[1948, 2024]; series_status=validated_book_and_extension","Total Product (TP*) — BEA GDPbyIndustry; billions_usd; period=[1997, 2024]; series_status=validated_book_and_extension"
 Year,S501-A,S501-COMBINED,S501-EXT
 1948,446.21,446.21,nan
 1949,431.96,431.96,nan

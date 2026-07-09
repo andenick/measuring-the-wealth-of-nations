@@ -1,4 +1,4 @@
-,"Productive Labor Share (Lp/L) — S&T 1994; share; period=[1948, 1989]; series_status=book_period_validated","Productive Labor Share (Lp/L) — ; share; period=[1948, 2024]; series_status=book_period_validated","Productive Labor Share (Lp/L) — BLS CES; share; period=[1990, 2025]; series_status=book_period_validated"
+,"Productive Labor Share (Lp/L) — S&T 1994; share; period=[1948, 1989]; series_status=validated_book_and_extension","Productive Labor Share (Lp/L) — ; share; period=[1948, 2024]; series_status=validated_book_and_extension","Productive Labor Share (Lp/L) — BLS CES; share; period=[1990, 2025]; series_status=validated_book_and_extension"
 Year,S511-A,S511-COMBINED,S511-EXT
 1948,0.57,0.57,nan
 1949,0.55,0.55,nan

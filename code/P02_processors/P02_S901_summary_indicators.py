@@ -8,8 +8,14 @@ table by merging the already-validated Ch5 ratio series:
         S512 (productive wage share), S513 (Marxian profit rate*),
         S514 (capacity-adjusted profit rate*), S608 (NSW/V* ratio)
 
-*S513 and S514 are PENDING (need K* and TCU); columns are written as
-NaN in their slots and the DPR documents the pending status.
+All six indicator columns are now composed from the already-built upstream
+data/final/<sid>.csv series. S513 (Marxian profit rate r*, Book Table 5.11 /
+§5.5) and S514 (capacity-adjusted r*') were PENDING at the original Wave-1
+build (they needed K* and TCU) and were emitted as explicit NaN. They have
+since been built, so this processor merges them like every other column
+(review 2026-07 workpackage D, internal build-log item). Any residual NaN in a merged column (e.g.
+S514 has no 1948 value; S608 starts 1952) is carried through honestly — it
+reflects the upstream series' own coverage, not a synthesized placeholder.
 
 No L01 loader — purely composable from data/final/ of upstream series.
 """
@@ -46,15 +52,14 @@ def compute() -> pd.DataFrame:
         "LpL_S511":   _load_series("S511", "LpL_S511"),
         "VW_S512":    _load_series("S512", "VW_S512"),
         "NSW_V_S608": _load_series("S608", "NSW_V_S608"),
+        "r_S513":     _load_series("S513", "r_S513"),
+        "r_adj_S514": _load_series("S514", "r_adj_S514"),
     }
     merged = parts["e_S506"]
     for col, df in parts.items():
         if col == "e_S506":
             continue
         merged = merged.merge(df, on="year", how="outer")
-    # S513, S514 pending — placeholder columns explicit-NaN (not synthesized)
-    merged["r_S513"]     = float("nan")
-    merged["r_adj_S514"] = float("nan")
     merged = merged.sort_values("year").reset_index(drop=True)
 
     # Reshape to long format consistent with all other series

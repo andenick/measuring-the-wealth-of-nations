@@ -1,5 +1,5 @@
 """
-L00_bls_fetch.py - RMWND replication pipeline (Chapter-7 BLS CES fetch)
+L00_bls_fetch.py - Anu Framework v12.0 / RMWND v1.1 Phase 4
 
 BLS CES fetch for Ch7 real-fix: production-worker employment AND
 production-worker average weekly hours for the SIC/NAICS supersectors
@@ -8,7 +8,7 @@ that aggregate to the 85 SIC sectors in Shaikh & Tonak (1994) Appendix C.
 Background
 ----------
 The v1.0 Ch7 BLOCKER was that the existing BLS cache at
-data/raw/bls/bls_ces_production_workers.csv covers only
+data/raw/Inputs/API_Data/BLS/bls_ces_production_workers.csv covers only
 5 super-sectors (total private, goods, mining, construction, manufacturing)
 and contains no weekly-hours data. The Ch7 real-fix requires per-sector
 hp*_j = (Lp_j * weekly_hours_j) / X_j   [hr/$, producer prices]
@@ -24,22 +24,23 @@ bridge is handled internally by BLS).
 
 API key
 -------
-Reads BLS_API_KEY from the environment or a local `api_keys.env` file. With a
-registered key the BLS public API v2 allows 500 queries/day and 50 series per
-request - far more than this script needs.
+Uses the registered BLS_API_KEY from (internal) (centralized) or the
+predecessor-build AnuData env file. With a registered key the BLS public API v2 allows
+500 queries/day and 50 series per request - far more than this script needs.
 
 Outputs
 -------
-  data/raw/bls/bls_ces_<supersector>_employment.csv
-  data/raw/bls/bls_ces_<supersector>_hours.csv
-  data/raw/bls/bls_ces_fetch_provenance.json
+  data/raw/Inputs/API_Data/BLS/bls_ces_<supersector>_employment.csv
+  data/raw/Inputs/API_Data/BLS/bls_ces_<supersector>_hours.csv
+  data/raw/Inputs/API_Data/BLS/bls_ces_fetch_provenance.json
 
 CONSTRAINTS
 -----------
 - Foreground only
 - Idempotent: existing files skipped unless --force
 - Honest about coverage gaps (some weekly-hours series only start 1964 or 1972)
-- Does NOT touch series_registry.json or PIPELINE_STATE.json
+- Does NOT touch series_registry.json, PIPELINE_STATE.json, ANU_LEDGER.json,
+  PROVENANCE_INDEX.json, or SUBSERIES_PLAN
 """
 
 from __future__ import annotations
@@ -69,15 +70,14 @@ except ImportError:
 # -----------------------------------------------------------------------------
 # Paths
 # -----------------------------------------------------------------------------
-PROJECT_ROOT = Path(__file__).resolve().parents[2]  # bundle root
-OUTPUT_DIR = PROJECT_ROOT / "data" / "raw" / "BLS"
+PROJECT_ROOT = Path("(local path)")
+OUTPUT_DIR = PROJECT_ROOT / "Inputs" / "predecessor-build" / "Inputs" / "API_Data" / "BLS"
 
-# BLS API key: set the BLS_API_KEY environment variable, or place a
-# `api_keys.env` file (KEY=VALUE lines) at the bundle root or in
-# `data/user-inputs/`. Registration: https://data.bls.gov/registrationEngine/
+# Env file candidates (searched in order)
 ENV_CANDIDATES: List[Path] = [
-    PROJECT_ROOT / "api_keys.env",
-    PROJECT_ROOT / "data" / "user-inputs" / "api_keys.env",
+    Path("(local path)"),
+    PROJECT_ROOT / "data/raw/Technical/AnuData/data/user-inputs/api_keys.env",
+    Path("(local path)"),
 ]
 
 BLS_API_BASE = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
@@ -378,9 +378,9 @@ def write_provenance(
             }
     fetched_count = sum(1 for c in coverage.values() if c["fetched"])
     prov = {
-        "script": "code/L00_setup/L00_bls_fetch.py",
+        "script": "Technical/code/L00_setup/L00_bls_fetch.py",
         "project": "RMWND",
-        "version": "Ch7 real-fix",
+        "version": "v1.1 Phase 4 (Ch7 real-fix Stage 5 sub-stage)",
         "api": "BLS Public API v2",
         "base_url": BLS_API_BASE,
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
@@ -408,9 +408,9 @@ def write_provenance(
             "Datatype 06 (production workers) and datatype 33 (their weekly hours) "
             "are not published for some service-only supersectors. Empty CSVs are "
             "written for those to make the gap explicit.",
-            "Supports the Chapter-7 labor-coefficient real-fix: "
+            "Supports Ch7 real-fix per internal-notes/CH7_REAL_FIX_PLAN.md: "
             "hp*_j = (Lp_j * weekly_hours_j) / X_j, feeding lambda* = hp* (I-app*)^{-1}.",
-            "Does not modify series_registry.json or PIPELINE_STATE.json.",
+            "Does not modify series_registry.json, PIPELINE_STATE.json, ANU_LEDGER.json.",
         ],
     }
     prov_path = output_dir / "bls_ces_fetch_provenance.json"

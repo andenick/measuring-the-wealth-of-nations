@@ -13,12 +13,12 @@ Total: 64 series. 100% validation pass rate against book benchmarks, identity ch
 | Tier | Source | Series unblocked |
 |---|---|---|
 | Book digitization | Appendix Tables E.2, E.3, H.1, plus 5.7 / 6.1 / 6.2 / 6.3 / 9.1 main text | S501-S516, S601-S609, S901 |
-| BEA NIPA | Tables 1.7.5 (GDP/GNP/CFC/NDP/NI), 2.1 (compensation), 1.10 (corporate profits), T20100 (compensation 1929-2025) | S201, S617, ES1201, ES1202, ES1301-1305, AS001 |
+| BEA NIPA | Tables 1.7.5 (GDP/GNP/CFC/NDP/NI), 2.1 (compensation), 1.10 (corporate profits), T20100 (compensation 1929-2025) | S201, S617, XS1201, XS1202, XS1301-1305, XS001 |
 | BEA Fixed Assets | Table 4.1 Line 1 (private nonresidential net stock) | S517 (K\*), S510, S513 |
 | BEA Benchmark I-O | A and L matrices, 6 SIC benchmark years 1947-1977 | S401, S402, S701, S702, S703 |
-| BLS CES | Production worker counts + hours (sectoral) | S701, S702, S703, partial AS004 |
-| FRED | TCU (capacity utilization, 1967+), GDPDEF (GDP deflator, 1947+) | S514, AS004 |
-| External-study CSVs | Mohun 2005/2013, Moos 2017, Cronin 2001, Karabacak & Tonak 2022, Tonak 1984 | ES1001-1002, ES1101-1103, ES1301-1305, ES1401-1404, ES1501-1504, ES1601-1602, ES1701-1704 |
+| BLS CES | Production worker counts (sectoral) | partial XS004 |
+| FRED | TCU (capacity utilization, 1967+), GDPDEF (GDP deflator, 1947+) | S514, XS004 |
+| External-study CSVs | Mohun 2005/2013, Moos 2017, Cronin 2001, Karabacak & Tonak 2022, Tonak 1984 | XS1001-1002, XS1101-1103, XS1301-1305, XS1401-1404, XS1501-1504, XS1601-1602, XS1701-1704 |
 
 All sources are publicly available. Cached responses (4MB) are committed to the repository for offline replication.
 
@@ -32,7 +32,7 @@ The bedrock of the book. We replicate every series in Appendix Table H.1 directl
 - **S504 Variable Capital (V\*)**: H.1 `V_star`. 1948 = $88.41B.
 - **S505 Surplus Value (S\*)**: H.1 `S_star`. Identity S\* = VA\* − V\* verified.
 - **S506 Rate of Exploitation (e = S\*/V\*)**: H.1 `S_star_V_star`. 1948 = 1.70, 1989 = 2.44 (book exact at every benchmark year).
-- **S507 Surplus Ratio (S\*/(S\*+V\*))**: Derived from S505 and S504. Equals e/(1+e). Book-faithful values, in contrast to a NIPA-proxy column used in a predecessor implementation (see Section 9 and `DIVERGENCE_REGISTER.json`).
+- **S507 Surplus Ratio (S\*/(S\*+V\*))**: Derived from S505 and S504. Equals e/(1+e). Book-faithful values, in contrast to a NIPA-proxy series we found predecessor-build had labeled as T507 — see `MIGRATION/divergences_from_predecessor-build.md`.
 - **S508-S510**: Productive Consumption, Investment, Value Composition of Capital. CON\* and IG\* from Appendix E.2 (14-year coverage 1948-1961). K\*/V\* from S517 / S504.
 - **S511-S512**: Productive Labor Share (Lp/L) and Productive Wage Share (V\*/W) from Table 5.7. 1948 (0.57, 0.54) → 1989 (0.36, 0.36).
 - **S513 Marxian Profit Rate (r\* = S\*/(K\*+V\*))**: derived from S505, S517 (K\*), S504. 1948 = 0.395, 1989 = 0.372 — **secular decline confirmed** (book's central Chapter 5 finding).
@@ -55,8 +55,8 @@ Tables 6.1 (Taxes paid by workers), 6.2 (Benefits received by workers), 6.3 (NSW
 
 - **S201 (Alt GFP)**: Comparison of Marxian GFP\* (S503) to orthodox NIPA aggregates (GDP, GNP, CFC, NDP). GFP/GDP ratio declines 0.903 (1948) → 0.773 (1989) — the *unproductive* share of orthodox GDP is rising over the postwar era.
 - **S401, S402 (I-O matrices)**: A-matrix and Leontief-inverse B-matrix summary statistics per BEA Benchmark IO year. Hawkins-Simon condition (max eigenvalue < 1) satisfied at every benchmark.
-- **S701-S703 (Labor values, prices, deviations)**: first-class sector-disaggregated labor-value series (`proxy: false`), built from BLS CES sectoral employment, BEA Benchmark I-O matrices, and the Appendix F productive-share filter, aggregated across the eight Shaikh-Tonak productive sectors (Appendix G Table G.2). These replace the v1.0 matrix-structure proxies. Markup positive, value-price deviations modest (book qualitative finding preserved). See `DIVERGENCE_REGISTER.json` entry DIV-011.
-- **S801 (Cross-study)**: Merges S506/S511 with ES1401/ES1402 (Mohun) for direct comparison.
+- **S701-S703 (Labor values, prices, deviations)**: scalar matrix-derived proxies per benchmark year. Markup positive, value-price deviations modest (book qualitative finding preserved; magnitudes differ from book's sectoral calculation).
+- **S801 (Cross-study)**: Merges S506/S511 with XS1401/XS1402 (Mohun) for direct comparison.
 - **S901 (Summary Table)**: Wide-format summary of headline ratios — round-trip clean against upstream sources.
 
 ## 6. External-study replications
@@ -74,10 +74,10 @@ Eight studies in the ST framework, each given its own ES##### namespace:
 
 ## 7. Analytical derivations
 
-- **AS001 Social Burden Rate (b = 1 − Pn/S\*)**: 1948 = 0.79 → 1989 = 0.86. Rising trend matches book Chapter 7 finding.
-- **AS002 Khanjian Cross-Validation**: Our S506 vs Khanjian (1989) Table 5.12, 5 benchmark years 1958-1977. Our gap to Khanjian's revised estimates: 19-31%, same direction as book Section 5.10 reports.
-- **AS003 Unproductive Worker Exploitation (eu)**: from book Appendix I formula eu = (hu/hp)/(ec_u/ec_p) × (1 + S506) − 1. 1948 = 1.37 → 1989 = 2.37.
-- **AS004 Marxian Productivity (q\* = TPr/Hp)**: book-period 1948-1961 (14 years). q\* rises 123.5 → 154.2 (+24.8%) — Marxian productivity growth confirmed.
+- **XS001 Social Burden Rate (b = 1 − Pn/S\*)**: 1948 = 0.79 → 1989 = 0.86. Rising trend matches book Chapter 7 finding.
+- **XS002 Khanjian Cross-Validation**: Our S506 vs Khanjian (1989) Table 5.12, 5 benchmark years 1958-1977. Our gap to Khanjian's revised estimates: 19-31%, same direction as book Section 5.10 reports.
+- **XS003 Unproductive Worker Exploitation (eu)**: from book Appendix I formula eu = (hu/hp)/(ec_u/ec_p) × (1 + S506) − 1. 1948 = 1.37 → 1989 = 2.37.
+- **XS004 Marxian Productivity (q\* = TPr/Hp)**: book-period 1948-1961 (14 years). q\* rises 123.5 → 154.2 (+24.8%) — Marxian productivity growth confirmed.
 
 ## 8. Validation
 
@@ -89,27 +89,28 @@ Every series has a V03 validator. Three layers of check:
    - S\* = VA\* − V\* (S505)
    - e = S\*/V\* (S506 from S505, S504)
    - NSW/V\* = (S607/S504) (S608)
-   - q\* = TPr/Hp (AS004)
+   - q\* = TPr/Hp (XS004)
 3. **Cross-source consistency** (8 series): Table H.1 vs Table E.2 for overlapping 1948-1961 years; clean (zero mismatches over 14 years).
 
 Final validation report: 64 PASS, 0 FAIL (`VALIDATION_REPORT.json`).
 
 ## 9. Divergences from prior implementations
 
-Every intentional deviation from upstream sources and predecessor methodology is recorded in `DIVERGENCE_REGISTER.json` (12 entries). For example:
+Documented in `MIGRATION/divergences_from_predecessor-build.md`:
 
-- **S507 Surplus Ratio**: prior implementations used a NIPA-proxy column producing 0.57 at 1948. Our build uses the algebraic identity e/(1+e), giving 0.63 at 1948 — book-faithful per the no-proxy rule.
-- **Chapter 7 (S701-S703)**: v1.0 matrix-structure proxies replaced by first-class sector-disaggregated labor-value series (DIV-011).
+- **S507 Surplus Ratio**: prior implementation used a NIPA-proxy column producing 0.57 at 1948. Our build uses the algebraic identity e/(1+e), giving 0.63 at 1948 — book-faithful per the no-proxy rule.
+
+(Other divergences may be added as surfaced; the document is maintained as new ones appear.)
 
 ## 10. Coverage approximations and refinements
 
 Several series use documented approximations rather than the most-refined possible computation:
 
-- **K\* (S517)**: Private nonresidential fixed assets Line 1 of BEA Table 4.1. A productive-partition refinement (excluding Line 33 financial) is a documented future refinement.
-- **AS001 Pn**: total corporate profits used; productive-restricted Pn would require the same NAICS concordance.
-- **S701/S702/S703**: sector-disaggregated across the eight ST productive sectors; benchmark years without BEA I-O coverage are reported as `nan` rather than interpolated.
-- **ES1601/ES1602 Turkey**: WB-fiscal-data approximation rather than per-sector K&T methodology. K&T's headline finding (NSW negative all 40 years) reproduced 30/30.
-- **AS004 Marxian Productivity**: 1948-1961 only (limited by S515 narrow Lp coverage); extension via BLS CES sectoral concordance is future work.
+- **K\* (S517)**: Private nonresidential fixed assets Line 1 of BEA Table 4.1. A productive-partition refinement (excluding Line 33 financial) is a documented future refinement (Phase 2.A of `docs/IMPLEMENTATION_PLAN.md`).
+- **XS001 Pn**: total corporate profits used; productive-restricted Pn would require the same NAICS concordance.
+- **S701/S702/S703**: scalar matrix proxies; full per-sector vector computation is future work.
+- **XS1601/XS1602 Turkey**: WB-fiscal-data approximation rather than per-sector K&T methodology. K&T's headline finding (NSW negative all 40 years) reproduced 30/30.
+- **XS004 Marxian Productivity**: 1948-1961 only (limited by S515 narrow Lp coverage); extension via BLS CES sectoral concordance is future work.
 
 ## 11. Build artifacts
 

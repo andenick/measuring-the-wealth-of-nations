@@ -1,6 +1,15 @@
 # XS1602 — Turkey NSW/GDP (Karabacak & Tonak 2022)
 
-**Status**: CULLED (do not publish) — reverse-engineered proxy, 2026-06-11 reconciliation
+**Status**: pending:faithful_kt_source
+
+> CULLED / DO NOT PUBLISH (`publish: false`, `triage.verdict: cull`). The `pending:faithful_kt_source`
+> status reconciles this DPR with the registry (workpackage E review 2026-07-01): the prior registry
+> `book_period_validated` was a FALSE validation claim. The series is a reverse-engineered World-Bank
+> (govt_consumption − tax_revenue) proxy with year-point reference_values equal to its own output
+> (tautological); V03 currently FAILS (n_negative 30 vs 40 — 10 NaN years: 1982, 1999-2007). Blocked
+> pending faithful re-derivation from K&T 2022's NSW decomposition (see `triage.republish_condition`).
+> T6b attempt = BLOCKED-G2 (K&T publish no annual NSW table — values in Figure 9 only; paper paywalled).
+> Old status: `book_period_validated`.
 
 Approximation: `(govt_consumption - tax_revenue) / 100` from World Bank fiscal Turkey.
 Range [-5.43%, -0.04%].

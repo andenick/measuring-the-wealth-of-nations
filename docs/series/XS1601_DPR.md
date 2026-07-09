@@ -1,6 +1,14 @@
 # XS1601 — Turkey Labor Share (Karabacak & Tonak 2022)
 
-**Status**: CULLED (do not publish) — fabricated proxy, 2026-06-11 reconciliation
+**Status**: pending:faithful_kt_source
+
+> CULLED / DO NOT PUBLISH (`publish: false`, `triage.verdict: cull`). The `pending:faithful_kt_source`
+> status reconciles this DPR with the registry (workpackage E review 2026-07-01): the prior registry
+> `book_period_validated` was a FALSE validation claim — V03 "passes" only against tautological
+> reference_values (the proxy's own output) under a 0.15 mean-tolerance that masks the divergence.
+> The series is a World-Bank value-added proxy, blocked pending faithful re-derivation from K&T 2022's
+> own construction (see `triage.republish_condition`). T6b attempt = BLOCKED-G2 (K&T publish no annual
+> labour-share table; paper paywalled). Old status: `book_period_validated`.
 
 40 rows 1980-2019. Range [47.99%, 56.77%].
 

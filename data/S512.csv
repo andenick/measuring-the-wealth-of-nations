@@ -1,4 +1,4 @@
-,"Productive Wage Share (V*/W) — S&T 1994; per_subseries; period=[1948, 1989]; series_status=book_period_validated","Productive Wage Share (V*/W) — ; per_subseries; period=[1948, 2024]; series_status=book_period_validated","Productive Wage Share (V*/W) — BLS CES; per_subseries; period=[1990, 2025]; series_status=book_period_validated","Productive Wage Share (V*/W) — BLS CES + BEA NIPA (level-splice ~1.17x); per_subseries; period=[1998, 2024]; series_status=book_period_validated"
+,"Productive Wage Share (V*/W) — S&T 1994; per_subseries; period=[1948, 1989]; series_status=validated_book_and_extension","Productive Wage Share (V*/W) — ; per_subseries; period=[1948, 2024]; series_status=validated_book_and_extension","Productive Wage Share (V*/W) — BLS CES; per_subseries; period=[1990, 2025]; series_status=validated_book_and_extension","Productive Wage Share (V*/W) — BLS CES + BEA NIPA (level-splice ~1.17x); per_subseries; period=[1998, 2024]; series_status=validated_book_and_extension"
 Year,S512-A,S512-COMBINED,S512-EXT,S512-EXT-SPLICED-DEPRECATED
 1948,0.54,0.54,nan,nan
 1949,0.52,0.52,nan,nan

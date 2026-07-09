@@ -1,13 +1,17 @@
 """M04_S515 — BLS CES 2003 Overhaul Bridge Application (per-series wrapper).
 
-S515 (Productive Employment Lp, level) uses CES production-worker counts
-directly summed across productive super-sectors:
+Post-D2 (REVIEW_2026-07 seam redesign): the PUBLISHED S515-EXT is now
+Lp = S511 share × book-anchored total-employment L (share×total), so the raw
+per-sector 2003 bridge applies conceptually to (a) the S511 super-sector share
+and (b) the retained honest raw arm S515-EXT-CONSTRUCTIBLE, which still is the
+direct sum of production-worker counts across the productive super-sectors:
 
-  Lp = CES1000000006 + CES2000000006 + CES3000000006
+  Lp_constructible = CES1000000006 + CES2000000006 + CES3000000006
        (mining/logging + construction + manufacturing, production workers)
 
-As a level (not ratio) series, S515 is fully exposed to the 2003
-overhaul: any per-sector factor passes through additively to the sum.
+As a level (not ratio) series, that raw count is fully exposed to the 2003
+overhaul: any per-sector factor passes through additively to the sum. The 2003
+CES overhaul is the employment-side vintage divergence DIV-010.
 
 v1.1 applies a documented null bridge (factor=1.0 per sector ⇒ no level
 change). Wiring in place for v1.2 when per-sector factors can be

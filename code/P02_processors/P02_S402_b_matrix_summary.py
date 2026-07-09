@@ -13,9 +13,13 @@ from utils.io import write_series_csv  # noqa: E402
 def run():
     df = load_S402()
     df["stage"] = "benchmark_only"
-    df["provenance"] = "BEA Benchmark IO via io_matrix.b_matrix_summary"
+    df["provenance"] = ("REBUILT Leontief inverse (io_matrices_rebuilt; workpackage C 2026-07): "
+                        "value = mean total-requirements column multiplier over live columns "
+                        "(SIC: (I-A)^-1 of A=Z/gross-output-X; NAICS: BEA published Total "
+                        "Requirements IxI summary)")
     df = df[["series_id", "year", "value", "units", "stage", "provenance",
-             "n_sectors", "max_b_element", "b_column_sum_max", "b_trace", "b_frobenius_norm"]]
+             "n_sectors", "n_live_columns", "b_colsum_mean", "b_colsum_max",
+             "max_b_element", "b_trace", "b_frobenius_norm"]]
     write_series_csv(df, "S402", stage="intermediate")
     final_path = write_series_csv(df, "S402", stage="final")
     print(f"    [P02_S402] {len(df)} rows; wrote {final_path.name}")

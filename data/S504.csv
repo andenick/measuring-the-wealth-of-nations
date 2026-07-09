@@ -1,4 +1,4 @@
-,"Variable Capital (V*) — S&T 1994; billions_usd; period=[1948, 1989]; series_status=book_period_validated","Variable Capital (V*) — ; billions_usd; period=[1948, 2024]; series_status=book_period_validated","Variable Capital (V*) — BEA NIPA + BLS CES; billions_usd; period=[1990, 2025]; series_status=book_period_validated"
+,"Variable Capital (V*) — S&T 1994; billions_usd; period=[1948, 1989]; series_status=validated_book_and_extension","Variable Capital (V*) — ; billions_usd; period=[1948, 2024]; series_status=validated_book_and_extension","Variable Capital (V*) — BEA NIPA + BLS CES; billions_usd; period=[1990, 2025]; series_status=validated_book_and_extension"
 Year,S504-A,S504-COMBINED,S504-EXT
 1948,88.41,88.41,nan
 1949,85.021,85.021,nan

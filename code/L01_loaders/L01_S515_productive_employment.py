@@ -61,8 +61,34 @@ def load_extension_raw() -> pd.DataFrame:
     Returns DataFrame [year, value] in thousands. value = sum of production
     workers across the goods-producing super-sectors (mining/logging +
     construction + manufacturing) per the BLS CES cache.
+
+    This raw super-sector production-worker count is the honest, BLS-native
+    constructible measure retained as the S515-EXT-CONSTRUCTIBLE arm in the
+    D2 seam redesign (distinct measure, break-flagged) — NOT the published Lp.
     """
     return productive_employment_annual().reset_index(drop=True)
+
+
+def load_book_L_total() -> pd.DataFrame:
+    """Load the book total-employment L (TableE3 row `L_total`), 1948-1989.
+
+    This is the book's L universe (total labor over all sectors incl.
+    government, Table 5.5 / Appendix F Table F.1). Used as the 1989 anchor for
+    the extension L re-anchoring in P02_S515/P02_S516. Returns [year, value].
+    """
+    if not SOURCE_FILE.exists():
+        raise FileNotFoundError(f"Source data missing: {SOURCE_FILE}")
+    df = read_book_table(SOURCE_FILE)
+    df = df.rename(columns={df.columns[0]: "row_idx"})
+    row = df[df["Sector"] == "L_total"]
+    if row.empty:
+        raise KeyError(f"Row 'L_total' not found in {SOURCE_FILE.name}")
+    year_cols = [c for c in df.columns if c.isdigit() and 1900 <= int(c) <= 2100]
+    out = pd.DataFrame({
+        "year":  [int(c) for c in year_cols],
+        "value": [float(row.iloc[0][c]) for c in year_cols],
+    })
+    return out.sort_values("year").reset_index(drop=True)
 
 
 def run():

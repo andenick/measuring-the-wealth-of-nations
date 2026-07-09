@@ -1,4 +1,4 @@
-,"Surplus Value (S* = VA* - V*) — S&T 1994; billions_usd; period=[1948, 1989]; series_status=book_period_validated","Surplus Value (S* = VA* - V*) — ; billions_usd; period=[1948, 2024]; series_status=book_period_validated","Surplus Value (S* = VA* - V*) — derived; billions_usd; period=[1990, 2025]; series_status=book_period_validated"
+,"Surplus Value (S* = VA* - V*) — S&T 1994; billions_usd; period=[1948, 1989]; series_status=validated_book_and_extension","Surplus Value (S* = VA* - V*) — ; billions_usd; period=[1948, 2024]; series_status=validated_book_and_extension","Surplus Value (S* = VA* - V*) — derived; billions_usd; period=[1990, 2025]; series_status=validated_book_and_extension"
 Year,S505-A,S505-COMBINED,S505-EXT
 1948,149.94,149.94,nan
 1949,148.64,148.64,nan

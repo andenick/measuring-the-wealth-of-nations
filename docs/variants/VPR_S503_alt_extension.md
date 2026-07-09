@@ -13,7 +13,7 @@ Per `VPR_S503_alt_extension_DECISION_BRIEF.md` (v1.2 Iter 1 examination), this V
 **Decision rationale**:
 - Retain Variant A: literal ST 1994 Appendix C SIC concordance preserved
 - Variant B adoption requires coordinated S501/S502/S503 + 6 downstream series changes (cost ~1.5-2 cohorts)
-- Only Mohun 2013 (ES1401) explicitly endorses NAICS 51 inclusion; other ES studies (Cronin, Moos, Tsoulfidis/Paitaridis, Karabacak/Tonak) retain narrow ST partition
+- Only Mohun 2013 (XS1401) explicitly endorses NAICS 51 inclusion; other ES studies (Cronin, Moos, Tsoulfidis/Paitaridis, Karabacak/Tonak) retain narrow ST partition
 
 **Future re-visit trigger**: when a coordinated multi-series concordance audit is in scope (likely v1.3 or later), specifically Variant B-prime (NAICS 51 only, Mohun-aligned) as the principled minimal adoption.
 

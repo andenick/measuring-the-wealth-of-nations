@@ -1,85 +1,46 @@
-"""P02_S703 -- Value-Price Deviations (v1.2 Iter 2, B.1 Khanjian-envelope tuning).
+"""P02_S703 -- Productive/Unproductive Labor-Coefficient Partition Gap (workpackage C v2.0).
 
-Replaces the v1.1 aggregate-scalar deviation `(mean(lambda_u) - mean(lambda_p))
-/ mean(lambda_p) x 100`, which read at -71% to -77% (S703 final v1.1), with a
-per-sector deviation aggregated by gross-output share within each partition
-(productive vs unproductive). This is the v1.2 plan B.1 specification:
+HONEST RELABEL (workpackage C review 2026-07). What this series measures:
 
-    Per-partition output-weighted aggregation:
-        Lambda_p_agg = sum_j_in_P (X_j * lambda_p_j) / sum_j_in_P X_j
-        Lambda_u_agg = sum_j_in_U (X_j * lambda_u_j) / sum_j_in_U X_j
-        S703 = (Lambda_u_agg - Lambda_p_agg) / Lambda_p_agg x 100
+    S703 = (Lambda_u_agg - Lambda_p_agg) / Lambda_p_agg x 100   [percent]
 
-This is the "pooled-ratio" form of the deviation defined in Khanjian (1989,
-Table 19) and discussed in S&T 1994 Ch4 sec 4.1 (consistent-mapping criterion)
-and Ch7 sec 7.3 (6%-9% empirical benchmark).
+    Lambda_p_agg = gross-output-weighted mean of lambda_p over the covered
+                   PRODUCTIVE partition (S701 machinery);
+    Lambda_u_agg = same over the covered UNPRODUCTIVE partition (S702 machinery).
 
-HONESTY DISCLOSURE (read before interpreting the output):
+It is the aggregate gap between the unproductive and productive partitions'
+embodied-labor-per-dollar coefficients. It is NOT the book's Khanjian
+value-price deviation: ST 1994 Ch7 sec 7.3 (folio 223) cites Khanjian (1989)
+that the VALUE-form and PRICE-form rates of surplus value (S/V vs S*/V*),
+computed on the SAME aggregate under the consistent procedure, differ by only
+6%-9%. That comparison requires the full value-form S/V construction (lambda
+applied to the NIPA flow decomposition of Ch4 Tables 4.1/4.2, incl. the
+royalties recirculation) which is NOT implemented in this repo; the sector-level
+NIPA flow decomposition needed for it is not among the inputs. Registered as a
+divergence (see WP-C_DIV_PATCHES.json); the Khanjian 6%-9% band must NEVER be
+used as a validator anchor for this series.
 
-  The Khanjian 6%-9% benchmark compares value-form S/V vs price-form S*/V*
-  computed on the SAME aggregate via the consistent procedure -- both rates
-  of surplus value, computed over the same set of productive sectors but
-  with two different denominations (value vs money).
+v2.0 changes vs v1.2:
+  - computed on the REBUILT matrix cache (io_matrices_rebuilt/; sane Leontief
+    multipliers ~2 instead of the defective ~70x -- see WP-C_MATRIX_REBUILD.md);
+  - moving-benchmark extension identical to S701/S702 (1990-96 SIC path with
+    annual X; 1997+ NAICS benchmark step-function with annual X);
+  - the 1997 SIC->NAICS break is NOT ratio-spliced here: the deviation is a
+    scale-free ratio, so common-mode method effects largely cancel; both 1997
+    values are recorded in the provenance instead.
+  - P2 Appendix-F corrections applied (82/83 excluded as n/a).
 
-  This implementation compares aggregate UNPRODUCTIVE labor coefficient
-  vs aggregate PRODUCTIVE labor coefficient, across DISJOINT sector
-  partitions (S701 covers ~60+ productive sectors with hp* ~ 10-18 hr/$;
-  S702 covers ~3-5 unproductive trade/services sectors with hu* ~ 3-5 hr/$).
-  The magnitude difference is structural, not a value-vs-price-form effect.
-  Under either unweighted-mean or output-weighted-mean aggregation, the
-  deviation lands around -70% to -77% in the book period, ~-78% in the
-  extension. This is NOT a defect of the implementation; it is the natural
-  consequence of comparing two structurally-different quantities.
-
-  A true Khanjian-aligned S703 would require:
-    (a) constructing value-form S/V from total productive labor hours
-        and BLS productive-worker wages,
-    (b) constructing price-form S*/V* from BEA NIPA money flows under
-        the consistent procedure (Tables 4.1, 4.2),
-    (c) comparing those two scalar rates of surplus value, year by year.
-
-  That construction is on the multi-session Ch7 real-fix roadmap
-  (Technical/Handoffs/CH7_REAL_FIX_PLAN.md) and is OUTSIDE the v1.2
-  Iter 2 B.1 scope. The v1.2 patch validation.reference_values reflects
-  the output-weighted formula's actual endpoint values, with a clear
-  flag in the EPR that the Khanjian 6%-9% benchmark is structurally
-  unreachable until the value-vs-price-form S/V series is implemented.
-
-  See:
-    - research/S703_research.json (verbatim quotes from Ch4 p.84 and Ch7
-      p.223 anchoring the Khanjian benchmark to S/V vs S*/V* on the same
-      aggregate, not unproductive-vs-productive lambda comparison)
-    - the project hyper-review (2026-05-19) (S703 proxy:true
-      status discussion)
-
-INPUTS (consumed -- do not refetch):
-  - data/raw/ch07/L01_S701_output.csv          (productive panel: emp + hours)
-  - data/raw/ch07/L01_S702_output.csv          (unproductive panel)
-  - data/intermediate/io_matrices_labeled/{yr}_A_matrix_labeled.csv  (A)
-  - data/intermediate/io_matrices_labeled/{yr}_Z_matrix_labeled.csv  (Z, for X_j)
-
-OUTPUTS:
-  - data/intermediate/S703.csv
-  - data/final/S703.csv
-    Columns: series_id, year, value, units, stage, provenance
-
-UNITS: `percent`. Aggregate-vs-aggregate deviation of unproductive labor
-coefficient from productive labor coefficient, gross-output-share-weighted
-within each partition.
-
-SUBSERIES:
-  - S703-A         book period (1948-1989), SIC benchmark years where both
-                   panels and the IO matrix exist.
-  - S703-EXT       extension (1990-2024), IO weights held at 1977.
-  - S703-COMBINED  union of -A and -EXT.
-
-Anti-lazy-splice: each year is recomputed from primary sources. No growth
-splice. The only "splice" is the binary union for the -COMBINED subseries.
+Units: percent. On the rebuilt matrices the gap is much smaller than the
+defective-cache -66..-81% and varies in sign (computed: book benchmarks
+-65% (1967) -> -18% (1977); extension roughly -23%..+15%): with genuine
+gross-output denominators, the covered unproductive sectors (esp. retail) are
+not uniformly less labor-intensive per dollar than the productive average.
+The partition gap itself is the series' subject; its 1997 overlap values under
+both methods are recorded in the provenance (method-sensitive, unspliced).
 """
 from __future__ import annotations
 
 import sys
-import warnings
 from pathlib import Path
 from typing import Optional
 
@@ -89,7 +50,8 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from utils.io import write_series_csv  # noqa: E402
-from utils.paths import DATA_INTERMEDIATE, DATA_RAW  # noqa: E402
+from utils.paths import DATA_RAW  # noqa: E402
+from utils import io_rebuilt as ior  # noqa: E402
 
 
 SERIES_ID = "S703"
@@ -97,160 +59,114 @@ SUB_BOOK = "S703-A"
 SUB_EXT = "S703-EXT"
 SUB_COMBINED = "S703-COMBINED"
 
-BENCHMARK_YEARS_SIC = [1947, 1958, 1963, 1967, 1972, 1977]
 BOOK_PERIOD = (1948, 1989)
 EXT_PERIOD = (1990, 2024)
 
 L01_S701_PATH = DATA_RAW / "ch07" / "L01_S701_output.csv"
 L01_S702_PATH = DATA_RAW / "ch07" / "L01_S702_output.csv"
-IO_LABELED_DIR = DATA_INTERMEDIATE / "io_matrices_labeled"
+EXCLUDED_NA_SECTORS = {82, 83}          # P2 Appendix-F adjudication: n/a columns
 
 
-def _io_paths(year: int) -> tuple[Path, Path]:
-    if year not in BENCHMARK_YEARS_SIC:
-        raise ValueError(f"Year {year} not in labeled IO benchmark cache")
-    return (
-        IO_LABELED_DIR / f"{year}_A_matrix_labeled.csv",
-        IO_LABELED_DIR / f"{year}_Z_matrix_labeled.csv",
-    )
+def _agg_sic(panel: pd.DataFrame, year: int, matrix_year: int,
+             X: pd.Series | None = None) -> tuple[Optional[float], int]:
+    """Gross-output-weighted mean lambda over the covered partition (SIC path).
 
-
-def _derive_gross_output(A_path: Path, Z_path: Path) -> pd.Series:
-    """X_j = mean over i of Z_ij / A_ij where both nonzero; rescale millions->dollars."""
-    A = pd.read_csv(A_path, index_col=0)
-    Z = pd.read_csv(Z_path, index_col=0)
-    Av = A.to_numpy()
-    Zv = Z.to_numpy()
-    with np.errstate(divide="ignore", invalid="ignore"):
-        ratio = np.where(Av > 0, Zv / Av, np.nan)
-    with warnings.catch_warnings():
-        warnings.simplefilter("ignore", category=RuntimeWarning)
-        Xj = np.nanmean(ratio, axis=0)
-    Xj = Xj * 1.0e6
-    sector_codes = [int(c) for c in A.columns]
-    return pd.Series(Xj, index=sector_codes, name="X_j")
-
-
-def _leontief_inverse(A_path: Path) -> pd.DataFrame:
-    A = pd.read_csv(A_path, index_col=0)
-    Av = A.to_numpy()
-    B = np.linalg.inv(np.eye(Av.shape[0]) - Av)
-    cols = [int(c) for c in A.columns]
-    return pd.DataFrame(B, index=cols, columns=cols)
-
-
-def _sector_year_hours(panel: pd.DataFrame, year: int, label: str) -> pd.Series:
-    yr = panel[panel["year"] == year].copy()
-    yr["h_annual"] = (
-        yr["employment_thousands"] * 1000.0 * yr["weekly_hours"] * 52.0
-    )
-    out = yr.dropna(subset=["h_annual"]).set_index("sector_code")["h_annual"]
-    out = out[~out.index.duplicated(keep="first")]
-    return out
-
-
-def _weighted_aggregate(
-    panel: pd.DataFrame, year: int, X_year: int, label: str
-) -> tuple[Optional[float], int]:
-    """Return (output-weighted-mean lambda for `label` partition at `year`, n_sectors).
-
-    Procedure:
-        h_j         = employment x weekly_hours x 52   (from panel)
-        h*_j        = h_j / X_j                         (where X_j>0 finite)
-        lambda_j    = (h* fullvec) @ (I - A)^{-1}       (Leontief amplification)
-        lambda_agg  = sum_j (X_j * lambda_j) / sum_j X_j over covered sectors
+    Uses the N1 at-rest-rebuilt L01 panel (supersector employment allocated to
+    io-85 members summing to the true total; correct dt07 weekly hours), split
+    to matrix grain by X share -- the former compute-time shims are gone
+    (see utils.io_rebuilt).
     """
-    h_by_sec = _sector_year_hours(panel, year, label)
-    if h_by_sec.empty:
+    _, _, Xb = ior.load_sic(matrix_year)
+    X_use = Xb if X is None else X
+    hours = ior.hours_io85(panel, year, X_use)
+    if hours.empty:
         return None, 0
-    A_path, Z_path = _io_paths(X_year)
-    if not A_path.exists() or not Z_path.exists():
+    lam, Xu, covered = ior.lambda_vector_sic(hours, matrix_year, X_musd=X_use)
+    if len(covered) == 0:
         return None, 0
-    X = _derive_gross_output(A_path, Z_path)
-    B = _leontief_inverse(A_path)
-    common = h_by_sec.index.intersection(X.index)
-    if len(common) == 0:
+    w = Xu.loc[covered] / Xu.loc[covered].sum()
+    return float((lam.loc[covered] * w).sum()), len(covered)
+
+
+def _agg_naics(panel: pd.DataFrame, year: int, benchmark: int) -> tuple[Optional[float], int]:
+    _, L = ior.load_naics(benchmark)
+    Xn = ior.naics_X_annual(year)
+    Xn = Xn[Xn.index.isin(L.columns)]
+    hours = ior.hours_naics(panel, year, Xn)
+    if hours.empty:
         return None, 0
-    X_common = X.loc[common]
-    valid = X_common[X_common > 0].dropna().index
-    if len(valid) == 0:
+    lam, Xu, covered = ior.lambda_vector_naics(hours, benchmark, year)
+    if len(covered) == 0:
         return None, 0
-    h_star = h_by_sec.loc[valid] / X.loc[valid]
-    h_full = pd.Series(0.0, index=B.index)
-    h_full.loc[valid] = h_star
-    lam_vec = pd.Series(h_full.to_numpy() @ B.to_numpy(), index=B.index)
-    # Output-weighted mean across valid covered sectors only.
-    w = X.loc[valid] / X.loc[valid].sum()
-    lam_agg = float((lam_vec.loc[valid] * w).sum())
-    return lam_agg, len(valid)
+    w = Xu.loc[covered] / Xu.loc[covered].sum()
+    return float((lam.loc[covered] * w).sum()), len(covered)
 
 
-def _compute_year(year: int, panel_p: pd.DataFrame, panel_u: pd.DataFrame,
-                  X_year: int) -> tuple[Optional[float], str, int, int]:
-    """Compute output-weighted S703 deviation for one year.
-
-    Returns (value, provenance, n_prod_sectors, n_unprod_sectors).
-    """
-    lam_p, n_p = _weighted_aggregate(panel_p, year, X_year, "productive")
-    lam_u, n_u = _weighted_aggregate(panel_u, year, X_year, "unproductive")
-    if lam_p is None or lam_u is None or lam_p == 0 or not np.isfinite(lam_p):
-        prov = (
-            f"insufficient_coverage_year={year}_X_year={X_year}: "
-            f"n_prod={n_p}, n_unprod={n_u}"
-        )
-        return None, prov, n_p, n_u
-    dev = (lam_u - lam_p) / lam_p * 100.0
-    prov = (
-        f"output_weighted: Lambda_u_agg=sum(X*lam_u)/sum(X) over unprod, "
-        f"Lambda_p_agg=sum(X*lam_p)/sum(X) over prod; "
-        f"X_year={X_year}; n_prod={n_p}; n_unprod={n_u}"
-    )
-    return dev, prov, n_p, n_u
-
-
-def compute_book_subseries(panel_p: pd.DataFrame, panel_u: pd.DataFrame) -> pd.DataFrame:
-    rows = []
-    for yr in BENCHMARK_YEARS_SIC:
-        if yr < BOOK_PERIOD[0] or yr > BOOK_PERIOD[1]:
-            continue
-        val, prov, _, _ = _compute_year(yr, panel_p, panel_u, X_year=yr)
-        rows.append({
-            "series_id":  SUB_BOOK,
-            "year":       yr,
-            "value":      val if val is not None else float("nan"),
-            "units":      "percent",
-            "stage":      "benchmark_book_sic",
-            "provenance": prov,
-        })
-    return pd.DataFrame(rows)
-
-
-def compute_extension_subseries(panel_p: pd.DataFrame, panel_u: pd.DataFrame) -> pd.DataFrame:
-    rows = []
-    for yr in range(EXT_PERIOD[0], EXT_PERIOD[1] + 1):
-        val, prov, _, _ = _compute_year(yr, panel_p, panel_u, X_year=1977)
-        if val is None or not np.isfinite(val):
-            continue
-        rows.append({
-            "series_id":  SUB_EXT,
-            "year":       yr,
-            "value":      val,
-            "units":      "percent",
-            "stage":      "extension_annual_bls",
-            "provenance": prov + "; IO_aging=1977_SIC_weights_held_forward",
-        })
-    return pd.DataFrame(rows)
+def _dev(lam_u: Optional[float], lam_p: Optional[float]) -> Optional[float]:
+    if lam_u is None or lam_p is None or lam_p == 0 or not np.isfinite(lam_p):
+        return None
+    return (lam_u - lam_p) / lam_p * 100.0
 
 
 def compute() -> pd.DataFrame:
     panel_p = pd.read_csv(L01_S701_PATH)
     panel_u = pd.read_csv(L01_S702_PATH)
-    book = compute_book_subseries(panel_p, panel_u)
-    ext = compute_extension_subseries(panel_p, panel_u)
-    combined = pd.concat([
-        book.assign(series_id=SUB_COMBINED),
-        ext.assign(series_id=SUB_COMBINED),
-    ], ignore_index=True).sort_values("year").reset_index(drop=True)
+    panel_u = panel_u[~panel_u["sector_code"].isin(EXCLUDED_NA_SECTORS)].copy()
+
+    rows = []
+    # ---- book benchmarks
+    for yr in ior.SIC_BENCHMARKS:
+        if yr < BOOK_PERIOD[0] or yr > BOOK_PERIOD[1]:
+            continue
+        lp, n_p = _agg_sic(panel_p, yr, yr)
+        lu, n_u = _agg_sic(panel_u, yr, yr)
+        val = _dev(lu, lp)
+        rows.append({
+            "series_id": SUB_BOOK, "year": yr,
+            "value": val if val is not None else float("nan"),
+            "units": "percent", "stage": "benchmark_book_sic_rebuilt",
+            "provenance": (f"partition_gap output-weighted; matrix_year={yr}; "
+                           f"n_prod={n_p}; n_unprod={n_u}; cache=io_matrices_rebuilt"
+                           if val is not None else
+                           f"insufficient_unproductive_coverage_{yr} (NOT fabricated)"),
+        })
+
+    # ---- 1997 both-ways (documented method-change overlap, no splice)
+    lp97s, _ = _agg_sic(panel_p, 1997, 1977, X=ior.sic_X_annual(1997))
+    lu97s, _ = _agg_sic(panel_u, 1997, 1977, X=ior.sic_X_annual(1997))
+    lp97n, _ = _agg_naics(panel_p, 1997, 1997)
+    lu97n, _ = _agg_naics(panel_u, 1997, 1997)
+    both_ways = (f"1997_overlap: sic_path_dev={_dev(lu97s, lp97s):.4f}pct, "
+                 f"naics_path_dev={_dev(lu97n, lp97n):.4f}pct")
+
+    # ---- extension
+    for yr in range(EXT_PERIOD[0], EXT_PERIOD[1] + 1):
+        if yr <= 1996:
+            X = ior.sic_X_annual(yr)
+            lp, n_p = _agg_sic(panel_p, yr, 1977, X=X)
+            lu, n_u = _agg_sic(panel_u, yr, 1977, X=X)
+            method = "SIC_path A=1977_rebuilt X=annual"
+        else:
+            bench = ior.naics_benchmark_for(yr)
+            lp, n_p = _agg_naics(panel_p, yr, bench)
+            lu, n_u = _agg_naics(panel_u, yr, bench)
+            method = f"NAICS_path L={bench} X=annual"
+        val = _dev(lu, lp)
+        if val is None or not np.isfinite(val):
+            continue
+        rows.append({
+            "series_id": SUB_EXT, "year": yr, "value": val,
+            "units": "percent", "stage": "extension_moving_benchmark",
+            "provenance": (f"partition_gap output-weighted; {method}; n_prod={n_p}; "
+                           f"n_unprod={n_u}; scale_free_no_splice; {both_ways}"),
+        })
+
+    df = pd.DataFrame(rows)
+    book = df[df["series_id"] == SUB_BOOK]
+    ext = df[df["series_id"] == SUB_EXT]
+    combined = pd.concat([book.assign(series_id=SUB_COMBINED),
+                          ext.assign(series_id=SUB_COMBINED)],
+                         ignore_index=True).sort_values("year").reset_index(drop=True)
     out = pd.concat([book, ext, combined], ignore_index=True)
     return out[["series_id", "year", "value", "units", "stage", "provenance"]]
 
@@ -259,28 +175,12 @@ def run():
     df = compute()
     write_series_csv(df, SERIES_ID, stage="intermediate")
     final_path = write_series_csv(df, SERIES_ID, stage="final")
-
-    book = df[df["series_id"] == SUB_BOOK]
-    ext = df[df["series_id"] == SUB_EXT]
+    for sid in [SUB_BOOK, SUB_EXT]:
+        sub = df[df["series_id"] == sid].dropna(subset=["value"])
+        if len(sub):
+            print(f"    [P02_S703] {sid}: {len(sub)} values, "
+                  f"range=[{sub['value'].min():.2f}%, {sub['value'].max():.2f}%]")
     print(f"    [P02_S703] wrote {final_path.name}")
-    if not book.empty and book["value"].notna().any():
-        bv = book.dropna(subset=["value"])
-        print(f"    [P02_S703] {SUB_BOOK}: {len(book)} rows; "
-              f"range=[{bv['value'].min():.2f}%, {bv['value'].max():.2f}%]")
-    else:
-        print(f"    [P02_S703] {SUB_BOOK}: empty/NaN")
-    if not ext.empty and ext["value"].notna().any():
-        ev = ext.dropna(subset=["value"])
-        print(f"    [P02_S703] {SUB_EXT}:  {len(ext)} rows; "
-              f"range=[{ev['value'].min():.2f}%, {ev['value'].max():.2f}%]")
-    else:
-        print(f"    [P02_S703] {SUB_EXT}:  empty")
-    if not book.empty:
-        print(f"    [P02_S703] book sample (first 4):")
-        print(book.head(4).to_string(index=False))
-    if not ext.empty:
-        print(f"    [P02_S703] ext sample (first 3):")
-        print(ext.head(3).to_string(index=False))
     return df
 
 

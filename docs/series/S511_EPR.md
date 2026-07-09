@@ -24,7 +24,7 @@ Construction: Lp/L per Appendix C concordance over the 85 IO sectors.
 - All-employee series: CES0500000001 (total private), CES0600000001 (goods-producing), CES1000000001 (mining/logging), CES2000000001 (construction), CES3000000001 (manufacturing).
 - Production-worker series: CES0500000006, CES0600000006, CES1000000006, CES2000000006, CES3000000006.
 
-Cached at `data/raw/bls/bls_ces_production_workers.csv` (10 series, 77 rows), pulled 2026-02-24 (provenance: `pull_bls_ces.py`). Complementary BEA NIPA employment by industry (`nipa_6_4D_ftpt_by_industry.csv`, `nipa_6_5D_fte_by_industry.csv`) supports cross-validation.
+Cached at `data/raw/Inputs/API_Data/BLS/bls_ces_production_workers.csv` (10 series, 77 rows), pulled 2026-02-24 (provenance: `pull_bls_ces.py`). Complementary BEA NIPA employment by industry (`nipa_6_4D_ftpt_by_industry.csv`, `nipa_6_5D_fte_by_industry.csv`) supports cross-validation.
 
 ## 4. extension_url
 

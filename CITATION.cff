@@ -15,12 +15,16 @@ abstract: >-
   Built on the Anu Framework v12.0 with strict no-fabrication and full-provenance
   discipline; every value traces to a published source, cached API response, or
   documented derivation. Validated against book benchmarks and
-  identity/cross-source consistency checks (93 passed / 2 skipped / 2 justified
-  xfail; anu-doctor 0 errors / 0 warnings). v2.0 delivers a comprehensive
-  series-by-series review and the D-batch of book-fidelity decisions; the
+  identity/cross-source consistency checks (95 passed / 2 skipped / 2 justified
+  xfail; anu-doctor 0 errors / 0 warnings). v2.1 adds book-faithful gross-capital
+  profit-rate variants (S513/S514/S517-GROSS-A; the printed book r* reproduced at
+  mean error 0.0025) and a reconstructed time-varying I-O-uplift rate-of-exploitation
+  arm (S506-EXT-MARX-KIO) with uncertainty-band sidecars, honest lambda precision,
+  restored per-series author quotes, and Tier-A truth fixes; building on v2.0's
+  comprehensive series-by-series review and D-batch book-fidelity decisions. The
   Chapter-7 labor-value series are first-class (proxy retired) and the AS/ES
   series adopt the canonical XS prefix. Every intentional deviation is recorded
-  in DIVERGENCE_REGISTER (69 entries).
+  in DIVERGENCE_REGISTER (73 entries).
 keywords:
   - marxian-economics
   - replication
@@ -30,8 +34,8 @@ keywords:
   - input-output
   - heterodox-economics
 license: MIT
-version: "2.0.0"
-date-released: "2026-07-03"
+version: "2.1.0"
+date-released: "2026-07-09"
 references:
   - type: book
     authors:

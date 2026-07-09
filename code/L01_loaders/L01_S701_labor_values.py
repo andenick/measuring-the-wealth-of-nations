@@ -3,17 +3,24 @@
 Replaces the legacy proxy that derived S701 from `mean(column_sum(Leontief
 inverse))` over the labeled BEA A matrix. The book's Ch7 labor coefficient
 vector is `lambda* = hp* (I - app*)^{-1}` where `hp*_j` is the productive
-labor-hours per unit of gross output in sector j (see Appendix F + Ch7 §7.2).
-This loader assembles the **raw** inputs P02_S701 needs to compute that:
+labor-hours per unit of gross output in sector j (see the io85 productive
+filter + Ch7 §7.2). This loader assembles the **raw** inputs P02_S701 needs:
 
   1. BLS CES production-worker employment (datatype 06), per supersector,
-     for the productive partition of Appendix F Table F.1.
+     for the productive partition of the io85 productive/unproductive filter.
   2. BLS CES production-worker average weekly hours — datatype 33 where
      available (goods-producing super-sectors, 1948+; manufacturing
      subs 1956+), else datatype 07 (services-friendly, 1964+).
-  3. Appendix F Table F.1 productive-share filter (productive_share > 0.5).
-  4. BEA IO matrices (labeled) -- listed by year for P02's Leontief stage;
-     this L01 does NOT load matrix cells (P02 reads them directly).
+  3. io85 productive/unproductive filter (productive_share > 0.5) at
+     data/source/ch7_productive_filter/io85_pu_classification.csv. NOTE: this
+     is the predecessor-build io85→nipa13 categorical filter, NOT the book's Appendix F
+     Table F.1 (which is a 1948-1989 labor-force decomposition); renamed from
+     the misnomer appendix_F/Table_F_1.csv (2026-07-08, F4 adjudication).
+  4. BEA IO matrices (REBUILT cache) -- listed by year for P02's Leontief stage;
+     this L01 does NOT load matrix cells (P02 reads them directly via
+     utils.io_rebuilt). The defective `io_matrices_labeled/` cache is retired
+     (F3, review 2026-07-07); provenance now lists the rebuilt cache actually
+     consumed.
   5. SIC↔NAICS bridge -- listed for P02's matrix-era splice.
 
 Per the Anu L-stage contract, this loader ONLY loads + aligns. No
@@ -52,17 +59,21 @@ SUBSERIES = "S701-A"
 
 # ---- Input paths ----
 
-APPENDIX_F        = DATA_SOURCE / "appendix_F" / "Table_F_1.csv"
+IO85_PU_FILTER    = DATA_SOURCE / "ch7_productive_filter" / "io85_pu_classification.csv"
 SIC_NAICS_BRIDGE  = DATA_SOURCE / "concordances" / "sic_naics_bridge.csv"
-IO_LABELED_DIR    = DATA_INTERMEDIATE / "io_matrices_labeled"
-BLS_CACHE_DIR     = ROOT / "data" / "raw" / "bls"
+# io_matrices_labeled/ (the DEFECTIVE v1.1 cache) was retired to
+# Technical/MIGRATION/retired_io_20260707/ by F3 (review 2026-07-07). Nothing in
+# the shipped build path reads it any more; provenance below lists the REBUILT
+# cache (io_matrices_rebuilt/) that P02 actually consumes via utils.io_rebuilt.
+REBUILT_DIR       = DATA_INTERMEDIATE / "io_matrices_rebuilt"
+BLS_CACHE_DIR     = ROOT.parent / "Inputs" / "predecessor-build" / "Inputs" / "API_Data" / "BLS"
 
 OUTPUT_DIR = DATA_RAW / "ch07"
 OUTPUT_CSV = OUTPUT_DIR / "L01_S701_output.csv"
 
 # ---- NIPA industry → BLS CES supersector slug mapping ----
 #
-# Appendix F partitions the 85 BEA I-O sectors into 13 NIPA industries. The
+# The io85 productive filter partitions the 85 BEA I-O sectors into 13 NIPA industries. The
 # BLS CES 21-supersector cache covers a subset of those (private sector only;
 # no agriculture, no government, no utilities). For each NIPA industry, we
 # pick the BEST single BLS CES supersector slug to use as the labor-input
@@ -101,16 +112,19 @@ PER_SECTOR_SLUG_OVERRIDE: dict[int, Optional[str]] = {
     76: "other_services",          # Automobile repair (NIPA 12, productive)
 }
 
-# ---- BLS hours datatype priority ----
-# Datatype 33 (goods-friendly weekly hours): full 1948+ history for goods
-# supersectors. Empty for services slugs in this cache.
-# Datatype 07 (services-friendly weekly hours): 1964+ for all supersectors
-# with fetched coverage; used as fallback when 33 is empty.
-
-GOODS_SLUGS_WITH_DT33 = {
-    "mining_logging", "construction", "manufacturing",
-    "durable_goods", "nondurable_goods", "goods_producing",
-}
+# ---- BLS hours datatype priority (N1 at-rest fix, T3.3) ----
+# The correct production/nonsupervisory-worker AVERAGE WEEKLY HOURS series is
+# CES<supersector>07 (datatype 07), cached here in the `*_hours_alt.csv` files.
+#
+# Datatype 33 (CES3x00000033) for the MANUFACTURING supersectors is NOT weekly
+# hours: empirically it is a small, monotonically-rising magnitude
+# (durable 2.16 in 1958 -> 5.74 in 1977 -> 20.78 in 2017) that tracks average
+# hourly EARNINGS, not ~40 hours. For the non-manufacturing goods supersectors
+# (mining_logging, construction, goods_producing) the dt33 cache is empty. So
+# dt33 is never the right source for weekly hours; dt07 is correct for every
+# slug and is now preferred universally (dt33 kept only as a last-resort
+# fallback). This replaces the earlier compute-time substitution in
+# utils/io_rebuilt.py (_mfg_hours_fix), which is removed by this rebuild.
 
 
 def _supersector_to_ces_id(slug: str, datatype: str) -> str:
@@ -167,15 +181,15 @@ def _load_bls_csv(slug: str, kind: str) -> pd.DataFrame:
 
 
 def _resolve_hours_series(slug: str) -> tuple[Optional[pd.DataFrame], Optional[str], str]:
-    """Pick datatype 33 (goods) if non-empty, else 07 (alt). Returns
-    (frame, ces_id, datatype_used)."""
-    if slug in GOODS_SLUGS_WITH_DT33:
-        h33 = _load_bls_csv(slug, "hours")
-        if not h33.empty and h33["value"].notna().any():
-            return h33, _supersector_to_ces_id(slug, "33"), "33"
+    """Pick datatype 07 (correct avg weekly hours, in the *_hours_alt cache) if
+    non-empty, else datatype 33 as a last resort. Returns
+    (frame, ces_id, datatype_used).  [N1 at-rest fix, T3.3]"""
     h07 = _load_bls_csv(slug, "hours_alt")
     if not h07.empty and h07["value"].notna().any():
         return h07, _supersector_to_ces_id(slug, "07"), "07"
+    h33 = _load_bls_csv(slug, "hours")
+    if not h33.empty and h33["value"].notna().any():
+        return h33, _supersector_to_ces_id(slug, "33"), "33"
     # Fall through: nothing usable
     return None, None, "none"
 
@@ -187,22 +201,27 @@ def _resolve_supersector_for_sector(sector_code: int, nipa_industry: int) -> Opt
 
 
 def _list_io_matrix_years() -> dict[str, list[int]]:
-    """Provenance helper: list available IO matrix years by era."""
-    sic_years = sorted({int(p.name[:4]) for p in IO_LABELED_DIR.glob("*_A_matrix_labeled.csv")})
-    naics_years = sorted({int(p.name[:4]) for p in IO_LABELED_DIR.glob("*_A_matrix_naics_labeled.csv")})
+    """Provenance helper: list available IO matrix years by era, from the
+    REBUILT cache actually consumed by P02 (utils.io_rebuilt)."""
+    sic_years = sorted({int(p.name[:4]) for p in REBUILT_DIR.glob("*_A_rebuilt.csv")})
+    naics_years = sorted({int(p.name[:4]) for p in REBUILT_DIR.glob("*_A_naics_rebuilt.csv")})
     return {"sic_era": sic_years, "naics_era": naics_years}
 
 
 def load_appendix_f(productive_filter: str) -> pd.DataFrame:
-    """Load Appendix F Table F.1 filtered by productive partition.
+    """Load the io85 productive/unproductive filter, filtered by partition.
+
+    (Function name kept for API stability; the underlying file is the predecessor-build
+    io85→nipa13 categorical filter, NOT the book's Appendix F — see
+    ch7_productive_filter/PROVENANCE.md.)
 
     productive_filter: 'productive'   -> productive_share > 0.5
                        'unproductive' -> productive_share < 0.5 and not n/a
                        'all'          -> no filter (incl. n/a sectors)
     """
-    if not APPENDIX_F.exists():
-        raise FileNotFoundError(f"Appendix F missing: {APPENDIX_F}")
-    f = pd.read_csv(APPENDIX_F)
+    if not IO85_PU_FILTER.exists():
+        raise FileNotFoundError(f"io85 productive filter missing: {IO85_PU_FILTER}")
+    f = pd.read_csv(IO85_PU_FILTER)
     f["sector_code"] = f["sector_code"].astype(int)
     f["nipa_industry"] = f["nipa_industry"].astype(int)
     f["productive_share"] = pd.to_numeric(f["productive_share"], errors="coerce")
@@ -217,7 +236,7 @@ def load_appendix_f(productive_filter: str) -> pd.DataFrame:
 
 def build_long_panel(productive_filter: str = "productive") -> pd.DataFrame:
     """Build the sector × year long panel of BLS employment + weekly hours
-    for sectors matching `productive_filter` per Appendix F.
+    for sectors matching `productive_filter` per the io85 productive filter.
 
     Returns columns [sector_code, sector_name, nipa_industry, nipa_industry_name,
     productive_share, bls_supersector_slug, bls_employment_series_id,
@@ -286,8 +305,58 @@ def build_long_panel(productive_filter: str = "productive") -> pd.DataFrame:
             })
 
     out = pd.DataFrame(rows)
+    out = _allocate_employment(out)
     out = out.sort_values(["sector_code", "year"]).reset_index(drop=True)
     return out
+
+
+def _rebuilt_1977_go_share() -> pd.Series:
+    """Within-supersector gross-output weights: 1977 rebuilt io-85 gross output
+    (millions $) per sector, used to allocate a BLS supersector's employment
+    across its member io-85 sectors. 1977 is the last in-repo SIC benchmark and
+    a fixed (year-invariant) weight; the choice is immaterial to the downstream
+    labor-value lambda (which depends only on the supersector total hours over
+    the supersector total gross output), but it makes the at-rest panel
+    sum-honest instead of replicating the supersector total onto every member.
+    """
+    x = pd.read_csv(REBUILT_DIR / "1977_X_gross_output.csv", index_col=0)["gross_output_musd"]
+    x.index = [int(i) for i in x.index]
+    return x
+
+
+def _allocate_employment(panel: pd.DataFrame) -> pd.DataFrame:
+    """Replace the replicated supersector employment with an honest per-sector
+    ALLOCATION (N1 at-rest fix, T3.3, defect a).
+
+    The raw BLS CES datum is one employment total per supersector. The prior
+    panel replicated that total onto every member io-85 sector, so any SUM over
+    the panel overcounted a supersector's hours by its member count (~4.4x
+    overall). Here each member sector receives supersector_total x
+    (1977 gross-output share), so the member rows SUM back to the true
+    supersector total. `supersector_employment_thousands` retains the total for
+    transparency; `employment_grain` documents the transform. Downstream
+    (utils.io_rebuilt) now reconstructs the supersector total by SUMMING these
+    allocated rows -- no compute-time de-duplication needed.
+    """
+    panel = panel.copy()
+    panel["supersector_employment_thousands"] = panel["employment_thousands"]
+    panel["employment_grain"] = "none"
+    x77 = _rebuilt_1977_go_share()
+
+    slug_rows = panel["bls_supersector_slug"].notna()
+    for (slug, yr), g in panel[slug_rows].groupby(["bls_supersector_slug", "year"]):
+        total = g["employment_thousands"].iloc[0]      # replicated supersector total
+        idx = g.index
+        members = g["sector_code"].astype(int).to_numpy()
+        w = pd.Series([x77.get(int(s), 0.0) for s in members], index=idx, dtype=float)
+        w = w.where(w > 0, 0.0)
+        if w.sum() > 0:
+            w = w / w.sum()
+        else:
+            w = pd.Series(1.0 / len(idx), index=idx)   # no positive-X member: equal split
+        panel.loc[idx, "employment_thousands"] = (total * w) if pd.notna(total) else float("nan")
+        panel.loc[idx, "employment_grain"] = "sector_allocated_by_1977_go_share"
+    return panel
 
 
 def load() -> dict:
@@ -315,9 +384,9 @@ def load() -> dict:
             "subseries":         SUBSERIES,
             "productive_filter": "productive_share > 0.5",
             "bls_cache_dir":     str(BLS_CACHE_DIR),
-            "appendix_f_path":   str(APPENDIX_F),
+            "appendix_f_path":   str(IO85_PU_FILTER),
             "sic_naics_bridge":  str(SIC_NAICS_BRIDGE),
-            "io_labeled_dir":    str(IO_LABELED_DIR),
+            "io_rebuilt_dir":    str(REBUILT_DIR),
             "hours_datatype_priority": "33_goods -> 07_services",
             "nipa_to_bls_slug":  {str(k): v for k, v in NIPA_TO_BLS_SLUG.items()},
             "per_sector_slug_override": {str(k): v for k, v in PER_SECTOR_SLUG_OVERRIDE.items()},

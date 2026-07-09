@@ -107,19 +107,33 @@ methodology document mentioning K\*:
 
 ## Impact on Downstream Series
 
-- **S513** r\* = S\*/(C\*+V\*) — uses S502, S504, S505. **Independent of S517.**
+> **RETRACTION (workpackage A 2026-07-01):** the claim below that S513 is independent of S517 is
+> **FALSE for the current build**. `P02_S513` computes the PRIMARY stock-form
+> r\* = S505-COMBINED / (S517-COMBINED + S504-COMBINED) — it reads S517 directly
+> (P02_S513 lines 84/104). The flow-form is the SECONDARY S513-FLOW subseries. Any change
+> to S517's basis therefore propagates to S513/S514 headline profit rates. (P3 flagged
+> this stale claim; workpackage A verified and retracted it.)
+>
+> **QUALIFICATION (workpackage A 2026-07-01):** the "matches BEA 4.1 net to four significant
+> figures" statement above describes agreement between the build and BEA 4.1 Line 1 NET —
+> i.e. the build's own source. Against the **book's published K\*** (KB v2 `_combined/5.8.csv`,
+> Table 5.8 C\*_f: 1948=384.30, 1958=710.90, 1967=1093.00, 1980=4225.20, 1989=8387.49) the
+> build runs **−10.1% to −24.1% below** (1948=291.56 … 1989=6699.84). The build's registry
+> reference_values are the loader's own output (tautological), not book anchors. See
+> WP-A_REGISTRY_PATCHES.json (book_reference_values addition) and DIV-A15.
+
+- **S513** stock-form r\* (PRIMARY) — **uses S517 directly** (see retraction above).
 - **S512** s\* = S\*/V\* — independent of S517.
-- **Any stock-form r\* variant** (VPR_S513_stock_vs_flow) — uses S517 directly.
-  Inherits this VPR's net-stock recommendation.
-- **No re-build required** for current registry state; this is a disclosure-only
-  divergence.
+- **S513-FLOW** (secondary) — uses S502, not S517.
+- Re-build impact: S517 basis choices (gross-vs-net, vintage) flow through to S513/S514;
+  this is NOT a disclosure-only divergence for the stock-form profit rate.
 
 ## References
 
 - `code/E08_exploration/E_S517_gross_vs_net.py` — comparison script
 - `data/scratch/S517_gross_vs_net.csv` — year-by-year side-by-side, 1925-2024
-- `data/raw/bea/fixed_assets_4_2_gross_stock.csv` — Table 4.2 fetch (Fisher quantity index)
-- `data/raw/bea/provenance_fixed_assets_4_2.json` — fetch provenance
+- `data/raw/Inputs/API_Data/BEA/fixed_assets_4_2_gross_stock.csv` — Table 4.2 fetch (Fisher quantity index)
+- `data/raw/Inputs/API_Data/BEA/provenance_fixed_assets_4_2.json` — fetch provenance
 - `code/E08_exploration/fetch_bea_table_4_2.py` — fetch script
 - `series_registry.json` — S517 entry (status: validated_book_and_extension)
 - Shaikh & Tonak (1994), *Measuring the Wealth of Nations*, Chapter 5, Appendix H

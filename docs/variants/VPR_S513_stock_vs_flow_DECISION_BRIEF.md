@@ -47,16 +47,16 @@ The naming label was never reconciled with the implementation.
 
 | ES         | Source                       | Profit-rate form?                | Implication for S513             |
 |------------|------------------------------|----------------------------------|----------------------------------|
-| ES1201/02  | Moos 2017 (NSW)              | Not a profit rate; flow ratios   | Neutral                          |
-| ES1401     | Mohun 2005 exploitation      | Not a profit rate                | Neutral                          |
-| ES1402     | Mohun 2005 prod. labor share | Not a profit rate                | Neutral                          |
-| ES1501-04  | Mohun 2013 unproductive labor| Stock/flow language re labor; no r* | Neutral                       |
-| ES1701/02  | Cronin 2001 NZ s/v, surplus  | Not a profit rate; flow only     | Neutral                          |
-| **ES1703** | **Cronin 2001 NZ c/v**       | **c/v = constant-cap flow / V (NOT fixed-cap stock)**. Cronin explicitly **criticizes Pearce (1986) for including fixed-capital stock in c**, calling it a 6-8x overestimate. | **Flow form for VCC, NOT for r*.** Cronin's c/v is the *value composition* (a flow ratio for organic composition analysis), **not** the rate of profit. The Pearce critique reinforces that adding *fixed-capital stock* to a *flow* denominator (which is what hybrid stock/flow mixing does) is a methodological error in the Shaikh tradition. |
-| ES1704     | Cronin 2001 NZ total value   | Flow only; no r*                 | Neutral                          |
+| XS1201/02  | Moos 2017 (NSW)              | Not a profit rate; flow ratios   | Neutral                          |
+| XS1401     | Mohun 2005 exploitation      | Not a profit rate                | Neutral                          |
+| XS1402     | Mohun 2005 prod. labor share | Not a profit rate                | Neutral                          |
+| XS1501-04  | Mohun 2013 unproductive labor| Stock/flow language re labor; no r* | Neutral                       |
+| XS1701/02  | Cronin 2001 NZ s/v, surplus  | Not a profit rate; flow only     | Neutral                          |
+| **XS1703** | **Cronin 2001 NZ c/v**       | **c/v = constant-cap flow / V (NOT fixed-cap stock)**. Cronin explicitly **criticizes Pearce (1986) for including fixed-capital stock in c**, calling it a 6-8x overestimate. | **Flow form for VCC, NOT for r*.** Cronin's c/v is the *value composition* (a flow ratio for organic composition analysis), **not** the rate of profit. The Pearce critique reinforces that adding *fixed-capital stock* to a *flow* denominator (which is what hybrid stock/flow mixing does) is a methodological error in the Shaikh tradition. |
+| XS1704     | Cronin 2001 NZ total value   | Flow only; no r*                 | Neutral                          |
 
 **Verdict**: None of the ES replications publish a competing r* in flow
-form. ES1703 (Cronin) is the only direct methodological signal and it
+form. XS1703 (Cronin) is the only direct methodological signal and it
 **supports stock-form integrity**: it treats c/v as a flow ratio for VCC
 analysis specifically because it is NOT the rate of profit, and it warns
 against the very mixing (stock-in-numerator-flow-in-denominator) that the
@@ -121,7 +121,7 @@ Arguments by option:
 - For: book canonical (§5.5 verbatim definition); matches existing book-period
   data (no 1948-89 recompute); preserves §5.5 / Ch.9 narrative; eliminates
   silent splice methodology change (Decision 0008 spirit); cross-validated
-  by ES1703 Pearce-critique logic; reveals real post-1989 economic
+  by XS1703 Pearce-critique logic; reveals real post-1989 economic
   decline currently masked.
 - Against: visible post-1989 discontinuity may look like a "data problem"
   to casual readers (mitigated by explicit splice disclosure in viz captions);
@@ -190,5 +190,5 @@ regardless of the primary-form decision.
 Appended to `Technical/STEP_LOG.jsonl`:
 
 ```json
-{"ts": "2026-05-24T00:00:00Z", "step_id": "v1.2-iter1-A1-examine-S513", "mode": "execute", "stage": 9, "cohort": "v1.2_iter1", "series": "S513,S514", "action": "examine_S513_stock_vs_flow_decision_brief", "inputs": ["docs/variants/VPR_S513_stock_vs_flow.md", "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_15", "research/ES1401-1704"], "outputs": ["docs/variants/VPR_S513_stock_vs_flow_DECISION_BRIEF.md"], "doctor_check_ids": [], "outcome": "pass", "artifacts_emitted": ["S513_decision_brief"], "notes": "Track A.1 examination complete; recommendation: stock-form primary, HIGH confidence; flow-form retained as published variant"}
+{"ts": "2026-05-24T00:00:00Z", "step_id": "v1.2-iter1-A1-examine-S513", "mode": "execute", "stage": 9, "cohort": "v1.2_iter1", "series": "S513,S514", "action": "examine_S513_stock_vs_flow_decision_brief", "inputs": ["docs/variants/VPR_S513_stock_vs_flow.md", "data/raw/kb/book_digitization/chunk_15", "research/XS1401-1704"], "outputs": ["docs/variants/VPR_S513_stock_vs_flow_DECISION_BRIEF.md"], "doctor_check_ids": [], "outcome": "pass", "artifacts_emitted": ["S513_decision_brief"], "notes": "Track A.1 examination complete; recommendation: stock-form primary, HIGH confidence; flow-form retained as published variant"}
 ```

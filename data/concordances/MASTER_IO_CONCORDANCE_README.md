@@ -1,7 +1,7 @@
 # MASTER_IO_CONCORDANCE — construction & provenance
 
 **Project:** RMWND — *Measuring the Wealth of Nations* (Shaikh & Tonak 1994), comprehensive review Phase 2, task **T5**.
-**Built:** 2026-07-01 by `Technical/Handoffs/REVIEW_2026-07/scratch/build_master_io_concordance.py` (fully reproducible).
+**Built:** 2026-07-01 by `internal-notes/REVIEW_2026-07/scratch/build_master_io_concordance.py` (fully reproducible).
 **Files:** `MASTER_IO_CONCORDANCE.csv` (data), `MASTER_IO_CONCORDANCE.xlsx` (2 sheets: data + README), this file.
 
 A single **long-format** downloadable concordance — one row per **vintage x industry** — that maps every
@@ -52,14 +52,14 @@ productive_share, classification_source, bridge_quality, notes`
 ## Blocks and build rules
 
 ### 1. SIC-85 book vintages (1947, 1958, 1963, 1967, 1972, 1977) — 6 x 85 rows
-- `sector_code`/`sector_name`/`sic_range` from `data/raw/concordances/io_85_to_nipa_13_concordance.csv`.
+- `sector_code`/`sector_name`/`sic_range` from `data/raw/Inputs/Concordances/io_85_to_nipa_13_concordance.csv`.
 - `naics_code` = the semicolon-joined NAICS codes from `Technical/data/source/concordances/sic_naics_bridge.csv`
   (one-to-many bridge rows joined); `bridge_quality` likewise from the bridge (mostly `coarse_aggregation`;
   `unmapped` for special sectors 81-84 with no SIC<->NAICS link).
 - `st_classification` + `classification_source` = the **T2 adjudication**
   (`P2_appendix_F_verdicts.csv` / `P2_APPENDIX_F_ADJUDICATION.md`): 81 book-confirmed, 1 literature-only,
-  3 unsupported-with-corrections. `productive_share` per `Technical/data/source/appendix_F/Table_F_1.csv`
-  **with the T2 corrections applied**.
+  3 unsupported-with-corrections. `productive_share` per `Technical/data/source/ch7_productive_filter/io85_pu_classification.csv`
+  **with the T2 corrections applied** (82/83 → n/a, 85 → unproductive/0.0, sector-74 Mohun-split note; 2026-07-08).
 - **The 85-order classification is CONSTANT across the six book vintages** — ST apply one categorical sector
   taxonomy (Table 3.1/3.2, §3.6.1) to all benchmark years. Rows are emitted per vintage so each year is
   independently queryable, but the classification does not vary 1947->1977.
@@ -84,10 +84,13 @@ productive_share, classification_source, bridge_quality, notes`
 
 ### 3. NAICS-benchmark vintages (1997, 2002, 2007, 2012, 2017) — 5 x 65 rows
 - `sector_code` = the 65 NAICS column codes from each year's matrix header
-  (`Technical/data/intermediate/io_matrices_labeled/{YEAR}_A_matrix_naics_labeled.csv`). Note 2017's set
-  differs (adds `525`, drops `GFE`).
+  (originally read from `io_matrices_labeled/{YEAR}_A_matrix_naics_labeled.csv` at
+  concordance-build time; that defective labeled cache was retired 2026-07-07 to
+  `Technical/MIGRATION/retired_io_20260707/io_matrices_labeled/` — the live square
+  NAICS matrices are now `io_matrices_rebuilt/{YEAR}_A_naics_rebuilt.csv`). Note
+  2017's set differs (adds `525`, drops `GFE`).
 - `sector_name` from the **standard BEA GDP-by-Industry / Summary I-O industry code list** (bea.gov/industry).
-- `st_classification` from `data/raw/concordances/naics_71_to_classification.csv`; `sic_range` =
+- `st_classification` from `data/raw/Inputs/Concordances/naics_71_to_classification.csv`; `sic_range` =
   reverse-bridge SIC ranges (semicolon-joined) from `sic_naics_bridge.csv` (blank where no exact bridge row).
 - **These are NOT book-confirmed** — the 1994 book predates the first NAICS benchmark (1997). The
   classification is the NAICS **re-derivation** of the ST rule; every row's `notes` says so.
@@ -132,19 +135,19 @@ future refinement (needs sub-sector payroll weights not in the 85-order table).
   continuation rests on the `naics_71_to_classification.csv` re-derivation, not on book confirmation. See
   `P2_IO_VINTAGE_LEDGER.md` for the full vintage-by-vintage discontinuity map and the post-1994 Marxian
   literature cross-check (Mohun, Tsoulfidis-Paitaridis, Rotta, Camara).
-- `Technical/data/source/appendix_F/Table_F_1.csv` is a **filename misnomer** (it is the predecessor-build
-  `io_85_to_nipa_13` categorical filter, NOT the book's real annual Table F.1); this concordance uses it only
-  for `productive_share` and applies the T2 corrections on top.
+- `Technical/data/source/ch7_productive_filter/io85_pu_classification.csv` (RENAMED 2026-07-08 from the
+  misnomer `appendix_F/Table_F_1.csv`) is the predecessor-build `io_85_to_nipa_13` categorical filter, NOT the book's real
+  annual Table F.1; this concordance uses it only for `productive_share` and applies the T2 corrections on top.
 
 ## Sources (all real, checkable)
-- `data/raw/concordances/io_85_to_nipa_13_concordance.csv`
-- `Technical/Handoffs/REVIEW_2026-07/P2_appendix_F_verdicts.csv` + `P2_APPENDIX_F_ADJUDICATION.md` (T2)
-- `Technical/data/source/appendix_F/Table_F_1.csv` + `PROVENANCE.md`
+- `data/raw/Inputs/Concordances/io_85_to_nipa_13_concordance.csv`
+- `internal-notes/REVIEW_2026-07/P2_appendix_F_verdicts.csv` + `P2_APPENDIX_F_ADJUDICATION.md` (T2)
+- `Technical/data/source/ch7_productive_filter/io85_pu_classification.csv` + `PROVENANCE.md`
 - `Technical/data/source/concordances/sic_naics_bridge.csv`
-- `data/raw/concordances/naics_71_to_classification.csv`
-- `Technical/HDARP_Extractions/1994_Measuring_Wealth_v2/CSV_Tables/table_026_026_01.csv` (Appendix A.1)
+- `data/raw/Inputs/Concordances/naics_71_to_classification.csv`
+- `Technical/book_digitization_v2/CSV_Tables/table_026_026_01.csv` (Appendix A.1)
 - `Technical/data/intermediate/io_matrices_labeled/{1997..2017}_A_matrix_naics_labeled.csv` (headers)
-- `Technical/Handoffs/REVIEW_2026-07/P2_IO_VINTAGE_LEDGER.md` + `P2_vintage_ledger.csv` (vintage citations)
+- `internal-notes/REVIEW_2026-07/P2_IO_VINTAGE_LEDGER.md` + `P2_vintage_ledger.csv` (vintage citations)
 - Mohun, S. (2013/2014) "Unproductive Labor in the U.S. Economy 1964-2010," RRPE 46(3):355-379.
 - Shaikh, A. & Tonak, E.A. (1994) *Measuring the Wealth of Nations*, CUP — Ch.3 (Tables 3.1/3.2, §3.6.1), Appendix A.
 - BEA GDP-by-Industry / Summary Input-Output industry code list (bea.gov/industry) for NAICS sector names.

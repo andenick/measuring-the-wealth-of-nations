@@ -19,7 +19,7 @@ S402's published summary scalars are `n_sectors`, `max_b_element`, `b_column_sum
 
 ## Sources
 
-- KB chunks: `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_10/full_transcription.md` (Ch4 §4.1, pp.78-83 — closed-form Leontief inverse, worked example); `chunk_27/full_transcription.md` (Appendix A — aggregation pipeline propagating into B)
+- KB chunks: `data/raw/kb/book_digitization/chunk_10/full_transcription.md` (Ch4 §4.1, pp.78-83 — closed-form Leontief inverse, worked example); `chunk_27/full_transcription.md` (Appendix A — aggregation pipeline propagating into B)
 - Book tables: ST 1994 Table 4.2 (B-Matrix) at 85×85 producer-price level
 - External sources: BEA Benchmark Input-Output Accounts (1947, 1958, 1963, 1967, 1972, 1977) via S401 dependency
 - Local files: derived in-pipeline from S401 outputs via `code/utils/io_matrix.py`; printed-book digitization at `data/source/book_tables/ch04/Table4_2_BMatrix.csv`

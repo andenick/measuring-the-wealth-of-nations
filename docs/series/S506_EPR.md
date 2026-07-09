@@ -26,7 +26,7 @@ Identity: e = S* / V* = S505 / S504 in this project's series IDs.
 - **S505** (Surplus Value) — itself derived from S503 − S504.
 - **S504** (Variable Capital) — BEA NIPA Table 6.2D + BLS CES production-worker shares, partitioned by the productive/unproductive concordance.
 
-Underlying upstream caches: `data/raw/bea/` (NIPA 6.2D, NIPA 1.7.5, GDP-by-Industry) and `data/raw/bls/` (CES production-worker series), pulled 2026-02-24.
+Underlying upstream caches: `data/raw/Inputs/API_Data/BEA/` (NIPA 6.2D, NIPA 1.7.5, GDP-by-Industry) and `data/raw/Inputs/API_Data/BLS/` (CES production-worker series), pulled 2026-02-24.
 
 ## 4. extension_url
 
@@ -42,3 +42,30 @@ Rate of exploitation e = S*/V* is the central Marxian ratio of surplus value to 
 ## 6. vintage_note
 
 As a dimensionless ratio, S506 inherits all vintage divergences from S505 and S504 but introduces none of its own. Unit-vintage issues cancel by construction. The Appendix-C-to-NAICS concordance update is the dominant source of cross-vintage drift: any inconsistency between the book-period SIC partition and the modern NAICS partition will move the level of e at the 1989 splice point. Book values 1948–1989 frozen at the book's vintage (Table 5.7 endpoints: 1948 e=1.70, 1989 e=2.44); modern data pulled 2026-02-24 (BEA / BLS provenance).
+
+---
+
+## workpackage A SUPERSESSION NOTICE (2026-07-01)
+
+The extension methodology described above was revised by the workpackage A comprehensive-review rebuild
+(headline ROE remediation). Level-splices and log-linear 1990-97 bridges described in this EPR
+are RETIRED; see the workpackage A REBUILD ADDENDUM in `S506_DPR.md`, the as-built provenance strings
+in `data/final/S506.csv`, and DIV-A10..A16 in `internal-review-notes_2026-07/WP-A_DIV_PATCHES.json`.
+
+---
+
+## WP-D1 KIO-RECONSTRUCTION ADDENDUM (2026-07-07)
+
+The faithful-concept continuation no longer holds the I-O uplift frozen at kIO = 1.5714. A new
+arm **`S506-EXT-MARX-KIO`** carries a **time-varying, officially-sourced, benchmark-anchored,
+bias-corrected `kIO(t)`** (native 1992 SIC level anchor + NAICS 71-order annual trend, WP-B1/B2/C
+splice; source artifact `data/source/kio_reconstruction/kio_final_1990_2024.csv`). It is
+structurally identical to `S506-EXT-MARX` except for the per-year kIO, and equals the exact linear
+rescale `e_kio(t)+1 = (e_marx(t)+1)·kIO(t)/kIO_frozen`. **`S506-COMBINED`'s 1990–2024 tail is
+repointed to this arm** (workpackage C §4.3), materially changing published tail values (2024 e 3.95 → 4.46,
++13%); the qualitative story strengthens (RSV growth 1.39 → 1.78 %/yr, inside the
+Paitaridis–Tsoulfidis literature band). The frozen `S506-EXT-MARX` is retained UNCHANGED as the
+conservative lower bound. Uncertainty ships in `data/final/S506_KIO_BAND.csv`. Concept-match
+justification: kIO(t) measures the **same** Table-6.4 gross-final-product / value-added I-O uplift
+the book applied at 1989, now read off official benchmark I-O for each year rather than assumed
+constant. Registered as **DIV-028** (upgraded) + **DIV-071**.

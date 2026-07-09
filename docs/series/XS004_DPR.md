@@ -11,6 +11,22 @@
 - **Status note**: (S515 productive employment is currently sourced only from book Table E.3 for 1948-1961; the full 1948-2024 horizon requires BLS sectoral concordance work)
 - **Units**: index (1948 = 100 per Appendix J Table J.1 row 2)
 
+## REVIEW 2026-07 (workpackage E Group A) — rebase actually applied + per-worker/per-hour clarification
+
+Two corrections to the (aspirational) Methodology below:
+1. **Rebasing is now actually implemented.** Before this review the P02 did NOT rebase — the chopped
+   output was 1948 = **112.09** (an un-normalized level), which is why the registry `open_issue`
+   flagged the base mismatch. P02 now divides the series by its 1948 value ×100, so 1948 = 100.00,
+   matching book Table J.1 **Line 2**. Refvals re-anchored to book J.1 Line 2 (1948=100.00, 1953=124.14,
+   1958=147.69, 1961=159.02); validator_class → **book**; `open_issue` resolved.
+2. **Per-worker, not per-hour (honest label).** Despite the "step 2: Hp = hp × Lp" claim below, the P02
+   actually divides real TP\* by **Lp (worker COUNT, S515-A)**, i.e. it is per-productive-**WORKER**,
+   whereas the book's q\* is per-productive-**HOUR** (Hp = hp × Lp). Because hours/worker declined over
+   1948-1989, the rebased XS004 index tracks book J.1 Line 2 within **~4.4%** (anchor-year deltas
+   -2.9% … +2.4%). Documented as **DIV-026**; tolerance_class → share_series. A true per-hour variant
+   (multiply Lp by book hp, Table J.1 Line 24) would reproduce book q\* to rounding — future option,
+   out of scope here.
+
 ## Methodology
 
 XS004 is a derived analytical index operationalizing the Marxian productivity concept articulated in Shaikh & Tonak (1994). Both numerator and denominator are restricted to the productive sector under the Shaikh-Tonak classification — distinguishing this index from conventional GDP-per-worker measures that conflate productive and unproductive output and labor. The primary formula is given verbatim in Appendix J: **"Primary measure: q* (Total Product per Productive Hour). q* = TPr / Hp = (TP* / py) / Hp = Real total product per productive worker hour. Where: TP* = Marxian total product (from Table E.2); py = GNP price deflator (1982 = 100); TPr = Total product in 1982 dollars; Hp = Total hours worked by productive workers."** (ST 1994 Appendix J, p.~342). The index base is fixed by Appendix J Table J.1 row 2: **"Row 2 | q* index | (q*/q*_1948) × 100 | 1948 = 100."** (ST 1994 Appendix J Table J.1).
@@ -23,7 +39,7 @@ Coverage is partial because S515 is currently sourced only from book Table E.3 (
 
 ## Sources
 
-- KB chunks: `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_35/full_transcription.md` (Appendix I Table I.1 — productive-employment derivation, hp = (Hp/L'p) × 52); `chunk_36/full_transcription.md` (Appendix J — q* = TPr/Hp primary measure, Table J.1 row structure, selected-years numeric benchmarks 1948-1954)
+- KB chunks: `data/raw/kb/book_digitization/chunk_35/full_transcription.md` (Appendix I Table I.1 — productive-employment derivation, hp = (Hp/L'p) × 52); `chunk_36/full_transcription.md` (Appendix J — q* = TPr/Hp primary measure, Table J.1 row structure, selected-years numeric benchmarks 1948-1954)
 - Salvaged extracts: `Inputs/Salvaged/book_text_1994/extracted_content/text/page_140_productivity_analysis.md` (Table 5.14 q*/y comparison)
 - Book tables: Appendix E Table E.2 (TP*); Appendix E Table E.3 (productive employment Lp, partial 1948-1961); Appendix F Table F.1 (productive shares); Appendix G Table G.2 (sectoral Lp definitions); Appendix I Table I.1 (hp derivation, eu derivation); Appendix J Table J.1 (q* primary measure, 1948 base year); Table 5.14 (q*/y orthodox comparison, p.140)
 - External sources: BEA GDP deflator (GDPDEF, base year 1982); BEA GDP-by-Industry (post-1997 extension of TP*); BLS production-worker counts (potential future Hp source for extension)

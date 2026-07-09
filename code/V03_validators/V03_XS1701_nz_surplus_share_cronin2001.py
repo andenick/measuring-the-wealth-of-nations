@@ -1,10 +1,13 @@
 """V03_XS1701 — Validate NZ Surplus Share of Total Value (Cronin 2001).
 
 Refactored 2026-05-24 per Decision 0002 — benchmarks sourced from registry.
-Unit note: registry stores decimals (0.34); the final CSV reports percent (34).
-Benchmarks are scaled by 100 here so PASS/FAIL is meaningful. Resolve at the
-registry level by adding a `validation.units_scale` field (out of scope for
-this refactor — Decision 0002 forbids registry edits from V03 scripts).
+Units reconciled 2026-07-01 (workpackage E review, Group D): the registry
+`validation.reference_values` now store PERCENT (34, 38, 38), matching the final
+CSV (percent), the series `units:"percent"`, and Cronin (2001) Table 2 which
+prints "34%", "38%". The former decimal-fraction refvals (0.34) and the *100
+compensation hack applied here are RETIRED. Benchmarks are read from the registry
+unchanged. NOTE: this V03 edit is paired with D_REGISTRY_PATCHES.json (decimal->
+percent for XS1701); both must be applied together.
 """
 from __future__ import annotations
 
@@ -18,14 +21,10 @@ from utils.registry_validator import get_reference_values, get_tolerance_class  
 from utils.series import BenchmarkValidator  # noqa: E402
 
 
-_RAW = get_reference_values("XS1701")
-# Compensate for registry-vs-CSV unit mismatch (decimal -> percent).
-_BENCH = {y: v * 100 for y, v in _RAW.items()}
-
 VALIDATOR = BenchmarkValidator(
     series_id        = "XS1701",
     tolerance_class  = get_tolerance_class("XS1701", default="share_series"),
-    benchmarks       = _BENCH,
+    benchmarks       = get_reference_values("XS1701"),
     subseries_filter = "XS1701-A",
 )
 

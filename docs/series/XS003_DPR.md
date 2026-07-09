@@ -6,9 +6,19 @@
 - **Name**: Unproductive Exploitation Rate
 - **Chapter**: Anu-Original Analytical (registry chapter=0 / null in research JSON). **AS-prefix framing**: this is a framework-derived analytical series operationalizing the book's Appendix I formal derivation. The conceptual home is **Appendix I (Rates of Exploitation of Productive and Unproductive Workers, Table I.1, pp. 322-332)** with the theoretical grounding in Section 4.2 (relative rates of exploitation).
 - **Status**: book_period_validated
-- **Status note**: (registry: validator PASS at both endpoints — 1948 = 1.3655, 1989 = 2.3719)
+- **Status note**: REVIEW 2026-07 — refvals re-anchored to book Table I.1 **Line 24** printed `eu` (1948 = 1.35, 1989 = 2.38). The old refvals (1948 = 1.3655 tautological; 1989 = 2.3719 stale, neither book nor output) are retired.
 - **Units**: ratio
 - **Year range**: 1948-1989 (book period) / 1948-2024 (subseries target via S506 extension)
+
+## REVIEW 2026-07 (workpackage E Group A) — per-year hu/hp + book Line 24 anchor
+
+The constant **hu/hp = 0.99** encoded in P02 (see Methodology §3 below) was replaced with the book's
+**per-year Line 18** (0.98-1.03), sourced from the `XS003_TableI1_EC_RATIO.csv` (new `hu_hp` column).
+This cuts the max full-series deviation from the book's printed Line 24 `eu` from **0.113 to 0.026**.
+Inputs are now all book Table I.1: hu/hp (Line 18), ecu/ecp (Line 21), and S\*/V\* via S506-A (which
+equals Line 23 EXACTLY). Rebuilt endpoints: 1948 = 1.3416 (book 1.35), 1989 = 2.4056 (book 2.38).
+The remaining ~1% residual is the book's own 2-dp intermediate rounding (Line 22); refvals anchored
+to printed Line 24, tolerance_class → **share_series**, validator_class → **book**. See **DIV-024**.
 
 ## Methodology
 
@@ -25,8 +35,8 @@ The hardcoded-table cleanup history matters: in earlier RMWND/predecessor-build 
 ## Sources
 
 - **KB chunks**:
-  - `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_35/full_transcription.md` (Appendix I main formula `(1+eu)/(1+ep) ≈ (hu/hp)/(ecu/ecp)`; solve-for-eu derivation; Table I.1 1948 worked example; theoretical reference to Section 4.2)
-  - `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_36/full_transcription.md` (Table I.1 completion 1967-1989; eu/ep convergence sequence; terminal-year endpoints feeding validator reference values)
+  - `data/raw/kb/book_digitization/chunk_35/full_transcription.md` (Appendix I main formula `(1+eu)/(1+ep) ≈ (hu/hp)/(ecu/ecp)`; solve-for-eu derivation; Table I.1 1948 worked example; theoretical reference to Section 4.2)
+  - `data/raw/kb/book_digitization/chunk_36/full_transcription.md` (Table I.1 completion 1967-1989; eu/ep convergence sequence; terminal-year endpoints feeding validator reference values)
 - **Book tables**: Appendix I Table I.1 (Rates of Exploitation of Unproductive Workers, 1948-89 — 25-step annual calculation methodology, hu/hp row 1, ecu/ecp row in selected results, eu trajectory)
 - **Source CSV**: `Technical/data/source/book_tables/XS003_TableI1_EC_RATIO.csv` (42 rows, 1948-1989, year + ec_u_over_ec_p + source — digitized from book Appendix I Table I.1)
 - **External sources**: none (pure analytical derivation from book-table inputs + upstream S506)

@@ -1,14 +1,27 @@
 """P02_XS002 — Khanjian (1989) cross-validation of S506.
 
-Khanjian re-estimated the rate of exploitation using a different treatment of
-unincorporated income (treating it ALL as profit). His estimates run ~20%
-higher than Shaikh & Tonak's. The book's Section 5.10 reports these
-benchmark values for cross-validation; we encode them as a fixed comparison
-table and compute the gap from S506.
+Book Table 5.12 (Section 5.10, p.144; source Khanjian 1989 table 19) reports, on the
+SAME aggregate and via the consistent procedure, the labor-value rate e = S/V and the
+money-form rate e* = S*/V*. The money rate e* is uniformly 6%-9% LOWER than the value
+rate e (revenue-side (e-e*)/e = 7.3/6.7/8.2/9.3/8.2% at 1958/1963/1967/1972/1977) — this
+is the book's "differ by only small amounts (6%-9%)" statement (Ch7 s7.3, folio 223). The
+KHANJIAN dict below encodes that table verbatim: e_star_rev = e* (money form), e_rev = e
+(value form), gap_pct = (e-e*)/e. VALUES VERIFIED against the canonical v2 KB Table 5.12
+(book_digitization_v2/CSV_Tables/table_017_017_01.csv, Revenue side)
+— no numeric change.
 
-This is not a time series of new values — it's a 5-year benchmark comparison
-table. The output is wide: each row is (year, S506_value, khanjian_e_star_rev,
-khanjian_e_rev, gap_pct, our_gap_to_khanjian_e_star_rev_pct).
+SEPARATE COMPARISON (do not conflate with the 6%-9%): Khanjian's LEVELS (e* ~2.4-2.9) sit
+ABOVE Shaikh & Tonak's own money rate S*/V* (S506 ~2.0). The book (Ch6) attributes this to
+Khanjian making "no adjustment for the wage equivalent of proprietors and partners in the
+noncorporate sector" — an adjustment S&T incorporate (lowering surplus value, raising
+variable capital), so Khanjian's estimates are "substantially larger than the authors'".
+The column our_gap_to_khanjian_pct = (e* - S506)/S506 measures THIS ~+20% level gap, NOT
+the 6%-9% value-vs-money deviation. The validated XS002 quantity is S&T's own S*/V* at the
+I-O benchmark years (V03 anchors to book Table H.1 / Table I.1 Line 23), not Khanjian's e*.
+
+This is not a time series of new values — it's a 5-year benchmark comparison table. The
+output is wide: each row is (year, S506_value, khanjian_e_star_rev, khanjian_e_rev,
+gap_pct, our_gap_to_khanjian_pct).
 """
 from __future__ import annotations
 
@@ -26,17 +39,26 @@ from utils.paths import DATA_FINAL  # noqa: E402
 SERIES_ID = "XS002"
 SUBSERIES = "XS002-A"
 
-# Book Table 5.12 — Khanjian's published estimates
-KHANJIAN = {
-    1958: {"e_star_rev": 2.445, "e_rev": 2.638, "gap_pct": 7.3},
-    1963: {"e_star_rev": 2.467, "e_rev": 2.644, "gap_pct": 6.7},
-    1967: {"e_star_rev": 2.648, "e_rev": 2.884, "gap_pct": 8.2},
-    1972: {"e_star_rev": 2.606, "e_rev": 2.874, "gap_pct": 9.3},
-    1977: {"e_star_rev": 2.674, "e_rev": 2.913, "gap_pct": 8.2},
-}
+# Book Table 5.12 — Khanjian's published estimates. De-hardcoded 2026-07-08
+# (Tier-A W2, anti-pattern #3): the inline dict was moved verbatim to a source
+# CSV; this helper loads it. No numeric change (output byte-identical).
+KHANJIAN_CSV = (Path(__file__).resolve().parents[2]
+                / "data" / "source" / "book_tables"
+                / "XS002_Table512_khanjian.csv")
+
+
+def _load_khanjian() -> dict:
+    df = pd.read_csv(KHANJIAN_CSV, comment="#")
+    return {
+        int(r.year): {"e_star_rev": float(r.e_star_rev),
+                      "e_rev": float(r.e_rev),
+                      "gap_pct": float(r.gap_pct)}
+        for r in df.itertuples()
+    }
 
 
 def compute() -> pd.DataFrame:
+    KHANJIAN = _load_khanjian()
     s506 = pd.read_csv(DATA_FINAL / "S506.csv")
     s506 = s506[s506["series_id"] == "S506-A"][["year", "value"]].set_index("year")["value"].to_dict()
 

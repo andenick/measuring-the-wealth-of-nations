@@ -30,11 +30,11 @@ The book's verbatim methodological constraint (p.81) — that lambda*_j must be 
 - **L01 + P02 (real implementation)**: `Technical/code/L01_loaders/L01_S702.py` (v1.1, loads real S701 lambda*, BLS CES wages, BEA NIPA EC tables, labeled IO matrices); `Technical/code/P02_processors/P02_S702_prices_of_production.py` (v1.1 rewrite, sector-disaggregated c/v construction and pp* aggregation)
 - **External data — real fetches**:
   - Real S701 lambda*_j vector (upstream, v1.1)
-  - BLS CES production-worker wages + employment + weekly hours, cached at `data/raw/bls/` (pulled 2026-05-24)
-  - BEA NIPA employee compensation tables (T10604 wages & salaries by industry), cached at `data/raw/bea/` (pulled 2026-02-24)
-  - Labeled BEA IO matrices supplying (M_p)_p,ij producer-price input flows, at `Technical/data/intermediate/io_matrices_labeled/`
+  - BLS CES production-worker wages + employment + weekly hours, cached at `data/raw/Inputs/API_Data/BLS/` (pulled 2026-05-24)
+  - BEA NIPA employee compensation tables (T10604 wages & salaries by industry), cached at `data/raw/Inputs/API_Data/BEA/` (pulled 2026-02-24)
+  - BEA IO matrices supplying the input flows. **[SUPERSEDED — workpackage C v2.0 / F3 2026-07-07]** the published v2.0 engine reads the REBUILT cache `Technical/data/intermediate/io_matrices_rebuilt/` (via `utils.io_rebuilt`); the old defective labeled cache was retired to `Technical/MIGRATION/retired_io_20260707/io_matrices_labeled/`.
   - Appendix F productive-share filter, at `Technical/data/source/appendix_F/Table_F_1.csv`
-- **KB chunks**: `Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_11/full_transcription.md` (Ch4 §4.1 — disaggregated c, v construction); `chunk_14/full_transcription.md` (Ch5 §5.3 + Appendix G — variable capital, ec and wp); `chunk_15/full_transcription.md` (Section 5.5 profit-rate measures); `chunk_31/full_transcription.md` (Appendix E Tables E.1 / E.2); `chunk_33/full_transcription.md` (Appendix G Tables G.1 / G.2)
+- **KB chunks**: `data/raw/kb/book_digitization/chunk_11/full_transcription.md` (Ch4 §4.1 — disaggregated c, v construction); `chunk_14/full_transcription.md` (Ch5 §5.3 + Appendix G — variable capital, ec and wp); `chunk_15/full_transcription.md` (Section 5.5 profit-rate measures); `chunk_31/full_transcription.md` (Appendix E Tables E.1 / E.2); `chunk_33/full_transcription.md` (Appendix G Tables G.1 / G.2)
 - **Book tables**: Ch4 §4.1 equations pp.78-88 (sector-disaggregated procedure); Appendix E Tables E.1 (`C* = M'_p + Dp` annual 1948-1989), E.2 (constant capital components); Appendix G Tables G.1 / G.2 (variable capital, sectoral Lp)
 - **APIs**: BLS Public API v2; BEA API
 - **Upstream series**: S401 (A-matrix), S402 (Leontief inverse B), S513 (Marxian profit rate r_bar), **S701 (real lambda* — v1.1)**
@@ -50,6 +50,10 @@ Coordinator backfills from `Technical/chopped/S702.csv` after agents 1-3 commit 
 - 1948–1980 book aggregate finding: Marxian profit rate r* fell by almost a third, driven by C*/V* rising 77%
 - 1980–1989 book aggregate finding: r* partially recovered by ~7% of its 1948 value as the rate of surplus value accelerated
 
+## Precision & uncertainty (DIV-042) — Tier-A W1d, 2026-07-08
+
+Published S702 values (`data/final/S702.csv`, `chopped/S702.csv`, extenbook Data sheet) are reported to **3 significant figures** with an explicit uncertainty-band sidecar at `data/final/S702_LAMBDA_BAND.csv` (year, central, lo, hi, basis). Basis: **DIV-042** — the SIC-era per-sector gross output X_j entering both the hours-allocation weights and the coefficient denominator `hu*_j = hu_j/X_j` is *recovered* (X = II_IO + bucket-VA) with a measured median per-sector error of ~±11.5%. The F3 sensitivity propagation (`internal-review-notes_2026-07-07/F3_lambda_sensitivity_{aggregate,sector}.csv`, 2026-07-07) shows the published S702 aggregate is honest only to ±6.4–9.4% (independent-error Monte Carlo — little averaging: only 2–5 covered unproductive sectors) up to ±11.65% (worst-case common-mode); sector-level λ_j carries ±7–11%. The previous 15–17 displayed digits were false precision. The band uses the worst-case common-mode bound: `lo = central/1.115`, `hi = central/0.885` (λ ∝ 1/X, hence asymmetric). Rounding is applied ONLY at the P02 final-emit stage (`P02_S702_prices_of_production._round_sig`); `data/intermediate/S702.csv` retains full float64 precision for regression/reproducibility, and downstream S703 consumes the full-precision L01 panels, not the rounded published values.
+
 ## Known issues
 
 - **BLS CES 2003 overhaul null bridge (DIV-010)**: same v1.1 null-factor stubs as S701; v1.2 follow-up sources non-null factors from BLS Employment Situation news-release archive.
@@ -64,7 +68,7 @@ Coordinator backfills from `Technical/chopped/S702.csv` after agents 1-3 commit 
 - Upstream: S401 (A-matrix), S402 (Leontief inverse B), **S701 (real lambda* — v1.1)**, S513 (Marxian profit rate), Appendix E Tables E.1 / E.2, Appendix G Tables G.1 / G.2, Appendix F productive-share filter
 - Downstream: S703 (consistent-procedure regression, now real)
 - Related external: Khanjian (1989) 6–9% S*/V* benchmark; Wolff (1977b) symmetric-treatment biases; ST 1994 Ch7 §7.4 cross-study critique
-- Project artifacts: `Technical/Handoffs/CH7_REAL_FIX_PLAN.md`; `Technical/_v1.1_patches/S702_ch7_realfix_patch.json`; `Technical/_v1.1_patches/DIVERGENCE_REGISTER_DIV011_patch.json`
+- Project artifacts: `internal-notes/CH7_REAL_FIX_PLAN.md`; `Technical/_v1.1_patches/S702_ch7_realfix_patch.json`; `Technical/_v1.1_patches/DIVERGENCE_REGISTER_DIV011_patch.json`
 
 ## Provenance trail
 

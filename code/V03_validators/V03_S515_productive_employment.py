@@ -4,8 +4,16 @@ Refactored 2026-05-24 per Decision 0002 — reads benchmarks from registry
 (`validation.reference_values`) via `utils.registry_validator.get_reference_values`.
 
 Note: predecessor-build's validation_config T515 benchmark of 17331.95 was in DOLLARS (wage bill
-Lp*w). Our S515 is COUNT in thousands; the registry stores the TableE3 Lp_total
-counts (1948 = 29937, 1961 = 33615), which is the correct unit for this series.
+Lp*w). Our S515 is COUNT in thousands; the registry stores the book Lp_total
+counts for the full book period 1948-1989 (TableE3_LaborStatistics.csv = Table 5.5
+= Appendix F Table F.1, which agree exactly), the correct unit for this series.
+
+Book Lp anchors quoted verbatim (registry reference_values, class=book):
+    1948 = 32994, 1958 = 29349, 1967 = 32856, 1977 = 35798, 1989 = 41148
+Only the book arm S515-A is benchmark-validated (subseries_filter='S515-A'); the
+extension S515-EXT = S511 share × book-anchored total-employment L (D2 rebuild)
+is validated for continuity by the seam-continuity + independent-L identity tests
+in tests/test_identities.py, not by book benchmarks (no book Lp exists post-1989).
 """
 from __future__ import annotations
 
