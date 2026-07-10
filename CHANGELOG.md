@@ -6,6 +6,31 @@ the project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.1.1] — 2026-07-10 — Metadata erratum: XS1202 1964 validation anchor source-verified
+
+Metadata-only patch. **No data-column value changed** — every published series value is
+byte-identical to v2.1.0. This corrects one validation *reference value* (an anchor used only to
+check a series, never a served number) and adds source-provenance notes.
+
+### Fixed
+- **`XS1202` (Net Social Wage / EC) 1964 validation reference value: −0.0167 → −0.009.** The prior
+  −0.0167 erroneously divided the 1964 net social wage (−3.49 bn) by **1954's** employee compensation
+  (209.37 bn). The published source — Shaikh & Tonak, "The Rise and Fall of the U.S. Welfare State"
+  (*Political Economy and Contemporary Capitalism*, M.E. Sharpe 2000), ch.29 appendix p.259 — prints the
+  1964 column as EC = 370.99 bn, net social wage = −3.49 bn, and the "Net Social Wage Ratio" row as
+  **−0.009** (= −3.49 / 370.99). The `XS1202` `reference_source` string is rewritten to cite this
+  source-verified derivation. This is a provenance/accuracy correction, not a pass/fail change: the 1964
+  check stays PASS and `XS1202` continues to FAIL on 1997 only (the documented DIV-036 NSW-basket
+  over-count). It supersedes v2.1.0's XS1202 1964 anchor.
+
+### Changed
+- **`DIVERGENCE_REGISTER.json`** — DIV-037 records the source-verified retraction of the interim
+  −0.0167 revert; DIV-036 notes the 1997 anchor (+0.005) is now table-grade source-verified (appendix
+  p.265); DIV-028 / DIV-071 gain external-anchor notes corroborating the reconstructed kIO exploitation
+  arm against Rotta (2018, *CJE*) and Savran & Tonak (1999). Register entry count unchanged (73).
+
+---
+
 ## [2.1.0] — 2026-07-09 — Book-faithful gross-K\* profit rate, reconstructed kIO exploitation, Tier-A truth fixes
 
 Four post-v2.0 campaigns (2026-07-07 → 09), all additive: every pre-existing published cell is

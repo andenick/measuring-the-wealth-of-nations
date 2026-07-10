@@ -5524,7 +5524,7 @@
       "extension": null,
       "validation": {
         "reference_values": {
-          "1964": -0.0167,
+          "1964": -0.009,
           "1975": 0.05,
           "1997": 0.005
         },
@@ -5536,7 +5536,7 @@
         "tolerance_class": "share_series",
         "tolerance_rel": 0.001,
         "tolerance_abs": 0.01,
-        "reference_source": "ST 2002 Table 29.1 (p.250): Net total social wage 1964 = -3.49bn; EC 1964 = 209.37bn (appendix labor-share table, p.258) -> NSW/EC(1964) = -3.49/209.37 = -0.0167. Full annual 1952-1997 source column not locally available (chapter paywalled; author self-archive unreachable) -> WISHLIST_PAYWALLED. Anchors: 1964=-0.0167 (Table 29.1), 1975~+0.05 (Fig 29.3), 1997~+0.005 (near-zero endpoint, p.248/256). Residual FAIL is 1997 = systematic NSW-basket over-count (DIV-036, G2-gated), NOT a refval error. [Tier-A W2 2026-07-08; ref via W1c TIERA_W1C_PATCH]"
+        "reference_source": "Shaikh & Tonak, 'The Rise and Fall of the U.S. Welfare State' (Political Economy and Contemporary Capitalism, M.E. Sharpe 2000; the study the registry cites as 'ST 2002'), ch.29 Appendix 'Estimation of Net Social Wage' (pp.258-265), row 'Net Social Wage Ratio = Net Social Wage/EC'. SOURCE-VERIFIED against the published appendix: the 1964 column (p.259) prints EC=370.99bn and Net social wage=-3.49bn -> NSW/EC = -3.49/370.99 = -0.0094, printed in the appendix as -0.009. All anchors source-verified from the appendix ratio row: 1964=-0.009 (p.259), 1975=+0.050 (p.261), 1997=+0.005 (p.265, endpoint). Full-column mean = -0.60% (matches the paper's headline 'a mere 0.6 percent'); only 1952/1953/1975 exceed +/-4% (matches the recovery note). This CORRECTS a prior -0.0167, which divided the 1964 net social wage by 1954's EC (209.37bn, the printed '1954' column on p.258; p.258 columns are 1952/1953/1954 = 196.35/210.42/209.37 and it has no 1964 column). Residual XS1202 FAIL is 1997 ONLY (chopped reconstruction -0.0203 vs source +0.005; abs_err 0.0253 > 0.02 share-tol) = the systematic NSW-basket over-count (DIV-036, G2-gated), NOT a refval error. [ST2000 source-verification 2026-07-10]"
       },
       "processor": "P19",
       "wave": 1,
