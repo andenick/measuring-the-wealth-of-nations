@@ -1,18 +1,23 @@
+# Corrected draft: identity unified (given-names Nick -> Nicholas; email protonnicky@ ->
+# nickawebbox@; affiliation added) and abstract "Anu Framework v12.0" -> "v12.2".
+# All other fields retained from the existing repo CITATION.cff.
 cff-version: 1.2.0
 title: "Measuring the Wealth of Nations: Replication Package"
 message: "If you use this software, please cite both this replication package and the original Shaikh & Tonak (1994) work."
 type: software
 authors:
   - family-names: Anderson
-    given-names: Nick
-    email: protonnicky@gmail.com
+    given-names: Nicholas
+    email: nickawebbox@gmail.com
+    affiliation: "The New School for Social Research"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"  # Nick to fill
 repository-code: "https://github.com/andenick/measuring-the-wealth-of-nations"
 abstract: >-
   Complete replication and extension of every empirical claim in Shaikh & Tonak's
   Measuring the Wealth of Nations (1994), plus 8 follow-up studies (Tonak 1984,
   Shaikh & Tonak 1987 and 2002, Moos 2017, Mohun 2005 and 2013, Karabacak & Tonak
   2022 Turkey, Cronin 2001 New Zealand), with 64 data series spanning 1947-2025.
-  Built on the Anu Framework v12.0 with strict no-fabrication and full-provenance
+  Built on the Anu Framework v12.2 with strict no-fabrication and full-provenance
   discipline; every value traces to a published source, cached API response, or
   documented derivation. Validated against book benchmarks and
   identity/cross-source consistency checks (95 passed / 2 skipped / 2 justified
