@@ -24,8 +24,8 @@ bridge is handled internally by BLS).
 
 API key
 -------
-Uses the registered BLS_API_KEY from (internal) (centralized) or the
-predecessor-build AnuData env file. With a registered key the BLS public API v2 allows
+Reads BLS_API_KEY from the environment or a local `api_keys.env` file.
+With a registered key the BLS public API v2 allows
 500 queries/day and 50 series per request - far more than this script needs.
 
 Outputs
@@ -70,14 +70,13 @@ except ImportError:
 # -----------------------------------------------------------------------------
 # Paths
 # -----------------------------------------------------------------------------
-PROJECT_ROOT = Path("(local path)")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]  # bundle root
 OUTPUT_DIR = PROJECT_ROOT / "Inputs" / "predecessor-build" / "Inputs" / "API_Data" / "BLS"
 
 # Env file candidates (searched in order)
 ENV_CANDIDATES: List[Path] = [
-    Path("(local path)"),
-    PROJECT_ROOT / "data/raw/Technical/AnuData/data/user-inputs/api_keys.env",
-    Path("(local path)"),
+    PROJECT_ROOT / "api_keys.env",
+    PROJECT_ROOT / "data" / "user-inputs" / "api_keys.env",
 ]
 
 BLS_API_BASE = "https://api.bls.gov/publicAPI/v2/timeseries/data/"

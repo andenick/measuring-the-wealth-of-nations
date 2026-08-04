@@ -57,13 +57,12 @@ except ImportError:
     sys.exit(1)
 
 
-PROJECT_ROOT = Path("(local path)")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]  # bundle root
 OUTPUT_DIR = PROJECT_ROOT / "Inputs" / "predecessor-build" / "Inputs" / "API_Data" / "BLS"
 
 ENV_CANDIDATES: List[Path] = [
-    Path("(local path)"),
-    PROJECT_ROOT / "data/raw/Technical/AnuData/data/user-inputs/api_keys.env",
-    Path("(local path)"),
+    PROJECT_ROOT / "api_keys.env",
+    PROJECT_ROOT / "data" / "user-inputs" / "api_keys.env",
 ]
 
 BLS_API_BASE = "https://api.bls.gov/publicAPI/v2/timeseries/data/"

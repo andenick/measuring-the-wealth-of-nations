@@ -46,8 +46,8 @@
       "description": "Five series previously carrying status `validated_book_and_extension` were demoted to `book_period_validated` because their `extension` blocks lacked the canonical 6-field provenance metadata required by Decision 0003's binary-invariant rule. Per Decision 0003, a series either has a fully-populated extension block (6 required provenance fields + EXT/COMBINED subseries) or has `extension: null`; partial/manufactured extension metadata is not permitted. EPR files for these series were rewritten as `EXTENSION NOT APPLICABLE` stubs.",
       "justification": "Honest demotion preserved over manufactured extension. The legacy predecessor-build/B-suffix predecessor and some intermediate hyper-review passes left these five series in a state that claimed extension validation without the canonical metadata to support that claim. Rather than fabricate provenance to upgrade them, the demotion records the actual book-period-only scope of the existing replication. Future cohorts may re-upgrade by sourcing the required API extensions (BEA / BLS / FRED) and re-populating the extension block with all six fields.",
       "references": [
-        "(internal)",
-        "Handoffs/HONESTY_PASS_20260519.md",
+        "project working notes (not part of this package)",
+        "HONESTY_PASS_20260519.md",
         "Build/STEP_LOG.jsonl (stage3-cohort1 entries)",
         "docs/series/{S510,S401,S402,S801,AS001}_EPR.md"
       ],
@@ -68,7 +68,7 @@
       "references": [
         "Handoffs/CH7_REAL_FIX_PLAN.md",
         "Build/STEP_LOG.jsonl (step_id stage3-cohort2-CH7planESgap)",
-        "(internal) (Ch7 section)"
+        "project working notes, Ch7 section (not part of this package)"
       ],
       "noted_at": "2026-05-24",
       "status": "superseded_by_DIV011",
@@ -90,7 +90,7 @@
         "Build/STEP_LOG.jsonl (step_id stage3-cohort2-stage2reverify)",
         "docs/chapters/CH8_ADEQUACY_REPORT.json",
         "docs/chapters/CH9_ADEQUACY_REPORT.json",
-        "(internal)"
+        "project working notes (not part of this package)"
       ],
       "noted_at": "2026-05-24",
       "status": "active"
@@ -340,7 +340,7 @@
       ],
       "divergence_type": "ch7_proxy_retirement",
       "description": "Ch7 series proxy:true retired via v1.1 Phase 4 real-fix (iteration 5). Labor coefficients now computed per book formula hp*_j = (Lp_j * weekly_hours_j * 52) / X_j with units hr/$ (ST 1994 Ch4 §4.1 p.81, Figure 4.3 p.83). Sector lambda*_j = hp*_j * (I - A*)^{-1} via the labeled BEA IO matrices. Sector prices of production pp*_j = (1 + r_bar)(c_j + v_j) constructed with sector-disaggregated c_j = lambda_i* * (M_p)_p_ij and v_j = lambda* * (CONW_p)_p,j. S703 implements the book's consistent-procedure cross-sectional log-log regression of sector lambda* against sector pp*. Data sourced from BLS CES production workers + average weekly hours (cached at data/raw/api_data/BLS/, pulled 2026-05-24), BEA gross output via NIPA Table 1.7.5 / GDP-by-Industry (cached 2026-02-24), book Appendix F productive-share filter (data/source/appendix_F/Table_F_1.csv — 85-sector categorical from predecessor-build io_85_to_nipa_13 concordance + Mohun 2013 Tables 2-3), and labeled BEA IO matrices (data/intermediate/io_matrices_labeled/).",
-      "justification": "v1.0 BLOCKER (BLS API key apparently missing) was actually a discoverability issue — key existed at (internal) centralized store ((local path)(internal)). With prerequisites met in v1.1 iteration 4 (BLS fetch, IO labeling, Appendix F filter), real-fix executed in iteration 5. The v1.0 hyper-review judgment that Ch7 was 'multi-session BLS sourcing project' was correct under the assumption that no API key was available; that assumption was false. Recommendation: mirror Robin API keys to Anu Framework projects' standard env discovery path so this rediscovery cost is not paid again.",
+      "justification": "v1.0 BLOCKER (BLS API key apparently missing) was actually a discoverability issue — the key was present in the project's central credential store all along. With prerequisites met in v1.1 iteration 4 (BLS fetch, IO labeling, Appendix F filter), real-fix executed in iteration 5. The v1.0 hyper-review judgment that Ch7 was 'multi-session BLS sourcing project' was correct under the assumption that no API key was available; that assumption was false. Recommendation: mirror the central API keys into the project' standard env discovery path so this rediscovery cost is not paid again.",
       "v1_0_blocker_status": "superseded",
       "v1_1_implementation_artifacts": [
         "code/L01_loaders/L01_S701.py",
@@ -1175,7 +1175,7 @@
       "title": "SIC-era per-sector gross output X_j is recovered (X = II_IO + bucket-VA), median per-sector error ~11.5%; aggregate-level results robust, single-sector lambda_j carries this bound",
       "classification": "(iv) DOCUMENTED APPROXIMATION with measured error bars",
       "description": "The BEA archive workbook publishes SIC gross output only from 1977; for 1947-1972 X_j is recovered via the accounting identity X = II + VA with IO-basis intermediate purchases (Z column sums, exact) and NIPA-bucket value added distributed within buckets in proportion to intermediate purchases. Cross-validated against the EXACT 1967 X (recoverable because the 1967 labeled A was genuinely coefficient-form): log-correlation 0.909, median per-sector deviation 11.5%. A GO-anchored alternative was tested and REJECTED (imports the NIPA-vs-IO intermediates-basis wedge; durables +44%, construction -52%). 1990-96 annual X uses bucket VA growth chained at 1987 across the 72SIC/87SIC workbook vintages. Consequence: benchmark-level aggregates (the published scalars) inherit bucket-level accuracy; any future SECTOR-level use of the lambda vectors must carry the ~±12% median X error.",
-      "where": "data/intermediate/io_matrices_rebuilt/workpackage C_MATRIX_REBUILD.md sec 4; (internal)/wpc_t1_rebuild.py",
+      "where": "data/intermediate/io_matrices_rebuilt/workpackage C_MATRIX_REBUILD.md sec 4; the workpackage-C rebuild script wpc_t1_rebuild.py",
       "status": "CLOSED_DOCUMENTED_BOUNDS",
       "id": "DIV-042",
       "aliases": [
@@ -1552,7 +1552,7 @@
           "1989": -20.1
         }
       },
-      "evidence": "(internal)/d1_analysis.py; P3_CAPITAL_VARIANTS.csv; CAPITAL_SCRUB_MEMO.md; workpackage A_REPORT.md (DIV-A15); KB v2 _combined/5.8.csv",
+      "evidence": "d1_analysis.py; P3_CAPITAL_VARIANTS.csv; CAPITAL_SCRUB_MEMO.md; workpackage A_REPORT.md (DIV-A15); KB v2 _combined/5.8.csv",
       "aliases": [
         "DIV-D01"
       ],

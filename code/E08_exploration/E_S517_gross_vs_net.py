@@ -23,7 +23,7 @@ from __future__ import annotations
 import csv
 from pathlib import Path
 
-PROJECT_ROOT = Path("(local path)")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]  # bundle root
 NET_CSV = PROJECT_ROOT / "data/raw/Inputs/API_Data/BEA/fixed_assets_4_1_net_stock.csv"
 GROSS_CSV = PROJECT_ROOT / "data/raw/Inputs/API_Data/BEA/fixed_assets_4_2_gross_stock.csv"
 OUT_CSV = PROJECT_ROOT / "Technical/data/scratch/S517_gross_vs_net.csv"

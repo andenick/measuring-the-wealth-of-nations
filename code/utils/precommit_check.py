@@ -30,7 +30,7 @@ The eight checks
   * extension == null  -> status MUST NOT be 'validated_book_and_extension' (FAIL)
   * extension != null  -> status SHOULD contain 'extension' (WARN — project may
     legitimately defer the upgrade until extension is actually executed; see
-    project CLAUDE.md).
+    the project conventions).
 - Decision 0004: L01 / P02 / V03 compact naming `<phase>_<SID>[_<suffix>].py`.
 - Decision 0005: chopped CSV wide format (row 1 # metadata, row 2 'Year', row 3+ data).
 - Decision 0006: code is source of truth (heuristic always-PASS; documentation).
@@ -56,7 +56,7 @@ from typing import Iterable
 # ---------------------------------------------------------------------------
 # This file: Technical/code/utils/precommit_check.py
 SCRIPT_PATH = Path(__file__).resolve()
-PROJECT_ROOT = SCRIPT_PATH.parents[3]  # (local path)
+PROJECT_ROOT = SCRIPT_PATH.parents[3]  # bundle/project root
 TECHNICAL_ROOT = PROJECT_ROOT / "Technical"
 REGISTRY_PATH = TECHNICAL_ROOT / "series_registry.json"
 

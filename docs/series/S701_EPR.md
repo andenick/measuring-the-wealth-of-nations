@@ -27,7 +27,7 @@ Cross-check Figures: 4.3 (dimensional verification), 7.1.
 
 **Three feed-in sources, all real-data, all v1.1 Phase 4**:
 
-1. **BLS Current Employment Statistics (CES)** — production-worker employment counts `(Lp)_j` and average weekly hours `(h)_j` per supersector, 1948–2024 where available (mining + construction + manufacturing have full 1948+ coverage; services 1964+; trade subsectors 1972+). Cached at `data/raw/Inputs/API_Data/BLS/bls_ces_<supersector_slug>_employment.csv` and `bls_ces_<supersector_slug>_hours.csv` / `_hours_alt.csv`, pulled 2026-05-24 via `Technical/code/L00_setup/L00_bls_fetch.py`. Provenance: `data/raw/Inputs/API_Data/BLS/bls_ces_fetch_provenance.json`. BLS API key from `(local path)`.
+1. **BLS Current Employment Statistics (CES)** — production-worker employment counts `(Lp)_j` and average weekly hours `(h)_j` per supersector, 1948–2024 where available (mining + construction + manufacturing have full 1948+ coverage; services 1964+; trade subsectors 1972+). Cached at `data/raw/Inputs/API_Data/BLS/bls_ces_<supersector_slug>_employment.csv` and `bls_ces_<supersector_slug>_hours.csv` / `_hours_alt.csv`, pulled 2026-05-24 via `Technical/code/L00_setup/L00_bls_fetch.py`. Provenance: `data/raw/Inputs/API_Data/BLS/bls_ces_fetch_provenance.json`. The BLS API key is read from the environment or a local `api_keys.env` file.
 
 2. **BEA gross output `X_j`** — NIPA Table 1.7.5 (Gross Output by Industry, annual 1947+) and BEA Industry GDP-by-Industry (NAICS, 1997+). Cached at `data/raw/Inputs/API_Data/BEA/nipa_1_7_5_gross_output_by_industry.csv` and `gdp_by_industry_gross_output.csv`, pulled 2026-02-24 via `pull_bea_nipa_ch05.py`. Provenance: `data/raw/Inputs/API_Data/BEA/provenance.json`.
 

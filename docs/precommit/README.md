@@ -55,7 +55,7 @@ form and exits 0 without writing anything.
 | 0007     | `Technical/research/*_research.json` | ≥3 canonical entries with `entry_type=='verbatim_quote'`, `source_ref`, and (content or verbatim_quote) populated | FAIL               |
 | 0008     | `Technical/series_registry.json`     | Every `reference_values` key parses as int year; every value is a finite scalar  | FAIL               |
 
-¹ Per project CLAUDE.md, populating the `extension` block is allowed before the
+¹ Per the project conventions, populating the `extension` block is allowed before the
 extension stage has actually run; the status upgrade to
 `validated_book_and_extension` only follows successful extension + validation.
 The check therefore WARNs rather than FAILs on this branch so that planning-stage
@@ -86,8 +86,7 @@ only staged change.
 
 1. Read the FAIL line; each one names the file and the specific contract
    violation.
-2. Per the project rules (`(local path)` —
-   *No Synthetic Data*), do **not** "fix" a FAIL by inventing values to
+2. Per the project rules (*No Synthetic Data*), do **not** "fix" a FAIL by inventing values to
    satisfy a contract. Either supply real data or downgrade the series'
    status and remove the offending field.
 3. The script is read-only by design; it will never auto-rewrite the
@@ -106,13 +105,12 @@ ALL_CHECKS.append(("Decision-XXXX", check_decision_XXXX))
 ```
 
 …then document the check in the table above and update the corresponding
-Decision document under `(internal)/docs/decisions/` (the canonical
-location for all framework + project-scoped decisions; see
-`(internal)/docs/decisions/README.md`).
+Decision document under `docs/decisions/` (the canonical location for
+all framework- and project-scoped decisions; see
+`docs/decisions/README.md`).
 
 ## References
 
-- `(internal)/docs/decisions/0007_verbatim_quote_schema.md`
-- `(internal)/docs/decisions/0008_reference_values_year_keyed_scalars.md` (moved from `Technical/docs/decisions/` to canonical Council location in v1.2 iter2)
-- `(local path)`
-- `(local path)` (project-specific anti-patterns)
+- `docs/decisions/0007_verbatim_quote_schema.md`
+- `docs/decisions/0008_reference_values_year_keyed_scalars.md`
+- `docs/decisions/README.md` (index of all decisions)
