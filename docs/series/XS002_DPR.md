@@ -71,5 +71,5 @@ The implementation finds: our S506 vs Khanjian's `e_star_rev` shows gaps of 19-3
 ## Provenance trail
 
 - **Original research**: `Technical/research/XS002_research.json`, researcher `agent`, 2026-05-16; verbatim quotes added 2026-05-23 (`stage1_cohort3_S901AS001AS002`) — sourced from chunk_25 (Ch7 §7.3 Khanjian/Wolff references) and chunk_35 (Appendix I formal derivation + Table I.1 trajectory)
-- **DPR enriched**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (cohort agent 4); sources read = research JSON + KB chunks 25/35 + registry entry + project CLAUDE.md (AS-prefix framing mandate)
+- **DPR enriched**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (cohort agent 4); sources read = research JSON + KB chunks 25/35 + registry entry + the project conventions (AS-prefix framing mandate)
 - **Anu Framework stage**: Stage 3 INGESTION (cohort 1, failing chapters); ingestion gate IDs P31/P32

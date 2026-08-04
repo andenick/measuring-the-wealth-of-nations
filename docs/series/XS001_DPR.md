@@ -69,5 +69,5 @@ The magnitude gap traces to two known approximations. First, our Pn (NIPA Line 1
 ## Provenance trail
 
 - **Original research**: `Technical/research/XS001_research.json`, researcher `agent`, 2026-05-16; verbatim quotes added 2026-05-23 (`stage1_cohort3_S901AS001AS002`) — sourced from chunk_24 (Ch7 §7.1 definitional and Figure 7.1) and chunk_38 (Appendix N net-transfer concept)
-- **DPR enriched**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (cohort agent 4); sources read = research JSON + KB chunks 24/35/38 + registry entry + project CLAUDE.md (AS-prefix framing mandate)
+- **DPR enriched**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (cohort agent 4); sources read = research JSON + KB chunks 24/35/38 + registry entry + the project conventions (AS-prefix framing mandate)
 - **Anu Framework stage**: Stage 3 INGESTION (cohort 1, failing chapters); ingestion gate IDs P31/P32

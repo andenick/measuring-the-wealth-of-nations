@@ -81,5 +81,5 @@ Coverage is partial because S515 is currently sourced only from book Table E.3 (
 ## Provenance trail
 
 - **Original research**: `Technical/research/XS004_research.json`, researcher `agent`, 2026-05-16; verbatim quotes already present (Appendix I Table I.1, Appendix J Table J.1, salvaged page 140) — research JSON is well-anchored
-- **DPR enriched**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (cohort agent 4); prior version of this DPR (pre-cohort-1) was a short stub with one methodology paragraph; this enrichment adds full 7-section structure with sources, reference values, known issues, cross-references; sources read = research JSON + KB chunks 35/36 + salvaged page_140_productivity_analysis.md + registry entry + project CLAUDE.md (AS-prefix framing mandate)
+- **DPR enriched**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (cohort agent 4); prior version of this DPR (pre-cohort-1) was a short stub with one methodology paragraph; this enrichment adds full 7-section structure with sources, reference values, known issues, cross-references; sources read = research JSON + KB chunks 35/36 + salvaged page_140_productivity_analysis.md + registry entry + the project conventions (AS-prefix framing mandate)
 - **Anu Framework stage**: Stage 3 INGESTION (cohort 1, failing chapters); ingestion gate IDs P31/P32

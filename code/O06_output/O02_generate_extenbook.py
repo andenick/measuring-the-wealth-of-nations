@@ -127,7 +127,7 @@ def write_provenance_sheet(ws, sid: str, entry: dict, dpr_path: Path) -> None:
     for k, v in rows:
         ws.append([k, v])
 
-    # Proxy disclosure section (Decision 0001 + RMWND CLAUDE.md anti-pattern #2)
+    # Proxy disclosure section (Decision 0001 + the project proxy-disclosure rule)
     if entry.get("proxy") is True:
         ws.append([])
         ws.append(["PROXY DISCLOSURE", ""])

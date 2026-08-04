@@ -14,7 +14,7 @@ Source: Shaikh, A., & Tonak, E. A. (1994). *Measuring the Wealth of Nations: The
 
 ## 2. shaikh_appendix_ref
 
-Primary: **Appendix H** (K* annual values 1948–1989, text-only per RMWND CLAUDE.md — not extracted in the current KB build).
+Primary: **Appendix H** (K* annual values 1948–1989, text-only — not extracted in the current KB build).
 Cross-checks in extracted KB: Tables 5.8 / 5.9 (K* = C*f column, billions current USD; chunk_15 summary); Figures 5.5 and 5.8 (K* plotted as the denominator of r* alongside S* and V*).
 Operational book reference (because Appendix H endpoints are unextracted): BEA Fixed Assets Table 4.1 Line 1 (Current-Cost Net Stock) restricted to 1948–1989, with benchmark endpoints 1948=291.557, 1958=551.356, 1967=871.188, 1980=3800.290, 1989=6699.840 (billions current USD). This substitution is documented in `_stage3_patches/S517_v2_patch.json` (iteration 8, Stage 3 cohort 2).
 

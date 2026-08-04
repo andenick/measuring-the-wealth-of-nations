@@ -3,7 +3,7 @@
 Three subseries emitted:
   S517-A        : Book period 1948-1989. Per the iteration 8 sourcing decision,
                   the book's Appendix H/K K* values are not extracted in the
-                  current KB build (Appendix H is text-only per RMWND CLAUDE.md);
+                  current KB build (Appendix H is text-only);
                   the BEA Fixed Assets Table 4.1 Line 1 (Private nonresidential,
                   Current-Cost Net Stock) series is therefore used as the
                   operational book reference, restricted to 1948-1989. This is

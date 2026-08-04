@@ -51,5 +51,5 @@ The headline finding is captured in XS1404 (ST_e / Mohun_e ratio): the ratio exc
 ## Provenance trail
 
 - **Original research**: `Technical/research/S801_research.json`, researcher `agent`, 2026-05-06; ported from `predecessor-build/research/T801_research.json` on 2026-05-14; verbatim quotes backfilled 2026-05-19 (`D3_RMWND_quotes_ch7_etc`) — the backfill specifically flagged that the book has no Ch8
-- **DPR enriched**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (cohort agent 4); sources read = research JSON + KB chunks 24/25/38 cited via research JSON + registry entry + project CLAUDE.md (which mandates disclosure that S801/S901 are project artifacts beyond the printed book's 7 chapters)
+- **DPR enriched**: 2026-05-23 by Stage-3 cohort-1 ingestion agent (cohort agent 4); sources read = research JSON + KB chunks 24/25/38 cited via research JSON + registry entry + the project conventions (which mandate disclosure that S801/S901 are project artifacts beyond the printed book's 7 chapters)
 - **Anu Framework stage**: Stage 3 INGESTION (cohort 1, failing chapters); ingestion gate IDs P31/P32

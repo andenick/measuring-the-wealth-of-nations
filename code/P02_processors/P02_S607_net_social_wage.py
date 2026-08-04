@@ -5,7 +5,7 @@ unproductive partition) so the splice is `direct` — no rebase. Verify the
 1989 overlap exists in A but not EXT (EXT starts 1990 by design).
 
 Naming note: legacy code used `S607-B` for the extension subseries. Renamed
-to `S607-EXT` per RMWND CLAUDE.md anti-pattern #4 (Decision 0003) during
+to `S607-EXT` per the project extension-subseries convention (Decision 0003) during
 2026-05-23 Stage 5 cohort 2.
 """
 from __future__ import annotations

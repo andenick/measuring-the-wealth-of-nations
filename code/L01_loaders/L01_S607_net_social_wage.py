@@ -11,7 +11,7 @@ Headline regime change preserved: NSW negative through 1989, turns POSITIVE
 in the early 1990s as transfer programs expand faster than worker tax burden.
 
 Naming note: legacy code emitted subseries `S607-B` for the extension. Per the
-Decision 0003 cleanup + RMWND CLAUDE.md anti-pattern #4, extension subseries
+Decision 0003 cleanup + the project convention on extension subseries
 use `-EXT` and `-COMBINED` suffixes (not `-B`). Renamed during 2026-05-23
 Stage 5 cohort 2.
 """
