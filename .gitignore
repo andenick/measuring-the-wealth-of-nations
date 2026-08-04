@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+api_keys.env
+*.key
+
+# Downloaded and intermediate data (regenerate with the pipeline)
+data/raw/
+data/intermediate/cache/
+
+# Build and run output
+Build/
+*.log
+*.tmp
+*~
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
