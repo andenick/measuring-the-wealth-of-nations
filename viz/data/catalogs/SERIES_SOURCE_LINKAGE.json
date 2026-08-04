@@ -12,7 +12,7 @@
       "S402"
     ],
     "data_columns": {},
-    "kb_source": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_10/figures/figure_4.1_condensed_form.md",
+    "kb_source": "Inputs/Shaikh Tonak/Knowledge_Base/KB_Extractions/1994_Measuring_Wealth/chunk_10/figures/figure_4.1_condensed_form.md",
     "kb_available": true,
     "description": "IO Accounts and Marxian Categories - Condensed Form (book p.79)"
   },
@@ -99,7 +99,7 @@
       "S517"
     ],
     "data_columns": {},
-    "kb_source": "Inputs/Shaikh Tonak/Knowledge_Base/HDARP_Extractions/1994_Measuring_Wealth/chunk_14/figures/figures_5.8_to_5.15_summary.md",
+    "kb_source": "Inputs/Shaikh Tonak/Knowledge_Base/KB_Extractions/1994_Measuring_Wealth/chunk_14/figures/figures_5.8_to_5.15_summary.md",
     "kb_available": true,
     "description": "Total Real Wage and Variable Capital (book pp.118-121); summary covers Figures 5.8-5.15",
     "caption_note": "S513 / S514 rendered in stock form (r* = S*/(K*+V*)) per book Table 5.11 (§5.5); flow-form available as S513-FLOW / S514-FLOW secondary subseries (see DIV-012)."
@@ -116,7 +116,7 @@
     "kb_source": null,
     "kb_available": false,
     "kb_unavailable": true,
-    "kb_unavailable_reason": "Figure 7.1 is referenced in chunk_24 (Ch7) full_transcription.md text but was not extracted as a standalone figure file during HDARP. Chapter 7 KB coverage is sparse (per RMWND CLAUDE.md). Ch7 series (S701/S702/S703) carry proxy:true status, so figure rendering is conceptual rather than literal book replication.",
+    "kb_unavailable_reason": "Figure 7.1 is referenced in chunk_24 (Ch7) full_transcription.md text but was not extracted as a standalone figure file. Chapter 7 KB coverage is sparse. Ch7 series (S701/S702/S703) carry proxy:true status, so figure rendering is conceptual rather than literal book replication.",
     "description": "Labor Values vs Prices of Production (Ch7) - text reference only in KB"
   },
   "Fig_6_1": {

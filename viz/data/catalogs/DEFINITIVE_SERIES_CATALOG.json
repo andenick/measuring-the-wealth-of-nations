@@ -1823,7 +1823,7 @@
         "subseries": [
           "XS1001-A"
         ],
-        "desc": "HDARP extraction from Table V"
+        "desc": "KB extraction from Table V"
       }
     ],
     "figures": []
@@ -1871,7 +1871,7 @@
         "subseries": [
           "XS1002-A"
         ],
-        "desc": "HDARP extraction from Table X"
+        "desc": "KB extraction from Table X"
       }
     ],
     "figures": []
@@ -2758,7 +2758,7 @@
         "subseries": [
           "XS1601-A"
         ],
-        "desc": "TurkStat HDARP extraction"
+        "desc": "TurkStat KB extraction"
       }
     ],
     "figures": []

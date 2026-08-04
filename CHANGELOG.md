@@ -192,7 +192,7 @@ Knowledge-Base reconciliation pass.
   level/dollar components.
 
 ### Bundle hygiene
-- Internal one-shot build/HDARP-integration helper scripts and per-wave QA
+- Internal one-shot build/KB-integration helper scripts and per-wave QA
   review reports are no longer shipped (`.publish_ignore`); the reproducible
   pipeline is the numbered L00/L01/P02/V03/O06 scripts.
 - Hardcoded workstation paths and internal-tooling references scrubbed from the

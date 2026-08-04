@@ -135,6 +135,6 @@
     "warnings": 4,
     "anu_doctor_version": "v2.3",
     "anu_doctor_summary": "34 PASS / 4 WARN / 0 FAIL out of 38 checks (v1.1 closeout 2026-05-24)",
-    "notes": "v1.1 STRICT GATE PASSES. anu-doctor 34/4/0; anu-review 97.59 (D13=97, D14=94); Druck Completion 98%. All 9/9 stages gate_passed. Ch7 BLOCKER retired (S701/S702/S703 proxy:false). 4 remaining WARNs are informational (P08/P23 provenance scope, P28 decisions-location convention, P29 year_range book-period authority)."
+    "notes": "v1.1 STRICT GATE PASSES. anu-doctor 34/4/0; anu-review 97.59 (D13=97, D14=94). All 9/9 stages gate_passed. Ch7 BLOCKER retired (S701/S702/S703 proxy:false). 4 remaining WARNs are informational (P08/P23 provenance scope, P28 decisions-location convention, P29 year_range book-period authority)."
   }
 }

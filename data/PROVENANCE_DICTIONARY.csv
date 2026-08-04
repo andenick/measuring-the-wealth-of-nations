@@ -791,13 +791,13 @@ XS004,,1948,book,Table J.1 Line 2 (q* index 1948=100),App.J p.~334,ST 1994,index
 XS004,,1953,book,Table J.1 Line 2,App.J p.~334,ST 1994,index(1948=100) of real TP*/Lp,WP-E,per-worker vs per-hour; residual -2.60 (-2.10%)
 XS004,,1958,book,Table J.1 Line 2,App.J p.~334,ST 1994,index(1948=100) of real TP*/Lp,WP-E,residual -4.22 (-2.86%)
 XS004,,1961,book,Table J.1 Line 2,App.J p.~334,ST 1994,index(1948=100) of real TP*/Lp,WP-E,residual -1.58 (-1.00%)
-XS1001,,1952,book,Table V (Labor and Non-Labor Portions of Total Taxes),p.98 (Labor col),Tonak 1984,verbatim digitization; corroborated vs independent HDARP chunk_12,WP-E,billions USD; source CSV matches Table V 0/29
-XS1001,,1960,book,Table V,p.98 (Labor col),Tonak 1984,verbatim digitization; corroborated vs HDARP chunk_12,WP-E,added anchor
-XS1001,,1970,book,Table V,p.98 (Labor col),Tonak 1984,verbatim digitization; corroborated vs HDARP chunk_12,WP-E,1970 labor==non-labor crossover year
-XS1001,,1980,book,Table V,p.98 (Labor col),Tonak 1984,verbatim digitization; corroborated vs HDARP chunk_12,WP-E,terminal year
-XS1002,,1952,book,Table X (Net Tax Paid by Labor),p.113 (Net Tax col 3),Tonak 1984,verbatim digitization; corroborated vs independent HDARP chunk_13,WP-E,billions USD; source CSV matches Table X 0/29
-XS1002,,1975,book,Table X,p.113 (Net Tax col 3),Tonak 1984,verbatim digitization; corroborated vs HDARP chunk_13,WP-E,single negative year (sign-flip anchor)
-XS1002,,1980,book,Table X,p.113 (Net Tax col 3),Tonak 1984,verbatim digitization; corroborated vs HDARP chunk_13,WP-E,terminal year
+XS1001,,1952,book,Table V (Labor and Non-Labor Portions of Total Taxes),p.98 (Labor col),Tonak 1984,verbatim digitization; corroborated vs independent KB extraction chunk_12,WP-E,billions USD; source CSV matches Table V 0/29
+XS1001,,1960,book,Table V,p.98 (Labor col),Tonak 1984,verbatim digitization; corroborated vs KB extraction chunk_12,WP-E,added anchor
+XS1001,,1970,book,Table V,p.98 (Labor col),Tonak 1984,verbatim digitization; corroborated vs KB extraction chunk_12,WP-E,1970 labor==non-labor crossover year
+XS1001,,1980,book,Table V,p.98 (Labor col),Tonak 1984,verbatim digitization; corroborated vs KB extraction chunk_12,WP-E,terminal year
+XS1002,,1952,book,Table X (Net Tax Paid by Labor),p.113 (Net Tax col 3),Tonak 1984,verbatim digitization; corroborated vs independent KB extraction chunk_13,WP-E,billions USD; source CSV matches Table X 0/29
+XS1002,,1975,book,Table X,p.113 (Net Tax col 3),Tonak 1984,verbatim digitization; corroborated vs KB extraction chunk_13,WP-E,single negative year (sign-flip anchor)
+XS1002,,1980,book,Table X,p.113 (Net Tax col 3),Tonak 1984,verbatim digitization; corroborated vs KB extraction chunk_13,WP-E,terminal year
 XS1101,net transfer rate 1975,1975,book,text (verbatim),p.190,"Shaikh & Tonak 1987, Imperiled Economy",external,WP-B,author text-stated (+5.4% 1975); our +0.0207
 XS1101,net transfer rate 1985,1985,book,text (verbatim),p.190,Shaikh & Tonak 1987,external,WP-B,author text-stated (-11.0% 1985); our -0.0181; Tonak flagged 1987 table errors
 XS1102,benefit rate B1/EC 1952,1952,book,Table N.2 'Benefit rate (B1/EC)',p.359 / table_037_038_15.csv,S&T 1994 App.N,book,WP-B,was ST1987 Fig-2 read; our 0.223 (doc divergence)
@@ -836,19 +836,19 @@ XS1601,,aggregate,paper,table_descriptions.md Statistical Summary,RRPE 54(4):479
 XS1602,,1980,paper,none (Figure 9 only; not tabulated),Figure 9,K&T 2022 (RRPE 54(4):479-500),tautological_proxy_output,WP-E,reference_value = P02 WB (govt_consumption-tax_revenue)/100 proxy output; NOT independent. Figure 9 reads ~-1% for 1980.
 XS1602,,2019,paper,none (Figure 9 only; not tabulated),Figure 9,K&T 2022 (RRPE 54(4):479-500),tautological_proxy_output,WP-E,reference_value = proxy output; far milder than K&T worst-period ~-0.02/-0.025 (2014-2019).
 XS1602,,aggregate,paper,full_transcription.md L37,RRPE 54(4):479-500,K&T 2022 Abstract/Section 5.1,independent_aggregate_anchor,WP-E,"Verbatim independent anchor. Proxy mean -0.0299 over 30/40 yrs (10 NaN: 1982,1999-2007). BLOCKED-G2 for year-level rebuild."
-XS1701,,1972,paper,Table 2 (Rate of surplus-value and value composition of capital),p.15 S/TV col,Cronin 2001,verbatim digitization (percent); corroborated vs HDARP tables.csv,WP-E,units fixed decimal->percent
+XS1701,,1972,paper,Table 2 (Rate of surplus-value and value composition of capital),p.15 S/TV col,Cronin 2001,verbatim digitization (percent); corroborated vs KB extraction tables.csv,WP-E,units fixed decimal->percent
 XS1701,,1984,paper,Table 2,p.15 S/TV col,Cronin 2001,verbatim digitization (percent),WP-E,added anchor
 XS1701,,1989,paper,Table 2,p.15 S/TV col,Cronin 2001,verbatim digitization (percent),WP-E,
 XS1701,,1995,paper,Table 2,p.15 S/TV col,Cronin 2001,verbatim digitization (percent),WP-E,terminal year
-XS1702,,1972,paper,Table 2,p.15 s/v col,Cronin 2001,verbatim digitization (percent); corroborated vs HDARP tables.csv,WP-E,units fixed decimal->percent
+XS1702,,1972,paper,Table 2,p.15 s/v col,Cronin 2001,verbatim digitization (percent); corroborated vs KB extraction tables.csv,WP-E,units fixed decimal->percent
 XS1702,,1984,paper,Table 2,p.15 s/v col,Cronin 2001,verbatim digitization (percent),WP-E,Rogernomics structural break
 XS1702,,1989,paper,Table 2,p.15 s/v col,Cronin 2001,verbatim digitization (percent),WP-E,added anchor
 XS1702,,1995,paper,Table 2,p.15 s/v col,Cronin 2001,verbatim digitization (percent),WP-E,terminal year
-XS1703,,1972,paper,Table 2,p.15 c/v col,Cronin 2001,verbatim digitization (percent); corroborated vs HDARP tables.csv,WP-E,units fixed decimal->percent
+XS1703,,1972,paper,Table 2,p.15 c/v col,Cronin 2001,verbatim digitization (percent); corroborated vs KB extraction tables.csv,WP-E,units fixed decimal->percent
 XS1703,,1984,paper,Table 2,p.15 c/v col,Cronin 2001,verbatim digitization (percent),WP-E,
 XS1703,,1989,paper,Table 2,p.15 c/v col,Cronin 2001,verbatim digitization (percent),WP-E,post write-off trough (added anchor)
 XS1703,,1995,paper,Table 2,p.15 c/v col,Cronin 2001,verbatim digitization (percent),WP-E,terminal year
-XS1704,,1972,paper,Table 1 (NZSNA in classical categories $m),p.11 Total value col,Cronin 2001,verbatim digitization; corroborated vs HDARP tables.csv,WP-E,millions NZD; source CSV matches Table 1 0/24
+XS1704,,1972,paper,Table 1 (NZSNA in classical categories $m),p.11 Total value col,Cronin 2001,verbatim digitization; corroborated vs KB extraction tables.csv,WP-E,millions NZD; source CSV matches Table 1 0/24
 XS1704,,1984,paper,Table 1,p.11 Total value col,Cronin 2001,verbatim digitization,WP-E,added anchor
 XS1704,,1989,paper,Table 1,p.11 Total value col,Cronin 2001,verbatim digitization,WP-E,added anchor
 XS1704,,1995,paper,Table 1,p.11 Total value col,Cronin 2001,verbatim digitization,WP-E,terminal year

@@ -15,9 +15,9 @@ MIGRATION/__pycache__/
 # Stage coordinator patches - internal session work-in-progress artifacts.
 _stage*_patches/
 
-# Internal one-shot build/HDARP-integration helper scripts (underscore-prefixed,
+# Internal one-shot build/KB-integration helper scripts (underscore-prefixed,
 # not part of the public replication pipeline; they hardcode workstation paths
-# and reference the internal HDARP_Extractions tree). The reproducible pipeline
+# and reference the internal KB extraction tree). The reproducible pipeline
 # is the L00/L01/P02/V03/O06 numbered scripts, which run from the bundle.
 code/_*.py
 
